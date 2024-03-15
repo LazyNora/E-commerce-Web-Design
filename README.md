@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# WEB DESIGN PROJECT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Using React.
+
+## Members
+
+Nguyen Minh Sơn - 2001224179
+Cao Hoang Tan - 2001224329
 
 ## Available Scripts
 
