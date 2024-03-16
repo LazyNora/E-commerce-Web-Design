@@ -4,7 +4,7 @@ Using React.
 
 ## Members
 
-Nguyen Minh Sơn - 2001224179\
+Nguyen Minh Son - 2001224179\
 Cao Hoang Tan - 2001224329
 
 ## Available Scripts

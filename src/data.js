@@ -43,34 +43,34 @@ export const categories = [
 export const popularProducts = [
 	{
 		id: 1,
-		img: "https://www.prada.com/content/dam/pradabkg_products/P/P3M/P3M72/1446F0002/P3M72_1446_F0002_S_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg",
+		img: "https://shenzhenaudio.com/cdn/shop/files/9_77dc8b43-5190-4d68-a458-20f23f985384.png?v=1710497271&width=533",
 	},
 	{
 		id: 2,
-		img: "https://www.prada.com/content/dam/pradabkg_products/P/P3M/P3M72/1446F0002/P3M72_1446_F0002_S_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg",
+		img: "https://shenzhenaudio.com/cdn/shop/files/9_77dc8b43-5190-4d68-a458-20f23f985384.png?v=1710497271&width=533",
 	},
 	{
 		id: 3,
-		img: "https://www.prada.com/content/dam/pradabkg_products/P/P3M/P3M72/1446F0002/P3M72_1446_F0002_S_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg",
+		img: "https://shenzhenaudio.com/cdn/shop/files/9_77dc8b43-5190-4d68-a458-20f23f985384.png?v=1710497271&width=533",
 	},
 	{
 		id: 4,
-		img: "https://www.prada.com/content/dam/pradabkg_products/P/P3M/P3M72/1446F0002/P3M72_1446_F0002_S_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg",
+		img: "https://shenzhenaudio.com/cdn/shop/files/9_77dc8b43-5190-4d68-a458-20f23f985384.png?v=1710497271&width=533",
 	},
 	{
 		id: 5,
-		img: "https://www.prada.com/content/dam/pradabkg_products/P/P3M/P3M72/1446F0002/P3M72_1446_F0002_S_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg",
+		img: "https://shenzhenaudio.com/cdn/shop/files/9_77dc8b43-5190-4d68-a458-20f23f985384.png?v=1710497271&width=533",
 	},
 	{
 		id: 6,
-		img: "https://www.prada.com/content/dam/pradabkg_products/P/P3M/P3M72/1446F0002/P3M72_1446_F0002_S_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg",
+		img: "https://shenzhenaudio.com/cdn/shop/files/9_77dc8b43-5190-4d68-a458-20f23f985384.png?v=1710497271&width=533",
 	},
 	{
 		id: 7,
-		img: "https://www.prada.com/content/dam/pradabkg_products/P/P3M/P3M72/1446F0002/P3M72_1446_F0002_S_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg",
+		img: "https://shenzhenaudio.com/cdn/shop/files/9_77dc8b43-5190-4d68-a458-20f23f985384.png?v=1710497271&width=533",
 	},
 	{
 		id: 8,
-		img: "https://www.prada.com/content/dam/pradabkg_products/P/P3M/P3M72/1446F0002/P3M72_1446_F0002_S_OOO_SLF.jpg/_jcr_content/renditions/cq5dam.web.hebebed.1200.1200.jpg",
+		img: "https://shenzhenaudio.com/cdn/shop/files/9_77dc8b43-5190-4d68-a458-20f23f985384.png?v=1710497271&width=533",
 	},
 ];
