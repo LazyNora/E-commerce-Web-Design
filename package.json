@@ -1,5 +1,6 @@
 {
-	"name": "new",
+	"homepage": "http://lazynora.github.io/TKW",
+	"name": "tkw",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -16,6 +17,8 @@
 	},
 	"scripts": {
 		"start": "react-scripts --openssl-legacy-provider start",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"build": "react-scripts --openssl-legacy-provider build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
@@ -37,5 +40,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"gh-pages": "^6.1.1"
 	}
 }
