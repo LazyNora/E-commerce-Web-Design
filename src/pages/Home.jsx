@@ -6,13 +6,15 @@ import Categories from "../components/Categories";
 import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
 	return (
 		<div>
 			<Announcement />
 			<Navbar />
-			<Slider />
+			<Carousel />
+			{/* <Slider /> */}
 			<Categories />
 			<Products />
 			<Newsletter />

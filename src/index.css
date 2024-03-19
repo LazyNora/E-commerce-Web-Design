@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes moLeftToRight {
+	0% {
+		opacity: 0;
+		transform: translate(-40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moPopUp {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+.slide-footer.animate {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-name: moLeftToRight;
+}
+
+.slide-content.animate {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-name: moPopUp;
+}
