@@ -1,0 +1,26 @@
+.announcement-bar {
+	background-color: #000000;
+}
+.announcement-bar__content,
+.sf-topbar__close {
+	color: #fff;
+}
+.announcement-bar a:hover {
+	opacity: 0.6;
+}
+.announcement-bar__content {
+	min-height: 50px;
+	background: #000;
+	color: #fff;
+	background-image: linear-gradient(160deg, #000 23%, #008667 80%);
+	overflow: hidden;
+}
+.announcement-bar__content {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	line-height: 20px;
+	margin-right: 2.5rem;
+	max-height: 40px;
+	padding-left: 1rem;
+}

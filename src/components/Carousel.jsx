@@ -8,6 +8,8 @@ import {
 } from "../responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import "../assets/css/chunk.css";
+import "../assets/css/slideshow.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { carouselData } from "../data";
@@ -87,7 +89,6 @@ const SlideBG = styled.div`
 	transform-origin: center;
 	transition: all 3s;
 	pointer-events: none;
-	display: block;
 
 	${Image} {
 		height: 100%;
@@ -177,25 +178,14 @@ const SlideSubtitle = styled.div`
 	line-height: 1.75rem;
 	font-size: 1.25rem;
 
-	color: ${(props) => (props.type === "light" ? "black" : "white")};
-
 	${min768({
 		marginBottom: "14px",
 	})}
-	${max767({
-		color: "black",
-	})}
-
-	span {
-		font-weight: 600;
-	}
 `;
 
 const SlideTitle = styled.h2`
-	color: ${(props) => (props.type === "light" ? "black" : "white")};
-
 	${max767({
-		color: "black",
+		fontSize: "37px",
 	})}
 `;
 
@@ -317,7 +307,7 @@ const SwiperPagination = styled.div`
 const Carousel = () => {
 	const renderCustomPagination = (index, className) => {
 		return (
-			'<span class="dot ' +
+			'<span class="sf__dot ' +
 			className +
 			" page-" +
 			index +
@@ -345,95 +335,133 @@ const Carousel = () => {
 
 	return (
 		<Container>
-			<Section>
+			<Section className="relative sf-home__slideshow home-banner__slideshow sf-slider__pagination--right sf__slide-block--content-stack">
 				<Wrapper>
-					<div>
-						<SwiperContainer>
-							<Swiper
-								modules={[
-									Navigation,
-									Pagination,
-									Autoplay,
-									EffectFade,
-								]}
-								loop={true}
-								grabCursor={true}
-								autoplay={{
-									delay: 6000,
-									disableOnInteraction: true,
-								}}
-								onSlideChange={(swiper) =>
-									handleSlideChange(swiper)
-								}
-								effect="fade"
-								fadeEffect={{ crossFade: true }}
-								pagination={{
-									clickable: true,
-									el: ".custom-swiper-pagination",
-									renderBullet: renderCustomPagination,
-								}}>
-								{carouselData.map((item) => (
-									<SwiperSlide
+					<SwiperContainer>
+						<Swiper
+							className="sf__slider sf__slider--adapt"
+							modules={[
+								Navigation,
+								Pagination,
+								Autoplay,
+								EffectFade,
+							]}
+							loop={true}
+							grabCursor={true}
+							autoplay={{
+								delay: 6000,
+								disableOnInteraction: true,
+							}}
+							onSlideChange={(swiper) =>
+								handleSlideChange(swiper)
+							}
+							effect="fade"
+							fadeEffect={{ crossFade: true }}
+							pagination={{
+								clickable: true,
+								el: ".custom-swiper-pagination",
+								renderBullet: renderCustomPagination,
+							}}>
+							{carouselData.map((item) => (
+								<SwiperSlide
+									className="relative"
+									style={{
+										width: "100%",
+										transitionProperty: "opacity",
+										flexShrink: "0",
+										position: "relative",
+									}}>
+									<SlideMedia
+										className="sf__slide-media relative"
 										style={{
-											width: "100%",
-											transitionProperty: "opacity",
-											flexShrink: "0",
-											height: "100%",
-											position: "relative",
+											"--aspect-ratio":
+												"2.072704081632653",
+											"--aspect-ratio-mobile":
+												"1.314060446780552",
 										}}>
-										<SlideMedia
-											style={{
-												"--aspect-ratio":
-													"2.072704081632653",
-												"--aspect-ratio-mobile":
-													"1.314060446780552",
-											}}>
-											<Res>
-												<SlideBG>
-													<Image src={item.img} />
-												</SlideBG>
-											</Res>
-											<ResMobile>
-												<SlideBGMobile>
-													<Image
-														src={item.img_mobile}
-													/>
-												</SlideBGMobile>
-											</ResMobile>
-										</SlideMedia>
-										<SlideBlock>
-											<SlideContent className="slide-content">
-												<SlideSubtitle type={item.type}>
-													<span>{item.subtitle}</span>
-												</SlideSubtitle>
-												<SlideTitle
-													type={item.type}
-													className="lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5 lg:leading-tight xl:leading-tight 2xl:leading-tight">
-													<span
-														dangerouslySetInnerHTML={{
-															__html: item.title,
-														}}></span>
-												</SlideTitle>
-												<SlideDesc
-													type={item.type}
-													className="md:text-xl mb-3 md:mb-7">
-													<p>{item.desc}</p>
-												</SlideDesc>
-											</SlideContent>
-										</SlideBlock>
-										<SlideFooter
-											type={item.type}
-											className="slide-footer">
-											<span>{item.footer}</span>
-										</SlideFooter>
-									</SwiperSlide>
-								))}
-							</Swiper>
-							<SliderControls>
-								<SwiperPagination className="custom-swiper-pagination"></SwiperPagination>
-							</SliderControls>
-						</SwiperContainer>
-					</div>
+										<Res className="hidden md:block">
+											<SlideBG className="sf__slide-bg">
+												<Image
+													src={item.img}
+													sizes="100vw"
+													width={3520}
+													height={1568}
+													loading="lazy"
+												/>
+											</SlideBG>
+										</Res>
+										<ResMobile
+											className="md:hidden"
+											style={{ height: "20vw" }}>
+											<SlideBGMobile
+												className="sf__slide-bg-mobile"
+												style={{
+													"--aspect-ratio-mobile":
+														"1.314060446780552",
+												}}>
+												<Image
+													src={item.img_mobile}
+													sizes="100vw"
+													width={1000}
+													height={761}
+													loading="lazy"
+												/>
+											</SlideBGMobile>
+										</ResMobile>
+									</SlideMedia>
+									<SlideBlock className="sf__slide-block slide__block-desktop flex sf__slide-block--middle-right container-fluid w-full h-full p-4 md:p-6 lg:py-24 absolute inset-0">
+										<SlideContent className="slide-content sf__slide-content max-w-4xl w-max text-right">
+											<SlideSubtitle
+												className={`slide__block-subtitle text-xl mb-2 md:mb-[14px] text-black ${
+													item.type === "light"
+														? "md:text-black"
+														: "md:text-white"
+												}`}>
+												<span className="font-semibold">
+													{item.subtitle}
+												</span>
+											</SlideSubtitle>
+											<SlideTitle
+												className={`slide__block-title lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5
+												text-black ${item.type === "light" ? "md:text-black" : "md:text-white"}
+											 lg:leading-tight xl:leading-tight 2xl:leading-tight`}>
+												<span
+													className="sf__font-normal"
+													dangerouslySetInnerHTML={{
+														__html: item.title,
+													}}></span>
+											</SlideTitle>
+											<SlideDesc
+												className={`slide__block-description md:text-xl mb-3 md:mb-7
+												text-black ${item.type === "light" ? "md:text-black" : "md:text-white"}
+												`}>
+												<p>{item.desc}</p>
+											</SlideDesc>
+											<a
+												href={item.link}
+												class={`slide__block-link   inline-block sf__btn ${
+													item.type === "light"
+														? "sf__btn-primary"
+														: "sf__btn-white"
+												}`}>
+												{item.buttontext}
+											</a>
+										</SlideContent>
+									</SlideBlock>
+									<SlideFooter
+										type={item.type}
+										className="slide-footer sf__slide-footer container-fluid absolute inset-x-0 bottom-16 z-10 flex items-center justify-end text-black">
+										<span className="mx-2">
+											{item.footer}
+										</span>
+									</SlideFooter>
+								</SwiperSlide>
+							))}
+						</Swiper>
+						<SliderControls className="sf-slider__controls flex items-center justify-center mt-5 md:mt-0 -mx-2 sf-slider__controls--show-pagination sf-slider__controls--absolute">
+							<SwiperPagination className="custom-swiper-pagination swiper-pagination w-full sm:mt-6 sf__dot-dark swiper-pagination-clickable swiper-pagination-bullets"></SwiperPagination>
+						</SliderControls>
+					</SwiperContainer>
 				</Wrapper>
 			</Section>
 		</Container>
