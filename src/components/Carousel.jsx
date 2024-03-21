@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import {
 	max767,
 	min1024,
@@ -7,7 +7,13 @@ import {
 	scmin1440max2000,
 } from "../responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import {
+	Navigation,
+	Pagination,
+	Autoplay,
+	EffectFade,
+	Mousewheel,
+} from "swiper/modules";
 import "../assets/css/chunk.css";
 import "../assets/css/slideshow.css";
 import "swiper/css";
@@ -345,6 +351,7 @@ const Carousel = () => {
 								Pagination,
 								Autoplay,
 								EffectFade,
+								Mousewheel,
 							]}
 							loop={true}
 							grabCursor={true}
@@ -352,6 +359,7 @@ const Carousel = () => {
 								delay: 6000,
 								disableOnInteraction: true,
 							}}
+							mousewheel={true}
 							onSlideChange={(swiper) =>
 								handleSlideChange(swiper)
 							}
@@ -388,6 +396,7 @@ const Carousel = () => {
 													height={1568}
 													loading="lazy"
 												/>
+												<div class="swiper-lazy-preloader"></div>
 											</SlideBG>
 										</Res>
 										<ResMobile
@@ -406,6 +415,7 @@ const Carousel = () => {
 													height={761}
 													loading="lazy"
 												/>
+												<div class="swiper-lazy-preloader"></div>
 											</SlideBGMobile>
 										</ResMobile>
 									</SlideMedia>
