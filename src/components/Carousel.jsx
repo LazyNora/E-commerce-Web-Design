@@ -16,6 +16,7 @@ import {
 } from "swiper/modules";
 import "../assets/css/chunk.css";
 import "../assets/css/slideshow.css";
+import "../assets/css/Carousel.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { carouselData } from "../data";
@@ -372,6 +373,7 @@ const Carousel = () => {
 							}}>
 							{carouselData.map((item) => (
 								<SwiperSlide
+									key={item.id}
 									className="relative"
 									style={{
 										width: "100%",

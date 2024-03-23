@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Categories from "../components/Categories";
 import Products from "../components/Products";
-import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 
@@ -15,7 +14,6 @@ const Home = () => {
 			<Carousel />
 			<Categories />
 			<Products />
-			<Newsletter />
 			<Footer />
 		</div>
 	);
