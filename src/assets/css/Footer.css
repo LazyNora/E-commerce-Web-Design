@@ -1,10 +1,10 @@
 :root {
-	--color-footer-background: #f5f5f5;
+	--color-footer-background: rgb(245, 251, 253);
 	--color-footer-text: #000000;
 	--color-footer-subtext: #000000;
 	--color-footer-link: #000000;
 	--color-footer-link-hover: #000000;
-	--color-footer-bottom-background: #f5f5f5;
+	--color-footer-bottom-background: rgb(245, 251, 253);
 	--color-footer-bottom-text: #000000;
 	--container-width: 1620;
 }

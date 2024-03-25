@@ -175,7 +175,7 @@ const SlideBlock = styled.div`
 
 const SlideContent = styled.div`
 	opacity: 0;
-	transform: translate3d(0, 60px, 0);
+	/* transform: translate3d(0, 60px, 0); */
 	max-width: 72rem;
 	text-align: right;
 	width: max-content;
@@ -196,13 +196,7 @@ const SlideTitle = styled.h2`
 	})}
 `;
 
-const SlideDesc = styled.div`
-	color: ${(props) => (props.type === "light" ? "black" : "white")};
-
-	${max767({
-		color: "black",
-	})}
-`;
+const SlideDesc = styled.div``;
 
 const SlideFooter = styled.div`
 	opacity: 1;
@@ -314,7 +308,7 @@ const SwiperPagination = styled.div`
 const Carousel = () => {
 	const renderCustomPagination = (index, className) => {
 		return (
-			'<span class="sf__dot ' +
+			'<span class="carousel-dot ' +
 			className +
 			" page-" +
 			index +
@@ -342,11 +336,11 @@ const Carousel = () => {
 
 	return (
 		<Container>
-			<Section className="relative sf-home__slideshow home-banner__slideshow sf-slider__pagination--right sf__slide-block--content-stack">
+			<Section className="relative shop-slideshow banner_slideshow slider_pagination--right slide-block_content-stack">
 				<Wrapper>
 					<SwiperContainer>
 						<Swiper
-							className="sf__slider sf__slider--adapt"
+							className="slider slider--adapt"
 							modules={[
 								Navigation,
 								Pagination,
@@ -382,7 +376,7 @@ const Carousel = () => {
 										position: "relative",
 									}}>
 									<SlideMedia
-										className="sf__slide-media relative"
+										className="slide-media relative"
 										style={{
 											"--aspect-ratio":
 												"2.072704081632653",
@@ -390,7 +384,7 @@ const Carousel = () => {
 												"1.314060446780552",
 										}}>
 										<Res className="hidden md:block">
-											<SlideBG className="sf__slide-bg">
+											<SlideBG className="slide-bg">
 												<Image
 													src={item.img}
 													sizes="100vw"
@@ -405,7 +399,7 @@ const Carousel = () => {
 											className="md:hidden"
 											style={{ height: "20vw" }}>
 											<SlideBGMobile
-												className="sf__slide-bg-mobile"
+												className="slide-bg-mobile"
 												style={{
 													"--aspect-ratio-mobile":
 														"1.314060446780552",
@@ -421,10 +415,10 @@ const Carousel = () => {
 											</SlideBGMobile>
 										</ResMobile>
 									</SlideMedia>
-									<SlideBlock className="sf__slide-block slide__block-desktop flex sf__slide-block--middle-right container-fluid w-full h-full p-4 md:p-6 lg:py-24 absolute inset-0">
-										<SlideContent className="slide-content sf__slide-content max-w-4xl w-max text-right">
+									<SlideBlock className="slide-block slide_block-desktop flex slide-block--middle-right container-fluid w-full h-full p-4 md:p-6 lg:py-24 absolute inset-0">
+										<SlideContent className="slide-content max-w-4xl w-max text-right">
 											<SlideSubtitle
-												className={`slide__block-subtitle text-xl mb-2 md:mb-[14px] text-black ${
+												className={`slide_block-subtitle text-xl mb-2 md:mb-[14px] text-black ${
 													item.type === "light"
 														? "md:text-black"
 														: "md:text-white"
@@ -434,9 +428,12 @@ const Carousel = () => {
 												</span>
 											</SlideSubtitle>
 											<SlideTitle
-												className={`slide__block-title lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5
-												text-black ${item.type === "light" ? "md:text-black" : "md:text-white"}
-											 lg:leading-tight xl:leading-tight 2xl:leading-tight`}>
+												className={`slide_block-title lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5
+												text-black ${
+													item.type === "light"
+														? "md:text-black"
+														: "md:text-white"
+												} lg:leading-tight xl:leading-tight 2xl:leading-tight`}>
 												<span
 													className="sf__font-normal"
 													dangerouslySetInnerHTML={{
@@ -444,14 +441,14 @@ const Carousel = () => {
 													}}></span>
 											</SlideTitle>
 											<SlideDesc
-												className={`slide__block-description md:text-xl mb-3 md:mb-7
+												className={`slide_block-description md:text-xl mb-3 md:mb-7
 												text-black ${item.type === "light" ? "md:text-black" : "md:text-white"}
 												`}>
 												<p>{item.desc}</p>
 											</SlideDesc>
 											<a
 												href={item.link}
-												class={`slide__block-link   inline-block sf__btn ${
+												class={`slide_block-link   inline-block sf__btn ${
 													item.type === "light"
 														? "sf__btn-primary"
 														: "sf__btn-white"
@@ -462,7 +459,7 @@ const Carousel = () => {
 									</SlideBlock>
 									<SlideFooter
 										type={item.type}
-										className="slide-footer sf__slide-footer container-fluid absolute inset-x-0 bottom-16 z-10 flex items-center justify-end text-black">
+										className="slide-footer container-fluid absolute inset-x-0 bottom-16 z-10 flex items-center justify-end text-black">
 										<span className="mx-2">
 											{item.footer}
 										</span>
@@ -470,8 +467,8 @@ const Carousel = () => {
 								</SwiperSlide>
 							))}
 						</Swiper>
-						<SliderControls className="sf-slider__controls flex items-center justify-center mt-5 md:mt-0 -mx-2 sf-slider__controls--show-pagination sf-slider__controls--absolute">
-							<SwiperPagination className="custom-swiper-pagination swiper-pagination w-full sm:mt-6 sf__dot-dark swiper-pagination-clickable swiper-pagination-bullets"></SwiperPagination>
+						<SliderControls className="slider_controls flex items-center justify-center mt-5 md:mt-0 -mx-2 slider_controls--show-pagination slider_controls--absolute">
+							<SwiperPagination className="custom-swiper-pagination swiper-pagination w-full sm:mt-6 carousel-dot-dark swiper-pagination-clickable swiper-pagination-bullets"></SwiperPagination>
 						</SliderControls>
 					</SwiperContainer>
 				</Wrapper>

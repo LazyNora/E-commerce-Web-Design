@@ -1386,7 +1386,7 @@ html.stick-atc-show .sale-pop {
 	width: 44px;
 }
 .collection-list .swiper-pagination,
-.home-banner__slideshow .swiper-pagination,
+.banner_slideshow .swiper-pagination,
 .sf__banner-with-slider .swiper-pagination {
 	bottom: 2rem;
 	left: 0;
@@ -1394,9 +1394,9 @@ html.stick-atc-show .sale-pop {
 	width: 100%;
 	z-index: 1;
 }
-.collection-list .swiper-pagination .sf__dot,
-.home-banner__slideshow .swiper-pagination .sf__dot,
-.sf__banner-with-slider .swiper-pagination .sf__dot {
+.collection-list .swiper-pagination .carousel-dot,
+.banner_slideshow .swiper-pagination .carousel-dot,
+.sf__banner-with-slider .swiper-pagination .carousel-dot {
 	cursor: pointer;
 	height: 36px;
 	margin: 0;
@@ -1408,9 +1408,9 @@ html.stick-atc-show .sale-pop {
 	transition: all 0.15s cubic-bezier(0.25, 0.25, 0.1, 1);
 	width: 36px;
 }
-.collection-list .swiper-pagination .sf__dot:before,
-.home-banner__slideshow .swiper-pagination .sf__dot:before,
-.sf__banner-with-slider .swiper-pagination .sf__dot:before {
+.collection-list .swiper-pagination .carousel-dot:before,
+.banner_slideshow .swiper-pagination .carousel-dot:before,
+.sf__banner-with-slider .swiper-pagination .carousel-dot:before {
 	border-radius: 50%;
 	content: "";
 	display: block;
@@ -1421,9 +1421,9 @@ html.stick-atc-show .sale-pop {
 	transition: all 0.1s linear;
 	width: 8px;
 }
-.collection-list .swiper-pagination .sf__dot svg,
-.home-banner__slideshow .swiper-pagination .sf__dot svg,
-.sf__banner-with-slider .swiper-pagination .sf__dot svg {
+.collection-list .swiper-pagination .carousel-dot svg,
+.banner_slideshow .swiper-pagination .carousel-dot svg,
+.sf__banner-with-slider .swiper-pagination .carousel-dot svg {
 	height: 26px;
 	left: 5px;
 	pointer-events: none;
@@ -1431,34 +1431,36 @@ html.stick-atc-show .sale-pop {
 	top: 4px;
 	width: 28px;
 }
-.collection-list .swiper-pagination .sf__dot svg circle,
-.home-banner__slideshow .swiper-pagination .sf__dot svg circle,
-.sf__banner-with-slider .swiper-pagination .sf__dot svg circle {
+.collection-list .swiper-pagination .carousel-dot svg circle,
+.banner_slideshow .swiper-pagination .carousel-dot svg circle,
+.sf__banner-with-slider .swiper-pagination .carousel-dot svg circle {
 	stroke-dashoffset: 180;
 	stroke-dasharray: 179;
 }
-.collection-list .swiper-pagination .sf__dot.swiper-pagination-bullet-active,
-.home-banner__slideshow
+.collection-list
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active,
+	.carousel-dot.swiper-pagination-bullet-active,
+.banner_slideshow
+	.swiper-pagination
+	.carousel-dot.swiper-pagination-bullet-active,
 .sf__banner-with-slider
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active {
+	.carousel-dot.swiper-pagination-bullet-active {
 	border: none;
 }
 .collection-list
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active
+	.carousel-dot.swiper-pagination-bullet-active
 	svg
 	circle,
-.home-banner__slideshow
+.banner_slideshow
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active
+	.carousel-dot.swiper-pagination-bullet-active
 	svg
 	circle,
 .sf__banner-with-slider
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active
+	.carousel-dot.swiper-pagination-bullet-active
 	svg
 	circle {
 	stroke-dashoffset: 8;
@@ -1469,57 +1471,73 @@ html.stick-atc-show .sale-pop {
 }
 .collection-list
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active:hover,
+	.carousel-dot.swiper-pagination-bullet-active:hover,
 .collection-list
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active:hover:before,
-.home-banner__slideshow
+	.carousel-dot.swiper-pagination-bullet-active:hover:before,
+.banner_slideshow
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active:hover,
-.home-banner__slideshow
+	.carousel-dot.swiper-pagination-bullet-active:hover,
+.banner_slideshow
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active:hover:before,
+	.carousel-dot.swiper-pagination-bullet-active:hover:before,
 .sf__banner-with-slider
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active:hover,
+	.carousel-dot.swiper-pagination-bullet-active:hover,
 .sf__banner-with-slider
 	.swiper-pagination
-	.sf__dot.swiper-pagination-bullet-active:hover:before {
+	.carousel-dot.swiper-pagination-bullet-active:hover:before {
 	transform: none;
 }
-.collection-list .swiper-pagination .sf__dot:hover:before,
-.home-banner__slideshow .swiper-pagination .sf__dot:hover:before,
-.sf__banner-with-slider .swiper-pagination .sf__dot:hover:before {
+.collection-list .swiper-pagination .carousel-dot:hover:before,
+.banner_slideshow .swiper-pagination .carousel-dot:hover:before,
+.sf__banner-with-slider .swiper-pagination .carousel-dot:hover:before {
 	transform: scale3d(1.5, 1.5, 1.5);
 }
-.collection-list .swiper-pagination.sf__dot-light .sf__dot:before,
-.home-banner__slideshow .swiper-pagination.sf__dot-light .sf__dot:before,
-.sf__banner-with-slider .swiper-pagination.sf__dot-light .sf__dot:before {
+.collection-list .swiper-pagination.carousel-dot-light .carousel-dot:before,
+.banner_slideshow .swiper-pagination.carousel-dot-light .carousel-dot:before,
+.sf__banner-with-slider
+	.swiper-pagination.carousel-dot-light
+	.carousel-dot:before {
 	background-color: #fff;
 }
-.collection-list .swiper-pagination.sf__dot-light .sf__dot svg circle,
-.home-banner__slideshow .swiper-pagination.sf__dot-light .sf__dot svg circle,
-.sf__banner-with-slider .swiper-pagination.sf__dot-light .sf__dot svg circle {
+.collection-list .swiper-pagination.carousel-dot-light .carousel-dot svg circle,
+.banner_slideshow
+	.swiper-pagination.carousel-dot-light
+	.carousel-dot
+	svg
+	circle,
+.sf__banner-with-slider
+	.swiper-pagination.carousel-dot-light
+	.carousel-dot
+	svg
+	circle {
 	stroke: #fff;
 }
-.collection-list .swiper-pagination.sf__dot-dark .sf__dot:before,
-.home-banner__slideshow .swiper-pagination.sf__dot-dark .sf__dot:before,
-.sf__banner-with-slider .swiper-pagination.sf__dot-dark .sf__dot:before {
+.collection-list .swiper-pagination.carousel-dot-dark .carousel-dot:before,
+.banner_slideshow .swiper-pagination.carousel-dot-dark .carousel-dot:before,
+.sf__banner-with-slider
+	.swiper-pagination.carousel-dot-dark
+	.carousel-dot:before {
 	background-color: #000;
 }
-.collection-list .swiper-pagination.sf__dot-dark .sf__dot svg circle,
-.home-banner__slideshow .swiper-pagination.sf__dot-dark .sf__dot svg circle,
-.sf__banner-with-slider .swiper-pagination.sf__dot-dark .sf__dot svg circle {
+.collection-list .swiper-pagination.carousel-dot-dark .carousel-dot svg circle,
+.banner_slideshow .swiper-pagination.carousel-dot-dark .carousel-dot svg circle,
+.sf__banner-with-slider
+	.swiper-pagination.carousel-dot-dark
+	.carousel-dot
+	svg
+	circle {
 	stroke: #000;
 }
 .sf__banner-with-slider .swiper-pagination {
 	position: static;
 }
 @media screen and (max-width: 767px) {
-	.home-banner__slideshow .swiper-pagination .sf__dot:before {
+	.banner_slideshow .swiper-pagination .carousel-dot:before {
 		background-color: #000 !important;
 	}
-	.home-banner__slideshow .swiper-pagination .sf__dot svg circle {
+	.banner_slideshow .swiper-pagination .carousel-dot svg circle {
 		stroke: #000 !important;
 	}
 }
