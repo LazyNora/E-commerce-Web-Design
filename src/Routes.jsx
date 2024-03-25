@@ -1,5 +1,5 @@
 import {
-	HashRouter as Router,
+	BrowserRouter as Router,
 	Route,
 	Routes,
 	Navigate,
@@ -14,9 +14,9 @@ import NotFound from "./pages/NotFound";
 
 const PageRoutes = () => {
 	return (
-		<Router>
+		<Router basename={`/${process.env.PUBLIC_URL}`}>
 			<Routes>
-				<Route exact path="/" element={<Navigate to="/home" />} />
+				<Route exact path="" element={<Navigate to="/home" />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
