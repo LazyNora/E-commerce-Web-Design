@@ -1,12 +1,7 @@
-import Cart from "./pages/Cart";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Product from "./pages/Product";
-import ProductList from "./pages/ProductList";
-import Register from "./pages/Register";
+import PageRoutes from "./Routes";
 
 const App = () => {
-	return <Home />;
+	return <PageRoutes />;
 };
 
 export default App;
