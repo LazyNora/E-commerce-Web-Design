@@ -1,6 +1,5 @@
 import {
-	BrowserRouter as Router,
-	HashRouter,
+	HashRouter as Router,
 	Route,
 	Routes,
 	Navigate,
@@ -15,9 +14,9 @@ import NotFound from "./pages/NotFound";
 
 const PageRoutes = () => {
 	return (
-		<Router basename="/TKW">
+		<Router>
 			<Routes>
-				<Route exact path="/TKW" element={<Navigate to="/home" />} />
+				<Route exact path="/" element={<Navigate to="/home" />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
