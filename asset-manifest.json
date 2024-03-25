@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/TKW/static/css/main.3254deeb.css",
-    "main.js": "/TKW/static/js/main.e0dcad0c.js",
+    "main.js": "/TKW/static/js/main.6aace94d.js",
     "index.html": "/TKW/index.html",
     "main.3254deeb.css.map": "/TKW/static/css/main.3254deeb.css.map",
-    "main.e0dcad0c.js.map": "/TKW/static/js/main.e0dcad0c.js.map"
+    "main.6aace94d.js.map": "/TKW/static/js/main.6aace94d.js.map"
   },
   "entrypoints": [
     "static/css/main.3254deeb.css",
-    "static/js/main.e0dcad0c.js"
+    "static/js/main.6aace94d.js"
   ]
 }
