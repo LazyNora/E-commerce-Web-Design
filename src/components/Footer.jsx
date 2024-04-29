@@ -74,6 +74,7 @@ const Footer = () => {
 														<div className="agree-terms">
 															<label htmlFor="agree_terms">
 																<input
+																	id="agree_terms"
 																	type="checkbox"
 																	name="agree_terms"
 																	value={
@@ -113,13 +114,13 @@ const Footer = () => {
 										<ul className="accordion-content block-content">
 											<div className="pb-5 md:pb-0">
 												<li className="link-lv2 leading-8 hover-underline">
-													<a href="">
+													<a href="#">
 														Drivers Download
 													</a>
 												</li>
 
 												<li className="link-lv2 leading-8 hover-underline">
-													<a href="">
+													<a href="#">
 														Track Your Order
 													</a>
 												</li>
@@ -165,7 +166,7 @@ const Footer = () => {
 												</li>
 
 												<li className="link-lv2 leading-8 hover-underline">
-													<a href="">Our DISCORD</a>
+													<a href="#">Our DISCORD</a>
 												</li>
 											</div>
 										</ul>
@@ -189,7 +190,7 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
 																className="w-[20px] h-[20px]"
@@ -203,7 +204,7 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
 																className="w-[20px] h-[20px]"
@@ -217,10 +218,10 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
-																class="w-[20px] h-[20px]"
+																className="w-[20px] h-[20px]"
 																xmlns="http://www.w3.org/2000/svg"
 																viewBox="0 0 512 512">
 																<path
@@ -231,7 +232,7 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
 																className="w-[20px] h-[20px]"
@@ -245,7 +246,7 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
 																className="w-[20px] h-[20px]"
@@ -266,7 +267,7 @@ const Footer = () => {
 						) : (
 							<Accordion
 								type="multiple"
-								collapsible
+								collapsible="true"
 								defaultValue={["item-1"]}
 								className="footer_accordion flex flex-wrap -mx-4">
 								<AccordionItem
@@ -310,6 +311,7 @@ const Footer = () => {
 													<div className="agree-terms">
 														<label htmlFor="agree_terms">
 															<input
+																id="agree_terms"
 																type="checkbox"
 																name="agree_terms"
 																value={"yes"}
@@ -344,13 +346,13 @@ const Footer = () => {
 										<ul className="accordion-content block-content">
 											<div className="pb-5 md:pb-0">
 												<li className="link-lv2 leading-8 hover-underline">
-													<a href="">
+													<a href="#">
 														Drivers Download
 													</a>
 												</li>
 
 												<li className="link-lv2 leading-8 hover-underline">
-													<a href="">
+													<a href="#">
 														Track Your Order
 													</a>
 												</li>
@@ -398,7 +400,7 @@ const Footer = () => {
 												</li>
 
 												<li className="link-lv2 leading-8 hover-underline">
-													<a href="">Our DISCORD</a>
+													<a href="#">Our DISCORD</a>
 												</li>
 											</div>
 										</ul>
@@ -424,7 +426,7 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
 																className="w-[20px] h-[20px]"
@@ -438,7 +440,7 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
 																className="w-[20px] h-[20px]"
@@ -452,10 +454,10 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
-																class="w-[20px] h-[20px]"
+																className="w-[20px] h-[20px]"
 																xmlns="http://www.w3.org/2000/svg"
 																viewBox="0 0 512 512">
 																<path
@@ -466,7 +468,7 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
 																className="w-[20px] h-[20px]"
@@ -480,7 +482,7 @@ const Footer = () => {
 														<a
 															target="_blank"
 															className="px-2 flex items-center"
-															href=""
+															href="#"
 															rel="noreferrer">
 															<svg
 																className="w-[20px] h-[20px]"

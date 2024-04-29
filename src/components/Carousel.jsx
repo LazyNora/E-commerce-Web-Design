@@ -349,12 +349,12 @@ const Carousel = () => {
 								Mousewheel,
 							]}
 							loop={true}
-							grabCursor={true}
+							// grabCursor={true}
 							autoplay={{
 								delay: 6000,
 								disableOnInteraction: true,
 							}}
-							mousewheel={true}
+							// mousewheel={true}
 							onSlideChange={(swiper) =>
 								handleSlideChange(swiper)
 							}
@@ -392,7 +392,7 @@ const Carousel = () => {
 													height={1568}
 													loading="lazy"
 												/>
-												<div class="swiper-lazy-preloader"></div>
+												<div className="swiper-lazy-preloader"></div>
 											</SlideBG>
 										</Res>
 										<ResMobile
@@ -411,7 +411,7 @@ const Carousel = () => {
 													height={761}
 													loading="lazy"
 												/>
-												<div class="swiper-lazy-preloader"></div>
+												<div className="swiper-lazy-preloader"></div>
 											</SlideBGMobile>
 										</ResMobile>
 									</SlideMedia>
@@ -448,7 +448,7 @@ const Carousel = () => {
 											</SlideDesc>
 											<a
 												href={item.link}
-												class={`slide_block-link   inline-block sf__btn ${
+												className={`slide_block-link   inline-block sf__btn ${
 													item.type === "light"
 														? "sf__btn-primary"
 														: "sf__btn-white"
