@@ -14,7 +14,8 @@ import NotFound from "./pages/NotFound";
 
 const PageRoutes = () => {
 	return (
-		<Router basename={`/${process.env.PUBLIC_URL}`}>
+		// <Router basename={`/${process.env.PUBLIC_URL}`}>
+		<Router>
 			<Routes>
 				<Route exact path="" element={<Navigate to="/home" />} />
 				<Route path="/home" element={<Home />} />
