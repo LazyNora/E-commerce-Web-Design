@@ -17,7 +17,7 @@ const PageRoutes = () => {
 		// <Router basename={`/${process.env.PUBLIC_URL}`}>
 		<Router>
 			<Routes>
-				<Route exact path="" element={<Navigate to="/home" />} />
+				<Route exact path="/" element={<Navigate to="/home" />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
