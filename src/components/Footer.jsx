@@ -22,10 +22,10 @@ function useWindowSize() {
 	return size;
 }
 
-const Container = styled.div``;
+const Container = styled.section``;
 
 const Footer = () => {
-	const [width, height] = useWindowSize();
+	const [width] = useWindowSize();
 
 	return (
 		<Container className="section-group-footer">

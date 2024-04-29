@@ -11,7 +11,7 @@ const Navbar = () => {
 				<div className="logo-bar | flex -mx-4 items-center py-2">
 					<div className="logo | px-4 justify-center">
 						<a
-							href="/TKW"
+							href="/"
 							className="logo-img | block relative"
 							style={{ width: "290px" }}
 							title="AUDIO OASIS">
