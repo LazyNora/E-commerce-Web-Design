@@ -143,10 +143,6 @@ textarea[type="submit"]:hover {
 .sf__btn:hover {
 	border-color: var(--color-primary-darker);
 }
-.btn:not(.sf__btn-link):hover,
-.sf__btn:not(.sf__btn-link):hover {
-	box-shadow: 0 0 0 0.2rem var(--color-btn-bg-hover);
-}
 .btn-disabled,
 .btn.disabled,
 .btn:disabled,
@@ -184,22 +180,14 @@ textarea[type="submit"]:hover {
 		line-height: 1.75rem;
 	}
 }
-.sf__btn.sf__btn-primary,
-a.sf__btn.sf__btn-primary,
-button.sf__btn.sf__btn-primary {
+.sf__btn.sf__btn-primary {
 	background-color: #000;
 	border-color: #000;
 	color: #fff;
 }
 .sf__btn.sf__btn-primary:focus,
-.sf__btn.sf__btn-primary:hover,
-a.sf__btn.sf__btn-primary:focus,
-a.sf__btn.sf__btn-primary:hover,
-button.sf__btn.sf__btn-primary:focus,
-button.sf__btn.sf__btn-primary:hover {
-	background: #000;
-	border-color: #000;
-	color: #fff;
+.sf__btn.sf__btn-primary:hover {
+	box-shadow: 0 0 0 0.2rem #000;
 }
 .sf__btn.sf__btn-link,
 a.sf__btn.sf__btn-link,
@@ -378,19 +366,15 @@ button.sf__btn.sf__btn-plain:hover {
 	text-decoration: underline !important;
 	transform: translate3d(0, -2px, 0);
 }
-.sf__btn.sf__btn-white,
-a.sf__btn.sf__btn-white,
-button.sf__btn.sf__btn-white {
+.sf__btn.sf__btn-white {
 	background: #fff;
 	color: #232323;
 	border: 0.25px solid #232323;
 }
-.sf__btn.sf__btn-white:hover,
-a.sf__btn.sf__btn-white:hover,
-button.sf__btn.sf__btn-white:hover {
-	background: var(--color-btn-bg-hover, var(--color-primary-darker));
+.sf__btn.sf__btn-white:hover {
+	background: #000;
 	border-color: transparent;
-	color: var(--color-btn-text-hover, #fff);
+	color: #fff;
 }
 .sf__btn-icon:hover {
 	box-shadow: 0 0 0 0.2rem var(--color-btn-bg-hover);

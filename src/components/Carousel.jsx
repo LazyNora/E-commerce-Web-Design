@@ -428,7 +428,7 @@ const Carousel = () => {
 												</span>
 											</SlideSubtitle>
 											<SlideTitle
-												className={`slide_block-title lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5
+												className={`slide_block-title | md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5
 												text-black ${
 													item.type === "light"
 														? "md:text-black"
