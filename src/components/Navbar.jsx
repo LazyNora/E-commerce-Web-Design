@@ -1,8 +1,9 @@
-import { Badge, styled } from "@material-ui/core";
+import { Badge, SvgIcon, styled } from "@material-ui/core";
 import {
 	Search,
 	ShoppingCartOutlined,
 	AccountCircleOutlined,
+	ExpandMore,
 } from "@material-ui/icons";
 import {
 	Select,
@@ -21,6 +22,7 @@ import {
 } from "../components/ui/tooltip";
 import React from "react";
 import { Link } from "react-router-dom";
+import "../assets/css/Navbar.css";
 
 const CustomBadge = styled(Badge)({
 	"& .MuiBadge-badge": {
@@ -29,10 +31,135 @@ const CustomBadge = styled(Badge)({
 	},
 });
 
+const navList = [
+	{
+		text: "Headphones",
+		link: "/collections/headphones",
+		submenu: [
+			{
+				text: "All Headphones",
+				link: "/collections/headphones",
+			},
+			{
+				text: "In-ear Headphone",
+				link: "/collections/headphones?wearing_style=In-ear+Headphone",
+			},
+			{
+				text: "Over-ear Headphone",
+				link: "/collections/headphones?wearing_style=Over-ear+Headphone",
+			},
+			{
+				text: "Wireless Headphone",
+				link: "/collections/headphones?connectivity=Wireless",
+			},
+		],
+	},
+	{
+		text: "DACS",
+		link: "/collections/dac",
+		submenu: [
+			{
+				text: "All DACs",
+				link: "/collections/dac",
+			},
+			{
+				text: "Portable DACs",
+				link: "/collections/dac?portability=Portable",
+			},
+			{
+				text: "Desktop DACs",
+				link: "/collections/dac?portability=Desktop",
+			},
+			{
+				text: "USB Interface",
+				link: "/collections/dac?product_type=USB+Interface",
+			},
+			{
+				text: "MQA Support",
+				link: "/collections/mqa-support",
+			},
+		],
+	},
+	{
+		text: "Headphone AMPs",
+		link: "/collections/headphone-amplifiers",
+		submenu: [
+			{
+				text: "All Headphone AMPs",
+				link: "/collections/headphone-amplifiers",
+			},
+			{
+				text: "Portable Headphone AMPs",
+				link: "/collections/headphone-amplifiers?portability=Portable",
+			},
+			{
+				text: "Desktop Headphone AMPs",
+				link: "/collections/headphone-amplifiers?portability=Desktop",
+			},
+		],
+	},
+	{
+		text: "Speaker Amplifiers",
+		link: "/collections/speaker-amplifiers",
+	},
+	{
+		text: "Accessories",
+		link: "/collections/accessories",
+		submenu: [
+			{
+				text: "All Accessories",
+				link: "/collections/accessories",
+			},
+			{
+				text: "Headphone Cable",
+				link: "/collections/accessories?product_type=Headphone+Cable",
+			},
+			{
+				text: "Audio Cable",
+				link: "/collections/accessories?product_type=Audio+Cable",
+			},
+			{
+				text: "Stand",
+				link: "/collections/accessories?product_type=Stand",
+			},
+			{
+				text: "Ear Pads & Tips",
+				link: "/collections/accessories?product_type=Ear+Tips",
+			},
+		],
+	},
+	{
+		text: "By Brands",
+		link: "#",
+	},
+	{
+		text: "Guarantees",
+		link: "/pages/guarantees-return-policy",
+		submenu: [
+			{
+				text: "Lowest Price Guarantee",
+				link: "/pages/guarantees-return-policy#lowest-price",
+			},
+			{
+				text: "30 Days No Reason Return",
+				link: "/pages/guarantees-return-policy#return",
+			},
+			{
+				text: "180 Days Quality of Exchange",
+				link: "/pages/guarantees-return-policy#exchange",
+			},
+			{
+				text: "7 Days DOA Product Guarantee",
+				link: "/pages/guarantees-return-policy#doa",
+			},
+		],
+	},
+];
+
 const Navbar = () => {
 	return (
 		<header className="section-header">
-			<div className="desktop-header">
+			<div className="desktop-header | hidden lg:block bg-white border-b border-[#ddd]">
 				<div className="header_top | container">
 					<div className="logo-bar | flex -mx-4 items-center py-2">
 						<div className="logo | px-4 justify-center">
@@ -111,6 +238,7 @@ const Navbar = () => {
 							<Link to="/cart" className="pl-4 pr-2 py-3.5">
 								<CustomBadge
 									badgeContent={3}
+									overlap="rectangular"
 									anchorOrigin={{
 										vertical: "bottom",
 										horizontal: "right",
@@ -124,7 +252,61 @@ const Navbar = () => {
 						</div>
 					</div>
 				</div>
-				<div className="header_bottom | ">test</div>
+				<div className="header_bottom">
+					<nav className="menu-wrapper__desktop | container flex items-center">
+						<ul className="menu-nav | flex flex-wrap text-base font-medium whitespace-nowrap -ml-[20px] w-full relative justify-between">
+							{navList.map((nav, index) => (
+								<li
+									key={index}
+									className="menu-item | relative list-none"
+									data-index={index}>
+									<Link
+										className="menu-link | px-4 py-5 flex items-center uppercase font-bold"
+										to={nav.link}>
+										{nav.text}
+										{nav.submenu && (
+											<ExpandMore className="menu__arrow | ml-2" />
+										)}
+									</Link>
+									{nav.submenu && (
+										<div className="menu__submenu menu__desktop-sub-menu menu__dropdown | pointer-events-none absolute z-50 inset-x-0 bg-white w-full opacity-0 invisible min-w-max">
+											<div className="menu__inner">
+												<div className="mx-auto">
+													<div className="submenu__content | flex p-4">
+														<ul className="submenu-items | flex flex-col w-full">
+															{nav.submenu.map(
+																(
+																	subnav,
+																	index
+																) => (
+																	<li
+																		key={
+																			index
+																		}
+																		className="submenu-item | list-none w-full leading-9">
+																		<a
+																			href={
+																				subnav.link
+																			}
+																			className="submenu-link | whitespace-normal block">
+																			{
+																				subnav.text
+																			}
+																		</a>
+																	</li>
+																)
+															)}
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									)}
+								</li>
+							))}
+						</ul>
+					</nav>
+				</div>
 			</div>
 			<div className="mobile-header"></div>
 		</header>

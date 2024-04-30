@@ -486,7 +486,7 @@ const Carousel = () => {
 							))}
 						</Swiper>
 						<SliderControls className="slider_controls flex items-center justify-center mt-5 md:mt-0 -mx-2 slider_controls--show-pagination slider_controls--absolute">
-							<SwiperPagination className="custom-swiper-pagination swiper-pagination w-full sm:mt-6 carousel-dot-dark swiper-pagination-clickable swiper-pagination-bullets"></SwiperPagination>
+							<SwiperPagination className="custom-swiper-pagination swiper-pagination w-full sm:mt-6 carousel-dot-light swiper-pagination-clickable swiper-pagination-bullets"></SwiperPagination>
 						</SliderControls>
 					</SwiperContainer>
 				</Wrapper>
