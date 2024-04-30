@@ -1,13 +1,38 @@
-import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import { Badge, styled } from "@material-ui/core";
+import {
+	Search,
+	ShoppingCartOutlined,
+	AccountCircleOutlined,
+} from "@material-ui/icons";
+import {
+	Select,
+	SelectContent,
+	SelectGroup,
+	SelectItem,
+	SelectLabel,
+	SelectTrigger,
+	SelectValue,
+} from "../components/ui/select";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "../components/ui/tooltip";
 import React from "react";
-import styled from "styled-components";
-import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
+
+const CustomBadge = styled(Badge)({
+	"& .MuiBadge-badge": {
+		backgroundColor: "#008667",
+		color: "#fff",
+	},
+});
 
 const Navbar = () => {
 	return (
-		<section className="section-header">
-			<header className="desktop-header">
+		<header className="section-header">
+			<div className="desktop-header">
 				<div className="header_top | container">
 					<div className="logo-bar | flex -mx-4 items-center py-2">
 						<div className="logo | px-4 justify-center">
@@ -43,15 +68,66 @@ const Navbar = () => {
 									method="get"
 									role="search"
 									noValidate
-									className="search-form | relative w-full md:mx-10 flex border border-black rounded"></form>
+									className="search-form | relative w-full md:mx-10 flex border-2 border-black rounded">
+									<input
+										type="search"
+										name="s"
+										id="s"
+										required
+										autoComplete="off"
+										placeholder="Search products"
+										aria-label="Search products"
+										className="search-input | w-full h-11 border-none"
+									/>
+									<button
+										type="submit"
+										className="search-submit | absolute top-px right-0 py-1 px-2">
+										<Search fontSize="large" />
+									</button>
+								</form>
 							</div>
+							<Select
+								className="currency-selector"
+								defaultValue="VND">
+								<SelectTrigger className="w-[70px] border-none px-2 font-bold text-base">
+									<SelectValue placeholder="" />
+								</SelectTrigger>
+								<SelectContent>
+									<SelectItem value="USD">USD</SelectItem>
+									<SelectItem value="EUR">EUR</SelectItem>
+									<SelectItem value="GBP">GBP</SelectItem>
+									<SelectItem value="CAD">CAD</SelectItem>
+									<SelectItem value="AUD">AUD</SelectItem>
+									<SelectItem value="CNY">CNY</SelectItem>
+									<SelectItem value="IDR">IDR</SelectItem>
+									<SelectItem value="RUB">RUB</SelectItem>
+									<SelectItem value="MYR">MYR</SelectItem>
+									<SelectItem value="JPY">JPY</SelectItem>
+									<SelectItem value="HKD">HKD</SelectItem>
+									<SelectItem value="KRW">KRW</SelectItem>
+									<SelectItem value="VND">VND</SelectItem>
+								</SelectContent>
+							</Select>
+							<Link to="/cart" className="pl-4 pr-2 py-3.5">
+								<CustomBadge
+									badgeContent={3}
+									anchorOrigin={{
+										vertical: "bottom",
+										horizontal: "right",
+									}}>
+									<ShoppingCartOutlined fontSize="large" />
+								</CustomBadge>
+							</Link>
+							<Link to="/account" className="px-2 py-3.5">
+								<AccountCircleOutlined fontSize="large" />
+							</Link>
 						</div>
 					</div>
 				</div>
 				<div className="header_bottom | ">test</div>
-			</header>
-			<header className="mobile-header"></header>
-		</section>
+			</div>
+			<div className="mobile-header"></div>
+		</header>
 	);
 };
 

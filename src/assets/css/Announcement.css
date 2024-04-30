@@ -2,7 +2,7 @@
 	background-color: #000000;
 }
 .announcement-bar__content,
-.sf-topbar__close {
+.topbar__close {
 	color: #fff;
 }
 .announcement-bar a:hover {

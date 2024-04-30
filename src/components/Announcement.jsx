@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import "../assets/css/Announcement.css";
 
-const Container = styled.div``;
-
 const Announcement = () => {
 	const closeAnnouncement = () => {
 		document.querySelector(".announcement-bar").remove();
@@ -13,9 +11,9 @@ const Announcement = () => {
 	};
 
 	return (
-		<Container className="header-group hidden md:block">
-			<section className="announcement-bar relative">
-				<div className="announcement-bar__content md:text-center py-2.5 text-base">
+		<section className="section-announcement | hidden md:block">
+			<div className="announcement-bar | relative">
+				<div className="announcement-bar__content | md:text-center py-2.5 text-base">
 					<span className="font-medium" style={{ fontSize: "13px" }}>
 						30 DAYS NO REASON RETURN • 180 DAYS QUALITY OF EXCHANGE
 						OR REFUND • LOWEST PRICE GUARANTEE • 7 DAYS DOA PRODUCT
@@ -23,7 +21,7 @@ const Announcement = () => {
 					</span>
 				</div>
 				<div
-					className="sf-topbar__close p-3 absolute top-0 right-0 cursor-pointer h-full flex items-center"
+					className="topbar__close | p-3 absolute top-0 right-0 cursor-pointer h-full flex items-center"
 					onClick={closeAnnouncement}>
 					<svg
 						className="w-[20px] h-[20px]"
@@ -38,8 +36,8 @@ const Announcement = () => {
 							d="M6 18L18 6M6 6l12 12"></path>
 					</svg>
 				</div>
-			</section>
-		</Container>
+			</div>
+		</section>
 	);
 };
 

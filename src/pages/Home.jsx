@@ -10,9 +10,11 @@ const Home = () => {
 		<div>
 			<Announcement />
 			<Navbar />
-			<Carousel />
-			<Categories />
-			<Products />
+			<main>
+				<Carousel />
+				<Categories />
+				<Products />
+			</main>
 			<Footer />
 		</div>
 	);
