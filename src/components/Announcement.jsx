@@ -11,7 +11,7 @@ const Announcement = () => {
 	};
 
 	return (
-		<section className="section-announcement | hidden md:block">
+		<section className="section-announcement | hidden lg:block">
 			<div className="announcement-bar | relative">
 				<div className="announcement-bar__content | md:text-center py-2.5 text-base">
 					<span className="font-medium" style={{ fontSize: "13px" }}>

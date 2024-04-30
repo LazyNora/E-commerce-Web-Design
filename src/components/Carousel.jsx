@@ -5,6 +5,7 @@ import {
 	min768,
 	sc767,
 	scmin1440max2000,
+	useWindowSize,
 } from "../responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -306,6 +307,8 @@ const SwiperPagination = styled.div`
 `;
 
 const Carousel = () => {
+	const [width] = useWindowSize();
+
 	const renderCustomPagination = (index, className) => {
 		return (
 			'<span class="carousel-dot ' +
@@ -332,10 +335,25 @@ const Carousel = () => {
 			void contentElement.offsetWidth; // Trigger reflow
 			contentElement.classList.add("animate"); // Add animation class to restart animation
 		}
+
+		//Change pagination color base on item.type on screen 768px or bigger
+		const paginationElement = document.querySelector(
+			".custom-swiper-pagination"
+		);
+		const slideType = carouselData[swiper.activeIndex].type;
+		if (paginationElement && width >= 768) {
+			if (slideType === "light") {
+				paginationElement.classList.add("carousel-dot-dark");
+				paginationElement.classList.remove("carousel-dot-light");
+			} else {
+				paginationElement.classList.remove("carousel-dot-dark");
+				paginationElement.classList.add("carousel-dot-light");
+			}
+		}
 	};
 
 	return (
-		<Container>
+		<Container className="bg-white border-b border-[#ddd]">
 			<Section className="relative shop-slideshow banner_slideshow slider_pagination--right slide-block_content-stack">
 				<Wrapper>
 					<SwiperContainer>
@@ -428,7 +446,7 @@ const Carousel = () => {
 												</span>
 											</SlideSubtitle>
 											<SlideTitle
-												className={`slide_block-title | md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5
+												className={`slide_block-title | md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5
 												text-black ${
 													item.type === "light"
 														? "md:text-black"
