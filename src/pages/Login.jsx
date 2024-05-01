@@ -1,77 +1,27 @@
-import styled from "styled-components";
-import { mobile } from "../responsive";
-
-const Container = styled.div`
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(
-			rgba(255, 255, 255, 0.5),
-			rgb(255, 255, 255, 0.5)
-		),
-		url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-			center;
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
-
-const Wrapper = styled.div`
-	padding: 20px;
-	width: 25%;
-	background-color: white;
-	${mobile({ width: "75%" })}
-`;
-
-const Title = styled.h1`
-	font-style: 24px;
-	font-weight: 300;
-`;
-
-const Form = styled.form`
-	display: flex;
-	flex-direction: column;
-`;
-
-const Input = styled.input`
-	flex: 1;
-	min-width: 40%;
-	margin: 10px 0;
-	padding: 10px;
-`;
-
-const Button = styled.button`
-	width: 40%;
-	border: none;
-	padding: 15px 20px;
-	background-color: teal;
-	color: white;
-	cursor: pointer;
-	margin-bottom: 10px;
-`;
-
-const Link = styled.a`
-	margin: 5px 0px;
-	font-size: 12px;
-	text-decoration: underline;
-	cursor: pointer;
-`;
+import React from "react";
+import "../assets/css/Login.css";
+import Navbar from "../components/Navbar";
+import Announcement from "../components/Announcement";
+import Categories from "../components/Categories";
+import Products from "../components/Products";
+import Footer from "../components/Footer";
+import Carousel from "../components/Carousel";
+import {
+	RemoveRedEye
+} from "@material-ui/icons";
 
 const Login = () => {
-	return (
-		<Container>
-			<Wrapper>
-				<Title>SIGN IN</Title>
-				<Form>
-					<Input placeholder="username" />
-					<Input placeholder="password" />
-					<Button>LOGIN</Button>
-					<Link>Forgot Password?</Link>
-					<Link>Create a New Account</Link>
-				</Form>
-			</Wrapper>
-		</Container>
-	);
+  return (
+    <div>
+      <Announcement />
+      <Navbar />
+     <div className="Login">
+	 Login
+	  <svg className="Eye" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+	 </div>
+      <Footer />
+    </div>
+  );
 };
 
 export default Login;
