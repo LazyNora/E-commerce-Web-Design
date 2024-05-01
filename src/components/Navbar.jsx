@@ -385,7 +385,7 @@ const Navbar = () => {
 			<div
 				className="menu-offcanvas offcanvas offcanvas-left | lg:hidden touch-none fixed z-[60] inset-0 transition-colors duration-300 bg-black"
 				style={{ "--tw-bg-opacity": 0.3 }}>
-				<div className="menu__content | overscroll-contain transition-transform duration-300 w-[450px] z-50 bg-white text-black overflow-x-hidden h-full overflow-y-scroll">
+				<div className="menu__content | overscroll-contain transition-transform duration-300 w-[450px] z-50 bg-white text-black overflow-x-hidden h-full">
 					abc
 				</div>
 			</div>

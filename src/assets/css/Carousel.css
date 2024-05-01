@@ -60,3 +60,7 @@
 		max-width: 1440px !important;
 	}
 }
+
+.swiper-slide:not(.swiper-slide-visible.swiper-slide-active) {
+	visibility: hidden;
+}
