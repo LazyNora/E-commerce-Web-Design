@@ -169,7 +169,6 @@ const menuButton_click = (e) => {
 };
 
 const subMenuOpen_click = (e) => {
-	// e.preventDefault();
 	if (
 		e.target.classList.contains("back-btn") ||
 		e.target.parentElement.classList.contains("back-btn")
