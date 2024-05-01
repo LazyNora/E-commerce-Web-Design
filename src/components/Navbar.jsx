@@ -28,6 +28,8 @@ const CustomBadge = styled(Badge)({
 	"& .MuiBadge-badge": {
 		backgroundColor: "#008667",
 		color: "#fff",
+		fontSize: "0.625rem",
+		bottom: "0.15em",
 	},
 });
 
