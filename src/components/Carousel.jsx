@@ -478,7 +478,7 @@ const Carousel = () => {
 									</SlideBlock>
 									<SlideFooter
 										type={item.type}
-										className="slide-footer container-fluid absolute inset-x-0 bottom-16 z-10 flex items-center justify-end text-black">
+										className="slide-footer container-fluid absolute inset-x-0 bottom-16 z-10 flex items-center justify-end text-black text-xs lg:text-base">
 										<span className="mx-2">
 											{item.footer}
 										</span>

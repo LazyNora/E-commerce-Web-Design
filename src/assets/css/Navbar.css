@@ -134,3 +134,51 @@
 	stroke-dashoffset: -134;
 	stroke-width: 6;
 }
+
+.offcanvas {
+	width: 450px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	background: #fff;
+	z-index: 500;
+	-webkit-transform: translateX(-450px);
+	-ms-transform: translateX(-450px);
+	transform: translateX(-450px);
+	-webkit-transition: -webkit-transform 0.2s;
+	-webkit-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+#root {
+	-webkit-transition: -webkit-transform 0.2s;
+	-webkit-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+@media (max-width: 1023px) {
+	.menu-opened #root {
+		-webkit-transform: translateX(450px);
+		-ms-transform: translateX(450px);
+		transform: translateX(450px);
+	}
+
+	.menu-opened .offcanvas {
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.menu-opened .menu-button {
+		position: absolute;
+		right: 0;
+		z-index: 1000;
+		transform: translateX(-460px);
+	}
+	.menu-opened #root {
+		-webkit-transform: translateX(450px);
+		-ms-transform: translateX(450px);
+		transform: translateX(450px);
+	}
+}
