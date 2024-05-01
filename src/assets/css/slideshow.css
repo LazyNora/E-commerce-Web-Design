@@ -180,7 +180,7 @@
 		flex-flow: row;
 	}
 }
-@media (min-width: 1536px) {
+@media (min-width: 1650px) {
 	.slider_pagination--right .swiper-pagination {
 		top: 50%;
 		left: auto;

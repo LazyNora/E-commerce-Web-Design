@@ -308,6 +308,7 @@ const SwiperPagination = styled.div`
 
 const Carousel = () => {
 	const [width] = useWindowSize();
+	const [currentSlide, setCurrentSlide] = React.useState(0);
 
 	const renderCustomPagination = (index, className) => {
 		return (
@@ -321,7 +322,7 @@ const Carousel = () => {
 
 	const handleSlideChange = (swiper) => {
 		const footerElement =
-			swiper.slides[swiper.activeIndex].querySelector(".slide-footer");
+			swiper.slides[swiper.realIndex].querySelector(".slide-footer");
 		if (footerElement) {
 			footerElement.classList.remove("animate"); // Remove animation class
 			void footerElement.offsetWidth; // Trigger reflow
@@ -329,7 +330,7 @@ const Carousel = () => {
 		}
 
 		const contentElement =
-			swiper.slides[swiper.activeIndex].querySelector(".slide-content");
+			swiper.slides[swiper.realIndex].querySelector(".slide-content");
 		if (contentElement) {
 			contentElement.classList.remove("animate"); // Remove animation class
 			void contentElement.offsetWidth; // Trigger reflow
@@ -340,7 +341,7 @@ const Carousel = () => {
 		const paginationElement = document.querySelector(
 			".custom-swiper-pagination"
 		);
-		const slideType = carouselData[swiper.activeIndex].type;
+		const slideType = carouselData[swiper.realIndex].type;
 		if (paginationElement && width >= 768) {
 			if (slideType === "light") {
 				paginationElement.classList.add("carousel-dot-dark");
@@ -373,7 +374,7 @@ const Carousel = () => {
 								disableOnInteraction: true,
 							}}
 							// mousewheel={true}
-							onSlideChange={(swiper) =>
+							onRealIndexChange={(swiper) =>
 								handleSlideChange(swiper)
 							}
 							effect="fade"
