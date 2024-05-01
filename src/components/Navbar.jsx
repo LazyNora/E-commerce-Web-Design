@@ -168,6 +168,32 @@ const menuButton_click = (e) => {
 	document.body.classList.toggle("menu-opened");
 };
 
+const subMenuOpen_click = (e) => {
+	e.preventDefault();
+	if (
+		e.target.classList.contains("back-btn") ||
+		e.target.parentElement.classList.contains("back-btn")
+	)
+		return;
+	const menuContent = document.querySelector(".menu-content");
+	if (!menuContent.classList.contains("sub-menu-open")) {
+		const subMenuToggle = e.target.closest(".menu-link");
+		const subMenu = subMenuToggle.querySelector(".sub-links");
+		menuContent.classList.add("sub-menu-open");
+		subMenu.classList.remove("hidden");
+	}
+};
+
+const subMenuClose_click = (e) => {
+	const menuContent = document.querySelector(".menu-content");
+	if (menuContent.classList.contains("sub-menu-open")) {
+		const subMenuToggle = e.target.closest(".menu-link");
+		const subMenu = subMenuToggle.querySelector(".sub-links");
+		menuContent.classList.remove("sub-menu-open");
+		subMenu.classList.add("hidden");
+	}
+};
+
 const Navbar = () => {
 	return (
 		<section className="section-header">
@@ -332,12 +358,12 @@ const Navbar = () => {
 							stroke="black"
 							viewBox="0 0 100 100">
 							<path
-								class="line line1"
+								className="line line1"
 								d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
 							/>
-							<path class="line line2" d="M 20,50 H 80" />
+							<path className="line line2" d="M 20,50 H 80" />
 							<path
-								class="line line3"
+								className="line line3"
 								d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
 							/>
 						</svg>
@@ -385,8 +411,87 @@ const Navbar = () => {
 			<div
 				className="menu-offcanvas offcanvas offcanvas-left | lg:hidden touch-none fixed z-[60] inset-0 transition-colors duration-300 bg-black"
 				style={{ "--tw-bg-opacity": 0.3 }}>
-				<div className="menu__content | overscroll-contain transition-transform duration-300 w-[450px] z-50 bg-white text-black overflow-x-hidden h-full">
-					abc
+				<div className="menu-content__wrapper | overscroll-contain transition-transform duration-300 w-[450px] z-50 bg-white text-black overflow-x-hidden h-full">
+					<div className="flex flex-col">
+						<div className="menu-content | flex-grow flex flex-col justify-between transition-all opacity-100 duration-300">
+							<ul className="menu-links | w-full pt-8">
+								{navList.map((nav, index) => (
+									<li
+										key={index}
+										className="menu-link | list-none flex items-center"
+										onClick={
+											nav.submenu && subMenuOpen_click
+										}>
+										<a
+											href={nav.submenu ? "#" : nav.link}
+											className={`w-full px-4 py-3 flex items-center justify-between relative ${
+												nav.submenu
+													? "pointer-events-none"
+													: ""
+											}`}>
+											<span>{nav.text}</span>
+										</a>
+										{nav.submenu && (
+											<span className="toggle-submenu-mb | flex items-center justify-center">
+												<svg
+													className="w-[16px] h-[16px]"
+													fill="currentColor"
+													stroke="currentColor"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 256 512">
+													<path d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z" />
+												</svg>
+											</span>
+										)}
+										{nav.submenu && (
+											<div className="sub-links | absolute inset-y-0 bg-white flex-col left-full w-full flex hidden">
+												<div className="h-full overscroll-contain">
+													<button
+														className="back-btn | p-4 font-medium flex items-center"
+														onClick={
+															subMenuClose_click
+														}>
+														<svg
+															className="w-[16px] h-[16px]"
+															fill="currentColor"
+															stroke="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+															viewBox="0 0 256 512">
+															<path d="m238.475 36.465 7.071 7.07c4.686 4.686 4.686 12.284 0 16.971L50.053 256l195.493 195.494c4.686 4.686 4.686 12.284 0 16.971l-7.071 7.07c-4.686 4.686-12.284 4.686-16.97 0L10.454 264.485c-4.686-4.686-4.686-12.284 0-16.971L221.505 36.465c4.686-4.687 12.284-4.687 16.97 0" />
+														</svg>
+														<span className="ml-3">
+															Back
+														</span>
+													</button>
+													<ul className="sub-links--2 | pb-4">
+														{nav.submenu.map(
+															(subnav, index) => (
+																<li
+																	key={index}
+																	className="menu-link | list-none flex items-center">
+																	<a
+																		href={
+																			subnav.link
+																		}
+																		className="w-full px-4 py-3 flex items-center justify-between relative">
+																		<span>
+																			{
+																				subnav.text
+																			}
+																		</span>
+																	</a>
+																</li>
+															)
+														)}
+													</ul>
+												</div>
+											</div>
+										)}
+									</li>
+								))}
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

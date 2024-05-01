@@ -171,6 +171,7 @@
 
 @media (max-width: 500px) {
 	.menu-opened .menu-button {
+		background-color: white;
 		position: absolute;
 		right: 0;
 		z-index: 1000;
@@ -181,4 +182,21 @@
 		-ms-transform: translateX(450px);
 		transform: translateX(450px);
 	}
+	.menu-content__wrapper {
+		width: 100% !important;
+	}
+	.mobile-header {
+		border: none;
+	}
+}
+
+.toggle-submenu-mb {
+	cursor: pointer;
+	flex: 0 0 48px;
+	height: 100%;
+	min-height: 48px;
+}
+
+.sub-menu-open {
+	transform: translate3d(-100%, 0, 0);
 }
