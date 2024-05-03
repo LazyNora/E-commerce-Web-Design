@@ -61,9 +61,9 @@ export const carouselData = [
 	{
 		id: 0,
 		type: "dark",
-		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710783570/shop_TKW/vhcuurhvwsnxczzdopsf.jpg",
+		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w1500/v1710783570/shop_TKW/vhcuurhvwsnxczzdopsf.jpg",
 		img_mobile:
-			"https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710814689/shop_TKW/miiehccuaozbn8rr6qrm.jpg",
+			"https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w750/v1710814689/shop_TKW/miiehccuaozbn8rr6qrm.jpg",
 		subtitle: "New Arrivals",
 		title: "<b>COLORFLY</b><br>CDA-M2",
 		desc: "Dual CS43198 Portable USB DAC/AMP",
@@ -74,9 +74,9 @@ export const carouselData = [
 	{
 		id: 1,
 		type: "dark",
-		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710814901/shop_TKW/idilrrxtt5nom1v3w8gb.jpg",
+		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w1500/v1710814901/shop_TKW/idilrrxtt5nom1v3w8gb.jpg",
 		img_mobile:
-			"https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710814985/shop_TKW/gomzgtoic490k46nxc2n.jpg",
+			"https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w750/v1710814985/shop_TKW/gomzgtoic490k46nxc2n.jpg",
 		subtitle: "New Arrivals",
 		title: "<b>TRUTHEAR</b><br>NOVA 1DD & 4BA",
 		desc: "3-way Crossover Composite Structure",
@@ -87,9 +87,9 @@ export const carouselData = [
 	{
 		id: 2,
 		type: "dark",
-		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710817575/shop_TKW/khcju5y0xzj6gg8fg8hc.jpg",
+		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w1500/v1710817575/shop_TKW/khcju5y0xzj6gg8fg8hc.jpg",
 		img_mobile:
-			"https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710817621/shop_TKW/fmbbgixxsskajcghuvab.jpg",
+			"https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w750/v1710817621/shop_TKW/fmbbgixxsskajcghuvab.jpg",
 		subtitle: "New Arrivals",
 		title: "<b>TOPPING</b><br>D70 Pro & A70 Pro",
 		desc: "ESS ES9039SPRO DAC",
@@ -100,9 +100,9 @@ export const carouselData = [
 	{
 		id: 3,
 		type: "light",
-		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710817672/shop_TKW/x7vv4fmwamko5xnyajlv.jpg",
+		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w1500/v1710817672/shop_TKW/x7vv4fmwamko5xnyajlv.jpg",
 		img_mobile:
-			"https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710817772/shop_TKW/jbbevgngtswk3ak3nsh1.jpg",
+			"https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w750/v1710817772/shop_TKW/jbbevgngtswk3ak3nsh1.jpg",
 		subtitle: "New Arrivals",
 		title: "<b>MOONDROP</b><br>BLESSING 3",
 		desc: "2DD+4BA Hybrid Crossover",
@@ -113,9 +113,9 @@ export const carouselData = [
 	{
 		id: 4,
 		type: "dark",
-		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710817838/shop_TKW/w2suskieg31xe0fjmsu5.jpg",
+		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w1500/v1710817838/shop_TKW/w2suskieg31xe0fjmsu5.jpg",
 		img_mobile:
-			"https://res.cloudinary.com/dvnfrq3cd/image/upload/v1710817886/shop_TKW/lo59vwmym8i3gxzjdtqk.jpg",
+			"https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w750/v1710817886/shop_TKW/lo59vwmym8i3gxzjdtqk.jpg",
 		subtitle: "New Arrivals",
 		title: "<b>TRUTHEAR x Crinacle</b><br>ZERO:RED",
 		desc: "Dual Dynamic Drivers In-Ear Headphone",
