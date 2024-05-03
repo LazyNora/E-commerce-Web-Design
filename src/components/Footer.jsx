@@ -1,31 +1,35 @@
-import { EmailOutlined, Send } from "@material-ui/icons";
-import "../assets/css/Footer.css";
+import React from "react";
+import { EmailOutlined, Send } from "@material-ui/icons"; // Importing icons
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-} from "../components/ui/accordion";
-import React from "react";
+} from "../components/ui/accordion"; // Importing Accordion components
 import { useWindowSize } from "../responsive";
+import "../assets/css/Footer.css"; // Importing CSS
 
 const Footer = () => {
+	// Get the window width using the useWindowSize hook
 	const [width] = useWindowSize();
 
+	// Structure: Identify classes | Utility classes
+	// Indentify classes dùng cho những lúc cần querySelector hoặc cần style đặc biệt cho riêng nó
+	// Utility classes dùng cho những lúc cần style chung cho nhiều element như padding, margin, font-size, color, ...
 	return (
 		<footer className="section-footer shop-footer">
 			<div className="footer_middle">
 				<div className="container">
 					{width > 767 ? (
-						<div className="footer_accordion flex flex-wrap lg:flex-nowrap -mx-4 lg:-mx-5">
-							<div className="footer_block accordion-item open block-newsletter w-full lg:w-1/3 order-first md:order-none">
-								<div className="footer_block-inner px-4 lg:px-5">
-									<h3 className="font-bold mb-4 text-base accordion-button block-title">
+						<div className="footer_accordion | flex flex-wrap lg:flex-nowrap -mx-4 lg:-mx-5">
+							<div className="footer_block | accordion-item open block-newsletter w-full lg:w-1/3 order-first md:order-none">
+								<div className="footer_block-inner | px-4 lg:px-5">
+									<h3 className="block-title accordion-button | font-bold mb-4 text-base">
 										LET'S GET IN TOUCH
 									</h3>
-									<div className="accordion-content block-content">
+									<div className="block-content accordion-content">
 										<div className="pb-5 md:pb-0">
-											<p className="py-2 block-text newsletter-block-desc">
+											<p className="newsletter-block-desc | py-2 block-text">
 												Stay up to date!
 											</p>
 											<div>
@@ -43,15 +47,15 @@ const Footer = () => {
 															autoCapitalize="off"
 															autoComplete="off"
 															spellCheck="false"
-															className="form-control control-icon py-1.5 px-12 newsletter_form-input"
+															className="newsletter_form-inpu | form-control control-icon py-1.5 px-12"
 														/>
-														<span className="form-newsletter-icon absolute">
+														<span className="form-newsletter-icon | absolute">
 															<EmailOutlined className="w-[16px] h-[16px]" />
 														</span>
 														<button
 															type="submit"
 															name="submit"
-															className="form-submit absolute">
+															className="form-submit | absolute">
 															<Send className="w-[16px] h-[16px]" />
 														</button>
 													</div>
@@ -84,31 +88,31 @@ const Footer = () => {
 									</div>
 								</div>
 							</div>
-							<div className="footer_block footer_block-spacing w-full lg:w-1/6">
+							<div className="footer_block footer_block-spacing | w-full lg:w-1/6">
 								<div className="footer_block-inner px-4 lg:px-5"></div>
 							</div>
-							<div className="footer_block accordion-item footer_block-menu w-full lg:w-1/4">
-								<div className="footer_block-inner px-4 lg:px-5">
-									<h3 className="font-bold mb-4 text-base accordion-button block-title">
+							<div className="footer_block accordion-item footer_block-menu | | w-full lg:w-1/4">
+								<div className="footer_block-inner | px-4 lg:px-5">
+									<h3 className="block-title accordion-button | font-bold mb-4 text-base">
 										SUPPORT
 									</h3>
-									<ul className="accordion-content block-content">
+									<ul className="block-content accordion-content">
 										<div className="pb-5 md:pb-0">
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="#">Drivers Download</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="#">Track Your Order</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/shipping-return">
 													Shipping &amp; Returns
 												</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/reviews">
 													Customer Reviews
 												</a>
@@ -117,53 +121,53 @@ const Footer = () => {
 									</ul>
 								</div>
 							</div>
-							<div className="footer_block accordion-item footer_block-menu w-full lg:w-1/4">
-								<div className="footer_block-inner px-4 lg:px-5">
-									<h3 className="font-bold mb-4 text-base accordion-button block-title">
+							<div className="footer_block accordion-item footer_block-menu | | w-full lg:w-1/4">
+								<div className="footer_block-inner | px-4 lg:px-5">
+									<h3 className="accordion-button block-title | font-bold mb-4 text-base">
 										GET TO KNOW US
 									</h3>
 									<ul className="accordion-content block-content">
 										<div className="pb-5 md:pb-0">
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/security-privacy">
 													Security &amp; Privacy
 												</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/terms-conditions">
 													Terms of Use
 												</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/contact-us">
 													Contact Us
 												</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="#">Our DISCORD</a>
 											</li>
 										</div>
 									</ul>
 								</div>
 							</div>
-							<div className="footer_block accordion-item footer_block-our_store w-full lg:w-1/4">
-								<div className="footer_block-inner px-4 lg:px-5">
-									<h3 className="font-bold mb-4 text-base accordion-button block-title">
+							<div className="footer_block accordion-item footer_block-our_store | w-full lg:w-1/4">
+								<div className="footer_block-inner | px-4 lg:px-5">
+									<h3 className="accordion-button block-title | font-bold mb-4 text-base">
 										FOLLOW US
 									</h3>
 									<div className="accordion-content rte block-content">
 										<div className="pb-5 md:pb-0">
-											<div className="block-text mt-4">
+											<div className="block-text | mt-4">
 												<p className="mt-1">
 													<a href="mailto:support@audiooasis.com">
 														{" "}
 														support@audiooasis.com{" "}
 													</a>
 												</p>
-												<div className="social-media-links mt-6 px-0 -mx-2 flex items-center">
+												<div className="social-media-links | mt-6 px-0 -mx-2 flex items-center">
 													<a
 														target="_blank"
 														className="px-2 flex items-center"
@@ -246,16 +250,16 @@ const Footer = () => {
 							type="multiple"
 							collapsible="true"
 							defaultValue={["item-1"]}
-							className="footer_accordion flex flex-wrap -mx-4">
+							className="footer_accordion | flex flex-wrap -mx-4">
 							<AccordionItem
 								value="item-1"
-								className="footer_block accordion-item open block-newsletter w-full order-first">
-								<AccordionTrigger className="footer_block-inner font-bold text-base accordion-button block-title">
+								className="footer_block accordion-item block-newsletter | open | w-full order-first">
+								<AccordionTrigger className="footer_block-inner accordion-button block-title | font-bold text-base">
 									LET'S GET IN TOUCH
 								</AccordionTrigger>
 								<AccordionContent className="accordion-content block-content">
 									<div className="pb-5 md:pb-0">
-										<p className="py-2 block-text newsletter-block-desc">
+										<p className="newsletter-block-desc block-text | py-2">
 											Stay up to date!
 										</p>
 										<div>
@@ -273,9 +277,9 @@ const Footer = () => {
 														autoCapitalize="off"
 														autoComplete="off"
 														spellCheck="false"
-														className="form-control control-icon py-1.5 px-12 newsletter_form-input"
+														className="newsletter_form-input | form-control control-icon py-1.5 px-12"
 													/>
-													<span className="form-newsletter-icon absolute">
+													<span className="form-newsletter-icon | absolute">
 														<EmailOutlined className="w-[16px] h-[16px]" />
 													</span>
 													<button
@@ -314,28 +318,28 @@ const Footer = () => {
 							</AccordionItem>
 							<AccordionItem
 								value="item-2"
-								className="footer_block accordion-item footer_block-menu w-full">
-								<AccordionTrigger className="footer_block-inner font-bold text-base accordion-button block-title">
+								className="footer_block accordion-item footer_block-menu | w-full">
+								<AccordionTrigger className="footer_block-inner accordion-button block-title | font-bold text-base">
 									SUPPORT
 								</AccordionTrigger>
 								<AccordionContent>
 									<ul className="accordion-content block-content">
 										<div className="pb-5 md:pb-0">
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="#">Drivers Download</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="#">Track Your Order</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/shipping-return">
 													Shipping &amp; Returns
 												</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/reviews">
 													Customer Reviews
 												</a>
@@ -346,32 +350,32 @@ const Footer = () => {
 							</AccordionItem>
 							<AccordionItem
 								value="item-3"
-								className="footer_block accordion-item footer_block-menu w-full">
-								<AccordionTrigger className="footer_block-inner font-bold text-base accordion-button block-title">
+								className="footer_block accordion-item footer_block-menu | w-full">
+								<AccordionTrigger className="footer_block-inner accordion-button block-title | font-bold text-base">
 									GET TO KNOW US
 								</AccordionTrigger>
 								<AccordionContent>
 									<ul className="accordion-content block-content">
 										<div className="pb-5 md:pb-0">
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/security-privacy">
 													Security &amp; Privacy
 												</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/terms-conditions">
 													Terms of Use
 												</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="/pages/contact-us">
 													Contact Us
 												</a>
 											</li>
 
-											<li className="link-lv2 leading-8 hover-underline">
+											<li className="link-lv2 | leading-8 hover-underline">
 												<a href="#">Our DISCORD</a>
 											</li>
 										</div>
@@ -380,8 +384,8 @@ const Footer = () => {
 							</AccordionItem>
 							<AccordionItem
 								value="item-4"
-								className="footer_block accordion-item footer_block-our_store w-full">
-								<AccordionTrigger className="footer_block-inner font-bold text-base accordion-button block-title">
+								className="footer_block accordion-item footer_block-our_store | w-full">
+								<AccordionTrigger className="footer_block-inner accordion-button block-title | font-bold text-base">
 									FOLLOW US
 								</AccordionTrigger>
 								<AccordionContent>
@@ -394,7 +398,7 @@ const Footer = () => {
 														support@audiooasis.com{" "}
 													</a>
 												</p>
-												<div className="social-media-links mt-6 px-0 -mx-2 flex items-center">
+												<div className="social-media-links | mt-6 px-0 -mx-2 flex items-center">
 													<a
 														target="_blank"
 														className="px-2 flex items-center"
@@ -475,15 +479,15 @@ const Footer = () => {
 					)}
 				</div>
 			</div>
-			<div className="footer-layout footer_bottom mt-5 md:mt-0">
+			<div className="footer-layout footer_bottom | mt-5 md:mt-0">
 				<div className="container">
-					<div className="footer_bottom-inner lg:pb-8 pt-0 lg:py-5 flex flex-col lg:flex-row justify-between items-center">
-						<div className="footer_left flex-1 text-center w-full md:text-left mb-6 lg:mb-0 lg:w-auto lg:order-none">
+					<div className="footer_bottom-inner | lg:pb-8 pt-0 lg:py-5 flex flex-col lg:flex-row justify-between items-center">
+						<div className="footer_left | flex-1 text-center w-full md:text-left mb-6 lg:mb-0 lg:w-auto lg:order-none">
 							<span className="text-sm text-left">
 								© AUDIOOASIS.COM 2024 All Rights Reserved.
 							</span>
 						</div>
-						<div className="footer_right w-full flex flex-wrap justify-center md:justify-start lg:justify-center items-center lg:w-auto">
+						<div className="footer_right | w-full flex flex-wrap justify-center md:justify-start lg:justify-center items-center lg:w-auto">
 							<div className="payment-icons flex justify-center lg:justify-start">
 								<span className="hidden">
 									Payment options:{" "}

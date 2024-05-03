@@ -33,6 +33,7 @@ const CustomBadge = styled(Badge)({
 	},
 });
 
+// Navbar data for the menu
 const navList = [
 	{
 		text: "Headphones",
@@ -158,6 +159,7 @@ const navList = [
 	},
 ];
 
+// Event handlers for the menu on mobile
 const menuButton_click = (e) => {
 	const menuButton = e.target.closest(".menu-button");
 	menuButton.classList.toggle("opened");
@@ -168,6 +170,7 @@ const menuButton_click = (e) => {
 	document.body.classList.toggle("menu-opened");
 };
 
+// Event handlers for opening the submenu on mobile
 const subMenuOpen_click = (e) => {
 	if (
 		e.target.classList.contains("back-btn") ||
@@ -183,6 +186,7 @@ const subMenuOpen_click = (e) => {
 	}
 };
 
+// Event handlers for closing the submenu on mobile
 const subMenuClose_click = (e) => {
 	const menuContent = document.querySelector(".menu-content");
 	if (menuContent.classList.contains("sub-menu-open")) {
@@ -194,6 +198,7 @@ const subMenuClose_click = (e) => {
 };
 
 const Navbar = () => {
+	// Vẫn là Identify classes | Utility classes (Xem thêm tại Footer.jsx)
 	return (
 		<section className="section-header">
 			<header className="header | inset-x-0 z-[70] header__wrapper">

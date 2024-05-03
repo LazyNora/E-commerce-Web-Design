@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import "../assets/css/Announcement.css";
 
+// Event listener to close the announcement bar
 const Announcement = () => {
 	const closeAnnouncement = () => {
 		document.querySelector(".announcement-bar").remove();

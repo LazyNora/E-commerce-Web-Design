@@ -1,4 +1,7 @@
-import styled from "styled-components";
+import React from "react";
+
+import styled from "styled-components"; // Import the styled-components library
+
 import {
 	max767,
 	min1024,
@@ -6,23 +9,26 @@ import {
 	sc767,
 	scmin1440max2000,
 	useWindowSize,
-} from "../responsive";
-import { Swiper, SwiperSlide } from "swiper/react";
+} from "../responsive"; // Import the responsive helper functions
+
+import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper components
+
 import {
 	Navigation,
 	Pagination,
 	Autoplay,
 	EffectFade,
 	Mousewheel,
-} from "swiper/modules";
+} from "swiper/modules"; // Import Swiper modules
+
 import "../assets/css/chunk.css";
 import "../assets/css/slideshow.css";
 import "../assets/css/Carousel.css";
 import "swiper/css";
-import "swiper/css/navigation";
-import { carouselData } from "../data";
-import React from "react";
 
+import { carouselData } from "../data"; // Import the carousel data
+
+// Styles for the Carousel component using styled-components
 const Container = styled.div`
 	box-sizing: border-box;
 	display: block;
@@ -307,9 +313,10 @@ const SwiperPagination = styled.div`
 `;
 
 const Carousel = () => {
+	// Get the window width using the useWindowSize hook
 	const [width] = useWindowSize();
-	const [currentSlide, setCurrentSlide] = React.useState(0);
 
+	// Custom pagination for Swiper
 	const renderCustomPagination = (index, className) => {
 		return (
 			'<span class="carousel-dot ' +
@@ -320,6 +327,7 @@ const Carousel = () => {
 		);
 	};
 
+	// Function to handle slide change
 	const handleSlideChange = (swiper) => {
 		const footerElement =
 			swiper.slides[swiper.realIndex].querySelector(".slide-footer");
