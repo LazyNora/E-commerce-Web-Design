@@ -24,7 +24,11 @@
 }
 
 .menu-nav .menu-item > a {
-	padding: 1rem 1.5rem;
+	padding: 0.75em 1em;
+}
+
+ul.menu-nav {
+	font-size: clamp(0.7rem, 1.2vw, 1rem);
 }
 
 .menu-item > a {

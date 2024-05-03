@@ -292,7 +292,7 @@ const Navbar = () => {
 					</div>
 					<div className="header_bottom">
 						<nav className="menu-wrapper__desktop | container flex items-center">
-							<ul className="menu-nav | flex flex-wrap text-base font-medium whitespace-nowrap -ml-[20px] w-full relative justify-between">
+							<ul className="menu-nav | flex flex-wrap font-medium whitespace-nowrap -ml-[20px] w-full relative justify-between">
 								{navList.map((nav, index) => (
 									<li
 										key={index}
