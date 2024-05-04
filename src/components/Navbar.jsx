@@ -289,7 +289,7 @@ const Navbar = () => {
 										<ShoppingCartOutlined fontSize="large" />
 									</CustomBadge>
 								</Link>
-								<Link to="/account" className="px-2 py-3.5">
+								<Link to="/Login" className="px-2 py-3.5">
 									<AccountCircleOutlined fontSize="large" />
 								</Link>
 							</div>
