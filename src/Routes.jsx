@@ -25,7 +25,7 @@ const PageRoutes = () => {
 				<Route path="/products" element={<ProductList />} />
 				<Route path="/products/:category" element={<ProductList />} />
 				<Route path="/product" element={<Product />} />
-				<Route path="/product/:id" element={<Product />} />
+				<Route path="/product/:handle" element={<Product />} />
 				<Route path="/*" element={<NotFound />} />
 			</Routes>
 		</Router>

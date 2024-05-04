@@ -1,0 +1,59 @@
+.product-template {
+	background: #efefef;
+	margin: 0 !important;
+	padding: 50px 0 100px;
+}
+
+.prod__container {
+	margin: 0 -15px;
+}
+
+.prod-media__wrapper {
+	padding-left: 4px;
+	position: sticky;
+	top: 30px;
+}
+
+.prod-template__desktop.enable-zoom .prod-media-item.media-type-image {
+	cursor: zoom-in;
+}
+
+.prod-media {
+	transition: all 0.3s;
+	width: 100%;
+}
+
+.prod-image {
+	vertical-align: middle;
+	width: 100%;
+}
+
+.prod-image .img-loaded {
+	animation: 0.5s cubic-bezier(0.26, 0.54, 0.32, 1) 0s forwards;
+	animation-name: image-fade-in;
+}
+
+[style*="--aspect-ratio"]:before {
+	padding-top: calc(100% / (0.0001 + var(--aspect-ratio, 16/9)));
+}
+
+@keyframes image-fade-in {
+	0% {
+		opacity: 0;
+		transform: scale(1.1);
+	}
+	10% {
+		opacity: 0.1;
+	}
+	20% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.swiper-slide.prod-media-item {
+	visibility: visible !important;
+}
