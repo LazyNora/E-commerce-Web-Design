@@ -22,10 +22,12 @@ const PageRoutes = () => {
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/cart" element={<Cart />} />
+				<Route path="/categories" element={<ProductList />} />
+				<Route path="/categories/:category" element={<ProductList />} />
+				<Route path="/colections" element={<ProductList />} />
+				<Route path="/colections/:category" element={<ProductList />} />
 				<Route path="/products" element={<ProductList />} />
-				<Route path="/products/:category" element={<ProductList />} />
-				<Route path="/product" element={<Product />} />
-				<Route path="/product/:handle" element={<Product />} />
+				<Route path="/products/:handle" element={<Product />} />
 				<Route path="/*" element={<NotFound />} />
 			</Routes>
 		</Router>

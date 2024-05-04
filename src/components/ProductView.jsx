@@ -4,6 +4,11 @@ import ProductMedia from "./ProductMedia";
 const ProductView = ({ item }) => {
 	return (
 		<section id="product__main" className="section-product">
+			<link
+				href="/assets/photoswipe.css"
+				rel="stylesheet"
+				type="text/css"
+				media="all"></link>
 			<div
 				className="product-template | md:mt-4 mb-5 md:mb-12"
 				data-section-type="product-page"
