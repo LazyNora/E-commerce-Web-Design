@@ -79,6 +79,11 @@
     display:inline-flex;
     vertical-align: middle;
   }
+  #checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
 
 }
 /* Mobile */

@@ -29,7 +29,7 @@ const Login = () => {
           </div>
        
 
-        <a href="#forgot_pass" className="fg-pass">Forgot your password?</a>
+        <a href="#forgot_pass" className="fg-pass text">Forgot your password?</a>
 
         <div className="signin-button">
           <button className="sf__btn sf__btn-primary grid">SIGN IN</button>
@@ -41,7 +41,7 @@ const Login = () => {
           <button><Twitter/></button>
         </div>
 
-        <a href="#register" className="register">Register</a>
+        <a href="Register" className="register text">Register</a>
       </div>
       <Footer />
     </div>

@@ -1,81 +1,80 @@
-import styled from "styled-components";
-import { mobile } from "../responsive";
+import React from "react";
+// import  "../assets/js/login.js";
+import "../assets/css/Register.css"
+import Navbar from "../components/Navbar";
+import Announcement from "../components/Announcement";
+import Categories from "../components/Categories";
+import Products from "../components/Products";
+import Footer from "../components/Footer";
+import Carousel from "../components/Carousel";
+import { Facebook, Instagram, RemoveRedEye, Twitter, YouTube } from "@material-ui/icons";
 
-const Container = styled.div`
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(
-			rgba(255, 255, 255, 0.5),
-			rgb(255, 255, 255, 0.5)
-		),
-		url("https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
-			center;
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
 
-const Wrapper = styled.div`
-	padding: 20px;
-	width: 40%;
-	background-color: white;
-	${mobile({ width: "75%" })}
-`;
-
-const Title = styled.h1`
-	font-style: 24px;
-	font-weight: 300;
-`;
-
-const Form = styled.form`
-	display: flex;
-	flex-wrap: wrap;
-`;
-
-const Input = styled.input`
-	flex: 1;
-	min-width: 40%;
-	margin: 20px 10px 0px 0px;
-	padding: 10px;
-`;
-
-const Agreement = styled.span`
-	font-size: 12px;
-	margin: 20px 0px;
-`;
-
-const Button = styled.button`
-	width: 40%;
-	border: none;
-	padding: 15px 20px;
-	background-color: teal;
-	color: white;
-	cursor: pointer;
-`;
 
 const Register = () => {
-	return (
-		<Container>
-			<Wrapper>
-				<Title>CREATE AN ACCOUNT</Title>
-				<Form>
-					<Input placeholder="name" />
-					<Input placeholder="last name" />
-					<Input placeholder="username" />
-					<Input placeholder="email" />
-					<Input placeholder="password" />
-					<Input placeholder="confirm password" />
-					<Agreement>
-						By creating an account, I consent to the processing of
-						my personal data in accordance with the{" "}
-						<b>PRIVACY POLICY</b>
-					</Agreement>
-					<Button>CREATE</Button>
-				</Form>
-			</Wrapper>
-		</Container>
-	);
+  return (
+    <div>
+      <Announcement />
+      <Navbar />
+      <div className="login">
+
+        
+       <h1 className="login-title">Register</h1>
+        
+        <div className="icon">
+          <button><Facebook/></button>
+          <button><YouTube/></button>
+          <button><Instagram/></button>
+          <button><Twitter/></button>
+        </div>
+       
+          <div className="input-box item">
+            <input type="text" placeholder="Your Frist Name" />
+          </div>
+          <div className="input-box item">
+            <input type="text" placeholder="Your Last Name" />
+          </div>
+          <div className="input-box item">
+            <input type="text" placeholder="Your Email" />
+          </div>
+          <div className="input-box item relative" >
+            <input type="text" placeholder="Your Password" />
+       <button className="absolute right-2 top-[25%]"> <RemoveRedEye/></button>
+          </div>
+          
+          <div className="text">
+            <p>Sign up for early Sale access plus tailored new arrivals, trends and promotions. To opt out, click unsubscribe in our emails.</p>
+          </div>
+
+
+        <div className="signin-button">
+          <button className="sf__btn sf__btn-primary grid">REGISTER</button>
+        </div>
+        <div className="text">
+            <p>Subscribe for Newsletter</p>
+             <input type="checkbox"  name="" id="checkbox" />
+            
+        </div>
+       
+        
+
+        <a href="Login" className="register text">Login</a>
+      </div>
+    
+
+
+
+
+
+      <Footer />
+      
+
+    </div>
+  );
+  
 };
+{/* <script src="https://code.jquery.com/jquery-3.7.1.js" ></script> */}
+
+
 
 export default Register;
