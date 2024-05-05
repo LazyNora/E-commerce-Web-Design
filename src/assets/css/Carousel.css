@@ -61,6 +61,6 @@
 	}
 }
 
-.swiper-slide:not(.swiper-slide-visible.swiper-slide-active) {
+.shop-slideshow .swiper-slide:not(.swiper-slide-visible.swiper-slide-active) {
 	visibility: hidden;
 }
