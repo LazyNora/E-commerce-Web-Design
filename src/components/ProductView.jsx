@@ -23,8 +23,19 @@ const ProductView = ({ item }) => {
 						<div className="prod__container prod__block | flex flex-wrap">
 							<div className="w-full md:w-2/3">
 								<div className="product-media__desktop prod-media__wrapper | justify-end hidden md:block prod__layout-4">
-									<ProductMedia item={item} />
+									<ProductMedia item={item} type="desktop" />
 								</div>
+								<div className="product-media__mobile | md:hidden">
+									<div className="product-mb__media product-page-mobile__slider ">
+										<ProductMedia
+											item={item}
+											type="mobile"
+										/>
+									</div>
+								</div>
+							</div>
+							<div className="w-full md:w-1/3">
+								<div className="prod__info-wrapper">info</div>
 							</div>
 						</div>
 					</div>

@@ -138,7 +138,6 @@ const Register = () => {
 					</a>
 				</section>
 			</main>
-
 			<Footer />
 		</>
 	);

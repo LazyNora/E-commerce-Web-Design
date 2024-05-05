@@ -32,7 +32,7 @@ function addEventDelegate({ selector, context, handler }) {
 	});
 }
 
-const ProductMedia = ({ item }) => {
+const ProductMedia = ({ item, type = "desktop" }) => {
 	const [slider, setSlider] = useState(null);
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -55,7 +55,9 @@ const ProductMedia = ({ item }) => {
 					featuredImage: ".prod-media",
 				};
 				var domNodes = null;
-				const container = document.querySelector(".media-gallery");
+				const container = document.querySelector(
+					`.media-gallery[data-screen=${type}]`
+				);
 				const navSliderE = document.querySelector(
 					".nav-swiper-container"
 				);
@@ -202,9 +204,19 @@ const ProductMedia = ({ item }) => {
 		}
 	}, [slider]);
 
+	if (!item || !item.media || !item.media.length) {
+		return null;
+	}
+
+	if (type !== "desktop" && type !== "mobile") {
+		return null;
+	}
+
 	return (
 		<div
-			className="media-gallery | hidden md:block w-full"
+			className={`media-gallery | ${
+				type === "desktop" ? "hidden md:block" : "md:hidden"
+			} w-full`}
 			data-product-id={item.id}
 			data-product-handle={item.handle}
 			data-product-url={item.url}
@@ -215,8 +227,8 @@ const ProductMedia = ({ item }) => {
 			data-only-media="false"
 			data-layout="layout-4"
 			data-section="product__main"
-			data-screen="desktop"
-			data-media-size="4">
+			data-screen={type}
+			data-media-size={item.media.length}>
 			<div className="pis__wrapper | overflow-hidden w-full">
 				<div className="preview__wrapper | mb-4 flex-grow">
 					<Swiper
@@ -276,7 +288,12 @@ const ProductMedia = ({ item }) => {
 										/>
 									</div>
 								</div>
-								<div className="zoom-in | transition-all opacity-0 absolute z-10 right-5 top-5">
+								<div
+									className={`zoom-in | transition-all opacity-0 absolute z-10 right-5 ${
+										type === "desktop"
+											? "top-5"
+											: "bottom-2.5"
+									}`}>
 									<button
 										className="prod-media__zoom-in | tooltip-item btn-icon tooltip-left tooltip-style-1"
 										type="button"
@@ -324,45 +341,51 @@ const ProductMedia = ({ item }) => {
 						</div>
 					</Swiper>
 				</div>
-				<div className="media-nav">
-					<Swiper
-						onSwiper={setThumbsSwiper}
-						modules={[Navigation, Pagination, Thumbs, FreeMode]}
-						spaceBetween={10}
-						slidesPerView={5}
-						watchSlidesProgress={true}
-						threshold={2}
-						freeMode={true}
-						direction="horizontal"
-						className="nav-swiper-container"
-						style={{ opacity: 1 }}>
-						{item.media.map((media, index) => (
-							<SwiperSlide
-								key={index}
-								className="swiper-slide | "
-								data-index={index}>
-								<div
-									className="prod-media media-image"
-									data-media-id={media.id}
-									data-media-width={media.width}
-									data-media-height={media.height}
-									data-media-alt={media.alt}
-									data-media-src={media.src}>
-									<div className="prod-image">
-										<img
-											src={`${media.src + "&width=175"}`}
-											loading="lazy"
-											className="img-loaded"
-											width="179"
-											height="120"
-											sizes="175px"
-										/>
+				{type === "desktop" ? (
+					<div className="media-nav">
+						<Swiper
+							onSwiper={setThumbsSwiper}
+							modules={[Navigation, Pagination, Thumbs, FreeMode]}
+							spaceBetween={10}
+							slidesPerView={5}
+							watchSlidesProgress={true}
+							threshold={2}
+							freeMode={true}
+							direction="horizontal"
+							className="nav-swiper-container"
+							style={{ opacity: 1 }}>
+							{item.media.map((media, index) => (
+								<SwiperSlide
+									key={index}
+									className="swiper-slide | "
+									data-index={index}>
+									<div
+										className="prod-media media-image"
+										data-media-id={media.id}
+										data-media-width={media.width}
+										data-media-height={media.height}
+										data-media-alt={media.alt}
+										data-media-src={media.src}>
+										<div className="prod-image">
+											<img
+												src={`${
+													media.src + "&width=175"
+												}`}
+												loading="lazy"
+												className="img-loaded"
+												width="179"
+												height="120"
+												sizes="175px"
+											/>
+										</div>
 									</div>
-								</div>
-							</SwiperSlide>
-						))}
-					</Swiper>
-				</div>
+								</SwiperSlide>
+							))}
+						</Swiper>
+					</div>
+				) : (
+					<div className="swiper-pagination"></div>
+				)}
 			</div>
 		</div>
 	);
