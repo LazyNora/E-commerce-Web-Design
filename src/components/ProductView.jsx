@@ -1,4 +1,5 @@
 import "../assets/css/ProductView.css";
+import ProductInfo from "./ProductInfo";
 import ProductMedia from "./ProductMedia";
 
 const ProductView = ({ item }) => {
@@ -35,7 +36,11 @@ const ProductView = ({ item }) => {
 								</div>
 							</div>
 							<div className="w-full md:w-1/3">
-								<div className="prod__info-wrapper">info</div>
+								<div className="prod__info-wrapper">
+									<div className="prod__info">
+										<ProductInfo item={item} />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
