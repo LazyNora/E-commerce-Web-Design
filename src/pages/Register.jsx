@@ -14,7 +14,7 @@ import {
 import { SvgIcon } from "@mui/material";
 
 const Register = () => {
-	const [showPassword, setShowPassword] = useState(false);
+	const [showPassword, setShowPassword] = useState(false); // Lưu trạng thái hiển thị password
 
 	return (
 		<>
@@ -92,16 +92,16 @@ const Register = () => {
 									className="show-pass"
 									onClick={() => {
 										const password =
-											document.querySelector("#password");
+											document.querySelector("#password"); // Lấy element input password
 										password.type = showPassword
 											? "password"
-											: "text";
-										setShowPassword(!showPassword);
+											: "text"; // Nếu showPassword = true thì hiển thị password, ngược lại ẩn password
+										setShowPassword(!showPassword); // Đảo ngược trạng thái showPassword
 									}}>
 									{showPassword ? (
-										<VisibilityOff />
+										<VisibilityOff /> // Nếu showPassword = true thì hiển thị icon ẩn password, ngược lại hiển thị icon hiện password
 									) : (
-										<Visibility />
+										<Visibility /> // Nếu showPassword = false thì hiển thị icon hiện password, ngược lại hiển thị icon ẩn password
 									)}
 								</IconButton>
 							</div>
