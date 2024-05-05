@@ -1,5 +1,5 @@
 import React from "react";
-import { EmailOutlined, Send } from "@material-ui/icons"; // Importing icons
+import { EmailOutlined, Send } from "@mui/icons-material"; // Importing icons
 import {
 	Accordion,
 	AccordionContent,

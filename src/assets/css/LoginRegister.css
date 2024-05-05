@@ -1,0 +1,139 @@
+.form-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.form-control {
+	--tw-text-opacity: 1;
+	background-color: transparent;
+	background-color: #ffffff;
+	border-color: #dedede;
+	border-radius: 0.25rem;
+	border-width: 1px;
+	color: rgb(55 65 81 / var(--tw-text-opacity));
+	font-size: 16px;
+	line-height: 2rem;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	padding: 0.375rem 0.75rem;
+	transition-duration: 0.2s;
+	transition-property: color, background-color, border-color,
+		text-decoration-color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	width: 100%;
+}
+
+.form-control:focus {
+	border-color: #000;
+	outline: none !important;
+}
+
+.show-pass {
+	position: absolute !important;
+	right: 0.125rem;
+	top: 0.5rem;
+	cursor: pointer;
+}
+
+.forgot-pass {
+	text-decoration: underline;
+}
+
+.icon-wrapper {
+	text-align: center;
+}
+
+.btn-link {
+	border-bottom-color: currentColor; /* Use the current text color as the border-bottom color */
+	border-radius: 0;
+	border-width: 0;
+	padding: 0.25rem 0;
+	position: relative;
+	outline: none;
+	transition: all 0.32s;
+	display: inline-block;
+}
+
+.btn-link:focus,
+.btn-link:hover {
+	background: none;
+}
+
+.btn-link:after,
+.btn-link:before {
+	background: currentColor;
+	bottom: 0;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(1) translateZ(0);
+	transform-origin: right;
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+	width: 100%;
+}
+
+.btn-link:after,
+.btn-link:after {
+	transform: scaleX(0) translateZ(0);
+	transform-origin: left;
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-link:focus:before,
+.btn-link:hover:before {
+	transform: scaleX(0) translateZ(0);
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-link:focus:after,
+.btn-link:hover:after {
+	transform: scaleX(1) translateZ(0);
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+}
+
+.section-customer__form .title {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.accept-marketing label {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+}
+
+.accept-marketing span {
+	margin-right: 12px;
+}
+
+@media (min-width: 768px) {
+	.section-customer__form {
+		background-color: #efefef;
+		width: 650px;
+		border-radius: 10px;
+		box-sizing: border-box;
+		margin: 0 auto;
+		border-radius: 15px;
+		margin-bottom: 50px;
+		margin-top: 50px;
+		padding: 50px 100px;
+	}
+}
+/* Mobile */
+@media (max-width: 767px) {
+	.section-customer__form {
+		padding: 30px 20px;
+		width: 100%;
+		background: #fff;
+	}
+
+	.section-customer__form .title {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+}

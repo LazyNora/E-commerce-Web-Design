@@ -1,10 +1,10 @@
-import { Badge, SvgIcon, styled } from "@material-ui/core";
+import { Badge, SvgIcon, styled } from "@mui/material";
 import {
 	Search,
 	ShoppingCartOutlined,
 	AccountCircleOutlined,
 	ExpandMore,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import {
 	Select,
 	SelectContent,
