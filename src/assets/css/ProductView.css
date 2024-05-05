@@ -63,9 +63,11 @@
 	visibility: visible !important;
 }
 
-.product-template {
-	padding-top: 0 !important;
-	padding-bottom: 40px !important;
+@media (max-width: 768px) {
+	.product-template {
+		padding-top: 0 !important;
+		padding-bottom: 40px !important;
+	}
 }
 
 .prod-media-item:hover .zoom-in {
