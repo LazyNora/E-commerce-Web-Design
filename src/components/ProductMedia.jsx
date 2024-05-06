@@ -1,20 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { productsData } from "../productsData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
-import {
-	Controller,
-	FreeMode,
-	Navigation,
-	Pagination,
-	Thumbs,
-} from "swiper/modules";
+import { FreeMode, Navigation, Pagination, Thumbs } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/free-mode";
-
-// const Swiper = require("swiper").default;
-// Swiper.use([Navigation, Controller, FreeMode, Thumbs, Pagination]);
 
 function queryDomNodes(selectors, context) {
 	const nodes = {};
@@ -199,10 +189,17 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 						}
 					},
 				});
+
+				container.addEventListener("changeSlideTo", (e) => {
+					const index = e.detail.index;
+					if (index !== undefined && slider) {
+						slider.slideTo(index);
+					}
+				});
 			}, 2000);
 			return () => clearTimeout(timer);
 		}
-	}, [slider]);
+	}, [slider, type]);
 
 	if (!item || !item.media || !item.media.length) {
 		return null;
@@ -371,6 +368,7 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 												src={`${
 													media.src + "&width=175"
 												}`}
+												alt={media.alt}
 												loading="lazy"
 												className="img-loaded"
 												width="179"

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import VariantPicker from "./VariantPicker";
 
 const ProductInfo = ({ item }) => {
 	useEffect(() => {
@@ -83,8 +84,13 @@ const ProductInfo = ({ item }) => {
 					</div>
 				</div>
 				<div className="main-product__block main-product__block-variant_picker">
-					<div className="product__variant-picker product-options"></div>
+					<div className="product__variant-picker product-options">
+						<VariantPicker item={item} />
+					</div>
 				</div>
+			</div>
+			<div className="main-product__block main-product__block-buy_buttons">
+				button here
 			</div>
 		</div>
 	);
