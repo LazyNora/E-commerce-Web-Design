@@ -119,7 +119,10 @@ const VariantPicker = ({ item }) => {
 			const swiperslide = slide.querySelectorAll(".swiper-slide");
 			swiperslide.forEach((item, index) => {
 				const mediaId = item.getAttribute("data-media-id");
-				if (mediaId == currentVariant.featured_media.id) {
+				if (
+					parseInt(mediaId) ===
+					parseInt(currentVariant.featured_media.id)
+				) {
 					const changeSlideEvent = new CustomEvent("changeSlideTo", {
 						detail: { index: index },
 					});

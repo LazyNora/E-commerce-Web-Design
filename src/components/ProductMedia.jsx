@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/free-mode";
 
+// Hàm lấy các node từ selector
 function queryDomNodes(selectors, context) {
 	const nodes = {};
 	for (const key in selectors) {
@@ -15,6 +16,7 @@ function queryDomNodes(selectors, context) {
 	return nodes;
 }
 
+// Hàm thêm sự kiện delegate
 function addEventDelegate({ selector, context, handler }) {
 	context.addEventListener("click", (e) => {
 		const target = e.target.closest(selector);
@@ -23,12 +25,16 @@ function addEventDelegate({ selector, context, handler }) {
 }
 
 const ProductMedia = ({ item, type = "desktop" }) => {
+	// Sử dụng useState để lưu trữ slider và thumbsSwiper
 	const [slider, setSlider] = useState(null);
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+	// Sử dụng useEffect để tạo lightbox khi slider được tạo và thêm sự kiện changeSlideTo để chuyển slide
 	useEffect(() => {
 		if (slider) {
+			// Sử dụng setTimeout để chờ slider được tạo
 			const timer = setTimeout(() => {
+				// Khai báo các selector
 				const selectors = {
 					container: ".product-wrapper",
 					slider: ".swiper-container",
@@ -44,6 +50,7 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 					variantIdNode: '.main-product-form [name="id"]',
 					featuredImage: ".prod-media",
 				};
+
 				var domNodes = null;
 				const container = document.querySelector(
 					`.media-gallery[data-screen=${type}]`
@@ -70,6 +77,7 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 				const medias = container.querySelectorAll(
 					".prod-media-item:not(.swiper-slide-duplicate)"
 				);
+				// Lặp qua các media để lấy thông tin và thêm vào data
 				medias &&
 					medias.forEach((media, index) => {
 						if (media.dataset.mediaType === "image") {
@@ -90,6 +98,7 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 							});
 					});
 
+				// Khởi tạo lightbox để xem ảnh chi tiết (zoom ảnh)
 				var lightbox = new PhotoSwipeLightbox({
 					dataSource: data,
 					bgOpacity: true,
@@ -102,6 +111,7 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 					pswpModule: () => import("photoswipe"),
 				});
 
+				// Thêm filter để lấy ảnh thumbnail
 				lightbox.addFilter("thumbEl", (thumbEl, item, index) => {
 					const el = container.querySelector(
 						'[data-index="' +
@@ -111,6 +121,7 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 					return el || thumbEl;
 				});
 
+				// Thêm filter để lấy ảnh placeholder
 				lightbox.addFilter("placeholderSrc", (placeholderSrc, item) => {
 					const el = container.querySelector(
 						'[data-index="' +
@@ -120,6 +131,7 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 					return el ? el.src : placeholderSrc;
 				});
 
+				// Thêm sự kiện change để chuyển slide khi chuyển ảnh trong lightbox
 				lightbox.on("change", () => {
 					if (slider) {
 						const currIndex = lightbox.pswp.currIndex;
@@ -129,11 +141,13 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 					}
 				});
 
+				// Thêm sự kiện pointerDown để ngăn chặn việc kéo ảnh 3D
 				lightbox.on("pointerDown", (e) => {
 					lightbox.pswp.currSlide.data.type === "model" &&
 						e.preventDefault();
 				});
 
+				// Thêm các button vào lightbox
 				const closeBtn = {
 					name: "m-close",
 					order: 11,
@@ -166,12 +180,14 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 					},
 				};
 
+				// Thêm sự kiện uiRegister để thêm các button vào lightbox
 				lightbox.on("uiRegister", () => {
 					lightbox.pswp.ui.registerElement(closeBtn);
 					lightbox.pswp.ui.registerElement(arrowPrev);
 					lightbox.pswp.ui.registerElement(arrowNext);
 				});
 
+				// Thêm sự kiện uiUpdate để cập nhật các button
 				enableImageZoom && lightbox.init();
 				addEventDelegate({
 					selector: selectors.medias[0],
@@ -190,6 +206,7 @@ const ProductMedia = ({ item, type = "desktop" }) => {
 					},
 				});
 
+				// Thêm sự kiện changeSlideTo để chuyển slide
 				container.addEventListener("changeSlideTo", (e) => {
 					const index = e.detail.index;
 					if (index !== undefined && slider) {
