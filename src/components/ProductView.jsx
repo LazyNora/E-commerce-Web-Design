@@ -2,7 +2,7 @@ import "../assets/css/ProductView.css";
 import ProductInfo from "./ProductInfo";
 import ProductMedia from "./ProductMedia";
 
-const ProductView = ({ item }) => {
+const ProductView = ({ item, variantId = null }) => {
 	return (
 		<section id="product__main" className="section-product">
 			<link
@@ -38,7 +38,10 @@ const ProductView = ({ item }) => {
 							<div className="w-full md:w-1/3">
 								<div className="prod__info-wrapper">
 									<div className="prod__info">
-										<ProductInfo item={item} />
+										<ProductInfo
+											item={item}
+											variantId={variantId}
+										/>
 									</div>
 								</div>
 							</div>

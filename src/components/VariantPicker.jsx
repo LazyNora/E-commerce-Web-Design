@@ -1,6 +1,7 @@
 import React from "react";
+import VariantSelect from "./VariantSelect";
 
-const VariantPicker = ({ item }) => {
+const VariantPicker = ({ item, variantId = null }) => {
 	const variantPickerRef = React.useRef(null); // Tạo ref cho variantPicker
 
 	// Sử dụng useEffect để thêm sự kiện change vào variantPickerRef
@@ -14,6 +15,15 @@ const VariantPicker = ({ item }) => {
 	var variantData = item.variants;
 	var options = [];
 	var currentVariant = null;
+
+	if (variantId) {
+		currentVariant =
+			variantData.find(
+				(variant) => parseInt(variant.id) === parseInt(variantId)
+			) || variantData[0];
+	} else {
+		currentVariant = variantData[0];
+	}
 
 	// Hàm kiểm tra dữ liệu sản phẩm
 	function _validateProductStructure(product) {
@@ -33,9 +43,10 @@ const VariantPicker = ({ item }) => {
 	const onVariantChange = (e) => {
 		getSelectedOptions();
 		getSelectedVariant();
-		updateButton(!0, "", !1);
+		updateButton(true, "", false);
 		if (currentVariant) {
 			updateMedia();
+			updateBrowserHistory();
 		}
 	};
 
@@ -132,6 +143,15 @@ const VariantPicker = ({ item }) => {
 		});
 	};
 
+	const updateBrowserHistory = () => {
+		!currentVariant ||
+			window.history.replaceState(
+				{},
+				"",
+				`${productData.url}?variant=${currentVariant.id}`
+			);
+	};
+
 	return (
 		<div data-product-id={item.id}>
 			<div ref={variantPickerRef} className="variant-picker">
@@ -142,47 +162,11 @@ const VariantPicker = ({ item }) => {
 							<div
 								key={index}
 								className="product-options__option product-options__option--dropdown">
-								<div
-									className="variant-select"
-									data-picker-field="select"
-									data-option-name={option.name}
-									data-option-position={option.position}
-									data-selected-value={option.values[0]}>
-									<div className="prod__option-label | font-medium flex flex-wrap items-center justify-between prod__option-label--dropdown uppercase">
-										<label
-											className="form-label"
-											htmlFor={`option_${option.position}`}>
-											<span className="font-bold mr-1">
-												{option.name}:
-											</span>
-											<span className="selected-value">
-												{option.values[0]}
-											</span>
-										</label>
-									</div>
-									<div className="prod__option prod__option--dropdown">
-										<div className="flex flex-wrap">
-											<select
-												className="select-bordered uppercase"
-												name={`options[${option.name}]`}>
-												{option.values.map(
-													(value, index) => (
-														<option
-															key={index}
-															value={value}
-															className="variant-picker__option product-option-item"
-															data-value={value}
-															data-option-position={
-																option.position
-															}>
-															{value}
-														</option>
-													)
-												)}
-											</select>
-										</div>
-									</div>
-								</div>
+								<VariantSelect
+									index={index}
+									option={option}
+									currentVariant={currentVariant}
+								/>
 							</div>
 						)
 				)}

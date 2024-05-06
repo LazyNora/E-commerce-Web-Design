@@ -7,8 +7,11 @@ import { searchHandle } from "../searchProduct";
 import { useEffect } from "react";
 
 const Product = () => {
+	// Url: /product/:handle?variant=:variantId
 	const { handle } = useParams();
 	const product = searchHandle(handle);
+	const variantId =
+		new URLSearchParams(window.location.search).get("variant") || null;
 
 	useEffect(() => {
 		document.title = product
@@ -26,7 +29,7 @@ const Product = () => {
 			<Announcement />
 			<Navbar />
 			<main role="main" id="MainContent" className="template-product">
-				<ProductView item={product} />
+				<ProductView item={product} variantId={variantId} />
 			</main>
 			<Footer />
 		</>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import VariantPicker from "./VariantPicker";
 
-const ProductInfo = ({ item }) => {
+const ProductInfo = ({ item, variantId = null }) => {
 	useEffect(() => {
 		// Tạo timer để delay việc render ra sau khi lấy được dữ liệu
 		const timer = setTimeout(() => {
@@ -89,7 +89,7 @@ const ProductInfo = ({ item }) => {
 				</div>
 				<div className="main-product__block main-product__block-variant_picker">
 					<div className="product__variant-picker product-options">
-						<VariantPicker item={item} />
+						<VariantPicker item={item} variantId={variantId} />
 					</div>
 				</div>
 			</div>
