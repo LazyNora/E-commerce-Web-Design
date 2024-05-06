@@ -440,7 +440,7 @@
 
 .pswp__bg {
 	background: #fff !important;
-	opacity: 1;
+	opacity: 1 !important;
 }
 
 @media (max-width: 767px) {

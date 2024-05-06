@@ -135,51 +135,57 @@ const VariantPicker = ({ item }) => {
 	return (
 		<div data-product-id={item.id}>
 			<div ref={variantPickerRef} className="variant-picker">
-				{item.options.map((option, index) => (
-					<div
-						key={index}
-						className="product-options__option product-options__option--dropdown">
-						<div
-							className="variant-select"
-							data-picker-field="select"
-							data-option-name={option.name}
-							data-option-position={option.position}
-							data-selected-value={option.values[0]}>
-							<div className="prod__option-label | font-medium flex flex-wrap items-center justify-between prod__option-label--dropdown uppercase">
-								<label
-									className="form-label"
-									htmlFor={`option_${option.position}`}>
-									<span className="font-bold mr-1">
-										{option.name}:
-									</span>
-									<span className="selected-value">
-										{option.values[0]}
-									</span>
-								</label>
-							</div>
-							<div className="prod__option prod__option--dropdown">
-								<div className="flex flex-wrap">
-									<select
-										className="select-bordered uppercase"
-										name={`options[${option.name}]`}>
-										{option.values.map((value, index) => (
-											<option
-												key={index}
-												value={value}
-												className="variant-picker__option product-option-item"
-												data-value={value}
-												data-option-position={
-													option.position
-												}>
-												{value}
-											</option>
-										))}
-									</select>
+				{item.options.map(
+					(option, index) =>
+						option.values[1] !== null &&
+						option.name !== "Title" && (
+							<div
+								key={index}
+								className="product-options__option product-options__option--dropdown">
+								<div
+									className="variant-select"
+									data-picker-field="select"
+									data-option-name={option.name}
+									data-option-position={option.position}
+									data-selected-value={option.values[0]}>
+									<div className="prod__option-label | font-medium flex flex-wrap items-center justify-between prod__option-label--dropdown uppercase">
+										<label
+											className="form-label"
+											htmlFor={`option_${option.position}`}>
+											<span className="font-bold mr-1">
+												{option.name}:
+											</span>
+											<span className="selected-value">
+												{option.values[0]}
+											</span>
+										</label>
+									</div>
+									<div className="prod__option prod__option--dropdown">
+										<div className="flex flex-wrap">
+											<select
+												className="select-bordered uppercase"
+												name={`options[${option.name}]`}>
+												{option.values.map(
+													(value, index) => (
+														<option
+															key={index}
+															value={value}
+															className="variant-picker__option product-option-item"
+															data-value={value}
+															data-option-position={
+																option.position
+															}>
+															{value}
+														</option>
+													)
+												)}
+											</select>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-				))}
+						)
+				)}
 			</div>
 			{/* <script id="productVariants" type="application/json">
 				{JSON.stringify(item.variants)}
