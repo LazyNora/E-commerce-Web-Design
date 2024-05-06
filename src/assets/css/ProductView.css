@@ -437,3 +437,14 @@
 	padding: 10px;
 	width: 100%;
 }
+
+.pswp__bg {
+	background: #fff !important;
+	opacity: 1;
+}
+
+@media (max-width: 767px) {
+	.prod-media__wrapper {
+		padding-left: 0;
+	}
+}
