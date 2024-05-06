@@ -1,10 +1,10 @@
 :root {
-	--color-footer-background: rgb(245, 251, 253);
+	--color-footer-background: #fff;
 	--color-footer-text: #000000;
 	--color-footer-subtext: #000000;
 	--color-footer-link: #000000;
 	--color-footer-link-hover: #000000;
-	--color-footer-bottom-background: rgb(245, 251, 253);
+	--color-footer-bottom-background: #fff;
 	--color-footer-bottom-text: #000000;
 	--container-width: 1620;
 }
@@ -46,7 +46,7 @@
 
 .form-control.control-icon {
 	--tw-border-opacity: 0;
-	border-color: rgb(255 255 255 / var(--tw-border-opacity));
+	border-color: #dedede;
 	padding-left: 3rem;
 	padding-right: 3rem;
 }
