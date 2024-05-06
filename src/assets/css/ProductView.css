@@ -438,7 +438,7 @@
 	width: 100%;
 }
 
-.pswp__bg {
+.pswp--open .pswp__bg {
 	background: #fff !important;
 	opacity: 1 !important;
 }

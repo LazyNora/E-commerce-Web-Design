@@ -250,7 +250,7 @@ const Footer = () => {
 							type="multiple"
 							collapsible="true"
 							defaultValue={["item-1"]}
-							className="footer_accordion | flex flex-wrap -mx-4">
+							className="footer_accordion | flex flex-wrap">
 							<AccordionItem
 								value="item-1"
 								className="footer_block accordion-item block-newsletter | open | w-full order-first">
