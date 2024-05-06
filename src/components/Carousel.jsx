@@ -29,12 +29,8 @@ import "swiper/css";
 import { carouselData } from "../data"; // Import the carousel data
 
 // Styles for the Carousel component using styled-components
-const Container = styled.div`
-	box-sizing: border-box;
-	display: block;
-`;
 
-const Section = styled.section`
+const Container = styled.div`
 	position: relative;
 	display: block;
 `;
@@ -362,8 +358,8 @@ const Carousel = () => {
 	};
 
 	return (
-		<Container className="bg-white border-b border-[#ddd]">
-			<Section className="relative shop-slideshow banner_slideshow slider_pagination--right slide-block_content-stack">
+		<section className="section-carousel bg-white border-b border-[#ddd]">
+			<Container className="relative shop-slideshow banner_slideshow slider_pagination--right slide-block_content-stack">
 				<Wrapper>
 					<SwiperContainer>
 						<Swiper
@@ -499,8 +495,8 @@ const Carousel = () => {
 						</SliderControls>
 					</SwiperContainer>
 				</Wrapper>
-			</Section>
-		</Container>
+			</Container>
+		</section>
 	);
 };
 
