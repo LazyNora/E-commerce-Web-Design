@@ -1,18 +1,21 @@
 import React from "react";
 
 const VariantPicker = ({ item }) => {
-	const variantPickerRef = React.useRef(null);
+	const variantPickerRef = React.useRef(null); // Tạo ref cho variantPicker
 
+	// Sử dụng useEffect để thêm sự kiện change vào variantPickerRef
 	React.useEffect(() => {
 		const variantPicker = variantPickerRef.current;
 		variantPicker.addEventListener("change", onVariantChange);
 	}, []);
 
+	// Local variables để lưu trữ dữ liệu sản phẩm và biến variant hiện tại
 	var productData = item;
 	var variantData = item.variants;
 	var options = [];
 	var currentVariant = null;
 
+	// Hàm kiểm tra dữ liệu sản phẩm
 	function _validateProductStructure(product) {
 		if (typeof product != "object")
 			throw new TypeError(product + " is not an object.");
@@ -20,11 +23,13 @@ const VariantPicker = ({ item }) => {
 			throw new Error(product + " is empty.");
 	}
 
+	// Hàm kiểm tra dữ liệu options
 	function _validateOptionsArray(options) {
 		if (Array.isArray(options) && typeof options[0] == "object")
 			throw new Error(options + "is not a valid array of options.");
 	}
 
+	// Hàm xử lý sự kiện khi thay đổi variant
 	const onVariantChange = (e) => {
 		getSelectedOptions();
 		getSelectedVariant();
@@ -34,6 +39,7 @@ const VariantPicker = ({ item }) => {
 		}
 	};
 
+	// Hàm lấy các options đã chọn
 	const getSelectedOptions = () => {
 		const pickerFields = Array.from(
 			document.querySelectorAll("[data-picker-field]")
@@ -43,11 +49,13 @@ const VariantPicker = ({ item }) => {
 		});
 	};
 
+	// Hàm lấy variant đã chọn
 	const getSelectedVariant = () => {
 		let variant = getVariantFromOptionArray(productData, options);
 		currentVariant = variant;
 	};
 
+	// Hàm cập nhật button
 	const updateButton = (...args) => {
 		let disable = args.length > 0 && args[0] !== 0 ? args[0] : 1;
 		let text = args.length > 1 ? args[1] : 0;
@@ -89,6 +97,7 @@ const VariantPicker = ({ item }) => {
 		}
 	};
 
+	// Hàm lấy variant từ mảng options
 	const getVariantFromOptionArray = (product, options) => {
 		_validateProductStructure(product);
 		_validateOptionsArray(options);
@@ -102,6 +111,7 @@ const VariantPicker = ({ item }) => {
 
 	const getDataImageVariant = (variantId) => {};
 
+	// Hàm cập nhật media-gallery
 	const updateMedia = () => {
 		if (!currentVariant || !currentVariant.featured_media) return;
 		const slides = document.querySelectorAll(".media-gallery");
