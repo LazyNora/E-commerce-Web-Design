@@ -20,9 +20,10 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from "../components/ui/tooltip";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/Navbar.css";
+import { formatMoney, moneyFormats } from "../currencyConvert";
 
 const CustomBadge = styled(Badge)({
 	"& .MuiBadge-badge": {
@@ -197,7 +198,84 @@ const subMenuClose_click = (e) => {
 	}
 };
 
+// Danh sách các loại tiền tệ (Có thể làm full nhưng dài nên chỉ chừng này thôi)
+const selectItems = {
+	USD: "USD",
+	EUR: "EUR",
+	GBP: "GBP",
+	AUD: "AUD",
+	CAD: "CAD",
+	JPY: "JPY",
+	CNY: "CNY",
+	IDR: "IDR",
+	RUB: "RUB",
+	MYR: "MYR",
+	HKD: "HKD",
+	KRW: "KRW",
+	VND: "VND",
+};
+
 const Navbar = () => {
+	const [responseData, setResponseData] = React.useState();
+	const [rateFetched, setRateFetched] = React.useState(false);
+
+	// Lấy exchange rate từ API
+	const getExchangeRate = async () => {
+		// Kiểm tra xem đã lưu exchange rate trong sessionStorage chưa
+		const sessionExchangeRate = sessionStorage.getItem("exchangeRate");
+		if (sessionExchangeRate) {
+			// Nếu đã lưu thì lấy ra và set vào state
+			setResponseData(JSON.parse(sessionExchangeRate));
+			setRateFetched(true);
+			return;
+		}
+		// Nếu chưa lưu thì fetch từ API
+		const response = await fetch(
+			"https://v6.exchangerate-api.com/v6/45f265cd120e93555c364328/latest/USD"
+		).then((response) => response.json());
+
+		// Nếu fetch thành công thì set vào state và lưu vào sessionStorage
+		if (response.result === "success") {
+			setResponseData(response);
+			sessionStorage.setItem("exchangeRate", JSON.stringify(response));
+			setRateFetched(true);
+		}
+	};
+
+	React.useEffect(() => {
+		// Gọi hàm getExchangeRate khi component được render
+		getExchangeRate();
+		// Lấy currency từ sessionStorage, nếu chưa có thì set mặc định là USD
+		sessionStorage.getItem("currency") ||
+			sessionStorage.setItem("currency", "USD");
+	}, []);
+
+	// Hàm xử lý khi thay đổi currency
+	const onCurrencyChange = (value) => {
+		// Lưu currency vào sessionStorage khi thay đổi
+		sessionStorage.setItem("currency", value);
+		// Update giá tiền
+		updatePrice();
+	};
+
+	// Update giá tiền
+	const updatePrice = () => {
+		const currency = sessionStorage.getItem("currency");
+		if (currency && rateFetched) {
+			const priceElements = document.querySelectorAll("span.money");
+			priceElements.forEach((element) => {
+				const price = element.getAttribute("data-product-price");
+				const convertedPrice =
+					price * responseData.conversion_rates[currency];
+				element.innerHTML = formatMoney(
+					convertedPrice,
+					moneyFormats[currency].money_with_currency_format,
+					currency
+				);
+			});
+		}
+	};
+
 	// Vẫn là Identify classes | Utility classes (Xem thêm tại Footer.jsx)
 	return (
 		<section className="section-header">
@@ -258,24 +336,24 @@ const Navbar = () => {
 								</div>
 								<Select
 									className="currency-selector"
-									defaultValue="VND">
+									defaultValue={
+										sessionStorage.getItem("currency") ||
+										"USD"
+									}
+									onValueChange={onCurrencyChange}>
 									<SelectTrigger className="w-[70px] border-none px-2 font-bold text-base">
 										<SelectValue placeholder="" />
 									</SelectTrigger>
 									<SelectContent>
-										<SelectItem value="USD">USD</SelectItem>
-										<SelectItem value="EUR">EUR</SelectItem>
-										<SelectItem value="GBP">GBP</SelectItem>
-										<SelectItem value="CAD">CAD</SelectItem>
-										<SelectItem value="AUD">AUD</SelectItem>
-										<SelectItem value="CNY">CNY</SelectItem>
-										<SelectItem value="IDR">IDR</SelectItem>
-										<SelectItem value="RUB">RUB</SelectItem>
-										<SelectItem value="MYR">MYR</SelectItem>
-										<SelectItem value="JPY">JPY</SelectItem>
-										<SelectItem value="HKD">HKD</SelectItem>
-										<SelectItem value="KRW">KRW</SelectItem>
-										<SelectItem value="VND">VND</SelectItem>
+										{Object.entries(selectItems).map(
+											([key, value]) => (
+												<SelectItem
+													key={key}
+													value={key}>
+													{value}
+												</SelectItem>
+											)
+										)}
 									</SelectContent>
 								</Select>
 								<Link to="/cart" className="pl-4 pr-2 py-3.5">

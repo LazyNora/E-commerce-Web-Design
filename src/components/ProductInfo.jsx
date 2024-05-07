@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import VariantPicker from "./VariantPicker";
+import { formatMoney, moneyFormats } from "../currencyConvert";
 
 const ProductInfo = ({ item, variantId = null }) => {
 	useEffect(() => {
@@ -30,9 +31,48 @@ const ProductInfo = ({ item, variantId = null }) => {
 			// Thêm số lượng reviews vào sau các icon sao
 			star += `<span class="review-count">${ratingCount} Reviews</span>`;
 			rateStars.innerHTML = star;
+
+			// Update giá tiền
+			updatePrice();
 		}, 1000);
 		return () => clearTimeout(timer);
 	}, []);
+
+	// Lấy ra variant hiện tại
+	var currentVariant = null;
+	if (variantId) {
+		currentVariant =
+			item.variants.find(
+				(variant) => parseInt(variant.id) === parseInt(variantId)
+			) || item.variants[0];
+	} else {
+		currentVariant = item.variants[0];
+	}
+
+	const updatePrice = () => {
+		// Lấy ra currency và exchange rate từ sessionStorage
+		const currency = sessionStorage.getItem("currency");
+		const responseData = JSON.parse(sessionStorage.getItem("exchangeRate"));
+
+		// Nếu có currency và exchange rate thì update giá tiền
+		if (currency && responseData) {
+			// Lấy ra tất cả các element chứa giá tiền
+			const priceElements = document.querySelectorAll("span.money");
+			priceElements.forEach((element) => {
+				// Lấy ra giá tiền hiện tại
+				const price = currentVariant.price;
+				// Convert giá tiền sang currency hiện tại
+				const convertedPrice =
+					price * responseData.conversion_rates[currency];
+				// Update giá tiền
+				element.innerHTML = formatMoney(
+					convertedPrice,
+					moneyFormats[currency].money_with_currency_format,
+					currency
+				);
+			});
+		}
+	};
 
 	return (
 		<div
@@ -73,15 +113,17 @@ const ProductInfo = ({ item, variantId = null }) => {
 				</div>
 				<div className="main-product__block main-product__block-price">
 					<div className="prod__price flex">
-						<div className="price inline-flex items-center flex-wrap price--sold-out ">
+						<div className="price inline-flex items-center flex-wrap">
 							<div className="price__regular">
 								<span className="visually-hidden visually-hidden--inline">
 									Regular price
 								</span>
 								<span className="price-item price-item--regular text-xl md:text-2xl">
-									<span className="money">
-										${item.price / 100} USD
-									</span>
+									<span
+										className="money"
+										data-product-price={
+											currentVariant.price
+										}></span>
 								</span>
 							</div>
 						</div>

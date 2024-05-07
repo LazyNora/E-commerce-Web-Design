@@ -1,5 +1,6 @@
 import React from "react";
 import VariantSelect from "./VariantSelect";
+import { formatMoney, moneyFormats } from "../currencyConvert";
 
 const VariantPicker = ({ item, variantId = null }) => {
 	const variantPickerRef = React.useRef(null); // Tạo ref cho variantPicker
@@ -47,6 +48,7 @@ const VariantPicker = ({ item, variantId = null }) => {
 		if (currentVariant) {
 			updateMedia();
 			updateBrowserHistory();
+			updatePrice();
 		}
 	};
 
@@ -120,7 +122,31 @@ const VariantPicker = ({ item, variantId = null }) => {
 		return result[0] || null;
 	};
 
-	const getDataImageVariant = (variantId) => {};
+	// Hàm cập nhật giá tiền
+	const updatePrice = () => {
+		const currency = sessionStorage.getItem("currency");
+		const responseData = JSON.parse(sessionStorage.getItem("exchangeRate"));
+		console.log(responseData);
+		console.log(currency);
+		console.log(currentVariant);
+		if (currency && responseData) {
+			const priceElements = document.querySelectorAll("span.money");
+			priceElements.forEach((element) => {
+				element.setAttribute(
+					"data-product-price",
+					currentVariant.price
+				);
+				const price = currentVariant.price;
+				const convertedPrice =
+					price * responseData.conversion_rates[currency];
+				element.innerHTML = formatMoney(
+					convertedPrice,
+					moneyFormats[currency].money_with_currency_format,
+					currency
+				);
+			});
+		}
+	};
 
 	// Hàm cập nhật media-gallery
 	const updateMedia = () => {
@@ -143,6 +169,7 @@ const VariantPicker = ({ item, variantId = null }) => {
 		});
 	};
 
+	// Hàm cập nhật browser history
 	const updateBrowserHistory = () => {
 		!currentVariant ||
 			window.history.replaceState(
@@ -171,9 +198,6 @@ const VariantPicker = ({ item, variantId = null }) => {
 						)
 				)}
 			</div>
-			{/* <script id="productVariants" type="application/json">
-				{JSON.stringify(item.variants)}
-			</script> */}
 		</div>
 	);
 };
