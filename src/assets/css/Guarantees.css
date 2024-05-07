@@ -1,0 +1,101 @@
+.guarantees-wrapper {
+	--column-gap: 30px;
+	--column-gap-mobile: 10px;
+	--row-gap: 40px;
+	--row-gap-mobile: 30px;
+	--items: 4;
+	margin-block: 100px;
+}
+
+body .h4,
+body h4 {
+	font-size: 24px;
+}
+
+.ib:not(.ib--slider) {
+	margin-left: -1rem;
+	margin-right: -1rem;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	padding-left: 1rem;
+}
+
+.ib::-webkit-scrollbar {
+	display: none;
+}
+
+.ib-grid {
+	margin: 0 calc(var(--column-gap) / -2)
+		calc(var(--row-gap, var(--column-gap)) / -1) !important;
+}
+
+.ib-column {
+	padding: 0 calc(var(--column-gap) / 2) var(--row-gap, var(--column-gap));
+}
+
+.ib-image {
+	vertical-align: middle;
+	width: var(--image-width, 100%);
+}
+
+.ib-image .img-loaded {
+	animation-timeline: auto;
+	animation-range-start: normal;
+	animation-range-end: normal;
+	animation: 0.5s cubic-bezier(0.26, 0.54, 0.32, 1) 0s 1 normal forwards
+		running image-fade-in;
+}
+
+@media screen and (max-width: 1279px) {
+	.ib-grid {
+		margin: 0 calc(var(--column-gap) / 2 / -2)
+			calc(var(--row-gap, var(--column-gap)) / 2 / -1) !important;
+	}
+	.ib-column {
+		padding: 0 calc(var(--column-gap) / 2 / 2)
+			calc(var(--row-gap, var(--column-gap)) / 2);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.guarantees-wrapper {
+		margin-bottom: 50px;
+		margin-top: 50px;
+	}
+	.ib-grid {
+		margin: 0 calc(var(--column-gap-mobile, var(--column-gap)) / -2)
+			calc(var(--row-gap-mobile, var(--column-gap)) / -1) !important;
+	}
+	.ib-column {
+		padding: 0 calc(var(--column-gap-mobile, var(--column-gap)) / 2)
+			calc(var(--row-gap-mobile, var(--column-gap)));
+	}
+}
+
+@media (max-width: 767px) {
+	.ib-wrapper {
+		display: flex !important;
+	}
+	.ib-wrapper:not(.swiper-container-initialized) > * {
+		width: var(--mobile-column-width, 66.66vw);
+		flex: 0 0 auto;
+	}
+	.ib-wrapper:not(.swiper-container-initialized)::after {
+		content: "";
+		flex: 0 0 calc(var(--column-gap-mobile, var(--column-gap)) / 2);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	body .h4,
+	body h4 {
+		font-size: 27px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.section-my {
+		margin-bottom: var(--spacing-sections-tablet);
+		margin-top: var(--spacing-sections-tablet);
+	}
+}
