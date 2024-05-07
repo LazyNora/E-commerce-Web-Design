@@ -4,14 +4,14 @@ import "../assets/css/Guarantees.css";
 const Guarantees = () => {
 	return (
 		<section className="section-guarantees">
-			<div className="container guarantees-wrapper">
+			<div className="container guarantees-wrapper section-ib-wrapper">
 				<div className="relative ib">
 					<div className="ib-grid ib-wrapper grid grid-cols-2 md:grid md:grid-cols-2 lg:grid-cols-4 ">
 						<div className="ib-column">
-							<div className="icon-box icon-box--horizontal ">
-								<div className="icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center">
+							<div className="ib-icon-box ib-icon-box--horizontal ">
+								<div className="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center">
 									<div
-										className="icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 sf-image--loaded items-start pt-1 sm:mr-5"
+										className="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 ib-image--loaded items-start pt-1 sm:mr-5"
 										style={{ width: "60px" }}>
 										<div
 											className="ib-image w-full"
@@ -46,10 +46,10 @@ const Guarantees = () => {
 							<div className="ib-icon-box ib-icon-box--horizontal ">
 								<div className="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center">
 									<div
-										className="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 sf-image--loaded items-start pt-1 sm:mr-5"
+										className="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 ib-image--loaded items-start pt-1 sm:mr-5"
 										style={{ width: "60px" }}>
 										<div
-											className="sf-image w-full"
+											className="ib-image w-full"
 											style={{
 												"--aspect-ratio":
 													"0.9803921568627451",
@@ -88,10 +88,10 @@ const Guarantees = () => {
 							<div className="ib-icon-box ib-icon-box--horizontal ">
 								<div className="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center">
 									<div
-										className="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 sf-image--loaded items-start pt-1 sm:mr-5"
+										className="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 ib-image--loaded items-start pt-1 sm:mr-5"
 										style={{ width: "60px" }}>
 										<div
-											className="sf-image w-full"
+											className="ib-image w-full"
 											style={{
 												"--aspect-ratio":
 													"0.9803921568627451",
@@ -127,10 +127,10 @@ const Guarantees = () => {
 							<div className="ib-icon-box ib-icon-box--horizontal ">
 								<div className="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center">
 									<div
-										className="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 sf-image--loaded items-start pt-1 sm:mr-5"
+										className="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 ib-image--loaded items-start pt-1 sm:mr-5"
 										style={{ width: "60px" }}>
 										<div
-											className="sf-image w-full"
+											className="ib-image w-full"
 											style={{
 												"--aspect-ratio":
 													"0.9803921568627451",

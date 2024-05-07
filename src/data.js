@@ -1,24 +1,24 @@
 export const categories = [
 	{
 		id: 1,
-		img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w500/v1715103908/shop_TKW/ngbierrq5xurfwquomlj.png",
 		title: "Headphones",
 		desc: "Discover headphones to start your audiophile journey",
-		link: "/products?category=headphones",
+		link: "/collections/headphones",
 	},
 	{
 		id: 2,
-		img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w500/v1715104034/shop_TKW/buaglgtndiwfrmadilzg.jpg",
 		title: "DACs & Amps",
-		desc: "Discover the widest range of Amps & DACs from across the world",
-		link: "/products?category=dac",
+		desc: "Discover the widest range of Amps from across the world",
+		link: "/collections/dac",
 	},
 	{
 		id: 3,
-		img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+		img: "https://res.cloudinary.com/dvnfrq3cd/image/upload/t_w500/v1715104311/shop_TKW/l78toewiyjy5bshcdceg.jpg",
 		title: "Speaker Amps",
 		desc: "Discover the ultimate listening experience with Speaker Amps.",
-		link: "/products?category=speaker-amplifier",
+		link: "/collections/speaker-amplifier",
 	},
 ];
 

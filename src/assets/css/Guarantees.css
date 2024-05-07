@@ -4,7 +4,11 @@
 	--row-gap: 40px;
 	--row-gap-mobile: 30px;
 	--items: 4;
-	margin-block: 100px;
+}
+
+.section-ib-wrapper {
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
 body .h4,
@@ -58,7 +62,7 @@ body h4 {
 }
 
 @media screen and (max-width: 767px) {
-	.guarantees-wrapper {
+	.section-ib-wrapper {
 		margin-bottom: 50px;
 		margin-top: 50px;
 	}
@@ -94,8 +98,8 @@ body h4 {
 }
 
 @media screen and (max-width: 1023px) {
-	.section-my {
-		margin-bottom: var(--spacing-sections-tablet);
-		margin-top: var(--spacing-sections-tablet);
+	.section-ib-wrapper {
+		margin-bottom: 75px;
+		margin-top: 75px;
 	}
 }

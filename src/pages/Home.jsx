@@ -15,8 +15,8 @@ const Home = () => {
 			<main role="main" id="MainContent">
 				<Carousel />
 				<BetterChoice />
-				{/* <Categories />
-				<Products /> */}
+				<Categories />
+				{/* <Products /> */}
 				<Guarantees />
 			</main>
 			<Footer />

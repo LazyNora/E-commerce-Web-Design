@@ -1,0 +1,69 @@
+body .h2,
+body h2 {
+	font-size: 37px;
+}
+
+.btn-link {
+	border-bottom-color: currentColor; /* Use the current text color as the border-bottom color */
+	border-radius: 0;
+	border-width: 0;
+	padding: 0.25rem 0;
+	position: relative;
+	outline: none;
+	transition: all 0.32s;
+	display: inline-block;
+}
+
+.btn-link:focus,
+.btn-link:hover {
+	background: none;
+}
+
+.btn-link:after,
+.btn-link:before {
+	background: currentColor;
+	bottom: 0;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(1) translateZ(0);
+	transform-origin: right;
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+	width: 100%;
+}
+
+.btn-link:after,
+.btn-link:after {
+	transform: scaleX(0) translateZ(0);
+	transform-origin: left;
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-link:focus:before,
+.btn-link:hover:before {
+	transform: scaleX(0) translateZ(0);
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-link:focus:after,
+.btn-link:hover:after {
+	transform: scaleX(1) translateZ(0);
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+}
+
+.section__header.text-center {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.section__header {
+	margin-bottom: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+	body .h2,
+	body h2 {
+		font-size: 42px;
+	}
+}
