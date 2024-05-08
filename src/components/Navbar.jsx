@@ -199,7 +199,7 @@ const subMenuClose_click = (e) => {
 };
 
 // Danh sách các loại tiền tệ (Có thể làm full nhưng dài nên chỉ chừng này thôi)
-const selectItems = {
+const supportCurrencies = {
 	USD: "USD",
 	EUR: "EUR",
 	GBP: "GBP",
@@ -223,7 +223,8 @@ const Navbar = () => {
 	const getExchangeRate = async () => {
 		// Kiểm tra xem đã lưu exchange rate trong sessionStorage chưa
 		const sessionExchangeRate = sessionStorage.getItem("exchangeRate");
-		if (sessionExchangeRate) {
+		const needUpdate = sessionExchangeRate.time_next_update_unix;
+		if (sessionExchangeRate && needUpdate > Date.now() / 1000) {
 			// Nếu đã lưu thì lấy ra và set vào state
 			setResponseData(JSON.parse(sessionExchangeRate));
 			setRateFetched(true);
@@ -345,7 +346,7 @@ const Navbar = () => {
 										<SelectValue placeholder="" />
 									</SelectTrigger>
 									<SelectContent>
-										{Object.entries(selectItems).map(
+										{Object.entries(supportCurrencies).map(
 											([key, value]) => (
 												<SelectItem
 													key={key}

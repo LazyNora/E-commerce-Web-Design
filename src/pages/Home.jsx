@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import BetterChoice from "../components/BetterChoice";
 import Guarantees from "../components/Guarantees";
-import ProductsTab from "../components/ProductsTab";
+import ProductTabs from "../components/ProductTabs";
 
 const Home = () => {
 	return (
@@ -16,7 +16,7 @@ const Home = () => {
 				<Carousel />
 				<BetterChoice />
 				<Categories />
-				<ProductsTab />
+				<ProductTabs />
 				<Guarantees />
 			</main>
 			<Footer />

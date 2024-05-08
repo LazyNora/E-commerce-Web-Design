@@ -1,0 +1,104 @@
+.section-padding {
+	padding-bottom: var(--section-padding-bottom, 0);
+	padding-top: var(--section-padding-top, 0);
+}
+
+.product-tabs__header {
+	margin-bottom: 60px;
+}
+
+.custom-select {
+	line-height: 30px;
+	position: relative;
+}
+
+.custom-select.select-plain {
+	border-bottom: 2px solid #000;
+}
+
+.custom-select.select__custom-width {
+	min-width: 250px;
+}
+
+.custom-select select {
+	display: none;
+}
+
+.custom-select .select-selected {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	font-weight: inherit;
+	justify-content: space-between;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.select-items,
+.custom_scroll {
+	overflow-y: scroll;
+}
+
+.custom-select .select-items {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 20px 30px #0000001f;
+	color: #757575;
+	left: 0;
+	line-height: 32px;
+	max-height: 60vh;
+	min-width: 100%;
+	opacity: 1;
+	padding: 10px 20px;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	transform: translateZ(0);
+	transition: all 0.2s ease-in-out;
+	visibility: visible;
+	width: min-content;
+	z-index: 80;
+}
+
+.custom-select.select-plain .select-items {
+	line-height: inherit;
+	padding: 20px 25px;
+}
+
+.custom-select .select-items.select-hide {
+	opacity: 0;
+	top: calc(100% + 20px);
+	visibility: hidden;
+}
+
+@media screen and (max-width: 1023px) {
+	.section-padding {
+		padding-bottom: calc(var(--section-padding-bottom, 0) * 0.75);
+		padding-top: calc(var(--section-padding-top, 0) * 0.75);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.section-padding {
+		padding-bottom: calc(var(--section-padding-bottom, 0) * 0.5);
+		padding-top: calc(var(--section-padding-top, 0) * 0.5);
+	}
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2000px) {
+	.container-fluid {
+		max-width: 1570px !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container-fluid {
+		--offset-x: calc(var(--fluid-container-offset, 6rem) / 1.25);
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	.container-fluid {
+		--offset-x: var(--fluid-container-offset, 6rem);
+	}
+}
