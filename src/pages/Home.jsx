@@ -1,11 +1,11 @@
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Categories from "../components/Categories";
-import Products from "../components/Products";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import BetterChoice from "../components/BetterChoice";
 import Guarantees from "../components/Guarantees";
+import ProductsTab from "../components/ProductsTab";
 
 const Home = () => {
 	return (
@@ -16,7 +16,7 @@ const Home = () => {
 				<Carousel />
 				<BetterChoice />
 				<Categories />
-				{/* <Products /> */}
+				<ProductsTab />
 				<Guarantees />
 			</main>
 			<Footer />

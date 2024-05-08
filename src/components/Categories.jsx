@@ -20,8 +20,8 @@ const Categories = () => {
 				<div className="relative ib">
 					<div className="ib-grid ib-wrapper md:grid md:grid-cols-2 lg:grid-cols-3 ">
 						{categories.map((item, index) => (
-							<div className="ib-column">
-								<CategoryItem key={index} item={item} />
+							<div key={index} className="ib-column">
+								<CategoryItem item={item} />
 							</div>
 						))}
 					</div>

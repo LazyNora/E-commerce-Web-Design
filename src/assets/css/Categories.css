@@ -67,3 +67,16 @@ body h2 {
 		font-size: 42px;
 	}
 }
+
+.hover-scale-up .ib-image,
+.hover-scale-up svg {
+	backface-visibility: hidden;
+	transition: transform 0.44s cubic-bezier(0.15, 0.75, 0.5, 1) 0s;
+}
+
+@media screen and (min-width: 1280px) {
+	.hover-scale-up:hover .ib-image,
+	.hover-scale-up:hover svg {
+		transform: scale(1.08) translateZ(0);
+	}
+}

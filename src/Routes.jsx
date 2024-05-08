@@ -7,7 +7,7 @@ import {
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Product from "./pages/Product";
+import Products from "./pages/Products";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register.jsx";
 import NotFound from "./pages/NotFound";
@@ -17,17 +17,18 @@ const PageRoutes = () => {
 		// <Router basename={`/${process.env.PUBLIC_URL}`}>
 		<Router>
 			<Routes>
-				<Route exact path="" element={<Navigate to="/home" />} />
+				<Route exact path="" element={<Home />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/cart" element={<Cart />} />
-				<Route path="/categories" element={<ProductList />} />
-				<Route path="/categories/:category" element={<ProductList />} />
-				<Route path="/colections" element={<ProductList />} />
-				<Route path="/colections/:category" element={<ProductList />} />
+				<Route path="/collections" element={<ProductList />} />
+				<Route
+					path="/collections/:category"
+					element={<ProductList />}
+				/>
 				<Route path="/products" element={<ProductList />} />
-				<Route path="/products/:handle" element={<Product />} />
+				<Route path="/products/:handle" element={<Products />} />
 				<Route path="/*" element={<NotFound />} />
 			</Routes>
 		</Router>

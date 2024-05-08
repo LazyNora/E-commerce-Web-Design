@@ -16,14 +16,6 @@ body h4 {
 	font-size: 24px;
 }
 
-.ib:not(.ib--slider) {
-	margin-left: -1rem;
-	margin-right: -1rem;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	padding-left: 1rem;
-}
-
 .ib::-webkit-scrollbar {
 	display: none;
 }
@@ -87,6 +79,13 @@ body h4 {
 	.ib-wrapper:not(.swiper-container-initialized)::after {
 		content: "";
 		flex: 0 0 calc(var(--column-gap-mobile, var(--column-gap)) / 2);
+	}
+	.ib:not(.ib--slider) {
+		margin-left: -1rem;
+		margin-right: -1rem;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		padding-left: 1rem;
 	}
 }
 
