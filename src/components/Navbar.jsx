@@ -223,8 +223,10 @@ const Navbar = () => {
 	const getExchangeRate = async () => {
 		// Kiểm tra xem đã lưu exchange rate trong sessionStorage chưa
 		const sessionExchangeRate = sessionStorage.getItem("exchangeRate");
-		const needUpdate = sessionExchangeRate.time_next_update_unix;
-		if (sessionExchangeRate && needUpdate > Date.now() / 1000) {
+		if (
+			sessionExchangeRate &&
+			sessionExchangeRate.time_next_update_unix > Date.now() / 1000
+		) {
 			// Nếu đã lưu thì lấy ra và set vào state
 			setResponseData(JSON.parse(sessionExchangeRate));
 			setRateFetched(true);
