@@ -132,7 +132,7 @@ const Register = () => {
 						</form>
 					</div>
 					<a
-						href="/register"
+						href="/login"
 						className="login-btn | btn-link mt-10 font-bold">
 						Login
 					</a>
