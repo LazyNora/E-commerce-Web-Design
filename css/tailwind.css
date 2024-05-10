@@ -613,16 +613,16 @@ body {
   width: 100% !important;
   margin-right: auto !important;
   margin-left: auto !important;
-  padding-right: 2rem !important;
-  padding-left: 2rem !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
 }
 
 .container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 1400px) {
@@ -3149,8 +3149,8 @@ body {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   @media (min-width: 1400px) {
