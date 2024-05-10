@@ -211,19 +211,19 @@
 	width: max-content;
 }
 
-.slide-subtitle {
+.slide_block-subtitle {
 	line-height: 1.75rem;
 	font-size: 1.25rem;
 }
 
 @media (min-width: 768px) {
-	.slide-subtitle {
+	.slide_block-subtitle {
 		margin-bottom: 14px;
 	}
 }
 
 @media (max-width: 767px) {
-	.slide-title {
+	.slide_block-title {
 		font-size: 37px;
 	}
 }
