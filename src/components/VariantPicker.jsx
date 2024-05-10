@@ -176,7 +176,7 @@ const VariantPicker = ({ item, variantId = null }) => {
 			window.history.replaceState(
 				{},
 				"",
-				`${window.location.origin}${window.location.pathname}?variant=${currentVariant.id}`
+				`${productData.url}?variant=${currentVariant.id}`
 			);
 	};
 
