@@ -12,6 +12,7 @@ import {
 	X,
 } from "@mui/icons-material";
 import { SvgIcon } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 	const [showPassword, setShowPassword] = useState(false);
@@ -97,11 +98,11 @@ const Login = () => {
 							</IconButton>
 						</div>
 					</div>
-					<a
-						href="/register"
+					<Link
+						to="/register"
 						className="register-btn | btn-link font-bold">
 						Register
-					</a>
+					</Link>
 				</section>
 			</main>
 			<Footer />

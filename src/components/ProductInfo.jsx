@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import VariantPicker from "./VariantPicker";
 import { formatMoney, moneyFormats } from "../currencyConvert";
 
@@ -81,11 +82,11 @@ const ProductInfo = ({ item, variantId = null }) => {
 			<div className="main-product__blocks">
 				<div className="main-product__block main-product__block-vendor">
 					<div>
-						<a
+						<Link
 							className="text-xl uppercase"
-							href={`/collections/${item.vendor}`}>
+							to={`/collections/${item.vendor}`}>
 							{item.vendor}
-						</a>
+						</Link>
 					</div>
 				</div>
 				<div className="main-product__block main-product__block-title">

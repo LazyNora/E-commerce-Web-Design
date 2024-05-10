@@ -287,8 +287,8 @@ const Navbar = () => {
 					<div className="header_top | container">
 						<div className="logo-bar | flex -mx-4 items-center py-2">
 							<div className="logo | px-4 justify-center">
-								<a
-									href="/"
+								<Link
+									to="/"
 									className="logo-img | block relative"
 									style={{ width: "290px" }}
 									title="AUDIO OASIS">
@@ -309,7 +309,7 @@ const Navbar = () => {
 										<path d="M445.492 359.439c0 75.222-60.979 136.201-136.201 136.201S173.09 434.661 173.09 359.439s60.979-136.201 136.201-136.201 136.201 60.979 136.201 136.201m-136.201-95c-52.467 0-95 42.533-95 95s42.533 95 95 95 95-42.533 95-95-42.533-95-95-95" />
 										<path d="M349.291 359.439c0 22.091-17.908 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40" />
 									</svg>
-								</a>
+								</Link>
 							</div>
 							<div className="w-2/3 flex flex-grow justify-end items-center">
 								<div className="flex flex-grow justify-end items-center">
@@ -408,15 +408,15 @@ const Navbar = () => {
 																				index
 																			}
 																			className="submenu-item | list-none w-full leading-9">
-																			<a
-																				href={
+																			<Link
+																				to={
 																					subnav.link
 																				}
 																				className="submenu-link | whitespace-normal block">
 																				{
 																					subnav.text
 																				}
-																			</a>
+																			</Link>
 																		</li>
 																	)
 																)}
@@ -454,8 +454,8 @@ const Navbar = () => {
 						</svg>
 					</button>
 					<div className="logo--mobile | ml-2">
-						<a
-							href="/"
+						<Link
+							to="/"
 							className="flex w-full relative"
 							title="AUDIO OASIS">
 							<svg
@@ -473,7 +473,7 @@ const Navbar = () => {
 								<path d="M445.492 359.439c0 75.222-60.979 136.201-136.201 136.201S173.09 434.661 173.09 359.439s60.979-136.201 136.201-136.201 136.201 60.979 136.201 136.201m-136.201-95c-52.467 0-95 42.533-95 95s42.533 95 95 95 95-42.533 95-95-42.533-95-95-95" />
 								<path d="M349.291 359.439c0 22.091-17.908 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40" />
 							</svg>
-						</a>
+						</Link>
 					</div>
 					<div className="w-1/4 flex flex-1 items-center justify-end">
 						<button className="search-popup | flex justify-center items-center snize-custom-widget-opener p-2">
@@ -507,15 +507,15 @@ const Navbar = () => {
 										onClick={
 											nav.submenu && subMenuOpen_click
 										}>
-										<a
-											href={nav.submenu ? "#" : nav.link}
+										<Link
+											to={nav.submenu ? "#" : nav.link}
 											className={`w-full px-4 py-3 flex items-center justify-between relative ${
 												nav.submenu
 													? "pointer-events-none"
 													: ""
 											}`}>
 											<span>{nav.text}</span>
-										</a>
+										</Link>
 										{nav.submenu && (
 											<span className="toggle-submenu-mb | flex items-center justify-center">
 												<svg
@@ -554,8 +554,8 @@ const Navbar = () => {
 																<li
 																	key={index}
 																	className="menu-link | list-none flex items-center">
-																	<a
-																		href={
+																	<Link
+																		to={
 																			subnav.link
 																		}
 																		className="w-full px-4 py-3 flex items-center justify-between relative">
@@ -564,7 +564,7 @@ const Navbar = () => {
 																				subnav.text
 																			}
 																		</span>
-																	</a>
+																	</Link>
 																</li>
 															)
 														)}

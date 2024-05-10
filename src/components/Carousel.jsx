@@ -27,6 +27,7 @@ import "../assets/css/Carousel.css";
 import "swiper/css";
 
 import { carouselData } from "../data"; // Import the carousel data
+import { Link } from "react-router-dom";
 
 // Styles for the Carousel component using styled-components
 
@@ -469,15 +470,15 @@ const Carousel = () => {
 												`}>
 												<p>{item.desc}</p>
 											</SlideDesc>
-											<a
-												href={item.link}
+											<Link
+												to={item.link}
 												className={`slide_block-link   inline-block sf__btn ${
 													item.type === "light"
 														? "sf__btn-primary"
 														: "sf__btn-white"
 												}`}>
 												{item.buttontext}
-											</a>
+											</Link>
 										</SlideContent>
 									</SlideBlock>
 									<SlideFooter

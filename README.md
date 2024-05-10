@@ -1,75 +1,63 @@
 # WEB DESIGN PROJECT
 
-Using React.
+Project thiết kế web cho một trang web bán hàng online.\
+Đề tài: Trang web bán các sản phẩm về audio như headphone, earphone, speaker, ...\
+Mục tiêu: Xây dựng trang web bán hàng online với các chức năng cơ bản như xem sản phẩm, thêm vào giỏ hàng, thanh toán, đăng nhập, đăng ký, ...
 
 ## Members
 
-Nguyen Minh Son - 2001224179\
-Cao Hoang Tan - 2001224329
+Nguyễn Minh Sơn - 2001224179\
+Cao Hoàng Tấn - 2001224329
 
-## Available Scripts
+## Online demo
 
-In the project directory, you can run:
+Truy cập trang web tại [https://lazynora-ao.vercel.app](https://lazynora-ao.vercel.app/) để xem demo.
 
-### `yarn start`
+## Công nghệ sử dụng
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Sử dụng Create React App để tạo project React.\
+Sử dụng React Router để quản lý routing.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Lý do chọn công nghệ
 
-### `yarn test`
+-   React: React là một thư viện JavaScript phổ biến được sử dụng để xây dựng các ứng dụng web hiện đại. React giúp tạo ra các ứng dụng web một cách dễ dàng, linh hoạt và hiệu quả.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Create React App: Create React App là một công cụ giúp tạo ra một project React một cách nhanh chóng và dễ dàng. Create React App cung cấp một project mẫu với các cài đặt mặc định giúp người dùng tập trung vào việc phát triển ứng dụng mà không cần quan tâm đến cấu hình.
 
-### `yarn build`
+-   React Router: React Router là một thư viện giúp quản lý routing trong ứng dụng React. React Router giúp tạo ra các ứng dụng web đơn trang (single-page applications) một cách dễ dàng và linh hoạt.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Static Website
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Trang web hoàn toàn tĩnh, không có backend. Dữ liệu được lưu trữ trong file productsData.js.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Cách cài đặt
 
-### `yarn eject`
+Để chạy project, cần cài đặt Node.js và yarn.\
+Cài đặt Node.js tại [đây](https://nodejs.org/en/).\
+Cài đặt yarn bằng cách chạy `npm install --global yarn`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Cách chạy project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Chạy `yarn install` để cài đặt các dependencies.\
+Chạy `yarn start` để chạy project ở chế độ development.\
+Mở [http://localhost:3000](http://localhost:3000) để xem project trong trình duyệt.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Cách build project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Chạy `yarn build` để build project.\
+Project sẽ được build trong thư mục `build`.
 
-## Learn More
+## Cách chạy test
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Chạy `yarn test` để chạy test runner trong chế độ xem và chỉnh sửa.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Cách sử dụng
 
-### Code Splitting
+Trang web có các chức năng cơ bản như xem sản phẩm, thêm vào giỏ hàng, thanh toán, đăng nhập, đăng ký, ...\
+Các chức năng sẽ được cập nhật sau.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Tài liệu tham khảo
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)\
+[React documentation](https://reactjs.org/)\
+[React Router documentation](https://reactrouter.com/)
