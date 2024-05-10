@@ -145,8 +145,8 @@ ul.menu-nav {
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	background: #fff;
-	z-index: 500;
+	/* background: #fff; */
+	z-index: 60;
 	-webkit-transform: translateX(-450px);
 	-ms-transform: translateX(-450px);
 	transform: translateX(-450px);
@@ -213,4 +213,60 @@ ul.menu-nav {
 	padding-left: var(--offset-x);
 	padding-right: var(--offset-x);
 	width: 100%;
+}
+
+.badge {
+	position: relative;
+	display: inline-flex;
+	vertical-align: middle;
+	flex-shrink: 0;
+}
+
+.badge-inner {
+	display: flex;
+	flex-flow: wrap;
+	-webkit-box-pack: center;
+	place-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	position: absolute;
+	box-sizing: border-box;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	font-size: 0.75rem;
+	min-width: 20px;
+	line-height: 1;
+	padding: 0px 6px;
+	height: 20px;
+	border-radius: 10px;
+	z-index: 1;
+	transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	bottom: 0px;
+	right: 0px;
+	transform: scale(1) translate(50%, 50%);
+	transform-origin: 100% 100%;
+}
+
+.badge .badge-inner {
+	background-color: rgb(0, 134, 103);
+	color: rgb(255, 255, 255);
+	font-size: 0.625rem;
+	bottom: 0.15em;
+}
+
+@media screen and (min-width: 1536px) {
+	.container {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+select {
+	background-color: #fff;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M5.15625 5.26562L1.10938 1.24609C0.945312 1.08203 0.945312 0.927083 1.10938 0.78125L1.62891 0.234375C1.79297 0.0885417 1.94792 0.0885417 2.09375 0.234375L5.375 3.48828L8.65625 0.234375C8.80208 0.0885417 8.95703 0.0885417 9.12109 0.234375L9.64062 0.78125C9.80469 0.927083 9.80469 1.08203 9.64062 1.24609L5.59375 5.26562C5.44792 5.41146 5.30208 5.41146 5.15625 5.26562Z" fill="black"/></svg>');
+	background-position: 50%;
+	background-position-x: calc(100% - 15px);
+	background-repeat: no-repeat;
+	background-size: 10px;
+	padding-right: 25px;
 }

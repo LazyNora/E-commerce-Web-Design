@@ -1,4 +1,4 @@
-import { categories } from "../data";
+import { categories } from "../../js/data";
 import CategoryItem from "./CategoryItem";
 import "../assets/css/Categories.css";
 

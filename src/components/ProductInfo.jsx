@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import VariantPicker from "./VariantPicker";
-import { formatMoney, moneyFormats } from "../currencyConvert";
+import { formatMoney, moneyFormats } from "../../js/currencyConvert";
 
 const ProductInfo = ({ item, variantId = null }) => {
 	useEffect(() => {

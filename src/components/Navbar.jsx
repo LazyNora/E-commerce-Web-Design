@@ -23,7 +23,7 @@ import {
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/Navbar.css";
-import { formatMoney, moneyFormats } from "../currencyConvert";
+import { formatMoney, moneyFormats } from "../../js/currencyConvert";
 
 const CustomBadge = styled(Badge)({
 	"& .MuiBadge-badge": {

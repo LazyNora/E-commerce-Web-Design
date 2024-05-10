@@ -9,7 +9,7 @@ import {
 	sc767,
 	scmin1440max2000,
 	useWindowSize,
-} from "../responsive"; // Import the responsive helper functions
+} from "../../js/responsive"; // Import the responsive helper functions
 
 import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper components
 
@@ -26,7 +26,7 @@ import "../assets/css/slideshow.css";
 import "../assets/css/Carousel.css";
 import "swiper/css";
 
-import { carouselData } from "../data"; // Import the carousel data
+import { carouselData } from "../../js/data"; // Import the carousel data
 import { Link } from "react-router-dom";
 
 // Styles for the Carousel component using styled-components

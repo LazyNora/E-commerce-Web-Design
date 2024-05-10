@@ -6,7 +6,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "../components/ui/accordion"; // Importing Accordion components
-import { useWindowSize } from "../responsive";
+import { useWindowSize } from "../../js/responsive";
 import "../assets/css/Footer.css"; // Importing CSS
 
 const Footer = () => {

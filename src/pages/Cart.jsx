@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@mui/icons-material";
-import { mobile } from "../responsive";
+import { mobile } from "../../js/responsive";
 
 const Container = styled.div``;
 const Wrapper = styled.div`

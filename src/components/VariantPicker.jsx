@@ -1,6 +1,6 @@
 import React from "react";
 import VariantSelect from "./VariantSelect";
-import { formatMoney, moneyFormats } from "../currencyConvert";
+import { formatMoney, moneyFormats } from "../../js/currencyConvert";
 
 const VariantPicker = ({ item, variantId = null }) => {
 	const variantPickerRef = React.useRef(null); // Tạo ref cho variantPicker
