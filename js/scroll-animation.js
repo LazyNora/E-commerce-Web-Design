@@ -18,7 +18,9 @@ const observerOptions = {
 	threshold: 0.5,
 };
 
-const elements = document.querySelectorAll(".scroll-animation");
-elements.forEach((element) => {
-	observer.observe(element, observerOptions);
-});
+setTimeout(() => {
+	const elements = document.querySelectorAll(".scroll-animation");
+	elements.forEach((element) => {
+		observer.observe(element, observerOptions);
+	});
+}, 1000);

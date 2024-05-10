@@ -40,7 +40,7 @@ document.querySelector(".swiper-wrapper").innerHTML = carouselData
               </span>
             </div>
             <h2
-              class="slide_block-title | md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5 text-black ${
+              class="slide_block-title | leading-[55px] md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 md:mb-5 text-black ${
 					item.type === "light" ? "md:text-black" : "md:text-white"
 				} lg:leading-tight xl:leading-tight 2xl:leading-tight">
               <span
@@ -124,7 +124,7 @@ const swiper = new Swiper(".swiper", {
 	loop: true,
 	autoplay: {
 		delay: 6000,
-		disableOnInteraction: false,
+		disableOnInteraction: true,
 	},
 	pagination: {
 		el: ".custom-swiper-pagination",

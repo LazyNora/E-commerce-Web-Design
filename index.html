@@ -54,6 +54,14 @@
 				display: block;
 			}
 		</style>
+		<link rel="stylesheet" href="./css/Announcement.css" />
+		<link rel="stylesheet" href="./css/Navbar.css" />
+		<link rel="stylesheet" href="./css/Carousel.css" />
+		<link rel="stylesheet" href="./css/slideshow.css" />
+		<link rel="stylesheet" href="./css/Categories.css" />
+
+		<link rel="stylesheet" href="./css/Guarantees.css" />
+
 		<title>Audio Oasis - Professional Audio Online Shopping Store</title>
 	</head>
 
@@ -62,7 +70,6 @@
 		<div id="root">
 			<!-- Announcement -->
 			<section class="section-announcement | hidden lg:block">
-				<link rel="stylesheet" href="./css/Announcement.css" />
 				<div class="announcement-bar | relative">
 					<div
 						class="announcement-bar__content | md:text-center py-2.5 text-base hover:animate-shake">
@@ -92,16 +99,15 @@
 				<script>
 					const closeAnnouncement = () => {
 						document.querySelector(".announcement-bar").remove();
-						document.documentElement.style.setProperty(
-							"--sf-announcement-height",
-							"0px"
-						);
+						// document.documentElement.style.setProperty(
+						// 	"--sf-announcement-height",
+						// 	"0px"
+						// );
 					};
 				</script>
 			</section>
 			<!-- Navbar -->
 			<section class="section-header">
-				<link rel="stylesheet" href="./css/Navbar.css" />
 				<header class="header | inset-x-0 z-[70] header__wrapper">
 					<div
 						class="desktop-header | hidden lg:block bg-white border-b border-[#ddd]">
@@ -110,7 +116,7 @@
 								class="logo-bar | flex -mx-4 items-center py-2">
 								<div
 									class="logo | px-4 justify-center scroll-animation"
-									data-animation="animate-jump-in">
+									data-animation="animate-fade">
 									<a
 										href="/"
 										class="logo-img | block relative"
@@ -301,8 +307,6 @@
 				<!-- Carousel -->
 				<section
 					class="section-carousel bg-white border-b border-[#ddd]">
-					<link rel="stylesheet" href="./css/Carousel.css" />
-					<link rel="stylesheet" href="./css/slideshow.css" />
 					<div
 						class="relative shop-slideshow banner_slideshow slider_pagination--right slide-block_content-stack">
 						<div
@@ -437,6 +441,210 @@
 								</p>
 							</li>
 						</ul>
+					</div>
+				</section>
+				<section class="section-categories">
+					<div
+						class="container categories-wrapper section-ib-wrapper"
+						style="
+							--column-gap: 30px;
+							--column-gap-mobile: 10px;
+							--row-gap: 40px;
+							--row-gap-mobile: 30px;
+							--items: 3;
+						">
+						<div class="section__header text-center">
+							<h2 class="section__heading">Shop by Categories</h2>
+						</div>
+						<div class="relative ib">
+							<div
+								class="ib-grid ib-wrapper md:grid md:grid-cols-2 lg:grid-cols-3"></div>
+						</div>
+					</div>
+					<script type="module" src="./js/Categories.js"></script>
+				</section>
+				<!-- Guarantees -->
+				<section class="section-guarantees">
+					<div
+						class="container guarantees-wrapper section-ib-wrapper">
+						<div class="relative ib">
+							<div
+								class="ib-grid ib-wrapper grid grid-cols-2 md:grid md:grid-cols-2 lg:grid-cols-4">
+								<div class="ib-column">
+									<div
+										class="ib-icon-box ib-icon-box--horizontal">
+										<div
+											class="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center scroll-animation"
+											data-animation="animate-fade-up">
+											<div
+												class="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 ib-image--loaded items-start pt-1 sm:mr-5"
+												style="width: 60px">
+												<div
+													class="ib-image w-full"
+													style="
+														--aspect-ratio: 0.9803921568627451;
+													"
+													intersecting="true">
+													<img
+														src="./assets/fastDelivery.svg"
+														sizes="60px"
+														alt=""
+														loading="lazy"
+														class="w-full img-loaded"
+														width="60"
+														height="61" />
+												</div>
+											</div>
+											<div
+												class="icon-box__text flex-1 sm:text-left">
+												<h3
+													class="h4 mb-1.5 font-medium">
+													Free Shipping
+												</h3>
+												<div
+													class="rte text-color-subtext">
+													<p>
+														Worldwide Free Shipping
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ib-column">
+									<div
+										class="ib-icon-box ib-icon-box--horizontal">
+										<div
+											class="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center scroll-animation"
+											data-animation="animate-fade-up animate-delay-100">
+											<div
+												class="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 ib-image--loaded items-start pt-1 sm:mr-5"
+												style="width: 60px">
+												<div
+													class="ib-image w-full"
+													style="
+														--aspect-ratio: 0.9803921568627451;
+													"
+													intersecting="true">
+													<img
+														src="./assets/discount.svg"
+														sizes="60px"
+														alt=""
+														loading="lazy"
+														class="w-full img-loaded"
+														width="60"
+														height="61" />
+												</div>
+											</div>
+											<div
+												class="icon-box__text flex-1 sm:text-left">
+												<h3
+													class="h4 mb-1.5 font-medium">
+													Best Pricing
+												</h3>
+												<div
+													class="rte text-color-subtext">
+													<p>
+														Offering
+														<strong>
+															lowest possible
+														</strong>
+														prices & best world
+														class selections.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ib-column">
+									<div
+										class="ib-icon-box ib-icon-box--horizontal">
+										<div
+											class="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center scroll-animation"
+											data-animation="animate-fade-up animate-delay-200">
+											<div
+												class="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 ib-image--loaded items-start pt-1 sm:mr-5"
+												style="width: 60px">
+												<div
+													class="ib-image w-full"
+													style="
+														--aspect-ratio: 0.9803921568627451;
+													"
+													intersecting="true">
+													<img
+														src="./assets/people.svg"
+														sizes="60px"
+														alt=""
+														loading="lazy"
+														class="w-full img-loaded"
+														width="60"
+														height="61" />
+												</div>
+											</div>
+											<div
+												class="icon-box__text flex-1 sm:text-left">
+												<h3
+													class="h4 mb-1.5 font-medium">
+													Online Support
+												</h3>
+												<div
+													class="rte text-color-subtext">
+													<p>
+														Our passionate Sales
+														Engineers: Monday -
+														Friday: 09:00 – 18:00
+														(UTC+8)
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ib-column">
+									<div
+										class="ib-icon-box ib-icon-box--horizontal">
+										<div
+											class="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center scroll-animation"
+											data-animation="animate-fade-up animate-delay-300">
+											<div
+												class="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 ib-image--loaded items-start pt-1 sm:mr-5"
+												style="width: 60px">
+												<div
+													class="ib-image w-full"
+													style="
+														--aspect-ratio: 0.9803921568627451;
+													"
+													intersecting="true">
+													<img
+														src="./assets/shield.svg"
+														sizes="60px"
+														alt=""
+														loading="lazy"
+														class="w-full img-loaded"
+														width="60"
+														height="61" />
+												</div>
+											</div>
+											<div
+												class="icon-box__text flex-1 sm:text-left">
+												<h3
+													class="h4 mb-1.5 font-medium">
+													Authorized Retailer
+												</h3>
+												<div
+													class="rte text-color-subtext">
+													<p>
+														Guaranteed & authentic
+														genuine products.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</main>
@@ -716,103 +924,142 @@
 									</div>
 								</div>
 							</div>
-
-							<Accordion
-								type="multiple"
-								collapsible="true"
-								defaultValue=""
+							<!-- Mobile Footer -->
+							<div
 								class="footer_accordion | flex flex-wrap md:hidden">
-								<AccordionItem
+								<div
 									value="item-1"
-									class="footer_block accordion-item block-newsletter | open | w-full order-first">
-									<AccordionTrigger
-										class="footer_block-inner accordion-button block-title | font-bold text-base">
-										LET'S GET IN TOUCH
-									</AccordionTrigger>
-									<AccordionContent
-										class="accordion-content block-content">
-										<div class="pb-5 md:pb-0">
-											<p
-												class="newsletter-block-desc block-text | py-2">
-												Stay up to date!
-											</p>
-											<div>
-												<form
-													id="contact-form"
-													acceptCharset="UTF-8"
-													class="footer-form-newsletter">
-													<div class="relative">
-														<input
-															type="email"
-															required
-															name="contact[email]"
-															placeholder="Enter your email"
-															autoCorrect="off"
-															autocapitalize="off"
-															autocomplete="off"
-															spellcheck="false"
-															class="newsletter_form-input | form-control control-icon py-1.5 px-12" />
-														<span
-															class="form-newsletter-icon | absolute">
-															<svg
-																class="w-6 h-6"
-																focusable="false"
-																aria-hidden="true"
-																viewBox="0 0 24 24">
-																<path
-																	d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"></path>
-															</svg>
-														</span>
-														<button
-															type="submit"
-															name="submit"
-															class="form-submit absolute">
-															<svg
-																class="h-6 w-6"
-																focusable="false"
-																aria-hidden="true"
-																viewBox="0 0 24 24">
-																<path
-																	d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path>
-															</svg>
-														</button>
-													</div>
-													<div class="agree-terms">
-														<label
-															htmlFor="agree_terms">
+									class="footer_block accordion-item block-newsletter | open | w-full order-first border-b">
+									<h3 data-state="open" class="flex">
+										<button
+											data-state="open"
+											class="footer_block-inner accordion-button block-title | font-bold text-base flex flex-1 items-center justify-between py-4 transition-all [&[data-state=open]>svg]:rotate-180">
+											LET'S GET IN TOUCH
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-4 w-4 shrink-0 transition-transform duration-200">
+												<path d="m6 9 6 6 6-6"></path>
+											</svg>
+										</button>
+									</h3>
+									<div
+										data-state="open"
+										role="region"
+										class="overflow-hidden text-base transition-all">
+										<div
+											class="accordion-content block-content">
+											<div class="pb-5 md:pb-0">
+												<p
+													class="newsletter-block-desc block-text | py-2">
+													Stay up to date!
+												</p>
+												<div>
+													<form
+														id="contact-form"
+														acceptCharset="UTF-8"
+														class="footer-form-newsletter">
+														<div class="relative">
 															<input
-																id="agree_terms"
-																type="checkbox"
-																name="agree_terms"
-																value="yes"
-																required />
-															<span>
-																<p>
-																	I agree with
-																	the
-																	<a
-																		href="#"
-																		title="#">
-																		Terms &
-																		conditions
-																	</a>
-																</p>
+																type="email"
+																required
+																name="contact[email]"
+																placeholder="Enter your email"
+																autoCorrect="off"
+																autocapitalize="off"
+																autocomplete="off"
+																spellcheck="false"
+																class="newsletter_form-input | form-control control-icon py-1.5 px-12" />
+															<span
+																class="form-newsletter-icon | absolute">
+																<svg
+																	class="w-6 h-6"
+																	focusable="false"
+																	aria-hidden="true"
+																	viewBox="0 0 24 24">
+																	<path
+																		d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"></path>
+																</svg>
 															</span>
-														</label>
-													</div>
-												</form>
+															<button
+																type="submit"
+																name="submit"
+																class="form-submit absolute">
+																<svg
+																	class="h-6 w-6"
+																	focusable="false"
+																	aria-hidden="true"
+																	viewBox="0 0 24 24">
+																	<path
+																		d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"></path>
+																</svg>
+															</button>
+														</div>
+														<div
+															class="agree-terms">
+															<label
+																htmlFor="agree_terms">
+																<input
+																	id="agree_terms"
+																	type="checkbox"
+																	name="agree_terms"
+																	value="yes"
+																	required />
+																<span>
+																	<p>
+																		I agree
+																		with the
+																		<a
+																			href="#"
+																			title="#">
+																			Terms
+																			&
+																			conditions
+																		</a>
+																	</p>
+																</span>
+															</label>
+														</div>
+													</form>
+												</div>
 											</div>
 										</div>
-									</AccordionContent>
-								</AccordionItem>
-								<AccordionItem
+									</div>
+								</div>
+								<div
 									value="item-2"
-									class="footer_block accordion-item footer_block-menu | w-full">
-									<AccordionTrigger
-										class="footer_block-inner accordion-button block-title | font-bold text-base">
-										SUPPORT
-									</AccordionTrigger>
-									<AccordionContent>
+									class="footer_block accordion-item footer_block-menu | w-full border-b">
+									<h3 data-state="close" class="flex">
+										<button
+											data-state="close"
+											class="footer_block-inner accordion-button block-title | font-bold text-base flex flex-1 items-center justify-between py-4 transition-all [&[data-state=open]>svg]:rotate-180">
+											SUPPORT
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-4 w-4 shrink-0 transition-transform duration-200">
+												<path d="m6 9 6 6 6-6"></path>
+											</svg>
+										</button>
+									</h3>
+									<div
+										data-state="close"
+										role="region"
+										class="overflow-hidden text-base transition-all">
 										<ul
 											class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
@@ -843,16 +1090,35 @@
 												</li>
 											</div>
 										</ul>
-									</AccordionContent>
-								</AccordionItem>
-								<AccordionItem
+									</div>
+								</div>
+								<div
 									value="item-3"
-									class="footer_block accordion-item footer_block-menu | w-full">
-									<AccordionTrigger
-										class="footer_block-inner accordion-button block-title | font-bold text-base">
-										GET TO KNOW US
-									</AccordionTrigger>
-									<AccordionContent>
+									class="footer_block accordion-item footer_block-menu | w-full border-b">
+									<h3 data-state="close" class="flex">
+										<button
+											data-state="close"
+											class="footer_block-inner accordion-button block-title | font-bold text-base flex flex-1 items-center justify-between py-4 transition-all [&[data-state=open]>svg]:rotate-180">
+											GET TO KNOW US
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-4 w-4 shrink-0 transition-transform duration-200">
+												<path d="m6 9 6 6 6-6"></path>
+											</svg>
+										</button>
+									</h3>
+									<div
+										data-state="close"
+										role="region"
+										class="overflow-hidden text-base transition-all">
 										<ul
 											class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
@@ -882,16 +1148,35 @@
 												</li>
 											</div>
 										</ul>
-									</AccordionContent>
-								</AccordionItem>
-								<AccordionItem
+									</div>
+								</div>
+								<div
 									value="item-4"
-									class="footer_block accordion-item footer_block-our_store | w-full">
-									<AccordionTrigger
-										class="footer_block-inner accordion-button block-title | font-bold text-base">
-										FOLLOW US
-									</AccordionTrigger>
-									<AccordionContent>
+									class="footer_block accordion-item footer_block-our_store | w-full border-b">
+									<h3 data-state="close" class="flex">
+										<button
+											data-state="close"
+											class="footer_block-inner accordion-button block-title | font-bold text-base flex flex-1 items-center justify-between py-4 transition-all [&[data-state=open]>svg]:rotate-180">
+											FOLLOW US
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-4 w-4 shrink-0 transition-transform duration-200">
+												<path d="m6 9 6 6 6-6"></path>
+											</svg>
+										</button>
+									</h3>
+									<div
+										data-state="close"
+										role="region"
+										class="overflow-hidden text-base transition-all">
 										<div
 											class="accordion-content rte block-content">
 											<div class="pb-5 md:pb-0">
@@ -978,9 +1263,9 @@
 												</div>
 											</div>
 										</div>
-									</AccordionContent>
-								</AccordionItem>
-							</Accordion>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="footer-layout footer_bottom | mt-5 md:mt-0">
@@ -1214,6 +1499,7 @@
 							</div>
 						</div>
 					</div>
+					<script src="./js/Accordion.js"></script>
 				</footer>
 			</section>
 		</div>

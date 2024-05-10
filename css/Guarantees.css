@@ -6,6 +6,11 @@
 	--items: 4;
 }
 
+[style*="--aspect-ratio"]:before {
+	padding-top: 56.24684%;
+	padding-top: calc(100% / (0.0001 + var(--aspect-ratio, 16/9)));
+}
+
 .section-ib-wrapper {
 	margin-top: 100px;
 	margin-bottom: 100px;

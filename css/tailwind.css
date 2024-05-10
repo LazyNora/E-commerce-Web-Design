@@ -869,6 +869,14 @@ body {
   margin-left: -20px;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-1\.5 {
+  margin-bottom: 0.375rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -879,6 +887,10 @@ body {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .mb-6 {
@@ -899,6 +911,10 @@ body {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mt-4 {
@@ -1020,8 +1036,16 @@ body {
   height: 2.75rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-6 {
   height: 1.5rem;
+}
+
+.h-9 {
+  height: 2.25rem;
 }
 
 .h-\[16px\] {
@@ -1044,10 +1068,6 @@ body {
   height: 100%;
 }
 
-.h-9 {
-  height: 2.25rem;
-}
-
 .w-1\/4 {
   width: 25%;
 }
@@ -1060,8 +1080,16 @@ body {
   width: 66.666667%;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .w-6 {
   width: 1.5rem;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .w-\[16px\] {
@@ -1109,10 +1137,6 @@ body {
   width: max-content;
 }
 
-.w-9 {
-  width: 2.25rem;
-}
-
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
@@ -1120,6 +1144,10 @@ body {
 
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -1132,6 +1160,10 @@ body {
 
 .shrink {
   flex-shrink: 1;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
 }
 
 .flex-grow {
@@ -1186,60 +1218,34 @@ body {
   transform: none;
 }
 
-@keyframes jump {
-  0%, 100% {
-    transform: scale(100%);
-  }
-
-  10% {
-    transform: scale(80%);
-  }
-
-  50% {
-    transform: scale(120%);
-  }
-}
-
-.animate-jump {
-  animation: jump .5s both;
-}
-
-@keyframes shake {
+@keyframes fade {
   0% {
-    transform: translateX(0rem);
-  }
-
-  25% {
-    transform: translateX(-1rem);
-  }
-
-  75% {
-    transform: translateX(1rem);
+    opacity: 0;
   }
 
   100% {
-    transform: translateX(0rem);
+    opacity: 1;
   }
 }
 
-.animate-shake {
-  animation: shake .5s both;
+.animate-fade {
+  animation: fade 1s both;
 }
 
-@keyframes flip-down {
+@keyframes fade-down {
   0% {
-    transform: rotateX(-90deg);
-    transform-origin: top;
+    opacity: 0;
+    transform: translateY(-2rem);
   }
 
   100% {
-    transform: rotateX(0);
-    transform-origin: top;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.animate-flip-down {
-  animation: flip-down 1s both;
+.animate-fade-down {
+  animation: fade-down 1s both;
 }
 
 @keyframes fade-right {
@@ -1258,28 +1264,10 @@ body {
   animation: fade-right 1s both;
 }
 
-@keyframes jump-in {
-  0% {
-    transform: scale(0%);
-  }
-
-  80% {
-    transform: scale(120%);
-  }
-
-  100% {
-    transform: scale(100%);
-  }
-}
-
-.animate-jump-in {
-  animation: jump-in .5s both;
-}
-
-@keyframes fade-down {
+@keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(-2rem);
+    transform: translateY(2rem);
   }
 
   100% {
@@ -1288,8 +1276,8 @@ body {
   }
 }
 
-.animate-fade-down {
-  animation: fade-down 1s both;
+.animate-fade-up {
+  animation: fade-up 1s both;
 }
 
 .cursor-pointer {
@@ -1572,6 +1560,10 @@ body {
 
 .grid-flow-col-dense {
   grid-auto-flow: column dense;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -2207,6 +2199,11 @@ body {
   border-color: rgb(221 221 221 / var(--tw-border-opacity));
 }
 
+.border-\[\#e5e5e5\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 229 229 / var(--tw-border-opacity));
+}
+
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -2408,6 +2405,11 @@ body {
   padding-bottom: 0.875rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -2431,6 +2433,10 @@ body {
 
 .pt-0 {
   padding-top: 0px;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .pt-8 {
@@ -2609,6 +2615,10 @@ body {
 
 .leading-9 {
   line-height: 2.25rem;
+}
+
+.leading-\[55px\] {
+  line-height: 55px;
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -2960,6 +2970,10 @@ body {
   transition-duration: 150ms;
 }
 
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -3026,14 +3040,6 @@ body {
   forced-color-adjust: none;
 }
 
-.animate-delay-1000 {
-  animation-delay: 1000ms;
-}
-
-.animate-delay-500 {
-  animation-delay: 500ms;
-}
-
 .animate-delay-100 {
   animation-delay: 100ms;
 }
@@ -3046,8 +3052,8 @@ body {
   animation-delay: 300ms;
 }
 
-.animate-delay-\[400\] {
-  animation-delay: 400;
+.animate-delay-500 {
+  animation-delay: 500ms;
 }
 
 .animate-delay-\[400ms\] {
@@ -3198,9 +3204,53 @@ body {
   text-align: center;
 }
 
+@keyframes accordion-up {
+  from {
+    height: var(--accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+.data-\[state\=closed\]\:animate-accordion-up[data-state=closed] {
+  animation: accordion-up 0.2s ease-out forwards;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--accordion-content-height);
+  }
+}
+
+.data-\[state\=open\]\:animate-accordion-down[data-state=open] {
+  animation: accordion-down 0.2s ease-out forwards;
+}
+
 @media (min-width: 640px) {
+  .sm\:mr-5 {
+    margin-right: 1.25rem;
+  }
+
   .sm\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+
+  .sm\:text-left {
+    text-align: left;
   }
 
   .sm\:underline {
@@ -3216,6 +3266,10 @@ body {
   .md\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:mb-5 {
@@ -3234,6 +3288,10 @@ body {
     margin-top: 0px;
   }
 
+  .md\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3242,8 +3300,16 @@ body {
     display: flex;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:hidden {
     display: none;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:justify-start {
@@ -3334,6 +3400,14 @@ body {
     width: auto;
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -3413,4 +3487,9 @@ body {
   .\32xl\:leading-tight {
     line-height: 1.25;
   }
+}
+
+.\[\&\[data-state\=open\]\>svg\]\:rotate-180[data-state=open]>svg {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
