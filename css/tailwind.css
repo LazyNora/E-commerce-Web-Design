@@ -1044,6 +1044,10 @@ body {
   height: 100%;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .w-1\/4 {
   width: 25%;
 }
@@ -1103,6 +1107,10 @@ body {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .min-w-max {
@@ -1176,6 +1184,112 @@ body {
 
 .transform-none {
   transform: none;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: scale(100%);
+  }
+
+  10% {
+    transform: scale(80%);
+  }
+
+  50% {
+    transform: scale(120%);
+  }
+}
+
+.animate-jump {
+  animation: jump .5s both;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0rem);
+  }
+
+  25% {
+    transform: translateX(-1rem);
+  }
+
+  75% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+.animate-shake {
+  animation: shake .5s both;
+}
+
+@keyframes flip-down {
+  0% {
+    transform: rotateX(-90deg);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: rotateX(0);
+    transform-origin: top;
+  }
+}
+
+.animate-flip-down {
+  animation: flip-down 1s both;
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-right {
+  animation: fade-right 1s both;
+}
+
+@keyframes jump-in {
+  0% {
+    transform: scale(0%);
+  }
+
+  80% {
+    transform: scale(120%);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.animate-jump-in {
+  animation: jump-in .5s both;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-down {
+  animation: fade-down 1s both;
 }
 
 .cursor-pointer {
@@ -2103,10 +2217,6 @@ body {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-background {
-  background-color: hsl(var(--background));
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -2916,6 +3026,114 @@ body {
   forced-color-adjust: none;
 }
 
+.animate-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-\[400\] {
+  animation-delay: 400;
+}
+
+.animate-delay-\[400ms\] {
+  animation-delay: 400ms;
+}
+
+.animate-normal {
+  animation-direction: normal;
+}
+
+.animate-reverse {
+  animation-direction: reverse;
+}
+
+.animate-alternate {
+  animation-direction: alternate;
+}
+
+.animate-alternate-reverse {
+  animation-direction: alternate-reverse;
+}
+
+.animate-fill-none {
+  animation-fill-mode: normal;
+}
+
+.animate-fill-forwards {
+  animation-fill-mode: forwards;
+}
+
+.animate-fill-backwards {
+  animation-fill-mode: backwards;
+}
+
+.animate-fill-both {
+  animation-fill-mode: both;
+}
+
+.animate-infinite {
+  animation-iteration-count: infinite;
+}
+
+.animate-once {
+  animation-iteration-count: 1;
+}
+
+.animate-twice {
+  animation-iteration-count: 2;
+}
+
+.animate-thrice {
+  animation-iteration-count: 3;
+}
+
+.animate-run {
+  animation-play-state: running;
+}
+
+.animate-play {
+  animation-play-state: running;
+}
+
+.animate-stop {
+  animation-play-state: paused;
+}
+
+.animate-pause {
+  animation-play-state: paused;
+}
+
+.animate-ease-linear {
+  animation-timing-function: linear;
+}
+
+.animate-ease-in {
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.animate-ease-out {
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.animate-ease-in-out {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
   min-width: 100% !important;
 }
@@ -2934,6 +3152,28 @@ body {
       max-width: 1400px;
     }
   }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0rem);
+  }
+
+  25% {
+    transform: translateX(-1rem);
+  }
+
+  75% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+.hover\:animate-shake:hover {
+  animation: shake .5s both;
 }
 
 .hover\:font-bold:hover {
