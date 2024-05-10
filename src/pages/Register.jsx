@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/LoginRegister.css";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
@@ -131,11 +132,11 @@ const Register = () => {
 							</div>
 						</form>
 					</div>
-					<a
-						href="/login"
+					<Link
+						to="/login"
 						className="login-btn | btn-link mt-10 font-bold">
 						Login
-					</a>
+					</Link>
 				</section>
 			</main>
 			<Footer />

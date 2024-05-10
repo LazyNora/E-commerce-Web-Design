@@ -170,12 +170,13 @@ const VariantPicker = ({ item, variantId = null }) => {
 	};
 
 	// Hàm cập nhật browser history
+	// Thêm /#/ nếu dùng hash router
 	const updateBrowserHistory = () => {
 		!currentVariant ||
 			window.history.replaceState(
 				{},
 				"",
-				`${productData.url}?variant=${currentVariant.id}`
+				`${window.location.origin}${window.location.pathname}?variant=${currentVariant.id}`
 			);
 	};
 
