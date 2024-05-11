@@ -840,6 +840,10 @@ body {
   margin: 0.625rem;
 }
 
+.m-\[4px\!important\] {
+  margin: 4px !important;
+}
+
 .-mx-2 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
@@ -860,6 +864,11 @@ body {
   margin-right: auto;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .my-\[100px\] {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -875,6 +884,10 @@ body {
 
 .mb-1\.5 {
   margin-bottom: 0.375rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .mb-2 {
@@ -897,6 +910,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -907,6 +924,10 @@ body {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-2 {
@@ -2625,6 +2646,11 @@ body {
   color: rgb(51 102 153 / .35);
 }
 
+.text-\[\#666\] {
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -3274,6 +3300,10 @@ body {
 
   .md\:mb-5 {
     margin-bottom: 1.25rem;
+  }
+
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
   .md\:mb-7 {
