@@ -3449,6 +3449,18 @@ body {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
+
+  .md\:animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .md\:animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .md\:animate-delay-300 {
+    animation-delay: 300ms;
+  }
 }
 
 @media (min-width: 1024px) {

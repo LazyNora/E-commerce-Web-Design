@@ -6,13 +6,16 @@ document.querySelectorAll(".accordion-item[value]").forEach((item) => {
 		"data-[state=closed]:animate-accordion-up",
 		"data-[state=open]:animate-accordion-down"
 	);
-	content.style.setProperty(
-		"--accordion-content-height",
-		`${content.scrollHeight}px`
-	);
+	// content.style.setProperty(
+	// 	"--accordion-content-height",
+	// 	`${content.scrollHeight}px`
+	// );
 	// Trigger the accordion animation on load to prevent the content from flickering
 	// when the page loads
-	content.style.height = "0";
+	if (content.dataset.state === "closed") {
+		content.style.height = "0";
+	}
+
 	// End of trigger
 
 	button.addEventListener("click", () => {
