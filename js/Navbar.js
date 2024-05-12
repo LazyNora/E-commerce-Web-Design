@@ -186,134 +186,135 @@ document
 let navDesktopInner = "";
 navList.map((nav, index) => {
 	navDesktopInner += `
-						<li
-							class="menu-item | relative list-none"
-							data-index=${index}>
-							<a
-								class="menu-link | px-4 py-5 flex items-center uppercase font-bold"
-								href=${nav.link}>
-								${nav.text}
-								${
-									nav.submenu
-										? `<svg class="menu__arrow | ml-2 w-6 h-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg>`
-										: ""
-								}
-							</a>
-							${
-								nav.submenu
-									? `
-							<div class="menu__submenu menu__desktop-sub-menu menu__dropdown | pointer-events-none absolute z-50 inset-x-0 bg-white w-full opacity-0 invisible min-w-max">
-								<div class="menu__inner">
-									<div class="mx-auto">
-										<div class="submenu__content | flex p-4">
-											<ul class="submenu-items | flex flex-col w-full">
-											${nav.submenu
-												.map(
-													(subnav, index) =>
-														`<li class="submenu-item | list-none w-full leading-9">
-												<a
-													href=${subnav.link}
-													class="submenu-link | whitespace-normal block">
-													${subnav.text}
-												</a>
-											</li>`
-												)
-												.join("")}
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						`
-									: ""
-							}
-					</li>`;
+		<li
+			class="menu-item | relative list-none"
+			data-index=${index}>
+			<a
+				class="menu-link | px-4 py-5 flex items-center uppercase font-bold"
+				href=${nav.link}>
+				${nav.text}
+				${
+					nav.submenu
+						? `<svg class="menu__arrow | ml-2 w-6 h-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg>`
+						: ""
+				}
+			</a>
+			${
+				nav.submenu
+					? `
+			<div class="menu__submenu menu__desktop-sub-menu menu__dropdown | pointer-events-none absolute z-50 inset-x-0 bg-white w-full opacity-0 invisible min-w-max">
+				<div class="menu__inner">
+					<div class="mx-auto">
+						<div class="submenu__content | flex p-4">
+							<ul class="submenu-items | flex flex-col w-full">
+							${nav.submenu
+								.map(
+									(subnav, index) =>
+										`<li class="submenu-item | list-none w-full leading-9">
+								<a
+									href=${subnav.link}
+									class="submenu-link | whitespace-normal block">
+									${subnav.text}
+								</a>
+							</li>`
+								)
+								.join("")}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		`
+					: ""
+			}
+	</li>`;
 });
 document.querySelector(".menu-nav").innerHTML = navDesktopInner;
 
 document.querySelector(".currency-selector").innerHTML = `
-						${Object.keys(supportCurrencies)
-							.map(
-								(currency) =>
-									`<option value=${currency}>${supportCurrencies[currency]}</option>`
-							)
-							.join("")}
-						`;
+	${Object.keys(supportCurrencies)
+		.map(
+			(currency) =>
+				`<option value=${currency}>${supportCurrencies[currency]}</option>`
+		)
+		.join("")}
+	`;
+
 document.querySelector(".currency-selector").value =
 	sessionStorage.getItem("currency") || "USD";
 
 document.querySelector(".menu-links").innerHTML = `
-						${navList
-							.map(
-								(nav, index) => `
-							<li
-								class="menu-link | list-none flex items-center">
-								<a
-									href=${nav.submenu ? "#" : nav.link}
-									class="w-full px-4 py-3 flex items-center justify-between relative ${
-										nav.submenu ? "pointer-events-none" : ""
-									}">
-									<span>${nav.text}</span>
-								</a>
-								${
-									nav.submenu
-										? `
-									<span class="toggle-submenu-mb | flex items-center justify-center">
-										<svg
-											class="w-[16px] h-[16px]"
-											fill="currentColor"
-											stroke="currentColor"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 256 512">
-											<path d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z" />
-										</svg>
-									</span>
-								`
-										: ""
-								}
-								${
-									nav.submenu
-										? `
-									<div class="sub-links | absolute inset-y-0 bg-white flex-col left-full w-full flex hidden">
-										<div class="h-full overscroll-contain">
-											<button class="back-btn | p-4 font-medium flex items-center">
-												<svg
-													class="w-[16px] h-[16px]"
-													fill="currentColor"
-													stroke="currentColor"
-													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 256 512">
-													<path d="m238.475 36.465 7.071 7.07c4.686 4.686 4.686 12.284 0 16.971L50.053 256l195.493 195.494c4.686 4.686 4.686 12.284 0 16.971l-7.071 7.07c-4.686 4.686-12.284 4.686-16.97 0L10.454 264.485c-4.686-4.686-4.686-12.284 0-16.971L221.505 36.465c4.686-4.687 12.284-4.687 16.97 0" />
-												</svg>
-												<span class="ml-3">
-													Back
-												</span>
-											</button>
-											<ul class="sub-links--2 | pb-4">
-												${nav.submenu
-													.map(
-														(subnav, index) => `
-														<li
-															class="menu-link | list-none flex items-center">
-															<a
-																href=${subnav.link}
-																class="w-full px-4 py-3 flex items-center justify-between relative">
-																<span>
-																	${subnav.text}
-																</span>
-															</a>
-														</li>`
-													)
-													.join("")}
-											</ul>
-										</div>
-									</div>
-								`
-										: ""
-								}
-							</li>`
-							)
-							.join("")}`;
+	${navList
+		.map(
+			(nav, index) => `
+		<li
+			class="menu-link | list-none flex items-center">
+			<a
+				href=${nav.submenu ? "#" : nav.link}
+				class="w-full px-4 py-3 flex items-center justify-between relative ${
+					nav.submenu ? "pointer-events-none" : ""
+				}">
+				<span>${nav.text}</span>
+			</a>
+			${
+				nav.submenu
+					? `
+				<span class="toggle-submenu-mb | flex items-center justify-center">
+					<svg
+						class="w-[16px] h-[16px]"
+						fill="currentColor"
+						stroke="currentColor"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 256 512">
+						<path d="M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z" />
+					</svg>
+				</span>
+			`
+					: ""
+			}
+			${
+				nav.submenu
+					? `
+				<div class="sub-links | absolute inset-y-0 bg-white flex-col left-full w-full flex hidden">
+					<div class="h-full overscroll-contain">
+						<button class="back-btn | p-4 font-medium flex items-center">
+							<svg
+								class="w-[16px] h-[16px]"
+								fill="currentColor"
+								stroke="currentColor"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 256 512">
+								<path d="m238.475 36.465 7.071 7.07c4.686 4.686 4.686 12.284 0 16.971L50.053 256l195.493 195.494c4.686 4.686 4.686 12.284 0 16.971l-7.071 7.07c-4.686 4.686-12.284 4.686-16.97 0L10.454 264.485c-4.686-4.686-4.686-12.284 0-16.971L221.505 36.465c4.686-4.687 12.284-4.687 16.97 0" />
+							</svg>
+							<span class="ml-3">
+								Back
+							</span>
+						</button>
+						<ul class="sub-links--2 | pb-4">
+							${nav.submenu
+								.map(
+									(subnav, index) => `
+									<li
+										class="menu-link | list-none flex items-center">
+										<a
+											href=${subnav.link}
+											class="w-full px-4 py-3 flex items-center justify-between relative">
+											<span>
+												${subnav.text}
+											</span>
+										</a>
+									</li>`
+								)
+								.join("")}
+						</ul>
+					</div>
+				</div>
+			`
+					: ""
+			}
+		</li>`
+		)
+		.join("")}`;
 
 document.querySelectorAll(".menu-link").forEach((item) => {
 	if (item.querySelector(".sub-links")) {
