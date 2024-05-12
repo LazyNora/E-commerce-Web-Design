@@ -347,6 +347,7 @@ const getExchangeRate = async () => {
 		responseData = response;
 		sessionStorage.setItem("exchangeRate", JSON.stringify(response));
 	}
+	updatePrice();
 };
 
 window.onload = () => {
@@ -362,9 +363,11 @@ document.querySelector(".currency-selector").addEventListener("change", (e) => {
 	updatePrice();
 });
 
+import { formatMoney, moneyFormats } from "./currencyConvert.js";
+
 const updatePrice = () => {
 	const currency = sessionStorage.getItem("currency");
-	if (currency && rateFetched) {
+	if (currency) {
 		const priceElements = document.querySelectorAll("span.money");
 		priceElements.forEach((element) => {
 			const price = element.getAttribute("data-product-price");

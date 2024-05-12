@@ -21,6 +21,10 @@ const observerOptions = {
 setTimeout(() => {
 	const elements = document.querySelectorAll(".scroll-animation");
 	elements.forEach((element) => {
-		observer.observe(element, observerOptions);
+		observer.observe(element, {
+			root: element.dataset.root || null,
+			rootMargin: "0px",
+			threshold: element.dataset.threshold || 0.5,
+		});
 	});
 }, 1000);

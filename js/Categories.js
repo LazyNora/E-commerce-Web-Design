@@ -4,7 +4,8 @@ document.querySelector(".categories-wrapper .ib-grid").innerHTML = categories
 		(item, index) => `
     <div class="ib-column">
       <div class="ib-icon-box ib-icon-box--vertical hover-scale-up scroll-animation"
-      data-animation="animate-fade-up animate-ease-out animate-delay-100">
+      data-animation="animate-fade-up animate-ease-out animate-delay-100"
+      data-threshold="0.9">
         <div class="ib-icon-box__inner flex flex-col items-center sm:items-start">
           <a
             href=${item.link}

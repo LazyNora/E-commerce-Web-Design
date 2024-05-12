@@ -1,3 +1,19 @@
+body .h1,
+body .h2,
+body .h3,
+body .h4,
+body .h5,
+body .h6,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+	color: #000;
+	line-height: normal;
+}
+
 .header__wrapper {
 	transition: transform 0.4s, background-color 0.2s;
 	width: 100%;
