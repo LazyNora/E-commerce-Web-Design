@@ -253,3 +253,39 @@
 		--offset-x: var(--fluid-container-offset, 6rem);
 	}
 }
+
+@media screen and (max-width: 1535px) {
+	.product-tabs__header {
+		margin-bottom: 50px;
+	}
+	.section__heading {
+		font-size: 34px !important;
+		line-height: 44px !important;
+	}
+	.custom-select.select__custom-width {
+		min-width: 180px;
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.product-tabs__header {
+		margin-bottom: 40px;
+	}
+	.section__heading {
+		font-size: 30px !important;
+		line-height: 40px !important;
+	}
+	.custom-select.select__custom-width {
+		min-width: 130px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.product-tabs__header {
+		margin-bottom: 30px;
+	}
+	.section__heading {
+		font-size: 24px !important;
+		line-height: 34px !important;
+	}
+}
