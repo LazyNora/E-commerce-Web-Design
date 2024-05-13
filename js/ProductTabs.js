@@ -4,6 +4,7 @@ import {
 	getComboAssembling,
 	getMQASupport,
 } from "./searchProduct.js";
+const currentPath = path || "";
 const tabs = [
 	{
 		title: "New Arrivals",
@@ -115,7 +116,7 @@ document
           <div class="pcard__img">
             <div class="image-box | overflow-hidden cursor-pointer relative">
               <div class="flex justify-center items-center">
-                <a href=".${item.url}" class="block w-full">
+                <a href="${currentPath + item.url}" class="block w-full">
                   <div class="main-img">
                     <div class="p-img ib-image">
                       <img
@@ -154,9 +155,8 @@ document
             <div class="mt-3 lg:mt-5">
               <div class="w-full max-w-full">
                 <h3 class="block text-base">
-                  <a href=".${
-						item.url
-					}" class="block mb-[5px] leading-normal pcard__name font-bold truncate-lines hover:text-color-secondary">
+                  <a href="${currentPath + item.url}"
+									class="block mb-[5px] leading-normal pcard__name font-bold truncate-lines hover:text-color-secondary">
                     ${item.title}
                   </a>
                 </h3>

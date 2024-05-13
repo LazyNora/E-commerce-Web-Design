@@ -12,9 +12,8 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script>
-			const path = window.location.pathname
-				.replace("index.html", "")
-				.replace(/\/$/, "");
+			const path =
+				window.location.pathname.split("/")[1] === "TKW" ? "TKW" : "";
 		</script>
 		<!-- <script
 				src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.min.js"

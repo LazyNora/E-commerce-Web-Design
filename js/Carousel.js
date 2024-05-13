@@ -1,4 +1,5 @@
 import { carouselData } from "./data.js";
+const currentPath = path || "";
 document.querySelector(".swiper-wrapper").innerHTML = carouselData
 	.map(
 		(item) => `
@@ -58,7 +59,7 @@ document.querySelector(".swiper-wrapper").innerHTML = carouselData
               <p>${item.desc}</p>
             </div>
             <a
-              href=${"." + item.link}
+              href=${currentPath + item.link}
               class="slide_block-link inline-block sf__btn ${
 					item.type === "light" ? "sf__btn-primary" : "sf__btn-white"
 				}">

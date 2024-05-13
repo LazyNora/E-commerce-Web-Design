@@ -1,4 +1,5 @@
 import { categories } from "./data.js";
+const currentPath = path || "";
 document.querySelector(".categories-wrapper .ib-grid").innerHTML = categories
 	.map(
 		(item, index) => `
@@ -8,7 +9,7 @@ document.querySelector(".categories-wrapper .ib-grid").innerHTML = categories
       data-threshold="0.9">
         <div class="ib-icon-box__inner flex flex-col items-center sm:items-start">
           <a
-            href=${item.link}
+            href=${currentPath + item.link}
             class="ib-icon-box__icon w-full flex shrink-0 justify-center max-w-full mb-5 md:mb-0 items-start"
             style="width: 100%">
             <div
@@ -31,7 +32,7 @@ document.querySelector(".categories-wrapper .ib-grid").innerHTML = categories
             <div class="rte text-color-subtext">
               <p>${item.desc}</p>
             </div>
-            <a href=${item.link} class="btn mt-3 btn-link ">
+            <a href=${currentPath + item.link} class="btn mt-3 btn-link ">
               SHOP NOW
             </a>
           </div>
