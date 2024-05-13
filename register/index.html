@@ -7,6 +7,11 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
 			rel="stylesheet" />
+		<script>
+			const path = window.location.pathname
+				.replace("index.html", "")
+				.replace(/\/$/, "");
+		</script>
 		<link
 			rel="shortcut icon"
 			href="../assets/logo.ico"
@@ -105,7 +110,7 @@
 									class="logo | px-4 justify-center scroll-animation"
 									data-animation="animate-fade">
 									<a
-										href="/"
+										href="../"
 										class="logo-img | block relative"
 										style="width: 290px"
 										title="AUDIO OASIS">
@@ -173,7 +178,7 @@
 									</div>
 									<select
 										class="currency-selector | w-[70px] border-none px-2 font-bold text-base"></select>
-									<a href="/cart" class="pl-4 pr-2 py-3.5">
+									<a href="../cart" class="pl-4 pr-2 py-3.5">
 										<div class="badge">
 											<svg
 												class="w-[2.15rem] h-[2.15rem]"
@@ -186,7 +191,7 @@
 											<span class="badge-inner">3</span>
 										</div>
 									</a>
-									<a href="/login" class="px-2 py-3.5">
+									<a href="../login" class="px-2 py-3.5">
 										<svg
 											class="w-[2.15rem] h-[2.15rem]"
 											focusable="false"
@@ -230,7 +235,7 @@
 						</button>
 						<div class="logo--mobile | ml-2">
 							<a
-								href="/"
+								href="../"
 								class="flex w-full relative"
 								title="AUDIO OASIS">
 								<svg
@@ -439,7 +444,7 @@
 					</div>
 					<a
 						class="login-btn | btn-link mt-10 font-bold"
-						href="/login"
+						href="../login"
 						>Login</a
 					>
 					<script>
@@ -588,13 +593,13 @@
 												<li
 													class="link-lv2 | leading-8 hover-underline">
 													<a
-														href="/pages/shipping-return">
+														href="../pages/shipping-return">
 														Shipping &amp; Returns
 													</a>
 												</li>
 												<li
 													class="link-lv2 | leading-8 hover-underline">
-													<a href="/pages/reviews">
+													<a href="../pages/reviews">
 														Customer Reviews
 													</a>
 												</li>
@@ -616,20 +621,21 @@
 												<li
 													class="link-lv2 | leading-8 hover-underline">
 													<a
-														href="/pages/security-privacy">
+														href="../pages/security-privacy">
 														Security &amp; Privacy
 													</a>
 												</li>
 												<li
 													class="link-lv2 | leading-8 hover-underline">
 													<a
-														href="/pages/terms-conditions">
+														href="../pages/terms-conditions">
 														Terms of Use
 													</a>
 												</li>
 												<li
 													class="link-lv2 | leading-8 hover-underline">
-													<a href="/pages/contact-us">
+													<a
+														href="../pages/contact-us">
 														Contact Us
 													</a>
 												</li>
@@ -892,13 +898,13 @@
 												<li
 													class="link-lv2 | leading-8 hover-underline">
 													<a
-														href="/pages/shipping-return">
+														href="../pages/shipping-return">
 														Shipping &amp; Returns
 													</a>
 												</li>
 												<li
 													class="link-lv2 | leading-8 hover-underline">
-													<a href="/pages/reviews">
+													<a href="../pages/reviews">
 														Customer Reviews
 													</a>
 												</li>
@@ -939,20 +945,21 @@
 												<li
 													class="link-lv2 | leading-8 hover-underline">
 													<a
-														href="/pages/security-privacy">
+														href="../pages/security-privacy">
 														Security &amp; Privacy
 													</a>
 												</li>
 												<li
 													class="link-lv2 | leading-8 hover-underline">
 													<a
-														href="/pages/terms-conditions">
+														href="../pages/terms-conditions">
 														Terms of Use
 													</a>
 												</li>
 												<li
 													class="link-lv2 | leading-8 hover-underline">
-													<a href="/pages/contact-us">
+													<a
+														href="../pages/contact-us">
 														Contact Us
 													</a>
 												</li>
@@ -1098,7 +1105,7 @@
 									<div
 										class="payment-icons flex justify-center lg:justify-start">
 										<span class="hidden">
-											Payment options:{" "}
+											Payment options:
 										</span>
 										<ul class="flex flex-wrap -m-2.5">
 											<li class="m-2.5">

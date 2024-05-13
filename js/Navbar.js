@@ -1,3 +1,5 @@
+const currentPath = path || "";
+
 // Navbar data for the menu
 const navList = [
 	{
@@ -191,7 +193,7 @@ navList.map((nav, index) => {
 			data-index=${index}>
 			<a
 				class="menu-link | px-4 py-5 flex items-center uppercase font-bold"
-				href=${nav.link}>
+				href=${currentPath + nav.link}>
 				${nav.text}
 				${
 					nav.submenu
@@ -212,7 +214,7 @@ navList.map((nav, index) => {
 									(subnav, index) =>
 										`<li class="submenu-item | list-none w-full leading-9">
 								<a
-									href=${subnav.link}
+									href=${currentPath + subnav.link}
 									class="submenu-link | whitespace-normal block">
 									${subnav.text}
 								</a>
@@ -250,7 +252,7 @@ document.querySelector(".menu-links").innerHTML = `
 		<li
 			class="menu-link | list-none flex items-center">
 			<a
-				href=${nav.submenu ? "#" : nav.link}
+				href=${nav.submenu ? "#" : currentPath + nav.link}
 				class="w-full px-4 py-3 flex items-center justify-between relative ${
 					nav.submenu ? "pointer-events-none" : ""
 				}">
@@ -297,7 +299,7 @@ document.querySelector(".menu-links").innerHTML = `
 									<li
 										class="menu-link | list-none flex items-center">
 										<a
-											href=${subnav.link}
+											href=${currentPath + subnav.link}
 											class="w-full px-4 py-3 flex items-center justify-between relative">
 											<span>
 												${subnav.text}

@@ -53,7 +53,7 @@ tabs.forEach((tab, index) => {
       <div class="ib-grid ib-wrapper grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"></div>
     </div>
     <div class="mt-8 md:mt-10 xl:mt-15 flex justify-center">
-      <a class="btn-link" href="${tab.link}">
+      <a class="btn-link" href=".${tab.link}">
         <span>Shop All Products</span>
       </a>
     </div>
@@ -115,7 +115,7 @@ document
           <div class="pcard__img">
             <div class="image-box | overflow-hidden cursor-pointer relative">
               <div class="flex justify-center items-center">
-                <a href="${item.url}" class="block w-full">
+                <a href=".${item.url}" class="block w-full">
                   <div class="main-img">
                     <div class="p-img ib-image">
                       <img
@@ -154,7 +154,7 @@ document
             <div class="mt-3 lg:mt-5">
               <div class="w-full max-w-full">
                 <h3 class="block text-base">
-                  <a href="${
+                  <a href=".${
 						item.url
 					}" class="block mb-[5px] leading-normal pcard__name font-bold truncate-lines hover:text-color-secondary">
                     ${item.title}
