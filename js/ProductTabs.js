@@ -1,55 +1,53 @@
 import {
-  getNewArrivals,
-  getBestSellers,
-  getComboAssembling,
-  getMQASupport,
+	getNewArrivals,
+	getBestSellers,
+	getComboAssembling,
+	getMQASupport,
 } from "./searchProduct.js";
 const currentPath = path || "";
 const tabs = [
-  {
-    title: "New Arrivals",
-    link: "/collections/new-arrivals",
-    getFunc: getNewArrivals,
-    numberOfItems: 10,
-  },
-  {
-    title: "Best Sellers",
-    link: "/collections/best-sellers",
-    getFunc: getBestSellers,
-    numberOfItems: 15,
-  },
-  {
-    title: "Combo Assembling",
-    link: "/collections/combo-assembling",
-    getFunc: getComboAssembling,
-    numberOfItems: 10,
-  },
-  {
-    title: "MQA Support",
-    link: "/collections/mqa-support",
-    getFunc: getMQASupport,
-    numberOfItems: 10,
-  },
+	{
+		title: "New Arrivals",
+		link: "/collections/new-arrivals",
+		getFunc: getNewArrivals,
+		numberOfItems: 10,
+	},
+	{
+		title: "Best Sellers",
+		link: "/collections/best-sellers",
+		getFunc: getBestSellers,
+		numberOfItems: 15,
+	},
+	{
+		title: "Combo Assembling",
+		link: "/collections/combo-assembling",
+		getFunc: getComboAssembling,
+		numberOfItems: 10,
+	},
+	{
+		title: "MQA Support",
+		link: "/collections/mqa-support",
+		getFunc: getMQASupport,
+		numberOfItems: 10,
+	},
 ];
 const customSelect = document.querySelector(".custom-select");
 const select = customSelect.querySelector("select[data-tab-select]");
 const selectItems = customSelect.querySelector(".select-items");
 const selectSelected = customSelect.querySelector(".select-selected");
-const selectSelectedText = selectSelected.querySelector(
-  ".select-selected__text",
-);
+const selectSelectedText = selectSelected.querySelector(".select-selected__text");
 const productTabs = document.querySelector(".product-tabs__content");
 
 tabs.forEach((tab, index) => {
-  const option = document.createElement("option");
-  option.value = index;
-  option.textContent = tab.title;
-  select.appendChild(option);
+	const option = document.createElement("option");
+	option.value = index;
+	option.textContent = tab.title;
+	select.appendChild(option);
 
-  const tabContent = document.createElement("div");
-  tabContent.classList.add("tab-content", "opacity-0");
-  tabContent.dataset.tabContent = index;
-  tabContent.innerHTML = `
+	const tabContent = document.createElement("div");
+	tabContent.classList.add("tab-content", "opacity-0");
+	tabContent.dataset.tabContent = index;
+	tabContent.innerHTML = `
     <div class="ib">
       <div class="ib-grid ib-wrapper grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"></div>
     </div>
@@ -59,59 +57,53 @@ tabs.forEach((tab, index) => {
       </a>
     </div>
 	`;
-  productTabs.appendChild(tabContent);
+	productTabs.appendChild(tabContent);
 
-  const item = document.createElement("div");
-  item.textContent = tab.title;
-  item.addEventListener("click", () => {
-    const sameAsSelected = selectItems.querySelector(".same-as-selected");
-    if (sameAsSelected) {
-      sameAsSelected.classList.remove("same-as-selected");
-    }
-    const tabContent = productTabs.querySelector(
-      `.tab-content[data-tab-content="${index}"]`,
-    );
-    const activeTab = productTabs.querySelector(".tab-content.active");
-    if (activeTab) {
-      activeTab.classList.remove("active");
-    }
-    tabContent.classList.add("active");
-    item.classList.add("same-as-selected");
-    selectSelectedText.textContent = tab.title;
-    selectItems.classList.add("select-hide");
-    select.value = index;
-  });
-  selectItems.appendChild(item);
+	const item = document.createElement("div");
+	item.textContent = tab.title;
+	item.addEventListener("click", () => {
+		const sameAsSelected = selectItems.querySelector(".same-as-selected");
+		if (sameAsSelected) {
+			sameAsSelected.classList.remove("same-as-selected");
+		}
+		const tabContent = productTabs.querySelector(`.tab-content[data-tab-content="${index}"]`);
+		const activeTab = productTabs.querySelector(".tab-content.active");
+		if (activeTab) {
+			activeTab.classList.remove("active");
+		}
+		tabContent.classList.add("active");
+		item.classList.add("same-as-selected");
+		selectSelectedText.textContent = tab.title;
+		selectItems.classList.add("select-hide");
+		select.value = index;
+	});
+	selectItems.appendChild(item);
 });
 
 selectSelectedText.textContent = tabs[0].title;
 productTabs.querySelector(".tab-content").classList.add("active");
 
 selectSelected.addEventListener("click", () => {
-  selectItems.classList.toggle("select-hide");
+	selectItems.classList.toggle("select-hide");
 });
 
 select.addEventListener("change", () => {
-  selectSelectedText.textContent = tabs[select.value].title;
+	selectSelectedText.textContent = tabs[select.value].title;
 });
 
 document.addEventListener("click", (event) => {
-  if (
-    !customSelect.contains(event.target) &&
-    !selectItems.contains(event.target)
-  ) {
-    selectItems.classList.add("select-hide");
-  }
+	if (!customSelect.contains(event.target) && !selectItems.contains(event.target)) {
+		selectItems.classList.add("select-hide");
+	}
 });
 
-document
-  .querySelectorAll(".tab-content[data-tab-content]")
-  .forEach((tab, index) => {
-    const items = tabs[index].getFunc(0, tabs[index].numberOfItems);
-    items.forEach((item, index) => {
-      const ib = document.createElement("div");
-      ib.classList.add("ib-column");
-      ib.innerHTML = `
+document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index) => {
+	const items = tabs[index].getFunc(0, tabs[index].numberOfItems);
+	items.forEach((item, index) => {
+		const media = item.media.filter((m) => m.media_type === "image");
+		const ib = document.createElement("div");
+		ib.classList.add("ib-column");
+		ib.innerHTML = `
         <div class="pcard cursor-pointer prod__block">
           <div class="pcard__img">
             <div class="image-box | overflow-hidden cursor-pointer relative">
@@ -120,8 +112,8 @@ document
                   <div class="main-img">
                     <div class="p-img ib-image">
                       <img
-                        src="${item.media[0].src}"
-                        alt="${item.media[0].alt}"
+                        src="${media[0].src}"
+                        alt="${media[0].alt}"
                         class="img-loaded w-full h-full"
                         sizes="244px"
                         width="244"
@@ -131,12 +123,12 @@ document
                     </div>
                   </div>
                   ${
-                    item.media[1].src
-                      ? `<div class="hover-img">
+						media.length > 1
+							? `<div class="hover-img">
                       <div class="p-img ib-image">
                         <img
-                        src="${item.media[1].src}"
-                        alt="${item.media[1].alt}"
+                        src="${media[1].src}"
+                        alt="${media[1].alt}"
                         class="img-loaded w-full h-full"
                         sizes="244px"
                         width="244"
@@ -145,8 +137,8 @@ document
                         />
                       </div>
                     </div>`
-                      : ""
-                  }
+							: ""
+					}
                 </a>
               </div>
             </div>
@@ -180,6 +172,6 @@ document
           <div class="background-color-expand"></div>
         </div>
       `;
-      tab.querySelector(".ib-grid").appendChild(ib);
-    });
-  });
+		tab.querySelector(".ib-grid").appendChild(ib);
+	});
+});
