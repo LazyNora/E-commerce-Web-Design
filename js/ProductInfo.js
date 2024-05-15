@@ -9,6 +9,8 @@ if (variantId) {
 	currentVariant = product.variants[0];
 }
 
+document.title = `${product.title} - Audio Oasis`;
+
 document.querySelector(".prod__info").innerHTML = `
 <div
   class="product-form form main-product"
