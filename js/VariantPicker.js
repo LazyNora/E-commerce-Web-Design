@@ -33,7 +33,7 @@ variantPicker.innerHTML = `
               <div class="prod__option-label | font-medium flex flex-wrap items-center justify-between prod__option-label--dropdown uppercase">
                 <label
                   class="form-label"
-                  for="option_${option.position}>
+                  for="option_${option.position}">
                   <span class="font-bold mr-1">${option.name}:</span>
                   <span class="selected-value">
                     ${currentVariant?.options[index]}
