@@ -512,6 +512,10 @@ const getExchangeRate = async () => {
 		localStorage.setItem("exchangeRate", JSON.stringify(response));
 	}
 	updatePrice();
+	document.querySelectorAll("span.money").forEach((element) => {
+		element.addEventListener("mouseover", priceMouseOver);
+		element.addEventListener("mouseout", priceMouseOut);
+	});
 };
 
 window.onload = () => {
@@ -541,5 +545,29 @@ const updatePrice = () => {
 				currency
 			);
 		});
+	}
+};
+
+const priceMouseOver = (e) => {
+	const currency = localStorage.getItem("currency");
+	if (currency && currency !== "USD") {
+		const price = e.target.getAttribute("data-product-price");
+		const money = e.target.closest("span.money");
+		const convertedPrice = price * responseData.conversion_rates["USD"];
+		const priceOnHover = document.createElement("span");
+		priceOnHover.classList.add("price-on-hover-wrapper");
+		priceOnHover.innerHTML = `
+		<span class="price-on-hover">${formatMoney(convertedPrice, moneyFormats["USD"].money_with_currency_format, "USD")}</span>
+		`;
+		money.appendChild(priceOnHover);
+	}
+};
+
+const priceMouseOut = (e) => {
+	const currency = localStorage.getItem("currency");
+	if (currency && currency !== "USD") {
+		const money = e.target.closest("span.money");
+		const priceOnHover = e.target.querySelector(".price-on-hover-wrapper");
+		money.removeChild(priceOnHover);
 	}
 };
