@@ -3,6 +3,7 @@ var productData = product;
 var variantData = product.variants;
 var options = [];
 var currentVariant = null;
+const currentPath = path || "";
 
 if (variantId) {
 	currentVariant =
@@ -199,7 +200,7 @@ const updateMedia = () => {
 // Thêm /#/ nếu dùng hash router
 const updateBrowserHistory = () => {
 	!currentVariant ||
-		window.history.replaceState({}, "", `${productData.url}/?variant=${currentVariant.id}`);
+		window.history.replaceState({}, "", `${currentPath + productData.url}/?variant=${currentVariant.id}`);
 };
 
 document.querySelectorAll(".product-options__option").forEach((variantSelect, index) => {
