@@ -156,7 +156,7 @@ const getVariantFromOptionArray = (product, options) => {
 	return result[0] || null;
 };
 
-import { formatMoney, moneyFormats } from "../../js/currencyConvert.js";
+import { formatMoney, moneyFormats } from "./currencyConvert.js";
 
 // Hàm cập nhật giá tiền
 const updatePrice = () => {
