@@ -448,3 +448,23 @@
 		padding-left: 0;
 	}
 }
+
+.pswp__video {
+	height: 100%;
+	max-height: 80%;
+	max-width: 100%;
+	position: relative;
+	width: 100%;
+}
+
+@media (min-width: 1280px) {
+	.pswp__video {
+		margin: 50px auto;
+		max-width: 80%;
+	}
+}
+
+.pswp__video .deferred-media {
+	height: 100%;
+	padding: 0 !important;
+}

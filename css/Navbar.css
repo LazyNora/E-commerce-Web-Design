@@ -15,7 +15,9 @@ body h6 {
 }
 
 .header__wrapper {
-	transition: transform 0.4s, background-color 0.2s;
+	transition:
+		transform 0.4s,
+		background-color 0.2s;
 	width: 100%;
 	will-change: transform, background-color;
 	position: relative;
@@ -124,7 +126,8 @@ ul.menu-nav {
 	/* fill: none;
   stroke: black; */
 	stroke-width: 6;
-	transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+	transition:
+		stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
 		stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-button .line1 {
@@ -285,4 +288,37 @@ select {
 	background-repeat: no-repeat;
 	background-size: 10px;
 	padding-right: 25px;
+}
+
+.money {
+	position: relative;
+	font-weight: inherit !important;
+	font-size: inherit !important;
+	text-decoration: inherit !important;
+}
+
+.price-on-hover,
+.price-on-hover-wrapper {
+	font-size: 15px !important;
+	line-height: 25px !important;
+}
+
+.price-on-hover-wrapper {
+	position: absolute;
+	left: -50%;
+	text-align: center;
+	width: 200%;
+	top: 110%;
+	z-index: 100000000;
+}
+
+.price-on-hover {
+	border-color: #fff !important;
+	padding: 2px 5px 3px;
+	font-weight: 400;
+	border-radius: 5px;
+	font-family: "Helvetica Neue", Arial;
+	border: 0;
+	background-color: #333333 !important;
+	color: #ffffff !important;
 }
