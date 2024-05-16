@@ -319,10 +319,10 @@ document.querySelectorAll(".menu-link").forEach((item) => {
 let responseData = null;
 const getExchangeRate = async () => {
 	// Kiểm tra xem đã lưu exchange rate trong localStorage chưa
-	const sessionExchangeRate = localStorage.getItem("exchangeRate");
+	const sessionExchangeRate = JSON.parse(localStorage.getItem("exchangeRate"));
 	if (sessionExchangeRate && sessionExchangeRate.time_next_update_unix > Date.now() / 1000) {
 		// Nếu đã lưu thì lấy ra và set vào state
-		responseData = JSON.parse(sessionExchangeRate);
+		responseData = sessionExchangeRate;
 	} else {
 		// Nếu chưa lưu thì fetch từ API
 		const response = await fetch(
