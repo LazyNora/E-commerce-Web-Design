@@ -60,8 +60,8 @@ document.querySelector(".swiper-wrapper").innerHTML = carouselData
             </div>
             <a
               href=${currentPath + item.link}
-              class="slide_block-link inline-block sf__btn ${
-                item.type === "light" ? "sf__btn-primary" : "sf__btn-white"
+              class="slide_block-link inline-block btn ${
+                item.type === "light" ? "btn-primary" : "btn-white"
               }">
               ${item.buttontext}
             </a>

@@ -8,17 +8,14 @@
 			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
 			rel="stylesheet" />
 		<script>
-			const path =
-				window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
+			const path = window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
 		</script>
-		<link
-			rel="shortcut icon"
-			href="/TKW/assets/logo.ico"
-			type="image/x-icon" />
+		<link rel="shortcut icon" href="/TKW/assets/logo.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/TKW/css/tailwind.css" />
 		<link rel="stylesheet" href="/TKW/css/chunk.css" />
 		<link rel="stylesheet" href="/TKW/css/Announcement.css" />
 		<link rel="stylesheet" href="/TKW/css/Navbar.css" />
+		<link rel="stylesheet" href="/TKW/css/Cart.css" />
 		<link rel="stylesheet" href="/TKW/css/Footer.css" />
 
 		<style>
@@ -64,9 +61,8 @@
 					<div
 						class="announcement-bar__content | md:text-center py-2.5 text-base hover:animate-shake">
 						<span class="font-medium" style="font-size: 13px">
-							30 DAYS NO REASON RETURN • 180 DAYS QUALITY OF
-							EXCHANGE OR REFUND • LOWEST PRICE GUARANTEE • 7 DAYS
-							DOA PRODUCT GUARANTEE
+							30 DAYS NO REASON RETURN • 180 DAYS QUALITY OF EXCHANGE OR REFUND •
+							LOWEST PRICE GUARANTEE • 7 DAYS DOA PRODUCT GUARANTEE
 						</span>
 					</div>
 					<div
@@ -99,11 +95,9 @@
 			<!-- Navbar -->
 			<section class="section-header">
 				<header class="header | inset-x-0 z-[70] header__wrapper">
-					<div
-						class="desktop-header | hidden lg:block bg-white border-b border-[#ddd]">
+					<div class="desktop-header | hidden lg:block bg-white border-b border-[#ddd]">
 						<div class="header_top | container">
-							<div
-								class="logo-bar | flex -mx-4 items-center py-2">
+							<div class="logo-bar | flex -mx-4 items-center py-2">
 								<div
 									class="logo | px-4 justify-center scroll-animation"
 									data-animation="animate-fade">
@@ -140,10 +134,8 @@
 										</svg>
 									</a>
 								</div>
-								<div
-									class="w-2/3 flex flex-grow justify-end items-center">
-									<div
-										class="flex flex-grow justify-end items-center">
+								<div class="w-2/3 flex flex-grow justify-end items-center">
+									<div class="flex flex-grow justify-end items-center">
 										<form
 											id="menu-form-search"
 											action="/TKW/pages/search-result"
@@ -176,9 +168,7 @@
 									</div>
 									<select
 										class="currency-selector | w-[70px] border-none px-2 font-bold text-base"></select>
-									<a
-										href="/TKW/cart"
-										class="pl-4 pr-2 py-3.5">
+									<a href="/TKW/cart" class="btn-cart | pl-4 pr-2 py-3.5">
 										<div class="badge">
 											<svg
 												class="w-[2.15rem] h-[2.15rem]"
@@ -188,7 +178,7 @@
 												<path
 													d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2zM6.16 6h12.15l-2.76 5H8.53zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2m10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2"></path>
 											</svg>
-											<span class="badge-inner">3</span>
+											<span class="badge-inner"></span>
 										</div>
 									</a>
 									<a href="/TKW/login" class="px-2 py-3.5">
@@ -207,8 +197,7 @@
 							</div>
 						</div>
 						<div class="header_bottom">
-							<nav
-								class="menu-wrapper__desktop | container flex items-center">
+							<nav class="menu-wrapper__desktop | container flex items-center">
 								<ul
 									class="menu-nav | flex flex-wrap font-medium whitespace-nowrap -ml-[20px] w-full relative justify-between"></ul>
 							</nav>
@@ -216,9 +205,7 @@
 					</div>
 					<div
 						class="mobile-header | flex lg:hidden container-fluid bg-white items-center border-b border-[#ddd}">
-						<button
-							class="menu-button | flex"
-							aria-label="Main Menu">
+						<button class="menu-button | flex" aria-label="Main Menu">
 							<svg
 								class="w-[2.1875rem] h-[2.1875rem]"
 								fill="none"
@@ -234,10 +221,7 @@
 							</svg>
 						</button>
 						<div class="logo--mobile | ml-2">
-							<a
-								href="/TKW/"
-								class="flex w-full relative"
-								title="AUDIO OASIS">
+							<a href="/TKW/" class="flex w-full relative" title="AUDIO OASIS">
 								<svg
 									viewBox="0 0 3650 615"
 									xmlns="http://www.w3.org/2000/svg"
@@ -276,8 +260,9 @@
 										d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path>
 								</svg>
 							</button>
-							<button
-								class="cart-popup | relative py-2 px-2 whitespace-nowrap cursor-pointer">
+							<a
+								href="/TKW/cart"
+								class="btn-cart cart-popup | relative py-2 px-2 whitespace-nowrap cursor-pointer">
 								<div class="badge">
 									<svg
 										class="w-[2.15rem] h-[2.15rem]"
@@ -287,9 +272,9 @@
 										<path
 											d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2zM6.16 6h12.15l-2.76 5H8.53zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2m10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2"></path>
 									</svg>
-									<span class="badge-inner">3</span>
+									<span class="badge-inner"></span>
 								</div>
-							</button>
+							</a>
 						</div>
 					</div>
 				</header>
@@ -314,19 +299,64 @@
 				<section class="section-notfound404">
 					<div
 						class="page404 | flex flex-col justify-center items-center h-full py-32 lg:py-48 text-center">
-						<h1
-							class="page404-title text-3xl lg:text-6xl lg:leading-tight font-bold">
+						<h1 class="page404-title text-3xl lg:text-6xl lg:leading-tight font-bold">
 							404
 						</h1>
-						<p
-							class="text-2xl lg:text-5xl lg:leading-tight font-light mb-8">
+						<p class="text-2xl lg:text-5xl lg:leading-tight font-light mb-8">
 							Page Not Found!
 						</p>
-						<a href="/TKW/" class="text-xl mt-2 text-blue-400">
-							Go back to Home
-						</a>
+						<a href="/TKW/" class="text-xl mt-2 text-blue-400"> Go back to Home </a>
 					</div>
 				</section>
+				<!-- Cart Drawer -->
+				<div class="cart-container">
+					<div id="cart-drawer">
+						<div
+							style="--tw-bg-opacity: 0"
+							class="cart__wrapper touch-none transition-colors duration-300 bg-black fixed z-[100] inset-0 hidden">
+							<div
+								class="cart__content transition-transform duration-300 ml-auto translate-x-0 min-h-full md:w-[450px] bg-white z-50">
+								<button class="cart__close p-2 cursor-pointer absolute">
+									<svg
+										class="w-[24px] h-[24px]"
+										fill="currentColor"
+										stroke="currentColor"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 320 512">
+										<path
+											d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"></path>
+									</svg>
+								</button>
+								<div class="flex flex-col h-full">
+									<div class="cart__header mx-6 py-4 md:pt-6">
+										<h3 class="text-2xl font-medium">Your Cart</h3>
+									</div>
+									<div
+										class="cart__body custom_scroll overscroll-contain px-6 pb-4 flex flex-col flex-grow"></div>
+									<div class="cart__footer py-4 px-6">
+										<div class="cart__summary mb-4 pt-4">
+											<ul class="cart-cart__discounts" role="list"></ul>
+											<div class="cart__subtotal flex justify-between">
+												<span class="font-medium">Subtotal</span>
+												<span
+													class="cart__subtotal-price font-medium"></span>
+											</div>
+										</div>
+										<div class="flex flex-col items-center">
+											<button
+												class="btn btn-primary w-full cart__checkout relative"
+												name="checkout">
+												<span>Check out</span>
+											</button>
+											<a class="underline mt-2" href="/TKW/cart">View Cart</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script src="/TKW/js/CartDrawer.js"></script>
+				</div>
 			</main>
 			<!-- Footer -->
 			<section class="section-footer">
@@ -337,17 +367,14 @@
 								class="footer_accordion | flex-wrap lg:flex-nowrap -mx-4 lg:-mx-5 hidden md:flex">
 								<div
 									class="footer_block | accordion-item open block-newsletter w-full lg:w-1/3 order-first md:order-none">
-									<div
-										class="footer_block-inner | px-4 lg:px-5">
+									<div class="footer_block-inner | px-4 lg:px-5">
 										<h3
 											class="block-title accordion-button | font-bold mb-4 text-base">
 											LET'S GET IN TOUCH
 										</h3>
-										<div
-											class="block-content accordion-content">
+										<div class="block-content accordion-content">
 											<div class="pb-5 md:pb-0">
-												<p
-													class="newsletter-block-desc | py-2 block-text">
+												<p class="newsletter-block-desc | py-2 block-text">
 													Stay up to date!
 												</p>
 												<div>
@@ -391,10 +418,8 @@
 																</svg>
 															</button>
 														</div>
-														<div
-															class="agree-terms">
-															<label
-																htmlFor="agree_terms">
+														<div class="agree-terms">
+															<label htmlFor="agree_terms">
 																<input
 																	id="agree_terms"
 																	type="checkbox"
@@ -403,14 +428,9 @@
 																	required />
 																<span>
 																	<p>
-																		I agree
-																		with the
-																		<a
-																			href="#"
-																			title="#">
-																			Terms
-																			&
-																			conditions
+																		I agree with the
+																		<a href="#" title="#">
+																			Terms & conditions
 																		</a>
 																	</p>
 																</span>
@@ -422,45 +442,31 @@
 										</div>
 									</div>
 								</div>
-								<div
-									class="footer_block footer_block-spacing | w-full lg:w-1/6">
-									<div
-										class="footer_block-inner px-4 lg:px-5"></div>
+								<div class="footer_block footer_block-spacing | w-full lg:w-1/6">
+									<div class="footer_block-inner px-4 lg:px-5"></div>
 								</div>
 								<div
 									class="footer_block accordion-item footer_block-menu | | w-full lg:w-1/4">
-									<div
-										class="footer_block-inner | px-4 lg:px-5">
+									<div class="footer_block-inner | px-4 lg:px-5">
 										<h3
 											class="block-title accordion-button | font-bold mb-4 text-base">
 											SUPPORT
 										</h3>
-										<ul
-											class="block-content accordion-content">
+										<ul class="block-content accordion-content">
 											<div class="pb-5 md:pb-0">
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="#">
-														Drivers Download
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="#"> Drivers Download </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="#">
-														Track Your Order
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="#"> Track Your Order </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/shipping-return">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/shipping-return">
 														Shipping &amp; Returns
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/reviews">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/reviews">
 														Customer Reviews
 													</a>
 												</li>
@@ -470,38 +476,27 @@
 								</div>
 								<div
 									class="footer_block accordion-item footer_block-menu | | w-full lg:w-1/4">
-									<div
-										class="footer_block-inner | px-4 lg:px-5">
+									<div class="footer_block-inner | px-4 lg:px-5">
 										<h3
 											class="accordion-button block-title | font-bold mb-4 text-base">
 											GET TO KNOW US
 										</h3>
-										<ul
-											class="accordion-content block-content">
+										<ul class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/security-privacy">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/security-privacy">
 														Security &amp; Privacy
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/terms-conditions">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/terms-conditions">
 														Terms of Use
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/contact-us">
-														Contact Us
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/contact-us"> Contact Us </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
+												<li class="link-lv2 | leading-8 hover-underline">
 													<a href="#">Our DISCORD</a>
 												</li>
 											</div>
@@ -510,19 +505,16 @@
 								</div>
 								<div
 									class="footer_block accordion-item footer_block-our_store | w-full lg:w-1/4">
-									<div
-										class="footer_block-inner | px-4 lg:px-5">
+									<div class="footer_block-inner | px-4 lg:px-5">
 										<h3
 											class="accordion-button block-title | font-bold mb-4 text-base">
 											FOLLOW US
 										</h3>
-										<div
-											class="accordion-content rte block-content">
+										<div class="accordion-content rte block-content">
 											<div class="pb-5 md:pb-0">
 												<div class="block-text | mt-4">
 													<p class="mt-1">
-														<a
-															href="mailto:support@audiooasis.com">
+														<a href="mailto:support@audiooasis.com">
 															support@audiooasis.com
 														</a>
 													</p>
@@ -606,8 +598,7 @@
 								</div>
 							</div>
 							<!-- Mobile Footer -->
-							<div
-								class="footer_accordion | flex flex-wrap md:hidden">
+							<div class="footer_accordion | flex flex-wrap md:hidden">
 								<div
 									value="item-1"
 									class="footer_block accordion-item block-newsletter | open | w-full order-first border-b">
@@ -635,11 +626,9 @@
 										data-state="open"
 										role="region"
 										class="overflow-hidden text-base transition-all">
-										<div
-											class="accordion-content block-content">
+										<div class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
-												<p
-													class="newsletter-block-desc block-text | py-2">
+												<p class="newsletter-block-desc block-text | py-2">
 													Stay up to date!
 												</p>
 												<div>
@@ -683,10 +672,8 @@
 																</svg>
 															</button>
 														</div>
-														<div
-															class="agree-terms">
-															<label
-																htmlFor="agree_terms">
+														<div class="agree-terms">
+															<label htmlFor="agree_terms">
 																<input
 																	id="agree_terms"
 																	type="checkbox"
@@ -695,14 +682,9 @@
 																	required />
 																<span>
 																	<p>
-																		I agree
-																		with the
-																		<a
-																			href="#"
-																			title="#">
-																			Terms
-																			&
-																			conditions
+																		I agree with the
+																		<a href="#" title="#">
+																			Terms & conditions
 																		</a>
 																	</p>
 																</span>
@@ -741,32 +723,21 @@
 										data-state="closed"
 										role="region"
 										class="overflow-hidden text-base transition-all">
-										<ul
-											class="accordion-content block-content">
+										<ul class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="#">
-														Drivers Download
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="#"> Drivers Download </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="#">
-														Track Your Order
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="#"> Track Your Order </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/shipping-return">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/shipping-return">
 														Shipping &amp; Returns
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/reviews">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/reviews">
 														Customer Reviews
 													</a>
 												</li>
@@ -801,32 +772,22 @@
 										data-state="closed"
 										role="region"
 										class="overflow-hidden text-base transition-all">
-										<ul
-											class="accordion-content block-content">
+										<ul class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/security-privacy">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/security-privacy">
 														Security &amp; Privacy
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/terms-conditions">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/terms-conditions">
 														Terms of Use
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="/TKW/pages/contact-us">
-														Contact Us
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="/TKW/pages/contact-us"> Contact Us </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
+												<li class="link-lv2 | leading-8 hover-underline">
 													<a href="#">Our DISCORD</a>
 												</li>
 											</div>
@@ -860,13 +821,11 @@
 										data-state="closed"
 										role="region"
 										class="overflow-hidden text-base transition-all">
-										<div
-											class="accordion-content rte block-content">
+										<div class="accordion-content rte block-content">
 											<div class="pb-5 md:pb-0">
 												<div class="block-text mt-4">
 													<p class="mt-1">
-														<a
-															href="mailto:support@audiooasis.com">
+														<a href="mailto:support@audiooasis.com">
 															support@audiooasis.com
 														</a>
 													</p>
@@ -958,17 +917,13 @@
 								<div
 									class="footer_left | flex-1 text-center w-full md:text-left mb-6 lg:mb-0 lg:w-auto lg:order-none">
 									<span class="text-sm text-left">
-										© AUDIOOASIS.COM 2024 All Rights
-										Reserved.
+										© AUDIOOASIS.COM 2024 All Rights Reserved.
 									</span>
 								</div>
 								<div
 									class="footer_right | w-full flex flex-wrap justify-center md:justify-start lg:justify-center items-center lg:w-auto">
-									<div
-										class="payment-icons flex justify-center lg:justify-start">
-										<span class="hidden">
-											Payment options:{" "}
-										</span>
+									<div class="payment-icons flex justify-center lg:justify-start">
+										<span class="hidden"> Payment options:{" "} </span>
 										<ul class="flex flex-wrap -m-2.5">
 											<li class="m-2.5">
 												<svg
@@ -979,8 +934,7 @@
 													viewBox="0 0 38 24"
 													width="38"
 													height="24">
-													<title
-														id="pi-american_express">
+													<title id="pi-american_express">
 														American Express
 													</title>
 													<path
@@ -1023,9 +977,7 @@
 													viewBox="0 0 165.521 105.965"
 													xmlSpace="preserve"
 													aria-labelledby="pi-apple_pay">
-													<title id="pi-apple_pay">
-														Apple Pay
-													</title>
+													<title id="pi-apple_pay">Apple Pay</title>
 													<path
 														fill="#000"
 														d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z"></path>
@@ -1064,9 +1016,7 @@
 													width="38"
 													height="24"
 													aria-labelledby="pi-master">
-													<title id="pi-master">
-														Mastercard
-													</title>
+													<title id="pi-master">Mastercard</title>
 													<path
 														opacity=".07"
 														d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
@@ -1097,9 +1047,7 @@
 													height="24"
 													role="img"
 													aria-labelledby="pi-paypal">
-													<title id="pi-paypal">
-														PayPal
-													</title>
+													<title id="pi-paypal">PayPal</title>
 													<path
 														opacity=".07"
 														d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
@@ -1126,9 +1074,7 @@
 													width="38"
 													height="24"
 													aria-labelledby="pi-visa">
-													<title id="pi-visa">
-														Visa
-													</title>
+													<title id="pi-visa">Visa</title>
 													<path
 														opacity=".07"
 														d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
@@ -1149,9 +1095,7 @@
 													width="38"
 													height="24"
 													aria-labelledby="pi-google_pay">
-													<title id="pi-google_pay">
-														Google Pay
-													</title>
+													<title id="pi-google_pay">Google Pay</title>
 													<path
 														d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
 														fill="#000"

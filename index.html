@@ -10,8 +10,7 @@
 		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 		<script src="./js/swiper-bundle.min.js"></script>
 		<script>
-			const path =
-				window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
+			const path = window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
 		</script>
 		<!-- <script
 				src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.min.js"
@@ -19,14 +18,12 @@
 				crossorigin="anonymous"
 				referrerpolicy="no-referrer"></script>
 				<link rel="stylesheet" href="./assets/photoswipe.css" /> -->
-		<link
-			rel="shortcut icon"
-			href="./assets/logo.ico"
-			type="image/x-icon" />
+		<link rel="shortcut icon" href="./assets/logo.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="./css/tailwind.css" />
 		<link rel="stylesheet" href="./css/chunk.css" />
 		<link rel="stylesheet" href="./css/Announcement.css" />
 		<link rel="stylesheet" href="./css/Navbar.css" />
+		<link rel="stylesheet" href="../css/Cart.css" />
 		<link rel="stylesheet" href="./css/Carousel.css" />
 		<link rel="stylesheet" href="./css/slideshow.css" />
 		<link rel="stylesheet" href="./css/Categories.css" />
@@ -75,9 +72,8 @@
 					<div
 						class="announcement-bar__content | md:text-center py-2.5 text-base hover:animate-shake">
 						<span class="font-medium" style="font-size: 13px">
-							30 DAYS NO REASON RETURN • 180 DAYS QUALITY OF
-							EXCHANGE OR REFUND • LOWEST PRICE GUARANTEE • 7 DAYS
-							DOA PRODUCT GUARANTEE
+							30 DAYS NO REASON RETURN • 180 DAYS QUALITY OF EXCHANGE OR REFUND •
+							LOWEST PRICE GUARANTEE • 7 DAYS DOA PRODUCT GUARANTEE
 						</span>
 					</div>
 					<div
@@ -110,11 +106,9 @@
 			<!-- Navbar -->
 			<section class="section-header">
 				<header class="header | inset-x-0 z-[70] header__wrapper">
-					<div
-						class="desktop-header | hidden lg:block bg-white border-b border-[#ddd]">
+					<div class="desktop-header | hidden lg:block bg-white border-b border-[#ddd]">
 						<div class="header_top | container">
-							<div
-								class="logo-bar | flex -mx-4 items-center py-2">
+							<div class="logo-bar | flex -mx-4 items-center py-2">
 								<div
 									class="logo | px-4 justify-center scroll-animation"
 									data-animation="animate-fade">
@@ -151,10 +145,8 @@
 										</svg>
 									</a>
 								</div>
-								<div
-									class="w-2/3 flex flex-grow justify-end items-center">
-									<div
-										class="flex flex-grow justify-end items-center">
+								<div class="w-2/3 flex flex-grow justify-end items-center">
+									<div class="flex flex-grow justify-end items-center">
 										<form
 											id="menu-form-search"
 											action="/pages/search-result"
@@ -187,7 +179,7 @@
 									</div>
 									<select
 										class="currency-selector | w-[70px] border-none px-2 font-bold text-base"></select>
-									<a href="./cart" class="pl-4 pr-2 py-3.5">
+									<a href="./cart" class="btn-cart | pl-4 pr-2 py-3.5">
 										<div class="badge">
 											<svg
 												class="w-[2.15rem] h-[2.15rem]"
@@ -197,7 +189,7 @@
 												<path
 													d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2zM6.16 6h12.15l-2.76 5H8.53zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2m10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2"></path>
 											</svg>
-											<span class="badge-inner">3</span>
+											<span class="badge-inner"></span>
 										</div>
 									</a>
 									<a href="./login" class="px-2 py-3.5">
@@ -216,8 +208,7 @@
 							</div>
 						</div>
 						<div class="header_bottom">
-							<nav
-								class="menu-wrapper__desktop | container flex items-center">
+							<nav class="menu-wrapper__desktop | container flex items-center">
 								<ul
 									class="menu-nav | flex flex-wrap font-medium whitespace-nowrap -ml-[20px] w-full relative justify-between"></ul>
 							</nav>
@@ -225,9 +216,7 @@
 					</div>
 					<div
 						class="mobile-header | flex lg:hidden container-fluid bg-white items-center border-b border-[#ddd}">
-						<button
-							class="menu-button | flex"
-							aria-label="Main Menu">
+						<button class="menu-button | flex" aria-label="Main Menu">
 							<svg
 								class="w-[2.1875rem] h-[2.1875rem]"
 								fill="none"
@@ -243,10 +232,7 @@
 							</svg>
 						</button>
 						<div class="logo--mobile | ml-2">
-							<a
-								href="./"
-								class="flex w-full relative"
-								title="AUDIO OASIS">
+							<a href="./" class="flex w-full relative" title="AUDIO OASIS">
 								<svg
 									viewBox="0 0 3650 615"
 									xmlns="http://www.w3.org/2000/svg"
@@ -285,8 +271,9 @@
 										d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path>
 								</svg>
 							</button>
-							<button
-								class="cart-popup | relative py-2 px-2 whitespace-nowrap cursor-pointer">
+							<a
+								href="./cart"
+								class="btn-cart cart-popup | relative py-2 px-2 whitespace-nowrap cursor-pointer">
 								<div class="badge">
 									<svg
 										class="w-[2.15rem] h-[2.15rem]"
@@ -296,9 +283,9 @@
 										<path
 											d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2zM6.16 6h12.15l-2.76 5H8.53zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2m10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2"></path>
 									</svg>
-									<span class="badge-inner">3</span>
+									<span class="badge-inner"></span>
 								</div>
-							</button>
+							</a>
 						</div>
 					</div>
 				</header>
@@ -320,8 +307,7 @@
 			<!-- Main -->
 			<main role="main" id="MainContent">
 				<!-- Carousel -->
-				<section
-					class="section-carousel bg-white border-b border-[#ddd]">
+				<section class="section-carousel bg-white border-b border-[#ddd]">
 					<div
 						class="relative shop-slideshow banner_slideshow slider_pagination--right slide-block_content-stack">
 						<div
@@ -339,8 +325,7 @@
 					<script type="module" src="./js/Carousel.js"></script>
 				</section>
 				<!-- BetterChoice -->
-				<section
-					class="section-betterchoices | justify-center hidden md:flex">
+				<section class="section-betterchoices | justify-center hidden md:flex">
 					<div
 						class="container-fuild my-[100px] flex flex-row justify-center items-center px-14 lg:px-32">
 						<h2
@@ -364,9 +349,7 @@
 											d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42"></path>
 									</svg>
 								</div>
-								<h3 class="text-base font-bold">
-									Lowest Price Guarantee
-								</h3>
+								<h3 class="text-base font-bold">Lowest Price Guarantee</h3>
 								<p class="text-sm text-gray-500">
 									Find a lower price and Request a price match
 								</p>
@@ -384,9 +367,7 @@
 											d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24C14.5 5.27 15 6.58 15 8s-.5 2.73-1.33 3.76c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path>
 									</svg>
 								</div>
-								<h3 class="text-base font-bold">
-									No Reason Return
-								</h3>
+								<h3 class="text-base font-bold">No Reason Return</h3>
 								<p class="text-sm text-gray-500">
 									7 Days DOA Product Guarantee
 									<br />
@@ -406,12 +387,10 @@
 											d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5zm-.5 1.5 1.96 2.5H17V9.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m2.22-3c-.55-.61-1.33-1-2.22-1s-1.67.39-2.22 1H3V6h12v9zM18 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1"></path>
 									</svg>
 								</div>
-								<h3 class="text-base font-bold">
-									Fast Delivery
-								</h3>
+								<h3 class="text-base font-bold">Fast Delivery</h3>
 								<p class="text-sm text-gray-500">
-									Faster delivery on selected items thanks to
-									our improved logistics
+									Faster delivery on selected items thanks to our improved
+									logistics
 								</p>
 							</li>
 							<li
@@ -427,9 +406,7 @@
 											d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2m0 14H4v-6h16zm0-10H4V6h16z"></path>
 									</svg>
 								</div>
-								<h3 class="text-base font-bold">
-									Safe Payments
-								</h3>
+								<h3 class="text-base font-bold">Safe Payments</h3>
 								<p class="text-sm text-gray-500">
 									Safe payment methods preferred by Paypal
 								</p>
@@ -447,12 +424,9 @@
 											d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm7 10c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V6.3l7-3.11 7 3.11zm-11.59.59L6 13l4 4 8-8-1.41-1.42L10 14.17z"></path>
 									</svg>
 								</div>
-								<h3 class="text-base font-bold">
-									100% Authentic Guarantee
-								</h3>
+								<h3 class="text-base font-bold">100% Authentic Guarantee</h3>
 								<p class="text-sm text-gray-500">
-									All products are guaranteed 100% authentic
-									directly from brand
+									All products are guaranteed 100% authentic directly from brand
 								</p>
 							</li>
 						</ul>
@@ -504,12 +478,9 @@
 									</h2>
 									<div
 										class="custom-select select__custom-width section__heading select-plain h2 w-auto">
-										<select
-											class="form-control"
-											data-tab-select></select>
+										<select class="form-control" data-tab-select></select>
 										<div class="select-selected">
-											<span
-												class="select-selected__text"></span>
+											<span class="select-selected__text"></span>
 											<span class="select-arrow">
 												<svg
 													fill="currentColor"
@@ -520,8 +491,7 @@
 												</svg>
 											</span>
 										</div>
-										<div
-											class="select-items select-hide"></div>
+										<div class="select-items select-hide"></div>
 									</div>
 								</div>
 							</div>
@@ -532,14 +502,12 @@
 				</section>
 				<!-- Guarantees -->
 				<section class="section-guarantees">
-					<div
-						class="container guarantees-wrapper section-ib-wrapper">
+					<div class="container guarantees-wrapper section-ib-wrapper">
 						<div class="relative ib">
 							<div
 								class="ib-grid ib-wrapper grid grid-cols-2 md:grid md:grid-cols-2 lg:grid-cols-4">
 								<div class="ib-column">
-									<div
-										class="ib-icon-box ib-icon-box--horizontal">
+									<div class="ib-icon-box ib-icon-box--horizontal">
 										<div
 											class="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center scroll-animation"
 											data-animation="animate-fade-up">
@@ -548,9 +516,7 @@
 												style="width: 60px">
 												<div
 													class="ib-image w-full"
-													style="
-														--aspect-ratio: 0.9803921568627451;
-													"
+													style="--aspect-ratio: 0.9803921568627451"
 													intersecting="true">
 													<img
 														src="./assets/fastDelivery.svg"
@@ -562,25 +528,17 @@
 														height="61" />
 												</div>
 											</div>
-											<div
-												class="icon-box__text flex-1 sm:text-left">
-												<h3
-													class="h4 mb-1.5 font-medium">
-													Free Shipping
-												</h3>
-												<div
-													class="rte text-color-subtext">
-													<p>
-														Worldwide Free Shipping
-													</p>
+											<div class="icon-box__text flex-1 sm:text-left">
+												<h3 class="h4 mb-1.5 font-medium">Free Shipping</h3>
+												<div class="rte text-color-subtext">
+													<p>Worldwide Free Shipping</p>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="ib-column">
-									<div
-										class="ib-icon-box ib-icon-box--horizontal">
+									<div class="ib-icon-box ib-icon-box--horizontal">
 										<div
 											class="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center scroll-animation"
 											data-animation="animate-fade-up md:animate-delay-100">
@@ -589,9 +547,7 @@
 												style="width: 60px">
 												<div
 													class="ib-image w-full"
-													style="
-														--aspect-ratio: 0.9803921568627451;
-													"
+													style="--aspect-ratio: 0.9803921568627451"
 													intersecting="true">
 													<img
 														src="./assets/discount.svg"
@@ -603,21 +559,13 @@
 														height="61" />
 												</div>
 											</div>
-											<div
-												class="icon-box__text flex-1 sm:text-left">
-												<h3
-													class="h4 mb-1.5 font-medium">
-													Best Pricing
-												</h3>
-												<div
-													class="rte text-color-subtext">
+											<div class="icon-box__text flex-1 sm:text-left">
+												<h3 class="h4 mb-1.5 font-medium">Best Pricing</h3>
+												<div class="rte text-color-subtext">
 													<p>
 														Offering
-														<strong>
-															lowest possible
-														</strong>
-														prices & best world
-														class selections.
+														<strong> lowest possible </strong>
+														prices & best world class selections.
 													</p>
 												</div>
 											</div>
@@ -625,8 +573,7 @@
 									</div>
 								</div>
 								<div class="ib-column">
-									<div
-										class="ib-icon-box ib-icon-box--horizontal">
+									<div class="ib-icon-box ib-icon-box--horizontal">
 										<div
 											class="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center scroll-animation"
 											data-animation="animate-fade-up md:animate-delay-200">
@@ -635,9 +582,7 @@
 												style="width: 60px">
 												<div
 													class="ib-image w-full"
-													style="
-														--aspect-ratio: 0.9803921568627451;
-													"
+													style="--aspect-ratio: 0.9803921568627451"
 													intersecting="true">
 													<img
 														src="./assets/people.svg"
@@ -649,19 +594,14 @@
 														height="61" />
 												</div>
 											</div>
-											<div
-												class="icon-box__text flex-1 sm:text-left">
-												<h3
-													class="h4 mb-1.5 font-medium">
+											<div class="icon-box__text flex-1 sm:text-left">
+												<h3 class="h4 mb-1.5 font-medium">
 													Online Support
 												</h3>
-												<div
-													class="rte text-color-subtext">
+												<div class="rte text-color-subtext">
 													<p>
-														Our passionate Sales
-														Engineers: Monday -
-														Friday: 09:00 – 18:00
-														(UTC+8)
+														Our passionate Sales Engineers: Monday -
+														Friday: 09:00 – 18:00 (UTC+8)
 													</p>
 												</div>
 											</div>
@@ -669,8 +609,7 @@
 									</div>
 								</div>
 								<div class="ib-column">
-									<div
-										class="ib-icon-box ib-icon-box--horizontal">
+									<div class="ib-icon-box ib-icon-box--horizontal">
 										<div
 											class="ib-icon-box__inner flex flex-col justify-center sm:items-start sm:flex-row flex-nowrap items-center scroll-animation"
 											data-animation="animate-fade-up md:animate-delay-300">
@@ -679,9 +618,7 @@
 												style="width: 60px">
 												<div
 													class="ib-image w-full"
-													style="
-														--aspect-ratio: 0.9803921568627451;
-													"
+													style="--aspect-ratio: 0.9803921568627451"
 													intersecting="true">
 													<img
 														src="./assets/shield.svg"
@@ -693,18 +630,12 @@
 														height="61" />
 												</div>
 											</div>
-											<div
-												class="icon-box__text flex-1 sm:text-left">
-												<h3
-													class="h4 mb-1.5 font-medium">
+											<div class="icon-box__text flex-1 sm:text-left">
+												<h3 class="h4 mb-1.5 font-medium">
 													Authorized Retailer
 												</h3>
-												<div
-													class="rte text-color-subtext">
-													<p>
-														Guaranteed & authentic
-														genuine products.
-													</p>
+												<div class="rte text-color-subtext">
+													<p>Guaranteed & authentic genuine products.</p>
 												</div>
 											</div>
 										</div>
@@ -714,6 +645,55 @@
 						</div>
 					</div>
 				</section>
+				<!-- Cart Drawer -->
+				<div class="cart-container">
+					<div id="cart-drawer">
+						<div
+							style="--tw-bg-opacity: 0"
+							class="cart__wrapper touch-none transition-colors duration-300 bg-black fixed z-[100] inset-0 hidden">
+							<div
+								class="cart__content transition-transform duration-300 ml-auto translate-x-0 min-h-full md:w-[450px] bg-white z-50">
+								<button class="cart__close p-2 cursor-pointer absolute">
+									<svg
+										class="w-[24px] h-[24px]"
+										fill="currentColor"
+										stroke="currentColor"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 320 512">
+										<path
+											d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"></path>
+									</svg>
+								</button>
+								<div class="flex flex-col h-full">
+									<div class="cart__header mx-6 py-4 md:pt-6">
+										<h3 class="text-2xl font-medium">Your Cart</h3>
+									</div>
+									<div
+										class="cart__body custom_scroll overscroll-contain px-6 pb-4 flex flex-col flex-grow"></div>
+									<div class="cart__footer py-4 px-6">
+										<div class="cart__summary mb-4 pt-4">
+											<ul class="cart-cart__discounts" role="list"></ul>
+											<div class="cart__subtotal flex justify-between">
+												<span class="font-medium">Subtotal</span>
+												<span
+													class="cart__subtotal-price font-medium"></span>
+											</div>
+										</div>
+										<div class="flex flex-col items-center">
+											<button
+												class="btn btn-primary w-full cart__checkout relative"
+												name="checkout">
+												<span>Check out</span>
+											</button>
+											<a class="underline mt-2" href="./cart">View Cart</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script src="./js/CartDrawer.js"></script>
+				</div>
 			</main>
 			<!-- Footer -->
 			<section class="section-footer">
@@ -725,17 +705,14 @@
 								class="footer_accordion | flex-wrap lg:flex-nowrap -mx-4 lg:-mx-5 hidden md:flex">
 								<div
 									class="footer_block | accordion-item open block-newsletter w-full lg:w-1/3 order-first md:order-none">
-									<div
-										class="footer_block-inner | px-4 lg:px-5">
+									<div class="footer_block-inner | px-4 lg:px-5">
 										<h3
 											class="block-title accordion-button | font-bold mb-4 text-base">
 											LET'S GET IN TOUCH
 										</h3>
-										<div
-											class="block-content accordion-content">
+										<div class="block-content accordion-content">
 											<div class="pb-5 md:pb-0">
-												<p
-													class="newsletter-block-desc | py-2 block-text">
+												<p class="newsletter-block-desc | py-2 block-text">
 													Stay up to date!
 												</p>
 												<div>
@@ -779,10 +756,8 @@
 																</svg>
 															</button>
 														</div>
-														<div
-															class="agree-terms">
-															<label
-																htmlFor="agree_terms">
+														<div class="agree-terms">
+															<label htmlFor="agree_terms">
 																<input
 																	id="agree_terms"
 																	type="checkbox"
@@ -791,14 +766,9 @@
 																	required />
 																<span>
 																	<p>
-																		I agree
-																		with the
-																		<a
-																			href="#"
-																			title="#">
-																			Terms
-																			&
-																			conditions
+																		I agree with the
+																		<a href="#" title="#">
+																			Terms & conditions
 																		</a>
 																	</p>
 																</span>
@@ -810,46 +780,31 @@
 										</div>
 									</div>
 								</div>
-								<div
-									class="footer_block footer_block-spacing | w-full lg:w-1/6">
-									<div
-										class="footer_block-inner px-4 lg:px-5"></div>
+								<div class="footer_block footer_block-spacing | w-full lg:w-1/6">
+									<div class="footer_block-inner px-4 lg:px-5"></div>
 								</div>
 								<div
 									class="footer_block accordion-item footer_block-menu | | w-full lg:w-1/4">
-									<div
-										class="footer_block-inner | px-4 lg:px-5">
+									<div class="footer_block-inner | px-4 lg:px-5">
 										<h3
 											class="block-title accordion-button | font-bold mb-4 text-base">
 											SUPPORT
 										</h3>
-										<ul
-											class="block-content accordion-content">
+										<ul class="block-content accordion-content">
 											<div class="pb-5 md:pb-0">
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="#">
-														Drivers Download
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="#"> Drivers Download </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="#">
-														Track Your Order
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="#"> Track Your Order </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="./pages/shipping-return">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/shipping-return">
 														Shipping &amp; Returns
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="./pages/reviews">
-														Customer Reviews
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/reviews"> Customer Reviews </a>
 												</li>
 											</div>
 										</ul>
@@ -857,38 +812,27 @@
 								</div>
 								<div
 									class="footer_block accordion-item footer_block-menu | | w-full lg:w-1/4">
-									<div
-										class="footer_block-inner | px-4 lg:px-5">
+									<div class="footer_block-inner | px-4 lg:px-5">
 										<h3
 											class="accordion-button block-title | font-bold mb-4 text-base">
 											GET TO KNOW US
 										</h3>
-										<ul
-											class="accordion-content block-content">
+										<ul class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="./pages/security-privacy">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/security-privacy">
 														Security &amp; Privacy
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="./pages/terms-conditions">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/terms-conditions">
 														Terms of Use
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="./pages/contact-us">
-														Contact Us
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/contact-us"> Contact Us </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
+												<li class="link-lv2 | leading-8 hover-underline">
 													<a href="#">Our DISCORD</a>
 												</li>
 											</div>
@@ -897,19 +841,16 @@
 								</div>
 								<div
 									class="footer_block accordion-item footer_block-our_store | w-full lg:w-1/4">
-									<div
-										class="footer_block-inner | px-4 lg:px-5">
+									<div class="footer_block-inner | px-4 lg:px-5">
 										<h3
 											class="accordion-button block-title | font-bold mb-4 text-base">
 											FOLLOW US
 										</h3>
-										<div
-											class="accordion-content rte block-content">
+										<div class="accordion-content rte block-content">
 											<div class="pb-5 md:pb-0">
 												<div class="block-text | mt-4">
 													<p class="mt-1">
-														<a
-															href="mailto:support@audiooasis.com">
+														<a href="mailto:support@audiooasis.com">
 															support@audiooasis.com
 														</a>
 													</p>
@@ -993,8 +934,7 @@
 								</div>
 							</div>
 							<!-- Mobile Footer -->
-							<div
-								class="footer_accordion | flex flex-wrap md:hidden">
+							<div class="footer_accordion | flex flex-wrap md:hidden">
 								<div
 									value="item-1"
 									class="footer_block accordion-item block-newsletter | open | w-full order-first border-b">
@@ -1022,11 +962,9 @@
 										data-state="open"
 										role="region"
 										class="overflow-hidden text-base transition-all">
-										<div
-											class="accordion-content block-content">
+										<div class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
-												<p
-													class="newsletter-block-desc block-text | py-2">
+												<p class="newsletter-block-desc block-text | py-2">
 													Stay up to date!
 												</p>
 												<div>
@@ -1070,10 +1008,8 @@
 																</svg>
 															</button>
 														</div>
-														<div
-															class="agree-terms">
-															<label
-																htmlFor="agree_terms">
+														<div class="agree-terms">
+															<label htmlFor="agree_terms">
 																<input
 																	id="agree_terms"
 																	type="checkbox"
@@ -1082,14 +1018,9 @@
 																	required />
 																<span>
 																	<p>
-																		I agree
-																		with the
-																		<a
-																			href="#"
-																			title="#">
-																			Terms
-																			&
-																			conditions
+																		I agree with the
+																		<a href="#" title="#">
+																			Terms & conditions
 																		</a>
 																	</p>
 																</span>
@@ -1128,33 +1059,21 @@
 										data-state="closed"
 										role="region"
 										class="overflow-hidden text-base transition-all">
-										<ul
-											class="accordion-content block-content">
+										<ul class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="#">
-														Drivers Download
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="#"> Drivers Download </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="#">
-														Track Your Order
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="#"> Track Your Order </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="./pages/shipping-return">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/shipping-return">
 														Shipping &amp; Returns
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a href="./pages/reviews">
-														Customer Reviews
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/reviews"> Customer Reviews </a>
 												</li>
 											</div>
 										</ul>
@@ -1187,32 +1106,22 @@
 										data-state="closed"
 										role="region"
 										class="overflow-hidden text-base transition-all">
-										<ul
-											class="accordion-content block-content">
+										<ul class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="./pages/security-privacy">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/security-privacy">
 														Security &amp; Privacy
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="./pages/terms-conditions">
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/terms-conditions">
 														Terms of Use
 													</a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
-													<a
-														href="./pages/contact-us">
-														Contact Us
-													</a>
+												<li class="link-lv2 | leading-8 hover-underline">
+													<a href="./pages/contact-us"> Contact Us </a>
 												</li>
-												<li
-													class="link-lv2 | leading-8 hover-underline">
+												<li class="link-lv2 | leading-8 hover-underline">
 													<a href="#">Our DISCORD</a>
 												</li>
 											</div>
@@ -1246,13 +1155,11 @@
 										data-state="closed"
 										role="region"
 										class="overflow-hidden text-base transition-all">
-										<div
-											class="accordion-content rte block-content">
+										<div class="accordion-content rte block-content">
 											<div class="pb-5 md:pb-0">
 												<div class="block-text mt-4">
 													<p class="mt-1">
-														<a
-															href="mailto:support@audiooasis.com">
+														<a href="mailto:support@audiooasis.com">
 															support@audiooasis.com
 														</a>
 													</p>
@@ -1344,17 +1251,13 @@
 								<div
 									class="footer_left | flex-1 text-center w-full md:text-left mb-6 lg:mb-0 lg:w-auto lg:order-none">
 									<span class="text-sm text-left">
-										© AUDIOOASIS.COM 2024 All Rights
-										Reserved.
+										© AUDIOOASIS.COM 2024 All Rights Reserved.
 									</span>
 								</div>
 								<div
 									class="footer_right | w-full flex flex-wrap justify-center md:justify-start lg:justify-center items-center lg:w-auto">
-									<div
-										class="payment-icons flex justify-center lg:justify-start">
-										<span class="hidden">
-											Payment options:{" "}
-										</span>
+									<div class="payment-icons flex justify-center lg:justify-start">
+										<span class="hidden"> Payment options:{" "} </span>
 										<ul class="flex flex-wrap -m-2.5">
 											<li class="m-2.5">
 												<svg
@@ -1365,8 +1268,7 @@
 													viewBox="0 0 38 24"
 													width="38"
 													height="24">
-													<title
-														id="pi-american_express">
+													<title id="pi-american_express">
 														American Express
 													</title>
 													<path
@@ -1409,9 +1311,7 @@
 													viewBox="0 0 165.521 105.965"
 													xmlSpace="preserve"
 													aria-labelledby="pi-apple_pay">
-													<title id="pi-apple_pay">
-														Apple Pay
-													</title>
+													<title id="pi-apple_pay">Apple Pay</title>
 													<path
 														fill="#000"
 														d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z"></path>
@@ -1450,9 +1350,7 @@
 													width="38"
 													height="24"
 													aria-labelledby="pi-master">
-													<title id="pi-master">
-														Mastercard
-													</title>
+													<title id="pi-master">Mastercard</title>
 													<path
 														opacity=".07"
 														d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
@@ -1483,9 +1381,7 @@
 													height="24"
 													role="img"
 													aria-labelledby="pi-paypal">
-													<title id="pi-paypal">
-														PayPal
-													</title>
+													<title id="pi-paypal">PayPal</title>
 													<path
 														opacity=".07"
 														d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
@@ -1512,9 +1408,7 @@
 													width="38"
 													height="24"
 													aria-labelledby="pi-visa">
-													<title id="pi-visa">
-														Visa
-													</title>
+													<title id="pi-visa">Visa</title>
 													<path
 														opacity=".07"
 														d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
@@ -1535,9 +1429,7 @@
 													width="38"
 													height="24"
 													aria-labelledby="pi-google_pay">
-													<title id="pi-google_pay">
-														Google Pay
-													</title>
+													<title id="pi-google_pay">Google Pay</title>
 													<path
 														d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
 														fill="#000"
