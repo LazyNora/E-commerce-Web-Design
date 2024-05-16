@@ -18,11 +18,9 @@ variantPicker.innerHTML = `
 <div data-product-id=${product.id}>
   <div class="variant-picker">
     ${product.options
-		.map(
-			(option, index) =>
-				option.values[1] !== null &&
-				option.name !== "Title" &&
-				`
+		.map((option, index) =>
+			option.values[1] !== null && option.name !== "Title"
+				? `
           <div class="product-options__option product-options__option--dropdown">
             <div
               class="variant-select"
@@ -65,6 +63,7 @@ variantPicker.innerHTML = `
             </div>
           </div>
         `
+				: ""
 		)
 		.join("")}
   </div>
@@ -200,7 +199,11 @@ const updateMedia = () => {
 // Thêm /#/ nếu dùng hash router
 const updateBrowserHistory = () => {
 	!currentVariant ||
-		window.history.replaceState({}, "", `${currentPath + productData.url}/?variant=${currentVariant.id}`);
+		window.history.replaceState(
+			{},
+			"",
+			`${currentPath + productData.url}/?variant=${currentVariant.id}`
+		);
 };
 
 document.querySelectorAll(".product-options__option").forEach((variantSelect, index) => {
