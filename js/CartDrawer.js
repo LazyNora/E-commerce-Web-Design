@@ -7,6 +7,7 @@ cartContent.classList.add("translate-x-full");
 
 cartWrapper.addEventListener("click", (e) => {
 	if (e.target === cartWrapper) {
+		document.documentElement.classList.remove("prevent-scroll");
 		cartContent.classList.add("translate-x-full");
 		cartWrapper.style.setProperty("--tw-bg-opacity", 0);
 		setTimeout(() => {
@@ -16,6 +17,7 @@ cartWrapper.addEventListener("click", (e) => {
 });
 
 cartClose.addEventListener("click", () => {
+	document.documentElement.classList.remove("prevent-scroll");
 	cartContent.classList.add("translate-x-full");
 	cartWrapper.style.setProperty("--tw-bg-opacity", 0);
 	setTimeout(() => {
@@ -25,6 +27,7 @@ cartClose.addEventListener("click", () => {
 
 document.addEventListener("keydown", (e) => {
 	if (e.key === "Escape") {
+		document.documentElement.classList.remove("prevent-scroll");
 		cartContent.classList.add("translate-x-full");
 		cartWrapper.style.setProperty("--tw-bg-opacity", 0);
 		setTimeout(() => {
@@ -36,6 +39,7 @@ document.addEventListener("keydown", (e) => {
 cartOpenBtns.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
 		e.preventDefault();
+		document.documentElement.classList.add("prevent-scroll");
 		cartWrapper.classList.remove("hidden");
 		setTimeout(() => {
 			cartContent.classList.remove("translate-x-full");

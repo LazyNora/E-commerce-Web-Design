@@ -92,3 +92,9 @@
 .cart-empty .cart__footer {
 	display: none;
 }
+
+html.prevent-scroll,
+html.prevent-scroll body {
+	height: auto;
+	overflow: hidden;
+}
