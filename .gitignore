@@ -26,3 +26,5 @@ yarn-error.log*
 /ex
 /.vscode
 /src
+*.json
+*.config.js
