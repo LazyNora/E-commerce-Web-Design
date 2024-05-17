@@ -50,9 +50,9 @@ variantPicker.innerHTML = `
 								`
                       <option
                         ${currentVariant?.options[index] === value ? "selected" : ""}
-                        value=${value}
+                        value="${value.toString()}"
                         class="variant-picker__option product-option-item"
-                        data-value=${value}
+                        data-value="${value.toString()}"
                         data-option-position=${option.position}>${value}</option>
                       `
 						)
@@ -89,6 +89,7 @@ const onVariantChange = (e) => {
 	getSelectedVariant();
 	updateButton(true, "", false);
 	if (currentVariant) {
+		console.log("change2");
 		updateMedia();
 		updateBrowserHistory();
 		updatePrice();
@@ -150,9 +151,11 @@ const getVariantFromOptionArray = (product, options) => {
 	_validateOptionsArray(options);
 	var result = product.variants.filter((variant) => {
 		return options.every((option, index) => {
+			console.log(variant.options[index], option);
 			return variant.options[index] === option;
 		});
 	});
+	console.log(result);
 	return result[0] || null;
 };
 
