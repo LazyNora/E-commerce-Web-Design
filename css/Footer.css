@@ -155,8 +155,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	max-width: calc(var(--container-width, 1280) * 1px);
-	padding-left: 1rem !important;
-	padding-right: 1rem !important;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	width: 100%;
 }
 

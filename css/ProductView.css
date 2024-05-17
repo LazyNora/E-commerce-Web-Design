@@ -610,3 +610,16 @@
 .paypal:active {
 	top: 2px;
 }
+
+.more-options {
+	color: #111;
+	background: transparent;
+	border: 0 none;
+	cursor: pointer;
+	display: block;
+	font-size: 1em;
+	margin-top: 1em;
+	text-align: center;
+	text-decoration: underline;
+	width: 100%;
+}

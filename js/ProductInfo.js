@@ -70,7 +70,7 @@ document.querySelector(".prod__info").innerHTML = `
     <div class="main-product__block main-product__block-buy_buttons">
       <div class="product__actions">
         <div class="flex flex-wrap items-end">
-          <button name="add" class="add-to-cart btn flex-grow shrink relative"><span>Add to cart</span></button>
+          <button name="add" class="btn-atc add-to-cart btn flex-grow shrink relative"><span>Add to cart</span></button>
           <div class="prod__dynamic_checkout buy-one-click w-full">
             <button class="paypal">
               <span class="paypal-text">Buy now with PayPal</span>
@@ -82,6 +82,7 @@ document.querySelector(".prod__info").innerHTML = `
                 </svg>
               </span>
             </button>
+            <button class="more-options">More payment options</button>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ cartContent.classList.add("translate-x-full");
 
 cartWrapper.addEventListener("click", (e) => {
 	if (e.target === cartWrapper) {
-		document.documentElement.classList.remove("prevent-scroll");
+		if (window.innerWidth < 768) document.documentElement.classList.remove("prevent-scroll");
 		cartContent.classList.add("translate-x-full");
 		cartWrapper.style.setProperty("--tw-bg-opacity", 0);
 		setTimeout(() => {
@@ -17,7 +17,7 @@ cartWrapper.addEventListener("click", (e) => {
 });
 
 cartClose.addEventListener("click", () => {
-	document.documentElement.classList.remove("prevent-scroll");
+	if (window.innerWidth < 768) document.documentElement.classList.remove("prevent-scroll");
 	cartContent.classList.add("translate-x-full");
 	cartWrapper.style.setProperty("--tw-bg-opacity", 0);
 	setTimeout(() => {
@@ -27,7 +27,7 @@ cartClose.addEventListener("click", () => {
 
 document.addEventListener("keydown", (e) => {
 	if (e.key === "Escape") {
-		document.documentElement.classList.remove("prevent-scroll");
+		if (window.innerWidth < 768) document.documentElement.classList.remove("prevent-scroll");
 		cartContent.classList.add("translate-x-full");
 		cartWrapper.style.setProperty("--tw-bg-opacity", 0);
 		setTimeout(() => {
@@ -39,7 +39,7 @@ document.addEventListener("keydown", (e) => {
 cartOpenBtns.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
 		e.preventDefault();
-		document.documentElement.classList.add("prevent-scroll");
+		if (window.innerWidth < 768) document.documentElement.classList.add("prevent-scroll");
 		cartWrapper.classList.remove("hidden");
 		setTimeout(() => {
 			cartContent.classList.remove("translate-x-full");
@@ -67,11 +67,11 @@ function loadCart(addToCart = false) {
 		badges.forEach((badge) => {
 			const badgeInner = badge.querySelector(".badge-inner");
 			if (badgeInner) {
-				badgeInner.textContent = currentCart.items.length;
+				badgeInner.textContent = currentCart.items.reduce((acc, item) => acc + item.qty, 0);
 			} else {
 				const badgeInner = document.createElement("span");
 				badgeInner.classList.add("badge-inner");
-				badgeInner.textContent = currentCart.items.length;
+				badgeInner.textContent = currentCart.items.reduce((acc, item) => acc + item.qty, 0);
 				badge.appendChild(badgeInner);
 			}
 		});
@@ -124,7 +124,7 @@ function loadCart(addToCart = false) {
               <div class="flex items-center mt-[10px] justify-between">
                 <div class="cart-item__quantity flex justify-between rounded">
                   <button class="cart-item__btn" data-id=${item.id + ":" + item.variantId} data-qty-change="dec">-</button>
-                  <input class="py-1 cart-item__qty_input w-9 text-center" type="number" name="quantity" id="quantity" data-id=${item.id + ":" + item.variantId} value="1" min="0">
+                  <input class="py-1 cart-item__qty_input w-9 text-center" type="number" name="quantity" id="quantity" data-id=${item.id + ":" + item.variantId} value=${item.qty} min="0">
                   <button class="cart-item__btn" data-id=${item.id + ":" + item.variantId} data-qty-change="inc">+</button>
                 </div>
                 <button class="cart-item__remove underline p-2 ml-2" data-id=${item.id + ":" + item.variantId}>Remove</button>
@@ -140,13 +140,161 @@ function loadCart(addToCart = false) {
 			: "<div class='cart-empty-msg'><p>Your cart is currently empty.</p></div>";
 
 	const cartSubtotal = cartContent.querySelector(".cart__subtotal-price");
-	cartSubtotal.innerHTML = `<span class="money" data-product-price=${currentCart.subtotal}>$${currentCart.subtotal / 100} USD</span>`;
+	cartSubtotal.innerHTML = `<span class="money" data-product-price=${currentCart.subtotal}></span>`;
+	document.querySelectorAll(".currency-selector").forEach((selector) => {
+		selector.dispatchEvent(new Event("change"));
+	});
+
+	const cartItemDecBtns = cartContent.querySelectorAll(".cart-item__btn[data-qty-change='dec']");
+	const cartItemIncBtns = cartContent.querySelectorAll(".cart-item__btn[data-qty-change='inc']");
+	const cartItemQtyInputs = cartContent.querySelectorAll(".cart-item__qty_input");
+	const cartItemRemoveBtns = cartContent.querySelectorAll(".cart-item__remove");
+
+	cartItemDecBtns.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			const id = e.target.getAttribute("data-id");
+			const itemIndex = currentCart.items.findIndex(
+				(item) => item.id + ":" + item.variantId === id
+			);
+			if (currentCart.items[itemIndex].qty > 1) {
+				currentCart.items[itemIndex].qty -= 1;
+				currentCart.subtotal -= currentCart.items[itemIndex].price;
+				localStorage.setItem("cart", JSON.stringify(currentCart));
+				loadCart();
+			} else {
+				currentCart.subtotal -= currentCart.items[itemIndex].price;
+				currentCart.items.splice(itemIndex, 1);
+				localStorage.setItem("cart", JSON.stringify(currentCart));
+				loadCart();
+			}
+		});
+	});
+
+	cartItemIncBtns.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			const id = e.target.getAttribute("data-id");
+			const itemIndex = currentCart.items.findIndex(
+				(item) => item.id + ":" + item.variantId === id
+			);
+			currentCart.items[itemIndex].qty += 1;
+			currentCart.subtotal += currentCart.items[itemIndex].price;
+			localStorage.setItem("cart", JSON.stringify(currentCart));
+			loadCart();
+		});
+	});
+
+	cartItemQtyInputs.forEach((input) => {
+		input.addEventListener("change", (e) => {
+			const id = e.target.getAttribute("data-id");
+			const itemIndex = currentCart.items.findIndex(
+				(item) => item.id + ":" + item.variantId === id
+			);
+			const newQty = parseInt(e.target.value);
+			if (newQty > 0) {
+				currentCart.subtotal -=
+					currentCart.items[itemIndex].price * currentCart.items[itemIndex].qty;
+				currentCart.items[itemIndex].qty = newQty;
+				currentCart.subtotal +=
+					currentCart.items[itemIndex].price * currentCart.items[itemIndex].qty;
+				localStorage.setItem("cart", JSON.stringify(currentCart));
+				loadCart();
+			} else {
+				currentCart.subtotal -=
+					currentCart.items[itemIndex].price * currentCart.items[itemIndex].qty;
+				currentCart.items.splice(itemIndex, 1);
+				localStorage.setItem("cart", JSON.stringify(currentCart));
+				loadCart();
+			}
+		});
+	});
+
+	cartItemRemoveBtns.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			const id = e.target.getAttribute("data-id");
+			const itemIndex = currentCart.items.findIndex(
+				(item) => item.id + ":" + item.variantId === id
+			);
+			currentCart.subtotal -=
+				currentCart.items[itemIndex].price * currentCart.items[itemIndex].qty;
+			currentCart.items.splice(itemIndex, 1);
+			localStorage.setItem("cart", JSON.stringify(currentCart));
+			loadCart();
+		});
+	});
 
 	if (addToCart && currentCart.items.length > 0) {
 		setTimeout(() => {
 			cartBody.querySelector(".notification").remove();
-		}, 6000);
+		}, 3000);
 	}
 }
 
 loadCart();
+
+document.querySelectorAll(".btn-atc").forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		const productId = product.id;
+		const productTitle = product.title;
+		let currentVariant = null;
+		if (variantId) {
+			currentVariant =
+				product.variants.find((variant) => parseInt(variant.id) === parseInt(variantId)) ||
+				product.variants[0];
+		} else {
+			currentVariant = product.variants[0];
+		}
+		const currentvariantId = currentVariant.id;
+		const variantPrice = currentVariant.price;
+		const variantOptions = currentVariant.options.map((option, index) => {
+			return {
+				name: product.options[index].name,
+				value: option,
+			};
+		});
+		const productImg = currentVariant.featured_image
+			? currentVariant.featured_image.src
+			: product.featured_image;
+		const productAlt = currentVariant.featured_image
+			? currentVariant.featured_image.alt
+			: product.title;
+		const productUrl = product.url;
+
+		var currentCart = JSON.parse(localStorage.getItem("cart")) || {
+			items: [],
+			subtotal: 0,
+		};
+
+		const itemIndex = currentCart.items.findIndex(
+			(item) => item.id === productId && item.variantId === currentvariantId
+		);
+
+		if (itemIndex === -1) {
+			currentCart.items.push({
+				id: productId,
+				title: productTitle,
+				price: variantPrice,
+				img: productImg,
+				alt: productAlt,
+				url: productUrl,
+				variantId: currentvariantId,
+				options_with_values: variantOptions ? variantOptions : null,
+				qty: 1,
+			});
+		} else {
+			currentCart.items[itemIndex].qty += 1;
+		}
+
+		currentCart.subtotal += parseInt(variantPrice);
+
+		localStorage.setItem("cart", JSON.stringify(currentCart));
+
+		loadCart(true);
+
+		if (window.innerWidth < 768) document.documentElement.classList.add("prevent-scroll");
+		cartWrapper.classList.remove("hidden");
+		setTimeout(() => {
+			cartContent.classList.remove("translate-x-full");
+			cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
+		}, 300);
+	});
+});
