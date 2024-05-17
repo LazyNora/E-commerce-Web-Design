@@ -245,12 +245,14 @@ document.querySelectorAll(".btn-atc").forEach((btn) => {
 		}
 		const currentvariantId = currentVariant.id;
 		const variantPrice = currentVariant.price;
-		const variantOptions = currentVariant.options.map((option, index) => {
-			return {
-				name: product.options[index].name,
-				value: option,
-			};
-		});
+		const variantOptions = currentVariant.options
+			.filter((option) => option !== "Default Title")
+			.map((option, index) => {
+				return {
+					name: product.options[index].name,
+					value: option,
+				};
+			});
 		const productImg = currentVariant.featured_image
 			? currentVariant.featured_image.src
 			: product.featured_image;
