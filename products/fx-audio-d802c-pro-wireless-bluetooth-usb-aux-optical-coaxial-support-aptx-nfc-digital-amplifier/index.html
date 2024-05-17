@@ -9,7 +9,7 @@
 			rel="stylesheet" />
 		<script>
 			const path = window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
-			const variantId = new URLSearchParams(window.location.search).get("variant") || null;
+			let variantId = new URLSearchParams(window.location.search).get("variant") || null;
 		</script>
 		<link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
 		<script src="../../js/swiper-bundle.min.js"></script>
