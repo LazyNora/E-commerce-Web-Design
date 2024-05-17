@@ -92,6 +92,7 @@
 .cart-item__remove {
 	font-size: 14px;
 	opacity: 0.8;
+	color: red;
 }
 
 .cart__footer {
@@ -204,5 +205,13 @@ html.prevent-scroll body {
 	.cart__table-col {
 		padding: 1rem 1.5rem;
 		width: 20%;
+	}
+}
+
+@media (max-width: 480px) {
+	.cart__wrapper.cart .cart__summary.relative {
+		margin: 0;
+		padding: 2rem 0;
+		width: 100%;
 	}
 }
