@@ -204,6 +204,7 @@ const updateBrowserHistory = () => {
 			"",
 			`${currentPath + productData.url}/?variant=${currentVariant.id}`
 		);
+	variantId = currentVariant.id;
 };
 
 document.querySelectorAll(".product-options__option").forEach((variantSelect, index) => {

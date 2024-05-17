@@ -43,6 +43,11 @@
 
 .cart-item {
 	padding: 12px 0;
+	border-top: 1px solid #f1f1f1;
+}
+
+.cart-item:last-child {
+	border-bottom: 1px solid #f1f1f1;
 }
 
 .cart-item__image {
@@ -91,6 +96,10 @@
 
 .cart-empty .cart__footer {
 	display: none;
+}
+
+.cart__checkout {
+	text-transform: uppercase;
 }
 
 html.prevent-scroll,

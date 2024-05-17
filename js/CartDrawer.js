@@ -98,7 +98,7 @@ function loadCart(addToCart = false) {
               </a>
             </div>
             <div class="cart-item__info">
-              <a href=${currentPath + item.url + "/?variant=" + item.variantId} class="font-medium hover:underline">${item.title}</a>
+              <a href=${currentPath + item.url + "/?variant=" + item.variantId} class="font-bold hover:underline">${item.title}</a>
               ${
 					item.options_with_values
 						? `
@@ -108,7 +108,7 @@ function loadCart(addToCart = false) {
 						(option) =>
 							`
                 <div class="cart-item__variant-option">
-                  <span class="font-medium">${option.name}: </span>${option.value}
+                  <span class="font-bold">${option.name}: </span>${option.value}
                 </div>
                 `
 					)

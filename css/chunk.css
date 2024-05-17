@@ -1530,11 +1530,6 @@ button.btn.btn-plain:hover {
 .cart__item + .notification.show {
 	margin-top: 20px;
 }
-.cart__summary {
-	margin: 0 -3rem;
-	padding: 3rem 3rem 0;
-	width: 400px;
-}
 .cart__summary-row {
 	display: flex;
 	justify-content: space-between;
