@@ -87,9 +87,8 @@ function _validateOptionsArray(options) {
 const onVariantChange = (e) => {
 	getSelectedOptions();
 	getSelectedVariant();
-	updateButton(true, "", false);
+	updateButton(!currentVariant.available, "Sold Out", false);
 	if (currentVariant) {
-		console.log("change2");
 		updateMedia();
 		updateBrowserHistory();
 		updatePrice();
@@ -117,13 +116,13 @@ const updateButton = (...args) => {
 	let text = args.length > 1 ? args[1] : 0;
 	let modifyClass = args.length > 2 && args[2] !== 0 ? args[2] : 1;
 
-	const productForms = document.querySelectorAll(`.product-form-main`);
+	const productForms = document.querySelectorAll(`.product__actions`);
 
 	if (productForms) {
 		productForms.forEach((productForm) => {
 			const addButton = productForm.querySelector('[name="add"]');
 			const dynamicCheckout = productForm.querySelector(".prod__dynamic_checkout");
-			const addButtonText = productForm.querySelector('[name="add"] > span.atc-text');
+			const addButtonText = productForm.querySelector('[name="add"] > span');
 			const preorder = productForm.dataset.preorder;
 
 			if (addButton) {
@@ -221,3 +220,5 @@ document.querySelectorAll(".product-options__option").forEach((variantSelect, in
 	};
 	variantSelect.addEventListener("change", updateSelectedValue);
 });
+
+updateButton(!currentVariant.available, "Sold Out", false);
