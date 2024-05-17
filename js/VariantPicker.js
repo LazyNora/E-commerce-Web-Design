@@ -87,11 +87,12 @@ function _validateOptionsArray(options) {
 const onVariantChange = (e) => {
 	getSelectedOptions();
 	getSelectedVariant();
-	updateButton(!currentVariant.available, "Sold Out", false);
+	updateButton(true, "", false);
 	if (currentVariant) {
 		updateMedia();
 		updateBrowserHistory();
 		updatePrice();
+		updateButton(!currentVariant.available, "Sold Out");
 	}
 };
 variantPicker.addEventListener("change", onVariantChange);
@@ -107,7 +108,33 @@ const getSelectedOptions = () => {
 // Hàm lấy variant đã chọn
 const getSelectedVariant = () => {
 	let variant = getVariantFromOptionArray(productData, options);
+	let optionsClone = [...options];
+	if (!variant) {
+		var _variant;
+		optionsClone.pop();
+		variant = getVariantFromOptionArray(productData, optionsClone);
+		variant ||
+			(optionsClone.pop() &&
+				(variant = getVariantFromOptionArray(this.productData, optionsClone)));
+		options = [
+			...((_variant = variant) === null || _variant === void 0 ? void 0 : _variant.options),
+		];
+		updateSelectedOptions();
+	}
 	currentVariant = variant;
+};
+
+// Hàm cập nhật options đã chọn
+const updateSelectedOptions = () => {
+	const pickerFields = Array.from(document.querySelectorAll("[data-picker-field]"));
+	pickerFields.forEach((field, index) => {
+		if (field.dataset.selectedValue !== options[index]) {
+			const selectedOption = field.querySelector(`input[value="${options[index]}"]`);
+			selectedOption &&
+				((selectedOption.checked = !0),
+				field.dispatchEvent(new Event("change", { bubbles: !0 })));
+		}
+	});
 };
 
 // Hàm cập nhật button
