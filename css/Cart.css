@@ -19,17 +19,20 @@
 	border-radius: 0.25rem;
 	cursor: pointer;
 	display: flex;
+	max-height: 0;
+	opacity: 0;
+	padding: 0 0.75rem;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition:
+		max-height 0.3s,
+		padding 0.3s,
+		opacity 0.3s 0.2s;
 }
 
 .notification.show {
 	max-height: 96px;
 	opacity: 1;
 	padding: 0.5rem 0.75rem;
-	transition:
-		max-height 0.3s,
-		padding 0.3s,
-		opacity 0.3s 0.2s;
 }
 
 .notification.success {
@@ -43,10 +46,13 @@
 
 .cart-item {
 	padding: 12px 0;
+}
+
+.cart__wrapper:not(.cart) .cart-item {
 	border-top: 1px solid #f1f1f1;
 }
 
-.cart-item:last-child {
+.cart__wrapper:not(.cart) .cart-item:last-child {
 	border-bottom: 1px solid #f1f1f1;
 }
 
@@ -92,6 +98,7 @@
 	background: #f7f7f7;
 	box-shadow: 0 0 10px #82828233;
 	padding-top: 0;
+	border-block-width: 2px;
 }
 
 .cart-empty .cart__footer {
@@ -106,4 +113,96 @@ html.prevent-scroll,
 html.prevent-scroll body {
 	height: auto;
 	overflow: hidden;
+}
+
+.page-header {
+	padding: 2rem 1rem;
+	text-align: center;
+}
+
+.page-header__title {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+
+@media (min-width: 1024px) {
+	.page-header {
+		padding-bottom: 3.5rem;
+		padding-top: 3.5rem;
+	}
+	.page-header__title {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+}
+
+.cart__item,
+.cart__table-head {
+	border-bottom: 1px solid #dedede;
+}
+
+.cart__table-head {
+	font-weight: 700;
+}
+
+.cart__table-col {
+	flex: 0 0 auto;
+	padding: 0.8rem 1rem;
+	width: 40%;
+}
+
+.cart__table-product {
+	flex: 1;
+	width: auto;
+}
+
+.cart__table-col:first-child {
+	padding-left: 0;
+}
+
+.cart__item {
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem 0;
+}
+
+.cart__item-product-title {
+	font-weight: 700;
+}
+
+.cart__wrapper.cart .cart__summary.relative {
+	margin: 0 -3rem;
+	padding: 3rem 3rem 0;
+	width: 400px;
+}
+
+.paypal-button-label-container {
+	height: 24px;
+	max-height: 32px;
+	min-height: 22px;
+	position: relative;
+	top: 50%;
+	cursor: pointer;
+}
+
+.paypal-button-logo-pp,
+.paypal-button-logo-paypal {
+	padding: 0;
+	display: inline-block;
+	background: none;
+	border: none;
+	width: auto;
+}
+
+.paypal-button-label-container > * {
+	vertical-align: top;
+	height: 100%;
+	text-align: left;
+}
+
+@media (min-width: 768px) {
+	.cart__table-col {
+		padding: 1rem 1.5rem;
+		width: 20%;
+	}
 }

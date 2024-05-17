@@ -49,7 +49,7 @@ cartOpenBtns.forEach((btn) => {
 });
 
 function loadCart(addToCart = false) {
-	var currentCart = JSON.parse(localStorage.getItem("cart")) || {
+	let currentCart = JSON.parse(localStorage.getItem("cart")) || {
 		items: [],
 		subtotal: 0,
 	};
@@ -78,7 +78,7 @@ function loadCart(addToCart = false) {
 	}
 
 	const addSuccessMsg =
-		'<div class="notification show success"><svg class="w-6 h-6" fill="none" stroke="currentColor" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg><div class="ml-3">Product added to cart successfully</div></div>';
+		'<div class="notification success"><svg class="w-6 h-6" fill="none" stroke="currentColor" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg><div class="ml-3">Product added to cart successfully</div></div>';
 
 	const cartBody = cartContent.querySelector(".cart__body");
 	cartBody.innerHTML =
@@ -90,7 +90,7 @@ function loadCart(addToCart = false) {
 		.map(
 			(item, index) =>
 				`
-        <div class="cart-item" data-index=${index} data-product-id=${item.id}>
+        <div class="cart-item" data-index=${index} data-product-id=${item.id} data-variant-id=${item.variantId}>
           <div class="cart-item__inner flex items-start">
             <div class="cart-item__image">
               <a href=${path + item.url + "/?variant=" + item.variantId} class="block" style="--aspect-ratio:1.499">
@@ -124,7 +124,7 @@ function loadCart(addToCart = false) {
               <div class="flex items-center mt-[10px] justify-between">
                 <div class="cart-item__quantity flex justify-between rounded">
                   <button class="cart-item__btn" data-id=${item.id + ":" + item.variantId} data-qty-change="dec">-</button>
-                  <input class="py-1 cart-item__qty_input w-9 text-center" type="number" name="quantity" id="quantity" data-id=${item.id + ":" + item.variantId} value=${item.qty} min="0">
+                  <input class="py-1 cart-item__qty_input w-9 text-center" type="number" name="quantity" id="quantity${index}" data-id=${item.id + ":" + item.variantId} value=${item.qty} min="0">
                   <button class="cart-item__btn" data-id=${item.id + ":" + item.variantId} data-qty-change="inc">+</button>
                 </div>
                 <button class="cart-item__remove underline p-2 ml-2" data-id=${item.id + ":" + item.variantId}>Remove</button>
@@ -224,8 +224,14 @@ function loadCart(addToCart = false) {
 
 	if (addToCart && currentCart.items.length > 0) {
 		setTimeout(() => {
-			cartBody.querySelector(".notification").remove();
+			cartBody.querySelector(".notification").classList.add("show");
+		}, 500);
+		setTimeout(() => {
+			cartBody.querySelector(".notification").classList.remove("show");
 		}, 3000);
+		setTimeout(() => {
+			cartBody.querySelector(".notification").remove();
+		}, 3300);
 	}
 }
 

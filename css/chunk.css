@@ -1504,7 +1504,7 @@ button.btn.btn-plain:hover {
 	display: flex;
 }
 .cart__item-product-image {
-	width: 110px;
+	width: 150px;
 }
 .cart__item-product-title {
 	font-weight: 500;
