@@ -93,12 +93,12 @@ function loadCart(addToCart = false) {
         <div class="cart-item" data-index=${index} data-product-id=${item.id}>
           <div class="cart-item__inner flex items-start">
             <div class="cart-item__image">
-              <a href=${currentPath + item.url + "/?variant=" + item.variantId} class="block" style="--aspect-ratio:1.499">
+              <a href=${path + item.url + "/?variant=" + item.variantId} class="block" style="--aspect-ratio:1.499">
                 <img src=${item.img} alt=${item.alt} />
               </a>
             </div>
             <div class="cart-item__info">
-              <a href=${currentPath + item.url + "/?variant=" + item.variantId} class="font-bold hover:underline">${item.title}</a>
+              <a href=${path + item.url + "/?variant=" + item.variantId} class="font-bold hover:underline">${item.title}</a>
               ${
 					item.options_with_values
 						? `
