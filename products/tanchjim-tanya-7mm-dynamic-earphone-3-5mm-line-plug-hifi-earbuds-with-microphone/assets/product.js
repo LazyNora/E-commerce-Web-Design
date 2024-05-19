@@ -278,3 +278,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 536,
 };
+const metafields = ["model：TANCHJIM-TANYA Hi-Fi Earplugs<br />\nImpedance：16Ω± 10%<br />\nFrequency Range: 20-42KHz<br />\nSensitivity:12dB@1KHz<br />\n1K T.H.D&lt;0.3%<br />\nWire: Litz oxygen-free copper wire<br />\nTransducer :7MM moving coil transducer<br />\nDiaphragm material: PEEK<br />\nPlug:3.5MM in-line (gold plated)"];

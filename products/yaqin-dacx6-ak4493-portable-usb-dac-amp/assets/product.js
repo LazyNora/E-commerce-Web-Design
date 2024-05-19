@@ -347,3 +347,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 256,
 };
+const metafields = ["Simple dimensions: 52X18.5X8.5MM<br />\nDecoding chip：AK4493<br />\nPCM Specifications: 44.1-768KHZ<br />\nDSD Specifications: 64/128/256/512<br />\nSupport sampling: 16/24/32 bit<br />\nSupported modes for USB output DSD audio：DOP(DSD64/128/256)   NATIVE(DSD64/128/256/512) <br />\nSupport system:   Windows ,MAC OS, Android, IOS<br />\nOutput Interface: 3.5mm single-ended<br />\nOperating Voltage: 4.9-5.3V<br />\nOutput Level:2VRMS  @RL=600Ω<br />\nOutput power consumption:80mW @RL=32 Ω<br />\nFrequency response: 20Hz - 20kHz (+0.05 -0.4dB)<br />\nSNR：107dBA<br />\nTotal Harmonic Distortion：-100dB@RL=600Ω, 0dB, -95dB@RL=32Ω, 50mW "];

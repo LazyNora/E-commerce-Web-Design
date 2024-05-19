@@ -225,3 +225,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 342,
 };
+const metafields = ["Input：USB/Optical / Coaxial / Bluetooth<br />\nOutput：RCA/XLR<br />\nDynamic range：134dB(XLR),128dB(RCA)<br />\nMQA decoder：USB/Optical / Coaxial<br />\nMQA-CD decoder：Optical / Coaxial<br />\nSampling rate &amp; Bit Width：<br />\nUSB PCM : 44.1 ~768kHz(32bit)<br />\nDSD: 2.8224 ~22.5792MHz(lbit)<br />\nOptical/ Coaxial: 44.1 ~192kHz(24bit)<br />\nDoP: DoP256(USB),DoP64(Optical/ Coaxial)<br />\nBluetooth: 5.0<br />\nSize：187.5x154x40mm (WxHxD)<br />\nWeight：0.79kg"];

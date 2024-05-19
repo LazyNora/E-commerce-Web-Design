@@ -88,3 +88,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 188,
 };
+const metafields = ["Frequency response: 20Hz-20kHz.<br />\nImpedance: 21Ω@1kHz.<br />\nSensitivity: 105dB±1dB@1kHz.<br />\nTHD+N: &lt;0.1%@1kHz.<br />\nConnectors: 0.78mm 2-pin."];

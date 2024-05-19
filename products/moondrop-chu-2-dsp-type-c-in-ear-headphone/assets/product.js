@@ -207,3 +207,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 43,
 };
+const metafields = ["Impedance: 18Ω±15%<br />\nSensitivity: 119dB/Vrms<br />\nTHD+N: ≤0.5%<br />\nFrequency Response: 15Hz-38kHz<br />\nEffective FR: 20Hz-20kHz<br />\nConnectors: 0.78mm 2-pin<br />\nTermination: USB Type-C","CHU 2 DSP * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nEartips * 3 pairs (L/M/S)<br />\nBrand Card * 1<br />\nUser Manual * 1"];

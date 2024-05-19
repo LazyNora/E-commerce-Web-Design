@@ -172,3 +172,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 47,
 };
+const metafields = ["UDP-6P * 1<br />\nRemote Control * 1<br />\nRadiator * 1<br />\nUser Manual * 1"];

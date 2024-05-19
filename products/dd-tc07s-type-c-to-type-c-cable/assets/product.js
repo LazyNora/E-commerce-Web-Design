@@ -212,3 +212,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 115,
 };
+const metafields = ["Cable Structure: Power &amp; Signal with Shielding<br />\nInner Insulation: NUC High Precision Chemical Foam PE(Made in Japan)<br />\nOuter Insulation: High Transparency SoftFlex PVC(Made in USA)<br />\n<br />\nData Part:<br />\nCore Thickness:27AWGx2<br />\nCore Material: High Purity Litz Type2 4N Solid Core Silver (Φ0.08mmx19x2)<br />\n<br />\nPower Part:<br />\nCore Thickness: 22.9AWGx2<br />\nCore Material: High Purity Litz Type2 Oxygen-Free Copper (Φ0.05mmx19x7x2)<br />\n<br />\nShielding Material: Litz Silver Plated over LCOFC<br />\n<br />\nCable Diameter: Φ4.0mm<br />\nWeight/Length:10g/10cm, 20g/50cm<br />\nPlug: USB-C OTG"];

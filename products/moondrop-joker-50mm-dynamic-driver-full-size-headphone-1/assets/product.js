@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 128,
 };
+const metafields = ["Diaphragm: Partially Rigid Composite Diaphragm<br />\nFrequency Response Range: 15Hz-22kHz<br />\nEffective Frequency Response Range: 20Hz-20kHz( IEC60318-4,3dB)<br />\nSensitivity: 106dB/Vrms(@1kHz)<br />\nImpedance: 68Ω±15%(@1kHz)<br />\nCable Jack: 3.5mm<br />\nPlug: 3.5mm stereo jack plug","Joker * 1<br />\nHeadphone Cables * 1<br />\n3.5mm jack * 1<br />\nUser Manual * 1<br />\nBrand Card * 1"];

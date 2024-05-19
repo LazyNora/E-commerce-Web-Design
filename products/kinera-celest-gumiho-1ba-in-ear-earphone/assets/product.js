@@ -242,3 +242,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 260,
 };
+const metafields = ["Plug: 3.5mm<br />\nDriver: 1 Planar+1 BA<br />\nInterface: 0.78 2pin<br />\nSensitivity: 106db+1dB<br />\nWearing Type: In-ear<br />\nFrequency Response Range: 20Hz-20kHz<br />\nlmpedance: 9Ω<br />\nWeight( earbuds+cable): 8.6g+19.4g<br />\nCable length: 1.25m","Gumiho In-ear Monitors * 1 <br />\n0.78 2pin Cable * 1 <br />\nSilicon Rubber Eartips * 6 <br />\nStorage bag * 1 <br />\nCleaning brush * 1 <br />\nMetal bookmark * 1 "];

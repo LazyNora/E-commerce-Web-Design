@@ -207,3 +207,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 369,
 };
+const metafields = ["Color: Silver<br />\nSensitivity: 118dB/Nrms @1Khz<br />\nImpedance: 32Ω土10% @1Khz<br />\nFrequency response range: 7-50kHz<br />\nTHD: &lt; 0.5% @1Khz 94dB SPL<br />\nDriver: 10mm composite diaphragm dynamic driver<br />\nDriver technology: DMT 4<br />\nCable: 1.25M+3.5MM gold-plated non-magnetic<br />\nhigh-performance plug<br />\nThe diaphragm material of Dynamic driver: Flexible<br />\nultrafine fiber suspension +beryllium plated dome<br />\nCable material: oxygen-free copper silver-plated core<br />\nCable structure: Litz anti-oxidation"];

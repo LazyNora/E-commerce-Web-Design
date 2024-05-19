@@ -208,3 +208,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 235,
 };
+const metafields = ["Product name:BLON BL-mini<br />\nBrand: BLON<br />\nModel: BL-mini<br />\nImpedance: 16Ω<br />\nSensitivity: 20Hz-20000Hz<br />\nInterface: 3.5mm<br />\nCable length:1.2m silver cable<br />\nColor: Gun/Silver<br />\nWhether with mic: Optional<br />\nDriver: 6mm dynamic driver"];

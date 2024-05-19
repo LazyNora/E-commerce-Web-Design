@@ -105,3 +105,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 186,
 };
+const metafields = ["Driver Size: 10mm.<br />\nImpedance: 22Ω.<br />\nSensitivity: 99dB.<br />\n2-Pin 0.78mm interface.<br />\nTermination plug: 3.5mm.","Affinity * 1<br />\nEarphone Cable * 1<br />\nEartips * 9 pairs<br />\nStorage Case * 1"];

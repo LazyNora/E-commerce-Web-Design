@@ -212,3 +212,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 156,
 };
+const metafields = ["Net weight: approx. 30g (whole machine including cable)<br />\n<br />\nFrequency response: 5Hz - 40kHZ<br />\nImpedance: 32Ω<br />\nSensitivity: 105dB ±1dB at 1kHZ<br />\nTHD: &lt;0.5% at 1kHZ<br />\n<br />\nMoving coil unit: flexible overhang liquid crystal polymer composite diaphragm<br />\n<br />\nHeadphone material: stainless steel and aluminum alloy<br />\n<br />\nWire: high purity single crystal copper silver-plated Litz wire<br />\nCable length: 1.2m±0.1m","ALPHA 3 * 1<br />\nEarphone Cable * 1<br />\nStorage Case * 1<br />\n3.5mm Plug * 1<br />\n4.4mm Plug * 1<br />\nHollow-Type Balanced Sponge Eartips * 3 pairs <br />\nAll-inclusive Bass Sponge Eartips * 3 pairs<br />\nUser Manual * 1"];

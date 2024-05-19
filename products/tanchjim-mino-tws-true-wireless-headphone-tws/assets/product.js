@@ -266,3 +266,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 68,
 };
+const metafields = ["Frequency response range: 20-20000Hz<br />\nWorking range: 15m<br />\nDrive unit: 10mm dynamic coil transducer<br />\nImpedance: 32Ω±10%@1kHz<br />\nWired charging interface: Type-C<br />\nCharging box wired input: 5V-1A"];

@@ -178,3 +178,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 103,
 };
+const metafields = ["D400 PRO * 1<br />\nRemote Control * 1<br />\nCharging cables * 1<br />\nUser Manual * 1"];

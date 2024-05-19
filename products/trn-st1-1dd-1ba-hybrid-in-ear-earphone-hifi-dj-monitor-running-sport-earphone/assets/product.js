@@ -487,3 +487,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 728,
 };
+const metafields = ["Model: ST1<br />\nEarphone type: In-ear<br />\nImpedance: 18Omega<br />\nEarphone sensitivity: 106dB/mW<br />\nFrequency range: 10-40000Hz<br />\nInterface: 3.5mm Gilded<br />\nPlug Type: L curved<br />\nCable Length: 1.2mplusmn3cm<br />\nColor: Black,Blue,Purple<br />\nWhether with cable: Yes<br />\nEarphone interface: 2Pin Interface<br />\nWhether with mic: Optional<br />\nWhether can replacement cable: Yes<br />\nDriver unit: 1DD+1BA hybrid driver unit"];

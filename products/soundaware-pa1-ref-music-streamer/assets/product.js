@@ -138,3 +138,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 126,
 };
+const metafields = ["Digital Input:<br />\nUSB3.0 Type-B Input (USB2.0 Compatible)<br />\n <br />\n<br />\nDigital Output:<br />\nPatented Clean USB Audio Output USB2.0 Type-A<br />\nor [Switchable]<br />\nPatented Clean Network Output RJ45<br />\n <br />\nSupercaps DC Output:<br />\n5VDC/3A over DC5525 Socket<br />\n5VDC/4A over High Quality Locking Socket<br />\n<br />\nConnectivity:<br />\nExternal Ground Binding Post<br />\n<br />\nPower:<br />\nAC 115/230V (Factory Configured)<br />\nPower Consumption ≤ 35W<br />\n <br />\n<br />\nPhysical:<br />\nDimension: 320x65x228mm<br />\nWeight: 6 Kg","SOUNDAWARE PA1 * 1<br />\nUSB Cable * 1<br />\nPower Cord * 1<br />\nManual * 1"];

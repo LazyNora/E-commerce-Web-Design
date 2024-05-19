@@ -122,3 +122,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 876,
 };
+const metafields = ["Output power: 54W + 54W (6Ω)<br />\nHarmonic Distortion: ≤ 1.9% (1kHz)<br />\nFrequency Response: 10Hz - 65kHz (-2dB)<br />\nSNR: ≥ 85dB (A)<br />\nInput sensitivity: ≤ 0.3V (1kHz)<br />\nLoad Impedance: 4Ω-8Ω<br />\nTube: KT88 × 4 12AU7 × 2 12AT7 × 2<br />\nDimensions: (length) 300mmX (W) 420mmX (high) 200mm<br />\nWeight: approximately 25 kg"];

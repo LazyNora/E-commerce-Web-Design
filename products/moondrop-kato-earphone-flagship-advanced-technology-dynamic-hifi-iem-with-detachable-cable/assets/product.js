@@ -341,3 +341,4 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
+const metafields = ["Driver: 10mm-ULT dynamic driver<br />\nDiaphragm: the 3rd generation DLC composite diaphragm<br />\nSocket: 0.78-2Pin sunken design<br />\nHousing: MIM stainless steel<br />\nNozzle: stainless steel *2, brass *2<br />\nCable plug: 3.5mm stereo single-ended plug<br />\nFrequency response range: 10Hz-45kHz (IEC61094, Free Field)<br />\nEffective frequency response range: 20Hz-20kHz (IEC60318-4, -3dB)<br />\nImpedance: 32Ω±15% (@1KHz)<br />\nSensitivity: 123dB/Vrms (@1KHz)<br />\nDistortion: &lt; 0.15% (@1khz, AES17 20khz, A-weight)<br />\nManufacturer: MOONDROP Technology Co., Ltd."];

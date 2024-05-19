@@ -218,3 +218,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 216,
 };
+const metafields = ["Impedance: 12 ohm<br />\nSensitivity: 109dB<br />\nFrequency Response Range: 10Hz-40kHz<br />\nConnector Type: MMCX"];

@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 144,
 };
+const metafields = ["Power cable x1<br />\nQuick start guide x1<br />\nWarranty card x1"];

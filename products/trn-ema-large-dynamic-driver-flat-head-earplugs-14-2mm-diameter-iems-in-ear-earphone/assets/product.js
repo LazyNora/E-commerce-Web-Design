@@ -240,3 +240,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 381,
 };
+const metafields = ["Product model:TRN-EMA<br />\nJack type:3.5mm<br />\nUnit type:Dynamic(14.2mm)<br />\nEarplugs type:Flat head earplugs<br />\nFrequency response:20Hz- 20000Hz<br />\nConnector type:2Pin-S <br />\nImpedence:32 Ω<br />\nSensitivity:124dB<br />\nWeight(Headphone + cable):6g+12g<br />\nColours:Silver<br />\nCable length:1.25m+5cm"];

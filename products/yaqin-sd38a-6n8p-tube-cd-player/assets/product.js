@@ -105,3 +105,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 251,
 };
+const metafields = ["Audio output signal: 2.3V（+-0.5dB）<br />\nFrequency Response: 10Hz-20kHz（+-0.3dB）<br />\nSNR: ≥110dB（A）<br />\nDistortion: ≤0.005%<br />\nDynamic range: ≥100 dB<br />\nChannel separation: 96dB<br />\nPower consumption: ≤70W<br />\nVacuum Tube: 6N8P x 2<br />\nInput Power Voltage: (110V, 120V, 127V, 230V, 240V version will take 3-14 work days to order) 220V version is in stock<br />\nDimensions: 390mm x 490mm x 190mm<br />\nWeight: 13kg","SD38A unit *1 <br />\nSet Tubes *1 <br />\nAluminum remote control *1 <br />\nStandard 1.5m Power Cord *1 "];

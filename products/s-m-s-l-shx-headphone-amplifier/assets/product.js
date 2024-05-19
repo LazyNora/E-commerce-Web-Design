@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 38,
 };
+const metafields = ["Input: Balanced / Unbalanced<br />\nHeadphone Outputs: 4.4mm / XLR Balanced / 6.35m<br />\nPre-ouputs: Balanced / Unbalanced<br />\nOutput Power:<br />\n16Ω --- 11.5W * 2<br />\n32Ω --- 5.5W * 2<br />\n300Ω --- 600mW * 2<br />\n600Ω --- 300mW * 2<br />\nSNR: 137dB<br />\nDynamic Range: 137dB<br />\nTHD+N: -123dB , 0.00006% ( 1kHz , 32Ω ) <br />\nInput Impedance: 34kΩ<br />\nAMP output Impedance: Near 0Ω<br />\nPre-ouput Impedance: <br />\nBalanced --- 66Ω<br />\nUnbalanced --- 33Ω<br />\nFrequency Response: 20Hz --- 100kHz (-0.5dB)<br />\nGain: <br />\nBalanced --- Low (-2dB), Middle (6dB), High (23dB)<br />\nUnbalanced --- Low (-8dB), Middle (0dB), High (17dB)<br />\nPower consumption (EN60065): ＜50W<br />\nPower Standby: ＜0.5W<br />\nSize: 250 * 51 * 192 ( W * H * D )<br />\nWeight: 2.42kg / 5.33lbs","SH-X * 1<br />\nPower Cables * 1<br />\nUser Manual * 1<br />\n"];

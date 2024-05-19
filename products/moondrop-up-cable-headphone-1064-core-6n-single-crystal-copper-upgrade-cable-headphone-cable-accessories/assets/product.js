@@ -291,3 +291,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 297,
 };
+const metafields = ["Series: MOONDROP Cable Choice<br />\n<br />\nMarerial: 6N Single Crystal Copper<br />\n<br />\nStructure: Spiral Circular Kintting<br />\n<br />\nExterior Cover: Transparent PVC<br />\n<br />\nCore: 8-Strand 1064-Core(Single Strand with 19-Core and 7-Strand)","[UP!] Cable * 1<br />\n"];

@@ -190,3 +190,4 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
+const metafields = ["Cavity material: ZN alloy<br />\nDriver : 10mm high-performance dynamic driver<br />\nDiaphragm : Aluminum-manesium alloy composite diaphragm<br />\nHeadphone Jack: 0.78mm-2pin<br />\nPlug : 3.5mm single-ended<br />\nFrequency Response: 15Hz-38KHz<br />\nEffective Frequency Response: 20Hz-20KHz (IEC60318-4,3dB)<br />\nlmpedance: 18Ω±15% (@1KHz)<br />\nSensitivity:119dB/Vrms (@1KHz)<br />\nTHD: THD≤0.5% (@1KHz,94dB)","CHU 2 * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nEartips * 3 pairs (L/M/S)<br />\nBrand Card * 1<br />\nUser Manual * 1<br />\n<br />\n<br />\n"];

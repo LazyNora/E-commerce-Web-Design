@@ -191,3 +191,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 351,
 };
+const metafields = ["Driver configuration: 14.5mm Planar Driver<br />\nSocket: 0.78mm 2-pin<br />\nCable jack: 3.5mm-stereo-ended<br />\nSensitivity: 117dB/Vrms（@1kHz)<br />\nImpedance: 36Ω±15%（@1kHz)<br />\nFrequency response：10Hz-50kHz<br />\nEffective frequency response: 20Hz-20kHz<br />\n(IEC60318-4，3dB)"];

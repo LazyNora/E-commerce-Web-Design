@@ -190,3 +190,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 148,
 };
+const metafields = ["Driver: 10mm planar diaphragm<br />\nImpedance: 22 Ω ± 15%<br />\nSensitivity: 108±3dB @1K Hz V0.179V<br />\nFrequency range: 10 Hz–20kHz<br />\nCable: 1.25m {(18/0.06) oxygen-free copper+ 200d Kevlar) *3 strands }Φ1.3 * 4 strands woven translucent orange PVC cable<br />\nInterface: Gold-plated MMCX connector<br />\nRated power: 5mW<br />\nMax power: 10mW<br />\nMax distortion: 1% @1k Hz 0.179V","P1 Plus * 1<br />\nEarphone Cables * 1<br />\nEartips * 7 pairs<br />\nStorage Case * 1"];

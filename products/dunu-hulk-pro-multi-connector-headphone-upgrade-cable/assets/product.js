@@ -127,3 +127,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 197,
 };
+const metafields = ["Package Contents:<br />\nDUNU Hulk Pro IEM Upgrade Cable.<br />\n2.5mm balanced termination plug.<br />\n4.4mm balanced termination plug.<br />\n3.5mm single-ended termination plug."];

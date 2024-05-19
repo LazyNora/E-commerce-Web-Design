@@ -241,3 +241,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 220,
 };
+const metafields = ["Type:In-ear<br />\nlmpedance:16Ohm<br />\nDrivers: 2x 6mm Dynamic driver &amp; 6x Balanced Armature driver<br />\nSensitivity:108 +-3dB<br />\nConnectors: 3.5mm / 2.5mm / 4.4mm<br />\nFrequency response: 16 -45000 Hz<br />\nCable: 8-core Furukawa copper<br />\nCable length:1.3m<br />\nWeight:10g"];

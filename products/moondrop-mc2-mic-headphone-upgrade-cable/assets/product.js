@@ -122,3 +122,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 87,
 };
+const metafields = ["MC2 3.5MM Cables * 1"];

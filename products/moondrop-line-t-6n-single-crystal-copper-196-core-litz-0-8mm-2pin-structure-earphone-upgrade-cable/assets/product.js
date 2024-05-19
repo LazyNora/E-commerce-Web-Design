@@ -208,3 +208,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 385,
 };
+const metafields = ["Model: LINE T 6N Single Crystal Copper 196-Core<br />\nLitz Structure Earphone Upgrade Cable<br />\nSeries: MOONDROP Selected Professional Cable<br />\nMaterial: 6N single crystal copper<br />\nCable-core specification: 26 awg four strands<br />\nOuter cover: High permeability PVC<br />\nCable Pin: 0.78 2pin<br />\nCable Plug: 4.4mm balanced"];

@@ -173,3 +173,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 299,
 };
+const metafields = ["Model: LAN IEM with replaceable cable<br />\nShell: MIM steel shell<br />\nDriver: 10mm dual-cavity high-performance dynamic driver<br />\nCoil: 0.03mm ultra-thin CCAW<br />\nDiaphragm: Berylium-plated dome composite diaphragm<br />\nMagnetic circuit: N52 magnetic high-performance interal<br />\nmagnetic circuit<br />\nAcoustic Filter: Patented anti-blocking (anti-imbalanced) filter<br />\nHeadphone Jack: 0.78mm-2pin&lt;br&gt;Plug: 3.5mm single-ended<br />\nFrequency Response: 15Hz -37kHz<br />\nEffective Frequency Response: 20Hz-20kHz (IEC60318-4, 3dB)<br />\nImpedance: 320±15% (@1kHz)<br />\nSensitivity: 120dB/Vrms(@1kHz)<br />\nTHD: THD≤0.5% (@1kHz, 94dB)"];

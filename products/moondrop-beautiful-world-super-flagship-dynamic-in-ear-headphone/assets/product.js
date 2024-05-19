@@ -207,3 +207,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 136,
 };
+const metafields = ["Driver: 10mm ULT-Pro dynamic driver<br />\nDiaphragm: 3rd generation DLC composite diaphragm<br />\nCable jack: 0.78mm-2Pin (sunken type)<br />\nFrequency response range: 10Hz-45Hz (IEC61094, Free Field)<br />\nImpedance: 32Ω±15%(@1kHz)<br />\nSensitivity: 122dB/Vrms(@1kHz)<br />\nDistortion: ＜0.16%(@1kHz, AES17 20kHz, A-weight)","Beautiful World * 1<br />\nSpring Tips * 3 pairs (S/M/L)<br />\nPlastic Ear-tips Case * 1<br />\nManual Guide * 1<br />\nWearing Impression * 1<br />\nCertificate * 1<br />\nOE Adapter * 1<br />\nInterchangeable Single-crystal Silver Cable * 1<br />\nGaluchat Leather Storage Case * 1<br />\nRAFFIA * 1"];

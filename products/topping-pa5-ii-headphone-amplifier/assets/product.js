@@ -528,3 +528,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 142,
 };
+const metafields = ["Measured: 16.6cm x 12.9cm x 4.1cm<br />\nWeight: 680g<br />\nPower input PA5 II: DC38V/3.0A (2 pin aviation connector)<br />\nPA5 II PIus: DC38V/4.0A (2 pin aviation connector)<br />\nSignal inputs: SE(RCA L+R)，BAL(TRS L+ R)<br />\nSignal output: Speaker terminal (BTL)<br />\nPower on &amp; off: by manual/trigger signal<br />\nVolume control: Analog Potentiometer<br />\nDisplay: White LED<br />\nStandby power consumption: &lt;0.5W","PA5 II / PA5 II PLUS * 1<br />\nPower Adapter * 1<br />\nPower Cables * 1<br />\nProduct Card * 1<br />\nUser Manual * 1"];

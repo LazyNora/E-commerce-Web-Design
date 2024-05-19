@@ -327,3 +327,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 274,
 };
+const metafields = ["D70 Pro SABRE:<br />\n1. TOPPING D70 Pro SABRE<br />\n2. Remote Control<br />\n3. USB Cable<br />\n4. AC Cable<br />\n5. Bluetooth Antenna<br />\n6. Warranty Card<br />\n7. User Manual<br />\n<br />\nA70 Pro:<br />\n1. TOPPING A70 Pro<br />\n2. Remote Control<br />\n3. 6.35mm To 3.5mm Adapter<br />\n4. AC Cable<br />\n5. Warranty Card<br />\n6. User Manual"];

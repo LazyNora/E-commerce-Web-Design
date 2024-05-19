@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 57,
 };
+const metafields = ["Sound pressure: 106dB 1kHz<br />\nImpedance: 16Ω<br />\nFrequency response range: 10-20kHz<br />\nCable: Single strand (0.05×98) silver plated, whole 98×4 strands = 392 pcs, custom Pvc red, Leeds structure<br />\nDrivers: 6 Balanced Armature Drivers 1 Piezo Electric Driver","NEZHA * 1<br />\nOxygen-free copper silver-plated wire * 1<br />\n4.4 headphone plug * 1<br />\n3.5 headphone plug * 1<br />\nTang Sancai (large diameter) * 3 pairs<br />\nTang Sancai (balanced) * 3 pairs"];

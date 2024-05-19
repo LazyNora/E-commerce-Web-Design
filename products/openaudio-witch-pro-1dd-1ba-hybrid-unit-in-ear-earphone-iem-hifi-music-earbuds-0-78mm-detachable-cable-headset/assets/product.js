@@ -221,3 +221,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 327,
 };
+const metafields = ["Color: Purple<br />\nDriver: Customize 9.2mm dynamic &amp; balanced armature driver<br />\nFrequency division: 2-Channel&amp; Physical<br />\nSensitivity: 110dB SPL(@1mw)<br />\nImpedance: 20 Ohm(@1kHz)<br />\nFrequency response: 10-20,000Hz<br />\nDistortion: ≤0.5%(@1kHz)<br />\nSocket: 0.78mm-2Pin<br />\nCable: 4 Core OFC","WITCH PRO * 1<br />\nStorage case * 1<br />\n3.3/4.4 mm cables * 1 (depends by choice)<br />\nEartips * 6 pairs<br />\nProduct Card * 1<br />\n"];

@@ -123,3 +123,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 585,
 };
+const metafields = ["Series:MOONDROP Professional Cable<br />\nCable specs: 3*8 OCC copper core+31 OCC copper shielding layer<br />\nSocket: Micro 0.78mm 2Pin<br />\nPatent replaceable plug include: 3.5mm-single-ended/2.5mm-balanced/4.4mm-balanced"];

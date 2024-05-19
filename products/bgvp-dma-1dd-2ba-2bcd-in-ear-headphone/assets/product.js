@@ -129,3 +129,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 40,
 };
+const metafields = ["Sensitivity: ≥106dB SPL/MW<br />\nInput impedance: 17Ω<br />\nFrequency response range: 10Hz-40kHz<br />\nDistortion rate: &lt;1%<br />\nChannel difference: ±1dB<br />\nRated power: 179mW<br />\nCavity material: Resin +Aluminum alloy<br />\nDriver: Sonion BA (2300 series) *1<br />\nKnowles BA (RAD series) *1<br />\n9.2mm nickel-plated DD*1<br />\nSonion Bone Conduction Driver *2<br />\nWire: 6N OCC Silver-Plated Cable<br />\nLine length: ±1.2m"];

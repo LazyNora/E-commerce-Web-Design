@@ -357,3 +357,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 209,
 };
+const metafields = ["Driver : 9mm Dynamic<br />\nPlug： 3 .5mmgold plated<br />\nImpedance : 16Ω<br />\nCable : Silver plated OFC<br />\nSensitivity @ 1KHz: 93d±2dB<br />\nCable length：1.2m<br />\nFrequency Range : 20-20,000Hz<br />\nMic : Omni-directional<br />\nPower ( Max): 2mW<br />\nWeight :9.5g","Myryad MUSIC 1 * 1<br />\nCharge Cable * 1<br />\nUser manual * 1"];

@@ -174,3 +174,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 283,
 };
+const metafields = ["Model: Blessing3 Hybrid In-ear Monitor<br />\nImpedance: 14.8Ω±15%(@1kHz)<br />\nFrequency Response: 10Hz-30kHz<br />\nEffective Frequency Response: 20Hz-20kHz(IEC60318-4, -3dB)<br />\nSensitivity: 120dB/Vrms(@1kHz)<br />\nTHD: THD@1kHz≤0.5%<br />\nDriver: Two Dynamic Drivers + Four Balanced Armatures<br />\nJack: 3.5mm Single-ended Jack<br />\nHousing processing: 3D Printing of Imported Medical Resin<br />\nHeadphone Jack: 0.78-2pin"];

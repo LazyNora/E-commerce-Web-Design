@@ -157,3 +157,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 586,
 };
+const metafields = ["Frequency response range: 5-40kHz<br />\nEffective range: 20-20kHz<br />\nSensitivity: 125dB/Vrms @1kHz<br />\nimpedance: 8 ohms<br />\nTHD:&lt;1%@94dB<br />\nShell material: Imported medical resin<br />\nUnit driver: 5pcs balanced armature drivers","RS5 * 1<br />\nEarphone Cables * 1<br />\nEartips * 6  pairs<br />\nClean kit * 1<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nBrand Card * 1"];

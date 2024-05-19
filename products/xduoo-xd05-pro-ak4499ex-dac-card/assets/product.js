@@ -122,3 +122,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 94,
 };
+const metafields = ["Applicable systems: Windows, Linux, Mac OS, IOS, Android systems<br />\nBattery: Built-in 3.7V/13600mAh rechargeable lithium battery<br />\nBattery life: USB IN ≥11H, AES (coaxial/optical) ≥ 11H, AUX≥20H (ECO mode)<br />\nCharging time: ≤6H (PD fast charging), ≤15H (normal charging 5V/2A)<br />\nVolume: 18.5 * 9.5 * 3.3 cm<br />\nWeight: 0.78 kg<br />\n<br />\n","XD05 Pro AK4499EX DAC Card * 1"];

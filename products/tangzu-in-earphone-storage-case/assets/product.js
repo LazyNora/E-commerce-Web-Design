@@ -190,3 +190,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 131,
 };
+const metafields = ["Length: 13cm<br />\nWidth: 10cm<br />\nHeight: 4.5cm<br />\nWeight: 159g","Earphone Case * 1"];

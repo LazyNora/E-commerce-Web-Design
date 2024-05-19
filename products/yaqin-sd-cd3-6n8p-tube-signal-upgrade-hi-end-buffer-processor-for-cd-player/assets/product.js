@@ -162,3 +162,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 875,
 };
+const metafields = ["Tubes:6N8P × 2 (Cathode followers,it can be replaced with 6SN7)<br />\nOutput Jacks: Two channels with two gold plated RCA jacks<br />\nInput Jacks: Two channels with two gold plated RCA jacks<br />\nInput Impedance: 100KΩ<br />\nDistortion of Harmonic Wave: ≤0.03%(1KHz input)<br />\nSignal to Noise Ratio: &gt;75 dB<br />\nFrequency Response: 10Hz ~ 100KHz (-0.1dB)<br />\nSupply Voltage: AC115V 60Hz<br />\nPower Consumption: 15W<br />\nDimension: 17cm(W) x 20cm(D) x12cm(H) (7” x 8” x 5”)<br />\nShipping Dimension: 27cm x 23cm x 21cm<br />\nNet Weight: 2.5kg (5.5lb)<br />\nGross Weight: 3.2kg (7lb)","A Yaqin SD-CD3 Processor with two tubes<br />\nA Power Cable<br />\nA Manual"];

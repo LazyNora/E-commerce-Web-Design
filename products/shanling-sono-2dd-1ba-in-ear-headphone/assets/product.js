@@ -207,3 +207,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 149,
 };
+const metafields = ["- Triple Driver Hybrid<br />\n- Single Custom-made Balanced Armature for Treble<br />\n- Two Dynamic Drivers in Coaxial Design<br />\n- 6.8mm Midrange driver with Liquid Crystal Diaphragm<br />\n- 9.2mm Bass driver with Bio-Diaphragm<br />\n- Two interchangeable nozzles for sound adjustment<br />\n- Full Zinc Alloy Construction<br />\n- Interchangeable cable using 0.78mm 2-pin<br />\n- Silver-Plated Copper Cable","SONO * 1<br />\nEarphone Cables * 1<br />\nEartips * 4 pairs<br />\n3.5mm plug * 1<br />\nStorage Case * 1<br />\nNozzles(balanced) * 1 pair<br />\nUser manual * 1"];

@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 113,
 };
+const metafields = ["Bluetooth Version: Bluetooth 5.2<br />\nBluetooth Protocol: A2DP/AVRCP/HFP/HSP<br />\nCharging Plug: Type-C<br />\nBluetooth Range: About 15 meters (barrier-free open environment)<br />\nCharging Time: About 2 hours<br />\nBattery Life: About 12 hours (The laboratory data)<br />\nCodec Protocol: LHDC/aptX HD/aptX Adaptive/aptX/AAC/SBC<br />\nEffective frequency response: 20Hz-20kHz(IEC60318-4,3dB)<br />\nTHD+N: THD@1kHz≤0.1%","VOYAGER * 1<br />\nCharging Cables * 1<br />\nUser Manual * 1<br />\nProduct Card * 1<br />\nEartips * 3 pairs (S/M/L)<br />\n"];

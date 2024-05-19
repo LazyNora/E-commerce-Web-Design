@@ -212,3 +212,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 258,
 };
+const metafields = ["Material: 6N OCC with Gold Plated<br />\nBraidway: 4 core manual cross braided<br />\nDiameter: 1.2mm per core<br />\nStrands: 49 strands of 0.06mm(diameter)per core, total 196 strands per cable<br />\nCable skin material: PVC<br />\nPlug: 4.4mm cable,0.78 2pin<br />\nAdapter: 4.4mm to 2.5mm &amp; 44mm to 3.5mm","Baldr In-Ear Monitors * 1 Pair<br />\n0.78 2 pin Cable * 1Pc<br />\nFinal Type E Eartips * 5 sets<br />\nSilicon Rubber Eartips * 6 sets<br />\nFoam Eartips * 2 scts<br />\n4.4mm to 2.5mm Adapter Cable * 1Pc<br />\n4.4mm to 3.5mm Adapter Cable * 1Pc <br />\nClean Brush * 1Pc  <br />\nStorage Case * 1Pc<br />\nUser Manual * 1Pc"];

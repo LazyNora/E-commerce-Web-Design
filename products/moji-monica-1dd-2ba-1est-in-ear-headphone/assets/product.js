@@ -212,3 +212,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 124,
 };
+const metafields = ["Driver Diaphragm: DLC<br />\nlmpedance: 14Ω<br />\nRated Power: 5mW<br />\nMaximum Power: 10mW<br />\nSensitivity: 106dB (at 1KHz/mW)<br />\nFrequency Response: 12-28KHz<br />\nDistortion: ≤1% (at 1KHz)<br />\nChannel Difference: ≤1.5dB (at 1Khz)<br />\nConnectors: 0.78mm 2-pin connectors<br />\nCable Material: Single-Crystal Copper Silver-Plated","LOSTLAND * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nUser Manual * 1"];

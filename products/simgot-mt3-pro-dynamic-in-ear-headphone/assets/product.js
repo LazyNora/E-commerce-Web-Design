@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 175,
 };
+const metafields = ["Vocalism Principle: Dynamic<br />\nTotal Harmonic Distortion: 0.3%<br />\nFrequency Response Range: 15 - 40000Hz<br />\nSensitivity: 105dB<br />\nResistance: 18Ω<br />\nStyle: In-Ear<br />\nLine Length: 1.2m<br />\nConnectors: 3.5mm<br />\nDriver Diameter: 10mm"];

@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 41,
 };
+const metafields = ["POWER IN: DC 5V/1A<br />\nBLUETOOTH VERSION: 5.3<br />\nAUDIO FORMAT: <br />\nAPTXLL、APTX AD、APTXHD、APTX、 AAC、SBC<br />\nCOMMUNICATION RANGE: <br />\nabout 100 meters in an unobstructed environment.<br />\nSIZE: 12.0*7.5*4.0cm<br />\nWEIGHT: 0.32kg<br />\n"];

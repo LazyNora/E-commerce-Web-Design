@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 88,
 };
+const metafields = ["MC1 Cables * 1"];

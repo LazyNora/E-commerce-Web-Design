@@ -214,3 +214,4 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
+const metafields = ["Driver: 10mm+7.8mm Dynamic Driver<br />\nDiaphragm: Polyurethane Suspension LCP Liquid Crystal Composite Diaphragm<br />\nImpedance: 17.5Ω±15% @1KHz <br />\nSensitivity: 117.5dB/Vrms @1KHz<br />\nTHD: &lt; 1%@1khz<br />\nFrequency Response Range: 20-40.5kHz (IEC61094, Free Field)<br />\nEffective Frequency Response Range: 20-20kHz (IEC60318-4, -3dB)","1. TRUTHEAR [ZERO:RED] * 1<br />\n2. Four Stands of High-quality Silver-plated Cable<br />\n3. Ear-tips * 3pairs (S, M, L) (Thick Diameter)<br />\n4. Ear-tips * 3pairs (S, M, L) (Thin Diameter)<br />\n5. Foam Ear-tips * 1pair (M)<br />\n6. 10Ω Impedance Adapter<br />\n7. Manual * 1<br />\n8. Warranty card * 1"];

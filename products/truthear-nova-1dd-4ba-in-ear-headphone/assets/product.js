@@ -273,3 +273,4 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
+const metafields = ["NOVA Hybrid In-ear Monitor<br />\nDriver Configuration: 1DD + 4BA<br />\nDiaphragm Material: PU + LCP<br />\nTHD: THD@1kHz&lt;1% (94dB)<br />\nSensitivity: 123dB/Vrms (@1kHz)<br />\nImpedance: 14.8Ω±15% (@1kHz)<br />\nFR Range: 8Hz-40kHz (IEC61094, Free Field)<br />\nEffective FR Range: 20Hz-20kHz (EC60318-4, -3dB)<br />\nCable Material: 4-Strand (448-Core) OCC"];

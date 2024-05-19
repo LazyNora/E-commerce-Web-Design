@@ -88,3 +88,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 247,
 };
+const metafields = ["Maximum output power: 11W X 2 (8Ω)<br />\nFrequency response: 10Hz-65KHz (-2dB)<br />\nDistortion: ≤0.7%<br />\nSignal to noise ratio: ≥90dB (A weighting)<br />\nInput sensitivity: ≤320mV<br />\nMaximum power consumption: ≤120W<br />\nLoad impedance: 4Ω-8Ω<br />\nTube: 12AX7 X 1 12AU7 X 1 Soviet Union 6114∩X 4<br />\nNet weight: 12 kg<br />\nGross weight: 13 kg<br />\nDimensions: 220mm*295mm*250mm"];

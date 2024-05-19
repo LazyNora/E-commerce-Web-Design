@@ -127,3 +127,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 262,
 };
+const metafields = ["Output Power: UL38W X2（8Ω） TL 26W X2（8Ω）<br />\nMaximum power consumption≤250W<br />\nFrequency response: 10Hz -48kHz (-2dB)<br />\nSignal to noise ratio: ≥90dB (A)<br />\nInput Sensitivity: ≤ 260mV<br />\nLoad Impedance: 8Ω- 15Ω<br />\nTubes: 6H9CX1,EL34X4,6H8CX2<br />\nVoltage input: 110/120v and 220/230v or 240v<br />\nSize: L400mm*W350mm*220mmH<br />\nNeight weight: 23kg<br />\nGross weight: 36kg"];

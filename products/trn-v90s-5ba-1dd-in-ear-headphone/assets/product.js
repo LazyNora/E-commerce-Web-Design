@@ -259,3 +259,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 111,
 };
+const metafields = ["Impedance: 22Ω<br />\nEarphone sensitivity: 108dB<br />\nFrequency range: 20-20000Hz<br />\nConnectors: 3.5mm\\ 2 PIN<br />\nColor: Black, Red<br />\nCable length: 1.25m±5cm<br />\nWeight: 30g","V90S * 1<br />\n6N OCC Copper Cables * 1<br />\nSilicone Eartips * 3 pairs (S/M/L)<br />\nUser Manual * 1"];

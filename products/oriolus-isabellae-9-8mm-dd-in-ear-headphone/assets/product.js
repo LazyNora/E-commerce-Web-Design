@@ -104,3 +104,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 206,
 };
+const metafields = ["Driver: 9.8mm Single DD<br />\nImpedance: 30 Ohm<br />\nSensitivity: 113dB<br />\nFrequency response: 10Hz~40kHz<br />\nWeight: 13g<br />\nPlug: 4.4mm"];

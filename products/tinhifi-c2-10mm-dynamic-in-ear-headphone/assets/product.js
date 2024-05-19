@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 159,
 };
+const metafields = ["Driver Type: 10mm dynamic driver with PU+LCP composite diaphragm, Daikku CCAW 0.035mm voice coil and N52 neodymium magnet.<br />\nFrequency Response: 10Hz-20kHz.<br />\nSensitivity: 104±3dB @ 1kHz 0.179V.<br />\nImpedance: 32 Ω ± 15%.<br />\nPower rating: 3mW<br />\nMaximum distortion: 3% @ 1kHz 0.179V<br />\nJack Connector: 3.5mm SE gold plated.<br />\nCapsule Connection Type: 2Pin 0.78mm gold plated.","C2 * 1<br />\nEarphone Cable * 1<br />\nBlack silicone tips (narrow core) * 3 pairs<br />\nBlack silicone tips (medium core) * 3 pairs<br />\nWarranty Card * 1<br />\nCertificate * 1"];

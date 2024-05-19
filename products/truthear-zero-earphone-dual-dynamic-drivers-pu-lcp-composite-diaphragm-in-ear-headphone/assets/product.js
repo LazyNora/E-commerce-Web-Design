@@ -268,3 +268,4 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
+const metafields = ["Configuration: 10mm+7.8mm Dynamic Driver<br />\nDiaphragm Material: PU + LCP composite diaphragm<br />\nTHD: THD@1KHz≤1%<br />\nSensitivity: 117.5dB/Vrms (@1KHz)<br />\nImpedance: 10Ω±15% (@1kHz)<br />\nFrequency Responce: 20Hz-39500Hz (IEC61094，Free Field) <br />\nCable: Oxygen-free Silver-plated","1. TRUTHEAR [ZERO] * 1<br />\n2. Four Stands of High-quality Silver-plated Cable<br />\n3. Ear-tips * 3pairs (S, M, L) (Thick Diameter)<br />\n4. Ear-tips * 3pairs (S, M, L) (Thin Diameter)<br />\n5. Foam Ear-tips * 1pair (M)<br />\n6. Manual * 1<br />\n7. Warranty card * 1"];

@@ -317,3 +317,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 185,
 };
+const metafields = ["Powerful Single-Dynamic Driver Unit.<br />\nUnique Black-Hole Faceplate Design.<br />\nMultiple Separation Technology.<br />\nSmooth, Detailed, High-Res Sound Clarity.<br />\nPremium High-Quality Detachable Cable.<br />\nPremium Earphone Carry Case.<br />\nImpedance: 16 Ohm.<br />\nPowerful 10mm Dynamic Driver.<br />\nFrequency Response Range: 16Hz-24kHz.<br />\nSensitivity: 105dB.<br />\nSPL: 125dB @ 1kHz."];

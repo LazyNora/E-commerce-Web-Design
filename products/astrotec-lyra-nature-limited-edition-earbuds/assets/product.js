@@ -105,3 +105,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 230,
 };
+const metafields = ["Impedance: 150 ohms.<br />\nDriver unit: 15mm dynamic driver.<br />\nFrequency response range: 15Hz-40kHz.<br />\nSensitivity: 108dB/mW.<br />\nRated power: 5mW.<br />\nMax power: 15mW."];

@@ -184,3 +184,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 1040,
 };
+const metafields = ["Impedance: 24Ω±15%<br />\nFrequency response range: 20-40kHz<br />\nEffective frequency response: 20-20kHz<br />\nSensitivity: 124dB/1mW<br />\nTHD：&lt;1％@1KHz<br />\nNatural frequency: 120Hz/FF<br />\nCable: 24AWG single crystal copper &amp; silver-plated shield<br />\nPlug: 3.5/4.4/2.5mm direct plug<br />\nQuality control range: ±1dB<br />\nTransducer: φ13.5mm external magnetic<br />\nMaterial of diaphragm: liquid crystal polymer LCP&amp;PU<br />\nCavity: TC4 titanium alloy &amp; gold-plated brass","CHACONNE earbuds * 1<br />\nFoam ear-tips * 12<br />\nStorage bag * 1<br />\nEar-tips recommended card * 1<br />\nName Card * 1<br />\nQC Certificate * 1"];

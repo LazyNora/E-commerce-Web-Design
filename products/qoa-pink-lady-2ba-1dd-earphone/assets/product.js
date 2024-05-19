@@ -178,3 +178,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 198,
 };
+const metafields = ["Earphone type:In-ear<br />\nImpedance: 16 Omega<br />\nEarphone sensitivity:112 ±1dB<br />\nFrequency range: 20-20000Hz<br />\nInterface: 3.5mm Gilded<br />\nPlug Type:Slant Type<br />\nCable Length: 1.2m<br />\nColor: Black,Purple<br />\nWhether with cable: Yes<br />\nEarphone interface: 0.78mm 2Pin Interface<br />\nWhether with mic:no mic<br />\nWhether can replacement cable: Yes<br />\nDriver unit:2 Balanced Armature+ 1 Dynamichybrid 3 drive unit","PINK LADY*1set<br />\nMemory foam eartips*1 set<br />\nSilicone eartips*6 sets<br />\nPremium zipper case<br />\nQoA card*2 pcs"];

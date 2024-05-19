@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 85,
 };
+const metafields = ["SHIROI Bricks * 1<br />\nUser Manual * 1"];

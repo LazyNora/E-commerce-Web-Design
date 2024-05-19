@@ -193,3 +193,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 170,
 };
+const metafields = ["DC-11: 3.5mm Single-ended Male -2.5mm Balanced Female Plug Adapter<br />\nDC-12: 4.4mm Balanced Male -2.5mm TRRS Female Plug Adapter<br />\nDC-16: 6.35mm Male -3.5mm Female Plug Adapter"];

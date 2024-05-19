@@ -122,3 +122,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 237,
 };
+const metafields = ["Color: As picture<br />\nTransducer Principle: Beryllium Alloy Driver<br />\nImpedance: 16ohm<br />\nSensitivity: 100dB<br />\nFrequency Response: 20-20000Hz<br />\nSpeaker:50mm NdFeB speaker<br />\nRated input power: 10mW<br />\nMaximum input power: 2000mW<br />\nWeight:321g<br />\nCable length:1.8M"];

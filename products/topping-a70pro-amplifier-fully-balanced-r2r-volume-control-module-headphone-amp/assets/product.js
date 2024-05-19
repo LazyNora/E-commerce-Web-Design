@@ -379,3 +379,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 275,
 };
+const metafields = ["1. TOPPING A70 Pro<br />\n2. Remote Control<br />\n3. 6.35mm To 3.5mm Adapter<br />\n4. AC Cable<br />\n5. Warranty Card<br />\n6. User Manual"];

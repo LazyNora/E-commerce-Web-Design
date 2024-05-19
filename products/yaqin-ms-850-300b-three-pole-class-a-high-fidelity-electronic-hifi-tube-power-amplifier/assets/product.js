@@ -145,3 +145,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 662,
 };
+const metafields = ["Maximum output: 24W+24W (8Ω,THD=5%)<br />\nPower consumption: 142W<br />\nSNR: 94db (A-weighted)<br />\nSensitivity:≤300mV<br />\nTotal harmonic distortion:1.0% (1KHz,8Ω,rated output 16W)<br />\nFrequency response: 10Hz-64KHz (-2dB)<br />\nTube: 300B*2, Russian 6n8p*2,Russian 6N9P*1,5Z3P*1<br />\nSize:29.5cmX22cmX39cm<br />\nNet Weight: 15kg<br />\nGross weight: 18kg","remote cotroller*1<br />\ncable*1<br />\nmanual*1<br />\nbattery*1<br />\nScrew accessories*1<br />\nwarranty card*1"];

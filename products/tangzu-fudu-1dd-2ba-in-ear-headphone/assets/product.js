@@ -207,3 +207,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 125,
 };
+const metafields = ["Distortion Rate: ≤1% 1kHz<br />\nSensitivity: 106db ±≤1db 1kHz<br />\nChannel Difference: &amp;lt;1%<br />\nImpedence: 16 ohm<br />\nFR range: 20 Hz - 20 kHz<br />\nCable Type: 25*0 05 Silver plated<br />\nCable Length: 1.25 m<br />\nInterface: 0.78 2- PIN<br />\nTermination Plug: Gold-Plated 4.4mm","FUDU * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nEartips * 7 pairs"];

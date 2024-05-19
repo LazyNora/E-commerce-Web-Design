@@ -208,3 +208,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 221,
 };
+const metafields = ["Dimensions: 25.5 x 18.8 x 6.8 cm (Length X Width x Height)<br />\nWeight: 2.4 kg<br />\nPower Drain:15W<br />\n<br />\nRCA Output<br />\nOutput Level: 2.3V<br />\nFrequency Response: 20 - 40 khz(±0.5dB)<br />\nSignal-to-Noise Ratio: 116 dB<br />\nDynamic Range:116dB<br />\nDistortion:&lt;0.001%<br />\n<br />\nHeadphone Output<br />\nLow Gain Output: 20mW @ 32 Ohm<br />\nHigh Gain Output: 70mW @ 32 Ohm<br />\nFrequency Response: 20 - 40 khz(±0.5dB)<br />\nSignal-to-Noise Ratio: 114 dB<br />\nDynamic Range:116dB<br />\nDistortion:0.0015%<br />\nChannel separation: 65dB @ 32 Ohm<br />\nOutput Impedance: 0.4 Ohm","EC3 * 1<br />\nPower Cable * 1"];

@@ -173,3 +173,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 91,
 };
+const metafields = ["Impedance: 26Ω±15%(@1kHz)<br />\nSensitivity: 119dB/Vrms(@1kHz)<br />\nFrequency Response Range: 8Hz-40kHz<br />\nEffective Frequency Response: 20Hz-20kHz<br />\nEarphone connector: 0.78mm QDC","EM6L * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nEartips * 3 pairs<br />\nUser Manual * 1"];

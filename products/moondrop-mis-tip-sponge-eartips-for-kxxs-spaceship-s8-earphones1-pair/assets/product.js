@@ -256,3 +256,4 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
+const metafields = ["Mis-tips * 2 pairs"];

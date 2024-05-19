@@ -168,3 +168,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 176,
 };
+const metafields = ["Wearing way: Around the ear<br />\n<br />\nRated power: 10mW<br />\n<br />\nSound performance:<br />\nDriver:10mm dual-cavity composite dynamic<br />\nDiaphragm: polymer composite diaphragm<br />\nFrequencyresponse:15Hz-40kHz<br />\nSensitivity: ≥105dB(at 1000Hz)<br />\nImpedance:18Ω<br />\nDistortion:&lt;1% 108dB(20μpa)<br />\nChannelimbalance:&lt;15dB(at 1000Hz)<br />\n<br />\nCable: OFC wires with in-line control and microphone<br />\n<br />\nColor: Clear, pink, red&amp;blue<br />\n<br />\nTechnique: ow resonance PC material, aluminum alloy oxidation nozzle, stamped stainless steel plate"];

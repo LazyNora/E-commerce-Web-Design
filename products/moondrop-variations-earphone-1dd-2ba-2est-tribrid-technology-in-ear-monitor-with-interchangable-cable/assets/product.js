@@ -123,3 +123,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 512,
 };
+const metafields = ["Frequency Response Range: 9-40kHz (IEC61094, Free Field)<br />\nEffective Frequency Response: 20-20kHz (IEC60318-4, -3dB)<br />\nSensitivity: 116dB/Vrms @1kHz<br />\nImpedance: 15.2Ω@1kHz ±15%<br />\nTHD:＜1%@1kHz<br />\nTransducer: 1DD+2BA+2EST<br />\nMidrange: Softears-D-Mid-B (Customized Mid-frequency Composite Balanced Armature Driver)<br />\nBass: 10mm Liquid Crystal Diaphragm Composite Copper Inner-cavity Dynamic Driver<br />\nTreble: SONION High-power Electrostatic Driver<br />\nCavity Material:  Stainless steel + Medical-grade Resin "];

@@ -127,3 +127,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 249,
 };
+const metafields = ["Frequency response: 10Hz-90KHz (-2dB)<br />\nSNR: 93dB<br />\nInput impedance: 47KΩ<br />\nMaximum output level: 18V (THD=0.5%)<br />\nGain: 14.5dB<br />\nTotal harmonic distortion: 0.03% (2V output)<br />\nLeft and Right Separation Degree: 63dB (1KHz)<br />\nOutput impedance: 230KΩ<br />\nPower dissipation: 42W<br />\nTube: 5AR4*1, EL84*1, 12AX7*2, 12AU7*2<br />\nNet weight: 9KG"];

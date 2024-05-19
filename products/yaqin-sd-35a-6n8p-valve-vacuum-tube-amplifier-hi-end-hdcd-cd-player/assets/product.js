@@ -122,3 +122,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 871,
 };
+const metafields = ["Audio output signal : 2.3V (± 0.5dB)<br />\nFrequency Response: 10Hz-30kHz(±0.5dB)<br />\nSNR : ≥ 110dB (A -weighted )<br />\nDistortion: ≤0.005%(1kHZ OPA)<br />\nDynamic Range: 110db<br />\nAnalog Output: One tube output and one OPA output<br />\nDigital Output: Coaxial a set<br />\nTube: 6N8P×2<br />\nPower Consumption: 90W<br />\nDimension(L*W*H): 375mm×205mm×345mm<br />\nNet Weight: 10kg<br />\nGross weight: 13.6kg<br />\nPower input: 110/120v or 220/230v 50/60hz"];

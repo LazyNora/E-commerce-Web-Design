@@ -241,3 +241,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 414,
 };
+const metafields = ["Size Volume: 56.8x19.4x12.5mm<br />\nEarphone Jack: 3.5mm Single-ended, 4.4mm Balanced<br />\nFrequency Range: 6Hz-85000 Hz (±1dB)<br />\nUSB interface: USB Type C<br />\nNoise Floor<br />\n~4.4mm: 1.5μV (AES17 20K Hz)<br />\n~3.5mm: 1.2μV (AES17 20K Hz)<br />\nTHD+N<br />\n~3.5mm: 2Vrms 0.0008%@32Ω  <br />\n~4.4mm: 4Vrms 0.00013%@300Ω<br />\nSNR<br />\n~4.4mm: 131dB (A-weighted)  <br />\n~3.5mm: 123dB (A-weighted)<br />\nFirmware Upgrade: Supported<br />\nGain Control: High/ Low<br />\nLine Out<br />\n~4.4mm: 4Vrms (High), 2.8Vrms (Low)<br />\n~3.5mm: 2Vrms (High), 1.4Vrms (Low)"];

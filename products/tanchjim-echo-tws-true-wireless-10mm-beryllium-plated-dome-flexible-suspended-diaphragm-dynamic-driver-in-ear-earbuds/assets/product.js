@@ -191,3 +191,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 462,
 };
+const metafields = ["Model| ECHO<br />\nOrigin| Dongguan, China<br />\nColor| Silver<br />\nFrequency response | 20-20000Hz<br />\nBluetooth| Bluetooth 5.2<br />\nImpedance| 32Ω<br />\nBattery life| 6H +42H<br />\nDiaphragm | Beryllium Plated Dome+ Flexible Suspension<br />\nWorking distance| 10m<br />\nBluetooth protocol| APTX， APTX Adaptive, AAC, SBC<br />\nDriver| 10mm dynamic driver"];

@@ -144,3 +144,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 222,
 };
+const metafields = ["Model: MG800<br />\nDriver:71mm Dynamic Driver<br />\nlmpedance: 24Ω<br />\nSensitivity:113±3dB<br />\nFrequency range: 20 - 40 000 HZ<br />\nWeight: 6.6g (Single earphone)<br />\nCable length: 1.3m<br />\nConnectors: 2.5/3.5/4.4mm","MG800 Dynamic Driver Earphpnes * 1<br />\nHeadphone Instructions * 1<br />\n(34th Anniversary Coin * 1)<br />\nHeadphone sleeve * 13<br />\nCleaning brush * 1<br />\n2.5mm Balanced Convertible Plug * 1<br />\n3.5mm single-ended interchangeable Plug * 1<br />\n4.4mm Balanced Swap Plug * 1<br />\nReplaceable Standard Tuning Filter(Balance) (Installed on Headphone) * 1<br />\nReplaceable Low Frequency Tuning Filter(Warm) * 1<br />\nReplaceable High Frequency Tuning Filter(Clear) * 1<br />\nMG800 sound mouth metal plate * 1<br />\nC1 Metal Headphone Storage Box * 1<br />\nMMCX cable puller * 1"];

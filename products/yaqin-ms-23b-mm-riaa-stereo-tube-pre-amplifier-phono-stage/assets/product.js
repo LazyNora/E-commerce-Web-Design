@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 873,
 };
+const metafields = ["<br />\nTubes: 12AX7B × 2 (Voltage preamplifier)<br />\nOutput Voltages: 0.5V (400Hz input/500mv)<br />\nOutput Jacks: One group of gold plated RCA jacks<br />\nInput Sensitivity: ≤4.0mV (400Hz, 0.5V output)<br />\nInput Jacks: One group of gold plated RCA jacks plus a grounding terminal<br />\nSignal-to-Noise Ratio: &gt;85dB (A weight)<br />\nDistortion of Harmonic Wave: ≤0.11%(400Hz input)<br />\nCartridge Suitability: MM (Moving Megnet) cartridge<br />\nSupply Voltage: AC115V 60Hz<br />\nDimension:17cm(W) x 20cm(D) x12cm(H) (7” x 8” x 5”)<br />\nNet Weight: 2.3kg (5.1lb)<br />\nShipping Dimension: 27cm x 23cm x 21cm<br />\nGross Weight: 3.0kg (6.6lb)","A YAQIN MS-23B unit<br />\nA Power plug<br />\nA Manual"];

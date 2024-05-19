@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 58,
 };
+const metafields = ["Frequency Response: 5Hz-58kHz<br />\nEffective FR.: 20Hz-20kHz<br />\nSensitivity: 122dB/Vrms (@1kHz)<br />\nImpedance: 14Ω±15% (@1kHz)<br />\nInterchangeable Cable: MMCX connector<br />\nInterchangeable Plug: 3.5mm stereo + 4.4mm BAL<br />\nCable Material: OCC with shielding layer<br />\nCable Length: 1.2m<br />\nWeight: About 5.5g (excl. the cable)<br />\nColor: Green + Silvery","E2023 * 1<br />\nHeadphone Cable * 1<br />\nEartips * 3 pairs<br />\nStorage Case * 1"];

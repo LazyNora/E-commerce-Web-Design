@@ -61,7 +61,9 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 				)
 				.join("")}
         </div>
-        <div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
+				${
+					product.media.length > 1
+						? `<div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
           <button class="swiper-button-control swiper-button-prev btn-icon">
             <svg
               width="14px"
@@ -82,12 +84,16 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
               <path d="M218.101 38.101L198.302 57.9c-4.686 4.686-4.686 12.284 0 16.971L353.432 230H12c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h341.432l-155.13 155.13c-4.686 4.686-4.686 12.284 0 16.971l19.799 19.799c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L235.071 38.101c-4.686-4.687-12.284-4.687-16.97 0z"></path>
             </svg>
           </button>
-        </div>
+        </div>`
+						: ""
+				}
       </div>
     </div>
-    ${
-		gallery.getAttribute("type") === "desktop"
-			? `
+		${
+			product.media.length > 1
+				? `${
+						gallery.getAttribute("type") === "desktop"
+							? `
     <div class="media-nav">
       <div class="nav-swiper-container" style="opacity:1;">
         <div class="swiper-wrapper">
@@ -109,10 +115,12 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
       </div>
     </div>
     `
-			: `
+							: `
     <div class="swiper-pagination"></div>
     `
-	}
+					}`
+				: ""
+		}
   </div>
   `;
 
@@ -163,33 +171,39 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 	const enableImageZoom = container.dataset.enableImageZoom === "true";
 	domNodes = queryDomNodes(selectors, container);
 
-	const navSlider = new Swiper(".nav-swiper-container", {
-		spaceBetween: 10,
-		slidesPerView: 5,
-		watchSlidesProgress: true,
-		threshold: 2,
-		freeMode: true,
-		direction: "horizontal",
-	});
+	const navSlider =
+		product.media.length > 1
+			? new Swiper(".nav-swiper-container", {
+					spaceBetween: 10,
+					slidesPerView: 5,
+					watchSlidesProgress: true,
+					threshold: 2,
+					freeMode: true,
+					direction: "horizontal",
+				})
+			: null;
 
-	const slider = new Swiper(`.media-${gallery.getAttribute("type")}`, {
-		initialSlide: 0,
-		autoHeight: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		thumbs: {
-			swiper: navSlider,
-		},
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-			type: "bullets",
-		},
-		loop: true,
-		threshold: 2,
-	});
+	const slider =
+		product.media.length > 1
+			? new Swiper(`.media-${gallery.getAttribute("type")}`, {
+					initialSlide: 0,
+					autoHeight: true,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					thumbs: {
+						swiper: navSlider || null,
+					},
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+						type: "bullets",
+					},
+					loop: true,
+					threshold: 2,
+				})
+			: null;
 
 	const handleSlideChange = () => {
 		if (!slider) return;
@@ -310,8 +324,10 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 	// Thêm sự kiện uiRegister để thêm các button vào lightbox
 	lightbox.on("uiRegister", () => {
 		lightbox.pswp.ui.registerElement(closeBtn);
-		lightbox.pswp.ui.registerElement(arrowPrev);
-		lightbox.pswp.ui.registerElement(arrowNext);
+		if (product.media.length > 1) {
+			lightbox.pswp.ui.registerElement(arrowPrev);
+			lightbox.pswp.ui.registerElement(arrowNext);
+		}
 	});
 
 	// Thêm sự kiện uiUpdate để cập nhật các button

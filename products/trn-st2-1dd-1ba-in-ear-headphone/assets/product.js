@@ -191,3 +191,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 61,
 };
+const metafields = ["TRNST2*1<br />\nUser Manual*1<br />\n"];

@@ -224,3 +224,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 141,
 };
+const metafields = ["Driver: Ultra-low distortion dynamic driver of 10mm Mg-Li-Alloy <br />\n            dome composite diaphragm<br />\nFrequency Response: 12Hz-24KHz(IEC61094,Free Field)<br />\nEffective Frequency Response: 20Hz-20KHz(IEC60318-4,-3dB)<br />\nSensitivity: 122dB/Vrms(@1KHz)<br />\nlmpedance: 15Ω+15%(@1KHz)<br />\nTHD: ≤0.08%(@1KHz)<br />\nHeadphone Jack: 0.78-2pin<br />\nPlug: 3.5mm single-ended<br />\nCavity material: Zinc alloy cavity+brass nozzle","Starfield 2 * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nSlicone Eartips * 3 pairs (S/M/L)<br />\nUser Manual * 1<br />\nProduct Card * 1"];

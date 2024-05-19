@@ -140,3 +140,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 284,
 };
+const metafields = ["Input: USB / Optical / Coaxial<br />\nOutput Level: 2.0Vrms<br />\nOutout Impedance: 47Ω<br />\nTHD+N: 0.00013% (-117dB)<br />\nDynamic Range: 121dB<br />\nSNR: 121dB<br />\nUSB Transmission: Asynchronous transmission<br />\nUSB Compatibility: Windows 7/8/8.1/10/11，Mac OS X10.6 Above，Linux<br />\nBit Depth: USB:1bit~32bit, Optical/coaxial:6bit~24bit,<br />\nSampling Rate: USB:PCM 44.1kHz~768kHz, DSD  2.8224~22. 5792MHz<br />\nOptical/Coaxial: 44.1kHz~192kHz<br />\nMQA: 384kHz<br />\nPower Consumption: &lt;5W<br />\nStandby Power: &lt;0.1W<br />\nSize: 96×27×78mm（W×H×D）<br />\nWeight: 195g/0.43lbs","1. SU1 x1<br />\n2. Type-A to Type-C USB Cable x1"];

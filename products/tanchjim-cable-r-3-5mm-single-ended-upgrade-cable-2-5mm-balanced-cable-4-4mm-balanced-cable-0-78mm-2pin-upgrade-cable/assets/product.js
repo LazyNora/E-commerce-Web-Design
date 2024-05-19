@@ -207,3 +207,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 459,
 };
+const metafields = ["Model| CABLE-R                <br />\nCable base| Composite twisted by single crystal copper silver-plated cable and single crystal copper cable<br />\nCable strands| 4 pcs<br />\nPlug| 2.5mm/3.5mm/4.4mm              <br />\nConnector| 0.78/2pin<br />\nCable length| 1.25M"];

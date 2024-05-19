@@ -105,3 +105,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 270,
 };
+const metafields = [];

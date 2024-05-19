@@ -105,3 +105,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 253,
 };
+const metafields = ["Output power: 40W+40W (8Ω)<br />\nFrequency response: 10Hz-68KHz (-2dB)<br />\nDistortion: ≤ 1.0% (1KHz, output 28W)<br />\nSignal to noise ratio: ≥ 90dB (A-weighted)<br />\nInput sensitivity: ≤0.25V(1KHz)<br />\nPower consumption: About 250W<br />\nLoad impedance: 4Ω-8Ω<br />\nElectronic tube: EL34X4  6J1X8  6Z4X1<br />\nGross weight: 25kg<br />\nNet weight: 21kg<br />\nSize: 435mm * 333mm * 210mm"];

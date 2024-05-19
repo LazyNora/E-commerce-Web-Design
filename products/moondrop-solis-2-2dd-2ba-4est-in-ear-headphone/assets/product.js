@@ -190,3 +190,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 140,
 };
+const metafields = ["Driver: 2DD(10mm) + 2BA + 4EST, 3 Way Crossover<br />\nImpedance: 10Ω+15%(@1KHz)<br />\nSensitivity: 121dB/Vrms(@1KHz)<br />\nTHD: THD@1KHz≤0.5%<br />\nFrequency Response Range: 7Hz-40KHz<br />\nEffective Frequency Response: 20Hz-20KHz (IEC60318-4,3dB)<br />\nCable Jack: 0.78-2pin<br />\nPlug: 3.5mm single-ended","Solis 2  * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nProduct Card * 1<br />\nSilicone Eartips * 3 (S/M/L)<br />\nT41 Sponge Eartips * 3 (S/M/L)<br />\nOE Adapter (female plug/2.5/3.5/4.4)"];

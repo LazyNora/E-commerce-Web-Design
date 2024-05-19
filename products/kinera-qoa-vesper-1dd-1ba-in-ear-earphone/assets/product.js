@@ -190,3 +190,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 202,
 };
+const metafields = ["Driver Spec: 1DD+1 KNOWLES BA DRIVER<br />\nImpedance: 16Ω<br />\nSensitivity: 116db<br />\nFrequency Range: 20Hz- 20kHz<br />\nPlug type: 3.5mm<br />\nPlug Interface: 2-PIN 0.78<br />\nCable Length: 1DD+1 KNOWLES BA DRIVER<br />\nCable Material: Copper + Silver Braided","Vesper * 1<br />\nEarphone Cable * 1<br />\nEartips * 3 pairs<br />\nStorage Case * 1<br />\nBrand Card * 1<br />\n"];

@@ -276,3 +276,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 259,
 };
+const metafields = ["Material: OFC with silver plated<br />\nBraid way: 2 core twist<br />\nDiameter: 2.0mm/core<br />\nStrands: 95 strands of 0.05mm OFC with silver plated + 250D nylon<br />\nCable skin material: PVC<br />\nInterface: 0.78 2pin or MMCX option<br />\nPlug: Detachable 4.4mm balanced 7 3.5mm<br />\nPlug material: Copper with gold plated<br />\nExternal metal part: Aluminum alloy anode<br />\nCable length: 150cm+2cm","Kinera Gramr * 1<br />\nBoomm Mic * 1<br />\nModular 3.5mm * 1<br />\nModular 4.4mm * 1<br />\nMic Sponge Cover * 1<br />\nStorage Pouch * 1<br />\nUser Manual * 1"];

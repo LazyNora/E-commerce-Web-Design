@@ -212,3 +212,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 153,
 };
+const metafields = ["[Structure] Litz Type 4<br />\n[Wire Diameter] 26AWG<br />\n[Wire length] 1.2m+0.1m<br />\n[Thickness of silver plated layer] 30 u&quot;<br />\n[Material] High Purity Furukawa Monocrystalline Copper Silver Plated<br />\n[Plug] Q-Lock Lite Interchangeable Plug System<br />\n[Pin]] MMCX /2 Pin / Customizable"];

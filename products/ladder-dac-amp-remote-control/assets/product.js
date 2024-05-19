@@ -87,3 +87,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 51,
 };
+const metafields = ["Remote Control (without battery)"];

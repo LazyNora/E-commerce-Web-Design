@@ -174,3 +174,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 279,
 };
+const metafields = ["Model: JIU In-ear Monitors<br />\nHousing: Zinc Alloy<br />\nDriver 10mm High-performance Dynamic Driver<br />\nDiaphragm: Titanium-plated Diaphragm<br />\nCoil: 0.035mm Utra-thin-Black CCAW<br />\nMagnetic Circuit: N52 Magnetic High-performance Internal Magnetic Circuit<br />\nAcoustic Filter: Patented Anti-blocking (Anti imbalanced) Filter<br />\nSensitivity: 110dB/Vrms(@1kHz)<br />\nTHD: THD@1kHz≤1%<br />\nFrequency Response: 10Hz-35kHz (IEC61094, Free-field)<br />\nEffective Frequency Response: 20Hz-20kHz (IEC60318-4, -3dB)"];

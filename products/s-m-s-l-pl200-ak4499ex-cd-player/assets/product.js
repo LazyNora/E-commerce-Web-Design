@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 83,
 };
+const metafields = ["Input: CD/Bluetooth/CD Player<br />\nOutput: RCA/XLR/Headphone<br />\nTHD+N: 0.000068%(-123.5dB)(UN-WTD)<br />\nDynamic range: XLR  132db; RCA  127db<br />\nSNR: XLR  132db; RCA  127db<br />\nHeadphome output power: 1000mW x 2(32Ω)<br />\nSize: 200X42X175mm(WxHxD)<br />\nWeight: 1.7kg/3.74lb","PL200*1<br />\nUSB cable*1<br />\nBluetooth antenna*1<br />\nPower cable*1<br />\nManual*1<br />\nRemote control*1"];

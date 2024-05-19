@@ -122,3 +122,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 130,
 };
+const metafields = ["Frequency response：-1dB 0.1 Hz~ 200Khz.<br />\nMinimum distortion：0.00025%.<br />\n5 input ports：RCA*3 andXLR*2.<br />\n2 output ports：RCA*1 andXLR* 1.<br />\nSupport for RCA input to XLR output, or XLR input to RCA output.<br />\nDimensions：width x depth x height  430x380x122mm.<br />\nWeight：12.2kg."];

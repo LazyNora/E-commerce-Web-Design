@@ -291,3 +291,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 510,
 };
+const metafields = ["USB In: 44.1kHz-768kHz/16bit-32bit,<br />\nDSD64-DSD512(Native),<br />\nDSD64-DSD256(Dop)<br />\nRenderer, MQA Studio, MQA<br />\nOPT/ COAX IN:44.1kHz-192kHz/16bit-24bit, DSD64(Dop) <br />\nBT IN:AAC/SBC/APTX/APTX LL/APTX HD/LDAC<br />\n<br />\nEX5 LineOut XLR:<br />\nTHD+N @A-wt: &lt;0.0001%@1kHz<br />\nTHD+N @No-wt:  &lt;0.0004%@10-20kHz<br />\nSNR @A-wt: 125dB@ 1kHz<br />\nFrequency Response: 20Hz-20kHz(+0.1dB)<br />\nOutput Level: 4.3Vrms OdBFS<br />\nNoise@A-wt: &lt;2.5uVrms<br />\nChannel Crosstalk: -85 @1kHz<br />\nChannel Balance: 0.3dB<br />\nOutput Impedance: 200Ω","1. EX5 *1<br />\n2, Bluetooth Antenna *1<br />\n3. Remote Control *1<br />\n4. 6.35mm to 3.5mm Adapter *1<br />\n5. AC Cable* 1<br />\n6. USB Cable *1<br />\n7. User&#39;s Manual *1<br />\n9. Warranty Card *1"];

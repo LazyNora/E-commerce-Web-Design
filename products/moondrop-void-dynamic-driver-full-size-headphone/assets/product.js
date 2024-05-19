@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 323,
 };
+const metafields = ["[VOID] open-back monitor headphone<br />\n<br />\nDriver: Self-developed 50mm high-performance dynamic driver<br />\n<br />\nDiaphragm: Composite diaphragm<br />\n<br />\nConnector: Dual 3.5mm<br />\n<br />\nCable plug: 3.5mm single ended<br />\n<br />\nFrequency response: 10Hz - 80kHz<br />\n<br />\nEffective frequency response: 20Hz - 20kHz (IEC60318-4, -3dB)<br />\n<br />\nImpedance: 64Ω±15% (@1kHz)<br />\n<br />\nSensitivity: 110dB/Vrms (@1kHz)","[VOID] dynamic open-back monitor headphone * 1<br />\n3.5mm to 6.35mm adapter * 1<br />\nStock cable * 1<br />\nPost card * 1<br />\nManual * 1<br />\nQC Certificate * 1"];

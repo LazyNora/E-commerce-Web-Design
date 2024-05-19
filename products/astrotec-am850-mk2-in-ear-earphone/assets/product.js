@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 215,
 };
+const metafields = ["Impedance: 32Ω.<br />\nFrequency response range: 5Hz-35kHz.<br />\nSensitivity: 106dB/mW.<br />\nInput Power: 1mW.<br />\nMax input: 3mW.<br />\nTermination: 3.5mm Single-ended."];

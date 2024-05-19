@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 99,
 };
+const metafields = ["Driver : Horizontally Opposed Dual Dynamic Drivers Unit System<br />\n(2DD*10mm)+Customized Mid-Range Balanced Armature Drivers(4BA)+Knowles SWFK Tweeter Balanced Armature Drivers(4BA)<br />\nlmpedance: 22Ω±15%(@1kHz)<br />\nSensitivity: 128dB/Vrms(@1kHz)<br />\nTHD: THD@1kHz≤1%<br />\nFrequency Response Range: 7Hz-41kHz(IEC61094, Free Field)<br />\nEffective Frequency Range: 20-20kHZ(IEC60318-4, 3dB)<br />\nCable Jack: 0.78-2pin<br />\nPlug: 3.5mm stereo single-ended"];

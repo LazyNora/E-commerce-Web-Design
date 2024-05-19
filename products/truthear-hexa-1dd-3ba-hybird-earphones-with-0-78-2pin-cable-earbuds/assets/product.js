@@ -223,3 +223,4 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
+const metafields = ["Driver: 1DD+3BA<br />\nDiaphragm of Dynamic Driver: PU + LCP<br />\nImpedance: 20.5Ω±15% @1kHz<br />\nSensitivity: 120dB/Vrms @1kHz<br />\nTHD: THD≤1% @1kHz (94dB)<br />\nFrequency Response: 8-40kHz (IEC61094, Free Field)<br />\nEffective Frequency Response: 20-20kHz (IEC60318-4, -3dB)","1. TRUTHEAR [HEXA] * 1<br />\n2. Four Stands of High-quality Silver-plated Cable<br />\n3. Ear-tips * 3pairs (S, M, L) (Thick Diameter)<br />\n4. Ear-tips * 3pairs (S, M, L) (Thin Diameter)<br />\n5. Foam Ear-tips * 1pair (M)<br />\n6. Manual * 1"];

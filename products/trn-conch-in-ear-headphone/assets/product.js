@@ -122,3 +122,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 75,
 };
+const metafields = ["Wear: Ear hook<br />\nJack type: 2.4mm + 3.5mm + 4.4mm<br />\nFrequency response: 20hz - 20000hz<br />\nTransducer type: Dynamic Driver Monitors<br />\nImpedance: 30Ω<br />\nWeight (headphone + cables): 7.8g+10g<br />\nConector type: 2Pin-S<br />\nSensitivity: 114db<br />\nCable length: 1.2m±3cm","CONCH * 1<br />\nEarphone Cables * 1<br />\nNozzles * 2 pairs<br />\n2.4mm plug * 1<br />\n3.5mm plug * 1<br />\n4.4mm plug * 1<br />\nSilicone Eartips * 3 pairs (S/M/L)<br />\nFoam Eartips * 3 pairs (S/M/L)<br />\nSponge Eartips * 3 pairs (S/M/L)<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nBrand Card * 1"];

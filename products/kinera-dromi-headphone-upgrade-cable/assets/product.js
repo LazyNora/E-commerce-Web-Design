@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 245,
 };
+const metafields = ["Material : 6N OCC with silver plated<br />\nBraid way: 4 core twist braided<br />\nDiameter: 1.5mm/core<br />\nStrands: 50 strands of 0.05mm OCC with silver plated+ 50 strands of 0.06mm OCC with silver plated<br />\nCable skin material: PU<br />\nInterface: 0.78 2pin/mmcx<br />\nPlug: 4 pin detachable plugs, 2.5mm balanced / 4.4mm balanced / 3.5mm plug<br />\nPlug material: Copper with 24 carat gold plated<br />\nPlug internal connection: 6N OCC + OCC with silver plated mix conductor<br />\nExternal metal part: Aluminum alloy anode<br />\nCable length: 122cm+2cm<br />\nCable structure: litz structure","Kinera Dromi * 1Pc<br />\nModular 2.5mm * 1Pc  <br />\nModular 3.5mm * 1Pc  <br />\nModular 4.4mm * 1Pc<br />\nStorage Case * 1Pc<br />\nUser Manual * 1Pc"];

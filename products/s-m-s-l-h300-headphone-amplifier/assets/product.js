@@ -139,3 +139,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 252,
 };
+const metafields = ["Inputs: Balanced,Unbalanced<br />\nHeadphone outputs: 4.4mm Balanced, XLR 4 Pin, 6.35mm unbalanced<br />\nPre-outputs: Balanced, Unbalanced<br />\n<br />\nOutput Power:<br />\n16Ω: 10w x 2<br />\n32Ω: 5w x 2<br />\n<br />\nSNR: 133dB<br />\nDynamic Range: 133dB<br />\nTHD+N: -123dB,0.00006%(1kHz, 32Ω)<br />\nInput Impedance: 47kΩ<br />\nAMP output Impedance: Near 0Ω<br />\n<br />\nPre-output Impedance:<br />\nBalanced: 44Ω<br />\nUnbalanced: 22Ω<br />\n<br />\nFrequency Response: 20Hz - 100kHz(-0.5dB)<br />\n<br />\nGain:<br />\nUnbalanced: Low(-11.5dB)，Middle(0dB)，High(18.5dB)<br />\nBalanced: Low(-6dB)，Middle(6dB),High(24.5dB)<br />\n<br />\nPower consumption(EN60065): &lt;50W<br />\nSIZE: 210X40X178mm(WxHxD)<br />\nWeight: 1.23kg","H300 Headphone Amplifier * 1<br />\nUser Manual * 1<br />\nCertificate * 1<br />\nPower Cable * 1"];

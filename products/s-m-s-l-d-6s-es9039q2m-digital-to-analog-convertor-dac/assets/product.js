@@ -156,3 +156,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 96,
 };
+const metafields = ["D6S * 1<br />\nCharging Cables * 1<br />\nUser Manual * 1<br />\n"];

@@ -196,3 +196,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 306,
 };
+const metafields = ["D/C Chip: CS43198 *2pcs<br />\nSampling Rate (Maximum):PCM 44.1kHz-768kHz | DSD64-DSD256<br />\nInterface：<br />\n• Type-C input<br />\n• 3.5mm single-ended output<br />\n• 4.4mm balanced output<br />\nTHD+N (@1kHz) (A-WT):<br />\n• 3.5mm SE: &lt;0.00025%<br />\n• 4.4mm BAL: &lt;0.0002%<br />\nOutput:<br />\n• 3.5mm SE: 1.4Vrms(Low Gain), 2Vrms (High Gain)<br />\n• 4.4mm BAL: 2Vrms(Low Gain), 4Vrms (High Gain)<br />\nOutput Power:<br />\n• 150mW x2 @32Ω<br />\n• 55mW x2 @300Ω<br />\nSNR: 130dB (A-WT)<br />\nDynamic Range: 130dB (A-WT)<br />\nFrequency Response: 20-20kHz (±0.1dB)<br />\nBackground Noise: &lt;1.6uVrms (A-WT)","1. SHIO *1<br />\n2. USB Type-C to Type-C Cable *1<br />\n3. User Guide *1"];

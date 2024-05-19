@@ -612,3 +612,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 377,
 };
+const metafields = ["USB IN<br />\nPCM: 44.1kHz-192kHz/16bit-32bit 8ch<br />\nDSD(DOP): DSD64 8ch<br />\nDSD(Native): DSD64-DSD128 8ch<br />\n<br />\nUSB In@96kHz<br />\nTHD+N: THD+N(A-wt)&lt;0.00009% @1kHz<br />\nTHD: THD@90kBw(No-wt)&lt;0.0002% @20-20kHz<br />\nSNR(A-wt): 130dB @1kHz<br />\nDynamic Range(A-wt): 130dB @1kHz<br />\nFrequency Response: 20Hz-40kHz(±0.1dB)<br />\nOutput Level:<br />\n(1) 4.0Vrms @0dBFS (4V Mode)<br />\n(2) 5.0vrms @0dBFS (5V Mode)<br />\nNoise(A-wt): &lt;1.5uVrms<br />\nCrosstalk @1kHz: -143dB<br />\nChannel Balance: &lt;0.3dB<br />\nOutput Impedance: 100Ω"];

@@ -140,3 +140,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 661,
 };
+const metafields = ["Model: MS-500B<br />\nLoad impedance: 4Ω-8Ω<br />\nVolume: 485mm*380mm*270mm<br />\nMaximum power consumption: ≤150w<br />\nGross weight: 28kg<br />\nSignal-to-noise ratio: ≥84dB (A-weighted)<br />\nDistortion: ≤(8Ω),1.5%(1KHz)<br />\nUse electron tube: 300B-N*2, 6N8P*2, 12AU7*2, 5Z3P*1<br />\nFrequency response: 5Hz-40kHz (-2dB)<br />\nMaximum output power: 8.5W+8.5W (4Ω or 8Ω)<br />\nInput sensitivity: combined ≤0.2V<br />\nPure final stage≤1V","MS-500B*1<br />\nManual *1<br />\nWarranty card*1<br />\nPower cord*1<br />\nLotus sheath*1<br />\nT8 plum blossom batch *1<br />\nBattery *1<br />\nHex key*1<br />\nBackup fuse*1<br />\nRemote control*1"];

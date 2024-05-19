@@ -222,3 +222,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 1025,
 };
+const metafields = ["Model: Blues<br />\nStyle:In-Ear<br />\nResistance:16Ω<br />\nSensitivity:109dB/mW<br />\nFrequency Response Range:10-40000Hz<br />\nLine Length:1.2M<br />\nTotal harmonic distortion：&lt;2%<br />\nUnit diaphragm: carbon diaphragm<br />\nPlug Type: 3.5mm Line type"];

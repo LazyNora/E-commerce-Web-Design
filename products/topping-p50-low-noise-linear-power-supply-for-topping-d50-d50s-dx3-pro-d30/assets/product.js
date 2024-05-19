@@ -223,3 +223,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 1078,
 };
+const metafields = ["Measured: 11.0cm11.0cm×5.2cm<br />\nWeight: 0.88Kg<br />\nPower input: AC110V/AC220V 50HZ/60Hz*<br />\nColour:Full black/Full silver<br />\nPower output: usb-ax2、dc(5.5/2.1)×1<br />\nPower supply noise: &lt;1 mVrms<br />\nOutput Power:<br />\nDC5V1A x2<br />\nDC15V 1A<br />\nOutput Power<br />\nDC5V 1A x1 + DC15V 0.9A<br />\nDC5V 0.8A x2 + DC15V 0.8A<br />\n<br />\n<br />\n*Warning: Please select to your local voltage.<br />\nThe shell will be quite hot at high power output, this is normal"];

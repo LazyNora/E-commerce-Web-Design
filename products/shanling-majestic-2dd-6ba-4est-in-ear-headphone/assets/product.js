@@ -190,3 +190,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 54,
 };
+const metafields = ["Impedance: 18Ω<br />\nSensitivity: 105±3dB<br />\nFrequency Response Range: 9-70000Hz(Free-Field)<br />\nWeight: 7.5g<br />\nCable length: 1.3m"];

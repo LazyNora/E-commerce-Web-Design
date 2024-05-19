@@ -342,3 +342,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 1074,
 };
+const metafields = ["1. D10S *1<br />\n2. USB Cable*1<br />\n3, User&#39;s Manual*1<br />\n4. Warranty Card*1"];

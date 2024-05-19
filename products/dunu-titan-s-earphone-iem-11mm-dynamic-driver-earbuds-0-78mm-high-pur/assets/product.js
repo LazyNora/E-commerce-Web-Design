@@ -318,3 +318,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 435,
 };
+const metafields = ["NET WEIGHT: 17 g<br />\nFREQUENCY RESPONSE: 5 Hz – 40 kHz<br />\nIMPEDANCE: 32 Ω at 1 kHz<br />\nSENSITIVITY: 110 dB ± 1 dB @1 kHz<br />\nTOTAL HARMONIC DISTORTION: &lt;0.3 % at 1 kHz<br />\nDRIVE MODULE: 11 mm Driver with Polycondensated Crystal Polymer Diaphragm<br />\nHOUSING MATERIAL: High-Density Zinc Alloy<br />\nINCLUDED CABLE<br />\nLENGTH: 1.2m ± 0.1m<br />\nMATERIAL: High-Purity, Mixed Strand Monocrystalline Copper &amp; Silver-Plated Copper<br />\nCABLE CONNECTOR: 0.78 mm 2-Pin<br />\nPLUG TERMINATION: 3.5 mm TRS Single-Ended"];

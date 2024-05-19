@@ -201,3 +201,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 495,
 };
+const metafields = ["Large 14.2mm Planar Driver.<br />\nUltra-Thin Diaphragm.<br />\nPowerful Double-Sided Neodymium Magnet.<br />\nStandard MMCX connectors.<br />\nAvailable in both 3.5mm/4.4mm termination options.<br />\nImpedance: 14.8 ohms.<br />\nSensitivity: 104dB.<br />\nTHD+N: &lt;0.2%.<br />\nFrequency Response: 5Hz-40kHz."];

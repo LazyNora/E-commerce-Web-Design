@@ -207,3 +207,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 437,
 };
+const metafields = ["Series: MOONDROP Selected Professional Cable<br />\nCable specification: 12pcs * 8-strand of high purity copper silver-plated<br />\nOuter Cover: sweat-resistant and high transparency PVC<br />\nCable Pin: 0.78 2pin<br />\nCable Plug:<br />\n※3.5mm single-ended (optional) <br />\n※2.5mm balanced (optional) <br />\n※4.4mm balanced (optional)"];

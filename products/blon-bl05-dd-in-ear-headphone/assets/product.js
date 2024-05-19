@@ -225,3 +225,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 239,
 };
+const metafields = ["10mm Carbon Nanotube Diaphragm Dynamic Driver Unit<br />\nImpedance: 32 Ohms<br />\nSensitivity: 108dB<br />\nFrequency Response Range: 20Hz-20kHz<br />\n0.78mm Two-Pin Cable with 3.5mm Termination Plug<br />\nMetal Housing Shells","One Pair of Blon BL-05 earphones.<br />\nOne 0.78mm 2-pin cable.<br />\nEar tips"];

@@ -105,3 +105,4 @@ const product = {
   selling_plan_groups: [],
   sale_top: 203,
 };
+const metafields = ["Balanced Five-Frequency Graphic Equaliser<br />\nWorks with Digital Audio Player as a Hardware Equaliser.<br />\nFive Frequency Bands of both Left &amp; Right channels can be adjusted independently.<br />\nSupported Frequencies: 63Hz, 330Hz, 1kHz, 3.3kHz, 10kHz.<br />\nALPS Sliding Potentiometer.<br />\nAdjustment Range: ±8dB.<br />\n4.4mm Balanced Input &amp; Output.<br />\nBypass mode.<br />\n4000mAh Battery.<br />\nLong 10-Hour Battery Life."];
