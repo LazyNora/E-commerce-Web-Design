@@ -178,11 +178,9 @@ const getVariantFromOptionArray = (product, options) => {
 	_validateOptionsArray(options);
 	var result = product.variants.filter((variant) => {
 		return options.every((option, index) => {
-			console.log(variant.options[index], option);
 			return variant.options[index] === option;
 		});
 	});
-	console.log(result);
 	return result[0] || null;
 };
 

@@ -41,7 +41,7 @@ function scrollToTop(callback) {
 		observer.observe(productFormActions);
 		mainImg?.addEventListener("click", scrollToTop);
 		prodTitle?.addEventListener("click", scrollToTop);
-		select.value = variantId;
+		select.value = variantId || product.variants[0].id;
 		select?.addEventListener("change", () => {
 			const selectedVariantId = select.value;
 			const currentVariant = product.variants.find(
