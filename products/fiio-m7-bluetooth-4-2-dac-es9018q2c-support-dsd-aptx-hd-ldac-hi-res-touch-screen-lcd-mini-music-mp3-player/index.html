@@ -11,10 +11,10 @@
 			const path = window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
 			let variantId = new URLSearchParams(window.location.search).get("variant") || null;
 		</script>
-		<link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
 		<script src="../../js/swiper-bundle.min.js"></script>
 		<link rel="shortcut icon" href="../../assets/logo.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="../../css/tailwind.css" />
+		<link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="../../css/chunk.css" />
 		<link rel="stylesheet" href="../../css/Carousel.css" />
 		<link rel="stylesheet" href="../../css/Announcement.css" />
@@ -296,6 +296,7 @@
 				<script type="module" src="../../js/Navbar.js"></script>
 			</section>
 			<!-- Main -->
+			<div id="scroll-to-top-target" class="w-0 h-0 invisible opacity-0"></div>
 			<main role="main" id="MainContent" class="template-product">
 				<script src="./assets/product.js"></script>
 				<!-- Product View -->
@@ -334,10 +335,115 @@
 								</div>
 							</div>
 						</div>
+						<div
+							class="prod__sticky-atc sf-prod__block fixed z-40 bottom-0 inset-x-0 transition-transform enable-dynamic-checkout">
+							<div class="container">
+								<div
+									class="sticky-atc product-form flex items-center justify-between">
+									<div class="hidden md:flex pr-2">
+										<div class="main-img cursor-pointer py-1.5 hidden md:flex">
+											<div class="prod-image">
+												<img
+													class="h-full object-contain img-loaded"
+													width="60"
+													height="48"
+													loading="lazy"
+													sizes="60px" />
+											</div>
+										</div>
+										<div class="md:ml-6 psa__info">
+											<h3
+												class="psa__title text-base hover:text-color-primary-darker font-medium cursor-pointer line-clamp-1"></h3>
+										</div>
+									</div>
+									<div
+										class="flex shrink-0 items-center psa__form-controls w-full md:w-auto">
+										<div class="product__actions w-full flex">
+											<select
+												name="variant"
+												class="product-variant-option-dropdown combined-variant border border-color-border flex-0 rounded mr-5 pl-4"></select>
+											<div
+												class="quantity-input h-[46px] border border-color-border rounded mr-2.5 lg:mr-5 md:flex hidden">
+												<button
+													class="quantity-input__button flex items-center justify-center h-[46px] w-[46px]"
+													type="button"
+													aria-label="Decrease quantity by one"
+													data-quantity-selector="decrease"
+													name="minus">
+													<svg
+														class="w-[12px] h-[12px]"
+														fill="currentColor"
+														stroke="currentColor"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 384 512">
+														<path
+															d="M376 232H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h368c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path>
+													</svg>
+												</button>
+												<input
+													class="quantity-input__element w-10 text-center flex-grow shrink appearance-none bg-transparent"
+													type="number"
+													name="quantity"
+													value="1"
+													min="1"
+													aria-label="Product quantity" />
+												<button
+													class="quantity-input__button flex items-center justify-center h-[46px] w-[46px]"
+													type="button"
+													aria-label="Increase quantity by one"
+													data-quantity-selector="increase"
+													name="plus">
+													<svg
+														class="w-[12px] h-[12px]"
+														fill="currentColor"
+														stroke="currentColor"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 384 512">
+														<path
+															d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path>
+													</svg>
+												</button>
+											</div>
+											<button
+												name="add"
+												class="sticky-atc add-to-cart btn flex-grow shrink relative">
+												<span>Add To Cart</span>
+											</button>
+											<div
+												class="prod__dynamic_checkout buy-one-click flex-1 md:ml-5">
+												<button class="paypal">
+													<span class="paypal-text"
+														>Buy now with PayPal</span
+													>
+													<span aria-hidden="true">Buy with </span>
+													<span class="paypal-logo">
+														<svg
+															viewBox="0 0 67 19"
+															style="height: 18px; width: 63.4737px">
+															<path
+																d="M8.44.57H3.29a.718.718 0 0 0-.707.61L.502 14.517c-.041.263.16.5.425.5h2.458a.718.718 0 0 0 .707-.61l.561-3.597a.717.717 0 0 1 .706-.611h1.63c3.391 0 5.349-1.658 5.86-4.944.23-1.437.01-2.566-.657-3.357C11.461 1.029 10.162.57 8.44.57zm.594 4.87C8.752 7.308 7.34 7.308 5.976 7.308h-.777l.545-3.485a.43.43 0 0 1 .424-.366h.356c.93 0 1.807 0 2.26.535.27.32.353.794.25 1.45zm14.796-.06h-2.466a.43.43 0 0 0-.424.367l-.109.696-.172-.252c-.534-.783-1.724-1.044-2.912-1.044-2.725 0-5.052 2.084-5.505 5.008-.235 1.46.1 2.854.919 3.827.75.894 1.826 1.267 3.105 1.267 2.195 0 3.412-1.426 3.412-1.426l-.11.692a.432.432 0 0 0 .424.502h2.22a.718.718 0 0 0 .707-.61l1.333-8.526a.43.43 0 0 0-.423-.5zm-3.437 4.849c-.238 1.422-1.356 2.378-2.782 2.378-.716 0-1.288-.232-1.655-.672-.365-.436-.503-1.058-.387-1.75.222-1.41 1.359-2.397 2.763-2.397.7 0 1.269.235 1.644.678.375.448.524 1.073.417 1.763zM36.96 5.38h-2.478a.716.716 0 0 0-.592.318l-3.417 5.085-1.448-4.887a.719.719 0 0 0-.687-.515h-2.435a.433.433 0 0 0-.407.573l2.73 8.09-2.567 3.66a.434.434 0 0 0 .35.684h2.475a.712.712 0 0 0 .588-.31l8.24-12.016a.434.434 0 0 0-.352-.681z"
+																style="
+																	fill: rgb(37, 59, 128);
+																"></path>
+															<path
+																d="M45.163.57h-5.15a.717.717 0 0 0-.706.61l-2.082 13.337a.43.43 0 0 0 .423.5h2.642a.502.502 0 0 0 .494-.427l.591-3.78a.717.717 0 0 1 .706-.611h1.63c3.392 0 5.348-1.658 5.86-4.944.231-1.437.009-2.566-.657-3.357C48.183 1.029 46.886.57 45.163.57zm.593 4.87c-.28 1.867-1.692 1.867-3.057 1.867h-.777l.546-3.485a.429.429 0 0 1 .423-.366h.356c.93 0 1.807 0 2.26.535.27.32.353.794.25 1.45zm14.795-.06h-2.464a.428.428 0 0 0-.423.367l-.109.696-.173-.252c-.534-.783-1.723-1.044-2.911-1.044-2.724 0-5.05 2.084-5.504 5.008-.235 1.46.099 2.854.918 3.827.753.894 1.826 1.267 3.105 1.267 2.195 0 3.413-1.426 3.413-1.426l-.11.692a.432.432 0 0 0 .424.502h2.22a.717.717 0 0 0 .707-.61l1.333-8.526a.433.433 0 0 0-.426-.5zm-3.436 4.849c-.237 1.422-1.356 2.378-2.782 2.378-.714 0-1.288-.232-1.655-.672-.365-.436-.502-1.058-.387-1.75.223-1.41 1.359-2.397 2.763-2.397.7 0 1.269.235 1.644.678.377.448.526 1.073.417 1.763zM63.458.935l-2.113 13.582a.43.43 0 0 0 .423.5h2.124a.716.716 0 0 0 .707-.61L66.683 1.07a.432.432 0 0 0-.423-.5h-2.379c-.21 0-.39.156-.423.366z"
+																style="
+																	fill: rgb(23, 155, 215);
+																"></path>
+														</svg>
+													</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<script type="module" src="../../js/ProductMedia.js"></script>
 					<script src="../../js/ProductInfo.js"></script>
 					<script type="module" src="../../js/VariantPicker.js"></script>
+					<script src="../../js/StickyATC.js"></script>
 				</section>
 				<!-- Cart Drawer -->
 				<div class="cart-container">
@@ -1169,5 +1275,6 @@
 			</section>
 		</div>
 		<script src="../../js/scroll-animation.js"></script>
+		<script src="../../js/smoothscroll.min.js"></script>
 	</body>
 </html>
