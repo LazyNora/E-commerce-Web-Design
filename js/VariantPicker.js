@@ -94,6 +94,7 @@ const onVariantChange = (e) => {
 		updatePrice();
 		updateButton(!currentVariant.available, "Sold Out");
 	}
+	document.querySelector("select.combined-variant").value = currentVariant.id;
 };
 variantPicker.addEventListener("change", onVariantChange);
 
