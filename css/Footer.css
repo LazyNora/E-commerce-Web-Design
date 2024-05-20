@@ -12,6 +12,7 @@
 .shop-footer {
 	background-color: var(--color-footer-background);
 	color: var(--color-footer-text);
+	overflow-x: hidden;
 }
 
 .shop-footer .footer_middle .footer_block {

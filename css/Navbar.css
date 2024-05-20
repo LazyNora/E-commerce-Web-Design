@@ -98,6 +98,11 @@ ul.menu-nav {
 	color: #000;
 }
 
+.menu-item:last-child .menu__desktop-sub-menu {
+	right: 0;
+	left: auto;
+}
+
 .menu-item:hover .menu__dropdown {
 	opacity: 1;
 	pointer-events: auto !important;

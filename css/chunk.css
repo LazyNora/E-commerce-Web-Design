@@ -1767,10 +1767,10 @@ html.grow-full #MainContent {
 a {
 	cursor: pointer;
 }
-body,
+/* body,
 html {
 	overflow-x: hidden;
-}
+} */
 #MainContent {
 	position: relative;
 }

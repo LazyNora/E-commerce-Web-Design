@@ -24,7 +24,7 @@ function scrollToTop(callback) {
 			select.appendChild(option);
 		});
 
-		const rootMargin = `-135px 0px 0px 0px`;
+		const rootMargin = `-${document.querySelector(".header__wrapper").offsetHeight || 66}px 0px 0px 0px`;
 		let observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -39,6 +39,22 @@ function scrollToTop(callback) {
 		);
 		const productFormActions = document.querySelector(".product-form");
 		observer.observe(productFormActions);
+		window.addEventListener("resize", () => {
+			const rootMargin = `-${document.querySelector(".header__wrapper").offsetHeight || 66}px 0px 0px 0px`;
+			observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						const method = entry.intersectionRatio !== 1 ? "remove" : "add";
+						container.classList[method]("translate-y-full"),
+							document.documentElement.classList[
+								entry.intersectionRatio != 1 ? "remove" : "add"
+							]("stick-atc-show");
+					});
+				},
+				{ threshold: 1, rootMargin }
+			);
+			observer.observe(productFormActions);
+		});
 		mainImg?.addEventListener("click", scrollToTop);
 		prodTitle?.addEventListener("click", scrollToTop);
 		select.value = variantId || product.variants[0].id;
@@ -73,7 +89,7 @@ function scrollToTop(callback) {
 			if (quantity.value < 1) quantity.value = 1;
 		});
 
-		const addToCart = document.querySelector("button[name=add].sticky-atc");
+		const addToCart = document.querySelector("button[name=add].sticky-atc-btn");
 		addToCart?.addEventListener("click", () => {
 			const productId = product.id;
 			const productTitle = product.title;
