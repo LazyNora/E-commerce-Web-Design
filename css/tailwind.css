@@ -2650,12 +2650,20 @@ body {
   padding-bottom: 5rem;
 }
 
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
 
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .pb-\[30px\] {
@@ -2668,6 +2676,10 @@ body {
 
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pt-0 {
@@ -2768,6 +2780,11 @@ body {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -3598,6 +3615,10 @@ body {
     margin-bottom: 14px;
   }
 
+  .md\:ml-5 {
+    margin-left: 1.25rem;
+  }
+
   .md\:ml-6 {
     margin-left: 1.5rem;
   }
@@ -3616,10 +3637,6 @@ body {
 
   .md\:mt-5 {
     margin-top: 1.25rem;
-  }
-
-  .md\:ml-5 {
-    margin-left: 1.25rem;
   }
 
   .md\:block {
@@ -3674,6 +3691,11 @@ body {
     padding: 1.5rem;
   }
 
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .md\:pb-0 {
     padding-bottom: 0px;
   }
@@ -3722,6 +3744,10 @@ body {
   .md\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .md\:opacity-0 {
+    opacity: 0;
   }
 
   .md\:animate-delay-100 {

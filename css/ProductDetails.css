@@ -1,0 +1,202 @@
+.section-product-details {
+	padding: 50px 0;
+}
+
+.section-product-details .tabs--responsive {
+	padding-right: 60px;
+}
+
+.tabs-adds-wrap {
+	margin-top: auto;
+	position: -webkit-sticky;
+	position: sticky;
+	top: auto;
+	bottom: 140px;
+}
+
+.tab-header {
+	opacity: 0.5;
+	position: relative;
+	transition: all 0.3s;
+}
+
+.tab-header:after {
+	background-color: currentColor;
+	bottom: -2px;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transition: width 0.25s ease-in-out;
+	width: 0;
+}
+
+.tab-header.active:after {
+	width: 100%;
+}
+
+.section-product-details .tab-header,
+.tabs-adds-header {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 26px;
+	margin-right: 32px;
+	padding: 12px 0;
+}
+
+.tabs-adds-header {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.btn#add-review {
+	padding: 10px 20px;
+	font-size: 13px;
+	text-transform: uppercase;
+	background-color: #bbb;
+	font-weight: 700;
+	border-radius: 5px;
+	transition: all 0.3s;
+	border: none;
+	position: relative;
+}
+
+.btn#add-review:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+.btn#add-review:active {
+	top: 1px;
+}
+
+.tabs-adds-blocks {
+	margin-bottom: 40px;
+}
+
+.tab-header.active,
+.tab-header:hover {
+	color: #000;
+	opacity: 1;
+}
+
+.tab-content {
+	display: none;
+	transition: opacity 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+	word-wrap: break-word;
+}
+
+.tab-content.active {
+	display: block;
+}
+
+.pdt__accordion .accordion-item .accordion-button {
+	cursor: pointer;
+	font-weight: 600;
+	position: relative;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.pdt__accordion .accordion-item.open .accordion-button {
+	--tw-border-opacity: 1;
+	border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.pdt__accordion .accordion-item .accordion-button:after {
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M5.15625 5.26562L1.10938 1.24609C0.945312 1.08203 0.945312 0.927083 1.10938 0.78125L1.62891 0.234375C1.79297 0.0885417 1.94792 0.0885417 2.09375 0.234375L5.375 3.48828L8.65625 0.234375C8.80208 0.0885417 8.95703 0.0885417 9.12109 0.234375L9.64062 0.78125C9.80469 0.927083 9.80469 1.08203 9.64062 1.24609L5.59375 5.26562C5.44792 5.41146 5.30208 5.41146 5.15625 5.26562Z" fill="black"/></svg>');
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: 14px 14px;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: transform 0.3s ease;
+	width: 14px;
+}
+
+.pdt__accordion .accordion-item.open .accordion-button:after {
+	transform: rotateX(180deg);
+}
+
+.pdt__accordion .accordion-item .accordion-content {
+	max-height: var(--content-max-height, 0);
+	opacity: 0;
+	transition:
+		opacity 0.15s,
+		max-height var(--duration, 0.3s);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pdt__accordion .accordion-item.open .accordion-content {
+	max-height: var(--content-max-height, auto);
+}
+
+.pdt__accordion .accordion-item .accordion-content img {
+	width: 100%;
+}
+
+.pdt__accordion .accordion-item.open .accordion-content {
+	max-height: var(--content-max-height, auto);
+	opacity: 1;
+}
+
+.pdt__accordion .accordion-item.active {
+	opacity: 1;
+}
+
+.template-product .prose {
+	color: #666;
+}
+
+.prose iframe,
+.prose img {
+	display: inline-block;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+	color: #000;
+	margin-bottom: 0.85em;
+	margin-top: 1em;
+}
+
+body .h3,
+body h3 {
+	font-size: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+	body .h3,
+	body h3 {
+		font-size: 31px;
+	}
+}
+
+@media (max-width: 767px) {
+	.pdt__accordion .tabs--responsive .tab-content {
+		display: block;
+		transition: none;
+	}
+	.pdt__accordion .tabs--responsive .accordion-item {
+		border-bottom: 1px solid #dedede;
+		margin-bottom: 1.5rem;
+	}
+	.pdt__accordion .tabs--responsive .accordion-button {
+		display: block;
+	}
+	.section-product-details .accordion-button {
+		font-size: 18px;
+		padding: 12px 0;
+	}
+	.section-product-details .tabs--responsive {
+		padding-right: 0 !important;
+	}
+}

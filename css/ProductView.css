@@ -533,7 +533,7 @@
 }
 
 .prod__dynamic_checkout {
-	overflow: hidden;
+	/* overflow: hidden; */
 	line-height: 1.5 !important;
 	border: none;
 	box-shadow: 0 0 0 0 transparent;
