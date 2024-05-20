@@ -21,6 +21,7 @@
 		<link rel="stylesheet" href="../../css/Navbar.css" />
 		<link rel="stylesheet" href="../../css/Cart.css" />
 		<link rel="stylesheet" href="../../css/ProductView.css" />
+		<link rel="stylesheet" href="../../css/ProductDetails.css" />
 		<link rel="stylesheet" href="../../css/Footer.css" />
 		<link rel="stylesheet" href="../../css/photoswipe.css" />
 
@@ -48,7 +49,7 @@
 				font-size: 16px;
 				line-height: 24px;
 				tab-size: 4;
-				overflow-x: hidden;
+				/* overflow-x: clip; */
 			}
 			div {
 				display: block;
@@ -406,7 +407,7 @@
 											</div>
 											<button
 												name="add"
-												class="sticky-atc add-to-cart btn flex-grow shrink relative">
+												class="sticky-atc-btn add-to-cart btn flex-grow shrink relative">
 												<span>Add To Cart</span>
 											</button>
 											<div
@@ -444,6 +445,187 @@
 					<script src="../../js/ProductInfo.js"></script>
 					<script type="module" src="../../js/VariantPicker.js"></script>
 					<script src="../../js/StickyATC.js"></script>
+				</section>
+				<!-- Details -->
+				<section class="section-product-details">
+					<div class="container flex flex-wrap">
+						<div class="w-full md:w-2/3 tabs tabs--responsive pdt__accordion">
+							<div class="hidden md:flex border-b border-color-border">
+								<div
+									class="tab-header text-lg cursor-pointer active"
+									data-index="0">
+									DESCRIPTION
+								</div>
+								<div class="tab-header text-lg cursor-pointer" data-index="1">
+									SHIPPING & RETURN
+								</div>
+							</div>
+							<div class="md:py-10">
+								<div
+									class="accordion-item tab-content md:opacity-0 active open"
+									data-desc>
+									<div class="accordion-button pb-3 pr-4">DESCRIPTION</div>
+									<div class="accordion-content max-height-set">
+										<div class="pb-8 prose"></div>
+									</div>
+								</div>
+								<div class="accordion-item tab-content md:opacity-0">
+									<div class="accordion-button pb-3 pr-4">SHIPPING & RETURN</div>
+									<div class="accordion-content max-height-set">
+										<div class="pb-8 prose">
+											<h3>Shipping Fees</h3>
+											<p>
+												<span>
+													Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Delectus iure praesentium id
+													voluptas odio tempora amet est! Nihil ea
+													debitis, quia omnis blanditiis qui molestias
+													eveniet, reprehenderit dolore odit consequuntur.
+												</span>
+												<br />
+												<br />
+												<br />
+												Lorem ipsum dolor sit amet consectetur adipisicing
+												elit. Autem, enim reiciendis delectus corporis
+												repellendus voluptate quibusdam obcaecati possimus
+												ex error laudantium optio culpa aliquid dignissimos
+												impedit laborum odio voluptas quae!
+											</p>
+											<hr />
+											<br />
+											<h3>PO boxes or APO/FPO</h3>
+											<p>
+												<span>
+													Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Tenetur amet sit, maxime earum
+													tempora quasi ad asperiores aperiam adipisci
+													quis quia, ut voluptatem vero commodi iusto est
+													ducimus? Iure exercitationem inventore rerum
+													aspernatur! Alias maxime et possimus fugiat
+													repellendus, libero ab cumque voluptate tempore
+													reiciendis aliquam culpa nemo obcaecati illo
+													voluptatibus corrupti nostrum! Error quisquam,
+													cumque minima recusandae iusto omnis?
+												</span>
+												<br />
+												<br />
+												<span>
+													Lorem ipsum dolor, sit amet consectetur
+													adipisicing elit. Quo est ab inventore quisquam
+													veritatis, vel quaerat iusto nulla quam aperiam!
+												</span>
+											</p>
+											<hr />
+											<br />
+											<h3>Estimated Delivery Time</h3>
+											<p>
+												Lorem ipsum dolor sit amet consectetur adipisicing
+												elit. Dolorum perferendis hic magni delectus.
+												Cupiditate natus et voluptatibus dicta tempora, quo
+												minima nobis fugit eum, adipisci quis. Modi
+												excepturi harum eaque eum a accusamus nisi. Tempora,
+												nisi eveniet. Facilis magnam quibusdam error
+												repudiandae nihil praesentium. Laboriosam ea
+												distinctio nesciunt voluptatum est.
+												<br />
+												<br />
+												<span>
+													Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Modi aspernatur fuga
+													distinctio voluptas in nemo est dolorum qui,
+													tempora reiciendis dolorem veritatis minima non
+													aliquam.
+												</span>
+												<span>AUDIO OASIS</span>
+												<span>
+													dolor sit amet consectetur adipisicing elit.
+													Iusto, sit tempore consectetur eveniet
+													recusandae sequi?
+												</span>
+											</p>
+											<hr />
+											<br />
+											<h3>Easy 30-Day Return Policy</h3>
+											<p>
+												Lorem ipsum dolor sit amet consectetur adipisicing
+												elit. Dolor at est officiis quos dolorum? Soluta
+												tempore molestiae veniam, officiis itaque laudantium
+												voluptatem ab dolore vel ratione nihil laborum
+												nostrum eveniet.
+											</p>
+											<hr />
+											<br />
+											<h3>Eligibility Conditions</h3>
+											<p>
+												Lorem ipsum dolor sit amet consectetur adipisicing
+												elit. Tempore nam odio qui rerum praesentium eaque
+												delectus dolorem itaque quo? Similique, aliquam sit
+												dolor ducimus molestias fugit! Laudantium similique
+												nesciunt ut.
+											</p>
+											<hr />
+											<br />
+											<h3>Defective or Damaged Items</h3>
+											<p>
+												Lorem ipsum dolor sit amet consectetur adipisicing
+												elit. Minima aperiam minus totam nihil quis possimus
+												pariatur incidunt dolores.
+											</p>
+											<hr />
+											<br />
+											<h3>Exchanges</h3>
+											<p>
+												Lorem ipsum dolor sit amet consectetur, adipisicing
+												elit. Nobis temporibus doloremque at unde, accusamus
+												incidunt nesciunt voluptas repellendus nihil
+												eligendi.
+											</p>
+											<hr />
+											<br />
+											<h3>Refunds &amp; Credits</h3>
+											<p>
+												Lorem ipsum dolor sit amet consectetur adipisicing
+												elit. Saepe culpa iusto eius distinctio ex
+												praesentium omnis suscipit. Maxime amet pariatur,
+												placeat explicabo dolorem error nam, dignissimos
+												impedit, dolor odio tempora? Quis incidunt
+												architecto sequi enim placeat ipsam necessitatibus
+												vero excepturi? Mollitia blanditiis enim molestias
+												officia eligendi? Blanditiis officia consequuntur
+												ipsam vitae maiores laborum! Sed minima quaerat in
+												omnis error amet.
+											</p>
+											<hr />
+											<br />
+											<h3>Shipping</h3>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit. Aliquam facere non sed cupiditate consectetur
+												quia incidunt, esse, exercitationem aut dicta
+												asperiores accusamus error nulla dignissimos
+												laboriosam reiciendis aperiam quis qui?
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="w-full md:w-1/3 tabs-adds tabs-adds-wrap">
+							<div class="tabs-adds-blocks review-tab">
+								<div class="tabs-adds-header border-color-border border-b">
+									Customer Reviews
+								</div>
+								<div class="review-message-wrapper">
+									<button id="add-review" class="btn">Add a review</button>
+									<p class="no-review mt-5">
+										Be the first to <a class="hover:underline">review</a> this
+										product
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script src="../../js/ProductDetails.js"></script>
 				</section>
 				<!-- Cart Drawer -->
 				<div class="cart-container">

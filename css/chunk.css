@@ -960,7 +960,7 @@ button.btn.btn-plain:hover {
 		transition: none;
 	}
 	.tabs--responsive .accordion-item {
-		border-bottom: 1px solid var(--color-border);
+		border-bottom: 1px solid #dedede;
 		margin-bottom: 1.5rem;
 	}
 	.tabs--responsive .accordion-item[data-block-type="reviews"].open {
@@ -1767,10 +1767,10 @@ html.grow-full #MainContent {
 a {
 	cursor: pointer;
 }
-/* body,
+body,
 html {
 	overflow-x: hidden;
-} */
+}
 #MainContent {
 	position: relative;
 }
