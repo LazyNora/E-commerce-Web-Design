@@ -122,4 +122,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 213,
 };
-const metafields = ["Impedance: 5Ω.<br />\nSensitivity: 108dB/mW.<br />\nCable: high-purity OCC 4.4mm+silver-plated 3.5mm.<br />\nConnectors: 2-Pin.<br />\nFrequency response: 5Hz-50kHz.<br />\nInput Power: 1mW.<br />\nMax Power: 5mW.<br />\n"];
+const metafields = [
+  "Impedance: 5Ω.<br />\nSensitivity: 108dB/mW.<br />\nCable: high-purity OCC 4.4mm+silver-plated 3.5mm.<br />\nConnectors: 2-Pin.<br />\nFrequency response: 5Hz-50kHz.<br />\nInput Power: 1mW.<br />\nMax Power: 5mW.<br />\n",
+];

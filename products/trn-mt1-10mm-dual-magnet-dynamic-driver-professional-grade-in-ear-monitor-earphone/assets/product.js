@@ -382,4 +382,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 553,
 };
-const metafields = ["Brand: TRN<br />\nProduct model: TRN-MT1<br />\nJack type: 3.5mm<br />\nWear: Ear hook<br />\nTransducer type: Dynamic Drivers Monitors<br />\nFrequency response: 20Hz-20000Hz<br />\nConnector type: 2 pin<br />\nImpedence: 22Ω<br />\nSensitivity: 106dB<br />\nWeight(Headphone + cable): 8.2g+12g<br />\nColours: Clear/Emerald<br />\nCable length: 1.25m±5cm"];
+const metafields = [
+  "Brand: TRN<br />\nProduct model: TRN-MT1<br />\nJack type: 3.5mm<br />\nWear: Ear hook<br />\nTransducer type: Dynamic Drivers Monitors<br />\nFrequency response: 20Hz-20000Hz<br />\nConnector type: 2 pin<br />\nImpedence: 22Ω<br />\nSensitivity: 106dB<br />\nWeight(Headphone + cable): 8.2g+12g<br />\nColours: Clear/Emerald<br />\nCable length: 1.25m±5cm",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

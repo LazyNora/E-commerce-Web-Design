@@ -139,4 +139,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 497,
 };
-const metafields = ["Model | PRISM<br />\nOrigin |Dongguan, China                    <br />\nColor |Silver<br />\nSensitivity | 125dB                     <br />\nImpedance | 16Ω±10%<br />\nFrequency response range | 7 - 50kHz                 <br />\nPlug | Gold-plated non-magnetic plug<br />\nTHD | &lt; 0.15%                <br />\nDynamic diaphragm | High polymer carbon nanotube diaphragm<br />\nDriver | DTM4 dynamic driver, Dual Balanced armature Sonion drivers (single side)       <br />\nCable specification | 1.25M 3.5-0.78PIN<br />\nCable material | Litz single crystal copper silver-plating + Litz oxygen-free copper composite mixed"];
+const metafields = [
+  "Model | PRISM<br />\nOrigin |Dongguan, China                    <br />\nColor |Silver<br />\nSensitivity | 125dB                     <br />\nImpedance | 16Ω±10%<br />\nFrequency response range | 7 - 50kHz                 <br />\nPlug | Gold-plated non-magnetic plug<br />\nTHD | &lt; 0.15%                <br />\nDynamic diaphragm | High polymer carbon nanotube diaphragm<br />\nDriver | DTM4 dynamic driver, Dual Balanced armature Sonion drivers (single side)       <br />\nCable specification | 1.25M 3.5-0.78PIN<br />\nCable material | Litz single crystal copper silver-plating + Litz oxygen-free copper composite mixed",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

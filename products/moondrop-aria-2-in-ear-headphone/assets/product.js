@@ -292,4 +292,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 79,
 };
-const metafields = ["Sensitivity: 122dB/Vrms (@1kHz)<br />\nImpedance: 33Ω±15% (@1kHz)<br />\nFrequency Response Range: 16Hz-22kHZ (IEC61094, Free Field)<br />\nEffective Frequency Response Range: 20Hz-20kHZ (IEC60318-4, -3dB)<br />\nEarphoneJack: 0.78-2pin<br />\nTHD+N: THD ≤0.05% (@1kHz)<br />\nCavity Material: Zinc Alloy Cavity + Brass Nozzle<br />\nPlug: 3.5mm single ended","Aria 2 * 1<br />\nEarphone Cables * 1<br />\n3.5mm Plug * 1<br />\n4.4mm Plug * 1<br />\nEartips<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\n"];
+const metafields = [
+  "Sensitivity: 122dB/Vrms (@1kHz)<br />\nImpedance: 33Ω±15% (@1kHz)<br />\nFrequency Response Range: 16Hz-22kHZ (IEC61094, Free Field)<br />\nEffective Frequency Response Range: 20Hz-20kHZ (IEC60318-4, -3dB)<br />\nEarphoneJack: 0.78-2pin<br />\nTHD+N: THD ≤0.05% (@1kHz)<br />\nCavity Material: Zinc Alloy Cavity + Brass Nozzle<br />\nPlug: 3.5mm single ended",
+  "Aria 2 * 1<br />\nEarphone Cables * 1<br />\n3.5mm Plug * 1<br />\n4.4mm Plug * 1<br />\nEartips<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\n",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

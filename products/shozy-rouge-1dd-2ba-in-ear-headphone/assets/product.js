@@ -122,4 +122,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 190,
 };
-const metafields = ["Multi-driver hybrid setup on each side.<br />\nOne Shozy custom-tuned dynamic driver unit.<br />\nTwo Knowles balanced armature units.<br />\nImpedance: 32 Ohms.<br />\nFrequency response range: 20Hz-20kHz.<br />\nSensitivity: 113dB/mW.<br />\nUniversal two-pin connector type."];
+const metafields = [
+  "Multi-driver hybrid setup on each side.<br />\nOne Shozy custom-tuned dynamic driver unit.<br />\nTwo Knowles balanced armature units.<br />\nImpedance: 32 Ohms.<br />\nFrequency response range: 20Hz-20kHz.<br />\nSensitivity: 113dB/mW.<br />\nUniversal two-pin connector type.",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

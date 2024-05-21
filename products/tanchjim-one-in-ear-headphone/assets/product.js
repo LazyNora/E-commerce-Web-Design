@@ -253,4 +253,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 138,
 };
-const metafields = ["Sensitivity: 126dB/Vrms<br />\nFrequency Response: 7-45kHz<br />\nTotal Harmonic Distortion: &lt;0.062%@1kHz<br />\nDrive Unit: 10mm Movin-Coil Unit<br />\nImpedance: 16Ω±10%@1kHz<br />\nPin Specs: Gold-plated Straight Pin<br />\nDiaphragm: Peek&amp;Pu Suspended Ti Diaphragm Bulb Top<br />\nWire Specs: 1.25m 3.5MM 0.78PIN<br />\nConductor: <br />\nCable Material and Structure: Litz Single Crystal Copper Silver Plating + Litz Oxygen -ree Copper Composite Mixed Coaxial","ONE * 1<br />\nPackage box * 1<br />\nDusty Bag * 1<br />\nEartips * 6 pairs<br />\nProduct Card * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "Sensitivity: 126dB/Vrms<br />\nFrequency Response: 7-45kHz<br />\nTotal Harmonic Distortion: &lt;0.062%@1kHz<br />\nDrive Unit: 10mm Movin-Coil Unit<br />\nImpedance: 16Ω±10%@1kHz<br />\nPin Specs: Gold-plated Straight Pin<br />\nDiaphragm: Peek&amp;Pu Suspended Ti Diaphragm Bulb Top<br />\nWire Specs: 1.25m 3.5MM 0.78PIN<br />\nConductor: <br />\nCable Material and Structure: Litz Single Crystal Copper Silver Plating + Litz Oxygen -ree Copper Composite Mixed Coaxial",
+  "ONE * 1<br />\nPackage box * 1<br />\nDusty Bag * 1<br />\nEartips * 6 pairs<br />\nProduct Card * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

@@ -121,4 +121,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 266,
 };
-const metafields = ["Headphone category: HIFI headphones<br />\nWearing method: in-ear<br />\nSensitivity: 108+2dB<br />\nImpedance: 16 ohms<br />\nDrive unit: 1DD+4BA+2EST hybrid drive unit<br />\nFrequency Response: 18Hz-22kHz<br />\nMaximum power: 10mW<br />\nShell material: 316L stainless steel<br />\nCable change interface: MMCX","SUNNA Earphones * 1<br />\nSingle Crystal Copper Headphone Cable * 1<br />\nInterchangeable Plugs (2.5/3.5/4.4) * 1<br />\nLeather Headphone Storage Case * 1<br />\nMMCX Wire Picker * 1<br />\nColumbia Headphone Cover (S/M/L) * 3 pairs<br />\nSF Earphone tips (S/M/L) * 3 pairs<br />\nInert Sponge Earphone Tips * 2 pairs"];
+const metafields = [
+  "Headphone category: HIFI headphones<br />\nWearing method: in-ear<br />\nSensitivity: 108+2dB<br />\nImpedance: 16 ohms<br />\nDrive unit: 1DD+4BA+2EST hybrid drive unit<br />\nFrequency Response: 18Hz-22kHz<br />\nMaximum power: 10mW<br />\nShell material: 316L stainless steel<br />\nCable change interface: MMCX",
+  "SUNNA Earphones * 1<br />\nSingle Crystal Copper Headphone Cable * 1<br />\nInterchangeable Plugs (2.5/3.5/4.4) * 1<br />\nLeather Headphone Storage Case * 1<br />\nMMCX Wire Picker * 1<br />\nColumbia Headphone Cover (S/M/L) * 3 pairs<br />\nSF Earphone tips (S/M/L) * 3 pairs<br />\nInert Sponge Earphone Tips * 2 pairs",
+];

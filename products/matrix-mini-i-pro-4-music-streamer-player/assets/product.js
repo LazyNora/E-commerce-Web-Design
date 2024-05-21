@@ -256,4 +256,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 143,
 };
-const metafields = ["RM5 remote control x1<br />\nPower cable x1<br />\nQuick start guide x1<br />\nWarranty card x1"];
+const metafields = [
+  "RM5 remote control x1<br />\nPower cable x1<br />\nQuick start guide x1<br />\nWarranty card x1",
+];
+const metafieldsTitle = ["WHAT IN BOX?"];

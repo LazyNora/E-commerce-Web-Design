@@ -127,4 +127,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 243,
 };
-const metafields = ["Material: OFC+Alloy copper with 5N silver plated<br />\nBraid way: 8 core 3-dimensional braided<br />\nDiameter: 1.0mm/core<br />\nStrands: 24 strands of 0.05mm alloy copper with 5N silver plated+ 14 strands OF 0.06mm OFC<br />\nCable skin material: soft PVC<br />\nInterface: 0.78 2pin/mmcx<br />\nPlug: 4 pin detachable plugs, 2.5mm balanced/ 4.4mm balanced/ 3.5mm plug<br />\nPlug material: copper with 24 carat gold plated<br />\nPlug internal connection: 6N OCC+ OCC with silver plated mix conductor<br />\nExternal metal part: Aluminum alloy anode<br />\nCable length: 122cm±2cm<br />\nCable structure: litz+ multiple structure+ twisting strands","Kinera Leyding * 1Pc<br />\nModular 2.5mm * 1Pc<br />\nModular 3.5mm * 1Pc<br />\nModular 4.4mm * 1Pc<br />\nStorage Case * 1Pc<br />\nUser Manual * 1Pc"];
+const metafields = [
+  "Material: OFC+Alloy copper with 5N silver plated<br />\nBraid way: 8 core 3-dimensional braided<br />\nDiameter: 1.0mm/core<br />\nStrands: 24 strands of 0.05mm alloy copper with 5N silver plated+ 14 strands OF 0.06mm OFC<br />\nCable skin material: soft PVC<br />\nInterface: 0.78 2pin/mmcx<br />\nPlug: 4 pin detachable plugs, 2.5mm balanced/ 4.4mm balanced/ 3.5mm plug<br />\nPlug material: copper with 24 carat gold plated<br />\nPlug internal connection: 6N OCC+ OCC with silver plated mix conductor<br />\nExternal metal part: Aluminum alloy anode<br />\nCable length: 122cm±2cm<br />\nCable structure: litz+ multiple structure+ twisting strands",
+  "Kinera Leyding * 1Pc<br />\nModular 2.5mm * 1Pc<br />\nModular 3.5mm * 1Pc<br />\nModular 4.4mm * 1Pc<br />\nStorage Case * 1Pc<br />\nUser Manual * 1Pc",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

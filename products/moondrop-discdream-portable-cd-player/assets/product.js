@@ -207,4 +207,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 102,
 };
-const metafields = ["Battery capacity: 3500mAh<br />\nPower supply: DC5V/2A<br />\nBattery Life: 10Hours(CD)<br />\nCharging port: Type-C<br />\nOutput power: Phone out 500mW<br />\nOutput voltage: Line out 2Vrms<br />\nSupport discformat: CD/CD-R/CD-RW<br />\nSupport audio format: Micro SD Mode(MP3,WMA,LC-AAC,OGG,FLAC,APE)<br />\nPC mode: PCM:44.1kHz to 384kHz, DSD: 2.8224MHz to 11.2896MHz","DISCDREAM * 1<br />\nUser Manual * 1<br />\nCharging Cable * 1"];
+const metafields = [
+  "Battery capacity: 3500mAh<br />\nPower supply: DC5V/2A<br />\nBattery Life: 10Hours(CD)<br />\nCharging port: Type-C<br />\nOutput power: Phone out 500mW<br />\nOutput voltage: Line out 2Vrms<br />\nSupport discformat: CD/CD-R/CD-RW<br />\nSupport audio format: Micro SD Mode(MP3,WMA,LC-AAC,OGG,FLAC,APE)<br />\nPC mode: PCM:44.1kHz to 384kHz, DSD: 2.8224MHz to 11.2896MHz",
+  "DISCDREAM * 1<br />\nUser Manual * 1<br />\nCharging Cable * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

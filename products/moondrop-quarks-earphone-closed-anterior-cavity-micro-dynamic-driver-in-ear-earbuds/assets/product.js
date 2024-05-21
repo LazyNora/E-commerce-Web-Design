@@ -257,4 +257,7 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
-const metafields = ["Frequency Response : 4Hz-43kHz(IEC61094, Free Field)<br />\nEffective frequency Response: 20Hz-20kHz(IEC60318-4, -3dB)<br />\nSensitivity: 116dB/Nrms (@1khz)<br />\nImpedance: 16Ω+ 15% @1khz)<br />\nTHD: 1%@1kHz<br />\nConfiguration: High performance 6mm micro-dynamic driver<br />\nMaterial: PC"];
+const metafields = [
+  "Frequency Response : 4Hz-43kHz(IEC61094, Free Field)<br />\nEffective frequency Response: 20Hz-20kHz(IEC60318-4, -3dB)<br />\nSensitivity: 116dB/Nrms (@1khz)<br />\nImpedance: 16Ω+ 15% @1khz)<br />\nTHD: 1%@1kHz<br />\nConfiguration: High performance 6mm micro-dynamic driver<br />\nMaterial: PC",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

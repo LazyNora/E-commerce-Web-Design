@@ -401,4 +401,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 693,
 };
-const metafields = ["Frequency Response: 20-20000HZ (EC60318-4) / 20-40000Hz (%Inch Free field MIc)<br />\nImpedance: 16ohm@l000Hz<br />\nTHD: 1%<br />\nHousing Material: Liquid Metal AIIoy Housing<br />\nDisphragm: BeryIIium-Coated Dome+PU suspension Ring<br />\nCoil:0.035mm-CCAW<br />\nMagnet: N52-High Density Magnetic Circuit<br />\nAcoustic Fiter:Platented Anti-blocking Filter<br />\nCable: Silver Plated 4N-Litz OFC<br />\nConnectors:0.78-2pin"];
+const metafields = [
+  "Frequency Response: 20-20000HZ (EC60318-4) / 20-40000Hz (%Inch Free field MIc)<br />\nImpedance: 16ohm@l000Hz<br />\nTHD: 1%<br />\nHousing Material: Liquid Metal AIIoy Housing<br />\nDisphragm: BeryIIium-Coated Dome+PU suspension Ring<br />\nCoil:0.035mm-CCAW<br />\nMagnet: N52-High Density Magnetic Circuit<br />\nAcoustic Fiter:Platented Anti-blocking Filter<br />\nCable: Silver Plated 4N-Litz OFC<br />\nConnectors:0.78-2pin",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

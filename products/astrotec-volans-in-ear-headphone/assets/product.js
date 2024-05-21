@@ -139,4 +139,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 217,
 };
-const metafields = ["Large 10.5mm Tesla Dynamic Driver Unit.<br />\nImpedance: 32 Ohms.<br />\nSensitivity: 110dB/mW.<br />\nFrequency Response Range: 8Hz-40kHz.<br />\nHigh-Purity OFC Cable with 3.5mm Gold-plated Plug.<br />\nUniversal MMCX connectors."];
+const metafields = [
+  "Large 10.5mm Tesla Dynamic Driver Unit.<br />\nImpedance: 32 Ohms.<br />\nSensitivity: 110dB/mW.<br />\nFrequency Response Range: 8Hz-40kHz.<br />\nHigh-Purity OFC Cable with 3.5mm Gold-plated Plug.<br />\nUniversal MMCX connectors.",
+];

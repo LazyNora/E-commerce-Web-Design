@@ -127,4 +127,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 195,
 };
-const metafields = ["Material: 6N OCC silver plated cable<br />\nBraid way: 4 core cross braided<br />\nDiameter: 1.8mm per core<br />\nStrands: 140 strands of 0.06mm OCC with silver plated, total 560 strands<br />\nCable skin material: PVC<br />\nPlug: Detachable 2.5mm balanced / 4.4mm balanced / 3.5mm plug<br />\nInterface: 0.78 2pin / MMCX option<br />\nPlug internal connection: 6N OCC + OCC with silver plated mix<br />\nconductor<br />\nExternal metal part: Aluminum alloy anode<br />\nCable length:1.2m<br />\nCable structure: Litz structure"];
+const metafields = [
+  "Material: 6N OCC silver plated cable<br />\nBraid way: 4 core cross braided<br />\nDiameter: 1.8mm per core<br />\nStrands: 140 strands of 0.06mm OCC with silver plated, total 560 strands<br />\nCable skin material: PVC<br />\nPlug: Detachable 2.5mm balanced / 4.4mm balanced / 3.5mm plug<br />\nInterface: 0.78 2pin / MMCX option<br />\nPlug internal connection: 6N OCC + OCC with silver plated mix<br />\nconductor<br />\nExternal metal part: Aluminum alloy anode<br />\nCable length:1.2m<br />\nCable structure: Litz structure",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

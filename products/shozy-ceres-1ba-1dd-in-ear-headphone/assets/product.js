@@ -122,4 +122,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 184,
 };
-const metafields = ["Impedance: 19Ω.<br />\nFrequency Response Range: 20Hz-20kHz.<br />\nSensitivity: 100dB.<br />\nNoise Isolation: -26dB.<br />\nTermination Plug: 3.5mm"];
+const metafields = [
+  "Impedance: 19Ω.<br />\nFrequency Response Range: 20Hz-20kHz.<br />\nSensitivity: 100dB.<br />\nNoise Isolation: -26dB.<br />\nTermination Plug: 3.5mm",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

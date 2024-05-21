@@ -156,4 +156,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 98,
 };
-const metafields = ["Series: MOONDROP Selected series<br />\nExterior cover: Sweat-resistant and high-permeability PVC<br />\nCable core: Litz structure high-purity oxygen-free copper mixed silver-plated cable + independent shielded cable (microphone)<br />\nPlug: USB-C","FRESDSP Cable * 1<br />\nBrand Card * 1"];
+const metafields = [
+  "Series: MOONDROP Selected series<br />\nExterior cover: Sweat-resistant and high-permeability PVC<br />\nCable core: Litz structure high-purity oxygen-free copper mixed silver-plated cable + independent shielded cable (microphone)<br />\nPlug: USB-C",
+  "FRESDSP Cable * 1<br />\nBrand Card * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

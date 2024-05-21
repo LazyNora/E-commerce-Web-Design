@@ -207,4 +207,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 100,
 };
-const metafields = ["Driver: 10mm Dual-Magnetic Circuit &amp; Dual-Cavity Dynamic Driver<br />\nDiaphragm: Double-Sided Vapor Deposited Silicon Crystal Diaphragm<br />\nImpedance: 16Ω±15% (@1kHz)<br />\nSensitivity: 126dB/Vrms (@1kHz)<br />\nFrequency Response Range: 10Hz-50kHz<br />\nEffective Frequency Response: 20Hz-20kHz<br />\nEarphone Connector: 0.78mm 2-Pin<br />\nCable: High-purity Silver-Plated OFC Cable","EW200 * 1<br />\nHeadphone Cables * 1<br />\nEartips * 3 pairs (S/M/L)<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\n"];
+const metafields = [
+  "Driver: 10mm Dual-Magnetic Circuit &amp; Dual-Cavity Dynamic Driver<br />\nDiaphragm: Double-Sided Vapor Deposited Silicon Crystal Diaphragm<br />\nImpedance: 16Ω±15% (@1kHz)<br />\nSensitivity: 126dB/Vrms (@1kHz)<br />\nFrequency Response Range: 10Hz-50kHz<br />\nEffective Frequency Response: 20Hz-20kHz<br />\nEarphone Connector: 0.78mm 2-Pin<br />\nCable: High-purity Silver-Plated OFC Cable",
+  "EW200 * 1<br />\nHeadphone Cables * 1<br />\nEartips * 3 pairs (S/M/L)<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\n",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

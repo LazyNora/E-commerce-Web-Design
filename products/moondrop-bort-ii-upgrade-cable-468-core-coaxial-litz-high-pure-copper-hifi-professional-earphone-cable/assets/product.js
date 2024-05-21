@@ -324,4 +324,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 453,
 };
-const metafields = ["Material: High Pure Copper Germany Imported<br />\n<br />\nType: Litz Processing<br />\n<br />\nStructure: Coaxial Negative Shielding<br />\n<br />\nSpecification: 468-core x Φ0.05<br />\n<br />\nInsulation: Litz+TPEE Filling<br />\n<br />\nOuter Material: Transparent PVC<br />\n<br />\nPlug: Non-magnetic Copper Gold-plated<br />\n<br />\nAccessories: CNC Stainless Steel<br />\n<br />\n‍"];
+const metafields = [
+  "Material: High Pure Copper Germany Imported<br />\n<br />\nType: Litz Processing<br />\n<br />\nStructure: Coaxial Negative Shielding<br />\n<br />\nSpecification: 468-core x Φ0.05<br />\n<br />\nInsulation: Litz+TPEE Filling<br />\n<br />\nOuter Material: Transparent PVC<br />\n<br />\nPlug: Non-magnetic Copper Gold-plated<br />\n<br />\nAccessories: CNC Stainless Steel<br />\n<br />\n‍",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

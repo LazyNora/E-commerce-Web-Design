@@ -267,4 +267,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 319,
 };
-const metafields = ["Impedance: 32ohms<br />\nSensitivity: 108db<br />\nWearing Type: In-Ear<br />\nPlug Type: 3.5mm<br />\nCable Length: 1.2m ( Detachable )<br />\nDriver: 10mm LCP Diaphragm Dynamic Driver<br />\nFrequency: 20Hz-20kHz","QoA Gimlet In-Ear Monitors * 1 Pair<br />\nEarphone Cables * 1Pc<br />\nSilicon Rubber Eartips * 6 sets <br />\nStorage Case * 1Pc<br />\nUser Manual * 1Pc"];
+const metafields = [
+  "Impedance: 32ohms<br />\nSensitivity: 108db<br />\nWearing Type: In-Ear<br />\nPlug Type: 3.5mm<br />\nCable Length: 1.2m ( Detachable )<br />\nDriver: 10mm LCP Diaphragm Dynamic Driver<br />\nFrequency: 20Hz-20kHz",
+  "QoA Gimlet In-Ear Monitors * 1 Pair<br />\nEarphone Cables * 1Pc<br />\nSilicon Rubber Eartips * 6 sets <br />\nStorage Case * 1Pc<br />\nUser Manual * 1Pc",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

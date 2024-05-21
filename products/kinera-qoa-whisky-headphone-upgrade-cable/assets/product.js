@@ -347,4 +347,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 108,
 };
-const metafields = ["Material : 5N OCC with silver plated + alloy copper with silver plated<br />\nCable skin material : PVC<br />\nBraid way : 4 core double parallel twisted<br />\nDiameter: 1.7mm/core<br />\nStrands : 126 strands/core, total 504 strands<br />\nFront-end plug : 4-pin interchangeable<br />\nInterface : 0.78mm 2pin / mmcx<br />\nPlug : 4.4mm balanced &amp; 3.5mm plug<br />\nPlug material : Gold-plated copper<br />\nMetal part process : Silver ( Copper Plated ), Purple ( Anodized Aluminum)<br />\nCable length: 1.2m<br />\nWire structure : Litz multi-stranded structure"];
+const metafields = [
+  "Material : 5N OCC with silver plated + alloy copper with silver plated<br />\nCable skin material : PVC<br />\nBraid way : 4 core double parallel twisted<br />\nDiameter: 1.7mm/core<br />\nStrands : 126 strands/core, total 504 strands<br />\nFront-end plug : 4-pin interchangeable<br />\nInterface : 0.78mm 2pin / mmcx<br />\nPlug : 4.4mm balanced &amp; 3.5mm plug<br />\nPlug material : Gold-plated copper<br />\nMetal part process : Silver ( Copper Plated ), Purple ( Anodized Aluminum)<br />\nCable length: 1.2m<br />\nWire structure : Litz multi-stranded structure",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

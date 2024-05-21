@@ -140,3 +140,4 @@ const product = {
   sale_top: 953,
 };
 const metafields = [];
+const metafieldsTitle = [];

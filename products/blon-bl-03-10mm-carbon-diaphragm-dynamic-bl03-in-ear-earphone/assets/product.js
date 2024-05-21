@@ -330,4 +330,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 773,
 };
-const metafields = ["Product Name: BL-03 In-ear Earphone<br />\nDriver Unit: 10mm Carbon Diaphrage Dynamic Drive<br />\nImpedance: 32 ohm<br />\nEarphone sensitivity: 102dB/mW<br />\nFrenquency response range: 20-20KHz<br />\nPlug Type: 3.5mm Gold Plated Type<br />\nCable Length: 1.2m<br />\nColor: Brown/ Sliver<br />\nEarphone Interface: 0.78mm2pin"];
+const metafields = [
+  "Product Name: BL-03 In-ear Earphone<br />\nDriver Unit: 10mm Carbon Diaphrage Dynamic Drive<br />\nImpedance: 32 ohm<br />\nEarphone sensitivity: 102dB/mW<br />\nFrenquency response range: 20-20KHz<br />\nPlug Type: 3.5mm Gold Plated Type<br />\nCable Length: 1.2m<br />\nColor: Brown/ Sliver<br />\nEarphone Interface: 0.78mm2pin",
+];

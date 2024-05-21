@@ -207,4 +207,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 120,
 };
-const metafields = ["Impedance: 16Ω @ 1kHz.<br />\nSensitivity: 108dB±1dB @ 1kHz.<br />\nFrequency Response: 5Hz-40kHz.<br />\nTHD+N: &lt;0.3% at 1kHz.<br />\nCable Material: 4-Core Silver-Plated Copper Litz.<br />\nConnector Type: Patented MMCX Connectors.<br />\nTermination Options: 3.5mm TRS and 4.4mm TRRS.<br />\nWeight: 20g(10g each ear piece).","Falcon Pro * 1<br />\nNozzles * 2pairs<br />\nEarphone Cables * 1<br />\nEartips * 13 pairs<br />\nFilters * 2 pairs<br />\n3.5mm plug * 1<br />\n4.4mm plug * 1<br />\nStorage Case * 1<br />\nDust Cloth * 1<br />\nCleaning Brush * 1<br />\n"];
+const metafields = [
+  "Impedance: 16Ω @ 1kHz.<br />\nSensitivity: 108dB±1dB @ 1kHz.<br />\nFrequency Response: 5Hz-40kHz.<br />\nTHD+N: &lt;0.3% at 1kHz.<br />\nCable Material: 4-Core Silver-Plated Copper Litz.<br />\nConnector Type: Patented MMCX Connectors.<br />\nTermination Options: 3.5mm TRS and 4.4mm TRRS.<br />\nWeight: 20g(10g each ear piece).",
+  "Falcon Pro * 1<br />\nNozzles * 2pairs<br />\nEarphone Cables * 1<br />\nEartips * 13 pairs<br />\nFilters * 2 pairs<br />\n3.5mm plug * 1<br />\n4.4mm plug * 1<br />\nStorage Case * 1<br />\nDust Cloth * 1<br />\nCleaning Brush * 1<br />\n",
+];

@@ -138,4 +138,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 105,
 };
-const metafields = ["VMV D2R * 1<br />\nVMV P2 * 1<br />\nCharging Cables * 2<br />\nXLR Cables * 1<br />\nUser Manual * 1<br />\n"];
+const metafields = [
+  "VMV D2R * 1<br />\nVMV P2 * 1<br />\nCharging Cables * 2<br />\nXLR Cables * 1<br />\nUser Manual * 1<br />\n",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

@@ -110,4 +110,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 224,
 };
-const metafields = ["Drivers: Sonion Electrostatic Driver*2, Balanced Armatures*6<br />\nFeatures: 3 Tuning Switch; 9 Styles of Tuning Available<br />\nSensitivity: ≥110dB SPL/MW<br />\nInput impedance: 30 Ω<br />\nFrequency response: 10Hz-40kHz<br />\nThe distortion rate: ≤0.5% (1 KHZ)<br />\nChannel balanced: ≤1 dB<br />\nRated power: 10mW<br />\nCable length: 1.2m ±5%"];
+const metafields = [
+  "Drivers: Sonion Electrostatic Driver*2, Balanced Armatures*6<br />\nFeatures: 3 Tuning Switch; 9 Styles of Tuning Available<br />\nSensitivity: ≥110dB SPL/MW<br />\nInput impedance: 30 Ω<br />\nFrequency response: 10Hz-40kHz<br />\nThe distortion rate: ≤0.5% (1 KHZ)<br />\nChannel balanced: ≤1 dB<br />\nRated power: 10mW<br />\nCable length: 1.2m ±5%",
+];

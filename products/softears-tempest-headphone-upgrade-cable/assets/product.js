@@ -122,4 +122,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 137,
 };
-const metafields = ["Plug: 4.4mm - 2pin 0.78<br />\nSplitter: 316 stainless steel CNC engraved<br />\nMaterial: 6N high purity copper + copper alloy + copper alloy silver plating<br />\nCable length: 1.2m<br />\nConstruction: 8 stranded Litz coaxial braid<br />\nAccessories: cable box"];
+const metafields = [
+  "Plug: 4.4mm - 2pin 0.78<br />\nSplitter: 316 stainless steel CNC engraved<br />\nMaterial: 6N high purity copper + copper alloy + copper alloy silver plating<br />\nCable length: 1.2m<br />\nConstruction: 8 stranded Litz coaxial braid<br />\nAccessories: cable box",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

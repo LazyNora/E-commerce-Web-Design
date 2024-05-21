@@ -207,4 +207,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 55,
 };
-const metafields = ["Driver: 10mm Sapphire Plated Diaphragm Dynamic Driver + 6mm Annular Planar Magnetic Driver<br />\nImpedance: 30Ω+15% (@1kHz)<br />\nSensitivity: 120dB/Vrms (@1kHz)<br />\nTHD: THD@1kHz≤0.05%<br />\nFrequency Response: 7Hz-39kHz<br />\nEffective Frequency Response: 20Hz-20kHz (IEC60318-4, 3dB)<br />\nEarphoneJack: 0.78-2pin<br />\nCable Plug: USB-C","May * 1<br />\nHeadphone Cables * 1<br />\nEartips * 3 pairs<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nBrand Card * 1"];
+const metafields = [
+  "Driver: 10mm Sapphire Plated Diaphragm Dynamic Driver + 6mm Annular Planar Magnetic Driver<br />\nImpedance: 30Ω+15% (@1kHz)<br />\nSensitivity: 120dB/Vrms (@1kHz)<br />\nTHD: THD@1kHz≤0.05%<br />\nFrequency Response: 7Hz-39kHz<br />\nEffective Frequency Response: 20Hz-20kHz (IEC60318-4, 3dB)<br />\nEarphoneJack: 0.78-2pin<br />\nCable Plug: USB-C",
+  "May * 1<br />\nHeadphone Cables * 1<br />\nEartips * 3 pairs<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nBrand Card * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

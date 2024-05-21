@@ -179,4 +179,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 301,
 };
-const metafields = ["Power Supply: AC100~120V/220~240V<br />\nOutput Power: 500mW(600/300Ω)<br />\nFrequency Response: 10Hz~30KHz(±0.5dB)<br />\nGain: +16dB <br />\nS/N: 110dB<br />\nTHD+N:≤0.1%(1KHz)<br />\nSuitable Headphone Impedance: 60Ω~600Ω<br />\nSize: 25x11x16cm<br />\nWeight: 3.9Kg"];
+const metafields = [
+  "Power Supply: AC100~120V/220~240V<br />\nOutput Power: 500mW(600/300Ω)<br />\nFrequency Response: 10Hz~30KHz(±0.5dB)<br />\nGain: +16dB <br />\nS/N: 110dB<br />\nTHD+N:≤0.1%(1KHz)<br />\nSuitable Headphone Impedance: 60Ω~600Ω<br />\nSize: 25x11x16cm<br />\nWeight: 3.9Kg",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

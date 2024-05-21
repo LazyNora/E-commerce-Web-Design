@@ -172,4 +172,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 46,
 };
-const metafields = ["UDP-5 * 1<br />\nUser Manual * 1<br />\nRemote Control * 1 (single purchased)<br />\nRadiator * 1 (single purchased)"];
+const metafields = [
+  "UDP-5 * 1<br />\nUser Manual * 1<br />\nRemote Control * 1 (single purchased)<br />\nRadiator * 1 (single purchased)",
+];
+const metafieldsTitle = ["WHAT IN BOX?"];

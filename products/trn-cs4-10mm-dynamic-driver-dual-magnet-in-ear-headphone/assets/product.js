@@ -176,4 +176,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 56,
 };
-const metafields = ["Product Model: CS4<br />\nJack Type: 3.5mm / Type-C<br />\nFrequency Response: 20Hz - 20KHz<br />\nConnector type: 2 Pin-S<br />\nImpedence: 23Ω<br />\nSensivcity: 118dB<br />\nWeight (Single Headphone + cable): 4.2g+12g<br />\nCable length: 1.25m±5cm","CS4 * 1<br />\nEarphone Cables * 1<br />\nEartips * 4 pairs<br />\nUser Manual * 1"];
+const metafields = [
+  "Product Model: CS4<br />\nJack Type: 3.5mm / Type-C<br />\nFrequency Response: 20Hz - 20KHz<br />\nConnector type: 2 Pin-S<br />\nImpedence: 23Ω<br />\nSensivcity: 118dB<br />\nWeight (Single Headphone + cable): 4.2g+12g<br />\nCable length: 1.25m±5cm",
+  "CS4 * 1<br />\nEarphone Cables * 1<br />\nEartips * 4 pairs<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

@@ -224,4 +224,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 332,
 };
-const metafields = ["Headphone Jacks: 3.5mm<br />\nPlug: 3.5mm Single-end Plug &amp; 4.4mm Balanced Plug<br />\nFrequency Response: 6Hz-80kHz<br />\nEffective Frequency Response:  20Hz-20kHz (IEC60318-4, ±3dB)<br />\nImpedance: 18Ω ±15% (@1kHz)<br />\nSensitity: 100dB/Vrms (@1kHz)","[VENUS] Planar Full-size Headphone * 1<br />\n3.5mm to 6.35mm adapter * 1<br />\n3.5mm Stock cable * 1<br />\n4.4mm 6N Litz Balanced cable * 1<br />\nPost card * 1<br />\nManual * 1<br />\nQC Certificate * 1"];
+const metafields = [
+  "Headphone Jacks: 3.5mm<br />\nPlug: 3.5mm Single-end Plug &amp; 4.4mm Balanced Plug<br />\nFrequency Response: 6Hz-80kHz<br />\nEffective Frequency Response:  20Hz-20kHz (IEC60318-4, ±3dB)<br />\nImpedance: 18Ω ±15% (@1kHz)<br />\nSensitity: 100dB/Vrms (@1kHz)",
+  "[VENUS] Planar Full-size Headphone * 1<br />\n3.5mm to 6.35mm adapter * 1<br />\n3.5mm Stock cable * 1<br />\n4.4mm 6N Litz Balanced cable * 1<br />\nPost card * 1<br />\nManual * 1<br />\nQC Certificate * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

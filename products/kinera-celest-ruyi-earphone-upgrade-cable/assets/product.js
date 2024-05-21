@@ -161,4 +161,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 242,
 };
-const metafields = ["Cables:<br />\nMaterial: OFC<br />\nBraid way: 2 cores hand braided<br />\nDiameter: 2.0mm/core<br />\nStrands: 16 strands of 6*0.08mm<br />\nCable skin material: PVC<br />\nInterface: 0.78 2pin / mmcx<br />\nPlug: 3.5mm CTIA plug<br />\nPlug material: Pure copper<br />\nExternal metal part: Aluminum alloy with sandblasting oxidation<br />\nCable length: 150cm±2cm<br />\nCable weight: 24.9g<br />\n<br />\nMic:<br />\nMicrophone patterns: Omnidirectional<br />\nSensitivity: -42±3dB<br />\nResistance: 2.2kΩ<br />\nSignal to noise ratio: 60dB<br />\nFrequency response: 50Hz-10kHz<br />\nBoom mic length: 13cm<br />\nBoom mic weight: 3.6g<br />\nSupport mic mute","High purity OFC cable with 3.5mm plug x1<br />\nOmni-directional boom mic x1<br />\nBoom mic sponge windscreen x1<br />\nUser manualx1"];
+const metafields = [
+  "Cables:<br />\nMaterial: OFC<br />\nBraid way: 2 cores hand braided<br />\nDiameter: 2.0mm/core<br />\nStrands: 16 strands of 6*0.08mm<br />\nCable skin material: PVC<br />\nInterface: 0.78 2pin / mmcx<br />\nPlug: 3.5mm CTIA plug<br />\nPlug material: Pure copper<br />\nExternal metal part: Aluminum alloy with sandblasting oxidation<br />\nCable length: 150cm±2cm<br />\nCable weight: 24.9g<br />\n<br />\nMic:<br />\nMicrophone patterns: Omnidirectional<br />\nSensitivity: -42±3dB<br />\nResistance: 2.2kΩ<br />\nSignal to noise ratio: 60dB<br />\nFrequency response: 50Hz-10kHz<br />\nBoom mic length: 13cm<br />\nBoom mic weight: 3.6g<br />\nSupport mic mute",
+  "High purity OFC cable with 3.5mm plug x1<br />\nOmni-directional boom mic x1<br />\nBoom mic sponge windscreen x1<br />\nUser manualx1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

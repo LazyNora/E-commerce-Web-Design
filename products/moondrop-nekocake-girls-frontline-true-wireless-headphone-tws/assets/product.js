@@ -207,4 +207,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 77,
 };
-const metafields = ["Type: ANC TWS<br />\nBluetooth version: 5.2<br />\nProtocol supported: A2DP/AVRCP/HFP/HSP/SBC/AAC<br />\nCharging port: Type-c<br />\nImpedance:32±15%Ω@1kHz<br />\nWorking distance: 10m (barrier-free open environment)<br />\nSupport system: All Bluetooth devices and smartphones<br />\nCharging time: About 1 hour<br />\nCharging time of charging case: About 1.5 hours<br />\nBattery capacity:3.7V/ 37mAh<br />\nBattery capacity of charging case: 3.7V/ 380mAh<br />\nBattery life: About 4 hours<br />\nBattery life with charging case: About 12 hours","TWS * 1<br />\nProtect Case * 1<br />\nCharging Cables * 1<br />\nEartips * 3 pairs (S/M/L)<br />\nGirls Frontline Acrylic Stand * 1"];
+const metafields = [
+  "Type: ANC TWS<br />\nBluetooth version: 5.2<br />\nProtocol supported: A2DP/AVRCP/HFP/HSP/SBC/AAC<br />\nCharging port: Type-c<br />\nImpedance:32±15%Ω@1kHz<br />\nWorking distance: 10m (barrier-free open environment)<br />\nSupport system: All Bluetooth devices and smartphones<br />\nCharging time: About 1 hour<br />\nCharging time of charging case: About 1.5 hours<br />\nBattery capacity:3.7V/ 37mAh<br />\nBattery capacity of charging case: 3.7V/ 380mAh<br />\nBattery life: About 4 hours<br />\nBattery life with charging case: About 12 hours",
+  "TWS * 1<br />\nProtect Case * 1<br />\nCharging Cables * 1<br />\nEartips * 3 pairs (S/M/L)<br />\nGirls Frontline Acrylic Stand * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

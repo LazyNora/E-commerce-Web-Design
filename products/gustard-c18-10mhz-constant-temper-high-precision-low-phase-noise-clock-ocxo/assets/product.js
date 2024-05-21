@@ -179,4 +179,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 543,
 };
-const metafields = ["Model: C18 Constant temper clock<br />\nOut frequency: 10MHz<br />\nFrequency accuracy: &lt;土300ppb<br />\nFrequency stability: &lt;±50ppb<br />\nPutput amplitude: &gt;7dBm @50Rz<br />\nOutput waveform: Sine wave and square wave output<br />\nOutput impedance: 50Ω<br />\nPhase noise @1Hz(TYP): -110dBc<br />\nShort term stability(Allan devation): 8E-13<br />\nPower input: AC 115V/230V 50/60Hz<br />\nPower consumption: &lt;15W<br />\nFuselage size: wide 220mm*high 50mm* deep 170mm (Deep without protrusion)<br />\nPackage size: wide 285mm*high 85mm*deep 270mm<br />\nWeight: 2.5Kg (Including packaging)"];
+const metafields = [
+  "Model: C18 Constant temper clock<br />\nOut frequency: 10MHz<br />\nFrequency accuracy: &lt;土300ppb<br />\nFrequency stability: &lt;±50ppb<br />\nPutput amplitude: &gt;7dBm @50Rz<br />\nOutput waveform: Sine wave and square wave output<br />\nOutput impedance: 50Ω<br />\nPhase noise @1Hz(TYP): -110dBc<br />\nShort term stability(Allan devation): 8E-13<br />\nPower input: AC 115V/230V 50/60Hz<br />\nPower consumption: &lt;15W<br />\nFuselage size: wide 220mm*high 50mm* deep 170mm (Deep without protrusion)<br />\nPackage size: wide 285mm*high 85mm*deep 270mm<br />\nWeight: 2.5Kg (Including packaging)",
+];

@@ -52,15 +52,6 @@ body h2 {
 	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 }
 
-.section__header.text-center {
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
-}
-
-.section__header {
-	margin-bottom: 60px;
-}
-
 @media only screen and (min-width: 768px) {
 	body .h2,
 	body h2 {

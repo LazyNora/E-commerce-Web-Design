@@ -341,4 +341,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 427,
 };
-const metafields = ["Specification:<br />\nProduct information | INFORMATION<br />\nBrand | TANCHJIM<br />\nModel | OLA<br />\nOrigin | Dongguan, China<br />\nColor | Silver<br />\nSensitivity | 126dB/Vrms<br />\nImpedance | 160± 10%<br />\nFrequency range | 7-45kHz<br />\nTHD | &lt; 0.3%<br />\nDriver | 10mm dynamic driver<br />\nCable | 1.25M 3.5- 0.78PIN<br />\nTechnology | DMT 4<br />\nCable Material | Litz crystal copper silver-plating<br />\nDiaphragm material | polymer graphene<br />\nCable structure | Litz oxygen-free copper composite coaxial"];
+const metafields = [
+  "Specification:<br />\nProduct information | INFORMATION<br />\nBrand | TANCHJIM<br />\nModel | OLA<br />\nOrigin | Dongguan, China<br />\nColor | Silver<br />\nSensitivity | 126dB/Vrms<br />\nImpedance | 160± 10%<br />\nFrequency range | 7-45kHz<br />\nTHD | &lt; 0.3%<br />\nDriver | 10mm dynamic driver<br />\nCable | 1.25M 3.5- 0.78PIN<br />\nTechnology | DMT 4<br />\nCable Material | Litz crystal copper silver-plating<br />\nDiaphragm material | polymer graphene<br />\nCable structure | Litz oxygen-free copper composite coaxial",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

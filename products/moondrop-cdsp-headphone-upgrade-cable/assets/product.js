@@ -156,4 +156,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 89,
 };
-const metafields = ["Cover: PVC<br />\nCore: 4N Oxygen Free Copper<br />\nPlug: USB Type-C","CDSP Cables * 1"];
+const metafields = [
+  "Cover: PVC<br />\nCore: 4N Oxygen Free Copper<br />\nPlug: USB Type-C",
+  "CDSP Cables * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

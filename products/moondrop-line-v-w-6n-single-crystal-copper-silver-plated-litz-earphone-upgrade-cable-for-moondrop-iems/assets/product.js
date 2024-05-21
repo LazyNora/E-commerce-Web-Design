@@ -240,4 +240,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 321,
 };
-const metafields = ["Length: 1.2m<br />\nMaterial: 6N single crystal copper silver-plated<br />\nExterior cover: flexible PVC<br />\nLINE V: 8-strand 392-core<br />\nLINE W: 16-strand 784-core<br />\nPin: Dual 3.5mm single-ended<br />\nConnector: 4.4mm balanced"];
+const metafields = [
+  "Length: 1.2m<br />\nMaterial: 6N single crystal copper silver-plated<br />\nExterior cover: flexible PVC<br />\nLINE V: 8-strand 392-core<br />\nLINE W: 16-strand 784-core<br />\nPin: Dual 3.5mm single-ended<br />\nConnector: 4.4mm balanced",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

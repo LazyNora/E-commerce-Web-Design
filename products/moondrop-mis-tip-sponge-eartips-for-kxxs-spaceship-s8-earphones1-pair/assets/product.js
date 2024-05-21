@@ -257,3 +257,4 @@ const product = {
   selling_plan_groups: [],
 };
 const metafields = ["Mis-tips * 2 pairs"];
+const metafieldsTitle = ["WHAT IN BOX?"];

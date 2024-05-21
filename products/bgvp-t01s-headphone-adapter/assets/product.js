@@ -205,4 +205,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 63,
 };
-const metafields = ["Interface：Type-C HiFi DAC Amplifier<br />\n<br />\nInterface：Type-C,3.5mm<br />\n<br />\nProduct Length：135mm±3mm<br />\n<br />\nDAC Decoding Ability：32bit/384kHz<br />\n<br />\nSNR：128dB<br />\n<br />\nDynamic Range/DNR：120dB<br />\n<br />\nTHD：95dB<br />\n<br />\nTHD+N：0.0003%<br />\n<br />\nFR：20-40kHZ<br />\n<br />\nOutput Load：16-600Ω Adaptive<br />\n<br />\nOutput Power：31mW Dual channer @32Ω<br />\n<br />\nDSD：64/128（PCM）<br />\n<br />\nCable：8 Strand 5N OCC Cable","t01s * 1<br />\n"];
+const metafields = [
+  "Interface：Type-C HiFi DAC Amplifier<br />\n<br />\nInterface：Type-C,3.5mm<br />\n<br />\nProduct Length：135mm±3mm<br />\n<br />\nDAC Decoding Ability：32bit/384kHz<br />\n<br />\nSNR：128dB<br />\n<br />\nDynamic Range/DNR：120dB<br />\n<br />\nTHD：95dB<br />\n<br />\nTHD+N：0.0003%<br />\n<br />\nFR：20-40kHZ<br />\n<br />\nOutput Load：16-600Ω Adaptive<br />\n<br />\nOutput Power：31mW Dual channer @32Ω<br />\n<br />\nDSD：64/128（PCM）<br />\n<br />\nCable：8 Strand 5N OCC Cable",
+  "t01s * 1<br />\n",
+];

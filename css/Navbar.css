@@ -14,6 +14,18 @@ body h6 {
 	line-height: normal;
 }
 
+body .h3,
+body h3 {
+	font-size: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+	body .h3,
+	body h3 {
+		font-size: 31px;
+	}
+}
+
 .header__wrapper {
 	transition:
 		transform 0.4s,
@@ -118,6 +130,24 @@ ul.menu-nav {
 	padding-left: var(--offset-x);
 	padding-right: var(--offset-x);
 	width: 100%;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2000px) {
+	.container-fluid {
+		max-width: 1570px !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container-fluid {
+		--offset-x: calc(var(--fluid-container-offset, 6rem) / 1.25);
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	.container-fluid {
+		--offset-x: var(--fluid-container-offset, 6rem);
+	}
 }
 
 .menu-button {
@@ -227,16 +257,6 @@ ul.menu-nav {
 
 .sub-menu-open {
 	transform: translate3d(-100%, 0, 0);
-}
-
-.container-fluid {
-	--offset-x: 1rem;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: calc(var(--fluid-container-width, 1620px) + var(--offset-x) * 2);
-	padding-left: var(--offset-x);
-	padding-right: var(--offset-x);
-	width: 100%;
 }
 
 .badge {

@@ -128,4 +128,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 660,
 };
-const metafields = ["Output power: 40W + 40W (8Ω)<br />\nHarmonic distortion: ≤0.5% (1KHz)<br />\nFrequency response: 5Hz-68KHz<br />\nSignal to noise ratio: ≥88db(A)<br />\nInput sensitivity: ≤0.23V (1KHz)<br />\nTube: EL34Bx4 6J1x8<br />\nLoad impedance: 4Ω-8Ω<br />\nMaximum power consumption: ≤250W<br />\nMachine size:430mmX325mmX210mm<br />\nOuter packaging size:565mmX435mmX345mm<br />\nNet weight: about 21KG<br />\nGross weight: about 24kg"];
+const metafields = [
+  "Output power: 40W + 40W (8Ω)<br />\nHarmonic distortion: ≤0.5% (1KHz)<br />\nFrequency response: 5Hz-68KHz<br />\nSignal to noise ratio: ≥88db(A)<br />\nInput sensitivity: ≤0.23V (1KHz)<br />\nTube: EL34Bx4 6J1x8<br />\nLoad impedance: 4Ω-8Ω<br />\nMaximum power consumption: ≤250W<br />\nMachine size:430mmX325mmX210mm<br />\nOuter packaging size:565mmX435mmX345mm<br />\nNet weight: about 21KG<br />\nGross weight: about 24kg",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

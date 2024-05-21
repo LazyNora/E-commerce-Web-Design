@@ -139,4 +139,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 192,
 };
-const metafields = ["Hybrid Five Driver Setup, consisting of 4 custom-tuned Balanced Armature Drivers and One Beryllium Dynamic Driver Unit<br />\nImported Medical-Grade 3D Printed Resin Shells<br />\nImported Wooden Panel Faceplate<br />\nImpedance: 16ohms<br />\nSensitivity: 102dB<br />\nFrequency Response Range: 20Hz-20kHz<br />\n2-Pin 0.78mm connector Type<br />\nHigh-Purity Copper cable with 3.5mm termination plug","One pair of Shozy 1.4 earphones<br />\nOne 0.78mm 2-pin high-purity copper cable<br />\nSix pairs of silicone tips<br />\nThree pairs of Foam tips<br />\nCarry case<br />\nUser guide"];
+const metafields = [
+  "Hybrid Five Driver Setup, consisting of 4 custom-tuned Balanced Armature Drivers and One Beryllium Dynamic Driver Unit<br />\nImported Medical-Grade 3D Printed Resin Shells<br />\nImported Wooden Panel Faceplate<br />\nImpedance: 16ohms<br />\nSensitivity: 102dB<br />\nFrequency Response Range: 20Hz-20kHz<br />\n2-Pin 0.78mm connector Type<br />\nHigh-Purity Copper cable with 3.5mm termination plug",
+  "One pair of Shozy 1.4 earphones<br />\nOne 0.78mm 2-pin high-purity copper cable<br />\nSix pairs of silicone tips<br />\nThree pairs of Foam tips<br />\nCarry case<br />\nUser guide",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

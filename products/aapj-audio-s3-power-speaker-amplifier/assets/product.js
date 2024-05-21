@@ -245,4 +245,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 151,
 };
-const metafields = ["Power connector: AC input<br />\nAudio Input: Bluetooth / Stereo RCA / Coaxial / Optical / USB(PC-USB/u-disk) / Microphone * 2<br />\nAudio output: Banana<br />\nPower amplifier chip: Ma12070<br />\nBluetooth version: 5.0<br />\nMatching impedance: 4-16 Ω<br />\nMaximum power output: 80W + 80W<br />\nMaximum supported sample rate: 24bit / 192KHz(coaxial / optical) / 16bit / 44.1Khz(USB)<br />\nu-disk support file format: MP3 / WAV / WMA / APE / FLAC<br />\nSupport u disk format: FAT32(NTFS NTFS is not supported)<br />\nWorking voltage: AC100-240V<br />\nSize(W*D*H): 95 * 58 * 137mm / 3.74 * 6.22 * 5.39in<br />\nPackage size (W*D*H): 230 * 120 * 160mm / 9.06 * 472 * 6.30in<br />\nNet weight: 900g / 1.981b<br />\nPackage weight: 1100g / 2.43lb","AAPJ AUDIO S3 * 1<br />\nPower Cable * 1"];
+const metafields = [
+  "Power connector: AC input<br />\nAudio Input: Bluetooth / Stereo RCA / Coaxial / Optical / USB(PC-USB/u-disk) / Microphone * 2<br />\nAudio output: Banana<br />\nPower amplifier chip: Ma12070<br />\nBluetooth version: 5.0<br />\nMatching impedance: 4-16 Ω<br />\nMaximum power output: 80W + 80W<br />\nMaximum supported sample rate: 24bit / 192KHz(coaxial / optical) / 16bit / 44.1Khz(USB)<br />\nu-disk support file format: MP3 / WAV / WMA / APE / FLAC<br />\nSupport u disk format: FAT32(NTFS NTFS is not supported)<br />\nWorking voltage: AC100-240V<br />\nSize(W*D*H): 95 * 58 * 137mm / 3.74 * 6.22 * 5.39in<br />\nPackage size (W*D*H): 230 * 120 * 160mm / 9.06 * 472 * 6.30in<br />\nNet weight: 900g / 1.981b<br />\nPackage weight: 1100g / 2.43lb",
+  "AAPJ AUDIO S3 * 1<br />\nPower Cable * 1",
+];

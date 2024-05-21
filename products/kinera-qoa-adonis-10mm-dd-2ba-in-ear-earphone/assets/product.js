@@ -105,4 +105,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 191,
 };
-const metafields = ["Drive unit: 10mm custom Dynamic Driver+2BA ( Knowles BA+ QoA custom BA)<br />\nType: In-ear<br />\nImpedance: 21Ω<br />\nEarphone sensitivity: 113dB<br />\nFrequency range: 20-20000Hz<br />\nEarphone plug: 3.5mm<br />\nCable Length: 1.2m<br />\nColor: Blue<br />\nEarphone plug type: Slant Type<br />\nWhether with mic: No<br />\nInterface Type: 0.78mm 2Pin connector<br />\nWhether with cable: Yes<br />\nEarphone category: HIFI, Monitor<br />\nCable Material:8 Core High-purity silver-plated copper cable<br />\nShell:Wood shell","Adonis  * 1<br />\nEarphone cables * 1<br />\nEartips * 6 pairs"];
+const metafields = [
+  "Drive unit: 10mm custom Dynamic Driver+2BA ( Knowles BA+ QoA custom BA)<br />\nType: In-ear<br />\nImpedance: 21Ω<br />\nEarphone sensitivity: 113dB<br />\nFrequency range: 20-20000Hz<br />\nEarphone plug: 3.5mm<br />\nCable Length: 1.2m<br />\nColor: Blue<br />\nEarphone plug type: Slant Type<br />\nWhether with mic: No<br />\nInterface Type: 0.78mm 2Pin connector<br />\nWhether with cable: Yes<br />\nEarphone category: HIFI, Monitor<br />\nCable Material:8 Core High-purity silver-plated copper cable<br />\nShell:Wood shell",
+  "Adonis  * 1<br />\nEarphone cables * 1<br />\nEartips * 6 pairs",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

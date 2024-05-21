@@ -241,4 +241,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 82,
 };
-const metafields = ["Configuration: Single Dynamic Driver<br />\nDriver Size:10mm<br />\nlmpedance: 16Ω<br />\nFrequency range: 15-40000Hz<br />\nSensitivity: 113±3dB<br />\nCable length: 1.3meters<br />\nPlug: 3.5/4.4mm<br />\nWeight: 5.6g","MG100 * 1<br />\nEartips * 9 pairs<br />\nEerphone Cables * 1<br />\n3.5mm Plug * 1<br />\n4.4mm Plug * 1<br />\nCleaning Cloth * 1<br />\nStorage case * 1<br />\nUser Manual * 1<br />\n"];
+const metafields = [
+  "Configuration: Single Dynamic Driver<br />\nDriver Size:10mm<br />\nlmpedance: 16Ω<br />\nFrequency range: 15-40000Hz<br />\nSensitivity: 113±3dB<br />\nCable length: 1.3meters<br />\nPlug: 3.5/4.4mm<br />\nWeight: 5.6g",
+  "MG100 * 1<br />\nEartips * 9 pairs<br />\nEerphone Cables * 1<br />\n3.5mm Plug * 1<br />\n4.4mm Plug * 1<br />\nCleaning Cloth * 1<br />\nStorage case * 1<br />\nUser Manual * 1<br />\n",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

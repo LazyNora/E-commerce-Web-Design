@@ -391,4 +391,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 146,
 };
-const metafields = ["Impedance: 20Ω.<br />\nSensitivity: 107dB.<br />\nDriver Specifications: 10mm PET Diaphragm Dynamic Driver<br />\nTHD+N: &lt;0.5%.<br />\nFR Range: 20Hz-20kHz","WAN ER * 1<br />\nEarphone Cables * 1<br />\nEartips * 6 pairs<br />\nUser Manual * 1<br />\nBrand Card * 1"];
+const metafields = [
+  "Impedance: 20Ω.<br />\nSensitivity: 107dB.<br />\nDriver Specifications: 10mm PET Diaphragm Dynamic Driver<br />\nTHD+N: &lt;0.5%.<br />\nFR Range: 20Hz-20kHz",
+  "WAN ER * 1<br />\nEarphone Cables * 1<br />\nEartips * 6 pairs<br />\nUser Manual * 1<br />\nBrand Card * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

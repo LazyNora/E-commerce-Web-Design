@@ -106,4 +106,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 286,
 };
-const metafields = ["Bluetooth version：V5.3<br />\nChips：QCC3071<br />\nEarphone configuration：1 Knowles balance armature,1 dynamic driver<br />\nEffective range：10m<br />\nBluetooth audio codec：aptX Adaptive  aptX AAC SBC<br />\nDuration<br />\nAAC，SBC codec, approx. 7 hours.<br />\naptx Adaptive codec, approx. 5.5 hours.<br />\nUse with charging case, approx.<br />\n25 hours standby.<br />\nBluetooth audio codec：5.8g(single)+ 52.5g <br />\nBattery capacity (Earpieces+ Charging case)：35mAh+ 500mAh<br />\ncolours：Golden black<br />\nCharging port：Wireless charging / Type- C"];
+const metafields = [
+  "Bluetooth version：V5.3<br />\nChips：QCC3071<br />\nEarphone configuration：1 Knowles balance armature,1 dynamic driver<br />\nEffective range：10m<br />\nBluetooth audio codec：aptX Adaptive  aptX AAC SBC<br />\nDuration<br />\nAAC，SBC codec, approx. 7 hours.<br />\naptx Adaptive codec, approx. 5.5 hours.<br />\nUse with charging case, approx.<br />\n25 hours standby.<br />\nBluetooth audio codec：5.8g(single)+ 52.5g <br />\nBattery capacity (Earpieces+ Charging case)：35mAh+ 500mAh<br />\ncolours：Golden black<br />\nCharging port：Wireless charging / Type- C",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

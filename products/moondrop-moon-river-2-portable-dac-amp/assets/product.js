@@ -278,4 +278,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 164,
 };
-const metafields = ["Model: MOONRIVER 2:TI Portable DAC/AMP<br />\nWeight: 30g<br />\nSize: 57mm x 19.6mm x 13.4mm<br />\nHeadphone Plug: 3.5mm SE, 4.4mm BAL<br />\nFrequency Range:7Hz-85kHz (±1dB)<br />\nBackground Noise:<br />\n4.4mm: 1.5μV (AES17 20kHz)<br />\n3.5mm: 1.2μV (AES17 20kHz)<br />\nSNR:<br />\n4.4mm: 131dB(A-wt)<br />\n3.5mm: 123dB(A-wt)<br />\nDynamic Range: 4.4mm: 131dB (A-wt)<br />\nLine Out:<br />\n3.5mm: 2Vrms<br />\n4.4mm: 4Vrms<br />\nMaximum Output Power: 4.4mm: 32Ω 280mW, 300Ω 53mW<br />\nTHD+N: 4.4mm: 0.00014% ( AES17 20kHz, 300Ω )","[MoonRiver2]Micro DAC+AMP * 1<br />\nType-Cto Type-Cadapter cable*1<br />\nType-Ato Type-Cadapter*1"];
+const metafields = [
+  "Model: MOONRIVER 2:TI Portable DAC/AMP<br />\nWeight: 30g<br />\nSize: 57mm x 19.6mm x 13.4mm<br />\nHeadphone Plug: 3.5mm SE, 4.4mm BAL<br />\nFrequency Range:7Hz-85kHz (±1dB)<br />\nBackground Noise:<br />\n4.4mm: 1.5μV (AES17 20kHz)<br />\n3.5mm: 1.2μV (AES17 20kHz)<br />\nSNR:<br />\n4.4mm: 131dB(A-wt)<br />\n3.5mm: 123dB(A-wt)<br />\nDynamic Range: 4.4mm: 131dB (A-wt)<br />\nLine Out:<br />\n3.5mm: 2Vrms<br />\n4.4mm: 4Vrms<br />\nMaximum Output Power: 4.4mm: 32Ω 280mW, 300Ω 53mW<br />\nTHD+N: 4.4mm: 0.00014% ( AES17 20kHz, 300Ω )",
+  "[MoonRiver2]Micro DAC+AMP * 1<br />\nType-Cto Type-Cadapter cable*1<br />\nType-Ato Type-Cadapter*1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

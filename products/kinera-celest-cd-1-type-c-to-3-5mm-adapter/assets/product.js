@@ -139,4 +139,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 72,
 };
-const metafields = ["Product name: CD-1 USB Type-C to 3.5mm converter<br />\nDAC chip: ALC5686<br />\nOutput power: 30mW dual channel @32Ω<br />\nPCM Decoding capability: 32bit/384KHz<br />\nOutput load 16~200Ω, adaptive<br />\nFrequency response: 20Hz~20KHz<br />\nDistortion:&lt;-92dB<br />\nDynamic range:&gt;110dB<br />\nSignal to noise ratio: 120dB<br />\nShell Material: Intl standard 6063<br />\nAluminum in anodized black colour<br />\nNet Weight: 8.8g<br />\nColour: Black","CD-1 * 1"];
+const metafields = [
+  "Product name: CD-1 USB Type-C to 3.5mm converter<br />\nDAC chip: ALC5686<br />\nOutput power: 30mW dual channel @32Ω<br />\nPCM Decoding capability: 32bit/384KHz<br />\nOutput load 16~200Ω, adaptive<br />\nFrequency response: 20Hz~20KHz<br />\nDistortion:&lt;-92dB<br />\nDynamic range:&gt;110dB<br />\nSignal to noise ratio: 120dB<br />\nShell Material: Intl standard 6063<br />\nAluminum in anodized black colour<br />\nNet Weight: 8.8g<br />\nColour: Black",
+  "CD-1 * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

@@ -365,4 +365,7 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
-const metafields = ["Model: Chu High-performance Dynamic Earphone<br />\nMaterial:  Zinc alloy<br />\nDriver: 10mm High-performance Dynamic Driver<br />\nDiaphragm Material: Titanium-coated<br />\nSound Coil: 0.035mm Ultra-fine Black CCAW <br />\nMagnetic Circuit: N52 Neodymium Magnetic High-performance Internal Magnetic Circuit<br />\nAcoustic Filter: Patented Anti-blocking (anti-imbalanced) Acoustic Filter<br />\nSensitivity: 120dB/Vrms(@1KHz)<br />\nImpedance: 28Ω±15%(@1khz)<br />\nTHD: THD@1KHz≤1%<br />\nFrequency Range: 10Hz-35kHz(IEC61094, Free Field)<br />\nEffective Frequency Response: 20Hz-20kHz(IEC60318-4, -3dB)"];
+const metafields = [
+  "Model: Chu High-performance Dynamic Earphone<br />\nMaterial:  Zinc alloy<br />\nDriver: 10mm High-performance Dynamic Driver<br />\nDiaphragm Material: Titanium-coated<br />\nSound Coil: 0.035mm Ultra-fine Black CCAW <br />\nMagnetic Circuit: N52 Neodymium Magnetic High-performance Internal Magnetic Circuit<br />\nAcoustic Filter: Patented Anti-blocking (anti-imbalanced) Acoustic Filter<br />\nSensitivity: 120dB/Vrms(@1KHz)<br />\nImpedance: 28Ω±15%(@1khz)<br />\nTHD: THD@1KHz≤1%<br />\nFrequency Range: 10Hz-35kHz(IEC61094, Free Field)<br />\nEffective Frequency Response: 20Hz-20kHz(IEC60318-4, -3dB)",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

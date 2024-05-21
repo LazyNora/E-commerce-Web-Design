@@ -140,4 +140,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 392,
 };
-const metafields = ["Weight: 13.7g<br />\nSize: 120mm X 16.4mm<br />\nEarphone Jack: 4.4mm balanced port<br />\nFrequency response range: 7hz 90Khz(-3dB)<br />\nPort: USB Type-C<br />\nBackground noise: 1.3uV(AES17 20Khz)<br />\nTHD+N: 0.00017% (AES17 20kHz, without load<br />\nSNR: 132dB(AES17 20Khz,A-weight)<br />\nFirmware upgrade: Support (Connect PC)<br />\nGain: High/Low (Software switching)<br />\nLine out: 4Vrms(High),2Vrms(Low)<br />\nMaximum output power: 230mW@32Ω,54mW@300Ω"];
+const metafields = [
+  "Weight: 13.7g<br />\nSize: 120mm X 16.4mm<br />\nEarphone Jack: 4.4mm balanced port<br />\nFrequency response range: 7hz 90Khz(-3dB)<br />\nPort: USB Type-C<br />\nBackground noise: 1.3uV(AES17 20Khz)<br />\nTHD+N: 0.00017% (AES17 20kHz, without load<br />\nSNR: 132dB(AES17 20Khz,A-weight)<br />\nFirmware upgrade: Support (Connect PC)<br />\nGain: High/Low (Software switching)<br />\nLine out: 4Vrms(High),2Vrms(Low)<br />\nMaximum output power: 230mW@32Ω,54mW@300Ω",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

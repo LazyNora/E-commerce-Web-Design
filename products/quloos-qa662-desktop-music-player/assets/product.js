@@ -150,4 +150,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 36,
 };
-const metafields = ["QA662 * 1<br />\nRemote Control * 1<br />\nAC Cable * 1<br />\nSD Card-Reader * 1<br />\n64GB SD Card * 1<br />\nUSB A to C Cable * 1<br />\nBluetooth Antennae * 1<br />\nUser Manual * 1<br />\nBrand Card * 1"];
+const metafields = [
+  "QA662 * 1<br />\nRemote Control * 1<br />\nAC Cable * 1<br />\nSD Card-Reader * 1<br />\n64GB SD Card * 1<br />\nUSB A to C Cable * 1<br />\nBluetooth Antennae * 1<br />\nUser Manual * 1<br />\nBrand Card * 1",
+];
+const metafieldsTitle = ["WHAT IN BOX?"];

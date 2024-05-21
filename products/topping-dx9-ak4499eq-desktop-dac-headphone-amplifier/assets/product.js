@@ -317,4 +317,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 84,
 };
-const metafields = ["DX9*1<br />\nRemote control*1<br />\nAC cable*1<br />\nBluetooth antenna*1<br />\n6.35mm to 3.5mm adaptor*1<br />\nProduct Information Card*1<br />\n<br />\n"];
+const metafields = [
+  "DX9*1<br />\nRemote control*1<br />\nAC cable*1<br />\nBluetooth antenna*1<br />\n6.35mm to 3.5mm adaptor*1<br />\nProduct Information Card*1<br />\n<br />\n",
+];
+const metafieldsTitle = ["WHAT IN BOX?"];

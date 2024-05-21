@@ -190,4 +190,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 101,
 };
-const metafields = ["Sensitivity: 101dB/Vrms(@1kHz)<br />\nImpedance: 8Ω±15%(@1kHz)<br />\nFrequency Range: 15-53kHZ(IEC61094,Free Field)<br />\nHeadphoneJack: 3.5mm<br />\nEffective Frequency Range: 20-20kHz(IEC60318-4,-3dB)","PARA * 1<br />\n6.35mm Plug * 1<br />\nHeadphone Cables * 1<br />\nEarpads * 2<br />\nUser Manual * 1<br />\nBrand Card * 1"];
+const metafields = [
+  "Sensitivity: 101dB/Vrms(@1kHz)<br />\nImpedance: 8Ω±15%(@1kHz)<br />\nFrequency Range: 15-53kHZ(IEC61094,Free Field)<br />\nHeadphoneJack: 3.5mm<br />\nEffective Frequency Range: 20-20kHz(IEC60318-4,-3dB)",
+  "PARA * 1<br />\n6.35mm Plug * 1<br />\nHeadphone Cables * 1<br />\nEarpads * 2<br />\nUser Manual * 1<br />\nBrand Card * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

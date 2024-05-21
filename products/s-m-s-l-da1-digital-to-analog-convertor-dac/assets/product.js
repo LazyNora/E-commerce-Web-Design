@@ -156,4 +156,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 97,
 };
-const metafields = ["DA1 * 1<br />\nCharging Cables * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "DA1 * 1<br />\nCharging Cables * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["WHAT IN BOX?"];

@@ -208,4 +208,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 768,
 };
-const metafields = ["Brand: Tin Audio<br />\nModel: T4<br />\nHeadphone sound principle: Dynamic<br />\nImpedance: 32Ω<br />\nSensitivity: 105dB / mW<br />\nFrequency response range: 10-200000Hz<br />\nWith or without microphone: No Mic<br />\nWaterproof performance: Not waterproof<br />\nHeadphone plug type: Line type<br />\nPlug 3.5mm<br />\nCable length: 1.2m"];
+const metafields = [
+  "Brand: Tin Audio<br />\nModel: T4<br />\nHeadphone sound principle: Dynamic<br />\nImpedance: 32Ω<br />\nSensitivity: 105dB / mW<br />\nFrequency response range: 10-200000Hz<br />\nWith or without microphone: No Mic<br />\nWaterproof performance: Not waterproof<br />\nHeadphone plug type: Line type<br />\nPlug 3.5mm<br />\nCable length: 1.2m",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

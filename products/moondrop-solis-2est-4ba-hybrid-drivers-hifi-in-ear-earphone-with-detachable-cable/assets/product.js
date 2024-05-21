@@ -201,4 +201,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 766,
 };
-const metafields = ["Impedance: 7.5Ω±15% (@1kHz)<br />\n<br />\nSensitivity: 120dB/Vrms (@1kHz)<br />\n<br />\nFrequency response range: 20Hz- 45kHz (Free field 1/4 inch MIC, -3dB)<br />\n<br />\nEffective frequency response: 20Hz- 20kHz (IEC60318-4)<br />\n<br />\nConnector: 0.78-2Pin<br />\n<br />\nHighs driver: Sonion EST<br />\n<br />\nMids driver: Softears D-MID-A<br />\n<br />\nBass driver: Sonion 37Series","[SOLIS] earphone * 1<br />\n<br />\nLITZ 4N purity oxygen-free copper earphone cable * 1<br />\n<br />\nStorage bag * 1<br />\n<br />\nAviation adapter * 1<br />\n<br />\nSilicon ear tips * 3 pairs (S, M, L)<br />\n<br />\nCertificate * 1<br />\n<br />\nManual * 1"];
+const metafields = [
+  "Impedance: 7.5Ω±15% (@1kHz)<br />\n<br />\nSensitivity: 120dB/Vrms (@1kHz)<br />\n<br />\nFrequency response range: 20Hz- 45kHz (Free field 1/4 inch MIC, -3dB)<br />\n<br />\nEffective frequency response: 20Hz- 20kHz (IEC60318-4)<br />\n<br />\nConnector: 0.78-2Pin<br />\n<br />\nHighs driver: Sonion EST<br />\n<br />\nMids driver: Softears D-MID-A<br />\n<br />\nBass driver: Sonion 37Series",
+  "[SOLIS] earphone * 1<br />\n<br />\nLITZ 4N purity oxygen-free copper earphone cable * 1<br />\n<br />\nStorage bag * 1<br />\n<br />\nAviation adapter * 1<br />\n<br />\nSilicon ear tips * 3 pairs (S, M, L)<br />\n<br />\nCertificate * 1<br />\n<br />\nManual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

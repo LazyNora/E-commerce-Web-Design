@@ -144,7 +144,8 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	transition: opacity 0.8s ease,
+	transition:
+		opacity 0.8s ease,
 		transform 1.1s cubic-bezier(0.15, 0.75, 0.5, 1) 0s;
 }
 
@@ -233,24 +234,6 @@
 	.section-padding {
 		padding-bottom: calc(var(--section-padding-bottom, 0) * 0.5);
 		padding-top: calc(var(--section-padding-top, 0) * 0.5);
-	}
-}
-
-@media screen and (min-width: 1440px) and (max-width: 2000px) {
-	.container-fluid {
-		max-width: 1570px !important;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.container-fluid {
-		--offset-x: calc(var(--fluid-container-offset, 6rem) / 1.25);
-	}
-}
-
-@media screen and (min-width: 1536px) {
-	.container-fluid {
-		--offset-x: var(--fluid-container-offset, 6rem);
 	}
 }
 

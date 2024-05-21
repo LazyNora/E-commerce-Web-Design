@@ -88,4 +88,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 264,
 };
-const metafields = ["USB mode / USB: ASRC transmission <br />\nFrequency response : 20Hz-20kHz <br />\nRCA output level : 2Vrms <br />\nRCA Impedance/ RCA : ≥100ohm <br />\nHeadphone power output : 45mW@16Ω, 85mW@32Ω, 160mW@64Ω, 150mW@120Ω, 65mW@300Ω <br />\nHeadphone Background Noise : -110dBm <br />\nHeadphone Output level amplitude : 4Vrms <br />\nHeadphone Impedance : 16Ω-300Ω <br />\nUSB Sampling rate/USB : 16bit-24bit/44.1kHz-96kHz <br />\nOptical /Coaxial Sampling rate : 16bit-24bit/44.1kHz-192kHz <br />\nUnit Weight : 0.25kg <br />\nPackage Weight : 0.56kg <br />\nProduct Size: 99.2 x 98 x33mm <br />\nPackage Size: 205x265x7mm <br />\nDC power supply: USB cable/DC 5V1A USB / DC 5V1A","DAC-X3 PRO unit *1<br />\nPower cable *1<br />\nUSB cable *1<br />\nRCA cable *1"];
+const metafields = [
+  "USB mode / USB: ASRC transmission <br />\nFrequency response : 20Hz-20kHz <br />\nRCA output level : 2Vrms <br />\nRCA Impedance/ RCA : ≥100ohm <br />\nHeadphone power output : 45mW@16Ω, 85mW@32Ω, 160mW@64Ω, 150mW@120Ω, 65mW@300Ω <br />\nHeadphone Background Noise : -110dBm <br />\nHeadphone Output level amplitude : 4Vrms <br />\nHeadphone Impedance : 16Ω-300Ω <br />\nUSB Sampling rate/USB : 16bit-24bit/44.1kHz-96kHz <br />\nOptical /Coaxial Sampling rate : 16bit-24bit/44.1kHz-192kHz <br />\nUnit Weight : 0.25kg <br />\nPackage Weight : 0.56kg <br />\nProduct Size: 99.2 x 98 x33mm <br />\nPackage Size: 205x265x7mm <br />\nDC power supply: USB cable/DC 5V1A USB / DC 5V1A",
+  "DAC-X3 PRO unit *1<br />\nPower cable *1<br />\nUSB cable *1<br />\nRCA cable *1",
+];

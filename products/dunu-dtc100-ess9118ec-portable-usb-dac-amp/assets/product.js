@@ -105,4 +105,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 171,
 };
-const metafields = ["Digital-to-Analog Converter: ESSTech ES9118EC<br />\nFrequency Response: 20 Hz - 20 kHz<br />\nSupported Formats: PCM 32-bit / 384 kHz Up to quad-rate DSD256 (DSD128 over DoP)<br />\nSignal-to-Noise Ratio (SNR): 120 dB (A-weighted)<br />\nDynamic Range (DNR): 120 dB (A-weighted)<br />\nTHD+N: 0.0004% into 32 Ω<br />\nOutput Power: 25 mW into 32 Ω<br />\nInput: USB Audio 2.0 (USB Type-C)"];
+const metafields = [
+  "Digital-to-Analog Converter: ESSTech ES9118EC<br />\nFrequency Response: 20 Hz - 20 kHz<br />\nSupported Formats: PCM 32-bit / 384 kHz Up to quad-rate DSD256 (DSD128 over DoP)<br />\nSignal-to-Noise Ratio (SNR): 120 dB (A-weighted)<br />\nDynamic Range (DNR): 120 dB (A-weighted)<br />\nTHD+N: 0.0004% into 32 Ω<br />\nOutput Power: 25 mW into 32 Ω<br />\nInput: USB Audio 2.0 (USB Type-C)",
+];

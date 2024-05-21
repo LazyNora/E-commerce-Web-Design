@@ -368,4 +368,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 92,
 };
-const metafields = ["Sonus * 1<br />\nEarphone Cable * 1<br />\nStorage Case * 1<br />\nEartips * 7 pairs<br />\nFilters * 2 pairs<br />\nUser manual * 1"];
+const metafields = [
+  "Sonus * 1<br />\nEarphone Cable * 1<br />\nStorage Case * 1<br />\nEartips * 7 pairs<br />\nFilters * 2 pairs<br />\nUser manual * 1",
+];

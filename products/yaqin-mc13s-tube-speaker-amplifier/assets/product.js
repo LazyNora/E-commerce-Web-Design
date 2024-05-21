@@ -262,4 +262,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 877,
 };
-const metafields = ["Tubes: 12AU7*2 12AX7B*2 EL34*4 <br />\nMaximum Output: 40W per channel (8Ω)<br />\nOutput Jacks: Two channels with two groups gold plated jacks<br />\nOutput Impedance: 4Ω and 8Ω<br />\nInput Sensitivity: 0.25V<br />\nInput Impedance: 20KΩ<br />\nInput Jacks: 4 Groups gold plated isolated RCA jacks (CD, DVD, Tape, and Tuner)<br />\nDistortion of Harmonic Wave: ≤0.9% (at 28W)<br />\nFrequency Response: 10Hz ~ 76KHz (-2dB)<br />\nSignal-to-Noise Ratio: &gt;85dB (A weight)<br />\nSupply Voltage: AC 110V / AC 220V, 60/50Hz <br />\nPower Consumption: 220W<br />\nNet Weight: 18kg (40lb)<br />\nShipping Weight: 23kg (47lb)<br />\nShipping Dimension: 60 * 45 * 30 cm (24&quot; x 17&quot; x 12&quot;)","A YAQIN MC-13S unit<br />\nA Power cable<br />\nA manual<br />\nHex screw drivers to adjust bias"];
+const metafields = [
+  "Tubes: 12AU7*2 12AX7B*2 EL34*4 <br />\nMaximum Output: 40W per channel (8Ω)<br />\nOutput Jacks: Two channels with two groups gold plated jacks<br />\nOutput Impedance: 4Ω and 8Ω<br />\nInput Sensitivity: 0.25V<br />\nInput Impedance: 20KΩ<br />\nInput Jacks: 4 Groups gold plated isolated RCA jacks (CD, DVD, Tape, and Tuner)<br />\nDistortion of Harmonic Wave: ≤0.9% (at 28W)<br />\nFrequency Response: 10Hz ~ 76KHz (-2dB)<br />\nSignal-to-Noise Ratio: &gt;85dB (A weight)<br />\nSupply Voltage: AC 110V / AC 220V, 60/50Hz <br />\nPower Consumption: 220W<br />\nNet Weight: 18kg (40lb)<br />\nShipping Weight: 23kg (47lb)<br />\nShipping Dimension: 60 * 45 * 30 cm (24&quot; x 17&quot; x 12&quot;)",
+  "A YAQIN MC-13S unit<br />\nA Power cable<br />\nA manual<br />\nHex screw drivers to adjust bias",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

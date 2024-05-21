@@ -122,4 +122,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 868,
 };
-const metafields = ["Voltage: 110V - 240V AVAILABLE<br />\nDimensions: Length 420mm x Height 375mm x Depth 285mm<br />\nFrequency Response: 6hz - 60khz<br />\nOutput Power: 12watts x 2 in Class A Push and Pull circuit design<br />\nOutput Tube: EL84 / 6P14 x 4<br />\nDriver Tube: 12ax7 x 2<br />\nSignal/Noise Ration: more than or equal to 78db<br />\nDistortion: 5% at 6 watts<br />\nInput sensitivity: 300mv<br />\nInput Jack: 2 Groups<br />\nConsumption: Less than or equal to 90w<br />\nFuse: F2AL250V<br />\nColour: Gold Body With Wooden Side Panel &amp; Dark Green Power Supply<br />\nWeight: 14kg","Amplifier <br />\nStandard 1.8m Power Cord <br />\nAll the Tubes/Vavle <br />\nOriginal BOX"];
+const metafields = [
+  "Voltage: 110V - 240V AVAILABLE<br />\nDimensions: Length 420mm x Height 375mm x Depth 285mm<br />\nFrequency Response: 6hz - 60khz<br />\nOutput Power: 12watts x 2 in Class A Push and Pull circuit design<br />\nOutput Tube: EL84 / 6P14 x 4<br />\nDriver Tube: 12ax7 x 2<br />\nSignal/Noise Ration: more than or equal to 78db<br />\nDistortion: 5% at 6 watts<br />\nInput sensitivity: 300mv<br />\nInput Jack: 2 Groups<br />\nConsumption: Less than or equal to 90w<br />\nFuse: F2AL250V<br />\nColour: Gold Body With Wooden Side Panel &amp; Dark Green Power Supply<br />\nWeight: 14kg",
+  "Amplifier <br />\nStandard 1.8m Power Cord <br />\nAll the Tubes/Vavle <br />\nOriginal BOX",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

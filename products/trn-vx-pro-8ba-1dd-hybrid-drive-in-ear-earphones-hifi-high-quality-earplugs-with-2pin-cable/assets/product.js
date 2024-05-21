@@ -419,4 +419,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 482,
 };
-const metafields = ["Model:VX pro<br />\nEarphone type: In-ear<br />\nImpedance: 22Ω<br />\nEarphonesensitivity: 106dB/mW<br />\nFrequency range: 7-40000Hz<br />\nPlugType: 3.5mmStraight Plug<br />\nCable Length: 1.25m<br />\nColor:Silver,Blue<br />\nWhether with cable: Yes<br />\nEarphone interface:2Pin Interface<br />\nWhether with mic: Optional<br />\nWhether can replacement cable: Yes<br />\nDriver unit:8BA+1DDhybrid driver unit (Super-sized 10mmDiaphragm + Customed BA)"];
+const metafields = [
+  "Model:VX pro<br />\nEarphone type: In-ear<br />\nImpedance: 22Ω<br />\nEarphonesensitivity: 106dB/mW<br />\nFrequency range: 7-40000Hz<br />\nPlugType: 3.5mmStraight Plug<br />\nCable Length: 1.25m<br />\nColor:Silver,Blue<br />\nWhether with cable: Yes<br />\nEarphone interface:2Pin Interface<br />\nWhether with mic: Optional<br />\nWhether can replacement cable: Yes<br />\nDriver unit:8BA+1DDhybrid driver unit (Super-sized 10mmDiaphragm + Customed BA)",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

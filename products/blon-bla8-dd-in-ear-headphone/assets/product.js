@@ -208,4 +208,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 236,
 };
-const metafields = ["Impedance: 32 Ohm<br />\nFrequency Response: 20Hz-20kHz<br />\nSensitivity: 115dB<br />\nDriver: 10mm New Lightweight Diaphragm<br />\nStandard 2-pin connectors<br />\n3.5mm gold-plated straight termination plug"];
+const metafields = [
+  "Impedance: 32 Ohm<br />\nFrequency Response: 20Hz-20kHz<br />\nSensitivity: 115dB<br />\nDriver: 10mm New Lightweight Diaphragm<br />\nStandard 2-pin connectors<br />\n3.5mm gold-plated straight termination plug",
+];

@@ -172,4 +172,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 135,
 };
-const metafields = ["Impedance: 34Ω.<br />\nFrequency Response: 20Hz-40kHz.<br />\nSensitivity: 105dB/mW.<br />\nTHD+N: ≤1%.<br />\nChannel Difference: ≤1dB.<br />\nConnector Type: MMCX.<br />\nTermination: 3.5mm.","P05 * 1<br />\nEarphone Cables * 1<br />\nNozzles * 2pairs<br />\nEartips * 7pairs<br />\nStorage Case * 1"];
+const metafields = [
+  "Impedance: 34Ω.<br />\nFrequency Response: 20Hz-40kHz.<br />\nSensitivity: 105dB/mW.<br />\nTHD+N: ≤1%.<br />\nChannel Difference: ≤1dB.<br />\nConnector Type: MMCX.<br />\nTermination: 3.5mm.",
+  "P05 * 1<br />\nEarphone Cables * 1<br />\nNozzles * 2pairs<br />\nEartips * 7pairs<br />\nStorage Case * 1",
+];

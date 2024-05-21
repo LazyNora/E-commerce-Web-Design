@@ -140,4 +140,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 581,
 };
-const metafields = ["Impedance: 32 Ohms.<br />\nSensitivity: 110dB.<br />\nRated Power: 3mW.<br />\nDistortion: &lt;3%.<br />\nFrequency Response Range: 5Hz-40kHz.<br />\nCable Length: 1.2m.<br />\nPlug: 2.5mm Balanced. ","NORN * 1<br />\nEarphone Cables * 1<br />\n2.5mm to 4.4mm Adapter Cables * 1<br />\n2.5mm to 3.5mm Adapter Cables * 1<br />\nEartips * 8 pairs<br />\nStorage Case * 1<br />\nClean Brush * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "Impedance: 32 Ohms.<br />\nSensitivity: 110dB.<br />\nRated Power: 3mW.<br />\nDistortion: &lt;3%.<br />\nFrequency Response Range: 5Hz-40kHz.<br />\nCable Length: 1.2m.<br />\nPlug: 2.5mm Balanced. ",
+  "NORN * 1<br />\nEarphone Cables * 1<br />\n2.5mm to 4.4mm Adapter Cables * 1<br />\n2.5mm to 3.5mm Adapter Cables * 1<br />\nEartips * 8 pairs<br />\nStorage Case * 1<br />\nClean Brush * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

@@ -139,4 +139,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 119,
 };
-const metafields = ["10 PET Dynamic Driver + 1 Knowles 32873 BA<br />\nImpedance: 23 ohms<br />\nSensitivity: 114dB<br />\nFrequency Response: 20Hz-20kHz<br />\n5N copper with silver-plated<br />\n3.5mm Termination Plug","Vesper2 * 1<br />\nEarphone Cables * 1<br />\nEartips * 6 pairs<br />\nStorage Case * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "10 PET Dynamic Driver + 1 Knowles 32873 BA<br />\nImpedance: 23 ohms<br />\nSensitivity: 114dB<br />\nFrequency Response: 20Hz-20kHz<br />\n5N copper with silver-plated<br />\n3.5mm Termination Plug",
+  "Vesper2 * 1<br />\nEarphone Cables * 1<br />\nEartips * 6 pairs<br />\nStorage Case * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

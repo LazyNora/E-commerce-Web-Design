@@ -2036,3 +2036,12 @@ html.prevent-scroll body {
 	padding-top: 56.24684%;
 	padding-top: calc(100% / (0.0001 + var(--aspect-ratio, 16/9)));
 }
+
+.section__header.text-center {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.section__header {
+	margin-bottom: 60px;
+}

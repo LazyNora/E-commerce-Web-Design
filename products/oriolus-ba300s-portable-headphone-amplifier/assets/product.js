@@ -122,4 +122,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 207,
 };
-const metafields = ["Machine gain: +3dB<br />\n4.4mm input and 4.4mm output<br />\nOutput power: 350mW(32Ω load)<br />\nS/N: 110db<br />\nTHD+N:0.02%<br />\nPlayback time: 7H<br />\nFrequency range: 10Hz - 50KHz (+/-0.5dB)<br />\nNet weight: 165g<br />\nSize: 120 x 57 x16.5mm<br />\nWeight: 0.5kg"];
+const metafields = [
+  "Machine gain: +3dB<br />\n4.4mm input and 4.4mm output<br />\nOutput power: 350mW(32Ω load)<br />\nS/N: 110db<br />\nTHD+N:0.02%<br />\nPlayback time: 7H<br />\nFrequency range: 10Hz - 50KHz (+/-0.5dB)<br />\nNet weight: 165g<br />\nSize: 120 x 57 x16.5mm<br />\nWeight: 0.5kg",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

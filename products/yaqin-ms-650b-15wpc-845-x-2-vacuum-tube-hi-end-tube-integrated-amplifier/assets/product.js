@@ -106,4 +106,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 874,
 };
-const metafields = ["Output Power：15W + 15W(8Ω)<br />\nDistortion of Harmonic Wave + SNR：≤1.5%(when10W)<br />\nFrequency Response：10Hz - 32KHz(-2dB)<br />\nInput Sensitivity：≤0.3V<br />\nElectron Tube：845 × 2  12AT7 × 2  12AU7 × 4<br />\nLoad Impedance：4Ω - 8Ω<br />\nInput Power: 110V-240V  AVAILABLE<br />\nSize Dimension:  L 420mm x W 420mm x H 300mm<br />\nWeight: 38KG ","A YAQIN MS-650B<br />\nTubes<br />\nPower Cord<br />\nRemote Control<br />\nHex Key"];
+const metafields = [
+  "Output Power：15W + 15W(8Ω)<br />\nDistortion of Harmonic Wave + SNR：≤1.5%(when10W)<br />\nFrequency Response：10Hz - 32KHz(-2dB)<br />\nInput Sensitivity：≤0.3V<br />\nElectron Tube：845 × 2  12AT7 × 2  12AU7 × 4<br />\nLoad Impedance：4Ω - 8Ω<br />\nInput Power: 110V-240V  AVAILABLE<br />\nSize Dimension:  L 420mm x W 420mm x H 300mm<br />\nWeight: 38KG ",
+  "A YAQIN MS-650B<br />\nTubes<br />\nPower Cord<br />\nRemote Control<br />\nHex Key",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

@@ -140,4 +140,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 295,
 };
-const metafields = ["Impedance:12Ω@1kHz<br />\nSensitivity:123dB/Vrms@1kHz<br />\nInterface specification:0.78mm-2pin<br />\nShell:medical resin 3D printing<br />\nTHD:&lt;1%@1kHz<br />\nEffective frequency response: 20-20kHz (IEC60318-4)<br />\nUnit configuration:4 balanced armature units<br />\nFrequency range: 5-40kHz (1/4&#39; free field, -3Db) "];
+const metafields = [
+  "Impedance:12Ω@1kHz<br />\nSensitivity:123dB/Vrms@1kHz<br />\nInterface specification:0.78mm-2pin<br />\nShell:medical resin 3D printing<br />\nTHD:&lt;1%@1kHz<br />\nEffective frequency response: 20-20kHz (IEC60318-4)<br />\nUnit configuration:4 balanced armature units<br />\nFrequency range: 5-40kHz (1/4&#39; free field, -3Db) ",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

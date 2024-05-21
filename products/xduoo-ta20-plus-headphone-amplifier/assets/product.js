@@ -173,4 +173,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 109,
 };
-const metafields = ["Power supply: external AC110V (110-120V)/220V (220-240V)<br />\nGain: +18dB<br />\n<br />\nSingle-ended headphone output performance parameters<br />\nOutput power: 2000mW (32Ω load)<br />\nFrequency response range: 10Hz~80KHz (±0.5dB)<br />\nSeparation: ≥74dB<br />\nSignal-to-noise ratio: 113dB<br />\nHarmonic distortion: 0.05%<br />\n<br />\nBalanced headphone output performance parameters<br />\nOutput power: 2600mW (32Ω)<br />\nFrequency response range: 10Hz~80KHz (±0.5dB)<br />\nSeparation: ≥95dB<br />\nSignal-to-noise ratio: 113dB<br />\nHarmonic distortion: 0.05%<br />\n<br />\nSuitable headphone impedance: 16Ω～600Ω<br />\nVolume: 26X17.7X15.3cm<br />\nWeight: 4.3kg","TA20 PLUS * 1<br />\nCharging Cables * 1<br />\nUser Manual * 1<br />\nWarranty Card * 1<br />\n6.35 Plug * 1"];
+const metafields = [
+  "Power supply: external AC110V (110-120V)/220V (220-240V)<br />\nGain: +18dB<br />\n<br />\nSingle-ended headphone output performance parameters<br />\nOutput power: 2000mW (32Ω load)<br />\nFrequency response range: 10Hz~80KHz (±0.5dB)<br />\nSeparation: ≥74dB<br />\nSignal-to-noise ratio: 113dB<br />\nHarmonic distortion: 0.05%<br />\n<br />\nBalanced headphone output performance parameters<br />\nOutput power: 2600mW (32Ω)<br />\nFrequency response range: 10Hz~80KHz (±0.5dB)<br />\nSeparation: ≥95dB<br />\nSignal-to-noise ratio: 113dB<br />\nHarmonic distortion: 0.05%<br />\n<br />\nSuitable headphone impedance: 16Ω～600Ω<br />\nVolume: 26X17.7X15.3cm<br />\nWeight: 4.3kg",
+  "TA20 PLUS * 1<br />\nCharging Cables * 1<br />\nUser Manual * 1<br />\nWarranty Card * 1<br />\n6.35 Plug * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

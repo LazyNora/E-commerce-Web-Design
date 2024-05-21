@@ -123,3 +123,4 @@ const product = {
   sale_top: 87,
 };
 const metafields = ["MC2 3.5MM Cables * 1"];
+const metafieldsTitle = ["WHAT IN BOX?"];

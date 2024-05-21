@@ -144,4 +144,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 44,
 };
-const metafields = ["Size: W330mm*D260mm*H65mm (protrusion not included)<br />\nPackage size: W420mm*D360mm*H175mm<br />\nWeight: 7.0KG (with package)<br />\n"];
+const metafields = [
+  "Size: W330mm*D260mm*H65mm (protrusion not included)<br />\nPackage size: W420mm*D360mm*H175mm<br />\nWeight: 7.0KG (with package)<br />\n",
+];

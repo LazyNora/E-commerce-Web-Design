@@ -185,4 +185,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 193,
 };
-const metafields = ["Drive unit: 2 Sonion BA+4 Knowles 6BA Driver Units each side<br />\nType: In-ear<br />\nImpedance: 23Ω<br />\nEarphone sensitivity: 118 ±2dB<br />\nFrequency range: 20-20000Hz<br />\nEarphone plug: 3.5mm<br />\nCable Length: 1.2m<br />\nColor: Yellow/Blue/Purple<br />\nEarphone plug type: Slant Type<br />\nWhether with mic: No<br />\nInterface Type: 0.78mm 2Pin connector<br />\nWhether with cable: Yes<br />\nEarphone category: HIFI, Monitor<br />\nApplicable type of music: Classical symphonic concert","QOA Mojito * 1<br />\nEarphone cable * 1<br />\n3.5mm plug * 1<br />\nStorage case * 1<br />\nSilicone tips * 3 pairs<br />\nColored eartips * 3 pairs"];
+const metafields = [
+  "Drive unit: 2 Sonion BA+4 Knowles 6BA Driver Units each side<br />\nType: In-ear<br />\nImpedance: 23Ω<br />\nEarphone sensitivity: 118 ±2dB<br />\nFrequency range: 20-20000Hz<br />\nEarphone plug: 3.5mm<br />\nCable Length: 1.2m<br />\nColor: Yellow/Blue/Purple<br />\nEarphone plug type: Slant Type<br />\nWhether with mic: No<br />\nInterface Type: 0.78mm 2Pin connector<br />\nWhether with cable: Yes<br />\nEarphone category: HIFI, Monitor<br />\nApplicable type of music: Classical symphonic concert",
+  "QOA Mojito * 1<br />\nEarphone cable * 1<br />\n3.5mm plug * 1<br />\nStorage case * 1<br />\nSilicone tips * 3 pairs<br />\nColored eartips * 3 pairs",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

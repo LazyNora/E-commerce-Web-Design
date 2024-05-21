@@ -233,4 +233,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 64,
 };
-const metafields = ["Bluetooth Encoding Format：Aptx/AptxHD/APTX Adaptive/AAC/SBC<br />\nBluetooth Chip：Qualcomm QCC 5144<br />\nBluetooth Version：Bluetooth 5.2<br />\nTransmission Distance：20m<br />\nOutput Power：54mW(16Ω) 42mW(32Ω)<br />\nSignal to Noise Ratio：101.3dBA<br />\nDistortion：＜0.1%<br />\nBattery Life：26h<br />\nStandby：480h<br />\nCharge：1.5h<br />\nBattery Capacity：130h<br />\nUSB：Type-c<br />\nWeight：16.5g<br />\nConnectors：mmcx，2-PIN 0.78","USB Charging Cable*1<br />\nUser Guide*1<br />\nStorage Box*1"];
+const metafields = [
+  "Bluetooth Encoding Format：Aptx/AptxHD/APTX Adaptive/AAC/SBC<br />\nBluetooth Chip：Qualcomm QCC 5144<br />\nBluetooth Version：Bluetooth 5.2<br />\nTransmission Distance：20m<br />\nOutput Power：54mW(16Ω) 42mW(32Ω)<br />\nSignal to Noise Ratio：101.3dBA<br />\nDistortion：＜0.1%<br />\nBattery Life：26h<br />\nStandby：480h<br />\nCharge：1.5h<br />\nBattery Capacity：130h<br />\nUSB：Type-c<br />\nWeight：16.5g<br />\nConnectors：mmcx，2-PIN 0.78",
+  "USB Charging Cable*1<br />\nUser Guide*1<br />\nStorage Box*1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

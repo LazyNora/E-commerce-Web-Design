@@ -140,3 +140,4 @@ const product = {
   sale_top: 85,
 };
 const metafields = ["SHIROI Bricks * 1<br />\nUser Manual * 1"];
+const metafieldsTitle = ["WHAT IN BOX?"];

@@ -223,4 +223,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 446,
 };
-const metafields = ["- OLED screen has adjustable brightness, 10s automatic sleep, and any operation or display change will alarm the screen.<br />\n- Frequency Response: 20Hz-20kHz +/-0.08dB<br />\n- Line Out: Single-end (RCA) 2 5Vrms @0dBFS, Balanced (XLR) 5.0Vrms @0dBFS<br />\n- XLR pinout: 1-Ground 2-Hot 3 Cold<br />\n- AC input: AC 115V/230V 50/60Hz <br />\n- Size: 220mm (Width)*50mm (Height)*170mm (Length) (protrusion not include)<br />\n- Packing size: 285mm (Width)*85mm (Height)* 265mm (Length)<br />\n- Weight: 2. 5Kg (with the package)<br />\n- Accessories: Power cable *1 / USB cable *1 / Remote *1 "];
+const metafields = [
+  "- OLED screen has adjustable brightness, 10s automatic sleep, and any operation or display change will alarm the screen.<br />\n- Frequency Response: 20Hz-20kHz +/-0.08dB<br />\n- Line Out: Single-end (RCA) 2 5Vrms @0dBFS, Balanced (XLR) 5.0Vrms @0dBFS<br />\n- XLR pinout: 1-Ground 2-Hot 3 Cold<br />\n- AC input: AC 115V/230V 50/60Hz <br />\n- Size: 220mm (Width)*50mm (Height)*170mm (Length) (protrusion not include)<br />\n- Packing size: 285mm (Width)*85mm (Height)* 265mm (Length)<br />\n- Weight: 2. 5Kg (with the package)<br />\n- Accessories: Power cable *1 / USB cable *1 / Remote *1 ",
+];

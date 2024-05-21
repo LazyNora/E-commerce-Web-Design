@@ -207,4 +207,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 430,
 };
-const metafields = ["Impedance: 5Ω@ 1kHz<br />\nSensitivity: 123.7dB/Vrms@1kHz<br />\nEffective frequency response: 20- 20kHz (IEC60318-4)<br />\nFrequency range: 8- 40kHz(1/4 inch free field microphone, -5 dB)<br />\nTHD:&lt; 1%@ 1kHz<br />\nShell: imported medical resin+aluminum alloy<br />\nDriver: 10mm dynamic +2 balanced armature<br />\nDynamic diaphragm: PU flexible suspending+beryllium-plated"];
+const metafields = [
+  "Impedance: 5Ω@ 1kHz<br />\nSensitivity: 123.7dB/Vrms@1kHz<br />\nEffective frequency response: 20- 20kHz (IEC60318-4)<br />\nFrequency range: 8- 40kHz(1/4 inch free field microphone, -5 dB)<br />\nTHD:&lt; 1%@ 1kHz<br />\nShell: imported medical resin+aluminum alloy<br />\nDriver: 10mm dynamic +2 balanced armature<br />\nDynamic diaphragm: PU flexible suspending+beryllium-plated",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

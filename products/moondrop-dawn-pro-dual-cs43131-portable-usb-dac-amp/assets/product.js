@@ -156,4 +156,8 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
-const metafields = ["Weight: 13g<br />\nSize: 42mm*22.45mm*12.39mm<br />\nEarphone Jack: 3.5mm single-ended  4.4mm balanced jack<br />\nFrequency Range: 5Hz - 82kHz (+1dB )<br />\nNoise Floor: 4.4mm:1.3μV (AES17 20kHz)  3.5mm:1.5μV (AES17 20kHz)<br />\nSNR: 4.4mm: 131dB(A-wt)  3.5mm: 123dB(A-wt)<br />\nLine Out: 4.4mm: 4Vrms  3.5mm: 2Vrms<br />\nDynamic Range: 4.4mm: 132dB (A-wt)<br />\nTHD+N Ratio: 0.00014% (AES17 20kHz, non-loaded)","[DAWN PRO] Micro DAC+AMP<br />\nType-C to Type-C adapter cable*1<br />\nType-A to Type-C adapter*1<br />\n"];
+const metafields = [
+  "Weight: 13g<br />\nSize: 42mm*22.45mm*12.39mm<br />\nEarphone Jack: 3.5mm single-ended  4.4mm balanced jack<br />\nFrequency Range: 5Hz - 82kHz (+1dB )<br />\nNoise Floor: 4.4mm:1.3μV (AES17 20kHz)  3.5mm:1.5μV (AES17 20kHz)<br />\nSNR: 4.4mm: 131dB(A-wt)  3.5mm: 123dB(A-wt)<br />\nLine Out: 4.4mm: 4Vrms  3.5mm: 2Vrms<br />\nDynamic Range: 4.4mm: 132dB (A-wt)<br />\nTHD+N Ratio: 0.00014% (AES17 20kHz, non-loaded)",
+  "[DAWN PRO] Micro DAC+AMP<br />\nType-C to Type-C adapter cable*1<br />\nType-A to Type-C adapter*1<br />\n",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

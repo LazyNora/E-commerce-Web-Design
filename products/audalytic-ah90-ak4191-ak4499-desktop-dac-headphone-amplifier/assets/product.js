@@ -144,4 +144,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 90,
 };
-const metafields = ["Frequency Response: 20Hz-20kHz +/-0.5dB<br />\nRCA: 2.0 Vrms @OdBFS<br />\nXLR: 4.0 Vrms @OdBFS<br />\nXLR pin out: 1-Ground 2-Hot 3-Cold<br />\nAC input: AC100V-240V<br />\nDC input: DC12V-15V(default:12V)<br />\nSize: 220 (Width)  * 170 (Length)  * 50MM (Height)<br />\nPacking size: 295 (Width) * 265 (Length) * 85MM (Height)<br />\nWeight: 2Kg (with package)","AH90 * 1<br />\nRemote Control * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "Frequency Response: 20Hz-20kHz +/-0.5dB<br />\nRCA: 2.0 Vrms @OdBFS<br />\nXLR: 4.0 Vrms @OdBFS<br />\nXLR pin out: 1-Ground 2-Hot 3-Cold<br />\nAC input: AC100V-240V<br />\nDC input: DC12V-15V(default:12V)<br />\nSize: 220 (Width)  * 170 (Length)  * 50MM (Height)<br />\nPacking size: 295 (Width) * 265 (Length) * 85MM (Height)<br />\nWeight: 2Kg (with package)",
+  "AH90 * 1<br />\nRemote Control * 1<br />\nUser Manual * 1",
+];

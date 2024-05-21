@@ -215,3 +215,4 @@ const product = {
   sale_top: 117,
 };
 const metafields = ["Display * 1"];
+const metafieldsTitle = ["WHAT IN BOX?"];

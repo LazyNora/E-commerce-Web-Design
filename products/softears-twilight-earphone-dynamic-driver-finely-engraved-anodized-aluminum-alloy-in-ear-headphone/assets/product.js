@@ -191,4 +191,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 375,
 };
-const metafields = ["Impedance:16Ω<br />\nSensitivity: 116dB/Vrms @1kHz<br />\nEffective frequency response: 20-20kHz (IEC60318-4)<br />\nFrequency range: 15-40kHz<br />\n(1/4&#39; freefield, -3dB)<br />\nTHD:&lt;1%@1kHz<br />\nHousing: 5-axis finely engraved anodized aluminum alloy<br />\nDriver size: 10mm<br />\nDiaphragm: PU suspension+DLC diamond-like dome"];
+const metafields = [
+  "Impedance:16Ω<br />\nSensitivity: 116dB/Vrms @1kHz<br />\nEffective frequency response: 20-20kHz (IEC60318-4)<br />\nFrequency range: 15-40kHz<br />\n(1/4&#39; freefield, -3dB)<br />\nTHD:&lt;1%@1kHz<br />\nHousing: 5-axis finely engraved anodized aluminum alloy<br />\nDriver size: 10mm<br />\nDiaphragm: PU suspension+DLC diamond-like dome",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

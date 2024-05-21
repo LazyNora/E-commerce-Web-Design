@@ -122,4 +122,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 872,
 };
-const metafields = ["Input Power:110V-240V Available<br />\nOutput Power:≥52watts x 2 RMS &quot;8 ohm&quot; Class A<br />\nValve/Tubes:EL34B x4 ; 12AX7 x2; 12AU7 x2; <br />\nFrequency:20Hz---60KHz &quot;±1.5dB 10W &quot;<br />\nSNR: ≥85dB &quot;A Weight&quot;<br />\nLoad impedance:8ohm or 4ohm<br />\nSignal Inputs Level:≤300mv<br />\nInput Jack:4 groups<br />\nInput Consumption:250w<br />\nWeight:22 kg<br />\nSize Dimension: D : 479mm ,W : 310mm ,H : 180mm<br />\nColour:Gold Body &amp; Dark Green Power Supply"];
+const metafields = [
+  "Input Power:110V-240V Available<br />\nOutput Power:≥52watts x 2 RMS &quot;8 ohm&quot; Class A<br />\nValve/Tubes:EL34B x4 ; 12AX7 x2; 12AU7 x2; <br />\nFrequency:20Hz---60KHz &quot;±1.5dB 10W &quot;<br />\nSNR: ≥85dB &quot;A Weight&quot;<br />\nLoad impedance:8ohm or 4ohm<br />\nSignal Inputs Level:≤300mv<br />\nInput Jack:4 groups<br />\nInput Consumption:250w<br />\nWeight:22 kg<br />\nSize Dimension: D : 479mm ,W : 310mm ,H : 180mm<br />\nColour:Gold Body &amp; Dark Green Power Supply",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

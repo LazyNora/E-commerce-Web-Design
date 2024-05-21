@@ -156,4 +156,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 95,
 };
-const metafields = ["Earphone topography: Full balanced armature<br />\nFrequency response: 10Hz-40000Hz<br />\nSensitivity: 105dB<br />\nImpedance: 34Ω<br />\nConnector type: 2Pin<br />\nJack type: 3.5mm + 2.5mm + 4.4mm<br />\nCable length: 1.2m±3cm<br />\nWeight: 7.9g+26g (earpiece+cable)","BA16 * 1<br />\nPlug * 3 <br />\nEartips * 8 pairs<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nBrand Card * 1"];
+const metafields = [
+  "Earphone topography: Full balanced armature<br />\nFrequency response: 10Hz-40000Hz<br />\nSensitivity: 105dB<br />\nImpedance: 34Ω<br />\nConnector type: 2Pin<br />\nJack type: 3.5mm + 2.5mm + 4.4mm<br />\nCable length: 1.2m±3cm<br />\nWeight: 7.9g+26g (earpiece+cable)",
+  "BA16 * 1<br />\nPlug * 3 <br />\nEartips * 8 pairs<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nBrand Card * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

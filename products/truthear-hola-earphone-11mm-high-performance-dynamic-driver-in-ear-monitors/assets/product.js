@@ -276,4 +276,8 @@ const product = {
   requires_selling_plan: false,
   selling_plan_groups: [],
 };
-const metafields = ["Name: TRUTHEAR HOLA<br />\nDriver: 11mm Dynamic Driver<br />\nDiaphragm: PU Suspension+LCP Dome Composite Diaphragm<br />\nImpedance: 28Ω±15%@1kHz<br />\nSensitivity: 120dB/Vrms @1kHz<br />\nTHD: THD≤0.1% @1kHz(94dB)<br />\nFrequency response: 8-46kHz (IEC61094, Free Field)<br />\nEffective Frequency Response: 20-20kHz (IEC60318-4, -3dB)","1. TRUTHEAR [HOLA] * 1<br />\n2. High-quality Oxygen-free Copper Cable<br />\n3. Ear-tips * 4pairs (S, M, L,XL) (Thick Diameter)<br />\n4. Ear-tips * 3pairs (S, M, L) (Thin Diameter)<br />\n5. Manual * 1"];
+const metafields = [
+  "Name: TRUTHEAR HOLA<br />\nDriver: 11mm Dynamic Driver<br />\nDiaphragm: PU Suspension+LCP Dome Composite Diaphragm<br />\nImpedance: 28Ω±15%@1kHz<br />\nSensitivity: 120dB/Vrms @1kHz<br />\nTHD: THD≤0.1% @1kHz(94dB)<br />\nFrequency response: 8-46kHz (IEC61094, Free Field)<br />\nEffective Frequency Response: 20-20kHz (IEC60318-4, -3dB)",
+  "1. TRUTHEAR [HOLA] * 1<br />\n2. High-quality Oxygen-free Copper Cable<br />\n3. Ear-tips * 4pairs (S, M, L,XL) (Thick Diameter)<br />\n4. Ear-tips * 3pairs (S, M, L) (Thin Diameter)<br />\n5. Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

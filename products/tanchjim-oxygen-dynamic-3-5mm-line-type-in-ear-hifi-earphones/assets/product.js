@@ -205,4 +205,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 1028,
 };
-const metafields = ["Model: mOxygen<br />\nDistortion: ＜0.2%<br />\nDriver:High performance dual chamber dual brake<br />\nDiaphragm: carbon nanotube<br />\nImdepance:32ohm<br />\nSensitivity:110dB<br />\nFrequency range:10-40kHz<br />\nCable material: Sliver-plated OFC<br />\nPlug:3.5mm golden-plated straight plug<br />\nLine Length:1.2m"];
+const metafields = [
+  "Model: mOxygen<br />\nDistortion: ＜0.2%<br />\nDriver:High performance dual chamber dual brake<br />\nDiaphragm: carbon nanotube<br />\nImdepance:32ohm<br />\nSensitivity:110dB<br />\nFrequency range:10-40kHz<br />\nCable material: Sliver-plated OFC<br />\nPlug:3.5mm golden-plated straight plug<br />\nLine Length:1.2m",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

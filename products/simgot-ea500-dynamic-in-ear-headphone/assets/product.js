@@ -156,4 +156,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 183,
 };
-const metafields = ["Sound unit: 10mm dual-magnetic-circuit and dual-cavity structure<br />\nDiaphragm: fourth generation DLC composite diaphragm<br />\nImpedance: 16Ω±15% (@1kHz)<br />\nSensitivity: 123dB/Vrms (@1kHz nozzle with red ring)<br />\n124dB/Vrms (@1kHz nozzle with black ring)<br />\nFrequency response range: 10Hz-50KHz<br />\nEffective frequency response: 20Hz-20kHz<br />\nConnector: 0.78mm 2-pin<br />\nWire specifications: high purity silver-plated OFC wire<br />\nOver-ear wearing, secure and comfortable<br />\nReplaceable nozzle<br />\nTwo tuning styles with high completion degree, comply with two target curves<br />\nAll-metal cavity constructed from high-density alloy materials<br />\nDetailed designed package with decent and practical accessories","EA500 * 1<br />\nEarphone Cable * 1<br />\nNozzle * 1 pairs<br />\nEartips * 3 pairs<br />\nStorage Case * 1"];
+const metafields = [
+  "Sound unit: 10mm dual-magnetic-circuit and dual-cavity structure<br />\nDiaphragm: fourth generation DLC composite diaphragm<br />\nImpedance: 16Ω±15% (@1kHz)<br />\nSensitivity: 123dB/Vrms (@1kHz nozzle with red ring)<br />\n124dB/Vrms (@1kHz nozzle with black ring)<br />\nFrequency response range: 10Hz-50KHz<br />\nEffective frequency response: 20Hz-20kHz<br />\nConnector: 0.78mm 2-pin<br />\nWire specifications: high purity silver-plated OFC wire<br />\nOver-ear wearing, secure and comfortable<br />\nReplaceable nozzle<br />\nTwo tuning styles with high completion degree, comply with two target curves<br />\nAll-metal cavity constructed from high-density alloy materials<br />\nDetailed designed package with decent and practical accessories",
+  "EA500 * 1<br />\nEarphone Cable * 1<br />\nNozzle * 1 pairs<br />\nEartips * 3 pairs<br />\nStorage Case * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

@@ -140,4 +140,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 841,
 };
-const metafields = ["Sensitivity: 104dB/100mV@1kHz<br />\nImpedance: 5Ω@1kHz(±15%)<br />\nFrequency response range: 10-80000Hz<br />\nDistortion: THD≤1%, 1MD≤1%<br />\nSocket: 0.78mm 2pin"];
+const metafields = [
+  "Sensitivity: 104dB/100mV@1kHz<br />\nImpedance: 5Ω@1kHz(±15%)<br />\nFrequency response range: 10-80000Hz<br />\nDistortion: THD≤1%, 1MD≤1%<br />\nSocket: 0.78mm 2pin",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

@@ -229,4 +229,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 123,
 };
-const metafields = ["Impedance：39Ω<br />\nSensitivity：118db<br />\nWearing Type：In-Ear<br />\nConnector：0.78mm 2pin<br />\nCable Length：1.2m( Detachable)<br />\nDriver：1DD +3BA<br />\nFrequency：20Hz-20kHz<br />\nMaterial : 5N OCC<br />\nBraiding : 4 core cross braid<br />\nWire Diameter : 1.6mm<br />\nStructure : Litz, Coaxial<br />\nPlug : 3.5mm+4.4mm ( lnterchangeable )<br />\nStrands :10+22<br />\nPlug Metal Part : High polished metallic aluminum<br />\nPlug Internal Connection : Copper<br />\nPlug Material : Copper<br />\nOuter Covering : PVC<br />\nLength : 1.2m","Aviation * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nBalanced Eartips * 3 pairs<br />\nVocal Eartips &quot;* 3 pairs<br />\n3.5mm+4.4mm plug ( lnterchangeable ) * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "Impedance：39Ω<br />\nSensitivity：118db<br />\nWearing Type：In-Ear<br />\nConnector：0.78mm 2pin<br />\nCable Length：1.2m( Detachable)<br />\nDriver：1DD +3BA<br />\nFrequency：20Hz-20kHz<br />\nMaterial : 5N OCC<br />\nBraiding : 4 core cross braid<br />\nWire Diameter : 1.6mm<br />\nStructure : Litz, Coaxial<br />\nPlug : 3.5mm+4.4mm ( lnterchangeable )<br />\nStrands :10+22<br />\nPlug Metal Part : High polished metallic aluminum<br />\nPlug Internal Connection : Copper<br />\nPlug Material : Copper<br />\nOuter Covering : PVC<br />\nLength : 1.2m",
+  "Aviation * 1<br />\nEarphone Cables * 1<br />\nStorage Case * 1<br />\nBalanced Eartips * 3 pairs<br />\nVocal Eartips &quot;* 3 pairs<br />\n3.5mm+4.4mm plug ( lnterchangeable ) * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

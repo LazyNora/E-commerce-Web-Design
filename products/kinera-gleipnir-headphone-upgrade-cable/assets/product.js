@@ -212,4 +212,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 248,
 };
-const metafields = ["Material: 6N OCC with gold plated<br />\nBraid way: 8 core 3-dimensional braided<br />\nDiameter: 1.2mm/core<br />\nCores: 8 cores<br />\nStrands: 49 strands of 0.06mm（diameter）per core, total 392 strands per cable<br />\nCable skin material: PVC<br />\nPlug: 4 pin detachable plug, 3-in-1 premium plug metal kits<br />\nPlug material:  Copper with 24 carat gold plated<br />\nPlug internal connection: 6N OCC+ OCC with silver plated mix conductor<br />\nCable length: 122cm±2cm<br />\nCable structure: litz+ multiple structure+ twisting strands","KINERA Gleipnir * 1<br />\n2.5mm Plug * 1<br />\n3.5mm Plug * 1<br />\n4.4mm Plug * 1<br />\nStorage Case * 1"];
+const metafields = [
+  "Material: 6N OCC with gold plated<br />\nBraid way: 8 core 3-dimensional braided<br />\nDiameter: 1.2mm/core<br />\nCores: 8 cores<br />\nStrands: 49 strands of 0.06mm（diameter）per core, total 392 strands per cable<br />\nCable skin material: PVC<br />\nPlug: 4 pin detachable plug, 3-in-1 premium plug metal kits<br />\nPlug material:  Copper with 24 carat gold plated<br />\nPlug internal connection: 6N OCC+ OCC with silver plated mix conductor<br />\nCable length: 122cm±2cm<br />\nCable structure: litz+ multiple structure+ twisting strands",
+  "KINERA Gleipnir * 1<br />\n2.5mm Plug * 1<br />\n3.5mm Plug * 1<br />\n4.4mm Plug * 1<br />\nStorage Case * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

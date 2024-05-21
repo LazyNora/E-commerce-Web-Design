@@ -156,4 +156,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 71,
 };
-const metafields = ["Cable Material: High purity silver plated OFC<br />\nBraiding: Hand crafted braiding 2 cores<br />\nDiameter: 2.0mm / core<br />\nStrands: 6* 14 strands of 0.05mm<br />\nCable Length: 1.5m<br />\nInterface: 0.78 2Pin<br />\nPlug Material: Gold plated pure copper<br />\nPlug: 3.5mm<br />\nProtective Cover: PVC80<br />\nMicrophone Specifications:<br />\nPolar Patterns: Super-Cardioid | Sensitivity: -42dB | Resistance: 2.2kΩ | SNR: 60dB | Frequency Response: 50Hz-10kHz | Connector: Slotted Gold-Plated | Pure Copper MMCX | Microphone Length: 10.5cm | Type of Use: Ear-hook","3.5mm silver plated copper cable x1<br />\nSuper-cardioid boom mic x1<br />\nBoom mic sponge windscreen x1<br />\nUser manual x1"];
+const metafields = [
+  "Cable Material: High purity silver plated OFC<br />\nBraiding: Hand crafted braiding 2 cores<br />\nDiameter: 2.0mm / core<br />\nStrands: 6* 14 strands of 0.05mm<br />\nCable Length: 1.5m<br />\nInterface: 0.78 2Pin<br />\nPlug Material: Gold plated pure copper<br />\nPlug: 3.5mm<br />\nProtective Cover: PVC80<br />\nMicrophone Specifications:<br />\nPolar Patterns: Super-Cardioid | Sensitivity: -42dB | Resistance: 2.2kΩ | SNR: 60dB | Frequency Response: 50Hz-10kHz | Connector: Slotted Gold-Plated | Pure Copper MMCX | Microphone Length: 10.5cm | Type of Use: Ear-hook",
+  "3.5mm silver plated copper cable x1<br />\nSuper-cardioid boom mic x1<br />\nBoom mic sponge windscreen x1<br />\nUser manual x1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

@@ -88,4 +88,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 263,
 };
-const metafields = ["Output Power: 40W + 40W (8ohm)<br />\nHarmonic distortion: ≤0.5% (1kHz)<br />\nFrequency response: 5Hz - 68kHz (-2dB)<br />\nSignal to noise ratio: ≥88dB (A)<br />\nInput Sensitivity: ≤0.23V (1kHz)<br />\nLoad Impedance: 4Ω- 8Ω<br />\nPower consumption:≤250W<br />\nYaqin specials tubes: 7027Bx4, 6J1X8<br />\nVoltage input: 110/120v and 220/230v or 240v<br />\nSize: L430mm*W325mm*210mmH<br />\nNeight weight: 21kg<br />\nGross weight: 24kg"];
+const metafields = [
+  "Output Power: 40W + 40W (8ohm)<br />\nHarmonic distortion: ≤0.5% (1kHz)<br />\nFrequency response: 5Hz - 68kHz (-2dB)<br />\nSignal to noise ratio: ≥88dB (A)<br />\nInput Sensitivity: ≤0.23V (1kHz)<br />\nLoad Impedance: 4Ω- 8Ω<br />\nPower consumption:≤250W<br />\nYaqin specials tubes: 7027Bx4, 6J1X8<br />\nVoltage input: 110/120v and 220/230v or 240v<br />\nSize: L430mm*W325mm*210mmH<br />\nNeight weight: 21kg<br />\nGross weight: 24kg",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

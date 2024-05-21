@@ -263,4 +263,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 152,
 };
-const metafields = ["Output power: 16V@32Ω(80mW@32Ω)<br />\nFrequency response: 20Hz-40kHz(+0.5dB)<br />\nTHD+N: 0.0004%@32Ω(A-Weight@1.6V)<br />\nDynamic Range: 125dB @32Ω(A-Weight)<br />\nSNR: 126dB@32Ω(A-Weight)<br />\nChannel Separation: 71dB@32Ω<br />\nOutput Impedance: &lt;0.52<br />\nSize: 40mmx17.7mmx8.2mm<br />\nWeight: about 9.5g","UA1 PLUS * 1<br />\n"];
+const metafields = [
+  "Output power: 16V@32Ω(80mW@32Ω)<br />\nFrequency response: 20Hz-40kHz(+0.5dB)<br />\nTHD+N: 0.0004%@32Ω(A-Weight@1.6V)<br />\nDynamic Range: 125dB @32Ω(A-Weight)<br />\nSNR: 126dB@32Ω(A-Weight)<br />\nChannel Separation: 71dB@32Ω<br />\nOutput Impedance: &lt;0.52<br />\nSize: 40mmx17.7mmx8.2mm<br />\nWeight: about 9.5g",
+  "UA1 PLUS * 1<br />\n",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

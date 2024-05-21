@@ -313,4 +313,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 118,
 };
-const metafields = ["D70 Pro OCTO * 1<br />\nRemote Control * 1<br />\nUSB Cable * 1<br />\nAC Cable * 1<br />\nBluetooth Antenna * 1<br />\nQuick Start Guide * 1"];
+const metafields = [
+  "D70 Pro OCTO * 1<br />\nRemote Control * 1<br />\nUSB Cable * 1<br />\nAC Cable * 1<br />\nBluetooth Antenna * 1<br />\nQuick Start Guide * 1",
+];
+const metafieldsTitle = ["WHAT IN BOX?"];

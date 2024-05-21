@@ -105,4 +105,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 233,
 };
-const metafields = ["Impedance: 32 Ohms.<br />\nFrequency Response: 20Hz-35kHz.<br />\nSensitivity: 103dB/mW.<br />\nRated Power: 2mW.<br />\nMax Power: 8mW.<br />\nPlug: 3.5mm Stereo Gold-Plated Plug."];
+const metafields = [
+  "Impedance: 32 Ohms.<br />\nFrequency Response: 20Hz-35kHz.<br />\nSensitivity: 103dB/mW.<br />\nRated Power: 2mW.<br />\nMax Power: 8mW.<br />\nPlug: 3.5mm Stereo Gold-Plated Plug.",
+];

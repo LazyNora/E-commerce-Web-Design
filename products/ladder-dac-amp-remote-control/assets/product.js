@@ -88,3 +88,4 @@ const product = {
   sale_top: 51,
 };
 const metafields = ["Remote Control (without battery)"];
+const metafieldsTitle = ["WHAT IN BOX?"];

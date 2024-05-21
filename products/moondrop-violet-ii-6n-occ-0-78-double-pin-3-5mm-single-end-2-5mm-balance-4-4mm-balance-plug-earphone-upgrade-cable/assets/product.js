@@ -190,4 +190,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 1033,
 };
-const metafields = ["Model Number: Lyre Acoustics Violet II<br />\nMaterial: 6N OCC<br />\nItem Type: Earphone <br />\nCablesSize: 1.2M"];
+const metafields = [
+  "Model Number: Lyre Acoustics Violet II<br />\nMaterial: 6N OCC<br />\nItem Type: Earphone <br />\nCablesSize: 1.2M",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

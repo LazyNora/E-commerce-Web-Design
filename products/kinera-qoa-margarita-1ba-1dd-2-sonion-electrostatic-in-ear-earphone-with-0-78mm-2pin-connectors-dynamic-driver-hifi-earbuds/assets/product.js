@@ -257,4 +257,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 391,
 };
-const metafields = ["Impedance: 61 ohms<br />\nSensitivity: 109dB±2db<br />\nFrequency Response: 5Hz-50kHz<br />\nModular 6N High Purity Silvered Coated Copper Cable<br />\nPlug with 2.5mm, 3.5mm and 4.4mm","QoA Margarita * 1<br />\nModular 6N * 1<br />\n4.4mm plug * 1<br />\n3.5mm * 1<br />\n2.5mm * 1<br />\nCustom Eartips * 7 pairs<br />\nFoam tips * 2 pairs<br />\nPU Case * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "Impedance: 61 ohms<br />\nSensitivity: 109dB±2db<br />\nFrequency Response: 5Hz-50kHz<br />\nModular 6N High Purity Silvered Coated Copper Cable<br />\nPlug with 2.5mm, 3.5mm and 4.4mm",
+  "QoA Margarita * 1<br />\nModular 6N * 1<br />\n4.4mm plug * 1<br />\n3.5mm * 1<br />\n2.5mm * 1<br />\nCustom Eartips * 7 pairs<br />\nFoam tips * 2 pairs<br />\nPU Case * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

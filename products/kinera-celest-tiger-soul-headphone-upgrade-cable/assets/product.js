@@ -139,4 +139,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 70,
 };
-const metafields = ["Material: OFC<br />\nBraided form: 4 manually braided cores<br />\nDiameter: 2.5mm/core<br />\nStrands: 24 strands of 0,05mm<br />\nProtective skin: PVC<br />\nInterface: 0.78mm 2 pins<br />\nPlug: 3.5mm<br />\nPlug material: pure copper gold plated<br />\nMetal part: aluminum bronze alloy with laser engraving<br />\nCable length: 1.2m","Celest Tiger Soul * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "Material: OFC<br />\nBraided form: 4 manually braided cores<br />\nDiameter: 2.5mm/core<br />\nStrands: 24 strands of 0,05mm<br />\nProtective skin: PVC<br />\nInterface: 0.78mm 2 pins<br />\nPlug: 3.5mm<br />\nPlug material: pure copper gold plated<br />\nMetal part: aluminum bronze alloy with laser engraving<br />\nCable length: 1.2m",
+  "Celest Tiger Soul * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

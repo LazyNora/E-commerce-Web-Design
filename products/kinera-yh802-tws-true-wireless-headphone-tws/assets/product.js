@@ -139,4 +139,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 244,
 };
-const metafields = ["Hybrid ANC ( Active Noise Cancellation ) -35db<br />\nENC Call Noise Cancellation<br />\nSupport transparent mode<br />\nPure hand painted <br />\nTotal 6 microphone<br />\nUp to 24 hours total battery life<br />\nListening time Up to 8 hours <br />\nSupport AAC + SBC HD decoding<br />\nSupport IPX4 waterproof<br />\nSweat resistance<br />\nIBRT Dual channel connection<br />\nBluetooth 5.0<br />\nAuto pairing<br />\nTouch control<br />\nType-C connector <br />\nMono/Stereo Modes<br />\nCase Weight 39g<br />\nEarbud Weight each side 5g","Silicon Eartips ( S,M,L Size ) * 1 sets<br />\n0.3m Type C * 1<br />\nCharging Cable * 1<br />\nInstruction Manual * 1"];
+const metafields = [
+  "Hybrid ANC ( Active Noise Cancellation ) -35db<br />\nENC Call Noise Cancellation<br />\nSupport transparent mode<br />\nPure hand painted <br />\nTotal 6 microphone<br />\nUp to 24 hours total battery life<br />\nListening time Up to 8 hours <br />\nSupport AAC + SBC HD decoding<br />\nSupport IPX4 waterproof<br />\nSweat resistance<br />\nIBRT Dual channel connection<br />\nBluetooth 5.0<br />\nAuto pairing<br />\nTouch control<br />\nType-C connector <br />\nMono/Stereo Modes<br />\nCase Weight 39g<br />\nEarbud Weight each side 5g",
+  "Silicon Eartips ( S,M,L Size ) * 1 sets<br />\n0.3m Type C * 1<br />\nCharging Cable * 1<br />\nInstruction Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

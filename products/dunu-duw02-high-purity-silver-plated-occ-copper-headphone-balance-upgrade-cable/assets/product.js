@@ -246,4 +246,6 @@ const product = {
   selling_plan_groups: [],
   sale_top: 608,
 };
-const metafields = ["CABLE SPECIFICATION：<br />\nMODEL: DUW-02S<br />\nCABLE LENGTH: 1.2 ± 0.1 meter<br />\nDETAIL: Handbraided, Round Litz, Four Conductor Cable<br />\n<br />\nWIRE SPECIFICATIONS:<br />\nMATERIAL: High-Purity Silver-Plated OCC Copper in Type 1 Litz Configuration<br />\nGAUGE: 26 AWG / Core<br />\nQ-Lock PLUS Quick-Switch Modular Plug System<br />\nIncluded: 3.5 mm TRS single-ended plug"];
+const metafields = [
+  "CABLE SPECIFICATION：<br />\nMODEL: DUW-02S<br />\nCABLE LENGTH: 1.2 ± 0.1 meter<br />\nDETAIL: Handbraided, Round Litz, Four Conductor Cable<br />\n<br />\nWIRE SPECIFICATIONS:<br />\nMATERIAL: High-Purity Silver-Plated OCC Copper in Type 1 Litz Configuration<br />\nGAUGE: 26 AWG / Core<br />\nQ-Lock PLUS Quick-Switch Modular Plug System<br />\nIncluded: 3.5 mm TRS single-ended plug",
+];

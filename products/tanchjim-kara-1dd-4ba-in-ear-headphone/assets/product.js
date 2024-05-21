@@ -190,4 +190,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 158,
 };
-const metafields = ["SENSITIVITY: 115dB/rms<br />\nFREQUENCY RESPONSE: 7-40kHz<br />\nTHD: &lt;0.8%@1kHz<br />\nDRIVE UNIT: DMT 3 Ultra<br />\nIMPEDANCE: 27Ω±10%<br />\nPIN SPECIFICATION: gold-plated straight pin<br />\nDIAPHRAGM:  PEEK+PU<br />\nWIRE SPECIFICATIONS:  1.25m 3.5MM 0.78PIN<br />\nCONDUCTOR:  Litz oxygen-free copper wire","KARA * 1<br />\nEarphone Cables * 1<br />\nEarmuffs * 7 pairs<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nWarranty Card * 1<br />\nCertificate * 1"];
+const metafields = [
+  "SENSITIVITY: 115dB/rms<br />\nFREQUENCY RESPONSE: 7-40kHz<br />\nTHD: &lt;0.8%@1kHz<br />\nDRIVE UNIT: DMT 3 Ultra<br />\nIMPEDANCE: 27Ω±10%<br />\nPIN SPECIFICATION: gold-plated straight pin<br />\nDIAPHRAGM:  PEEK+PU<br />\nWIRE SPECIFICATIONS:  1.25m 3.5MM 0.78PIN<br />\nCONDUCTOR:  Litz oxygen-free copper wire",
+  "KARA * 1<br />\nEarphone Cables * 1<br />\nEarmuffs * 7 pairs<br />\nStorage Case * 1<br />\nUser Manual * 1<br />\nWarranty Card * 1<br />\nCertificate * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

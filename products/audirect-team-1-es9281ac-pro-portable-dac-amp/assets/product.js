@@ -250,4 +250,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 34,
 };
-const metafields = ["Weight: 67g<br />\nBattery Capacity: 1300mAh<br />\nSize : L68*W36*H18 mm<br />\n","Team 1 * 1<br />\nUser Manual * 1<br />\nAC Cables * 1<br />\n(Option part * 1 )"];
+const metafields = [
+  "Weight: 67g<br />\nBattery Capacity: 1300mAh<br />\nSize : L68*W36*H18 mm<br />\n",
+  "Team 1 * 1<br />\nUser Manual * 1<br />\nAC Cables * 1<br />\n(Option part * 1 )",
+];

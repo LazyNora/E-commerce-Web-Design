@@ -140,3 +140,4 @@ const product = {
   sale_top: 88,
 };
 const metafields = ["MC1 Cables * 1"];
+const metafieldsTitle = ["WHAT IN BOX?"];

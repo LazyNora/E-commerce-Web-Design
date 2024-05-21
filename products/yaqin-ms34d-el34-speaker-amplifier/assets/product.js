@@ -144,4 +144,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 250,
 };
-const metafields = ["Output power: 32 W × 2 (8 Ω)<br />\nFrequency response: 10 Hz - 70 kHz (-2 dB)<br />\nDistortion: ≤1%<br />\nSNR ≥90dB (A)<br />\nInput sensitivity: ≤300mV<br />\nMaximum energy consumption: ≤250 W.<br />\nLoad impedance: 4Ω - 8Ω<br />\nTube: EL34 x 4 12AU7 x 2, 12AX7 x 1, 6Z4 x 1<br />\nGross weight: about 25.5 kg<br />\nNet weight: about 23 kg<br />\nSize: 400mm*355mm*220mm"];
+const metafields = [
+  "Output power: 32 W × 2 (8 Ω)<br />\nFrequency response: 10 Hz - 70 kHz (-2 dB)<br />\nDistortion: ≤1%<br />\nSNR ≥90dB (A)<br />\nInput sensitivity: ≤300mV<br />\nMaximum energy consumption: ≤250 W.<br />\nLoad impedance: 4Ω - 8Ω<br />\nTube: EL34 x 4 12AU7 x 2, 12AX7 x 1, 6Z4 x 1<br />\nGross weight: about 25.5 kg<br />\nNet weight: about 23 kg<br />\nSize: 400mm*355mm*220mm",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

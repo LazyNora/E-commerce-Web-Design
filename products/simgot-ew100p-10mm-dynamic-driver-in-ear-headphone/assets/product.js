@@ -156,4 +156,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 178,
 };
-const metafields = ["Sound unit:10mm high performance dual-cavity dynamic unit<br />\nDiaphragm:LCP diaphragm<br />\nUnit impedance:320+10%(@1kHz)<br />\nSensitivity:122dB/Vrms (@1kHz)<br />\nDistortion:THD&lt;1%(@1kHz)<br />\nFrequency response range: 5Hz-45kHz<br />\nEffective frequency response:20Hz-20kHz<br />\nConnector:0.78mm 2-pin<br />\nWire specifications:woven silver foil shielding copper wire","EW100P * 1<br />\nEarphone Cable * 1<br />\nEartips * 3 pairs<br />\nUser manual * 1"];
+const metafields = [
+  "Sound unit:10mm high performance dual-cavity dynamic unit<br />\nDiaphragm:LCP diaphragm<br />\nUnit impedance:320+10%(@1kHz)<br />\nSensitivity:122dB/Vrms (@1kHz)<br />\nDistortion:THD&lt;1%(@1kHz)<br />\nFrequency response range: 5Hz-45kHz<br />\nEffective frequency response:20Hz-20kHz<br />\nConnector:0.78mm 2-pin<br />\nWire specifications:woven silver foil shielding copper wire",
+  "EW100P * 1<br />\nEarphone Cable * 1<br />\nEartips * 3 pairs<br />\nUser manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

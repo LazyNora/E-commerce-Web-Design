@@ -190,4 +190,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 116,
 };
-const metafields = ["Drive unit: 10mm, Titanium plated diaphragm<br />\nImpedance: 30Ω<br />\nSensitivity: 112±2dB<br />\nCable lengthL: 1.2m<br />\nFrequency Range: 10Hz-18kHz<br />\nPlug Type: 3.5mm","In-ear module x1 <br />\nFlat earbud module xl<br />\nEarphone Cables x1<br />\nCotton x4 <br />\nWarranty manual x1"];
+const metafields = [
+  "Drive unit: 10mm, Titanium plated diaphragm<br />\nImpedance: 30Ω<br />\nSensitivity: 112±2dB<br />\nCable lengthL: 1.2m<br />\nFrequency Range: 10Hz-18kHz<br />\nPlug Type: 3.5mm",
+  "In-ear module x1 <br />\nFlat earbud module xl<br />\nEarphone Cables x1<br />\nCotton x4 <br />\nWarranty manual x1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];

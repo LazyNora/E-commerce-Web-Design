@@ -156,4 +156,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 322,
 };
-const metafields = ["Model: SPACE<br />\nWeight: 14.8g<br />\nSize: 4.1*2.1*1.2cm<br />\nHeadphone port: 3.5mm SE / 4.4mm Bal<br />\nInput port: USB Type-C<br />\nFrequency Response: 6Hz-85kHz<br />\nBackground Noise: 1.3uV(BAL), 1.1uV(UNBAL)<br />\nDynamic-Range | BAL: 132dB<br />\nTHD+N: 0.00017% (BAL), 0.00019%(UNBAL)<br />\nUNBAL: 127dB (AES17 20Khz, Awt)<br />\nOutput Power: <br />\n4Vrms(BAL High), 2Vrms(BAL Low)<br />\n2Vrms(UNBAL High), 1Vrms (UNBAL Low)","1. TANCHJIM SPACE *1<br />\n2. USB Type-C to Type-C *1<br />\n3. Type C To USB Converter *1"];
+const metafields = [
+  "Model: SPACE<br />\nWeight: 14.8g<br />\nSize: 4.1*2.1*1.2cm<br />\nHeadphone port: 3.5mm SE / 4.4mm Bal<br />\nInput port: USB Type-C<br />\nFrequency Response: 6Hz-85kHz<br />\nBackground Noise: 1.3uV(BAL), 1.1uV(UNBAL)<br />\nDynamic-Range | BAL: 132dB<br />\nTHD+N: 0.00017% (BAL), 0.00019%(UNBAL)<br />\nUNBAL: 127dB (AES17 20Khz, Awt)<br />\nOutput Power: <br />\n4Vrms(BAL High), 2Vrms(BAL Low)<br />\n2Vrms(UNBAL High), 1Vrms (UNBAL Low)",
+  "1. TANCHJIM SPACE *1<br />\n2. USB Type-C to Type-C *1<br />\n3. Type C To USB Converter *1",
+];
+const metafieldsTitle = ["DOWNLOAD", "SPECIFICATIONS", "WHAT IN BOX?"];

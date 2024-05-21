@@ -139,4 +139,7 @@ const product = {
   selling_plan_groups: [],
   sale_top: 106,
 };
-const metafields = ["VMV P2 * 1<br />\nCharging Cables * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "VMV P2 * 1<br />\nCharging Cables * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS"];

@@ -195,4 +195,8 @@ const product = {
   selling_plan_groups: [],
   sale_top: 69,
 };
-const metafields = ["Material: Silver foil + alloy copper<br />\nBraid way: 8-Core square braid<br />\nDiameter: 1.0mm/core<br />\nStrands: Silver Foil 4 cores * 7 strands * 0.2mm + alloy copper 4<br />\ncores * 28 strands * 0.05mm<br />\nCable Length: 123cm +2cm<br />\nInterface: 0.78mm 2pin / mmcx<br />\nPlug: 4 pin detachable plugs<br />\nModular Plug: 2.5mm balanced / 4.4mm balanced / 3.5mm plug<br />\nPlug material: Gold-plated copper<br />\nExternal metal part: Aluminum alloy anode<br />\nOuter Layer: PVC<br />\nCable structure: Multi-strand winding","Ace 2.0 * 1<br />\nModular 2.5mm * 1<br />\nModular 3.5mm * 1<br />\nModular 4.4mm * 1<br />\nStorage Bag * 1<br />\nUser Manual * 1"];
+const metafields = [
+  "Material: Silver foil + alloy copper<br />\nBraid way: 8-Core square braid<br />\nDiameter: 1.0mm/core<br />\nStrands: Silver Foil 4 cores * 7 strands * 0.2mm + alloy copper 4<br />\ncores * 28 strands * 0.05mm<br />\nCable Length: 123cm +2cm<br />\nInterface: 0.78mm 2pin / mmcx<br />\nPlug: 4 pin detachable plugs<br />\nModular Plug: 2.5mm balanced / 4.4mm balanced / 3.5mm plug<br />\nPlug material: Gold-plated copper<br />\nExternal metal part: Aluminum alloy anode<br />\nOuter Layer: PVC<br />\nCable structure: Multi-strand winding",
+  "Ace 2.0 * 1<br />\nModular 2.5mm * 1<br />\nModular 3.5mm * 1<br />\nModular 4.4mm * 1<br />\nStorage Bag * 1<br />\nUser Manual * 1",
+];
+const metafieldsTitle = ["SPECIFICATIONS", "WHAT IN BOX?"];
