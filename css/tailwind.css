@@ -764,6 +764,10 @@ body {
   top: 50%;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
 .top-5 {
   top: 1.25rem;
 }
@@ -806,6 +810,10 @@ body {
 
 .z-\[70\] {
   z-index: 70;
+}
+
+.z-\[200\] {
+  z-index: 200;
 }
 
 .order-first {
@@ -1008,6 +1016,10 @@ body {
   margin-top: 0.5rem;
 }
 
+.mt-2\.5 {
+  margin-top: 0.625rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -1030,10 +1042,6 @@ body {
 
 .mt-\[10px\] {
   margin-top: 10px;
-}
-
-.mt-2\.5 {
-  margin-top: 0.625rem;
 }
 
 .box-border {
@@ -1154,6 +1162,10 @@ body {
   height: 0.25rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-11 {
   height: 2.75rem;
 }
@@ -1210,8 +1222,16 @@ body {
   height: 100%;
 }
 
+.h-\[200px\] {
+  height: 200px;
+}
+
 .max-h-\[90vh\] {
   max-height: 90vh;
+}
+
+.max-h-\[200px\] {
+  max-height: 200px;
 }
 
 .min-h-full {
@@ -1760,12 +1780,12 @@ body {
   grid-auto-flow: column dense;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -3168,14 +3188,6 @@ body {
 
 .outline-double {
   outline-style: double;
-}
-
-.outline-1 {
-  outline-width: 1px;
-}
-
-.outline-slate-950 {
-  outline-color: #020617;
 }
 
 .ring {
