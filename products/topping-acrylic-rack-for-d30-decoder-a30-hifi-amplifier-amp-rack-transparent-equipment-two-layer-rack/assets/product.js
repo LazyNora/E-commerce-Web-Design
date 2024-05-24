@@ -4,7 +4,7 @@ const product = {
   handle:
     "topping-acrylic-rack-for-d30-decoder-a30-hifi-amplifier-amp-rack-transparent-equipment-two-layer-rack",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190806174528/d72823e23b07a721b1d26fb3e72486f8.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190806174529/a2070134ca23d71bbca164ef09896533.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190806174529/65bb058bd4958b3cdc9ef1909f26a1aa.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190806174529/a6bf9177433167e0a4bc0efc422f9db7.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"></p>\n',
   published_at: "2019-08-06T17:47:57+08:00",
   created_at: "2019-08-06T17:47:57+08:00",
   vendor: "TOPPING",

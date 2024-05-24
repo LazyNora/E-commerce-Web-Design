@@ -3,7 +3,7 @@ const product = {
   title: "S.M.S.L DA1 Speaker Amplifier",
   handle: "s-m-s-l-da1-digital-to-analog-convertor-dac",
   description:
-    '<p><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DA1_01_959796c3-09d5-4c21-abe1-cf7fbd6ce276.png?v=1695712736" alt="" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DA1_01_959796c3-09d5-4c21-abe1-cf7fbd6ce276.png?v=1695712736"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DA1_02.png?v=1695368428"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DA1_03_65ae0dee-f084-496b-845d-4e8a5170157e.png?v=1695372762"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DA1_04.png?v=1695368441"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DA1_05.png?v=1695368448"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DA1_06.png?v=1695368456"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DA1_07.png?v=1695368463"></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>',
+    '<p><img src="./desc/DA1_01_959796c3-09d5-4c21-abe1-cf7fbd6ce276.png" alt="" data-mce-src="./desc/DA1_01_959796c3-09d5-4c21-abe1-cf7fbd6ce276.png"></p>\n<p><img alt="" src="./desc/DA1_02.png"></p>\n<p><img alt="" src="./desc/DA1_03_65ae0dee-f084-496b-845d-4e8a5170157e.png"></p>\n<p><img alt="" src="./desc/DA1_04.png"></p>\n<p><img alt="" src="./desc/DA1_05.png"></p>\n<p><img alt="" src="./desc/DA1_06.png"></p>\n<p><img alt="" src="./desc/DA1_07.png"></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>',
   published_at: "2023-09-22T16:55:43+08:00",
   created_at: "2023-09-22T16:17:53+08:00",
   vendor: "S.M.S.L",

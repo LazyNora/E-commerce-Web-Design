@@ -3,7 +3,7 @@ const product = {
   title: "TANCHJIM ONE 10mm Dynamic Driver In-ear Headphone",
   handle: "tanchjim-one-in-ear-headphone",
   description:
-    '<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/5a3f0f7f-91f5-464b-916c-46df5d44a317.jpg" alt="image"></p>',
+    '<p><img style="display: block; margin-left: auto; margin-right: auto;" src="./desc/5a3f0f7f-91f5-464b-916c-46df5d44a317.jpg" alt="image"></p>',
   published_at: "2023-08-03T11:08:23+08:00",
   created_at: "2023-08-02T17:10:15+08:00",
   vendor: "TANCHJIM",

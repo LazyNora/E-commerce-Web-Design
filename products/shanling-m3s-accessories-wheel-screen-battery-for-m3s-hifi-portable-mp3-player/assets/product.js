@@ -4,7 +4,7 @@ const product = {
   handle:
     "shanling-m3s-accessories-wheel-screen-battery-for-m3s-hifi-portable-mp3-player",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818093947/ee1ce3d5d120b87efbede55176694ed0.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818093947/f9ba0b67a3c9f472ab0c3c0f673bd1d8.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818093947/a9bdda1e1deb269b0ed91f42c8c40ed8.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818093947/169eb878749bdc41bc6a972aec62de27.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818093947/288508fefcd291acf96089005891b31e.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818093947/1acd94ab6f247439658e4f0b458af631.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818093947/5ecb269d78fd766b7407e74d90691fd2.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"></p>\n',
   published_at: "2022-08-03T10:19:40+08:00",
   created_at: "2019-08-18T09:42:50+08:00",
   vendor: "SHANLING",
