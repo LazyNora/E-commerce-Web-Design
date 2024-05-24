@@ -4,6 +4,7 @@
 
 .page-header .section__heading {
 	font-size: 42px;
+	font-weight: 700;
 	line-height: 60px;
 	margin-bottom: 5px;
 }
@@ -48,5 +49,28 @@
 	.card--hover-scaling-up:hover .collection-card__image .card__image,
 	.card--hover-scaling-up:hover .collection-card__image svg {
 		transform: scale(1.1) translateZ(0);
+	}
+}
+
+.collection-header {
+	background-color: #fff;
+}
+
+.collection-header--small {
+	padding: 30px 0;
+}
+
+.collection-header__title {
+	color: inherit;
+}
+
+.collection-header__title {
+	font-size: 34px;
+	font-weight: 700;
+}
+
+@media (min-width: 1025px) {
+	.collection-header--small {
+		padding: 50px 0;
 	}
 }

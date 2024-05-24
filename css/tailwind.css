@@ -812,10 +812,6 @@ body {
   z-index: 70;
 }
 
-.z-\[200\] {
-  z-index: 200;
-}
-
 .order-first {
   order: -9999;
 }
@@ -1162,10 +1158,6 @@ body {
   height: 0.25rem;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-11 {
   height: 2.75rem;
 }
@@ -1222,16 +1214,8 @@ body {
   height: 100%;
 }
 
-.h-\[200px\] {
-  height: 200px;
-}
-
 .max-h-\[90vh\] {
   max-height: 90vh;
-}
-
-.max-h-\[200px\] {
-  max-height: 200px;
 }
 
 .min-h-full {
@@ -3910,6 +3894,10 @@ body {
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[42px\] {
+    font-size: 42px;
   }
 
   .lg\:text-base {

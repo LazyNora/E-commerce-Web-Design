@@ -706,9 +706,9 @@ button.btn.btn-plain:hover {
 	width: 100%;
 }
 .tooltip-item .tooltip-content {
-	background: var(--bg-color-tooltip);
+	background: #000;
 	border-radius: 0.25rem;
-	color: var(--text-color-tooltip) !important;
+	color: #fff !important;
 	display: none;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -723,7 +723,7 @@ button.btn.btn-plain:hover {
 	z-index: 20;
 }
 .tooltip-item .tooltip-content:after {
-	background: var(--bg-color-tooltip);
+	background: #000;
 	content: "";
 	height: 10px;
 	position: absolute;
