@@ -1,8 +1,8 @@
 import { categories } from "./data.js";
 const currentPath = path || "";
 document.querySelector(".categories-wrapper .ib-grid").innerHTML = categories
-  .map(
-    (item, index) => `
+	.map(
+		(item, index) => `
     <div class="ib-column">
       <div class="ib-icon-box ib-icon-box--vertical hover-scale-up scroll-animation"
       data-animation="animate-fade-up animate-ease-out animate-delay-100"
@@ -17,7 +17,7 @@ document.querySelector(".categories-wrapper .ib-grid").innerHTML = categories
               style="--aspect-ratio: 1.25"
               intersecting="true">
               <img
-                src=${item.img}
+                src=${currentPath + item.img}
                 sizes="460px"
                 alt=${item.desc}
                 loading="lazy"
@@ -39,6 +39,6 @@ document.querySelector(".categories-wrapper .ib-grid").innerHTML = categories
         </div>
       </div>
     </div>
-    `,
-  )
-  .join("");
+    `
+	)
+	.join("");
