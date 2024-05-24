@@ -3,7 +3,7 @@ const product = {
   title: "IBASSO CA01 2.5mm to 3.5mm Adapter",
   handle: "ibasso-ca01-2-5mm-balanced-to-3-5mm-single-ended-cable-adapter",
   description:
-    '<span style="font-size:20px;"><strong>Features:</strong></span><span style="font-size:18px;"><br>\nHandmade 4-wire braided Cable Adaptor<br>\nWire: high purity oxygen free copper wire<br>\nInsulation: proprietary high quality dielectric with antioxidant<br>\nSocket: 2.5mm gold plated balanced socket.<br>\nPlug: 3.5mm gold plated single ended plug<br>\nLength: 10CM±0.5CM</span>\n<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201125154840/410ee22c07f3734b165f6ffdecef8547.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201125154840/3959367e465820dca74020b76c45acec.jpg"></p>\n',
+    '<span style="font-size:20px;"><strong>Features:</strong></span><span style="font-size:18px;"><br>\nHandmade 4-wire braided Cable Adaptor<br>\nWire: high purity oxygen free copper wire<br>\nInsulation: proprietary high quality dielectric with antioxidant<br>\nSocket: 2.5mm gold plated balanced socket.<br>\nPlug: 3.5mm gold plated single ended plug<br>\nLength: 10CM±0.5CM</span>\n<p style="text-align: left;margin:0;"><img src="./desc/410ee22c07f3734b165f6ffdecef8547.jpg"><img src="./desc/3959367e465820dca74020b76c45acec.jpg"></p>\n',
   published_at: "2020-11-25T15:51:10+08:00",
   created_at: "2020-11-25T15:51:10+08:00",
   vendor: "IBASSO",

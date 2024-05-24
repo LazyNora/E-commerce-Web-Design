@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP Headphone Accessories (Acrylic Stand)",
   handle: "moondrop-earphone-accessories-acrylic-stand-1",
   description:
-    '<span style="color: rgb(0, 0, 0); font-family: opensans; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 900; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Acrylic Stand</span>\n<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200616184123/fbeaeadb66433c2f462cb35990c0828d.jpg"></p>\n',
+    '<span style="color: rgb(0, 0, 0); font-family: opensans; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 900; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Acrylic Stand</span>\n<p style="text-align: left;margin:0;"><img src="undefined"></p>\n',
   published_at: "2022-08-03T10:18:48+08:00",
   created_at: "2020-06-16T18:42:14+08:00",
   vendor: "MOONDROP",

@@ -4,7 +4,7 @@ const product = {
   handle:
     "dd-ddhifi-c-b3k-leather-case-for-fiio-bluetooth-adapter-btr3k-portable-high-fidelity-bluetooth5-0-amplifier",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200514171949/67b85453f2bb864d367d73cc1332aac5.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200514171949/efa79729dac4c595677f7e8d53b934a1.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200514171949/3b8a069a1840d523d72fe2edf19e3aff.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200514171949/746b755af09d2fc2d28994f62672f3b5.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200514171950/a32442e2bf848eeccd907f14440cd69b.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200514171950/552aeac09064c68863a0e5f08652b942.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="./desc/67b85453f2bb864d367d73cc1332aac5.jpg"><img src="./desc/efa79729dac4c595677f7e8d53b934a1.jpg"><img src="./desc/3b8a069a1840d523d72fe2edf19e3aff.jpg"><img src="./desc/746b755af09d2fc2d28994f62672f3b5.jpg"><img src="./desc/a32442e2bf848eeccd907f14440cd69b.jpg"><img src="./desc/552aeac09064c68863a0e5f08652b942.jpg"></p>\n',
   published_at: "2020-05-14T17:20:20+08:00",
   created_at: "2020-05-14T17:20:20+08:00",
   vendor: "DD",

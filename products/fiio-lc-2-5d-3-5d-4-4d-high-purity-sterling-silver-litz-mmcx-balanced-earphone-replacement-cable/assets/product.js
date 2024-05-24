@@ -4,7 +4,7 @@ const product = {
   handle:
     "fiio-lc-2-5d-3-5d-4-4d-high-purity-sterling-silver-litz-mmcx-balanced-earphone-replacement-cable",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153325/3cc13eaf92ef05c38315a730549eb161.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153325/1a6bcaaa16048a822a0709e0785e81b7.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153325/3b6ad9bdead545c10b6ee399428dbadf.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153325/b2ee7b0727c050e994642a5dc6b8b1a0.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153325/c1bdba8424dc2a549620d88b42ceaaf3.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153325/0cea09173a595c738cc30f3bfd8712f3.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153325/df7981113352c12a8451d929676041d5.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="./desc/3cc13eaf92ef05c38315a730549eb161.jpg"><img src="./desc/1a6bcaaa16048a822a0709e0785e81b7.jpg"><img src="./desc/3b6ad9bdead545c10b6ee399428dbadf.jpg"><img src="./desc/b2ee7b0727c050e994642a5dc6b8b1a0.jpg"><img src="./desc/c1bdba8424dc2a549620d88b42ceaaf3.jpg"><img src="./desc/0cea09173a595c738cc30f3bfd8712f3.jpg"><img src="./desc/df7981113352c12a8451d929676041d5.jpg"></p>\n',
   published_at: "2020-12-22T15:34:47+08:00",
   created_at: "2020-12-22T15:34:47+08:00",
   vendor: "FIIO",

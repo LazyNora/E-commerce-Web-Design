@@ -4,7 +4,7 @@ const product = {
   handle:
     "dd-ddhifi-dj35a-dj44a-2-5-4-4-balanced-adapter-to-2-5mm-balance-earphone-cable",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180146/f5a7dbf158465abb930ccce921d76bfd.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180146/c4706d25156e05fa9e1248960e300d49.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180146/37bf724edab4f6bf9f01646751de23b7.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180138/9a52f9eb035b91d5ba3f16dc51f82442.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180146/b4d7dd6e9de4a16600d638cb4baa3036.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180142/47eb79aa13a9bef04ea8496868853cd7.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180146/661b606007eebba4532621684c70337a.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180146/664e19600689a415781889cd794af352.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426180146/8980842a573f73a19306c696a16eb269.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"></p>\n',
   published_at: "2020-04-27T02:15:30+08:00",
   created_at: "2020-04-26T18:08:33+08:00",
   vendor: "DD",

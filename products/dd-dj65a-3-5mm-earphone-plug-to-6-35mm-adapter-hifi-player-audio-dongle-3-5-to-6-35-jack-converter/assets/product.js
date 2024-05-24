@@ -4,7 +4,7 @@ const product = {
   handle:
     "dd-dj65a-3-5mm-earphone-plug-to-6-35mm-adapter-hifi-player-audio-dongle-3-5-to-6-35-jack-converter",
   description:
-    '<p><span style="font-size: 22px;"><strong>Features:</strong></span><br> <span style="font-size: 16px;">DD ddHiFi DJ65A 3.5mm Earphone Plug to 6.35mm Adapter HiFi Player Audio Dongle 3.5 to 6.35 Jack Converter</span></p>\n<p style="margin: 0px; text-align: center;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211012163429/cecbec03c1cf7c3374ce825964be80f6.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211012163429/ba4118d8d064482ada33d3ca2110f44e.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211012163429/d134b926639b56e9703255f083974354.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211012163429/0ba835522ee5434b4b14927776ac1cce.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211012163429/d36b9ca6973e8facb651728d0aa28952.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211012163429/7239fe228c80307630234aa2c8ac94f7.jpg"></p>',
+    '<p><span style="font-size: 22px;"><strong>Features:</strong></span><br> <span style="font-size: 16px;">DD ddHiFi DJ65A 3.5mm Earphone Plug to 6.35mm Adapter HiFi Player Audio Dongle 3.5 to 6.35 Jack Converter</span></p>\n<p style="margin: 0px; text-align: center;"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"></p>',
   published_at: "2021-10-12T16:36:14+08:00",
   created_at: "2021-10-12T16:36:14+08:00",
   vendor: "DD",

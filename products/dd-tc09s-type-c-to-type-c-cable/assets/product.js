@@ -3,7 +3,7 @@ const product = {
   title: "DD TC09S Type-C to Type-C OTG Cable",
   handle: "dd-tc09s-type-c-to-type-c-cable",
   description:
-    '<p><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/fae1c583-9707-4a25-9e95-9338547ee4fb.jpg" alt="image"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/d991060b-6ab8-4aea-8508-4ea2b324d647.jpg" alt="image"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/9d03c7bb-6088-4323-b8da-03fe992c5ada.jpg" alt="image"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/73b57876-8275-4c97-a0e3-b92fc4f1f9f8.jpg" alt="image"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/acfd988d-bb9b-40fe-b8e4-47c2c2cae85d.jpg" alt="image"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/50f63ca2-dff6-4228-9b50-cada355ea7a2.jpg" alt="image"></p>',
+    '<p><img src="./desc/fae1c583-9707-4a25-9e95-9338547ee4fb.jpg" alt="image"><img src="./desc/d991060b-6ab8-4aea-8508-4ea2b324d647.jpg" alt="image"><img src="./desc/9d03c7bb-6088-4323-b8da-03fe992c5ada.jpg" alt="image"><img src="./desc/73b57876-8275-4c97-a0e3-b92fc4f1f9f8.jpg" alt="image"><img src="./desc/acfd988d-bb9b-40fe-b8e4-47c2c2cae85d.jpg" alt="image"><img src="./desc/50f63ca2-dff6-4228-9b50-cada355ea7a2.jpg" alt="image"></p>',
   published_at: "2023-08-23T16:08:46+08:00",
   created_at: "2023-08-23T16:08:46+08:00",
   vendor: "DD",

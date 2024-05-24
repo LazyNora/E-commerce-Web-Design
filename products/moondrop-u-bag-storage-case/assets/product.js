@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP U Bag Earphone Storage Case",
   handle: "moondrop-u-bag-storage-case",
   description:
-    '<img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/17107291767901.png?v=1710733551">',
+    '<img alt="" src="./desc/17107291767901.png">',
   published_at: "2024-03-15T18:06:37+08:00",
   created_at: "2024-03-15T18:06:37+08:00",
   vendor: "MOONDROP",

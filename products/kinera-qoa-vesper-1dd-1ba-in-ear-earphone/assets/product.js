@@ -3,7 +3,7 @@ const product = {
   title: "KINERA QOA Vesper 1DD 1BA In-ear Headphone",
   handle: "kinera-qoa-vesper-1dd-1ba-in-ear-earphone",
   description:
-    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004.png?v=1686222601" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004.png?v=1686222601">',
+    '<img src="./desc/004.png" alt="" data-mce-fragment="1" data-mce-src="./desc/004.png">',
   published_at: "2023-06-08T19:14:44+08:00",
   created_at: "2023-06-08T19:14:44+08:00",
   vendor: "KINERA",

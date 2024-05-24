@@ -4,7 +4,7 @@ const product = {
   handle:
     "ladder-schumann-dac-hifi-usb-dsp-coaxial-opt-aes-resolution-audio-decoder-1",
   description:
-    '<div style="text-align: center;">\n<img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220611090122/d9b47ee91f195c3c922dfff327dd9e2e.png"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220611090122/52604ca3ba884a2ddd56ab013892e536.png"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220611090122/46d62ed83ed44c5207ee1f20b0017d70.png"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220611090122/598dacf99e65989d9e01444507f97f9b.png"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220611090122/7dd4a52a41b6ab0a3b7ff2ae9a37df26.png"><br>\n<img align="center" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220831175448/40ba4c1c8ac179883906b135fafea9f2.png">\n</div>\n',
+    '<div style="text-align: center;">\n<img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><br>\n<img align="center" src="undefined">\n</div>\n',
   published_at: "2022-06-09T16:51:41+08:00",
   created_at: "2022-06-09T16:51:41+08:00",
   vendor: "LADDER",

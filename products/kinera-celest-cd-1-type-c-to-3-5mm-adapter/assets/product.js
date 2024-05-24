@@ -3,7 +3,7 @@ const product = {
   title: "KINERA Celest CD-1 Type-C to 3.5mm Adapter",
   handle: "kinera-celest-cd-1-type-c-to-3-5mm-adapter",
   description:
-    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20231110151514_001_ac5df0d8-7ccd-4c86-9ff1-f78e5722c32c.jpg?v=1699600689" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20231110151514_001_ac5df0d8-7ccd-4c86-9ff1-f78e5722c32c.jpg?v=1699600689">',
+    '<img src="./desc/DM_20231110151514_001_ac5df0d8-7ccd-4c86-9ff1-f78e5722c32c.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/DM_20231110151514_001_ac5df0d8-7ccd-4c86-9ff1-f78e5722c32c.jpg">',
   published_at: "2023-11-10T15:22:10+08:00",
   created_at: "2023-11-10T15:22:10+08:00",
   vendor: "KINERA",

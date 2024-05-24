@@ -3,7 +3,7 @@ const product = {
   title: "KINERA lmperial SKULD 5BA In-ear Headphone",
   handle: "kinera-lmperial-skuld-5ba-in-ear-earphones",
   description:
-    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/A7d4485e4656b4969955c777d9721605fE.jpg?v=1699609401" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/A7d4485e4656b4969955c777d9721605fE.jpg?v=1699609401">',
+    '<img src="./desc/A7d4485e4656b4969955c777d9721605fE.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/A7d4485e4656b4969955c777d9721605fE.jpg">',
   published_at: "2023-06-05T16:14:07+08:00",
   created_at: "2023-06-05T15:48:25+08:00",
   vendor: "KINERA",

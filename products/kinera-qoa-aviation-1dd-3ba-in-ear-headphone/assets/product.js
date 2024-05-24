@@ -3,7 +3,7 @@ const product = {
   title: "KINERA QOA Aviation 3BA+1DD In-Ear Headphone",
   handle: "kinera-qoa-aviation-1dd-3ba-in-ear-headphone",
   description:
-    '<div><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/10_e10acbbe-e14d-4731-8de3-f21748e76b31.png?v=1693877057" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/10_e10acbbe-e14d-4731-8de3-f21748e76b31.png?v=1693877057"></div>',
+    '<div><img src="./desc/10_e10acbbe-e14d-4731-8de3-f21748e76b31.png" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="./desc/10_e10acbbe-e14d-4731-8de3-f21748e76b31.png"></div>',
   published_at: "2023-09-05T09:07:03+08:00",
   created_at: "2023-08-17T16:29:05+08:00",
   vendor: "KINERA",

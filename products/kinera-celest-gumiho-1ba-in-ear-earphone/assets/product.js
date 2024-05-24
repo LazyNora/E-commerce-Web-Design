@@ -3,7 +3,7 @@ const product = {
   title: "KINERA Celest Gumiho 1BA In-ear Earphone",
   handle: "kinera-celest-gumiho-1ba-in-ear-earphone",
   description:
-    '<div style="text-align: center;"><img style="margin-top: 2.4px; float: none;" alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/2578b331d1af61d1c562505846fe7603.jpg?v=1685782788"></div>',
+    '<div style="text-align: center;"><img style="margin-top: 2.4px; float: none;" alt="" src="./desc/2578b331d1af61d1c562505846fe7603.jpg"></div>',
   published_at: "2023-06-03T17:10:18+08:00",
   created_at: "2023-06-03T17:10:18+08:00",
   vendor: "KINERA",

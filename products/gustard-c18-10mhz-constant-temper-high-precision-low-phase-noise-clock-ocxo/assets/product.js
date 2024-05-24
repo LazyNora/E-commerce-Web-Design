@@ -4,7 +4,7 @@ const product = {
   handle:
     "gustard-c18-10mhz-constant-temper-high-precision-low-phase-noise-clock-ocxo",
   description:
-    '<p style="text-align: left; margin: 0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210427155520/cc19ac2868797924a19eaf7ca6547dc8.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210427155521/f8b89f1f8bd258be6b425a6b062fbbf0.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210427155521/996ece0cf2ee7642b453218720eb6af6.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210427155521/4d96df361ea0e908986700e04482bde3.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210427155521/ad115da27042c45a769c6c22238877a4.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210427155521/5ab7250e23493601a559ee0088ce6299.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210427155521/f2902ca5babf00556562b9cc8c4f126c.jpg"></p>\n<span style="font-size: 16px;"></span>',
+    '<p style="text-align: left; margin: 0;"><img src="./desc/cc19ac2868797924a19eaf7ca6547dc8.jpg"><img src="./desc/f8b89f1f8bd258be6b425a6b062fbbf0.jpg"><img src="./desc/996ece0cf2ee7642b453218720eb6af6.jpg"><img src="./desc/4d96df361ea0e908986700e04482bde3.jpg"><img src="./desc/ad115da27042c45a769c6c22238877a4.jpg"><img src="./desc/5ab7250e23493601a559ee0088ce6299.jpg"><img src="./desc/f2902ca5babf00556562b9cc8c4f126c.jpg"></p>\n<span style="font-size: 16px;"></span>',
   published_at: "2021-04-27T16:57:00+08:00",
   created_at: "2021-04-27T16:00:48+08:00",
   vendor: "GUSTARD",

@@ -3,7 +3,7 @@ const product = {
   title: "DUNU Candy Silicone Eartips",
   handle: "dunu-candy-silicone-eartips",
   description:
-    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/f9406b976397ecb73ab9306a9e23644f_643ce2e6300daa64e92fa17eb42e42f1.jpg?v=1686226109" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/f9406b976397ecb73ab9306a9e23644f_643ce2e6300daa64e92fa17eb42e42f1.jpg?v=1686226109">',
+    '<img src="./desc/f9406b976397ecb73ab9306a9e23644f_643ce2e6300daa64e92fa17eb42e42f1.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/f9406b976397ecb73ab9306a9e23644f_643ce2e6300daa64e92fa17eb42e42f1.jpg">',
   published_at: "2023-06-08T20:24:21+08:00",
   created_at: "2023-06-08T20:24:21+08:00",
   vendor: "DUNU",

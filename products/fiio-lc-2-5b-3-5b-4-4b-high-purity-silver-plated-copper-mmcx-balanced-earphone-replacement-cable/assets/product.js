@@ -4,7 +4,7 @@ const product = {
   handle:
     "fiio-lc-2-5b-3-5b-4-4b-high-purity-silver-plated-copper-mmcx-balanced-earphone-replacement-cable",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222154037/3909092decdb0fe807c0785b88dc6c3e.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222154037/59e10293d974c8d64c1deea61b0ed244.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222154037/9c3f0694d383201cdf979b8539f19268.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222154037/fef7f99cecab4e91b21d35af068d5059.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222154037/4b9b0f0bfb0a33bb7841368486582ea6.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222154037/cf197a33401a9f36bb9430fdcc174d2c.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222154037/ed5a033ae5e707e5ab3e942ad84d0a32.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="./desc/3909092decdb0fe807c0785b88dc6c3e.jpg"><img src="./desc/59e10293d974c8d64c1deea61b0ed244.jpg"><img src="./desc/9c3f0694d383201cdf979b8539f19268.jpg"><img src="./desc/fef7f99cecab4e91b21d35af068d5059.jpg"><img src="./desc/4b9b0f0bfb0a33bb7841368486582ea6.jpg"><img src="./desc/cf197a33401a9f36bb9430fdcc174d2c.jpg"><img src="./desc/ed5a033ae5e707e5ab3e942ad84d0a32.jpg"></p>\n',
   published_at: "2020-12-22T15:42:01+08:00",
   created_at: "2020-12-22T15:42:01+08:00",
   vendor: "FIIO",

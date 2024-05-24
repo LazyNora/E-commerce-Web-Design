@@ -3,7 +3,7 @@ const product = {
   title: "AUDIRECT Team 1 ES9281AC PRO Portable DAC/AMP",
   handle: "audirect-team-1-es9281ac-pro-portable-dac-amp",
   description:
-    '<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/team-1-13_01.jpg?v=1708502210" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/team-1-13_01.jpg?v=1708502210"><br></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/team-1-13_02.jpg?v=1708502218" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/team-1-13_02.jpg?v=1708502218"><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/team-1-13_03.jpg?v=1708502224" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/team-1-13_03.jpg?v=1708502224"></p>',
+    '<p><img alt="" src="./desc/team-1-13_01.jpg" data-mce-src="./desc/team-1-13_01.jpg"><br></p>\n<p><img alt="" src="./desc/team-1-13_02.jpg" data-mce-src="./desc/team-1-13_02.jpg"><img alt="" src="./desc/team-1-13_03.jpg" data-mce-src="./desc/team-1-13_03.jpg"></p>',
   published_at: "2024-02-28T00:00:02+08:00",
   created_at: "2024-02-21T16:11:56+08:00",
   vendor: "AUDIRECT",

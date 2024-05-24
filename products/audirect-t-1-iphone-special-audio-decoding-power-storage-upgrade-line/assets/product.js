@@ -4,7 +4,7 @@ const product = {
   handle:
     "audirect-t-1-iphone-special-audio-decoding-power-storage-upgrade-line",
   description:
-    '<img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221013161333/354f80444f4a723997bdae73dc1a4759.png"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221013161333/4114224f2093caa799c4ede6d54d424d.png"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221013161333/cefa6fe337bd71ae93da5a96145c72eb.png"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221013161333/d68463c09ea761ce06bd779fd009ac8f.png">',
+    '<img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined">',
   published_at: "2022-10-13T16:14:19+08:00",
   created_at: "2022-10-13T16:14:19+08:00",
   vendor: "AUDIRECT",

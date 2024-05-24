@@ -4,7 +4,7 @@ const product = {
   handle:
     "dd-ddhifi-c-q5-leather-case-for-fiio-q5-or-q5s-usb-dac-amp-amp-bundling-case",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426173335/5d0f969bf8010f3427724214f60ba6d9.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426173335/daf2d08314835865a5ab6b0b7bcfa6d0.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426173325/50a716408f235fb1278f273aa077914f.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="undefined"><img src="undefined"><img src="undefined"></p>\n',
   published_at: "2022-08-03T10:18:52+08:00",
   created_at: "2020-04-26T17:34:54+08:00",
   vendor: "DD",

@@ -3,7 +3,7 @@ const product = {
   title: "FANMUSIC P006 Ear tips",
   handle: "fanmusic-p006-in-ear-silicone-memory-sponge-earphones-ear-tips",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190820164408/a57dde0efe794f298d0d88e261b077cf.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190820164408/a8495f6479ba4b822c9bf4097a2578ba.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190820164408/ee7962f881f9b76388b2e5e22295d1cb.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190820164408/3b25fcf78b25d6775aaa5e888b920e55.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="./desc/a57dde0efe794f298d0d88e261b077cf.jpg"><img src="./desc/a8495f6479ba4b822c9bf4097a2578ba.jpg"><img src="./desc/ee7962f881f9b76388b2e5e22295d1cb.jpg"><img src="./desc/3b25fcf78b25d6775aaa5e888b920e55.jpg"></p>\n',
   published_at: "2019-08-20T16:47:33+08:00",
   created_at: "2019-08-20T16:47:33+08:00",
   vendor: "FANMUSIC",

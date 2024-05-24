@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP Free DSP Headphone Upgrade Cable",
   handle: "moondrop-free-dsp-headphone-upgrade-cable",
   description:
-    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/FREEDSP.jpg?v=1695117003" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/FREEDSP.jpg?v=1695117003">',
+    '<img src="./desc/FREEDSP.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/FREEDSP.jpg">',
   published_at: "2023-09-19T18:00:29+08:00",
   created_at: "2023-09-19T18:00:29+08:00",
   vendor: "MOONDROP",

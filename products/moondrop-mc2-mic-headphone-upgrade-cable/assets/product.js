@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP MC2 MIC Headphone Upgrade Cable",
   handle: "moondrop-mc2-mic-headphone-upgrade-cable",
   description:
-    '<div><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/MC2.jpg?v=1697009890" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/MC2.jpg?v=1697009890"></div>',
+    '<div><img src="./desc/MC2.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="./desc/MC2.jpg"></div>',
   published_at: "2023-10-11T16:50:01+08:00",
   created_at: "2023-10-11T15:39:18+08:00",
   vendor: "MOONDROP",
