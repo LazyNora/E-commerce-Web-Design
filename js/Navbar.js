@@ -609,7 +609,7 @@ const handleSearchResults = (e) => {
 		<div class="searchResults__item">
 			<a href="${path + item.url}">
 				<div class="item__img">
-					<img src="${item.img}" alt="${item.title}"/>
+					<img src="${currentPath + item.img}" alt="${item.title}"/>
 				</div>
 				<div class="item__content">
 					<p class="item__title">${item.title}</p>

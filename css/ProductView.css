@@ -75,6 +75,13 @@
 	right: 1.25rem;
 }
 
+.pswp .deferred-media video {
+	width: 100%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 @media (max-width: 767px) {
 	.prod-media-item .zoom-in {
 		opacity: 1;
