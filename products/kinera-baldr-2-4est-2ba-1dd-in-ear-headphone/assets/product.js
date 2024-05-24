@@ -2,8 +2,7 @@ const product = {
   id: 8033478836467,
   title: "KINERA Baldr 2 4EST+2BA+1DD In-ear Headphone",
   handle: "kinera-baldr-2-4est-2ba-1dd-in-ear-headphone",
-  description:
-    '<img alt="" src="./desc/DM_20230605110049_001.png">',
+  description: '<img alt="" src="./desc/DM_20230605110049_001.png">',
   published_at: "2023-06-05T11:24:30+08:00",
   created_at: "2023-06-05T11:24:30+08:00",
   vendor: "KINERA",

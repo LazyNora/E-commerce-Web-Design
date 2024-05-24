@@ -2,8 +2,7 @@ const product = {
   id: 8034057224435,
   title: "KINERA Leyding Headphone Upgrade Cable",
   handle: "kinera-leyding-headphone-cable",
-  description:
-    '<img alt="" src="./desc/ee2ed0ac8898a14cf045b71363d5a155.jpg">',
+  description: '<img alt="" src="./desc/ee2ed0ac8898a14cf045b71363d5a155.jpg">',
   published_at: "2023-06-06T15:38:49+08:00",
   created_at: "2023-06-06T15:38:49+08:00",
   vendor: "KINERA",

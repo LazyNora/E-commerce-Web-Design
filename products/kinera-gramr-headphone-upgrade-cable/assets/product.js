@@ -2,8 +2,7 @@ const product = {
   id: 8033466974451,
   title: "KINERA Gramr Headphone Upgrade Cable",
   handle: "kinera-gramr-headphone-upgrade-cable",
-  description:
-    '<img alt="" src="./desc/cc6228f81ee8fd6005bbf764e8f5b959.jpg">',
+  description: '<img alt="" src="./desc/cc6228f81ee8fd6005bbf764e8f5b959.jpg">',
   published_at: "2023-06-05T10:38:05+08:00",
   created_at: "2023-06-05T10:38:05+08:00",
   vendor: "KINERA",

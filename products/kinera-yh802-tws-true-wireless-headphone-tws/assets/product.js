@@ -2,8 +2,7 @@ const product = {
   id: 8034051293427,
   title: "KINERA YH802 TWS True Wireless Headphone (TWS)",
   handle: "kinera-yh802-tws-true-wireless-headphone-tws",
-  description:
-    '<img alt="" src="./desc/cf2698a52cb44654671e1e93ac1ca477.jpg">',
+  description: '<img alt="" src="./desc/cf2698a52cb44654671e1e93ac1ca477.jpg">',
   published_at: "2023-06-06T15:22:35+08:00",
   created_at: "2023-06-06T15:22:35+08:00",
   vendor: "KINERA",
