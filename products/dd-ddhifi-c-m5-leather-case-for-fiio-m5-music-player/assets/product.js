@@ -3,7 +3,7 @@ const product = {
   title: "DD C-M5 Leather Case for FiiO M5",
   handle: "dd-ddhifi-c-m5-leather-case-for-fiio-m5-music-player",
   description:
-    '<p style="text-align: left;margin:0;"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="./desc/914bb38bbbca6fb354ee772a4a2e6e1f.jpg"><img src="./desc/1befa735247bea2f60881ee9be0bcdbd.jpg"><img src="./desc/5b6b94e3b8f059a258a6afe58fe798db.jpg"><img src="./desc/56b6c511c394d4a0b1888741676c4807.jpg"><img src="./desc/ebe04deec4d2c679d0547356b94d4af2.jpg"><img src="./desc/d32f0a751252d806905631c762c9f62d.jpg"><img src="./desc/93494f544cb10b5511bb5eae32106d90.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426162043/79a21c71b429fc7ae148e0e57878d51c.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426162043/59128e228a4e5dc46830a385b4747615.jpg"></p>\n',
   published_at: "2020-04-26T16:26:43+08:00",
   created_at: "2020-04-26T16:26:43+08:00",
   vendor: "DD",

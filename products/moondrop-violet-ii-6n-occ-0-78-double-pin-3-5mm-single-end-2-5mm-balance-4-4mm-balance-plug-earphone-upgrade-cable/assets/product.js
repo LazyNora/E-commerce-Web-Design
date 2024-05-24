@@ -4,7 +4,7 @@ const product = {
   handle:
     "moondrop-violet-ii-6n-occ-0-78-double-pin-3-5mm-single-end-2-5mm-balance-4-4mm-balance-plug-earphone-upgrade-cable",
   description:
-    '<img alt="" src="./desc/1.webp"><img src="./desc/2.webp" alt="" data-mce-fragment="1" data-mce-src="./desc/2.webp"><img src="./desc/3_67bee44f-f358-455d-b64b-179197736a41.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/3_67bee44f-f358-455d-b64b-179197736a41.jpg"><img src="./desc/4.webp" alt="" data-mce-fragment="1" data-mce-src="./desc/4.webp"><img src="./desc/5.webp" alt="" data-mce-fragment="1" data-mce-src="./desc/5.webp">',
+    '<img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/1.webp?v=1709106553"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/2.webp?v=1709106558" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/2.webp?v=1709106558"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/3_67bee44f-f358-455d-b64b-179197736a41.jpg?v=1709106563" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/3_67bee44f-f358-455d-b64b-179197736a41.jpg?v=1709106563"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/4.webp?v=1709106574" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/4.webp?v=1709106574"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/5.webp?v=1709106580" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/5.webp?v=1709106580">',
   published_at: "2019-08-11T09:11:19+08:00",
   created_at: "2019-08-10T17:11:19+08:00",
   vendor: "MOONDROP",

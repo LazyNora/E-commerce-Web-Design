@@ -3,7 +3,7 @@ const product = {
   title: "TANGZU Xuanwu GATE 1DD+4BA+2EST In-ear Headphone",
   handle: "tangzu-xuanwu-gate-1dd-4ba-2est-in-ear-headphone",
   description:
-    '<p><img alt="" src="./desc/509e6e17-8497-4954-97c8-ac01a090889e_1_3__01.jpg"></p>\n<p><img alt="" src="./desc/509e6e17-8497-4954-97c8-ac01a090889e_1_3__02.jpg"></p>\n<p><img alt="" src="./desc/509e6e17-8497-4954-97c8-ac01a090889e_1_3__03.jpg"></p>\n<p> </p>',
+    '<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/509e6e17-8497-4954-97c8-ac01a090889e_1_3__01.jpg?v=1708672617"></p>\n<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/509e6e17-8497-4954-97c8-ac01a090889e_1_3__02.jpg?v=1708672634"></p>\n<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/509e6e17-8497-4954-97c8-ac01a090889e_1_3__03.jpg?v=1708672646"></p>\n<p> </p>',
   published_at: "2024-02-23T15:33:33+08:00",
   created_at: "2024-02-23T14:38:07+08:00",
   vendor: "TANGZU",

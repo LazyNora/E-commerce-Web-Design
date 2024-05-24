@@ -3,7 +3,7 @@ const product = {
   title: "S.M.S.L PL200 AK4499EX CD Player",
   handle: "s-m-s-l-pl200-ak4499ex-cd-player",
   description:
-    '<p> <img src="./desc/PL200_---en_01.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/PL200_---en_01.jpg"></p>\n<p> <img src="./desc/PL200_---en_02.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/PL200_---en_02.jpg"></p>\n<p> <img src="./desc/PL200_---en_03.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/PL200_---en_03.jpg"></p>\n<p> <img src="./desc/PL200_---en_04.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/PL200_---en_04.jpg"></p>\n<p> </p>',
+    '<p> <img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/PL200_---en_01.jpg?v=1698028337" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/PL200_---en_01.jpg?v=1698028337"></p>\n<p> <img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/PL200_---en_02.jpg?v=1698028345" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/PL200_---en_02.jpg?v=1698028345"></p>\n<p> <img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/PL200_---en_03.jpg?v=1698028352" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/PL200_---en_03.jpg?v=1698028352"></p>\n<p> <img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/PL200_---en_04.jpg?v=1698028359" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/PL200_---en_04.jpg?v=1698028359"></p>\n<p> </p>',
   published_at: "2023-10-23T10:34:07+08:00",
   created_at: "2023-10-23T10:18:36+08:00",
   vendor: "S.M.S.L",

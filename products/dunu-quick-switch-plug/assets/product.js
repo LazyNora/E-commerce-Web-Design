@@ -3,7 +3,7 @@ const product = {
   title: "DUNU Quick-Switch Plug",
   handle: "dunu-quick-switch-plug",
   description:
-    '<p><img alt="" src="./desc/1_f6fd23f8-a688-435f-b475-f96bf589f2a4.png"></p>\n<p><img alt="" src="./desc/2_055f90e4-26b6-4d0e-8719-c126ea844b4e.jpg"></p>',
+    '<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/1_f6fd23f8-a688-435f-b475-f96bf589f2a4.png?v=1686310428"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2_055f90e4-26b6-4d0e-8719-c126ea844b4e.jpg?v=1686310435"></p>',
   published_at: "2023-06-09T19:47:31+08:00",
   created_at: "2023-06-09T19:47:31+08:00",
   vendor: "DUNU",

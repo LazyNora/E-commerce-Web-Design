@@ -3,7 +3,7 @@ const product = {
   title: "KINERA QOA RUM Headphone Upgrade Cable",
   handle: "kinera-qoa-rum-earphone-upgrade-cables",
   description:
-    '<img src="./desc/004_6eefd44d-095c-4804-ad9e-26acaa731e5b.png" alt="" data-mce-fragment="1" data-mce-src="./desc/004_6eefd44d-095c-4804-ad9e-26acaa731e5b.png">',
+    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004_6eefd44d-095c-4804-ad9e-26acaa731e5b.png?v=1686224822" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004_6eefd44d-095c-4804-ad9e-26acaa731e5b.png?v=1686224822">',
   published_at: "2023-06-08T19:51:21+08:00",
   created_at: "2023-06-08T19:51:21+08:00",
   vendor: "KINERA",

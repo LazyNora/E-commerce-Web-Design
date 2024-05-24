@@ -4,7 +4,7 @@ const product = {
   handle:
     "kinera-qoa-margarita-1ba-1dd-2-sonion-electrostatic-in-ear-earphone-with-0-78mm-2pin-connectors-dynamic-driver-hifi-earbuds",
   description:
-    '<div style="text-align: center;">\n<img src="undefined" referrerpolicy="no-referrer"><img src="undefined" referrerpolicy="no-referrer"><img src="undefined" referrerpolicy="no-referrer">\n</div>',
+    '<div style="text-align: center;">\n<img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220610191625/08324e2dc1a33e0685a469d1457ebbdd.jpg" referrerpolicy="no-referrer"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220610191625/e524e491a74ae2f69dd9cab41f1a5a52.jpg" referrerpolicy="no-referrer"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220610191625/20d57b737275f0e794a1da2f9020415d.jpg" referrerpolicy="no-referrer">\n</div>',
   published_at: "2022-06-10T18:37:03+08:00",
   created_at: "2022-06-10T18:37:03+08:00",
   vendor: "KINERA",

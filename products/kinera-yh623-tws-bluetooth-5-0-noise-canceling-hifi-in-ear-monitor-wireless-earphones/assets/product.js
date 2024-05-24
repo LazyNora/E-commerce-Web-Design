@@ -4,7 +4,7 @@ const product = {
   handle:
     "kinera-yh623-tws-bluetooth-5-0-noise-canceling-hifi-in-ear-monitor-wireless-earphones",
   description:
-    '<span style="font-size:18px;"><strong>Specifications:</strong><br>\nModel: Kinera-YH623<br>\nType: TWS in ear monitor earphone<br>\nBluetooth Version: Bluetooth 5.0+EDR/BLE<br>\nCharging Voltage: DC 5V<br>\nBattery Capacity: 50mA 400mA<br>\nCharging Time: 1.5H<br>\nCommunication Distance: 10m</span>\n<p style="text-align: left;margin:0;"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"></p>\n<span style="font-size:18px;"></span>',
+    '<span style="font-size:18px;"><strong>Specifications:</strong><br>\nModel: Kinera-YH623<br>\nType: TWS in ear monitor earphone<br>\nBluetooth Version: Bluetooth 5.0+EDR/BLE<br>\nCharging Voltage: DC 5V<br>\nBattery Capacity: 50mA 400mA<br>\nCharging Time: 1.5H<br>\nCommunication Distance: 10m</span>\n<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201103174211/641a7d086cd472b3cebb0b21b59cbc78.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201103174212/fad5baa7fbb13af07d1cfee13c30d002.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201103174212/99d2a47fe442d9679cf988375e8ad9f2.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201103174212/de23b78d2f63d9dd443731152b840b4b.jpg"></p>\n<span style="font-size:18px;"></span>',
   published_at: "2020-11-04T01:46:57+08:00",
   created_at: "2020-11-03T17:46:57+08:00",
   vendor: "KINERA",

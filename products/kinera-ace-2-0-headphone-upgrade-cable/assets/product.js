@@ -3,7 +3,7 @@ const product = {
   title: "KINERA ACE 2.0 Headphone Upgrade Cable",
   handle: "kinera-ace-2-0-headphone-upgrade-cable",
   description:
-    '<img src="./desc/5e340b3a4e87542f7490c0adda8207d_1.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/5e340b3a4e87542f7490c0adda8207d_1.jpg">',
+    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/5e340b3a4e87542f7490c0adda8207d_1.jpg?v=1708594807" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/5e340b3a4e87542f7490c0adda8207d_1.jpg?v=1708594807">',
   published_at: "2023-11-10T18:07:14+08:00",
   created_at: "2023-11-10T18:07:14+08:00",
   vendor: "KINERA",

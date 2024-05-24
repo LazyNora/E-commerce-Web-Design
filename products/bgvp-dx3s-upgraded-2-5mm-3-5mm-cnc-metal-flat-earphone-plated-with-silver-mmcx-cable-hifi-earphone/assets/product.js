@@ -4,7 +4,7 @@ const product = {
   handle:
     "bgvp-dx3s-upgraded-2-5mm-3-5mm-cnc-metal-flat-earphone-plated-with-silver-mmcx-cable-hifi-earphone",
   description:
-    '<p style="text-align: left;margin:0;"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190906182146/6d0dc24e1a479a672ae5ef9d77684cbb.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190906182146/dcc499d4d5631f7178c190bb5a5ee3e4.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190906182146/88f0f0b06051cd0412db8eaf31c860ae.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190906182146/4994f010a3d65954daeca7c97571a18f.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190906182146/a9c4523603e5d15b88272db688e5468e.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190906182146/3405475cb857639ca94ee6481fc56961.jpg"></p>\n',
   published_at: "2022-08-03T10:19:13+08:00",
   created_at: "2019-09-06T18:33:14+08:00",
   vendor: "BGVP",

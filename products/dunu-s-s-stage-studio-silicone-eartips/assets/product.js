@@ -3,7 +3,7 @@ const product = {
   title: "DUNU S&S (Stage & Studio) Silicone Eartips",
   handle: "dunu-s-s-stage-studio-silicone-eartips",
   description:
-    '<img src="./desc/5_8ca0493d-2031-4e9d-80b3-15e955217f3c.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/5_8ca0493d-2031-4e9d-80b3-15e955217f3c.jpg">',
+    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/5_8ca0493d-2031-4e9d-80b3-15e955217f3c.jpg?v=1686227295" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/5_8ca0493d-2031-4e9d-80b3-15e955217f3c.jpg?v=1686227295">',
   published_at: "2023-06-08T20:36:21+08:00",
   created_at: "2023-06-08T20:36:21+08:00",
   vendor: "DUNU",

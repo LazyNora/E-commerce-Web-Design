@@ -3,7 +3,7 @@ const product = {
   title: "TANGZU TANG SANCAI Silicone Eartips",
   handle: "tangzu-tang-sancai-silicone-eartips",
   description:
-    '<p><img src="./desc/2-1_a7641ffc-14dc-45cf-a740-9a1eda2c2c6a.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/2-1_a7641ffc-14dc-45cf-a740-9a1eda2c2c6a.jpg"></p>\n<p><img alt="" src="./desc/2-2_56c19f06-7d22-4a2b-b057-08e050565b0e.jpg"></p>\n<p> </p>\n<p> </p>',
+    '<p><img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-1_a7641ffc-14dc-45cf-a740-9a1eda2c2c6a.jpg?v=1689153239" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-1_a7641ffc-14dc-45cf-a740-9a1eda2c2c6a.jpg?v=1689153239"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-2_56c19f06-7d22-4a2b-b057-08e050565b0e.jpg?v=1689153250"></p>\n<p> </p>\n<p> </p>',
   published_at: "2023-07-12T17:43:36+08:00",
   created_at: "2023-07-12T17:22:26+08:00",
   vendor: "TANGZU",

@@ -4,7 +4,7 @@ const product = {
   handle:
     "topping-tcx1-audiophile-6n-single-crystal-copper-xlr-balanced-line-xlr-professional-audio-cable",
   description:
-    '<img src="./desc/1685510959721.png" alt="" data-mce-fragment="1" data-mce-src="./desc/1685510959721.png"><br>\n<p style="text-align: left; margin: 0;"><img src="./desc/08ebd95e0a25f536b1927a6c6f0ddf4d.jpg"><img src="./desc/7bb1cc421b0bfb7a78f96b5535b9564f.jpg"></p>\n<span style="font-size: 18px;"></span><br> <br>',
+    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/1685510959721.png?v=1685511030" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/1685510959721.png?v=1685511030"><br>\n<p style="text-align: left; margin: 0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201204164041/08ebd95e0a25f536b1927a6c6f0ddf4d.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201204164041/7bb1cc421b0bfb7a78f96b5535b9564f.jpg"></p>\n<span style="font-size: 18px;"></span><br> <br>',
   published_at: "2020-12-04T16:42:45+08:00",
   created_at: "2020-12-04T16:42:45+08:00",
   vendor: "TOPPING",

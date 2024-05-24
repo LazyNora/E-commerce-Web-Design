@@ -4,7 +4,7 @@ const product = {
   handle:
     "moondrop-acrylic-earphone-stand-iem-accessories-3rd-generation-holder-1",
   description:
-    '<p style="text-align: center;margin:0;"><img src="./desc/049ee87aac580807f20686a1143635c3.jpg"><img src="./desc/3098fb8293aa774a4ee5c27e31d30460.jpg"><img src="./desc/a5b9dde9d12562316ac507d953a2fb57.jpg"></p>\n',
+    '<p style="text-align: center;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211103162113/049ee87aac580807f20686a1143635c3.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211103162115/3098fb8293aa774a4ee5c27e31d30460.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20211103162117/a5b9dde9d12562316ac507d953a2fb57.jpg"></p>\n',
   published_at: "2021-11-03T16:22:45+08:00",
   created_at: "2021-11-03T16:22:45+08:00",
   vendor: "MOONDROP",

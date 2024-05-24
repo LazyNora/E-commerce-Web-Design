@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP DARK SABER 2DD+8BA In-Ear Headphone",
   handle: "moondrop-darksaber-2dd-8ba-in-ear-headphone",
   description:
-    '<h2 style="text-align: center;"><img src="./desc/DARKSABER.jpg" alt="" data-mce-fragment="1" style="display: block; margin-left: auto; margin-right: auto;" data-mce-src="./desc/DARKSABER.jpg" data-mce-style="display: block; margin-left: auto; margin-right: auto;"></h2>',
+    '<h2 style="text-align: center;"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DARKSABER.jpg?v=1695116308" alt="" data-mce-fragment="1" style="display: block; margin-left: auto; margin-right: auto;" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DARKSABER.jpg?v=1695116308" data-mce-style="display: block; margin-left: auto; margin-right: auto;"></h2>',
   published_at: "2023-09-19T17:39:42+08:00",
   created_at: "2023-09-19T17:37:57+08:00",
   vendor: "MOONDROP",

@@ -3,7 +3,7 @@ const product = {
   title: "TANGZU WAN ER 10mm Dynamic Driver In-ear Headphone",
   handle: "tangzu-wan-er-10mm-dynamic-driver-in-ear-headphone",
   description:
-    '<img src="./desc/809582dd367e56900e28f1ac1c034a8.png" alt="" data-mce-fragment="1" data-mce-src="./desc/809582dd367e56900e28f1ac1c034a8.png">',
+    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/809582dd367e56900e28f1ac1c034a8.png?v=1689044571" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/809582dd367e56900e28f1ac1c034a8.png?v=1689044571">',
   published_at: "2023-07-11T11:10:18+08:00",
   created_at: "2023-07-11T11:10:18+08:00",
   vendor: "TANGZU",

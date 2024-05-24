@@ -3,7 +3,7 @@ const product = {
   title: "DD TC28i Lightning to Type-C OTG Adapter",
   handle: "dd-tc28i-pro-lightning-to-type-c-otg-adapter",
   description:
-    '<img src="./desc/001_46bb5948-c995-4be0-9edd-345812ce8011.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/001_46bb5948-c995-4be0-9edd-345812ce8011.jpg">',
+    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/001_46bb5948-c995-4be0-9edd-345812ce8011.jpg?v=1686309811" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/001_46bb5948-c995-4be0-9edd-345812ce8011.jpg?v=1686309811">',
   published_at: "2023-06-09T19:23:51+08:00",
   created_at: "2023-06-09T19:23:51+08:00",
   vendor: "DD",

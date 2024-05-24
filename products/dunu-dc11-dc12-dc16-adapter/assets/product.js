@@ -3,7 +3,7 @@ const product = {
   title: "DUNU DC11 DC12 DC16 Adapter",
   handle: "dunu-dc11-dc12-dc16-adapter",
   description:
-    '<p><img alt="" src="./desc/DM_20230609185303_002.jpg"></p>\n<p><img alt="" src="./desc/DM_20230609185303_003.jpg"></p>\n<p><img alt="" src="./desc/DM_20230609185303_004.jpg"></p>\n<p><img alt="" src="./desc/DM_20230609185303_005.jpg"></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>',
+    '<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DM_20230609185303_002.jpg?v=1686308038"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DM_20230609185303_003.jpg?v=1686308044"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DM_20230609185303_004.jpg?v=1686308049"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/DM_20230609185303_005.jpg?v=1686308128"></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>\n<p><br></p>',
   published_at: "2023-06-09T19:06:35+08:00",
   created_at: "2023-06-09T19:06:35+08:00",
   vendor: "DUNU",

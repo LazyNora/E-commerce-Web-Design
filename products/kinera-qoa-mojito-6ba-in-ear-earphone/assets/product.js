@@ -3,7 +3,7 @@ const product = {
   title: "KINERA QOA Mojito 2 6BA In-ear Headphone",
   handle: "kinera-qoa-mojito-6ba-in-ear-earphone",
   description:
-    '<img src="./desc/004_11499d4f-1215-455b-8f86-95f3c65e8848.png" alt="" data-mce-fragment="1" data-mce-src="./desc/004_11499d4f-1215-455b-8f86-95f3c65e8848.png">',
+    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004_11499d4f-1215-455b-8f86-95f3c65e8848.png?v=1686226031" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004_11499d4f-1215-455b-8f86-95f3c65e8848.png?v=1686226031">',
   published_at: "2023-06-08T20:11:09+08:00",
   created_at: "2023-06-08T20:11:09+08:00",
   vendor: "KINERA",

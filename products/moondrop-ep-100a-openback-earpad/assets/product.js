@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP EP 100A Openback Earpad",
   handle: "moondrop-ep-100a-openback-earpad",
   description:
-    '<img src="./desc/17107337258813.png" alt="" data-mce-fragment="1" data-mce-src="./desc/17107337258813.png">',
+    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/17107337258813.png?v=1710921083" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/17107337258813.png?v=1710921083">',
   published_at: "2024-03-15T17:51:47+08:00",
   created_at: "2024-03-15T17:51:47+08:00",
   vendor: "MOONDROP",

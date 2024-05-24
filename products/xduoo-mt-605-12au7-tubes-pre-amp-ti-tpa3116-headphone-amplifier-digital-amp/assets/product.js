@@ -4,7 +4,7 @@ const product = {
   handle:
     "xduoo-mt-605-12au7-tubes-pre-amp-ti-tpa3116-headphone-amplifier-digital-amp",
   description:
-    '<div style="text-align: center;"> <img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined"><img align="center" referrerpolicy="no-referrer" src="undefined">\n</div>\n',
+    '<div style="text-align: center;"> <img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220907092342/e016e6f0b2ce697002df95ffaacd96f2.jpg"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220907092342/96d97671268555e6bb3f60f2e76012bf.jpg"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220907092342/871e96943a4d7ceeeac042f3725caa5c.jpg"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220907092342/a2103d5333cd85c104901e341007d51f.jpg"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220907092342/873a95c3e2756267e1a125d1d65a90ff.jpg"><img align="center" referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220907092342/b2ea0dda0f10fa773ad8a48ef3ffcd90.jpg">\n</div>\n',
   published_at: "2022-09-07T09:59:15+08:00",
   created_at: "2022-09-07T09:59:15+08:00",
   vendor: "XDUOO",

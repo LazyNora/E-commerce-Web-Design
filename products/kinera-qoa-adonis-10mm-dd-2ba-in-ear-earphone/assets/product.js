@@ -3,7 +3,7 @@ const product = {
   title: "KINERA QOA Adonis 10mm DD+2BA In-ear Headphone",
   handle: "kinera-qoa-adonis-10mm-dd-2ba-in-ear-earphone",
   description:
-    '<img alt="" src="./desc/004_b8fe7454-247a-4eb4-9738-19c5cd861199.png">',
+    '<img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004_b8fe7454-247a-4eb4-9738-19c5cd861199.png?v=1686227073">',
   published_at: "2023-06-08T20:22:10+08:00",
   created_at: "2023-06-08T20:22:10+08:00",
   vendor: "KINERA",

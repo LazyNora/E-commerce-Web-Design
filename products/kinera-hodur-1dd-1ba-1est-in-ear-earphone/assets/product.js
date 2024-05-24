@@ -2,7 +2,8 @@ const product = {
   id: 8034034909427,
   title: "KINERA Hodur 1DD+1BA+1EST In-ear Earphone",
   handle: "kinera-hodur-1dd-1ba-1est-in-ear-earphone",
-  description: '<img alt="" src="./desc/DM_20230606135900_004.jpg">',
+  description:
+    '<img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20230606135900_004.jpg?v=1686031867">',
   published_at: "2023-06-06T14:27:48+08:00",
   created_at: "2023-06-06T14:27:48+08:00",
   vendor: "KINERA",

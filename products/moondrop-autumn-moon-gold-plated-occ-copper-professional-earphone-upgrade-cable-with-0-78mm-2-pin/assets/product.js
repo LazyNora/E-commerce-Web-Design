@@ -4,7 +4,7 @@ const product = {
   handle:
     "moondrop-autumn-moon-gold-plated-occ-copper-professional-earphone-upgrade-cable-with-0-78mm-2-pin",
   description:
-    '<p><img src="./desc/58ef08b65b8a58d63bdee55c92b2127a.jpg"><br><img src="./desc/bac714bdcc3f2e4ece251854a340e91c.jpg"><img src="./desc/8aee13b6566c06d2c3411b83b5bb67c6.jpg"><img src="./desc/0c9f8d9953c603bd6fdb04e855f030e7.jpg"><img src="./desc/1c189e62d48657abbf00de307a9d5c6d.jpg"><img src="./desc/63376af1be03fde86707ce904778811a.jpg"></p>\n<p><br></p>',
+    '<p><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201026144833/58ef08b65b8a58d63bdee55c92b2127a.jpg"><br><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201026164227/bac714bdcc3f2e4ece251854a340e91c.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201026145106/8aee13b6566c06d2c3411b83b5bb67c6.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201026144833/0c9f8d9953c603bd6fdb04e855f030e7.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201026144834/1c189e62d48657abbf00de307a9d5c6d.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201026144834/63376af1be03fde86707ce904778811a.jpg"></p>\n<p><br></p>',
   published_at: "2020-10-27T16:43:19+08:00",
   created_at: "2020-10-26T15:00:51+08:00",
   vendor: "MOONDROP",

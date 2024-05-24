@@ -3,7 +3,7 @@ const product = {
   title: "KINERA Celest Tiger Soul Headphone Upgrade Cable",
   handle: "kinera-celest-tiger-soul-headphone-upgrade-cable",
   description:
-    '<div><img src="./desc/A57e4c6fa0b2d42e1bcf34b93f3e6aeb2T_9d00a094-a043-4316-9eb7-34c666547ace.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="./desc/A57e4c6fa0b2d42e1bcf34b93f3e6aeb2T_9d00a094-a043-4316-9eb7-34c666547ace.jpg"></div>',
+    '<div><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/A57e4c6fa0b2d42e1bcf34b93f3e6aeb2T_9d00a094-a043-4316-9eb7-34c666547ace.jpg?v=1699605099" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/A57e4c6fa0b2d42e1bcf34b93f3e6aeb2T_9d00a094-a043-4316-9eb7-34c666547ace.jpg?v=1699605099"></div>',
   published_at: "2023-11-10T16:36:48+08:00",
   created_at: "2023-11-10T16:36:48+08:00",
   vendor: "KINERA",

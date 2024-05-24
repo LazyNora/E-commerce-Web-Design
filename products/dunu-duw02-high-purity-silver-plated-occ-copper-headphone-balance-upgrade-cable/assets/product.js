@@ -4,7 +4,7 @@ const product = {
   handle:
     "dunu-duw02-high-purity-silver-plated-occ-copper-headphone-balance-upgrade-cable",
   description:
-    '<img alt="" src="./desc/DM_20240301160335_001.jpg"><img src="./desc/DM_20240301160335_002.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/DM_20240301160335_002.jpg"><img src="./desc/DM_20240301160335_003.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/DM_20240301160335_003.jpg"><img src="./desc/DM_20240301160335_004.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/DM_20240301160335_004.jpg">',
+    '<img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240301160335_001.jpg?v=1709280282"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240301160335_002.jpg?v=1709280505" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240301160335_002.jpg?v=1709280505"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240301160335_003.jpg?v=1709280666" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240301160335_003.jpg?v=1709280666"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240301160335_004.jpg?v=1709280675" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240301160335_004.jpg?v=1709280675">',
   published_at: "2022-11-02T17:26:11+08:00",
   created_at: "2020-12-15T16:23:42+08:00",
   vendor: "DUNU",

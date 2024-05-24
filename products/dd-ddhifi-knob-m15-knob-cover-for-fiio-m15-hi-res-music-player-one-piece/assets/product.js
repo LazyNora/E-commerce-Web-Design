@@ -4,7 +4,7 @@ const product = {
   handle:
     "dd-ddhifi-knob-m15-knob-cover-for-fiio-m15-hi-res-music-player-one-piece",
   description:
-    '<span style="color:#000000;"><span style="font-size:16px;"></span><span style="font-size:20px;"><strong>Specifications:</strong></span><span style="font-size:16px;"><br>\n<br>\nDiameter: 16.7mm<br>\nHigh:4.5mm<br>\nMaterial: 316 stainless steel<br>\n<br>\nSuitable for: FiiO M15</span></span><br>\n \n<p style="text-align: left;margin:0;"><img src="./desc/1e05418909ef78932bed504ddda96f8e.jpg"><img src="./desc/7e4ea3b7f4555a166dc2b124a96f3ac4.jpg"></p>\n<span style="color:#000000;"><span style="font-size:16px;"></span></span>',
+    '<span style="color:#000000;"><span style="font-size:16px;"></span><span style="font-size:20px;"><strong>Specifications:</strong></span><span style="font-size:16px;"><br>\n<br>\nDiameter: 16.7mm<br>\nHigh:4.5mm<br>\nMaterial: 316 stainless steel<br>\n<br>\nSuitable for: FiiO M15</span></span><br>\n \n<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200509162339/1e05418909ef78932bed504ddda96f8e.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200509162346/7e4ea3b7f4555a166dc2b124a96f3ac4.jpg"></p>\n<span style="color:#000000;"><span style="font-size:16px;"></span></span>',
   published_at: "2020-05-09T16:30:48+08:00",
   created_at: "2020-05-09T16:30:48+08:00",
   vendor: "DD",

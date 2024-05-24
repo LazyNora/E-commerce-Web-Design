@@ -4,7 +4,7 @@ const product = {
   handle:
     "7hz-71-mobile-dac-dongle-ak4377-chipset-type-c-decoder-amplifier-supports-dsd-native-128-and-pcm-32bit-384khz",
   description:
-    '<div style="text-align: center;"> <img align="center" src="undefined"><img align="center" src="undefined"><img align="center" src="undefined"><img align="center" src="undefined"><img align="center" src="undefined">\n</div>\n',
+    '<div style="text-align: center;"> <img align="center" src="./desc/3362edd5843b8497b094e401a2289076.jpg"><img align="center" src="./desc/4314f3e00195972d26d3f47625065153.jpg"><img align="center" src="./desc/00fe633b1532ba3e366e6467f2b188fd.jpg"><img align="center" src="./desc/559915695cc922588d45db1763295d35.jpg"><img align="center" src="./desc/cfec98b444a82642dc03e7c767e24e93.jpg">\n</div>\n',
   published_at: "2022-09-07T10:48:20+08:00",
   created_at: "2022-09-07T10:48:20+08:00",
   vendor: "7HZ",

@@ -4,7 +4,7 @@ const product = {
   handle:
     "fiio-lc-2-5bs-3-5bs-short-high-purity-copper-plated-silver-mmcx-connector-headphone-cable",
   description:
-    '<p style="text-align: left;margin:0;"><img src="./desc/1914ead44302c61f8158b00f33d4688f.jpg"><img src="./desc/96856705333d7bf67d23ac4b05a34419.jpg"><img src="./desc/8e33f8e84f1487d79a732e3f010815fc.jpg"><img src="./desc/37516b2bada858c3da15372fc76fab2e.jpg"><img src="./desc/0608b235dfedbe8347e070324a2f71de.jpg"><img src="./desc/64573a87f4fb6315d93782a39912ee80.jpg"><img src="./desc/329cd07e50ad1fdfe0636798097e3817.jpg"><img src="./desc/ef17a2600425a046bf3453385f4faca7.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153525/1914ead44302c61f8158b00f33d4688f.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153525/96856705333d7bf67d23ac4b05a34419.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153525/8e33f8e84f1487d79a732e3f010815fc.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153525/37516b2bada858c3da15372fc76fab2e.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153525/0608b235dfedbe8347e070324a2f71de.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153525/64573a87f4fb6315d93782a39912ee80.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153525/329cd07e50ad1fdfe0636798097e3817.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20201222153525/ef17a2600425a046bf3453385f4faca7.jpg"></p>\n',
   published_at: "2020-12-22T15:36:44+08:00",
   created_at: "2020-12-22T15:36:44+08:00",
   vendor: "FIIO",

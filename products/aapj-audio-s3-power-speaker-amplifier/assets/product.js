@@ -3,7 +3,7 @@ const product = {
   title: "APPJ AUDIO S3 Speaker Amplifier",
   handle: "aapj-audio-s3-power-speaker-amplifier",
   description:
-    '<img src="./desc/f2a52d09e6da0e7481a528d379f1da11_6d964aa6-db37-450f-b34e-1cde4d6cc671.png" alt="" data-mce-fragment="1" data-mce-src="./desc/f2a52d09e6da0e7481a528d379f1da11_6d964aa6-db37-450f-b34e-1cde4d6cc671.png">',
+    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/f2a52d09e6da0e7481a528d379f1da11_6d964aa6-db37-450f-b34e-1cde4d6cc671.png?v=1688542477" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/f2a52d09e6da0e7481a528d379f1da11_6d964aa6-db37-450f-b34e-1cde4d6cc671.png?v=1688542477">',
   published_at: "2023-07-05T15:22:20+08:00",
   created_at: "2023-07-05T14:24:54+08:00",
   vendor: "AAPJ AUDIO",

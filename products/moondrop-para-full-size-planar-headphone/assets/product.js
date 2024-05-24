@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP PARA Full-Size Planar Headphone",
   handle: "moondrop-para-full-size-planar-headphone",
   description:
-    '<img src="./desc/c0c3179f420cdd6a4a5922aa443b1c21.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/c0c3179f420cdd6a4a5922aa443b1c21.jpg">',
+    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/c0c3179f420cdd6a4a5922aa443b1c21.jpg?v=1711334715" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/c0c3179f420cdd6a4a5922aa443b1c21.jpg?v=1711334715">',
   published_at: "2023-10-13T15:22:57+08:00",
   created_at: "2023-09-13T15:01:33+08:00",
   vendor: "MOONDROP",

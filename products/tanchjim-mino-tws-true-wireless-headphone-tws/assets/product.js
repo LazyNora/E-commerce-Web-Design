@@ -3,7 +3,7 @@ const product = {
   title: "TANCHJIM MINO TWS True Wireless Headphone (TWS)",
   handle: "tanchjim-mino-tws-true-wireless-headphone-tws",
   description:
-    '<p><img alt="" src="./desc/2-1_c6f24515-7a17-4551-9c59-df6d60d1904f.jpg"></p>\n<p><img alt="" src="./desc/2-2_ca179e7f-f1c4-4a80-856e-5fad7f0a4806.jpg"></p>\n<p><img alt="" src="./desc/2-3_318ea777-1fcd-4048-8966-5a4d3047fa01.jpg"></p>\n<p><br></p>',
+    '<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-1_c6f24515-7a17-4551-9c59-df6d60d1904f.jpg?v=1699668717"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-2_ca179e7f-f1c4-4a80-856e-5fad7f0a4806.jpg?v=1699668723"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-3_318ea777-1fcd-4048-8966-5a4d3047fa01.jpg?v=1699668729"></p>\n<p><br></p>',
   published_at: "2023-11-11T10:09:21+08:00",
   created_at: "2023-11-11T09:51:12+08:00",
   vendor: "TANCHJIM",

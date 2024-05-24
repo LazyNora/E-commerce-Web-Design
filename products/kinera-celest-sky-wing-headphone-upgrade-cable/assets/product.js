@@ -3,7 +3,7 @@ const product = {
   title: "KINERA Celest Sky Wing Headphone Upgrade Cable",
   handle: "kinera-celest-sky-wing-headphone-upgrade-cable",
   description:
-    '<img alt="" src="./desc/Ae44fe603504845fea9290da6b43579bba.jpg">',
+    '<img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/Ae44fe603504845fea9290da6b43579bba.jpg?v=1699604961">',
   published_at: "2023-11-10T16:21:07+08:00",
   created_at: "2023-11-10T16:21:07+08:00",
   vendor: "KINERA",

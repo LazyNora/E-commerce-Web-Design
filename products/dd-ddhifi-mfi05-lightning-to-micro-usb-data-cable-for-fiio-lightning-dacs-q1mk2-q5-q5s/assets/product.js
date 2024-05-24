@@ -4,7 +4,7 @@ const product = {
   handle:
     "dd-ddhifi-mfi05-lightning-to-micro-usb-data-cable-for-fiio-lightning-dacs-q1mk2-q5-q5s",
   description:
-    '<span style="color:#000000;"><span style="font-size:16px;"></span><span style="font-size:20px;"><strong>Notice:</strong></span><span style="font-size:16px;"><br>\nPlease kindly note that the MFi05 is a dedicated data cable for FiiO Lightning DACs, such as Q1 Mark II, Q5 and Q5s, but not work for other brands.</span></span><br>\n \n<p style="text-align: left;margin:0;"><img src="./desc/d9662fd44f1416134e99f960966f0f59.jpg"><img src="./desc/61bb330b9ea58e124d6441290236518f.jpg"><img src="./desc/87e8838b2f7100eb0fb417ec18d16825.jpg"></p>\n<span style="color:#000000;"><span style="font-size:16px;"></span></span>',
+    '<span style="color:#000000;"><span style="font-size:16px;"></span><span style="font-size:20px;"><strong>Notice:</strong></span><span style="font-size:16px;"><br>\nPlease kindly note that the MFi05 is a dedicated data cable for FiiO Lightning DACs, such as Q1 Mark II, Q5 and Q5s, but not work for other brands.</span></span><br>\n \n<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200509163319/d9662fd44f1416134e99f960966f0f59.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200509163313/61bb330b9ea58e124d6441290236518f.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200509163324/87e8838b2f7100eb0fb417ec18d16825.jpg"></p>\n<span style="color:#000000;"><span style="font-size:16px;"></span></span>',
   published_at: "2020-05-09T16:36:46+08:00",
   created_at: "2020-05-09T16:36:46+08:00",
   vendor: "DD",

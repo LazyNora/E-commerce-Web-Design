@@ -3,7 +3,7 @@ const product = {
   title: "SIMGOT MT1 Dynamic In-Ear Headphone",
   handle: "simgot-mt1-dynamic-in-ear-headphone",
   description:
-    '<p><img src="./desc/f096ae68-0bc4-45d1-ab20-bd5b0edb8853.JPEG"><img src="./desc/3e92c427-4f8a-495b-904c-06c3fa5b2257.JPEG"><img src="./desc/ef949cf2-836f-42f3-9a92-883ea9c0dd48.JPEG"><img src="./desc/3de0839e-d276-42b4-8926-556218da0b80.JPEG"><img src="./desc/15c0a371-f7fc-4f59-a447-3a442aa3bf75.JPEG"><img src="./desc/c4555f5c-57fd-4f43-affb-5090b7813815.JPEG"><img src="./desc/d013af05-cbc0-4a89-8495-39d0f61dacaa.JPEG"><img src="./desc/dd3099a2-064b-43ef-a6b3-a40900e44bce.JPEG"></p>',
+    '<p><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/f096ae68-0bc4-45d1-ab20-bd5b0edb8853.JPEG"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/3e92c427-4f8a-495b-904c-06c3fa5b2257.JPEG"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/ef949cf2-836f-42f3-9a92-883ea9c0dd48.JPEG"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/3de0839e-d276-42b4-8926-556218da0b80.JPEG"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/15c0a371-f7fc-4f59-a447-3a442aa3bf75.JPEG"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/c4555f5c-57fd-4f43-affb-5090b7813815.JPEG"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/d013af05-cbc0-4a89-8495-39d0f61dacaa.JPEG"><img src="https://jst-yikan-prod.oss-cn-shenzhen.aliyuncs.com/YiKanForS3/dd3099a2-064b-43ef-a6b3-a40900e44bce.JPEG"></p>',
   published_at: "2023-06-09T17:39:35+08:00",
   created_at: "2023-06-09T17:39:35+08:00",
   vendor: "SIMGOT",

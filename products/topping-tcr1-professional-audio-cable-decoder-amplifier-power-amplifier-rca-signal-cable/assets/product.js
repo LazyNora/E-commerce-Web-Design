@@ -4,7 +4,7 @@ const product = {
   handle:
     "topping-tcr1-professional-audio-cable-decoder-amplifier-power-amplifier-rca-signal-cable",
   description:
-    '<img src="undefined" alt="" data-mce-fragment="1" data-mce-src="undefined" data-mce-selected="1"><br>  \n<p style="text-align: left; margin: 0;"><img src="undefined"><img src="./desc/1685510959721.png"></p>\n<span style="color: #000000;"><span style="font-size: 16px;"></span></span>',
+    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/1685510959721.png?v=1685511030" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/1685510959721.png?v=1685511030" data-mce-selected="1"><br>  \n<p style="text-align: left; margin: 0;"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20200423142632/e1ca555268f2435b823ace1042306f7b.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20200423142632/21c53acdf4ba89816abcfbd74cbb85d9.jpg"></p>\n<span style="color: #000000;"><span style="font-size: 16px;"></span></span>',
   published_at: "2022-08-03T10:18:54+08:00",
   created_at: "2020-04-23T14:39:09+08:00",
   vendor: "TOPPING",

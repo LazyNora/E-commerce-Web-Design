@@ -4,7 +4,7 @@ const product = {
   handle:
     "moondrop-shiroyuki-white-snow-hifi-dynamic-earbuds-line-type-earphones",
   description:
-    '<span style="color:#000000;"><span style="font-size:16px;"><strong>Parameter：</strong><br>\nType: Earbud<br>\nVocalism Principle:Dynamic<br>\nSensitivity:104dB/mW<br>\nFrequency Response Range:20-20000Hz<br>\nResistance:32Ω@1kHZ<br>\nLine Length:1.2M<br>\nPlug Type: Line Type<br>\nCavity diameter:17mm<br>\n<br>\n<img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined"></span></span>',
+    '<span style="color:#000000;"><span style="font-size:16px;"><strong>Parameter：</strong><br>\nType: Earbud<br>\nVocalism Principle:Dynamic<br>\nSensitivity:104dB/mW<br>\nFrequency Response Range:20-20000Hz<br>\nResistance:32Ω@1kHZ<br>\nLine Length:1.2M<br>\nPlug Type: Line Type<br>\nCavity diameter:17mm<br>\n<br>\n<img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190515140812/fdc792946e4be765690e17c6860b677a.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190515140812/fcf6efa00b90d0703fb08eb9542fc859.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190515140812/e9a657b3d2fb8fd9a4eeea09773ca70c.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190515140812/e767ad9ab16b383da2a049c3214f23e7.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190515140812/6a59b2837a2c8ccfa580e760f13af6eb.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190515140813/e532385c017b19e2fd2115e236bad92e.jpg"></span></span>',
   published_at: "2019-08-11T01:44:02+08:00",
   created_at: "2019-08-10T16:18:41+08:00",
   vendor: "MOONDROP",

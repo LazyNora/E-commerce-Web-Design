@@ -3,7 +3,7 @@ const product = {
   title: "TOPPING RC22 Remote Control",
   handle: "topping-rc22-remote-control",
   description:
-    '<span style="font-size:22px;"><strong>SPEC:<br>\nTOPPING RC22 Remote Control For TOPPING DX3<br>\nPRO+/EX5/D90SE/D70S/E30/E50/D50S/D30 PRO</strong></span>\n<div style="text-align: center;">\n<br>\n<img referrerpolicy="no-referrer" src="./desc/4822a6866d1d5ee85683343683836093.png"><img referrerpolicy="no-referrer" src="./desc/d68ab4172459a4e142f3fdf744741940.png"><img referrerpolicy="no-referrer" src="./desc/937ada307297641aea9754df39f710fd.png"><img referrerpolicy="no-referrer" src="./desc/b9eafa6f8caa86893afc47e7ad821b5f.png">\n</div>\n',
+    '<span style="font-size:22px;"><strong>SPEC:<br>\nTOPPING RC22 Remote Control For TOPPING DX3<br>\nPRO+/EX5/D90SE/D70S/E30/E50/D50S/D30 PRO</strong></span>\n<div style="text-align: center;">\n<br>\n<img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221027095821/4822a6866d1d5ee85683343683836093.png"><img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221027095821/d68ab4172459a4e142f3fdf744741940.png"><img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221027095821/937ada307297641aea9754df39f710fd.png"><img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221027095821/b9eafa6f8caa86893afc47e7ad821b5f.png">\n</div>\n',
   published_at: "2022-08-03T10:18:49+08:00",
   created_at: "2020-05-16T17:24:04+08:00",
   vendor: "TOPPING",

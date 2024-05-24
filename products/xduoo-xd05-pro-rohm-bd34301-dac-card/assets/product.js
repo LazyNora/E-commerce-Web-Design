@@ -3,7 +3,7 @@ const product = {
   title: "XDUOO XD05 Pro ROHM BD34301 DAC Card",
   handle: "xduoo-xd05-pro-rohm-bd34301-dac-card",
   description:
-    '<p><img src="./desc/en_01.png" alt="" data-mce-fragment="1" data-mce-src="./desc/en_01.png"></p>\n<p><img alt="" src="./desc/en_02.png"></p>\n<p><img alt="" src="./desc/en_03.png"></p>\n<p><img alt="" src="./desc/en_04.png"></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>',
+    '<p><img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/en_01.png?v=1694158998" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/en_01.png?v=1694158998"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/en_02.png?v=1694159083"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/en_03.png?v=1694159089"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/en_04.png?v=1694159095"></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>',
   published_at: "2023-09-08T15:56:37+08:00",
   created_at: "2023-09-08T15:56:37+08:00",
   vendor: "XDUOO",

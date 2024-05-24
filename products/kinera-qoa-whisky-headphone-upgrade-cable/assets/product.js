@@ -3,7 +3,7 @@ const product = {
   title: "KINERA QOA Whisky Headphone Upgrade Cable",
   handle: "kinera-qoa-whisky-headphone-upgrade-cable",
   description:
-    '<img src="./desc/WhiskyEN.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/WhiskyEN.jpg">',
+    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/WhiskyEN.jpg?v=1693808827" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/WhiskyEN.jpg?v=1693808827">',
   published_at: "2023-09-04T14:36:07+08:00",
   created_at: "2023-09-04T14:36:07+08:00",
   vendor: "KINERA",

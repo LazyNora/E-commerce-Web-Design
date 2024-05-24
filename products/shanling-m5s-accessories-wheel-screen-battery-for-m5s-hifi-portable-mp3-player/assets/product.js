@@ -4,7 +4,7 @@ const product = {
   handle:
     "shanling-m5s-accessories-wheel-screen-battery-for-m5s-hifi-portable-mp3-player",
   description:
-    '<img src="undefined"><img src="undefined"><img src="undefined"><img src="undefined">',
+    '<img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818095728/c6a0b828329cdaa9ad215c1e0c0ff62b.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818095728/5848871ce4f149b5aa7b2c03954a01cb.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818095728/13c17b48e979bc2bc89b176cc9641f90.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190818095728/46879001970f23159d960a9f0e476bf3.jpg">',
   published_at: "2022-08-03T10:19:38+08:00",
   created_at: "2019-08-18T10:02:35+08:00",
   vendor: "SHANLING",

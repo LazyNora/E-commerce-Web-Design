@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP CHU 2 DSP Type-C In-ear Headphone",
   handle: "moondrop-chu-2-dsp-type-c-in-ear-headphone",
   description:
-    '<p><img alt="" src="./desc/CHU2DSP_01.jpg"></p>\n<p><img alt="" src="./desc/CHU2DSP_02.jpg"></p>\n<p><img alt="" src="./desc/CHU2DSP_03.jpg"></p>\n<p><img alt="" src="./desc/CHU2DSP_04.jpg"></p>\n<p><img alt="" src="./desc/CHU2DSP_05.jpg"></p>\n<p><img alt="" src="./desc/CHU2DSP_06.jpg"></p>\n<p><img alt="" src="./desc/CHU2DSP_07.jpg"></p>\n<p><br></p>',
+    '<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CHU2DSP_01.jpg?v=1704527498"></p>\n<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CHU2DSP_02.jpg?v=1704527516"></p>\n<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CHU2DSP_03.jpg?v=1704527528"></p>\n<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CHU2DSP_04.jpg?v=1704527536"></p>\n<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CHU2DSP_05.jpg?v=1704527549"></p>\n<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CHU2DSP_06.jpg?v=1704527567"></p>\n<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CHU2DSP_07.jpg?v=1704527576"></p>\n<p><br></p>',
   published_at: "2024-01-06T17:00:01+08:00",
   created_at: "2024-01-05T15:32:41+08:00",
   vendor: "MOONDROP",

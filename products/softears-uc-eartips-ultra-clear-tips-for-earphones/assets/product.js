@@ -3,7 +3,7 @@ const product = {
   title: "SOFTEARS UC Silicone Eartips",
   handle: "softears-uc-eartips-ultra-clear-tips-for-earphones",
   description:
-    '<img alt="" src="./desc/DM_20240228160845_003.webp"><img src="./desc/DM_20240228160845_004.webp" alt="" data-mce-fragment="1" data-mce-src="./desc/DM_20240228160845_004.webp"><img src="./desc/DM_20240228160845_005.webp" alt="" data-mce-fragment="1" data-mce-src="./desc/DM_20240228160845_005.webp">',
+    '<img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240228160845_003.webp?v=1709108048"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240228160845_004.webp?v=1709108054" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240228160845_004.webp?v=1709108054"><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240228160845_005.webp?v=1709108059" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DM_20240228160845_005.webp?v=1709108059">',
   published_at: "2022-02-28T11:49:55+08:00",
   created_at: "2022-02-28T11:49:55+08:00",
   vendor: "SOFTEARS",
