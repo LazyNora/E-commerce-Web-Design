@@ -781,7 +781,7 @@ button.btn.btn-plain:hover {
 }
 .select-items::-webkit-scrollbar,
 .custom_scroll::-webkit-scrollbar {
-	width: 3px;
+	width: 5px;
 }
 .select-items::-webkit-scrollbar-thumb,
 .custom_scroll::-webkit-scrollbar-thumb {

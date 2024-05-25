@@ -367,6 +367,19 @@ select {
 
 .searchResults__content::-webkit-scrollbar {
 	display: none;
+	width: 3px;
+}
+
+.searchResults__content:hover::-webkit-scrollbar {
+	display: block;
+}
+
+.searchResults__content:hover::-webkit-scrollbar-thumb {
+	background: #999;
+}
+
+.searchResults__content::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 
 .searchResults__content .searchResults__item {
