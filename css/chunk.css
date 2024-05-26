@@ -2190,3 +2190,7 @@ html.prevent-scroll body {
 .pqv .product-options + .product-form__actions {
 	margin-top: 25px;
 }
+
+.pqv .product-options__option:not(:last-child) {
+	margin-bottom: 20px;
+}

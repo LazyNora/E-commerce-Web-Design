@@ -171,7 +171,6 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
             </div>
           </div>
           <div class="pcard__action hidden lg:block">
-          <div class="pcard__action hidden lg:block">
             <button class="btn-quickview">
               <div class="tooltip-item btn-icon block tooltip-top tooltip-style-1">
                 <span class="tooltip-icon block">
@@ -406,7 +405,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                           </button>
                         </div>
                       </div>
-                      <button name="add" class="btn-atc add-to-cart btn flex-grow shrink relative"><span>Add to cart</span></button>
+                      <button name="add" class="btn-quickatc add-to-cart btn flex-grow shrink relative"><span>Add to cart</span></button>
                     </div>
                   </div>
                 </div>
@@ -462,6 +461,223 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 			});
 
 			let currentVariant = item.variants[0];
+			var productData = item;
+
+			var options = [];
+			const variantPicker = modal.querySelector(".variant-picker");
+
+			// Hàm kiểm tra dữ liệu sản phẩm
+			function _validateProductStructure(product) {
+				if (typeof product != "object") throw new TypeError(product + " is not an object.");
+				if (Object.keys(product).length === 0 && product.constructor === Object)
+					throw new Error(product + " is empty.");
+			}
+
+			// Hàm kiểm tra dữ liệu options
+			function _validateOptionsArray(options) {
+				if (Array.isArray(options) && typeof options[0] == "object")
+					throw new Error(options + "is not a valid array of options.");
+			}
+
+			// Hàm xử lý sự kiện khi thay đổi variant
+			const onVariantChange = (e) => {
+				getSelectedOptions();
+				getSelectedVariant();
+				updateButton(true, "", false);
+				if (currentVariant) {
+					updateMedia();
+					document.querySelector(".currency-selector").dispatchEvent(new Event("change"));
+					updateButton(!currentVariant.available, "Sold Out");
+				}
+			};
+			variantPicker.addEventListener("change", onVariantChange);
+			// Hàm lấy các options đã chọn
+			const getSelectedOptions = () => {
+				const pickerFields = Array.from(document.querySelectorAll("[data-picker-field]"));
+				options = pickerFields.map((field) => {
+					return field.querySelector("select").value;
+				});
+			};
+
+			// Hàm lấy variant đã chọn
+			const getSelectedVariant = () => {
+				let variant = getVariantFromOptionArray(productData, options);
+				let optionsClone = [...options];
+				if (!variant) {
+					var _variant;
+					optionsClone.pop();
+					variant = getVariantFromOptionArray(productData, optionsClone);
+					variant ||
+						(optionsClone.pop() &&
+							(variant = getVariantFromOptionArray(this.productData, optionsClone)));
+					options = [
+						...((_variant = variant) === null || _variant === void 0
+							? void 0
+							: _variant.options),
+					];
+					updateSelectedOptions();
+				}
+				currentVariant = variant;
+			};
+
+			// Hàm cập nhật options đã chọn
+			const updateSelectedOptions = () => {
+				const pickerFields = Array.from(document.querySelectorAll("[data-picker-field]"));
+				pickerFields.forEach((field, index) => {
+					if (field.dataset.selectedValue !== options[index]) {
+						const selectedOption = field.querySelector(
+							`input[value="${options[index]}"]`
+						);
+						selectedOption &&
+							((selectedOption.checked = !0),
+							field.dispatchEvent(new Event("change", { bubbles: !0 })));
+					}
+				});
+			};
+
+			// Hàm cập nhật button
+			const updateButton = (...args) => {
+				let disable = args.length > 0 && args[0] !== 0 ? args[0] : 1;
+				let text = args.length > 1 ? args[1] : 0;
+				let modifyClass = args.length > 2 && args[2] !== 0 ? args[2] : 1;
+
+				const productForms = document.querySelectorAll(`.product__actions`);
+
+				if (productForms) {
+					productForms.forEach((productForm) => {
+						const addButton = productForm.querySelector('[name="add"]');
+						const addButtonText = productForm.querySelector('[name="add"] > span');
+						const preorder = productForm.dataset.preorder;
+
+						if (addButton) {
+							if (disable) {
+								addButton.setAttribute("disabled", "disabled");
+								addButton.classList.add("disabled");
+								text && addButtonText && (addButtonText.textContent = text);
+							} else {
+								addButton.removeAttribute("disabled");
+								addButton.classList.remove("disabled");
+								preorder === "true"
+									? (addButtonText.textContent = "Pre-order")
+									: (addButtonText.textContent = "Add to cart");
+							}
+						}
+					});
+				}
+			};
+			// Hàm lấy variant từ mảng options
+			const getVariantFromOptionArray = (product, options) => {
+				_validateProductStructure(product);
+				_validateOptionsArray(options);
+				var result = product.variants.filter((variant) => {
+					return options.every((option, index) => {
+						return variant.options[index] === option;
+					});
+				});
+				return result[0] || null;
+			};
+			// Hàm cập nhật media-gallery
+			const updateMedia = () => {
+				if (!currentVariant || !currentVariant.featured_media) return;
+				const slides = document.querySelectorAll(".media-gallery");
+				slides.forEach((slide) => {
+					const swiperslide = slide.querySelectorAll(".swiper-slide");
+					swiperslide.forEach((item, index) => {
+						const mediaId = item.getAttribute("data-media-id");
+						if (parseInt(mediaId) === parseInt(currentVariant.featured_media.id)) {
+							const changeSlideEvent = new CustomEvent("changeSlideTo", {
+								detail: { index: index },
+							});
+							slide.dispatchEvent(changeSlideEvent);
+						}
+					});
+				});
+			};
+
+			document
+				.querySelectorAll(".product-options__option")
+				.forEach((variantSelect, index) => {
+					let option = productData.options[index];
+
+					const updateSelectedValue = (e) => {
+						const selectedValue = e.target.value;
+						variantSelect.dataset.selectedValue = selectedValue;
+						const selectedValueElement = variantSelect.querySelector(".selected-value");
+						selectedValueElement.textContent = selectedValue;
+					};
+					variantSelect.addEventListener("change", updateSelectedValue);
+				});
+
+			document.querySelector(".media-gallery").addEventListener("changeSlideTo", (e) => {
+				const index = e.detail.index;
+				if (index !== undefined && swiper) {
+					swiper.slideTo(index);
+				}
+			});
+
+			updateButton(!currentVariant.available, "Sold Out", false);
+
+			const quickatcBtn = modal.querySelector(".btn-quickatc");
+			quickatcBtn.addEventListener("click", (e) => {
+				const productId = item.id;
+				const productTitle = item.title;
+				const currentvariantId = currentVariant.id;
+				const variantPrice = currentVariant.price;
+				const variantOptions = currentVariant.options
+					.filter((option) => option !== "Default Title")
+					.map((option, index) => {
+						return {
+							name: item.options[index].name,
+							value: option,
+						};
+					});
+				const productImg = currentVariant.featured_image
+					? currentVariant.featured_image.src
+					: item.featured_image;
+				const productAlt = currentVariant.featured_image
+					? currentVariant.featured_image.alt
+					: item.title;
+				const productUrl = item.url;
+				const quantity = quantityInput.value;
+
+				var currentCart = JSON.parse(localStorage.getItem("cart")) || {
+					items: [],
+					subtotal: 0,
+				};
+
+				const itemIndex = currentCart.items.findIndex(
+					(item) => item.id === productId && item.variantId === currentvariantId
+				);
+
+				if (itemIndex === -1) {
+					currentCart.items.push({
+						id: productId,
+						title: productTitle,
+						price: variantPrice,
+						img: productImg,
+						alt: productAlt,
+						url: productUrl,
+						variantId: currentvariantId,
+						options_with_values: variantOptions ? variantOptions : null,
+						qty: quantity,
+					});
+				} else {
+					currentCart.items[itemIndex].qty += quantity;
+				}
+
+				currentCart.subtotal += parseInt(variantPrice);
+
+				localStorage.setItem("cart", JSON.stringify(currentCart));
+
+				loadCart(true);
+				if (window.innerWidth < 768)
+					document.documentElement.classList.add("prevent-scroll");
+				cartWrapper.classList.remove("hidden");
+				setTimeout(() => {
+					cartContent.classList.remove("translate-x-full");
+					cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
+				}, 300);
+			});
 		};
 
 		quickviewBtn.addEventListener("click", quickview);
@@ -470,6 +686,66 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				quickview();
 			});
 		} else {
+			addtocartBtn.addEventListener("click", (e) => {
+				const productId = item.id;
+				const productTitle = item.title;
+				let currentVariant = item.variants[0];
+				const currentvariantId = currentVariant.id;
+				const variantPrice = currentVariant.price;
+				const variantOptions = currentVariant.options
+					.filter((option) => option !== "Default Title")
+					.map((option, index) => {
+						return {
+							name: item.options[index].name,
+							value: option,
+						};
+					});
+				const productImg = currentVariant.featured_image
+					? currentVariant.featured_image.src
+					: item.featured_image;
+				const productAlt = currentVariant.featured_image
+					? currentVariant.featured_image.alt
+					: item.title;
+				const productUrl = item.url;
+
+				var currentCart = JSON.parse(localStorage.getItem("cart")) || {
+					items: [],
+					subtotal: 0,
+				};
+
+				const itemIndex = currentCart.items.findIndex(
+					(item) => item.id === productId && item.variantId === currentvariantId
+				);
+
+				if (itemIndex === -1) {
+					currentCart.items.push({
+						id: productId,
+						title: productTitle,
+						price: variantPrice,
+						img: productImg,
+						alt: productAlt,
+						url: productUrl,
+						variantId: currentvariantId,
+						options_with_values: variantOptions ? variantOptions : null,
+						qty: 1,
+					});
+				} else {
+					currentCart.items[itemIndex].qty += 1;
+				}
+
+				currentCart.subtotal += parseInt(variantPrice);
+
+				localStorage.setItem("cart", JSON.stringify(currentCart));
+
+				loadCart(true);
+				if (window.innerWidth < 768)
+					document.documentElement.classList.add("prevent-scroll");
+				cartWrapper.classList.remove("hidden");
+				setTimeout(() => {
+					cartContent.classList.remove("translate-x-full");
+					cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
+				}, 300);
+			});
 		}
 	});
 });
