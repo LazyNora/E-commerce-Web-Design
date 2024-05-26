@@ -460,6 +460,12 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				quantityInput.value = parseInt(quantityInput.value) + 1;
 			});
 
+			quantityInput.addEventListener("change", () => {
+				if (quantityInput.value < 1) {
+					quantityInput.value = 1;
+				}
+			});
+
 			let currentVariant = item.variants[0];
 			var productData = item;
 
@@ -638,7 +644,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 					? currentVariant.featured_image.alt
 					: item.title;
 				const productUrl = item.url;
-				const quantity = quantityInput.value;
+				const quantity = parseInt(quantityInput.value);
 
 				var currentCart = JSON.parse(localStorage.getItem("cart")) || {
 					items: [],
@@ -665,7 +671,10 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 					currentCart.items[itemIndex].qty += quantity;
 				}
 
-				currentCart.subtotal += parseInt(variantPrice);
+				currentCart.subtotal = currentCart.items.reduce(
+					(acc, item) => acc + item.price * item.qty,
+					0
+				);
 
 				localStorage.setItem("cart", JSON.stringify(currentCart));
 
@@ -733,7 +742,10 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 					currentCart.items[itemIndex].qty += 1;
 				}
 
-				currentCart.subtotal += parseInt(variantPrice);
+				currentCart.subtotal = currentCart.items.reduce(
+					(acc, item) => acc + item.price * item.qty,
+					0
+				);
 
 				localStorage.setItem("cart", JSON.stringify(currentCart));
 
