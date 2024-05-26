@@ -1000,6 +1000,10 @@ body {
   margin-right: 0.625rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
 }
@@ -1252,6 +1256,10 @@ body {
 
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .w-4 {
@@ -2830,6 +2838,10 @@ body {
   line-height: 1rem;
 }
 
+.text-\[12px\] {
+  font-size: 12px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2844,6 +2856,10 @@ body {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .uppercase {
@@ -3655,6 +3671,10 @@ body {
     margin-left: 1.5rem;
   }
 
+  .md\:mr-8 {
+    margin-right: 2rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -3734,6 +3754,10 @@ body {
 
   .md\:pt-6 {
     padding-top: 1.5rem;
+  }
+
+  .md\:pl-7 {
+    padding-left: 1.75rem;
   }
 
   .md\:text-left {
@@ -3827,6 +3851,10 @@ body {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:hidden {
@@ -3943,6 +3971,19 @@ body {
 }
 
 @media (min-width: 1280px) {
+  .xl\:-mx-3 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
+  .xl\:w-3\/4 {
+    width: 75%;
+  }
+
   .xl\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -3958,6 +3999,10 @@ body {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:w-4\/5 {
+    width: 80%;
+  }
+
   .\32xl\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;

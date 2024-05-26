@@ -317,6 +317,354 @@
 						</div>
 					</div>
 				</section>
+				<!-- Collection -->
+				<section class="section-collection">
+					<div class="container">
+						<div class="collection-container sidebar__leftColumn">
+							<div class="sidebar touch-none"></div>
+							<div id="ProductGrid" class="flex-1 w-full xl:w-3/4 2xl:w-4/5 relative">
+								<div class="toolbar">
+									<div class="toolbar-wrapper">
+										<div class="toggle-filter flex xl:hidden">
+											<button
+												class="sidebar-open flex items-center font-bold mr-4 md:mr-8">
+												<span class="mr-2">Filter</span>
+												<svg
+													class="w-[12px] h-[12px]"
+													fill="currentColor"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 448 512">
+													<path
+														d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"></path>
+												</svg>
+											</button>
+											<button
+												class="sortmb md:hidden flex items-center font-bold">
+												<span data-sortby-option>Date, new to old</span>
+												<svg
+													class="ml-2 w-[12px] h-[12px]"
+													fill="currentColor"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 448 512">
+													<path
+														d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"></path>
+												</svg>
+											</button>
+										</div>
+										<div class="flex flex-1 items-center justify-between">
+											<div
+												class="font-bold hidden md:block"
+												data-toolbar-sorting>
+												<div class="custom-select">
+													<select name="sort_by">
+														<option value="best-selling" data-index="0">
+															Best selling
+														</option>
+														<option
+															value="title-ascending"
+															data-index="1">
+															Alphabetically, A-Z
+														</option>
+														<option
+															value="title-descending"
+															data-index="2">
+															Alphabetically, Z-A
+														</option>
+														<option
+															value="price-ascending"
+															data-index="3">
+															Price, low to high
+														</option>
+														<option
+															value="price-descending"
+															data-index="4">
+															Price, high to low
+														</option>
+														<option
+															value="created-ascending"
+															data-index="5">
+															Date, old to new
+														</option>
+														<option
+															value="created-descending"
+															selected="selected"
+															data-index="6">
+															Date, new to old
+														</option>
+													</select>
+													<div class="select-selected">
+														<span class="select-selected__text"
+															>Date, new to old</span
+														>
+														<span class="select-arrow">
+															<svg
+																fill="currentColor"
+																xmlns="http://www.w3.org/2000/svg"
+																viewBox="0 0 448 512">
+																<path
+																	d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"></path>
+															</svg>
+														</span>
+													</div>
+													<div
+														class="select-items select-hide font-normal"></div>
+												</div>
+											</div>
+											<div class="flex-1"></div>
+											<div class="gridColumn-view flex pl-4 md:pl-7">
+												<button
+													class="flex tooltip-item tooltip-top"
+													data-column="1">
+													<svg
+														class="w-[12px] h-[12px]"
+														fill="currentColor"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 12.5 9.5">
+														<defs></defs>
+														<defs>
+															<style>
+																.cls-1 {
+																	fill-rule: evenodd;
+																}
+															</style>
+														</defs>
+														<g id="Layer_2" data-name="Layer 2">
+															<g id="Layer_1-2" data-name="Layer 1">
+																<g
+																	id="shop_page"
+																	data-name="shop page">
+																	<g id="Group-16">
+																		<path
+																			id="Rectangle"
+																			d="M12.5.75a.76.76 0 01-.75.75h-11A.76.76 0 010 .75.76.76 0 01.75 0h11a.76.76 0 01.75.75z"
+																			class="cls-1"></path>
+																		<path
+																			id="Rectangle-2"
+																			d="M12.5 4.75a.76.76 0 01-.75.75h-11A.76.76 0 010 4.75.76.76 0 01.75 4h11a.76.76 0 01.75.75z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																		<path
+																			id="Rectangle-3"
+																			d="M12.5 8.75a.76.76 0 01-.75.75h-11A.76.76 0 010 8.75.76.76 0 01.75 8h11a.76.76 0 01.75.75z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</svg>
+													<span class="tooltip-content text-[12px]"
+														>List</span
+													>
+												</button>
+												<button
+													class="flex tooltip-item tooltip-top"
+													data-column="2">
+													<svg
+														class="w-[12px] h-[12px]"
+														fill="currentColor"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 5.5 12.5">
+														<defs></defs>
+														<defs>
+															<style>
+																.cls-1 {
+																	fill-rule: evenodd;
+																}
+															</style>
+														</defs>
+														<g id="Layer_2" data-name="Layer 2">
+															<g id="Layer_1-2" data-name="Layer 1">
+																<g
+																	id="shop_page"
+																	data-name="shop page">
+																	<g id="Group-10">
+																		<path
+																			id="Rectangle"
+																			d="M.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 01.75 0z"
+																			class="cls-1"></path>
+																		<path
+																			id="Rectangle-2"
+																			d="M4.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 014.75 0z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</svg>
+													<span class="tooltip-content text-[12px]"
+														>2 columns</span
+													>
+												</button>
+												<button
+													class="hidden md:flex tooltip-item tooltip-top"
+													data-column="3">
+													<svg
+														class="w-[12px] h-[12px]"
+														fill="currentColor"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 9.5 12.5">
+														<defs></defs>
+														<defs>
+															<style>
+																.cls-1 {
+																	fill-rule: evenodd;
+																}
+															</style>
+														</defs>
+														<g id="Layer_2" data-name="Layer 2">
+															<g id="Layer_1-2" data-name="Layer 1">
+																<g
+																	id="shop_page"
+																	data-name="shop page">
+																	<g id="Group-16">
+																		<path
+																			id="Rectangle"
+																			d="M.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 01.75 0z"
+																			class="cls-1"></path>
+																		<path
+																			id="Rectangle-2"
+																			d="M4.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 014.75 0z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																		<path
+																			id="Rectangle-3"
+																			d="M8.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 018.75 0z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</svg>
+													<span class="tooltip-content text-[12px]"
+														>3 columns</span
+													>
+												</button>
+												<button
+													class="hidden md:flex tooltip-item tooltip-top"
+													data-column="4">
+													<svg
+														class="w-[12px] h-[12px]"
+														fill="currentColor"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 13.5 12.5">
+														<defs></defs>
+														<defs>
+															<style>
+																.cls-1 {
+																	fill-rule: evenodd;
+																}
+															</style>
+														</defs>
+														<g id="Layer_2" data-name="Layer 2">
+															<g id="Layer_1-2" data-name="Layer 1">
+																<g
+																	id="shop_page"
+																	data-name="shop page">
+																	<g
+																		id="_4_col"
+																		data-name="4_col">
+																		<path
+																			id="Rectangle"
+																			d="M.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 01.75 0z"
+																			class="cls-1"></path>
+																		<path
+																			id="Rectangle-2"
+																			d="M4.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 014.75 0z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																		<path
+																			id="Rectangle-3"
+																			d="M8.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 018.75 0z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																		<path
+																			id="Rectangle-4"
+																			d="M12.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11a.76.76 0 01.75-.75z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</svg>
+													<span class="tooltip-content text-[12px]"
+														>4 columns</span
+													>
+												</button>
+												<button
+													class="hidden lg:flex tooltip-item tooltip-top"
+													data-column="5">
+													<svg
+														class="w-[12px] h-[12px]"
+														fill="currentColor"
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 17.5 12.5">
+														<defs></defs>
+														<defs>
+															<style>
+																.cls-1 {
+																	fill-rule: evenodd;
+																}
+															</style>
+														</defs>
+														<g id="Layer_2" data-name="Layer 2">
+															<g id="Layer_1-2" data-name="Layer 1">
+																<g
+																	id="shop_page"
+																	data-name="shop page">
+																	<g
+																		id="_5_col"
+																		data-name="5_col">
+																		<path
+																			id="Rectangle"
+																			d="M.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 01.75 0z"
+																			class="cls-1"></path>
+																		<path
+																			id="Rectangle-2"
+																			d="M4.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 014.75 0z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																		<path
+																			id="Rectangle-3"
+																			d="M8.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11A.76.76 0 018.75 0z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																		<path
+																			id="Rectangle-4"
+																			d="M12.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11a.76.76 0 01.75-.75z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																		<path
+																			id="Rectangle-5"
+																			d="M16.75 0a.76.76 0 01.75.75v11a.76.76 0 01-.75.75.76.76 0 01-.75-.75v-11a.76.76 0 01.75-.75z"
+																			class="cls-1"
+																			data-name="Rectangle"></path>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</svg>
+													<span class="tooltip-content text-[12px]"
+														>5 columns</span
+													>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="filter-by-items" class="flex flex-wrap items-center"></div>
+								<div class="product-listing relative">
+									<div class="mt-6 flex flex-wrap -mx-2 xl:-mx-3"></div>
+								</div>
+							</div>
+						</div>
+						<div></div>
+					</div>
+					<script src="../../js/Collection.js"></script>
+				</section>
 				<!-- Cart Drawer -->
 				<div class="cart-container">
 					<div id="cart-drawer">
