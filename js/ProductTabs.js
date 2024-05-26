@@ -104,7 +104,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 		const ib = document.createElement("div");
 		ib.classList.add("ib-column");
 		ib.innerHTML = `
-        <div class="pcard cursor-pointer prod__block">
+        <div class="pcard cursor-pointer prod__block" data-product-handle="${item.handle}">
           <div class="pcard__img">
             <div class="image-box | overflow-hidden cursor-pointer relative">
               <div class="flex justify-center items-center">
@@ -169,7 +169,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
               </div>
             </div>
           </div>
-          <div class="pcard__action">
+          <div class="pcard__action hidden lg:block">
             <button class="btn-quickview">
               <div class="tooltip-item btn-icon block tooltip-top tooltip-style-1">
                 <span class="tooltip-icon block">
@@ -195,5 +195,272 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
         </div>
       `;
 		tab.querySelector(".ib-grid").appendChild(ib);
+
+		const quickviewBtn = ib.querySelector(".btn-quickview");
+		const addtocartBtn = ib.querySelector(".btn-addtocart");
+
+		const quickview = () => {
+			const modal = document.createElement("div");
+			modal.classList.add(
+				"modal",
+				"modal__wrapper",
+				"fixed",
+				"inset-0",
+				"px-5",
+				"bg-black",
+				"flex",
+				"items-center",
+				"justify-center",
+				"transition-opacity",
+				"opacity-0",
+				"duration-200",
+				"ease-out",
+				"opacity-100",
+				"z-[99]"
+			);
+			modal.style.setProperty("--tw-bg-opacity", "0.3");
+			modal.innerHTML = `
+      <div class="modal__content bg-white relative rounded max-h-[90vh] modal__quickview" style="width:960px">
+        <button class="modal__close text-black absolute p-2 bg-white hover:bg-gray-300 rounded-full z-10">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <div class="modal__content-inner">
+          <div class="flex flex-col lg:flex-row w-full pqv prod__block product-wrapper prod__info items-start">
+            <div class="w-full lg:w-1/2 p-[50px]">
+              <div class="relative overflow-hidden flex items-center justify-center" style="--aspect-ratio: 1.499">
+                <div class="pqv__media">
+                  <div class="media-gallery w-full">
+                    <div class="pis__wrapper overflow-hidden w-full">
+                      <div class="preview__wrapper mb-4 flex-grow">
+                        <div class="swiper-container quickview-swiper">
+                          <div class="swiper-wrapper main-slider pis h-full">
+                          ${item.media
+								.map(
+									(media, index) =>
+										`
+                                <div class="swiper-slide prod-media-item media-type-${media.media_type}" data-index=${index} data-media-type=${media.media_type} data-media-id=${media.id} data-aspect-ratio="1.499">
+                                  ${
+										media.media_type === "image"
+											? `
+                                  <div class="prod-media media-image" data-media-id=${media.id} data-media-width=${media.width} data-media-height=${media.height} data-media-alt=${media.alt} data-media-src=${media.src}>
+                                    <div class="prod-image" style="aspect-ratio: 1.499">
+                                      <img class="img-loaded" src=${path + media.src} sizes="946px" loading="lazy" width="946" height="631" alt=${media.alt} fetchpriority="auto">
+                                    </div>
+                                  </div>
+                                  `
+											: `
+                                  <div class="deferred-media" style="/*padding-top: 56.25%;*/" data-media-id=${media.id} data-auto-play="true">
+                                    <video playinline controls autoplay loop muted aria-label=${item.title} poster=${media.preview_image.src}>
+                                      <source src=${media.sources[media.sources.findIndex((src) => src.width === 1280)].url} type="video/mp4">
+                                      <img src=${media.preview_image.src}>
+                                    </video>
+                                  </div>
+                                  `
+									}
+                                </div>
+                                `
+								)
+								.join("")}
+                          </div>
+                          ${
+								item.media.length > 1
+									? `<div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
+                            <button class="swiper-button-control swiper-button-prev btn-icon | tooltip-item tooltip-right tooltop-style-1">
+                              <span class="tooltip-icon block">
+                                <svg
+                                  width="14px"
+                                  height="14px"
+                                  fill="currentColor"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 448 512">
+                                  <path d="M229.9 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L94.569 282H436c6.627 0 12-5.373 12-12v-28c0-6.627-5.373-12-12-12H94.569l155.13-155.13c4.686-4.686 4.686-12.284 0-16.971L229.9 38.101c-4.686-4.686-12.284-4.686-16.971 0L3.515 247.515c-4.686 4.686-4.686 12.284 0 16.971L212.929 473.9c4.686 4.686 12.284 4.686 16.971-.001z"></path>
+                                </svg>
+                              </span>
+                              <span class="tooltip-content">Previous</span>
+                            </button>
+                            <button class="swiper-button-control swiper-button-next btn-icon | tooltip-item tooltip-left tooltop-style-1">
+                              <span class="tooltip-icon block">
+                                <svg
+                                  fill="currentColor"
+                                  width="14px"
+                                  height="14px"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 448 512">
+                                  <path d="M218.101 38.101L198.302 57.9c-4.686 4.686-4.686 12.284 0 16.971L353.432 230H12c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h341.432l-155.13 155.13c-4.686 4.686-4.686 12.284 0 16.971l19.799 19.799c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L235.071 38.101c-4.686-4.687-12.284-4.687-16.97 0z"></path>
+                                </svg>
+                                </span>
+                              <span class="tooltip-content">Next</span>
+                            </button>
+                          </div>`
+									: ""
+							}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full flex flex-col overflow-y-scroll custom_scroll lg:w-1/2 lg:absolute top-0 right-0 h-full">
+              <div class="quick-view__info p-4 lg:p-8">
+                <div class="prod__title flex justify-between items-center">
+                  <h1 class="text-2xl md:text-3xl md:leading-[42px] pr-2">
+                    <a href="${currentPath + item.url}">${item.title}</a>
+                  </h1>
+                </div>
+                <div class="price inline-flex items-center flex-wrap">
+                  <div class="price__regular">
+                    <span class="visually-hidden visually-hidden--inline">
+                      Regular price
+                    </span>
+                    <span class="price-item price-item--regular text-xl md:text-2xl">
+                      <span
+                        class="money"
+                        data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="hidden lg:block mt-[25px] mb-4 text-color-secondary">
+                  <a class="block mt-2 underline text-black" href="${currentPath + item.url}">View details</a>
+                </div>
+                <div class="actions-block border-b border-color-border">
+                  <div class="product-options">
+                    <div data-product-id=${item.id}>
+                      <div class="variant-picker">
+                        ${item.options
+							.map((option, index) =>
+								option.values[1] !== null && option.name !== "Title"
+									? `
+                              <div class="product-options__option product-options__option--dropdown">
+                                <div
+                                  class="variant-select"
+                                  data-picker-field="select"
+                                  data-option-name=${option.name}
+                                  data-option-position=${option.position}
+                                  data-selected-value=${item.variants[0]?.options[index]}>
+                                  <div class="prod__option-label | font-medium flex flex-wrap items-center justify-between prod__option-label--dropdown uppercase">
+                                    <label
+                                      class="form-label"
+                                      for="option_${option.position}">
+                                      <span class="font-bold mr-1">${option.name}:</span>
+                                      <span class="selected-value">
+                                        ${item.variants[0]?.options[index]}
+                                      </span>
+                                    </label>
+                                  </div>
+                                  <div class="prod__option prod__option--dropdown">
+                                    <div class="flex flex-wrap">
+                                      <select
+                                        id="option_${option.position}"
+                                        class="select-bordered uppercase"
+                                        name="options[${option.name}]">
+                                        ${option.values
+											.map(
+												(value, index2) =>
+													`
+                                          <option
+                                            ${item.variants[0]?.options[index] === value ? "selected" : ""}
+                                            value="${value.toString()}"
+                                            class="variant-picker__option product-option-item"
+                                            data-value="${value.toString()}"
+                                            data-option-position=${option.position}>${value}</option>
+                                          `
+											)
+											.join("")}
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            `
+									: ""
+							)
+							.join("")}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-form__actions">
+                    <label class="prod__option-label prod__option-label__quantity font-medium hidden md:block">
+                      Quantity
+                    </label>
+                    <div class="flex flex-wrap items-end">
+                      <div class="form__input-wrapper form__input-wrapper--select mr-5 w-32">
+                        <label class="prod__option-label font-medium md:hidden">
+                          Quantity
+                        </label>
+                        <div class="quantity-input h-[46px] flex border border-color-border rounded " data-product-id="8447532368115">
+                          <button class="quantity-input__button flex items-center justify-center h-[46px] w-[46px]" type="button" aria-label="Decrease quantity of by one" data-quantity-selector="decrease" data-product-id="8447532368115" name="minus">
+                            <svg class="w-[12px] h-[12px]" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                              <path d="M376 232H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h368c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                          </button>
+                          <input class="quantity-input__element w-10 text-center flex-grow shrink appearance-none" type="number" name="quantity" value="1" min="1" aria-label="Product quantity" data-quantity-input="" data-product-id="8447532368115">
+                          <button class="quantity-input__button flex items-center justify-center h-[46px] w-[46px]" type="button" aria-label="Increase quantity of by one" data-quantity-selector="increase" data-product-id="8447532368115" name="plus">
+                            <svg class="w-[12px] h-[12px]" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                              <path d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <button type="submit" name="add" class="add-to-cart sf__btn flex-grow shrink not-change relative sf__btn-primary" data-atc-text="Add to cart">
+                        <span class="atc-spinner inset-0 absolute items-center justify-center">
+                          <svg class="animate-spin w-[20px] h-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                        </span>
+                        <span class="not-change atc-text">Add to cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
+			document.documentElement.classList.add("prevent-scroll");
+			document.body.appendChild(modal);
+			document.querySelector(".currency-selector").dispatchEvent(new Event("change"));
+
+			const close = modal.querySelector(".modal__close");
+			close.addEventListener("click", () => {
+				document.documentElement.classList.remove("prevent-scroll");
+				modal.remove();
+			});
+
+			document.addEventListener("keydown", (event) => {
+				if (event.key === "Escape") {
+					document.documentElement.classList.remove("prevent-scroll");
+					modal.remove();
+				}
+			});
+			const swiper = new Swiper(modal.querySelector(".quickview-swiper"), {
+				loop: true,
+				navigation: {
+					nextEl: modal.querySelector(".swiper-button-next"),
+					prevEl: modal.querySelector(".swiper-button-prev"),
+				},
+			});
+
+			const modalContent = modal.querySelector(".modal__content");
+			modal.addEventListener("click", (event) => {
+				if (!modalContent.contains(event.target)) {
+					document.documentElement.classList.remove("prevent-scroll");
+					modal.remove();
+				}
+			});
+		};
+
+		quickviewBtn.addEventListener("click", quickview);
+		if (item.variants.length > 1) {
+			addtocartBtn.addEventListener("click", (event) => {
+				quickview();
+			});
+		} else {
+		}
 	});
 });

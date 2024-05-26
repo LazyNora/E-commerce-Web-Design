@@ -785,7 +785,7 @@ button.btn.btn-plain:hover {
 }
 .select-items::-webkit-scrollbar-thumb,
 .custom_scroll::-webkit-scrollbar-thumb {
-	background: #ebebeb;
+	background: #ebebebc6;
 }
 .select-items::-webkit-scrollbar-thumb:hover,
 .custom_scroll::-webkit-scrollbar-thumb:hover {
@@ -2066,4 +2066,59 @@ html.prevent-scroll body {
 
 .section__header {
 	margin-bottom: 60px;
+}
+
+.modal__content {
+	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal__close {
+	right: 6px;
+	top: 6px;
+}
+.modal__content-inner {
+	overflow-x: auto;
+}
+.pis__wrapper .swiper-button-control {
+	align-items: center;
+	background-color: #fff;
+	border-radius: 50%;
+	color: #000;
+	display: inline-flex;
+	height: 45px;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: auto;
+	transform: translate3d(-100%, 0, 0);
+	transition: all 0.3s;
+	visibility: hidden;
+	width: 45px;
+}
+.pis__wrapper .swiper-button-control.swiper-button-next {
+	transform: translate3d(100%, 0, 0);
+}
+
+.pis__wrapper .swiper-button-control:hover {
+	background: #000;
+	border-color: #000;
+	color: #fff;
+}
+
+.pis__wrapper:hover .swiper-button-control {
+	opacity: 1;
+	transform: none;
+	visibility: visible;
+}
+.pqv .prod__title {
+	margin-bottom: 10px;
+}
+.pqv .actions-block {
+	border-bottom: none;
+	margin-top: 30px;
+	padding-bottom: 20px;
+}
+.pqv .prod__option-label {
+	line-height: 24px;
+	margin-bottom: 12px;
 }

@@ -9,21 +9,15 @@
 			rel="stylesheet" />
 		<script>
 			const path = window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
-			let variantId = new URLSearchParams(window.location.search).get("variant") || null;
 		</script>
-		<script src="../../js/swiper-bundle.min.js"></script>
-		<link rel="shortcut icon" href="../../assets/logo.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="../../css/tailwind.css" />
-		<link rel="stylesheet" href="../../css/swiper-bundle.min.css" />
-		<link rel="stylesheet" href="../../css/chunk.css" />
-		<link rel="stylesheet" href="../../css/Carousel.css" />
-		<link rel="stylesheet" href="../../css/Announcement.css" />
-		<link rel="stylesheet" href="../../css/Navbar.css" />
-		<link rel="stylesheet" href="../../css/Cart.css" />
-		<link rel="stylesheet" href="../../css/ProductView.css" />
-		<link rel="stylesheet" href="../../css/ProductDetails.css" />
-		<link rel="stylesheet" href="../../css/Footer.css" />
-		<link rel="stylesheet" href="../../css/photoswipe.css" />
+		<link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="../css/tailwind.css" />
+		<link rel="stylesheet" href="../css/chunk.css" />
+		<link rel="stylesheet" href="../css/Announcement.css" />
+		<link rel="stylesheet" href="../css/Navbar.css" />
+		<link rel="stylesheet" href="../css/Cart.css" />
+		<link rel="stylesheet" href="../css/account.css">
+		<link rel="stylesheet" href="../css/Footer.css" />
 
 		<style>
 			* {
@@ -49,7 +43,7 @@
 				font-size: 16px;
 				line-height: 24px;
 				tab-size: 4;
-				/* overflow-x: clip; */
+				overflow-x: hidden;
 			}
 			div {
 				display: block;
@@ -92,6 +86,10 @@
 				<script>
 					const closeAnnouncement = () => {
 						document.querySelector(".announcement-bar").remove();
+						// document.documentElement.style.setProperty(
+						// 	"--sf-announcement-height",
+						// 	"0px"
+						// );
 					};
 				</script>
 			</section>
@@ -105,7 +103,7 @@
 									class="logo | px-4 justify-center scroll-animation"
 									data-animation="animate-fade">
 									<a
-										href="../../"
+										href="../"
 										class="logo-img | block relative"
 										style="width: 290px"
 										title="AUDIO OASIS">
@@ -167,15 +165,11 @@
 														d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path>
 												</svg>
 											</button>
-											<div
-												class="searchResults | absolute w-full top-12 p-0 mt-2 z-50 bg-white hidden">
-												<div class="searchResults__content"></div>
-											</div>
 										</form>
 									</div>
 									<select
 										class="currency-selector | w-[70px] border-none px-2 font-bold text-base"></select>
-									<a href="../../cart" class="btn-cart | pl-4 pr-2 py-3.5">
+									<a href="../cart" class="btn-cart | pl-4 pr-2 py-3.5">
 										<div class="badge">
 											<svg
 												class="w-[2.15rem] h-[2.15rem]"
@@ -188,7 +182,7 @@
 											<span class="badge-inner"></span>
 										</div>
 									</a>
-									<a href="../../login" class="px-2 py-3.5">
+									<a href="../login" class="px-2 py-3.5">
 										<svg
 											class="w-[2.15rem] h-[2.15rem]"
 											focusable="false"
@@ -228,7 +222,7 @@
 							</svg>
 						</button>
 						<div class="logo--mobile | ml-2">
-							<a href="../../" class="flex w-full relative" title="AUDIO OASIS">
+							<a href="../" class="flex w-full relative" title="AUDIO OASIS">
 								<svg
 									viewBox="0 0 3650 615"
 									xmlns="http://www.w3.org/2000/svg"
@@ -268,7 +262,7 @@
 								</svg>
 							</button>
 							<a
-								href="../../cart"
+								href="../cart"
 								class="btn-cart cart-popup | relative py-2 px-2 whitespace-nowrap cursor-pointer">
 								<div class="badge">
 									<svg
@@ -298,339 +292,49 @@
 						</div>
 					</div>
 				</div>
-				<script type="module" src="../../js/Navbar.js"></script>
+				<script type="module" src="../js/Navbar.js"></script>
 			</section>
 			<!-- Main -->
-			<div id="scroll-to-top-target" class="w-0 h-0 invisible opacity-0"></div>
-			<main role="main" id="MainContent" class="template-product">
-				<script src="./assets/product.js"></script>
-				<!-- Product View -->
-				<section id="product__main" class="section-product">
-					<div
-						class="product-template | md:mt-4 mb-5 md:mb-12"
-						data-section-type="product-page"
-						data-section-id="product__main"
-						data-layout="layout-4"
-						data-container="container">
-						<div class="container">
-							<div
-								class="prod-template product-wrapper prod-template__desktop | enable-zoom">
-								<div class="prod__container prod__block | flex flex-wrap">
-									<div class="w-full md:w-2/3">
-										<div
-											class="product-media__desktop prod-media__wrapper | justify-end hidden md:block prod__layout-4">
-											<div
-												class="media-gallery | w-full"
-												type="desktop"></div>
-										</div>
-										<div class="product-media__mobile | md:hidden">
-											<div
-												class="product-mb__media product-page-mobile__slider">
-												<div
-													class="media-gallery | w-full"
-													type="mobile"></div>
-											</div>
-										</div>
-									</div>
-									<div class="w-full md:w-1/3">
-										<div class="prod__info-wrapper">
-											<div class="prod__info"></div>
-										</div>
-									</div>
-								</div>
-							</div>
+			<main role="main" id="MainContent">
+				<!-- Account -->
+                <div><h1 class="title">My Account</h1></div>
+				<div class="Customer">
+					<div class="customerNav">
+						<a href="" class="tab_item active">DashBoard</a>
+						<a href="" class="tab_item hover1">Address</a>
+						<a href="" class="tab_item hover1">Wishlist</a>
+						<a href="" class="tab_item hover1">Log out</a>
+					</div>
+				<div class="customerInfo">
+					<div> Hello <span id="firstName "></span> <span id="lastName"></span><span>( Not you ?) </span> <a href="">Log out</a></div>
+					<div><h2>Order History</h2>
+						<div></div>
+					</div>
+					<div class="account_detail">
+						<h2>Account Details</h2>
+						<div>
+							<div>Name</div>
+							<div id="fullName"></div>
+
 						</div>
-						<div
-							class="prod__sticky-atc sf-prod__block fixed z-40 bottom-0 inset-x-0 transition-transform enable-dynamic-checkout">
-							<div class="container">
-								<div
-									class="sticky-atc product-form flex items-center justify-between">
-									<div class="hidden md:flex pr-2">
-										<div class="main-img cursor-pointer py-1.5 hidden md:flex">
-											<div class="prod-image">
-												<img
-													class="h-full object-contain img-loaded"
-													width="60"
-													height="48"
-													loading="lazy"
-													sizes="60px" />
-											</div>
-										</div>
-										<div class="md:ml-6 psa__info">
-											<h3
-												class="psa__title text-base hover:text-color-primary-darker font-medium cursor-pointer line-clamp-1"></h3>
-										</div>
-									</div>
-									<div
-										class="flex shrink-0 items-center psa__form-controls w-full md:w-auto">
-										<div class="product__actions w-full flex">
-											<select
-												name="variant"
-												class="product-variant-option-dropdown combined-variant border border-color-border flex-0 rounded mr-5 pl-4"></select>
-											<div
-												class="quantity-input h-[46px] border border-color-border rounded mr-2.5 lg:mr-5 md:flex hidden">
-												<button
-													class="quantity-input__button flex items-center justify-center h-[46px] w-[46px]"
-													type="button"
-													aria-label="Decrease quantity by one"
-													data-quantity-selector="decrease"
-													name="minus">
-													<svg
-														class="w-[12px] h-[12px]"
-														fill="currentColor"
-														stroke="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-														viewBox="0 0 384 512">
-														<path
-															d="M376 232H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h368c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path>
-													</svg>
-												</button>
-												<input
-													class="quantity-input__element w-10 text-center flex-grow shrink appearance-none bg-transparent"
-													type="number"
-													name="quantity"
-													value="1"
-													min="1"
-													aria-label="Product quantity" />
-												<button
-													class="quantity-input__button flex items-center justify-center h-[46px] w-[46px]"
-													type="button"
-													aria-label="Increase quantity by one"
-													data-quantity-selector="increase"
-													name="plus">
-													<svg
-														class="w-[12px] h-[12px]"
-														fill="currentColor"
-														stroke="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-														viewBox="0 0 384 512">
-														<path
-															d="M376 232H216V72c0-4.42-3.58-8-8-8h-32c-4.42 0-8 3.58-8 8v160H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h160v160c0 4.42 3.58 8 8 8h32c4.42 0 8-3.58 8-8V280h160c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"></path>
-													</svg>
-												</button>
-											</div>
-											<button
-												name="add"
-												class="sticky-atc-btn add-to-cart btn flex-grow shrink relative">
-												<span>Add To Cart</span>
-											</button>
-											<div
-												class="prod__dynamic_checkout buy-one-click flex-1 md:ml-5">
-												<button class="paypal">
-													<span class="paypal-text"
-														>Buy now with PayPal</span
-													>
-													<span aria-hidden="true">Buy with </span>
-													<span class="paypal-logo">
-														<svg
-															viewBox="0 0 67 19"
-															style="height: 18px; width: 63.4737px">
-															<path
-																d="M8.44.57H3.29a.718.718 0 0 0-.707.61L.502 14.517c-.041.263.16.5.425.5h2.458a.718.718 0 0 0 .707-.61l.561-3.597a.717.717 0 0 1 .706-.611h1.63c3.391 0 5.349-1.658 5.86-4.944.23-1.437.01-2.566-.657-3.357C11.461 1.029 10.162.57 8.44.57zm.594 4.87C8.752 7.308 7.34 7.308 5.976 7.308h-.777l.545-3.485a.43.43 0 0 1 .424-.366h.356c.93 0 1.807 0 2.26.535.27.32.353.794.25 1.45zm14.796-.06h-2.466a.43.43 0 0 0-.424.367l-.109.696-.172-.252c-.534-.783-1.724-1.044-2.912-1.044-2.725 0-5.052 2.084-5.505 5.008-.235 1.46.1 2.854.919 3.827.75.894 1.826 1.267 3.105 1.267 2.195 0 3.412-1.426 3.412-1.426l-.11.692a.432.432 0 0 0 .424.502h2.22a.718.718 0 0 0 .707-.61l1.333-8.526a.43.43 0 0 0-.423-.5zm-3.437 4.849c-.238 1.422-1.356 2.378-2.782 2.378-.716 0-1.288-.232-1.655-.672-.365-.436-.503-1.058-.387-1.75.222-1.41 1.359-2.397 2.763-2.397.7 0 1.269.235 1.644.678.375.448.524 1.073.417 1.763zM36.96 5.38h-2.478a.716.716 0 0 0-.592.318l-3.417 5.085-1.448-4.887a.719.719 0 0 0-.687-.515h-2.435a.433.433 0 0 0-.407.573l2.73 8.09-2.567 3.66a.434.434 0 0 0 .35.684h2.475a.712.712 0 0 0 .588-.31l8.24-12.016a.434.434 0 0 0-.352-.681z"
-																style="
-																	fill: rgb(37, 59, 128);
-																"></path>
-															<path
-																d="M45.163.57h-5.15a.717.717 0 0 0-.706.61l-2.082 13.337a.43.43 0 0 0 .423.5h2.642a.502.502 0 0 0 .494-.427l.591-3.78a.717.717 0 0 1 .706-.611h1.63c3.392 0 5.348-1.658 5.86-4.944.231-1.437.009-2.566-.657-3.357C48.183 1.029 46.886.57 45.163.57zm.593 4.87c-.28 1.867-1.692 1.867-3.057 1.867h-.777l.546-3.485a.429.429 0 0 1 .423-.366h.356c.93 0 1.807 0 2.26.535.27.32.353.794.25 1.45zm14.795-.06h-2.464a.428.428 0 0 0-.423.367l-.109.696-.173-.252c-.534-.783-1.723-1.044-2.911-1.044-2.724 0-5.05 2.084-5.504 5.008-.235 1.46.099 2.854.918 3.827.753.894 1.826 1.267 3.105 1.267 2.195 0 3.413-1.426 3.413-1.426l-.11.692a.432.432 0 0 0 .424.502h2.22a.717.717 0 0 0 .707-.61l1.333-8.526a.433.433 0 0 0-.426-.5zm-3.436 4.849c-.237 1.422-1.356 2.378-2.782 2.378-.714 0-1.288-.232-1.655-.672-.365-.436-.502-1.058-.387-1.75.223-1.41 1.359-2.397 2.763-2.397.7 0 1.269.235 1.644.678.377.448.526 1.073.417 1.763zM63.458.935l-2.113 13.582a.43.43 0 0 0 .423.5h2.124a.716.716 0 0 0 .707-.61L66.683 1.07a.432.432 0 0 0-.423-.5h-2.379c-.21 0-.39.156-.423.366z"
-																style="
-																	fill: rgb(23, 155, 215);
-																"></path>
-														</svg>
-													</span>
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div>
+							<div>Email</div>
+							<div id="email"></div>
 						</div>
 					</div>
-					<script type="module" src="../../js/ProductMedia.js"></script>
-					<script src="../../js/ProductInfo.js"></script>
-					<script type="module" src="../../js/VariantPicker.js"></script>
-					<script src="../../js/StickyATC.js"></script>
-				</section>
-				<!-- Details -->
-				<section class="section-product-details">
-					<div class="container flex flex-wrap">
-						<div class="w-full md:w-2/3 tabs tabs--responsive pdt__accordion">
-							<div class="hidden md:flex border-b border-color-border">
-								<div
-									class="tab-header text-lg cursor-pointer active"
-									data-index="0">
-									DESCRIPTION
-								</div>
-								<div class="tab-header text-lg cursor-pointer" data-index="1">
-									SHIPPING & RETURN
-								</div>
-							</div>
-							<div class="md:py-10">
-								<div
-									class="accordion-item tab-content md:opacity-0 active open"
-									data-desc>
-									<div class="accordion-button pb-3 pr-4">DESCRIPTION</div>
-									<div class="accordion-content max-height-set">
-										<div class="pb-8 prose"></div>
-									</div>
-								</div>
-								<div class="accordion-item tab-content md:opacity-0">
-									<div class="accordion-button pb-3 pr-4">SHIPPING & RETURN</div>
-									<div class="accordion-content max-height-set">
-										<div class="pb-8 prose">
-											<h3>Shipping Fees</h3>
-											<p>
-												<span>
-													Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Delectus iure praesentium id
-													voluptas odio tempora amet est! Nihil ea
-													debitis, quia omnis blanditiis qui molestias
-													eveniet, reprehenderit dolore odit consequuntur.
-												</span>
-												<br />
-												<br />
-												<br />
-												Lorem ipsum dolor sit amet consectetur adipisicing
-												elit. Autem, enim reiciendis delectus corporis
-												repellendus voluptate quibusdam obcaecati possimus
-												ex error laudantium optio culpa aliquid dignissimos
-												impedit laborum odio voluptas quae!
-											</p>
-											<hr />
-											<br />
-											<h3>PO boxes or APO/FPO</h3>
-											<p>
-												<span>
-													Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Tenetur amet sit, maxime earum
-													tempora quasi ad asperiores aperiam adipisci
-													quis quia, ut voluptatem vero commodi iusto est
-													ducimus? Iure exercitationem inventore rerum
-													aspernatur! Alias maxime et possimus fugiat
-													repellendus, libero ab cumque voluptate tempore
-													reiciendis aliquam culpa nemo obcaecati illo
-													voluptatibus corrupti nostrum! Error quisquam,
-													cumque minima recusandae iusto omnis?
-												</span>
-												<br />
-												<br />
-												<span>
-													Lorem ipsum dolor, sit amet consectetur
-													adipisicing elit. Quo est ab inventore quisquam
-													veritatis, vel quaerat iusto nulla quam aperiam!
-												</span>
-											</p>
-											<hr />
-											<br />
-											<h3>Estimated Delivery Time</h3>
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing
-												elit. Dolorum perferendis hic magni delectus.
-												Cupiditate natus et voluptatibus dicta tempora, quo
-												minima nobis fugit eum, adipisci quis. Modi
-												excepturi harum eaque eum a accusamus nisi. Tempora,
-												nisi eveniet. Facilis magnam quibusdam error
-												repudiandae nihil praesentium. Laboriosam ea
-												distinctio nesciunt voluptatum est.
-												<br />
-												<br />
-												<span>
-													Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Modi aspernatur fuga
-													distinctio voluptas in nemo est dolorum qui,
-													tempora reiciendis dolorem veritatis minima non
-													aliquam.
-												</span>
-												<span>AUDIO OASIS</span>
-												<span>
-													dolor sit amet consectetur adipisicing elit.
-													Iusto, sit tempore consectetur eveniet
-													recusandae sequi?
-												</span>
-											</p>
-											<hr />
-											<br />
-											<h3>Easy 30-Day Return Policy</h3>
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing
-												elit. Dolor at est officiis quos dolorum? Soluta
-												tempore molestiae veniam, officiis itaque laudantium
-												voluptatem ab dolore vel ratione nihil laborum
-												nostrum eveniet.
-											</p>
-											<hr />
-											<br />
-											<h3>Eligibility Conditions</h3>
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing
-												elit. Tempore nam odio qui rerum praesentium eaque
-												delectus dolorem itaque quo? Similique, aliquam sit
-												dolor ducimus molestias fugit! Laudantium similique
-												nesciunt ut.
-											</p>
-											<hr />
-											<br />
-											<h3>Defective or Damaged Items</h3>
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing
-												elit. Minima aperiam minus totam nihil quis possimus
-												pariatur incidunt dolores.
-											</p>
-											<hr />
-											<br />
-											<h3>Exchanges</h3>
-											<p>
-												Lorem ipsum dolor sit amet consectetur, adipisicing
-												elit. Nobis temporibus doloremque at unde, accusamus
-												incidunt nesciunt voluptas repellendus nihil
-												eligendi.
-											</p>
-											<hr />
-											<br />
-											<h3>Refunds &amp; Credits</h3>
-											<p>
-												Lorem ipsum dolor sit amet consectetur adipisicing
-												elit. Saepe culpa iusto eius distinctio ex
-												praesentium omnis suscipit. Maxime amet pariatur,
-												placeat explicabo dolorem error nam, dignissimos
-												impedit, dolor odio tempora? Quis incidunt
-												architecto sequi enim placeat ipsam necessitatibus
-												vero excepturi? Mollitia blanditiis enim molestias
-												officia eligendi? Blanditiis officia consequuntur
-												ipsam vitae maiores laborum! Sed minima quaerat in
-												omnis error amet.
-											</p>
-											<hr />
-											<br />
-											<h3>Shipping</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit. Aliquam facere non sed cupiditate consectetur
-												quia incidunt, esse, exercitationem aut dicta
-												asperiores accusamus error nulla dignissimos
-												laboriosam reiciendis aperiam quis qui?
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="w-full md:w-1/3 tabs-adds tabs-adds-wrap">
-							<div class="tabs-adds-blocks review-tab">
-								<div class="tabs-adds-header border-color-border border-b">
-									Customer Reviews
-								</div>
-								<div class="review-message-wrapper">
-									<button id="add-review" class="btn">Add a review</button>
-									<p class="no-review mt-5">
-										Be the first to <a class="hover:underline">review</a> this
-										product
-									</p>
-								</div>
-							</div>
-						</div>
+
+					<div class="div_button"><a href="../account/address/index.html"><button class="btn btn-primary | mt-6 mb-3 w-full" type="submit">
+						VIEW ADDRESS(1)
+					</button></a></div>
+
 					</div>
-					<script src="../../js/ProductDetails.js"></script>
-				</section>
+				</div>
+				</div>
+              
+            
+		
+            
+            </section>
 				<!-- Cart Drawer -->
 				<div class="cart-container">
 					<div id="cart-drawer">
@@ -671,24 +375,45 @@
 												name="checkout">
 												<span>Check out</span>
 											</button>
-											<a class="underline mt-2" href="../../cart"
-												>View Cart</a
-											>
+											<a class="underline mt-2" href="../cart">View Cart</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<script src="../../js/CartDrawer.js"></script>
+					<script src="../js/CartDrawer.js"></script>
 				</div>
 			</main>
+            <script>
+                window.onload = loadData();
+                function loadData() {
+
+                        let firstName = localStorage.getItem("firstName");
+                        let lastName = localStorage.getItem("lastName");
+                        let email = localStorage.getItem("email");
+                        let password = localStorage.getItem("password");
+                        document.getElementById("firstName").innerText =firstName;
+                        document.getElementById("lastName").innerText =lastName;
+                        document.getElementById("fullName").innerText =firstName+" "+lastName;
+                        document.getElementById("email").innerText =email;
+                        document.getElementById("password").innerText =password;
+                        
+                    
+                    
+    
+                  
+                }
+                
+            </script>
+            <script>
+
+            </script>
 			<!-- Footer -->
 			<section class="section-footer">
 				<footer class="shop-footer">
 					<div class="footer_middle">
 						<div class="container">
-							<!-- Desktop Footer -->
 							<div
 								class="footer_accordion | flex-wrap lg:flex-nowrap -mx-4 lg:-mx-5 hidden md:flex">
 								<div
@@ -787,12 +512,12 @@
 													<a href="#"> Track Your Order </a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/shipping-return">
+													<a href="../pages/shipping-return">
 														Shipping &amp; Returns
 													</a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/reviews">
+													<a href="../pages/reviews">
 														Customer Reviews
 													</a>
 												</li>
@@ -810,19 +535,17 @@
 										<ul class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/security-privacy">
+													<a href="../pages/security-privacy">
 														Security &amp; Privacy
 													</a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/terms-conditions">
+													<a href="../pages/terms-conditions">
 														Terms of Use
 													</a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/contact-us">
-														Contact Us
-													</a>
+													<a href="../pages/contact-us"> Contact Us </a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
 													<a href="#">Our DISCORD</a>
@@ -1060,12 +783,12 @@
 													<a href="#"> Track Your Order </a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/shipping-return">
+													<a href="../pages/shipping-return">
 														Shipping &amp; Returns
 													</a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/reviews">
+													<a href="../pages/reviews">
 														Customer Reviews
 													</a>
 												</li>
@@ -1103,19 +826,17 @@
 										<ul class="accordion-content block-content">
 											<div class="pb-5 md:pb-0">
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/security-privacy">
+													<a href="../pages/security-privacy">
 														Security &amp; Privacy
 													</a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/terms-conditions">
+													<a href="../pages/terms-conditions">
 														Terms of Use
 													</a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
-													<a href="../../pages/contact-us">
-														Contact Us
-													</a>
+													<a href="../pages/contact-us"> Contact Us </a>
 												</li>
 												<li class="link-lv2 | leading-8 hover-underline">
 													<a href="#">Our DISCORD</a>
@@ -1253,7 +974,7 @@
 								<div
 									class="footer_right | w-full flex flex-wrap justify-center md:justify-start lg:justify-center items-center lg:w-auto">
 									<div class="payment-icons flex justify-center lg:justify-start">
-										<span class="hidden"> Payment options:{" "} </span>
+										<span class="hidden"> Payment options: </span>
 										<ul class="flex flex-wrap -m-2.5">
 											<li class="m-2.5">
 												<svg
@@ -1457,10 +1178,9 @@
 						</div>
 					</div>
 				</footer>
-				<script src="../../js/Accordion.js"></script>
+				<script src="../js/Accordion.js"></script>
 			</section>
 		</div>
-		<script src="../../js/scroll-animation.js"></script>
-		<script src="../../js/smoothscroll.min.js"></script>
+		<script src="../js/scroll-animation.js"></script>
 	</body>
 </html>
