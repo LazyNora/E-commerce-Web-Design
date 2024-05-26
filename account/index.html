@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="../css/Announcement.css" />
 		<link rel="stylesheet" href="../css/Navbar.css" />
 		<link rel="stylesheet" href="../css/Cart.css" />
-		<link rel="stylesheet" href="../css/account.css">
+		<link rel="stylesheet" href="../css/account.css" />
 		<link rel="stylesheet" href="../css/Footer.css" />
 
 		<style>
@@ -297,44 +297,47 @@
 			<!-- Main -->
 			<main role="main" id="MainContent">
 				<!-- Account -->
-                <div><h1 class="title">My Account</h1></div>
-				<div class="Customer">
-					<div class="customerNav">
-						<a href="" class="tab_item active">DashBoard</a>
-						<a href="" class="tab_item hover1">Address</a>
-						<a href="" class="tab_item hover1">Wishlist</a>
-						<a href="" class="tab_item hover1">Log out</a>
-					</div>
-				<div class="customerInfo">
-					<div> Hello <span id="firstName "></span> <span id="lastName"></span><span>( Not you ?) </span> <a href="">Log out</a></div>
-					<div><h2>Order History</h2>
-						<div></div>
-					</div>
-					<div class="account_detail">
-						<h2>Account Details</h2>
-						<div>
-							<div>Name</div>
-							<div id="fullName"></div>
-
+				<section class="section-account">
+					<div><h1 class="title">My Account</h1></div>
+					<div class="Customer">
+						<div class="customerNav">
+							<a href="" class="tab_item active">DashBoard</a>
+							<a href="" class="tab_item hover1">Address</a>
+							<a href="" class="tab_item hover1">Wishlist</a>
+							<a href="" class="tab_item hover1">Log out</a>
 						</div>
-						<div>
-							<div>Email</div>
-							<div id="email"></div>
+						<div class="customerInfo">
+							<div>
+								Hello <span id="firstName "></span> <span id="lastName"></span
+								><span>( Not you ?) </span> <a href="">Log out</a>
+							</div>
+							<div>
+								<h2>Order History</h2>
+							</div>
+							<div class="account_detail">
+								<h2>Account Details</h2>
+								<div>
+									<div>Name</div>
+									<div id="fullName"></div>
+								</div>
+								<div>
+									<div>Email</div>
+									<div id="email"></div>
+								</div>
+							</div>
+
+							<div class="div_button">
+								<a href="../account/address/index.html">
+									<button
+										class="btn btn-primary | mt-6 mb-3 w-full"
+										type="submit">
+										VIEW ADDRESS(1)
+									</button>
+								</a>
+							</div>
 						</div>
 					</div>
-
-					<div class="div_button"><a href="../account/address/index.html"><button class="btn btn-primary | mt-6 mb-3 w-full" type="submit">
-						VIEW ADDRESS(1)
-					</button></a></div>
-
-					</div>
-				</div>
-				</div>
-              
-            
-		
-            
-            </section>
+				</section>
 				<!-- Cart Drawer -->
 				<div class="cart-container">
 					<div id="cart-drawer">
@@ -385,30 +388,21 @@
 					<script src="../js/CartDrawer.js"></script>
 				</div>
 			</main>
-            <script>
-                window.onload = loadData();
-                function loadData() {
-
-                        let firstName = localStorage.getItem("firstName");
-                        let lastName = localStorage.getItem("lastName");
-                        let email = localStorage.getItem("email");
-                        let password = localStorage.getItem("password");
-                        document.getElementById("firstName").innerText =firstName;
-                        document.getElementById("lastName").innerText =lastName;
-                        document.getElementById("fullName").innerText =firstName+" "+lastName;
-                        document.getElementById("email").innerText =email;
-                        document.getElementById("password").innerText =password;
-                        
-                    
-                    
-    
-                  
-                }
-                
-            </script>
-            <script>
-
-            </script>
+			<script>
+				window.onload = loadData();
+				function loadData() {
+					let firstName = localStorage.getItem("firstName");
+					let lastName = localStorage.getItem("lastName");
+					let email = localStorage.getItem("email");
+					let password = localStorage.getItem("password");
+					document.getElementById("firstName").innerText = firstName;
+					document.getElementById("lastName").innerText = lastName;
+					document.getElementById("fullName").innerText = firstName + " " + lastName;
+					document.getElementById("email").innerText = email;
+					document.getElementById("password").innerText = password;
+				}
+			</script>
+			<script></script>
 			<!-- Footer -->
 			<section class="section-footer">
 				<footer class="shop-footer">
