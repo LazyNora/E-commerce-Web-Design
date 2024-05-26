@@ -1,0 +1,59 @@
+.title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    padding-bottom: 3.5rem;
+    padding-top: 3.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+.customerInfo h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom:30px;
+    padding-top:30px;
+    font-weight:bold;
+}
+/*left*/
+.Customer {
+    width: 80%;
+    margin:0 auto;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.customerNav {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    width: 15%;
+    border-right: 2px solid rgb(222,222,222);
+}
+.tab_item {
+    display: block;
+    padding-bottom: 10px;
+
+}
+.hover1:hover {
+    font-weight: 100
+}
+.active {
+    font-weight: bold;
+}
+
+/*right*/
+.customerInfo {
+    width: 75%;
+    padding-left: 100px
+    
+}
+
+.account_detail div div{
+    border-bottom: 1px solid rgb(222,222,222);
+    line-height: 60px;
+}
+.div_button {
+    width: 200px;
+}
+
+.Customer button {
+    margin-top: 50px;
+}

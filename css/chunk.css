@@ -786,6 +786,7 @@ button.btn.btn-plain:hover {
 .select-items::-webkit-scrollbar-thumb,
 .custom_scroll::-webkit-scrollbar-thumb {
 	background: #ebebebc6;
+	background: #ebebebc6;
 }
 .select-items::-webkit-scrollbar-thumb:hover,
 .custom_scroll::-webkit-scrollbar-thumb:hover {
