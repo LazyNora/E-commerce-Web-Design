@@ -308,7 +308,7 @@
 						</div>
 						<div class="customerInfo">
 							<div>
-								Hello <span id="firstName "></span> <span id="lastName"></span
+								Hello <span id="firstName"></span> <span id="lastName"></span
 								><span>( Not you ?) </span> <a href="">Log out</a>
 							</div>
 							<div>
@@ -394,12 +394,10 @@
 					let firstName = localStorage.getItem("firstName");
 					let lastName = localStorage.getItem("lastName");
 					let email = localStorage.getItem("email");
-					let password = localStorage.getItem("password");
 					document.getElementById("firstName").innerText = firstName;
 					document.getElementById("lastName").innerText = lastName;
 					document.getElementById("fullName").innerText = firstName + " " + lastName;
 					document.getElementById("email").innerText = email;
-					document.getElementById("password").innerText = password;
 				}
 			</script>
 			<script></script>
