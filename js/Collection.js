@@ -91,15 +91,14 @@ window.addEventListener("resize", () => {
 		gridColumn_view.querySelector("button[data-column='2']").classList.add("active");
 		localStorage.setItem("gridColumnViews", "2");
 	}
-  if(window.innerWidth < 1024 && gridColumnView === 5){
-    productListing.classList.remove("col-" + gridColumnView);
-    gridColumnView = 4;
-    productListing.classList.add("col-4");
-    gridBtns.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-    gridColumn_view.querySelector("button[data-column='4']").classList.add("active");
-    localStorage.setItem("gridColumnViews", "4");
-  }
-	console.log(window.innerWidth);
+	if (window.innerWidth < 1024 && gridColumnView === 5) {
+		productListing.classList.remove("col-" + gridColumnView);
+		gridColumnView = 4;
+		productListing.classList.add("col-4");
+		gridBtns.forEach((btn) => {
+			btn.classList.remove("active");
+		});
+		gridColumn_view.querySelector("button[data-column='4']").classList.add("active");
+		localStorage.setItem("gridColumnViews", "4");
+	}
 });

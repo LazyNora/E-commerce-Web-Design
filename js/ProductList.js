@@ -1,6 +1,6 @@
 import { productsData } from "./productsData.min.js";
 
-const defaultQuery = collectionQuery || {
+const defaultQuery = {
 	collection: "",
 	sortby: "created-descending",
 	filter: [],
@@ -137,87 +137,172 @@ function collectionGetFucntion(collection) {
 	}
 }
 
+const priceGap = 10;
+
 function initFilter() {
 	let filterData = {
+		availability: [],
+		priceRange: { min: null, max: null },
 		brand: [],
 		productType: [],
-		availability: [],
 	};
-	//each filters have value, label and quantity of products
+	const displayLabel = {
+		availability: "Availability",
+		priceRange: "Price Range",
+		brand: "Brand",
+		productType: "Product Type",
+	};
+	//each filters have value and number of products
 	products.forEach((product) => {
 		//brand
-		if (!filterData.brand.includes(product.vendor)) {
-			filterData.brand.push({
-				value: product.vendor,
-				label: product.vendor,
-				quantity: 1,
-			});
+		if (!filterData.brand.find((item) => item.value === product.vendor)) {
+			filterData.brand.push({ value: product.vendor, count: 1 });
 		} else {
-			filterData.brand.find((item) => item.value === product.vendor).quantity++;
+			filterData.brand.find((item) => item.value === product.vendor).count++;
 		}
 		//productType
-		if (!filterData.productType.includes(product.type)) {
-			filterData.productType.push({
-				value: product.type,
-				label: product.type,
-				quantity: 1,
-			});
+		if (!filterData.productType.find((item) => item.value === product.type)) {
+			filterData.productType.push({ value: product.type, count: 1 });
 		} else {
-			filterData.productType.find((item) => item.value === product.type).quantity++;
+			filterData.productType.find((item) => item.value === product.type).count++;
 		}
 		//availability
-		if (!filterData.availability.includes(product.availability)) {
-			filterData.availability.push({
-				value: product.availability,
-				label: product.availability,
-				quantity: 1,
-			});
+		if (!filterData.availability.find((item) => item.value === product.available)) {
+			filterData.availability.push({ value: product.available, count: 1 });
 		} else {
-			filterData.availability.find((item) => item.value === product.availability).quantity++;
+			filterData.availability.find((item) => item.value === product.available).count++;
+		}
+		//priceRange
+		if (!filterData.priceRange.min || product.price < filterData.priceRange.min) {
+			filterData.priceRange.min = product.price;
+		}
+		if (!filterData.priceRange.max || product.price > filterData.priceRange.max) {
+			filterData.priceRange.max = product.price;
 		}
 	});
 
 	console.log(filterData);
-	// // create filter elements
-	// const filterContainer = document.querySelector(".sidebar");
-	// const filterContent = document.createElement("div");
-	// filterContent.classList.add("sidebar-content", "overscroll-contain", "h-full");
-	// filterContent.innerHTML = `
-	// <h3 class="text-3xl p-5 font-medium xl:px-0 xl:mb-8 xl:py-0">Filters</h3>
-	// <div class="sidebar-close cursor-pointer absolute top-4 right-4 xl:hidden">
-	// 	<svg class="w-[24px] h-[24px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-	// 		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-	// 	</svg>
-	// </div>
-	// <div class="p-5 pt-0 xl:p-0">
-	// 	<div class="filter-wrapper opacity-100">
-	// 		<form id="FilterForm" class="pb-4" action="" method="get">
-	// 			${Object.keys(filterData)
-	// 				.map((key, index) => {
-	// 					return `
-	// 				<div class="accordion-item" data-index="${index}">
-	// 					<div class="mb-1.5 accordion-button text-lg"><span>${key}</span></div>
-	// 					<div class="accordion-content">
-	// 						<ul role="list">
-	// 							${filterData[key]
-	// 								.map((item) => {
-	// 									return `
-	// 								<li>
-	// 								</li>`;
-	// 								})
-	// 								.join("")}
-	// 						</ul>
-	// 					</div>
-	// 				</div>
-	// 				`;
-	// 				})
-	// 				.join("")}
-	// 		</form>
-	// 	</div>
-	// </div>
-	// `;
+	// create filter elements
+	const filterContainer = document.querySelector(".sidebar");
+	const filterContent = document.createElement("div");
+	filterContent.classList.add("sidebar-content", "overscroll-contain", "h-full");
+	filterContent.innerHTML = `
+	<h3 class="text-3xl p-5 font-medium xl:px-0 xl:mb-8 xl:py-0">Filters</h3>
+	<div class="sidebar-close cursor-pointer absolute top-4 right-4 xl:hidden">
+		<svg class="w-[24px] h-[24px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+		</svg>
+	</div>
+	<div class="p-5 pt-0 xl:p-0">
+		<div class="filter-wrapper opacity-100">
+			<form id="FilterForm" class="pb-4" action="" method="get">
+				${Object.keys(filterData)
+					.map((key, index) => {
+						return `
+					<div class="accordion-item" data-index="${index}">
+						<div class="mb-1.5 accordion-button text-lg" data-state="${index < 2 ? "open" : "closed"}"><span>${displayLabel[key]}</span></div>
+						<div class="accordion-content overflow-hidden" data-state="${index < 2 ? "open" : "closed"}">
+							${
+								key === "priceRange"
+									? `
+									<price-range class="price-range" data-price-max="${filterData.priceRange.max / 100}" data-price-gap="${priceGap}" style="--from: 0.0%; --to: 100.0%;">
+										<div class="price__range-group">
+											<input type="range" data-type="min-range" aria-label="From" class="price__range price__range--min" min="0" max="${filterData.priceRange.max / 100}" value="0">
+											<input type="range" data-type="max-range" aria-label="To" class="price__range price__range--max" min="0" max="${filterData.priceRange.max / 100}" value="${filterData.priceRange.max / 100}">
+										</div>
+										<div class="price__inputs">
+											<div class="price__field">
+												<span class="visually-hidden">From</span>
+												<span class="price__field-currency">$</span>
+												<input class="form-control" data-type="min-input" name="filter.price.min" type="number" placeholder="0" min="0" max="${filterData.priceRange.max / 100}">
+											</div>
+											<span class="price__to">To</span>
+											<div class="price__field">
+												<span class="visually-hidden">To</span>
+												<span class="price__field-currency">$</span>
+												<input class="form-control" data-type="max-input" name="filter.price.max" type="number" placeholder="${filterData.priceRange.max / 100}" min="0" max="${filterData.priceRange.max / 100}">
+											</div>
+										</div>
+                	</price-range>`
+									: `<ul role="list">
+								${filterData[key]
+									.map((item, index2) => {
+										return `
+									<li>
+										<label for="Filter-${key}-${index2 + 1}" class="filter-checkbox">
+											<input type="checkbox" name="filter.${key}" id="Filter-${key}-${index2 + 1}" value="${item.value}">
+											<span class="ml-4 filter-label">${key === "availability" ? (item.value ? "In stock" : "Out of stock") : item.value}</span>
+											<span class="ml-1 filter-products-count">(${item.count})</span>
+										</label>
+									</li>`;
+									})
+									.join("")}
+							</ul>`
+							}
+						</div>
+					</div>
+					`;
+					})
+					.join("")}
+			</form>
+		</div>
+	</div>
+	`;
+	filterContainer.appendChild(filterContent);
+
+	const FilterForm = document.getElementById("FilterForm");
+	FilterForm.querySelectorAll(".accordion-item").forEach((item) => {
+		const button = item.querySelector(".accordion-button");
+		const content = item.querySelector(".accordion-content");
+		content.classList.add(
+			"data-[state=closed]:animate-accordion-up",
+			"data-[state=open]:animate-accordion-down"
+		);
+		if (content.dataset.state === "closed") {
+			content.style.height = "0";
+		}
+		button.addEventListener("click", () => {
+			const state = button.dataset.state === "open" ? "closed" : "open";
+			content.style.setProperty("--accordion-content-height", `${content.scrollHeight}px`);
+			button.dataset.state = state;
+			content.dataset.state = state;
+		});
+	});
+
+	const section = document.querySelector(".section-collection");
+	const sideBar = section.querySelector(".sidebar");
+	const sideBarContent = sideBar.querySelector(".sidebar-content");
+	const sideBarClose = sideBar.querySelector(".sidebar-close");
+	const sideBarOpen = section.querySelector(".sidebar-open");
+
+	function openSidebarFilter() {
+		sideBar.style.display = "block";
+		window.requestAnimationFrame(() => {
+			sideBar.style.setProperty("--tw-bg-opacity", "0.5");
+			sideBarContent.style.setProperty("--tw-translate-x", "0");
+		});
+		section.classList.add("sidebar-open");
+	}
+
+	function closeSidebarFilter() {
+		section.classList.remove("sidebar-open");
+		(window.innerWidth < 1280 || sideBar.dataset.type === "fixed") &&
+			sideBarContent.style.setProperty("--tw-translate-x", "-100%");
+		sideBar.style.removeProperty("--tw-bg-opacity");
+		setTimeout(() => sideBar.style.removeProperty("display"), 300);
+	}
+
+	sideBarOpen.addEventListener("click", openSidebarFilter);
+	sideBarClose.addEventListener("click", closeSidebarFilter);
+	sideBar.addEventListener("click", (event) => {
+		if (event.target === sideBar) {
+			closeSidebarFilter();
+		}
+	});
 }
 
 function queryProducts(query) {
 	let filteredProducts = products;
 }
+
+init();
