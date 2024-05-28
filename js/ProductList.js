@@ -44,17 +44,13 @@ const availableFilters = {
 	portability: ["Portable", "Desktop"],
 };
 
-let availability = []; // 0 = all, 1 = in stock, 2 = out of stock
+let availability = []; // true = in stock, false = out of stock
 let priceRange = {
 	min: null,
 	max: null,
 }; // [min, max]
 let brand = [];
 let productType = [];
-let driverType = [];
-let connectivity = [];
-let wearingStyle = [];
-let portability = [];
 
 // get {name} from "collection/{name}/ from URL, remove "index.html" from the path if exists
 const collection = window.location.pathname
@@ -137,51 +133,73 @@ function collectionGetFucntion(collection) {
 	}
 }
 
-const priceGap = 10;
-
-function initFilter() {
-	let filterData = {
+function getFilterData() {
+	let newFilterData = {
 		availability: [],
 		priceRange: { min: null, max: null },
 		brand: [],
 		productType: [],
 	};
+
+	//each filters have value and number of products
+	products.forEach((product) => {
+		//brand
+		if (!newFilterData.brand.find((item) => item.value === product.vendor)) {
+			newFilterData.brand.push({ value: product.vendor, count: 1 });
+		} else {
+			newFilterData.brand.find((item) => item.value === product.vendor).count++;
+		}
+		//productType
+		if (!newFilterData.productType.find((item) => item.value === product.type)) {
+			newFilterData.productType.push({ value: product.type, count: 1 });
+		} else {
+			newFilterData.productType.find((item) => item.value === product.type).count++;
+		}
+		//availability
+		if (
+			!newFilterData.availability.find((item) => item.value === product.available.toString())
+		) {
+			newFilterData.availability.push({ value: product.available.toString(), count: 1 });
+		} else {
+			newFilterData.availability.find((item) => item.value === product.available.toString())
+				.count++;
+		}
+		//priceRange
+		if (!newFilterData.priceRange.min || product.price < newFilterData.priceRange.min) {
+			newFilterData.priceRange.min = product.price;
+		}
+		if (!newFilterData.priceRange.max || product.price > newFilterData.priceRange.max) {
+			newFilterData.priceRange.max = product.price;
+		}
+	});
+
+	newFilterData.brand = newFilterData.brand.sort((a, b) => a.value.localeCompare(b.value));
+	newFilterData.productType = newFilterData.productType.sort((a, b) =>
+		a.value.localeCompare(b.value)
+	);
+
+	return newFilterData;
+}
+
+const priceGap = 300;
+let filterData = {
+	availability: [],
+	priceRange: { min: null, max: null },
+	brand: [],
+	productType: [],
+};
+
+function initFilter() {
 	const displayLabel = {
 		availability: "Availability",
 		priceRange: "Price Range",
 		brand: "Brand",
 		productType: "Product Type",
 	};
-	//each filters have value and number of products
-	products.forEach((product) => {
-		//brand
-		if (!filterData.brand.find((item) => item.value === product.vendor)) {
-			filterData.brand.push({ value: product.vendor, count: 1 });
-		} else {
-			filterData.brand.find((item) => item.value === product.vendor).count++;
-		}
-		//productType
-		if (!filterData.productType.find((item) => item.value === product.type)) {
-			filterData.productType.push({ value: product.type, count: 1 });
-		} else {
-			filterData.productType.find((item) => item.value === product.type).count++;
-		}
-		//availability
-		if (!filterData.availability.find((item) => item.value === product.available)) {
-			filterData.availability.push({ value: product.available, count: 1 });
-		} else {
-			filterData.availability.find((item) => item.value === product.available).count++;
-		}
-		//priceRange
-		if (!filterData.priceRange.min || product.price < filterData.priceRange.min) {
-			filterData.priceRange.min = product.price;
-		}
-		if (!filterData.priceRange.max || product.price > filterData.priceRange.max) {
-			filterData.priceRange.max = product.price;
-		}
-	});
 
+	filterData = getFilterData();
 	console.log(filterData);
+
 	// create filter elements
 	const filterContainer = document.querySelector(".sidebar");
 	const filterContent = document.createElement("div");
@@ -299,10 +317,77 @@ function initFilter() {
 			closeSidebarFilter();
 		}
 	});
+
+	FilterForm.addEventListener("change", (event) => {
+		const target = event.target;
+		const name = target.name;
+		const value = target.value;
+		if (name === "filter.availability") {
+			availability = target.checked
+				? [...availability, value === "true"]
+				: availability.filter((item) => item !== (value === "true"));
+		} else if (name === "filter.price.min") {
+			priceRange.min = target.value ? parseInt(target.value) : null;
+		} else if (name === "filter.price.max") {
+			priceRange.max = target.value ? parseInt(target.value) : null;
+		} else if (name === "filter.brand") {
+			brand = target.checked ? [...brand, value] : brand.filter((item) => item !== value);
+		} else if (name === "filter.productType") {
+			productType = target.checked
+				? [...productType, value]
+				: productType.filter((item) => item !== value);
+		} else if (target.classList.contains("price__range")) {
+			priceRange.min = parseInt(FilterForm.querySelector(".price__range--min").value);
+			priceRange.max = parseInt(FilterForm.querySelector(".price__range--max").value);
+		}
+		console.log(availability, priceRange, brand, productType);
+		filterProducts();
+		updateFilter();
+	});
 }
 
-function queryProducts(query) {
-	let filteredProducts = products;
+function filterProducts() {
+	products = productsData.filter((product) => {
+		//filter and count the number of products of each filter
+		if (availability.length && !availability.includes(product.available)) {
+			return false;
+		}
+		if (priceRange.min && product.price < priceRange.min) {
+			return false;
+		}
+		if (priceRange.max && product.price > priceRange.max) {
+			return false;
+		}
+		if (brand.length && !brand.includes(product.vendor)) {
+			return false;
+		}
+		if (productType.length && !productType.includes(product.type)) {
+			return false;
+		}
+		return true;
+	});
+}
+
+function updateFilter() {
+	let newFilterData = getFilterData();
+	console.log(newFilterData);
+	document.querySelectorAll(".filter-checkbox").forEach((item) => {
+		const input = item.querySelector("input");
+		const label = item.querySelector(".filter-label");
+		const count = item.querySelector(".filter-products-count");
+		const key = input.name.split(".")[1];
+		const value = input.value;
+		const filter = newFilterData[key].find((item) => item.value === value);
+		if (!filter) {
+			count.textContent = "(0)";
+			item.classList.add("checkbox--disabled");
+			input.disabled = true;
+		} else {
+			item.classList.remove("checkbox--disabled");
+			count.textContent = `(${filter.count})`;
+			input.disabled = false;
+		}
+	});
 }
 
 init();

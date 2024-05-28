@@ -56,6 +56,16 @@ class priceRange extends HTMLElement {
 		this.style.setProperty("--to", (100 * maxRange.value) / this.priceMax + "%");
 	}
 	onInputChange(event) {
+		if (event.currentTarget.dataset.type === "max-input") {
+			event.currentTarget.value - this.domNodes.minInput.value >= this.priceGap
+				? (this.domNodes.maxInput.value = currentTarget.value)
+				: (this.domNodes.maxInput.value =
+						Number(this.domNodes.minInput.value) + Number(this.priceGap));
+		} else if (event.currentTarget.dataset.type === "min-input") {
+			this.domNodes.maxInput.value - event.currentTarget.value >= this.priceGap
+				? (this.domNodes.minInput.value = event.currentTarget.value)
+				: (this.domNodes.minInput.value = this.domNodes.maxInput.value - this.priceGap);
+		}
 		this.adjustToValidValues(event.currentTarget);
 		this.setMinAndMaxValue();
 		this.updateSliderValue();
@@ -77,11 +87,8 @@ class priceRange extends HTMLElement {
 		const value = Number(target.value);
 		const min = Number(target.getAttribute("min"));
 		const max = Number(target.getAttribute("max"));
-		console.log(value, min, max);
 		value < min && (target.value = min);
-		console.log(target.value);
 		value > max && (target.value = max);
-		console.log(target.value);
 	}
 	updateSliderValue() {
 		const {
