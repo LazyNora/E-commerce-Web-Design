@@ -322,27 +322,31 @@ function initFilter() {
 		const target = event.target;
 		const name = target.name;
 		const value = target.value;
+		const key = null;
 		if (name === "filter.availability") {
 			availability = target.checked
 				? [...availability, value === "true"]
 				: availability.filter((item) => item !== (value === "true"));
+			key = "availability";
 		} else if (name === "filter.price.min") {
 			priceRange.min = target.value ? parseInt(target.value) : null;
 		} else if (name === "filter.price.max") {
 			priceRange.max = target.value ? parseInt(target.value) : null;
 		} else if (name === "filter.brand") {
 			brand = target.checked ? [...brand, value] : brand.filter((item) => item !== value);
+			key = "brand";
 		} else if (name === "filter.productType") {
 			productType = target.checked
 				? [...productType, value]
 				: productType.filter((item) => item !== value);
+			key = "productType";
 		} else if (target.classList.contains("price__range")) {
 			priceRange.min = parseInt(FilterForm.querySelector(".price__range--min").value);
 			priceRange.max = parseInt(FilterForm.querySelector(".price__range--max").value);
 		}
 		console.log(availability, priceRange, brand, productType);
 		filterProducts();
-		updateFilter();
+		updateFilter(key);
 	});
 }
 
@@ -368,8 +372,12 @@ function filterProducts() {
 	});
 }
 
-function updateFilter() {
+function updateFilter(key = null) {
 	let newFilterData = getFilterData();
+        if(key){
+		newFilterData[key] = filterData[key];
+	}
+
 	console.log(newFilterData);
 	document.querySelectorAll(".filter-checkbox").forEach((item) => {
 		const input = item.querySelector("input");
