@@ -322,7 +322,7 @@ function initFilter() {
 		const target = event.target;
 		const name = target.name;
 		const value = target.value;
-		const key = null;
+		let key = null;
 		if (name === "filter.availability") {
 			availability = target.checked
 				? [...availability, value === "true"]
@@ -372,7 +372,7 @@ function filterProducts() {
 	});
 }
 
-function updateFilter(key) {
+function updateFilter(key = null) {
 	let newFilterData = getFilterData();
         if(key){
 		newFilterData[key] = filterData[key];
