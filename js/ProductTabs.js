@@ -105,7 +105,6 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 		ib.classList.add("ib-column");
 		ib.innerHTML = `
         <div class="pcard cursor-pointer prod__block" data-product-handle="${item.handle}">
-        <div class="pcard cursor-pointer prod__block" data-product-handle="${item.handle}">
           <div class="pcard__img">
             <div class="image-box | overflow-hidden cursor-pointer relative">
               <div class="flex justify-center items-center">

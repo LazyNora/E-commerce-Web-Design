@@ -5,14 +5,6 @@ const selectItems = customSelect.querySelector(".select-items");
 const selectSelected = customSelect.querySelector(".select-selected");
 const selectSelectedText = selectSelected.querySelector(".select-selected__text");
 
-let sortByValue = localStorage.getItem("sortByValue");
-if (sortByValue) {
-	select.value = sortByValue;
-} else {
-	localStorage.setItem("sortByValue", options[options.length - 1].value);
-	select.value = options[options.length - 1].value;
-}
-
 selectSelectedText.textContent = select.options[select.selectedIndex].textContent;
 
 options.forEach((option) => {
@@ -30,7 +22,7 @@ options.forEach((option) => {
 		item.classList.add("same-as-selected");
 		selectSelectedText.textContent = item.textContent;
 		selectItems.classList.add("select-hide");
-		localStorage.setItem("sortByValue", select.value);
+		select.dispatchEvent(new Event("change"));
 	});
 
 	selectItems.appendChild(item);
@@ -41,7 +33,7 @@ selectSelected.addEventListener("click", () => {
 });
 
 select.addEventListener("change", () => {
-	selectSelectedText.textContent = tabs[select.value].title;
+	selectSelectedText.textContent = select.options[select.selectedIndex].textContent;
 });
 
 document.addEventListener("click", (event) => {
@@ -53,38 +45,42 @@ document.addEventListener("click", (event) => {
 const gridColumn_view = document.querySelector(".gridColumn-view");
 const gridBtns = gridColumn_view.querySelectorAll("button[data-column]");
 let gridColumnView = parseInt(localStorage.getItem("gridColumnViews"));
-const productListing = document.querySelector(".product-listing");
+
 if (!gridColumnView) {
+	const productListing = document.querySelector(".product-listing");
 	localStorage.setItem("gridColumnViews", "5");
 	gridColumnView = 5;
 	const btn = gridColumn_view.querySelector("button[data-column='5']");
 	btn.classList.add("active");
-	productListing.classList.add("col-5");
+	productListing?.classList.add("col-5");
 } else {
+	const productListing = document.querySelector(".product-listing");
 	gridColumn_view
 		.querySelector("button[data-column='" + gridColumnView + "']")
 		.classList.add("active");
-	productListing.classList.add("col-" + gridColumnView);
+	productListing?.classList.add("col-" + gridColumnView);
 }
 
 gridBtns.forEach((btn) => {
 	btn.addEventListener("click", () => {
+		const productListing = document.querySelector(".product-listing");
 		gridBtns.forEach((btn) => {
 			btn.classList.remove("active");
 		});
 		btn.classList.add("active");
-		productListing.classList.remove("col-" + gridColumnView);
+		productListing?.classList.remove("col-" + gridColumnView);
 		gridColumnView = parseInt(btn.dataset.column);
 		localStorage.setItem("gridColumnViews", gridColumnView);
-		productListing.classList.add("col-" + gridColumnView);
+		productListing?.classList.add("col-" + gridColumnView);
 	});
 });
 
 window.addEventListener("resize", () => {
+	const productListing = document.querySelector(".product-listing");
 	if (window.innerWidth < 768 && gridColumnView > 2) {
-		productListing.classList.remove("col-" + gridColumnView);
+		productListing?.classList.remove("col-" + gridColumnView);
 		gridColumnView = 2;
-		productListing.classList.add("col-2");
+		productListing?.classList.add("col-2");
 		gridBtns.forEach((btn) => {
 			btn.classList.remove("active");
 		});
@@ -92,9 +88,9 @@ window.addEventListener("resize", () => {
 		localStorage.setItem("gridColumnViews", "2");
 	}
 	if (window.innerWidth < 1024 && gridColumnView === 5) {
-		productListing.classList.remove("col-" + gridColumnView);
+		productListing?.classList.remove("col-" + gridColumnView);
 		gridColumnView = 4;
-		productListing.classList.add("col-4");
+		productListing?.classList.add("col-4");
 		gridBtns.forEach((btn) => {
 			btn.classList.remove("active");
 		});

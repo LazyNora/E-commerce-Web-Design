@@ -1286,6 +1286,10 @@ body {
   width: 1.5rem;
 }
 
+.w-6\/12 {
+  width: 50%;
+}
+
 .w-9 {
   width: 2.25rem;
 }
@@ -3735,6 +3739,10 @@ body {
     width: 66.666667%;
   }
 
+  .md\:w-4\/12 {
+    width: 33.333333%;
+  }
+
   .md\:w-\[450px\] {
     width: 450px;
   }
@@ -4019,6 +4027,11 @@ body {
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .xl\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .xl\:py-0 {
