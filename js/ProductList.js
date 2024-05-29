@@ -249,7 +249,7 @@ function initFilter() {
 									<li>
 										<label for="Filter-${key}-${index2 + 1}" class="filter-checkbox">
 											<input type="checkbox" name="filter.${key}" id="Filter-${key}-${index2 + 1}" value="${item.value}">
-											<span class="ml-4 filter-label">${key === "availability" ? (item.value ? "In stock" : "Out of stock") : item.value}</span>
+											<span class="ml-4 filter-label">${key === "availability" ? (item.value === "true" ? "In stock" : "Out of stock") : item.value}</span>
 											<span class="ml-1 filter-products-count">(${item.count})</span>
 										</label>
 									</li>`;
@@ -372,7 +372,7 @@ function filterProducts() {
 	});
 }
 
-function updateFilter(key = null) {
+function updateFilter(key) {
 	let newFilterData = getFilterData();
         if(key){
 		newFilterData[key] = filterData[key];
