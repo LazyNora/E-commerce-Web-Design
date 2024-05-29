@@ -198,6 +198,7 @@ function initFilter() {
 	};
 
 	filterData = getFilterData();
+	oldFilterData = filterData;
 	console.log(filterData);
 
 	// create filter elements
@@ -372,7 +373,7 @@ function filterProducts() {
 	});
 }
 
-let oldFilterData = filterData;
+let oldFilterData = null;
 
 function updateFilter(key = null) {
 	let newFilterData = getFilterData();
