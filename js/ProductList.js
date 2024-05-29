@@ -372,11 +372,14 @@ function filterProducts() {
 	});
 }
 
+let oldFilterData = fikterData;
+
 function updateFilter(key = null) {
 	let newFilterData = getFilterData();
         if(key){
-		newFilterData[key] = filterData[key];
+		newFilterData[key] = oldFilterData[key];
 	}
+	oldFilterData=newFilterData
 
 	console.log(newFilterData);
 	document.querySelectorAll(".filter-checkbox").forEach((item) => {
