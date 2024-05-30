@@ -2290,6 +2290,10 @@ html.prevent-scroll body {
 	z-index: -2;
 }
 
+.pcard .pcard__vendor {
+	color: #666;
+}
+
 .pcard__action {
 	position: absolute;
 	right: -0.25rem;

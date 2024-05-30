@@ -146,6 +146,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
           <div class="pcard__content text-left relative">
             <div class="mt-3 lg:mt-5">
               <div class="w-full max-w-full">
+								<span class="pcard__vendor block uppercase text-xs mb-2">${item.vendor}</span>
                 <h3 class="block text-base">
                   <a href="${currentPath + item.url}"
 									class="block mb-[5px] leading-normal pcard__name font-bold truncate-lines hover:text-color-secondary">
@@ -187,7 +188,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                     <path d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2zM6.16 6h12.15l-2.76 5H8.53zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2m10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2"></path>
                   </svg>
                 </span>
-                <span class="tooltip-content">${item.variants.length > 1 ? "Select options" : "Add to cart"}</span>
+                <span class="tooltip-content">${item.variants.length > 1 ? "Select options" : item.available ? "Add to cart" : "Sold out"}</span>
               </div>
             </button>
           </div>
@@ -546,7 +547,8 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				let text = args.length > 1 ? args[1] : 0;
 				let modifyClass = args.length > 2 && args[2] !== 0 ? args[2] : 1;
 
-				const productForms = document.querySelectorAll(`.product__actions`);
+				const productForms = document.querySelectorAll(`.product-form__actions`);
+				console.log(productForms);
 
 				if (productForms) {
 					productForms.forEach((productForm) => {
@@ -694,69 +696,72 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				quickview();
 			});
 		} else {
-			addtocartBtn.addEventListener("click", (e) => {
-				const productId = item.id;
-				const productTitle = item.title;
-				let currentVariant = item.variants[0];
-				const currentvariantId = currentVariant.id;
-				const variantPrice = currentVariant.price;
-				const variantOptions = currentVariant.options
-					.filter((option) => option !== "Default Title")
-					.map((option, index) => {
-						return {
-							name: item.options[index].name,
-							value: option,
-						};
-					});
-				const productImg = currentVariant.featured_image
-					? currentVariant.featured_image.src
-					: item.featured_image;
-				const productAlt = currentVariant.featured_image
-					? currentVariant.featured_image.alt
-					: item.title;
-				const productUrl = item.url;
+			if (item.available) {
+				addtocartBtn.addEventListener("click", (e) => {
+					const productId = item.id;
+					const productTitle = item.title;
+					let currentVariant = item.variants[0];
+					const currentvariantId = currentVariant.id;
+					const variantPrice = currentVariant.price;
+					const variantOptions = currentVariant.options
+						.filter((option) => option !== "Default Title")
+						.map((option, index) => {
+							return {
+								name: item.options[index].name,
+								value: option,
+							};
+						});
+					const productImg = currentVariant.featured_image
+						? currentVariant.featured_image.src
+						: item.featured_image;
+					const productAlt = currentVariant.featured_image
+						? currentVariant.featured_image.alt
+						: item.title;
+					const productUrl = item.url;
 
-				var currentCart = JSON.parse(localStorage.getItem("cart")) || {
-					items: [],
-					subtotal: 0,
-				};
+					var currentCart = JSON.parse(localStorage.getItem("cart")) || {
+						items: [],
+						subtotal: 0,
+					};
 
-				const itemIndex = currentCart.items.findIndex(
-					(item) => item.id === productId && item.variantId === currentvariantId
-				);
+					const itemIndex = currentCart.items.findIndex(
+						(item) => item.id === productId && item.variantId === currentvariantId
+					);
 
-				if (itemIndex === -1) {
-					currentCart.items.push({
-						id: productId,
-						title: productTitle,
-						price: variantPrice,
-						img: productImg,
-						alt: productAlt,
-						url: productUrl,
-						variantId: currentvariantId,
-						options_with_values: variantOptions ? variantOptions : null,
-						qty: 1,
-					});
-				} else {
-					currentCart.items[itemIndex].qty += 1;
-				}
+					if (itemIndex === -1) {
+						currentCart.items.push({
+							id: productId,
+							title: productTitle,
+							price: variantPrice,
+							img: productImg,
+							alt: productAlt,
+							url: productUrl,
+							variantId: currentvariantId,
+							options_with_values: variantOptions ? variantOptions : null,
+							qty: 1,
+						});
+					} else {
+						currentCart.items[itemIndex].qty += 1;
+					}
 
-				currentCart.subtotal = currentCart.items.reduce(
-					(acc, item) => acc + item.price * item.qty,
-					0
-				);
+					currentCart.subtotal = currentCart.items.reduce(
+						(acc, item) => acc + item.price * item.qty,
+						0
+					);
 
-				localStorage.setItem("cart", JSON.stringify(currentCart));
+					localStorage.setItem("cart", JSON.stringify(currentCart));
 
-				loadCart(true);
-				if (window.innerWidth < 768)
-					document.documentElement.classList.add("prevent-scroll");
-				cartWrapper.classList.remove("hidden");
-				setTimeout(() => {
-					cartContent.classList.remove("translate-x-full");
-					cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
-				}, 300);
-			});
+					loadCart(true);
+					if (window.innerWidth < 768)
+						document.documentElement.classList.add("prevent-scroll");
+					cartWrapper.classList.remove("hidden");
+					setTimeout(() => {
+						cartContent.classList.remove("translate-x-full");
+						cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
+					}, 300);
+				});
+			} else {
+			}
 		}
 	});
 });

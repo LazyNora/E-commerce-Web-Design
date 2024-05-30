@@ -12,15 +12,15 @@ const navList = [
 			},
 			{
 				text: "In-ear Headphone",
-				link: "/collections/headphones?wearing_style=In-ear+Headphone",
+				link: "/collections/in-ear-headphone",
 			},
 			{
 				text: "Over-ear Headphone",
-				link: "/collections/headphones?wearing_style=Over-ear+Headphone",
+				link: "/collections/over-ear-headphone",
 			},
 			{
 				text: "Wireless Headphone",
-				link: "/collections/headphones?connectivity=Wireless",
+				link: "/collections/wireless-headphones",
 			},
 		],
 	},
@@ -34,15 +34,15 @@ const navList = [
 			},
 			{
 				text: "Portable DACs",
-				link: "/collections/dac?portability=Portable",
+				link: "/collections/portable-dac",
 			},
 			{
 				text: "Desktop DACs",
-				link: "/collections/dac?portability=Desktop",
+				link: "/collections/desktop-dac",
 			},
 			{
 				text: "USB Interface",
-				link: "/collections/dac?product_type=USB+Interface",
+				link: "/collections/dac",
 			},
 			{
 				text: "MQA Support",
@@ -60,11 +60,11 @@ const navList = [
 			},
 			{
 				text: "Portable Headphone AMPs",
-				link: "/collections/headphone-amplifiers?portability=Portable",
+				link: "/collections/portable-headphone-amplifiers",
 			},
 			{
 				text: "Desktop Headphone AMPs",
-				link: "/collections/headphone-amplifiers?portability=Desktop",
+				link: "/collections/desktop-headphone-amplifiers",
 			},
 		],
 	},
@@ -82,25 +82,25 @@ const navList = [
 			},
 			{
 				text: "Headphone Cable",
-				link: "/collections/accessories?product_type=Headphone+Cable",
+				link: "/collections/accessories/?filter.productType=Headphone+Cable",
 			},
 			{
 				text: "Audio Cable",
-				link: "/collections/accessories?product_type=Audio+Cable",
+				link: "/collections/accessories/?filter.productType=Audio+Cables",
 			},
 			{
 				text: "Stand",
-				link: "/collections/accessories?product_type=Stand",
+				link: "/collections/accessories/?s=stand",
 			},
 			{
 				text: "Ear Pads & Tips",
-				link: "/collections/accessories?product_type=Ear+Tips",
+				link: "/collections/accessories/?s=eartips",
 			},
 		],
 	},
 	{
 		text: "By Brands",
-		link: "#",
+		link: "/collections/all",
 	},
 	{
 		text: "Guarantees",
@@ -536,7 +536,7 @@ import { formatMoney, moneyFormats } from "./currencyConvert.js";
 
 const updatePrice = () => {
 	const currency = localStorage.getItem("currency");
-	if (currency) {
+	if (currency && responseData) {
 		const priceElements = document.querySelectorAll("span.money");
 		priceElements.forEach((element) => {
 			const price = element.getAttribute("data-product-price");

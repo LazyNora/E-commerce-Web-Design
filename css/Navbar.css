@@ -115,6 +115,14 @@ ul.menu-nav {
 	left: auto;
 }
 
+.menu__dropdown {
+	box-shadow: 0 5px 15px #00000012;
+	right: auto;
+	transform: translate3d(0, 20px, 0) !important;
+	transform-origin: center !important;
+	transition: 0.1s ease-in-out !important;
+}
+
 .menu-item:hover .menu__dropdown {
 	opacity: 1;
 	pointer-events: auto !important;

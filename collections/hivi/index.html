@@ -10,6 +10,7 @@
 		<script src="../../js/swiper-bundle.min.js"></script>
 		<script>
 			const path = window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
+			const collectionName = "HIVI";
 		</script>
 		<link rel="shortcut icon" href="../../assets/logo.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="../../css/tailwind.css" />
@@ -314,7 +315,7 @@
 						class="collection-header overflow-hidden collection-header--small flex items-center justify-center relative w-full text-center">
 						<div class="collection-headerContent relative z-1 text-dark">
 							<h1 class="collection-header__title lg:text-[42px] text-2xl uppercase">
-								ALL PRODUCTS
+								HIVI
 							</h1>
 						</div>
 					</div>
@@ -340,23 +341,9 @@
 														d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"></path>
 												</svg>
 											</button>
-											<button
-												class="sortmb md:hidden flex items-center font-bold">
-												<span data-sortby-option>Date, new to old</span>
-												<svg
-													class="ml-2 w-[12px] h-[12px]"
-													fill="currentColor"
-													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 448 512">
-													<path
-														d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"></path>
-												</svg>
-											</button>
 										</div>
 										<div class="flex flex-1 items-center justify-between">
-											<div
-												class="font-bold hidden md:block"
-												data-toolbar-sorting>
+											<div class="font-bold" data-toolbar-sorting>
 												<div class="custom-select">
 													<select name="sort_by">
 														<option value="best-selling" data-index="0">
@@ -658,9 +645,6 @@
 									</div>
 								</div>
 								<div id="filter-by-items" class="flex flex-wrap items-center"></div>
-								<!-- <div class="text-center mt-10">
-									<div class="pagination"></div>
-								</div> -->
 							</div>
 						</div>
 						<div></div>
