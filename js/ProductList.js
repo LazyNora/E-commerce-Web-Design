@@ -714,6 +714,7 @@ function renderProducts() {
 													height="163"
 													loading="lazy"
 												/>
+												<div class="img-lazyloader"></div>
 											</div>
 										</div>
 										${
@@ -843,6 +844,7 @@ function renderProducts() {
 																		<div class="prod-media media-image" data-media-id=${media.id} data-media-width=${media.width} data-media-height=${media.height} data-media-alt=${media.alt} data-media-src=${media.src}>
 																			<div class="prod-image" style="aspect-ratio: 1.499">
 																				<img class="img-loaded" src=${path + media.src} sizes="946px" loading="lazy" width="946" height="631" alt=${media.alt} fetchpriority="auto">
+																				<div class="swiper-lazy-preloader"></div>
 																			</div>
 																		</div>
 																		`
@@ -1361,6 +1363,16 @@ function renderProducts() {
 			} else {
 			}
 		}
+	});
+
+	document.querySelectorAll(".pcard").forEach((item) => {
+		const imgs = item.querySelectorAll(".image-box img");
+		imgs.forEach((img) => {
+			img.addEventListener("load", () => {
+				img.classList.add("img-loaded");
+				img.parentElement.querySelector(".img-lazyloader")?.remove();
+			});
+		});
 	});
 }
 
