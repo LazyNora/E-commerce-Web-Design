@@ -42,7 +42,7 @@ const navList = [
 			},
 			{
 				text: "USB Interface",
-				link: "/collections/dac",
+				link: "/collections/dac/?s=usb",
 			},
 			{
 				text: "MQA Support",
@@ -227,15 +227,8 @@ navList.map((nav, index) => {
 			}
 	</li>`;
 });
+
 document.querySelector(".menu-nav").innerHTML = navDesktopInner;
-
-document.querySelector(".currency-selector").innerHTML = `
-	${Object.keys(supportCurrencies)
-		.map((currency) => `<option value=${currency}>${supportCurrencies[currency]}</option>`)
-		.join("")}
-	`;
-
-document.querySelector(".currency-selector").value = localStorage.getItem("currency") || "USD";
 
 document.querySelector(".menu-links").innerHTML = `
 	${navList
@@ -308,12 +301,62 @@ document.querySelector(".menu-links").innerHTML = `
 			}
 		</li>`
 		)
-		.join("")}`;
+		.join("")}
+		<div class="px-4 py-3">
+			<select name="currency-selector" id="currency-selector-mobile" class="currency-selector | w-[70px] border-none font-bold text-base"></select>
+		</div>`;
+
+const accountBlock = document.createElement("div");
+accountBlock.classList.add("account-block", "mt-16");
+accountBlock.innerHTML = `
+	<div class="block xl:hidden mb-16 p-4">
+		<div class="font-medium text-xl mb-6">My Account</div>
+			<a href="${currentPath}/login" class="btn btn-primary mb-3 my-account-btn w-full signin">LOG IN</a>
+			<a href="${currentPath}/register" class="btn btn-link my-account-btn register">Register</a>
+	</div>`;
+document.querySelector(".menu-content").appendChild(accountBlock);
 
 document.querySelectorAll(".menu-link").forEach((item) => {
 	if (item.querySelector(".sub-links")) {
 		item.addEventListener("click", subMenuOpen_click);
 		item.querySelector(".back-btn").addEventListener("click", subMenuClose_click);
+	}
+});
+
+document.querySelectorAll(".currency-selector").forEach(
+	(selector) =>
+		(selector.innerHTML = `${Object.keys(supportCurrencies)
+			.map((currency) => `<option value=${currency}>${supportCurrencies[currency]}</option>`)
+			.join("")}`)
+);
+
+document
+	.querySelectorAll(".currency-selector")
+	.forEach((selector) => (selector.value = localStorage.getItem("currency") || "USD"));
+
+document
+	.querySelector(".currency-selector:not(#currency-selector-mobile)")
+	.addEventListener("change", (e) => {
+		document.querySelector(".currency-selector#currency-selector-mobile").value =
+			e.target.value;
+	});
+
+document
+	.querySelector(".currency-selector#currency-selector-mobile")
+	.addEventListener("change", (e) => {
+		document.querySelector(".currency-selector:not(#currency-selector-mobile)").value =
+			e.target.value;
+	});
+
+window.addEventListener("resize", () => {
+	if (window.innerWidth > 1024) {
+		document.body.classList.remove("menu-opened");
+		document.documentElement.classList.remove("prevent-scroll");
+		document.querySelector(".menu-button").classList.remove("opened");
+		document.querySelector(".menu-content").classList.remove("sub-menu-open");
+		document
+			.querySelectorAll(".sub-links")
+			.forEach((subMenu) => subMenu.classList.add("hidden"));
 	}
 });
 
@@ -527,10 +570,12 @@ window.onload = () => {
 	localStorage.getItem("currency") || localStorage.setItem("currency", "USD");
 };
 
-document.querySelector(".currency-selector").addEventListener("change", (e) => {
-	localStorage.setItem("currency", e.target.value);
-	updatePrice();
-});
+document.querySelectorAll(".currency-selector").forEach((selector) =>
+	selector.addEventListener("change", (e) => {
+		localStorage.setItem("currency", e.target.value);
+		updatePrice();
+	})
+);
 
 import { formatMoney, moneyFormats } from "./currencyConvert.js";
 

@@ -140,6 +140,10 @@ ul.menu-nav {
 	width: 100%;
 }
 
+.menu-content {
+	height: 100svh;
+}
+
 @media screen and (min-width: 1440px) and (max-width: 2000px) {
 	.container-fluid {
 		max-width: 1570px !important;

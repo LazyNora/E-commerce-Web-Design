@@ -110,7 +110,6 @@ function URLParamsLoad() {
 
 function URLParamsUpdate() {
 	const urlParams = new URLSearchParams();
-	urlParams.set("sort_by", sortBySelect.value);
 	availability.forEach((item) => urlParams.append("filter.availability", item));
 	if (sortBySelect.value !== "created-descending") {
 		urlParams.set("sort_by", sortBySelect.value);
@@ -245,16 +244,13 @@ function renderFilterByItems() {
 }
 
 function collectionGetFunction(collection) {
-	// New arrivals min day
-	const newDate = new Date();
-	newDate.setDate(newDate.getDate() - 60);
 	switch (collection) {
 		case "all":
 			return productsData;
 		case "new-arrivals":
 			return productsData
-				.filter((product) => new Date(product.created_at) > newDate)
-				.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+				.sort((a, b) => new Date(b.published_at) - new Date(a.published_at))
+				.slice(0, 50);
 		case "best-sellers":
 			return productsData.sort((a, b) => b.sale_top - a.sale_top);
 		case "accessories":
@@ -768,7 +764,7 @@ function renderProducts() {
 								</div>
 							</div>
 						</div>
-						<div class="pcard__action">
+						<div class="pcard__action hidden md:block">
 							<button class="btn-quickview">
 								<div class="tooltip-item btn-icon block tooltip-top tooltip-style-1">
 									<span class="tooltip-icon block">

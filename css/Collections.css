@@ -489,3 +489,10 @@
 		width: 405px;
 	}
 }
+
+@media screen and (max-width: 1279px) and (max-width: 767px) {
+	.collection-container.sidebar__leftColumn .sidebar .sidebar-content,
+	.collection-container.sidebar__rightColumn .sidebar .sidebar-content {
+		width: calc(100% - 40px);
+	}
+}
