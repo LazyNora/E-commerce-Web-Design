@@ -24,7 +24,6 @@
 .customerNav {
     padding-right: 2rem;
     padding-left: 2rem;
-    width: 15%;
     border-right: 2px solid rgb(222,222,222);
 }
 .tab_item {
@@ -45,15 +44,35 @@
     padding-left: 100px
     
 }
+.account_detail .wrap{
+    border-bottom: 1px solid rgb(222,222,222);
+
+}
 
 .account_detail div div{
-    border-bottom: 1px solid rgb(222,222,222);
-    line-height: 60px;
+    line-height: 70px;
+
 }
 .div_button {
-    width: 200px;
+    width: 250px;
 }
 
 .Customer button {
-    margin-top: 50px;
+    margin-top: 30px;
+}
+.bold {
+    font-weight: bold;
+}
+.green_font {
+    background-color: rgb(234,247,230);
+    color: rgb(58,135,53);
+    padding: 10px 0 10px 10px;
+}
+/*///////// address  //////////*/
+#non_ptop {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.left {
+    width:300px ;
 }

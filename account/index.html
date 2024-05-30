@@ -306,26 +306,27 @@
 					<div class="Customer">
 						<div class="customerNav">
 							<a href="" class="tab_item active">DashBoard</a>
-							<a href="" class="tab_item hover1">Address</a>
+							<a href="../account/address/index.html" class="tab_item hover1">Address</a>
 							<a href="" class="tab_item hover1">Wishlist</a>
 							<a href="" class="tab_item hover1">Log out</a>
 						</div>
 						<div class="customerInfo">
 							<div>
-								Hello <span id="firstName"></span> <span id="lastName"></span
-								><span>( Not you ?) </span> <a href="">Log out</a>
+								Hello <span id="firstName" class="bold"></span> <span id="lastName" class="bold">  </span
+								><span>( Not you ?) </span> <a href="../login/index.html" class="bold">Log out</a>
 							</div>
 							<div>
-								<h2>Order History</h2>
+								<h2 >Order History</h2>
+								<p class="green_font"><a href=""><span class="bold">Make your first order. </span></a><span>You haven't placed any orders yet</span></p>
 							</div>
 							<div class="account_detail">
 								<h2>Account Details</h2>
-								<div class="flex">
-									<div>Name</div>
+								<div class="flex wrap">
+									<div class="left">Name</div>
 									<div id="fullName"></div>
 								</div>
-								<div  class="flex">
-									<div>Email</div>
+								<div  class="flex wrap">
+									<div class="left">Email</div>
 									<div id="email"></div>
 								</div>
 							</div>
@@ -333,8 +334,7 @@
 							<div class="div_button">
 								<a href="../account/address/index.html">
 									<button
-										class="btn btn-primary | mt-6 mb-3 w-full"
-										type="submit">
+										class="btn btn-primary | mt-6 mb-3 w-full">
 										VIEW ADDRESS(1)
 									</button>
 								</a>
