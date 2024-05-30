@@ -1,0 +1,51 @@
+.page-header {
+	padding: 2rem 1rem;
+	text-align: center;
+}
+
+.page-header__title {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
+
+.prose {
+	max-width: 100%;
+	font-style: 1rem;
+	line-height: 1.75;
+}
+
+.prose p {
+	margin-bottom: 0.75em;
+	margin-top: 0.75em;
+}
+
+.prose a {
+	text-decoration: none;
+	text-decoration: underline;
+}
+
+.prose a:hover {
+	color: #0070f3;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+	color: #000;
+	margin-bottom: 0.85em;
+	margin-top: 1em;
+}
+
+@media (min-width: 1024px) {
+	.page-header {
+		padding-bottom: 3.5rem;
+		padding-top: 3.5rem;
+	}
+	.page-header__title {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+}
