@@ -194,21 +194,22 @@
 			<main role="main" id="MainContent">
 				<!-- Account -->
 				<section class="section-account">
-					<div><h1 class="title">My Account</h1></div>
-					<div class="Customer">
-						<div class="customerNav">
+					<div class="page-header">
+						<h1 class="page-header__title">My Account</h1>
+					</div>
+					<div class="Customer | md:px-6 lg:px-12 xl:px-16 2xl:px-48 py-8 md:py-12 lg:py-20 flex">
+						<div class="customer__nav | md:px-4 xl:px-16 w-1/6 sf-customer__nav hidden md:flex flex-col border-r border-color-border">
 							<a href="../" class="tab_item hover1">DashBoard</a>
 							<a href="#" class="tab_item active">Address</a>
 							<a href="../../cart/" class="tab_item hover1">Cart</a>
 							<a href="../../logout/" class="tab_item hover1">Log out</a>
 						</div>
-						<div class="customerInfo">
-							<h2 id="non_ptop">Your Address</h2>
-							<div class="div_button">
-								<button class="btn btn-primary | mt-6 mb-3 w-full">ADD A NEW ADDRESS</button>
-								<br /><br />
+						<div class="customer__info | px-4 md:px-8 xl:px-16 2xl:px-24 md:w-5/6">
+							<div class="mb-10">
+								<h2 class="text-2xl font-bold mb-6">Your Address</h2>
+								<button class="btn btn-primary customer__add-new">ADD A NEW ADDRESS</button>
 							</div>
-							<div class="account_detail">
+							<div class="customer__address | mt-20 mb-24">
 								<h2>Address Details</h2>
 								<div class="flex wrap">
 									<div class="left">Name</div>
