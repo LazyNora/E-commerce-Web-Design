@@ -670,6 +670,20 @@ const handleSearchResults = (e) => {
 					.join("")
 			: `<p>Sorry, nothing found for <strong>${e.target.value}</strong>.</p>`;
 
+	if (filteredResults.length > 0) {
+		if (!searchResults.querySelector(".searchResults__view-all")) {
+			const newNode = document.createElement("div");
+			newNode.classList.add("searchResults__view-all");
+			searchResults.appendChild(newNode);
+		}
+		const searchResultsViewAll = searchResults.querySelector(".searchResults__view-all");
+		searchResultsViewAll.innerHTML = `
+			<a href="${path}/page/search-result/?s=${query}">View all results</a>
+		`;
+	} else {
+		searchResults.querySelector(".searchResults__view-all")?.remove();
+	}
+
 	updatePrice();
 };
 
@@ -683,6 +697,103 @@ document.addEventListener("click", (e) => {
 	} else if (e.target.closest(".search-input").value !== "") {
 		document.querySelector(".searchResults").classList.remove("hidden");
 	}
+});
+
+const handleSearchResultsMobile = (e) => {
+	const searchResults = document.querySelector(".search-popup__results");
+	const query = e.target.value.toLowerCase();
+	if (query === "") {
+		searchResults.innerHTML = "";
+		return;
+	}
+	const filteredResults = searchData.filter((item) => item.title.toLowerCase().includes(query));
+	filteredResults.sort((a, b) => {
+		let aTitle = a.title.toLowerCase();
+		let bTitle = b.title.toLowerCase();
+
+		if (aTitle.startsWith(query) && !bTitle.startsWith(query)) {
+			return -1;
+		} else if (!aTitle.startsWith(query) && bTitle.startsWith(query)) {
+			return 1;
+		} else {
+			return 0;
+		}
+	});
+	searchResults.innerHTML =
+		filteredResults.length > 0
+			? filteredResults
+					.slice(0, 8)
+					.map((item) => {
+						return `
+		<div class="searchResults__item">
+			<a href="${path + item.url}">
+				<div class="item__img">
+					<img src="${currentPath + item.img}" alt="${item.title}"/>
+				</div>
+				<div class="item__content">
+					<p class="item__title">${item.title}</p>
+					<div class="item__price">
+						<span class="money" data-product-price="${item.price}"><span>
+					</div>
+				</div>
+			</a>
+		</div>
+		`;
+					})
+					.join("")
+			: `<p>Sorry, nothing found for <strong>${e.target.value}</strong>.</p>`;
+
+	if (filteredResults.length > 0) {
+		if (!searchResults.querySelector(".searchResults__view-all")) {
+			const newNode = document.createElement("div");
+			newNode.classList.add("searchResults__view-all");
+			searchResults.appendChild(newNode);
+		}
+		const searchResultsViewAll = searchResults.querySelector(".searchResults__view-all");
+		searchResultsViewAll.innerHTML = `
+			<a href="${path}/page/search-result/?s=${query}">View all results</a>
+		`;
+	} else {
+		searchResults.querySelector(".searchResults__view-all")?.remove();
+	}
+
+	updatePrice();
+};
+
+document.querySelector("button.search-popup").addEventListener("click", (e) => {
+	const searchPopup = document.createElement("div");
+	searchPopup.classList.add("search-popup-modal");
+	searchPopup.innerHTML = `
+		<div class="search-popup__content">
+			<div class="search-popup__header">
+				<button class="search-popup__close"></button>
+				<input
+					type="text"
+					name="search-popup"
+					class="search-popup__input"
+					placeholder="Search products..."
+				/>
+				<button class="search-popup__clear"></button>
+			</div>
+			<div class="search-popup__results"></div>
+		</div>
+	`;
+	document.body.appendChild(searchPopup);
+	document.querySelector(".search-popup__input").focus();
+	document.documentElement.classList.add("prevent-scroll");
+	document
+		.querySelector(".search-popup__input")
+		.addEventListener("input", handleSearchResultsMobile);
+
+	document.querySelector(".search-popup__close").addEventListener("click", (e) => {
+		document.querySelector(".search-popup-modal").remove();
+		document.documentElement.classList.remove("prevent-scroll");
+	});
+	document.querySelector(".search-popup__clear").addEventListener("click", (e) => {
+		document.querySelector(".search-popup__input").value = "";
+		document.querySelector(".search-popup__input").focus();
+		document.querySelector(".search-popup__results").innerHTML = "";
+	});
 });
 
 // get a tag with "login" string in href attribute

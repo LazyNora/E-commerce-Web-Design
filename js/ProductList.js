@@ -483,6 +483,14 @@ function initFilter() {
 			sideBarContent.style.setProperty("--tw-translate-x", "0");
 		});
 		section.classList.add("sidebar-open");
+		window.onscroll = () => {
+			if (window.innerWidth < 1280 || sideBar.dataset.type === "fixed") {
+				// lock scroll when sidebar is open, only for mobile scroll to section-collection-header
+				window.scrollTo({
+					top: document.querySelector(".section-collection-header").offsetTop,
+				});
+			}
+		};
 	}
 
 	function closeSidebarFilter() {
@@ -491,6 +499,7 @@ function initFilter() {
 			sideBarContent.style.setProperty("--tw-translate-x", "-100%");
 		sideBar.style.removeProperty("--tw-bg-opacity");
 		setTimeout(() => sideBar.style.removeProperty("display"), 300);
+		window.onscroll = null;
 	}
 
 	sideBarOpen.addEventListener("click", openSidebarFilter);
