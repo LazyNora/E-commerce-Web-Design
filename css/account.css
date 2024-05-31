@@ -1,78 +1,77 @@
 .title {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    padding-bottom: 3.5rem;
-    padding-top: 3.5rem;
-    text-align: center;
-    font-weight: bold;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	padding-bottom: 3.5rem;
+	padding-top: 3.5rem;
+	text-align: center;
+	font-weight: bold;
 }
 .customerInfo h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding-bottom:30px;
-    padding-top:30px;
-    font-weight:bold;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	font-weight: bold;
 }
 /*left*/
 .Customer {
-    width: 80%;
-    margin:0 auto;
-    display: flex;
-    margin-top: 60px;
-    margin-bottom: 60px;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	margin-top: 60px;
+	margin-bottom: 60px;
 }
 .customerNav {
-    padding-right: 2rem;
-    padding-left: 2rem;
-    border-right: 2px solid rgb(222,222,222);
+	padding-right: 2rem;
+	padding-left: 2rem;
+	border-right: 2px solid rgb(222, 222, 222);
 }
 .tab_item {
-    display: block;
-    padding-bottom: 10px;
-
+	display: block;
+	padding-bottom: 10px;
+}
+.hover1 {
+	color: #555;
 }
 .hover1:hover {
-    font-weight: 100
+	color: #000;
 }
 .active {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 /*right*/
 .customerInfo {
-    width: 75%;
-    padding-left: 100px
-    
+	width: 75%;
+	padding-left: 100px;
 }
-.account_detail .wrap{
-    border-bottom: 1px solid rgb(222,222,222);
-
+.account_detail .wrap {
+	border-bottom: 1px solid rgb(222, 222, 222);
 }
 
-.account_detail div div{
-    line-height: 70px;
-
+.account_detail div div {
+	line-height: 70px;
 }
 .div_button {
-    width: 250px;
+	width: 250px;
 }
 
 .Customer button {
-    margin-top: 30px;
+	margin-top: 30px;
 }
 .bold {
-    font-weight: bold;
+	font-weight: bold;
 }
 .green_font {
-    background-color: rgb(234,247,230);
-    color: rgb(58,135,53);
-    padding: 10px 0 10px 10px;
+	background-color: rgb(234, 247, 230);
+	color: rgb(58, 135, 53);
+	padding: 10px 0 10px 10px;
 }
-/*///////// address  //////////*/
+
 #non_ptop {
-    padding-top: 0;
-    padding-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 .left {
-    width:300px ;
+	width: 300px;
 }

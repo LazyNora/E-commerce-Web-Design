@@ -154,11 +154,7 @@ const menuButton_click = (e) => {
 
 // Event handlers for opening the submenu on mobile
 const subMenuOpen_click = (e) => {
-	if (
-		e.target.classList.contains("back-btn") ||
-		e.target.parentElement.classList.contains("back-btn")
-	)
-		return;
+	if (e.target.classList.contains("back-btn") || e.target.parentElement.classList.contains("back-btn")) return;
 	const menuContent = document.querySelector(".menu-content");
 	if (!menuContent.classList.contains("sub-menu-open")) {
 		const subMenuToggle = e.target.closest(".menu-link");
@@ -191,11 +187,7 @@ navList.map((nav, index) => {
 				class="menu-link | px-4 py-5 flex items-center uppercase font-bold"
 				href=${currentPath + nav.link}>
 				${nav.text}
-				${
-					nav.submenu
-						? `<svg class="menu__arrow | ml-2 w-6 h-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg>`
-						: ""
-				}
+				${nav.submenu ? `<svg class="menu__arrow | ml-2 w-6 h-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg>` : ""}
 			</a>
 			${
 				nav.submenu
@@ -238,9 +230,7 @@ document.querySelector(".menu-links").innerHTML = `
 			class="menu-link | list-none flex items-center">
 			<a
 				href=${nav.submenu ? "#" : currentPath + nav.link}
-				class="w-full px-4 py-3 flex items-center justify-between relative ${
-					nav.submenu ? "pointer-events-none" : ""
-				}">
+				class="w-full px-4 py-3 flex items-center justify-between relative ${nav.submenu ? "pointer-events-none" : ""}">
 				<span>${nav.text}</span>
 			</a>
 			${
@@ -330,23 +320,15 @@ document.querySelectorAll(".currency-selector").forEach(
 			.join("")}`)
 );
 
-document
-	.querySelectorAll(".currency-selector")
-	.forEach((selector) => (selector.value = localStorage.getItem("currency") || "USD"));
+document.querySelectorAll(".currency-selector").forEach((selector) => (selector.value = localStorage.getItem("currency") || "USD"));
 
-document
-	.querySelector(".currency-selector:not(#currency-selector-mobile)")
-	.addEventListener("change", (e) => {
-		document.querySelector(".currency-selector#currency-selector-mobile").value =
-			e.target.value;
-	});
+document.querySelector(".currency-selector:not(#currency-selector-mobile)").addEventListener("change", (e) => {
+	document.querySelector(".currency-selector#currency-selector-mobile").value = e.target.value;
+});
 
-document
-	.querySelector(".currency-selector#currency-selector-mobile")
-	.addEventListener("change", (e) => {
-		document.querySelector(".currency-selector:not(#currency-selector-mobile)").value =
-			e.target.value;
-	});
+document.querySelector(".currency-selector#currency-selector-mobile").addEventListener("change", (e) => {
+	document.querySelector(".currency-selector:not(#currency-selector-mobile)").value = e.target.value;
+});
 
 window.addEventListener("resize", () => {
 	if (window.innerWidth > 1024) {
@@ -354,9 +336,7 @@ window.addEventListener("resize", () => {
 		document.documentElement.classList.remove("prevent-scroll");
 		document.querySelector(".menu-button").classList.remove("opened");
 		document.querySelector(".menu-content").classList.remove("sub-menu-open");
-		document
-			.querySelectorAll(".sub-links")
-			.forEach((subMenu) => subMenu.classList.add("hidden"));
+		document.querySelectorAll(".sub-links").forEach((subMenu) => subMenu.classList.add("hidden"));
 	}
 });
 
@@ -369,9 +349,7 @@ const getExchangeRate = async () => {
 		responseData = sessionExchangeRate;
 	} else {
 		// Nếu chưa lưu thì fetch từ API
-		const response = await fetch(
-			"https://v6.exchangerate-api.com/v6/45f265cd120e93555c364328/latest/USD"
-		).then((response) => response.json());
+		const response = await fetch("https://v6.exchangerate-api.com/v6/45f265cd120e93555c364328/latest/USD").then((response) => response.json());
 
 		// Nếu fetch thành công thì set vào state và lưu vào localStorage
 		if (response.result === "success") {
@@ -586,11 +564,7 @@ const updatePrice = () => {
 		priceElements.forEach((element) => {
 			const price = element.getAttribute("data-product-price");
 			const convertedPrice = price * responseData.conversion_rates[currency];
-			element.innerHTML = formatMoney(
-				convertedPrice,
-				moneyFormats[currency].money_with_currency_format,
-				currency
-			);
+			element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
 			element.addEventListener("mouseover", priceMouseOver);
 			element.addEventListener("mouseout", priceMouseOut);
 		});
@@ -687,17 +661,12 @@ const handleSearchResults = (e) => {
 	updatePrice();
 };
 
-document
-	.querySelector(".desktop-header .search-input")
-	.addEventListener("input", handleSearchResults);
+document.querySelector(".desktop-header .search-input").addEventListener("input", handleSearchResults);
 
 document.addEventListener("click", (e) => {
 	if (!e.target.closest(".search-form")) {
 		document.querySelector(".searchResults").classList.add("hidden");
-	} else if (
-		e.target.closest(".search-input") !== null &&
-		e.target.closest(".search-input").value !== ""
-	) {
+	} else if (e.target.closest(".search-input") !== null && e.target.closest(".search-input").value !== "") {
 		document.querySelector(".searchResults").classList.remove("hidden");
 	}
 });
@@ -784,9 +753,7 @@ document.querySelector("button.search-popup").addEventListener("click", (e) => {
 	document.body.appendChild(searchPopup);
 	document.querySelector(".search-popup__input").focus();
 	document.documentElement.classList.add("prevent-scroll");
-	document
-		.querySelector(".search-popup__input")
-		.addEventListener("input", handleSearchResultsMobile);
+	document.querySelector(".search-popup__input").addEventListener("input", handleSearchResultsMobile);
 
 	document.querySelector(".search-popup__close").addEventListener("click", (e) => {
 		document.querySelector(".search-popup-modal").remove();
@@ -808,7 +775,7 @@ document.querySelector("button.search-submit").addEventListener("click", (e) => 
 // get a tag with "login" string in href attribute
 document.querySelector(".header_top a[href*='login']")?.addEventListener("click", (e) => {
 	e.preventDefault();
-	if (localStorage.getItem("email")) {
+	if (localStorage.getItem("user")) {
 		window.location.href = `${currentPath}/account`;
 	} else {
 		window.location.href = `${currentPath}/login`;
