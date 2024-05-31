@@ -678,7 +678,7 @@ const handleSearchResults = (e) => {
 		}
 		const searchResultsViewAll = searchResults.querySelector(".searchResults__view-all");
 		searchResultsViewAll.innerHTML = `
-			<a href="${path}/page/search-result/?s=${query}">View all results</a>
+			<a href="${path}/pages/search-result/?s=${query}">View all results</a>
 		`;
 	} else {
 		searchResults.querySelector(".searchResults__view-all")?.remove();
@@ -694,7 +694,10 @@ document
 document.addEventListener("click", (e) => {
 	if (!e.target.closest(".search-form")) {
 		document.querySelector(".searchResults").classList.add("hidden");
-	} else if (e.target.closest(".search-input").value !== "") {
+	} else if (
+		e.target.closest(".search-input") !== null &&
+		e.target.closest(".search-input").value !== ""
+	) {
 		document.querySelector(".searchResults").classList.remove("hidden");
 	}
 });
@@ -751,7 +754,7 @@ const handleSearchResultsMobile = (e) => {
 		}
 		const searchResultsViewAll = searchResults.querySelector(".searchResults__view-all");
 		searchResultsViewAll.innerHTML = `
-			<a href="${path}/page/search-result/?s=${query}">View all results</a>
+			<a href="${path}/pages/search-result/?s=${query}">View all results</a>
 		`;
 	} else {
 		searchResults.querySelector(".searchResults__view-all")?.remove();
@@ -794,6 +797,12 @@ document.querySelector("button.search-popup").addEventListener("click", (e) => {
 		document.querySelector(".search-popup__input").focus();
 		document.querySelector(".search-popup__results").innerHTML = "";
 	});
+});
+
+document.querySelector("button.search-submit").addEventListener("click", (e) => {
+	e.preventDefault();
+	const searchInput = document.querySelector(".search-input");
+	window.location.href = `${path}/pages/search-result/?s=${searchInput.value}`;
 });
 
 // get a tag with "login" string in href attribute

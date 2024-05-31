@@ -33,6 +33,11 @@ function init() {
 			product.title.toLowerCase().includes(search.toLowerCase())
 		);
 	}
+	if (collection === "search-result" && search !== "" && search !== null) {
+		document.querySelector(".collection-header__title > span").innerHTML = `"` + search + `"`;
+	} else {
+		document.querySelector(".collection-header__title").innerHTML = "Search Result";
+	}
 	products = defaultProducts;
 	sortProducts();
 	initFilter();
@@ -246,6 +251,8 @@ function renderFilterByItems() {
 function collectionGetFunction(collection) {
 	switch (collection) {
 		case "all":
+			return productsData;
+		case "search-result":
 			return productsData;
 		case "new-arrivals":
 			return productsData
