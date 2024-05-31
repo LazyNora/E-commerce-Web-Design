@@ -684,3 +684,13 @@ document.addEventListener("click", (e) => {
 		document.querySelector(".searchResults").classList.remove("hidden");
 	}
 });
+
+// get a tag with "login" string in href attribute
+document.querySelector(".header_top a[href*='login']")?.addEventListener("click", (e) => {
+	e.preventDefault();
+	if (localStorage.getItem("email")) {
+		window.location.href = `${currentPath}/account`;
+	} else {
+		window.location.href = `${currentPath}/login`;
+	}
+});
