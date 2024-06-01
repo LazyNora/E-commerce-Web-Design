@@ -29,14 +29,14 @@ function init() {
 	const urlParams = new URLSearchParams(window.location.search);
 	search = urlParams.get("s");
 	if (search) {
-		defaultProducts = defaultProducts.filter((product) =>
-			product.title.toLowerCase().includes(search.toLowerCase())
-		);
+		defaultProducts = defaultProducts.filter((product) => product.title.toLowerCase().includes(search.toLowerCase()));
 	}
-	if (collection === "search-result" && search !== "" && search !== null) {
-		document.querySelector(".collection-header__title > span").innerHTML = `"` + search + `"`;
-	} else {
-		document.querySelector(".collection-header__title").innerHTML = "Search Result";
+	if (collection === "search-result") {
+		if (search !== "" && search !== null) {
+			document.querySelector(".collection-header__title > span").innerHTML = `"` + search + `"`;
+		} else {
+			document.querySelector(".collection-header__title").innerHTML = "Search Result";
+		}
 	}
 	products = defaultProducts;
 	sortProducts();
@@ -224,9 +224,7 @@ function renderFilterByItems() {
 			} else {
 				if (type === "availability") {
 					availability = availability.filter((item) => item !== value);
-					document.querySelector(
-						`input[name="filter.availability"][value="${value}"]`
-					).checked = false;
+					document.querySelector(`input[name="filter.availability"][value="${value}"]`).checked = false;
 				} else if (type === "priceRange") {
 					priceRange = {
 						min: null,
@@ -255,77 +253,45 @@ function collectionGetFunction(collection) {
 		case "search-result":
 			return productsData;
 		case "new-arrivals":
-			return productsData
-				.sort((a, b) => new Date(b.published_at) - new Date(a.published_at))
-				.slice(0, 50);
+			return productsData.sort((a, b) => new Date(b.published_at) - new Date(a.published_at)).slice(0, 50);
 		case "best-sellers":
-			return productsData.sort((a, b) => b.sale_top - a.sale_top);
+			return productsData.sort((a, b) => b.sale_top - a.sale_top).slice(0, 100);
 		case "accessories":
-			return productsData.filter(
-				(product) =>
-					product.type === "Accessories" ||
-					product.type === "Audio Cables" ||
-					product.type === "Headphone Accessories" ||
-					product.type === "Headphone Cable" ||
-					product.type === "Up Frequency Box"
-			);
+			return productsData.filter((product) => product.type === "Accessories" || product.type === "Audio Cables" || product.type === "Headphone Accessories" || product.type === "Headphone Cable" || product.type === "Up Frequency Box");
 		case "speaker-amplifiers":
-			return productsData.filter((product) =>
-				product.title.toLowerCase().includes("speaker amplifier")
-			);
+			return productsData.filter((product) => product.title.toLowerCase().includes("speaker amplifier"));
 		case "headphone-amplifiers":
-			return productsData.filter((product) =>
-				product.title.toLowerCase().includes("headphone amplifier")
-			);
+			return productsData.filter((product) => product.title.toLowerCase().includes("headphone amplifier"));
 		case "portable-headphone-amplifiers":
-			return productsData.filter(
-				(product) =>
-					product.title.toLowerCase().includes("headphone amplifier") &&
-					product.title.toLowerCase().includes("portable")
-			);
+			return productsData.filter((product) => product.title.toLowerCase().includes("headphone amplifier") && product.title.toLowerCase().includes("portable"));
 		case "desktop-headphone-amplifiers":
-			return productsData.filter(
-				(product) =>
-					product.title.toLowerCase().includes("headphone amplifier") &&
-					!product.title.toLowerCase().includes("portable")
-			);
+			return productsData.filter((product) => product.title.toLowerCase().includes("headphone amplifier") && !product.title.toLowerCase().includes("portable"));
 		case "dac":
 			return productsData.filter((product) => product.type === "DAC / AMP");
 		case "desktop-dac":
-			return productsData.filter(
-				(product) =>
-					product.type === "DAC / AMP" &&
-					!product.title.toLowerCase().includes("portable")
-			);
+			return productsData.filter((product) => product.type === "DAC / AMP" && !product.title.toLowerCase().includes("portable"));
 		case "portable-dac":
-			return productsData.filter(
-				(product) =>
-					product.type === "DAC / AMP" && product.title.toLowerCase().includes("portable")
-			);
+			return productsData.filter((product) => product.type === "DAC / AMP" && product.title.toLowerCase().includes("portable"));
 		case "headphones":
 			return productsData.filter((product) => product.type === "Headphones");
 		case "in-ear-headphone":
-			return productsData.filter((product) =>
-				product.title.toLowerCase().includes("in-ear headphone")
-			);
+			return productsData.filter((product) => product.title.toLowerCase().includes("in-ear headphone"));
 		case "wireless-headphones":
-			return productsData.filter((product) =>
-				product.title.toLowerCase().includes("wireless headphone")
-			);
+			return productsData.filter((product) => product.title.toLowerCase().includes("wireless headphone"));
 		case "over-ear-headphone":
-			return productsData.filter((product) =>
-				product.title.toLowerCase().includes("over-ear", "full-size")
-			);
+			return productsData.filter((product) => product.title.toLowerCase().includes("over-ear", "full-size"));
 		case "combo-assembling":
 			return productsData.filter((product) => product.tags.includes("combo"));
 		case "mqa-support":
 			return productsData.filter((product) => product.tags.includes("MQA"));
 		case "sales":
 			return productsData.filter((product) => product.tags.includes("Sales"));
+		case "fx-audio":
+			return productsData.filter((product) => product.vendor === "FXAUDIO");
+		case "bravo-audio":
+			return productsData.filter((product) => product.vendor === "BRAVO");
 		default:
-			return productsData.filter(
-				(product) => product.vendor.toLowerCase() === collection.replace("-", ".")
-			);
+			return productsData.filter((product) => product.vendor.toLowerCase() === collection.replaceAll("-", "."));
 	}
 }
 
@@ -337,8 +303,7 @@ function getAvailableFilter(products = defaultProducts) {
 			.map((value) => {
 				return {
 					value: value,
-					count: products.filter((product) => product.available.toString() === value)
-						.length,
+					count: products.filter((product) => product.available.toString() === value).length,
 				};
 			}),
 		priceRange: {
@@ -462,10 +427,7 @@ function initFilter() {
 	FilterForm.querySelectorAll(".accordion-item").forEach((item) => {
 		const button = item.querySelector(".accordion-button");
 		const content = item.querySelector(".accordion-content");
-		content.classList.add(
-			"data-[state=closed]:animate-accordion-up",
-			"data-[state=open]:animate-accordion-down"
-		);
+		content.classList.add("data-[state=closed]:animate-accordion-up", "data-[state=open]:animate-accordion-down");
 		if (content.dataset.state === "closed") {
 			content.style.height = "0";
 		}
@@ -494,8 +456,7 @@ function initFilter() {
 
 	function closeSidebarFilter() {
 		section.classList.remove("sidebar-open");
-		(window.innerWidth < 1280 || sideBar.dataset.type === "fixed") &&
-			sideBarContent.style.setProperty("--tw-translate-x", "-100%");
+		(window.innerWidth < 1280 || sideBar.dataset.type === "fixed") && sideBarContent.style.setProperty("--tw-translate-x", "-100%");
 		sideBar.style.removeProperty("--tw-bg-opacity");
 		setTimeout(() => sideBar.style.removeProperty("display"), 300);
 	}
@@ -514,9 +475,7 @@ function initFilter() {
 		const value = target.value;
 
 		if (name === "filter.availability") {
-			availability = target.checked
-				? [...availability, value]
-				: availability.filter((item) => item !== value);
+			availability = target.checked ? [...availability, value] : availability.filter((item) => item !== value);
 			page = 1;
 		} else if (name === "filter.price.min") {
 			priceRange.min = target.value ? parseInt(target.value) : null;
@@ -528,9 +487,7 @@ function initFilter() {
 			brand = target.checked ? [...brand, value] : brand.filter((item) => item !== value);
 			page = 1;
 		} else if (name === "filter.productType") {
-			productType = target.checked
-				? [...productType, value]
-				: productType.filter((item) => item !== value);
+			productType = target.checked ? [...productType, value] : productType.filter((item) => item !== value);
 			page = 1;
 		} else if (target.classList.contains("price__range")) {
 			priceRange.min = parseInt(FilterForm.querySelector(".price__range--min").value);
@@ -594,17 +551,12 @@ function getPosibleFilter() {
 
 	Object.keys(allFilterData).forEach((key) => {
 		if (key === "priceRange") return;
-		let notInCurrentFilter = allFilterData[key].filter(
-			(item) => !currentFilter[key].includes(item.value)
-		);
+		let notInCurrentFilter = allFilterData[key].filter((item) => !currentFilter[key].includes(item.value));
 		notInCurrentFilter.forEach((item) => {
 			let newFilter = { ...currentFilter };
 			newFilter[key] = [...currentFilter[key], item.value];
 			let newProducts = allProducts.filter((product) => {
-				if (
-					newFilter.availability.length &&
-					!newFilter.availability.includes(product.available.toString())
-				) {
+				if (newFilter.availability.length && !newFilter.availability.includes(product.available.toString())) {
 					return false;
 				}
 				if (newFilter.priceRange.min && product.price < newFilter.priceRange.min * 100) {
@@ -654,8 +606,7 @@ function updateFilter() {
 		const value = input.value;
 		const filter = newFilterData[key].find((item) => item.value === value);
 		const inCurrent = currentFilter[key].includes(value);
-		const posible =
-			posibleFilter[key] && posibleFilter[key].find((item) => item.value === value);
+		const posible = posibleFilter[key] && posibleFilter[key].find((item) => item.value === value);
 		if (filter) {
 			input.disabled = false;
 			item.classList.remove("checkbox--disabled");
@@ -686,13 +637,7 @@ function renderProducts() {
 	const end = start + limit;
 	const list = products.slice(start, end);
 	const productListing = document.createElement("div");
-	productListing.classList.add(
-		"product-listing",
-		"relative",
-		localStorage.getItem("gridColumnViews")
-			? `col-${localStorage.getItem("gridColumnViews")}`
-			: "col-5"
-	);
+	productListing.classList.add("product-listing", "relative", localStorage.getItem("gridColumnViews") ? `col-${localStorage.getItem("gridColumnViews")}` : "col-5");
 	productListing.innerHTML =
 		list.length > 0
 			? `<div class="mt-6 flex flex-wrap -mx-2 xl:-mx-3"></div>`
@@ -804,23 +749,7 @@ function renderProducts() {
 
 		const quickview = () => {
 			const modal = document.createElement("div");
-			modal.classList.add(
-				"modal",
-				"modal__wrapper",
-				"fixed",
-				"inset-0",
-				"px-5",
-				"bg-black",
-				"flex",
-				"items-center",
-				"justify-center",
-				"transition-opacity",
-				"opacity-0",
-				"duration-200",
-				"ease-out",
-				"opacity-100",
-				"z-[99]"
-			);
+			modal.classList.add("modal", "modal__wrapper", "fixed", "inset-0", "px-5", "bg-black", "flex", "items-center", "justify-center", "transition-opacity", "opacity-0", "duration-200", "ease-out", "opacity-100", "z-[99]");
 			modal.style.setProperty("--tw-bg-opacity", "0.3");
 			modal.innerHTML = `
 				<div class="modal__content bg-white relative rounded max-h-[90vh] modal__quickview" style="width:960px">
@@ -845,8 +774,7 @@ function renderProducts() {
 																	`
 																	<div class="swiper-slide prod-media-item media-type-${media.media_type}" data-index=${index} data-media-type=${media.media_type} data-media-id=${media.id} data-aspect-ratio="1.499">
 																		${
-																			media.media_type ===
-																			"image"
+																			media.media_type === "image"
 																				? `
 																		<div class="prod-media media-image" data-media-id=${media.id} data-media-width=${media.width} data-media-height=${media.height} data-media-alt=${media.alt} data-media-src=${media.src}>
 																			<div class="prod-image" style="aspect-ratio: 1.499">
@@ -936,8 +864,7 @@ function renderProducts() {
 												<div class="variant-picker">
 													${item.options
 														.map((option, index) =>
-															option.values[1] !== null &&
-															option.name !== "Title"
+															option.values[1] !== null && option.name !== "Title"
 																? `
 																<div class="product-options__option product-options__option--dropdown">
 																	<div
@@ -964,10 +891,7 @@ function renderProducts() {
 																					name="options[${option.name}]">
 																					${option.values
 																						.map(
-																							(
-																								value,
-																								index2
-																							) =>
+																							(value, index2) =>
 																								`
 																						<option
 																							${item.variants[0]?.options[index] === value ? "selected" : ""}
@@ -1083,14 +1007,12 @@ function renderProducts() {
 			// Hàm kiểm tra dữ liệu sản phẩm
 			function _validateProductStructure(product) {
 				if (typeof product != "object") throw new TypeError(product + " is not an object.");
-				if (Object.keys(product).length === 0 && product.constructor === Object)
-					throw new Error(product + " is empty.");
+				if (Object.keys(product).length === 0 && product.constructor === Object) throw new Error(product + " is empty.");
 			}
 
 			// Hàm kiểm tra dữ liệu options
 			function _validateOptionsArray(options) {
-				if (Array.isArray(options) && typeof options[0] == "object")
-					throw new Error(options + "is not a valid array of options.");
+				if (Array.isArray(options) && typeof options[0] == "object") throw new Error(options + "is not a valid array of options.");
 			}
 
 			// Hàm xử lý sự kiện khi thay đổi variant
@@ -1121,14 +1043,8 @@ function renderProducts() {
 					var _variant;
 					optionsClone.pop();
 					variant = getVariantFromOptionArray(productData, optionsClone);
-					variant ||
-						(optionsClone.pop() &&
-							(variant = getVariantFromOptionArray(this.productData, optionsClone)));
-					options = [
-						...((_variant = variant) === null || _variant === void 0
-							? void 0
-							: _variant.options),
-					];
+					variant || (optionsClone.pop() && (variant = getVariantFromOptionArray(this.productData, optionsClone)));
+					options = [...((_variant = variant) === null || _variant === void 0 ? void 0 : _variant.options)];
 					updateSelectedOptions();
 				}
 				currentVariant = variant;
@@ -1139,12 +1055,8 @@ function renderProducts() {
 				const pickerFields = Array.from(document.querySelectorAll("[data-picker-field]"));
 				pickerFields.forEach((field, index) => {
 					if (field.dataset.selectedValue !== options[index]) {
-						const selectedOption = field.querySelector(
-							`input[value="${options[index]}"]`
-						);
-						selectedOption &&
-							((selectedOption.checked = !0),
-							field.dispatchEvent(new Event("change", { bubbles: !0 })));
+						const selectedOption = field.querySelector(`input[value="${options[index]}"]`);
+						selectedOption && ((selectedOption.checked = !0), field.dispatchEvent(new Event("change", { bubbles: !0 })));
 					}
 				});
 			};
@@ -1171,9 +1083,7 @@ function renderProducts() {
 							} else {
 								addButton.removeAttribute("disabled");
 								addButton.classList.remove("disabled");
-								preorder === "true"
-									? (addButtonText.textContent = "Pre-order")
-									: (addButtonText.textContent = "Add to cart");
+								preorder === "true" ? (addButtonText.textContent = "Pre-order") : (addButtonText.textContent = "Add to cart");
 							}
 						}
 					});
@@ -1208,19 +1118,17 @@ function renderProducts() {
 				});
 			};
 
-			document
-				.querySelectorAll(".product-options__option")
-				.forEach((variantSelect, index) => {
-					let option = productData.options[index];
+			document.querySelectorAll(".product-options__option").forEach((variantSelect, index) => {
+				let option = productData.options[index];
 
-					const updateSelectedValue = (e) => {
-						const selectedValue = e.target.value;
-						variantSelect.dataset.selectedValue = selectedValue;
-						const selectedValueElement = variantSelect.querySelector(".selected-value");
-						selectedValueElement.textContent = selectedValue;
-					};
-					variantSelect.addEventListener("change", updateSelectedValue);
-				});
+				const updateSelectedValue = (e) => {
+					const selectedValue = e.target.value;
+					variantSelect.dataset.selectedValue = selectedValue;
+					const selectedValueElement = variantSelect.querySelector(".selected-value");
+					selectedValueElement.textContent = selectedValue;
+				};
+				variantSelect.addEventListener("change", updateSelectedValue);
+			});
 
 			document.querySelector(".media-gallery").addEventListener("changeSlideTo", (e) => {
 				const index = e.detail.index;
@@ -1245,12 +1153,8 @@ function renderProducts() {
 							value: option,
 						};
 					});
-				const productImg = currentVariant.featured_image
-					? currentVariant.featured_image.src
-					: item.featured_image;
-				const productAlt = currentVariant.featured_image
-					? currentVariant.featured_image.alt
-					: item.title;
+				const productImg = currentVariant.featured_image ? currentVariant.featured_image.src : item.featured_image;
+				const productAlt = currentVariant.featured_image ? currentVariant.featured_image.alt : item.title;
 				const productUrl = item.url;
 				const quantity = parseInt(quantityInput.value);
 
@@ -1259,9 +1163,7 @@ function renderProducts() {
 					subtotal: 0,
 				};
 
-				const itemIndex = currentCart.items.findIndex(
-					(item) => item.id === productId && item.variantId === currentvariantId
-				);
+				const itemIndex = currentCart.items.findIndex((item) => item.id === productId && item.variantId === currentvariantId);
 
 				if (itemIndex === -1) {
 					currentCart.items.push({
@@ -1279,16 +1181,12 @@ function renderProducts() {
 					currentCart.items[itemIndex].qty += quantity;
 				}
 
-				currentCart.subtotal = currentCart.items.reduce(
-					(acc, item) => acc + item.price * item.qty,
-					0
-				);
+				currentCart.subtotal = currentCart.items.reduce((acc, item) => acc + item.price * item.qty, 0);
 
 				localStorage.setItem("cart", JSON.stringify(currentCart));
 
 				loadCart(true);
-				if (window.innerWidth < 768)
-					document.documentElement.classList.add("prevent-scroll");
+				if (window.innerWidth < 768) document.documentElement.classList.add("prevent-scroll");
 				cartWrapper.classList.remove("hidden");
 				setTimeout(() => {
 					cartContent.classList.remove("translate-x-full");
@@ -1318,12 +1216,8 @@ function renderProducts() {
 								value: option,
 							};
 						});
-					const productImg = currentVariant.featured_image
-						? currentVariant.featured_image.src
-						: item.featured_image;
-					const productAlt = currentVariant.featured_image
-						? currentVariant.featured_image.alt
-						: item.title;
+					const productImg = currentVariant.featured_image ? currentVariant.featured_image.src : item.featured_image;
+					const productAlt = currentVariant.featured_image ? currentVariant.featured_image.alt : item.title;
 					const productUrl = item.url;
 
 					var currentCart = JSON.parse(localStorage.getItem("cart")) || {
@@ -1331,9 +1225,7 @@ function renderProducts() {
 						subtotal: 0,
 					};
 
-					const itemIndex = currentCart.items.findIndex(
-						(item) => item.id === productId && item.variantId === currentvariantId
-					);
+					const itemIndex = currentCart.items.findIndex((item) => item.id === productId && item.variantId === currentvariantId);
 
 					if (itemIndex === -1) {
 						currentCart.items.push({
@@ -1351,16 +1243,12 @@ function renderProducts() {
 						currentCart.items[itemIndex].qty += 1;
 					}
 
-					currentCart.subtotal = currentCart.items.reduce(
-						(acc, item) => acc + item.price * item.qty,
-						0
-					);
+					currentCart.subtotal = currentCart.items.reduce((acc, item) => acc + item.price * item.qty, 0);
 
 					localStorage.setItem("cart", JSON.stringify(currentCart));
 
 					loadCart(true);
-					if (window.innerWidth < 768)
-						document.documentElement.classList.add("prevent-scroll");
+					if (window.innerWidth < 768) document.documentElement.classList.add("prevent-scroll");
 					cartWrapper.classList.remove("hidden");
 					setTimeout(() => {
 						cartContent.classList.remove("translate-x-full");

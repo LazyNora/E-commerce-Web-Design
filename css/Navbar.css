@@ -580,3 +580,7 @@ select {
 	justify-content: center;
 	line-height: 22px;
 }
+
+.currency-selector {
+	cursor: pointer;
+}

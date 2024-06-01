@@ -1234,6 +1234,10 @@ body {
   height: 10px;
 }
 
+.h-\[11px\] {
+  height: 11px;
+}
+
 .h-\[12px\] {
   height: 12px;
 }
@@ -1268,6 +1272,10 @@ body {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[14px\] {
+  height: 14px;
 }
 
 .max-h-\[90vh\] {
@@ -1334,12 +1342,20 @@ body {
   width: 10px;
 }
 
+.w-\[11px\] {
+  width: 11px;
+}
+
 .w-\[12px\] {
   width: 12px;
 }
 
 .w-\[16px\] {
   width: 16px;
+}
+
+.w-\[18px\] {
+  width: 18px;
 }
 
 .w-\[2\.15rem\] {
@@ -1393,6 +1409,10 @@ body {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[14px\] {
+  width: 14px;
 }
 
 .min-w-max {
