@@ -119,3 +119,90 @@ if (typeof product.reviews === "object" && product.reviews.length > 0) {
 		});
 	});
 }
+function tesg() {
+	const parent = document.getElementById("deals-countdown-wrapper");
+	const title = document.createElement("span");
+	const dateBox = document.createElement("div");
+	const days = document.createElement("div");
+	const daysNo = document.createElement("span");
+	const daysText = document.createElement("span");
+	const hours = document.createElement("div");
+	const hoursNo = document.createElement("span");
+	const hoursText = document.createElement("span");
+	const minutes = document.createElement("div");
+	const minutesNo = document.createElement("span");
+	const minutesText = document.createElement("span");
+	const seconds = document.createElement("div");
+	const secondsNo = document.createElement("span");
+	const secondsText = document.createElement("span");
+	title.setAttribute("class", "deals-title");
+	dateBox.setAttribute("class", "deals-date-box");
+	days.setAttribute("class", "deals-days");
+	daysNo.setAttribute("class", "deals-no");
+	daysText.setAttribute("class", "deals-text");
+	days.setAttribute("id", "deals-days");
+	daysNo.setAttribute("id", "deals-days-no");
+	daysText.setAttribute("id", "deals-days-text");
+	hours.setAttribute("class", "deals-hours");
+	hoursNo.setAttribute("class", "deals-no");
+	hoursText.setAttribute("class", "deals-text");
+	hours.setAttribute("id", "deals-hours");
+	hoursNo.setAttribute("id", "deals-hours-no");
+	hoursText.setAttribute("id", "deals-hours-text");
+	minutes.setAttribute("class", "deals-minutes");
+	minutesNo.setAttribute("class", "deals-no");
+	minutesText.setAttribute("class", "deals-text");
+	minutes.setAttribute("id", "deals-minutes");
+	minutesNo.setAttribute("id", "deals-minutes-no");
+	minutesText.setAttribute("id", "deals-minutes-text");
+	seconds.setAttribute("class", "deals-seconds");
+	secondsNo.setAttribute("class", "deals-no");
+	secondsText.setAttribute("class", "deals-text");
+	seconds.setAttribute("id", "deals-seconds");
+	secondsNo.setAttribute("id", "deals-seconds-no");
+	secondsText.setAttribute("id", "deals-seconds-text");
+	parent.appendChild(title);
+	parent.appendChild(dateBox);
+	dateBox.appendChild(days);
+	dateBox.appendChild(hours);
+	dateBox.appendChild(minutes);
+	dateBox.appendChild(seconds);
+	days.appendChild(daysNo);
+	days.appendChild(daysText);
+	hours.appendChild(hoursNo);
+	hours.appendChild(hoursText);
+	minutes.appendChild(minutesNo);
+	minutes.appendChild(minutesText);
+	seconds.appendChild(secondsNo);
+	seconds.appendChild(secondsText);
+	title.innerHTML = "ENDS IN:";
+	daysText.innerHTML = "";
+	hoursText.innerHTML = "";
+	minutesText.innerHTML = "";
+	secondsText.innerHTML = "";
+	(function (title, daysNo, hoursNo, minutesNo, secondsNo) {
+		function updateCountdown(title, daysNo, hoursNo, minutesNo, secondsNo) {
+			var currentTime = new Date().getTime();
+			var remainingTime = 1717916400000 - currentTime;
+			var daysRemaining = Math.floor(remainingTime / 86400000) >= 10 ? Math.floor(remainingTime / 86400000) : "0" + Math.floor(remainingTime / 86400000);
+			var hoursRemaining = Math.floor((remainingTime % 86400000) / 3600000) >= 10 ? Math.floor((remainingTime % 86400000) / 3600000) : "0" + Math.floor((remainingTime % 86400000) / 3600000);
+			var minutesRemaining = Math.floor((remainingTime % 3600000) / 60000) >= 10 ? Math.floor((remainingTime % 3600000) / 60000) : "0" + Math.floor((remainingTime % 3600000) / 60000);
+			var secondsRemaining = Math.floor((remainingTime % 60000) / 1000) >= 10 ? Math.floor((remainingTime % 60000) / 1000) : "0" + Math.floor((remainingTime % 60000) / 1000);
+			daysNo.innerHTML = daysRemaining;
+			hoursNo.innerHTML = hoursRemaining;
+			minutesNo.innerHTML = minutesRemaining;
+			secondsNo.innerHTML = secondsRemaining;
+			if (remainingTime < 0) {
+				clearInterval(intervalId);
+				title.innerHTML = "Deal\\x20Ended";
+				daysNo.innerHTML = "00";
+				hoursNo.innerHTML = "00";
+				minutesNo.innerHTML = "00";
+				secondsNo.innerHTML = "00";
+			}
+		}
+		updateCountdown(title, daysNo, hoursNo, minutesNo, secondsNo);
+		var obj = [title, daysNo, hoursNo, minutesNo, secondsNo];
+		var intervalId = setInterval(updateCountdown, 1000, ...obj);
+	})(title, daysNo, hoursNo, minutesNo, secondsNo);
+}

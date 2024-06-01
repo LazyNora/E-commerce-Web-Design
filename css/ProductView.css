@@ -723,3 +723,7 @@
 	font-size: 12px;
 	text-decoration: none;
 }
+
+.review-helpful.voted path {
+	fill: #333;
+}
