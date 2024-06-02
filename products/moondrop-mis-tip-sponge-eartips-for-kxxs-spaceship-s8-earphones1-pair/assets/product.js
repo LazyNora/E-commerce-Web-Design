@@ -20,6 +20,52 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  "rating": 4.8,
+  "ratingCount": 7,
+  "reviews": [
+      {
+          "user": "Ethan Adams",
+          "rating": 5,
+          "review": "These earphones are excellent! The sound quality is superb, and they are very comfortable to wear.",
+          "timestamp": "2024-06-15T09:30:00+08:00"
+      },
+      {
+          "user": "Liam Taylor",
+          "rating": 4,
+          "review": "Good sound quality, but the fit could be slightly better. Overall, a solid product.",
+          "timestamp": "2024-06-14T14:00:00+08:00"
+      },
+      {
+          "user": "Sophie Evans",
+          "rating": 5,
+          "review": "I'm really impressed with these earphones! The sound is rich, and they stay in place comfortably.",
+          "timestamp": "2024-06-13T09:45:00+08:00"
+      },
+      {
+          "user": "James Wilson",
+          "rating": 5,
+          "review": "These earphones are fantastic! The sound quality is top-notch, and they are lightweight and stylish.",
+          "timestamp": "2024-06-12T15:20:00+08:00"
+      },
+      {
+          "user": "Oliver Brown",
+          "rating": 5,
+          "review": "Impressive audio performance! These earphones deliver clear sound and provide a snug fit.",
+          "timestamp": "2024-06-11T08:10:00+08:00"
+      },
+      {
+          "user": "Sophia Miller",
+          "rating": 4,
+          "review": "The sound quality is great, but the ear tips tend to slip out occasionally. Overall, I'm satisfied with the purchase.",
+          "timestamp": "2024-06-10T11:25:00+08:00"
+      },
+      {
+          "user": "Noah Johnson",
+          "rating": 5,
+          "review": "These earphones are amazing! The sound is clear and detailed, and they are comfortable for long listening sessions.",
+          "timestamp": "2024-06-09T13:50:00+08:00"
+      }
+  ],
   variants: [
     {
       id: 31190928752772,

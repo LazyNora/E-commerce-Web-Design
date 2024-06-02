@@ -20,6 +20,40 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating : 5.0,
+  ratingCount : 20,
+  reviews: [
+      {   
+          user: "David Lee",
+          rating: 5,
+          review: "Absolutely phenomenal sound quality! These are the best earphones I've ever owned.",
+          timestamp: "2024-05-01T10:30:00+08:00",
+      },
+      {   
+          user: "Liu Wei",
+          rating: 5,
+          review: "音质非常棒！这是我用过的最好的耳机。",
+          timestamp: "2024-04-18T14:00:00+08:00",
+      },
+      {   
+          user: "Sophia Zhang",
+          rating: 5,
+          review: "这些耳机的音效超乎我的预期，佩戴也非常舒适。",
+          timestamp: "2024-03-25T09:45:00+08:00",
+      },
+      {   
+          user: "Michael Johnson",
+          rating: 5,
+          review: "Fantastic product! The sound is clear and vibrant, and the comfort level is top-notch.",
+          timestamp: "2024-02-28T15:20:00+08:00",
+      },
+      {   
+          user: "Chen Ming",
+          rating: 5,
+          review: "非常舒适，声音也很清晰。强烈推荐！",
+          timestamp: "2024-01-15T08:10:00+08:00",
+      }
+  ],
   variants: [
     {
       id: 42144420462835,

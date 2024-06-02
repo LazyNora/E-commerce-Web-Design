@@ -19,6 +19,51 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating : 4.4,
+  ratingCount : 6,
+  reviews: [
+      {   
+          user: "Carlos Mendez",
+          rating: 5,
+          review: "La calidad del sonido es excepcional, y son muy cómodos de usar durante largos períodos. Muy satisfecho con la compra.",
+          timestamp: "2024-05-18T14:22:21+08:00",
+      },
+      {   
+          user: "Mei Lin",
+          rating: 3,
+          review: "虽然音质很好，但佩戴时间长了会有些不适，耳塞的设计有待改进。",
+          timestamp: "2023-11-25T08:30:21+08:00",
+      },
+      {   
+          user: "Jean Dupont",
+          rating: 4,
+          review: "Le son est très bon, mais les embouts peuvent parfois glisser. Globalement, un très bon achat.",
+          timestamp: "2023-09-15T13:45:21+08:00",
+      },
+      {   
+          user: "Anya Petrova",
+          rating: 5,
+          review: "Звук потрясающий, использую эти наушники уже год, и они меня не разочаровали. Очень рекомендую!",
+          timestamp: "2023-10-10T17:05:21+08:00",
+      },
+      {   
+          user: "Ahmed Ali",
+          rating: 4,
+          review: "الجودة الصوتية ممتازة، ولكن قد يكون التصميم غير مريح قليلاً للاستخدام الطويل.",
+          timestamp: "2023-11-05T09:50:21+08:00",
+      },
+      {   
+          user: "Giulia Rossi",
+          rating: 5,
+          review: "Qualità del suono eccezionale e molto confortevoli da indossare. Consigliatissimi!",
+          timestamp: "2023-12-01T20:22:21+08:00",
+      }
+  ],
+
+
+
+
+  
   variants: [
     {
       id: 43948468470003,

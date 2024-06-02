@@ -19,6 +19,38 @@ const product = {
 	compare_at_price_min: 0,
 	compare_at_price_max: 0,
 	compare_at_price_varies: false,
+	reviews: [
+        {   
+            user: "John Doe",
+            rating: 5,
+            review: "Amazing sound quality and very comfortable to wear for long periods. Highly recommend!",
+            timestamp: "2024-03-15T10:00:00+08:00",
+        },
+        {   
+            user: "Tran Van Bao",
+            rating: 4,
+            review: "Âm thanh rất tốt, nhưng đôi khi cảm thấy không thoải mái sau khi sử dụng lâu.",
+            timestamp: "2024-02-28T08:45:00+08:00",
+        },
+        {   
+            user: "Alice Nguyen",
+            rating: 5,
+            review: "Sản phẩm này thật tuyệt vời! Âm thanh rất sống động và rõ ràng.",
+            timestamp: "2024-01-20T11:15:00+08:00",
+        },
+        {   
+            user: "Michael Brown",
+            rating: 4,
+            review: "Great audio performance, but the ear tips could use some improvement for better comfort.",
+            timestamp: "2024-02-05T09:30:00+08:00",
+        },
+        {   
+            user: "Nguyen Minh Chau",
+            rating: 5,
+            review: "Chất lượng âm thanh xuất sắc và rất dễ chịu khi đeo trong thời gian dài.",
+            timestamp: "2023-12-25T10:10:00+08:00",
+        }
+    ],
 	variants: [
 		{
 			id: 39649629962391,

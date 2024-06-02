@@ -20,6 +20,40 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating : 3.6,
+    ratingCount : 5,
+    reviews: [
+        {   
+            user: "Alice Johnson",
+            rating: 4,
+            review: "Good sound quality, but the ear tips are a bit uncomfortable for extended use.",
+            timestamp: "2024-04-10T09:30:00+08:00",
+        },
+        {   
+            user: "Robert Smith",
+            rating: 3,
+            review: "Decent performance, but I expected better build quality for the price.",
+            timestamp: "2024-03-22T14:20:00+08:00",
+        },
+        {   
+            user: "Linda Thompson",
+            rating: 4,
+            review: "Overall, a solid product. However, the fit isn't perfect for my ears.",
+            timestamp: "2024-02-17T11:45:00+08:00",
+        },
+        {   
+            user: "James Brown",
+            rating: 3,
+            review: "Average sound quality, and the design could be improved. Not fully satisfied.",
+            timestamp: "2024-01-30T16:05:00+08:00",
+        },
+        {   
+            user: "Patricia Wilson",
+            rating: 4,
+            review: "The sound is good, but the ear tips tend to slip off too easily. Would like a better fit.",
+            timestamp: "2024-02-12T08:15:00+08:00",
+        }
+    ],
   variants: [
     {
       id: 43931642200307,

@@ -19,6 +19,40 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating : 4.6,
+    ratingCount : 5,
+    reviews: [
+        {   
+            user: "Sakura Tanaka",
+            rating: 5,
+            review: "非常に高品質なサウンドです。長時間使用しても快適です。",
+            timestamp: "2024-03-12T10:25:21+08:00",
+        },
+        {   
+            user: "Emily Johnson",
+            rating: 4,
+            review: "Sound quality is fantastic, but I find the ear tips a bit uncomfortable after a while.",
+            timestamp: "2024-01-15T12:35:21+08:00",
+        },
+        {   
+            user: "Le Anh Tuan",
+            rating: 5,
+            review: "Âm thanh chất lượng, rất thoải mái khi sử dụng trong thời gian dài. Rất đáng để mua.",
+            timestamp: "2023-12-10T11:20:21+08:00",
+        },
+        {   
+            user: "Ivan Petrov",
+            rating: 4,
+            review: "Звук великолепный, но ушные вкладыши немного неудобны для длительного ношения.",
+            timestamp: "2024-02-20T09:45:21+08:00",
+        },
+        {   
+            user: "Nguyen Thi Mai",
+            rating: 5,
+            review: "Chất lượng âm thanh tuyệt vời, rất hài lòng với sản phẩm này.",
+            timestamp: "2024-01-05T14:00:21+08:00",
+        }
+    ],
   variants: [
     {
       id: 43456971931891,
