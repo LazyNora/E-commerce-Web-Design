@@ -119,7 +119,7 @@ if (typeof product.reviews === "object" && product.reviews.length > 0) {
 		});
 	});
 }
-function tesg() {
+function saleCountDown() {
 	const parent = document.getElementById("deals-countdown-wrapper");
 	const title = document.createElement("span");
 	const dateBox = document.createElement("div");
@@ -182,8 +182,9 @@ function tesg() {
 	secondsText.innerHTML = "";
 	(function (title, daysNo, hoursNo, minutesNo, secondsNo) {
 		function updateCountdown(title, daysNo, hoursNo, minutesNo, secondsNo) {
+			const endDay = new Date("2024-06-20T00:00:00Z");
 			var currentTime = new Date().getTime();
-			var remainingTime = 1717916400000 - currentTime;
+			var remainingTime = endDay - currentTime;
 			var daysRemaining = Math.floor(remainingTime / 86400000) >= 10 ? Math.floor(remainingTime / 86400000) : "0" + Math.floor(remainingTime / 86400000);
 			var hoursRemaining = Math.floor((remainingTime % 86400000) / 3600000) >= 10 ? Math.floor((remainingTime % 86400000) / 3600000) : "0" + Math.floor((remainingTime % 86400000) / 3600000);
 			var minutesRemaining = Math.floor((remainingTime % 3600000) / 60000) >= 10 ? Math.floor((remainingTime % 3600000) / 60000) : "0" + Math.floor((remainingTime % 3600000) / 60000);
@@ -206,3 +207,5 @@ function tesg() {
 		var intervalId = setInterval(updateCountdown, 1000, ...obj);
 	})(title, daysNo, hoursNo, minutesNo, secondsNo);
 }
+
+if (product.compare_at_price) saleCountDown();

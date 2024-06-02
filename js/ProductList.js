@@ -253,6 +253,8 @@ function collectionGetFunction(collection) {
 			return productsData;
 		case "search-result":
 			return productsData;
+		case "sales":
+			return productsData.filter((product) => product.compare_at_price);
 		case "new-arrivals":
 			return productsData.sort((a, b) => new Date(b.published_at) - new Date(a.published_at)).slice(0, 50);
 		case "best-sellers":

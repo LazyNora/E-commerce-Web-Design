@@ -46,6 +46,16 @@ document.querySelector(".prod__info").innerHTML = `
         </div>
       </div>
     </div>
+    ${
+			currentVariant.compare_at_price
+				? `<div class="main-product__block main-product__block-countdown">
+    <div class="prod__sale-wraps">
+      <div class="prod__sale-text">SALES</div>
+      <div id="deals-countdown-wrapper" class="deals-countdown-wrapper"></div>
+    </div>
+  </div>`
+				: ""
+		}
     <div class="main-product__block main-product__block-price">
       <div class="prod__price flex">
         <div class="price inline-flex items-center flex-wrap">
@@ -58,21 +68,20 @@ document.querySelector(".prod__info").innerHTML = `
             <span class="money" data-product-price=${currentVariant.price}>$${currentVariant.price / 100} USD</span>
           </span>
           <span class="visually-hidden visually-hidden--inline">Regular price</span>
-            <s class="price-item price-item--regular prod__compare_price ml-2 line-through text-color-secondary flex items-center">
-              <span class="money" data-product-price=${currentVariant.compare_at_price}>$${currentVariant.compare_at_price / 100} USD</span>
-            </s>
+          <s class="price-item price-item--regular prod__compare_price ml-2 line-through text-color-secondary flex items-center">
+            <span class="money" data-product-price=${currentVariant.compare_at_price}>$${currentVariant.compare_at_price / 100} USD</span>
+          </s>
         </div>
         `
-						: `<div class="price__regular">
-        <span class="visually-hidden visually-hidden--inline">
-          Regular price
-        </span>
-        <span class="price-item price-item--regular text-xl md:text-2xl">
-          <span
-            class="money"
-            data-product-price=${currentVariant.price}>$${currentVariant.price / 100} USD</span>
-        </span>
-      </div>`
+						: `
+        <div class="price__regular">
+          <span class="visually-hidden visually-hidden--inline">
+            Regular price
+          </span>
+          <span class="price-item price-item--regular text-xl md:text-2xl">
+            <span class="money" data-product-price=${currentVariant.price}>$${currentVariant.price / 100} USD</span>
+          </span>
+        </div>`
 				}
         </div>
       </div>

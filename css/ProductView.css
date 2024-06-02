@@ -735,3 +735,66 @@
 .prod__compare_price {
 	color: #666;
 }
+.prod__sale-wraps {
+	display: flex;
+	align-items: center;
+	margin-top: 0.625rem;
+	height: 36px;
+	padding: 0 20px;
+	background-image: linear-gradient(-90deg, #f0451e 9%, #f32424 96%);
+}
+.prod__sale-text {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+}
+.deals-countdown-wrapper {
+	display: flex !important;
+	position: absolute;
+	align-items: center;
+	right: 10px;
+}
+.deals-title {
+	margin-bottom: 0 !important;
+	color: #fff !important;
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
+	display: inline-block;
+}
+.deals-date-box {
+	/* width: 100%;
+	height: 53px; */
+	padding: 0;
+	background-color: transparent;
+	box-sizing: border-box;
+	width: 125px !important;
+	height: auto !important;
+}
+.deals-date-box > div {
+	display: block;
+	width: 28px !important;
+	height: 28px !important;
+	padding: 0 !important;
+	margin-left: 2px !important;
+	float: left;
+	line-height: normal !important;
+	background-color: #000000;
+}
+.deals-no {
+	font-size: 18px;
+	font-weight: 700;
+	display: block;
+	color: #fff;
+	text-align: center;
+	text-transform: capitalize;
+}
+.deals-text {
+	color: #fff;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.025em;
+	text-align: center;
+	display: block;
+	text-transform: capitalize;
+}
