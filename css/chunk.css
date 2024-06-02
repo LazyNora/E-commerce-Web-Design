@@ -2341,3 +2341,10 @@ html.prevent-scroll body {
 	align-items: center;
 	padding-bottom: 10px;
 }
+.pcard .prod__compare_price {
+	font-size: 14px;
+	margin: 0;
+}
+.pcard .price__sale {
+	display: block;
+}

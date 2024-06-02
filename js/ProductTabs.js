@@ -314,7 +314,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 											? `
 									<div class="price__sale">
 										<span class="visually-hidden visually-hidden--inline">Sale price</span>
-										<span class="price-item price-item--sale">
+										<span class="price-item price-item--sale text-xl md:text-2xl">
 											<span class="money" data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
 										</span>
 										<span class="visually-hidden visually-hidden--inline">Regular price</span>
