@@ -111,8 +111,8 @@
 	line-height: 24px;
 	color: #666;
 }
-#MainContent {
-	background: #eef7f7;
+.about-us {
+	background: #f0f7f7;
 }
 @media screen and (max-width: 991px) {
 	.home-dev-col {
@@ -195,4 +195,37 @@
 		font-size: 14px;
 		line-height: 24px;
 	}
+}
+.page-col {
+	background-color: #fff;
+	border-radius: 15px;
+	margin-bottom: 60px;
+	padding: 40px;
+}
+.page-col.flex {
+	justify-content: center;
+	margin-top: 60px;
+	display: flex;
+	overflow: hidden;
+	background-color: #fff;
+}
+.body-auto-wrap {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.body-auto-wrap.flex {
+	background-color: #fff;
+	justify-content: center;
+	align-items: center;
+}
+.body-auto-text {
+	margin-left: 40px;
+	font-size: 18px;
+}
+.page-col-header {
+	padding-bottom: 30px;
+	font-size: 32px;
+	line-height: 48px;
 }

@@ -255,7 +255,7 @@ function collectionGetFunction(collection) {
 		case "new-arrivals":
 			return productsData.sort((a, b) => new Date(b.published_at) - new Date(a.published_at)).slice(0, 50);
 		case "best-sellers":
-			return productsData.sort((a, b) => b.sale_top - a.sale_top).slice(0, 100);
+			return productsData.sort((a, b) => a.sale_top - b.sale_top).slice(0, 100);
 		case "accessories":
 			return productsData.filter((product) => product.type === "Accessories" || product.type === "Audio Cables" || product.type === "Headphone Accessories" || product.type === "Headphone Cable" || product.type === "Up Frequency Box");
 		case "speaker-amplifiers":

@@ -925,11 +925,6 @@ body {
   margin-right: auto;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -940,14 +935,14 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.my-\[100px\] {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-\[100px\] {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .-ml-\[20px\] {
@@ -1002,6 +997,18 @@ body {
   margin-bottom: 2rem;
 }
 
+.mb-\[15px\] {
+  margin-bottom: 15px;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+
 .mb-\[5px\] {
   margin-bottom: 5px;
 }
@@ -1024,6 +1031,10 @@ body {
 
 .ml-5 {
   margin-left: 1.25rem;
+}
+
+.ml-\[12px\] {
+  margin-left: 12px;
 }
 
 .ml-auto {
@@ -1090,8 +1101,16 @@ body {
   margin-top: 1.5rem;
 }
 
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-\[-4px\] {
+  margin-top: -4px;
 }
 
 .mt-\[10px\] {
@@ -1100,30 +1119,6 @@ body {
 
 .mt-\[25px\] {
   margin-top: 25px;
-}
-
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
-.mb-\[15px\] {
-  margin-bottom: 15px;
-}
-
-.mb-\[20px\] {
-  margin-bottom: 20px;
-}
-
-.mb-\[30px\] {
-  margin-bottom: 30px;
-}
-
-.ml-\[12px\] {
-  margin-left: 12px;
-}
-
-.mt-\[-4px\] {
-  margin-top: -4px;
 }
 
 .box-border {
@@ -1574,6 +1569,22 @@ body {
 
 .animate-fade-down {
   animation: fade-down 1s both;
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-left {
+  animation: fade-left 1s both;
 }
 
 @keyframes fade-right {
@@ -2826,6 +2837,10 @@ body {
   padding-bottom: 1.25rem;
 }
 
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -2864,10 +2879,6 @@ body {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-7 {
-  padding-bottom: 1.75rem;
 }
 
 .text-left {
@@ -3855,6 +3866,10 @@ body {
     width: 33.333333%;
   }
 
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
   .md\:w-5\/6 {
     width: 83.333333%;
   }
@@ -3865,10 +3880,6 @@ body {
 
   .md\:w-auto {
     width: auto;
-  }
-
-  .md\:w-4\/5 {
-    width: 80%;
   }
 
   .md\:grid-cols-2 {
@@ -4045,12 +4056,12 @@ body {
     width: 16.666667%;
   }
 
-  .lg\:w-auto {
-    width: auto;
-  }
-
   .lg\:w-3\/5 {
     width: 60%;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:grid-cols-3 {
