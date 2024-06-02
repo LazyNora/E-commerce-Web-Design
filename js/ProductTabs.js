@@ -1,9 +1,6 @@
-import {
-	getNewArrivals,
-	getBestSellers,
-	getComboAssembling,
-	getMQASupport,
-} from "./searchProduct.js";
+import { getNewArrivals, getBestSellers, getComboAssembling, getMQASupport } from "./searchProduct.js";
+import { formatMoney, moneyFormats } from "./currencyConvert.js";
+
 const currentPath = path || "";
 const tabs = [
 	{
@@ -123,8 +120,8 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                     </div>
                   </div>
                   ${
-						media.length > 1
-							? `<div class="hover-img">
+										media.length > 1
+											? `<div class="hover-img">
                       <div class="p-img ib-image">
                         <img
                         src="${currentPath + media[1].src}"
@@ -137,8 +134,8 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                         />
                       </div>
                     </div>`
-							: ""
-					}
+											: ""
+									}
                 </a>
               </div>
             </div>
@@ -153,19 +150,35 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                     ${item.title}
                   </a>
                 </h3>
-                <div class="pcard__reviews"></div>
+                <div class="pcard__reviews">
+									${typeof item.rating === "number" ? `<div class="pcard__rating" data-rating="${item.rating}" data-rating-count="${item.ratingCount}"></div>` : ""}
+								</div>
               </div>
               <div class="pcard__price leading-normal">
                 <div class="price inline-flex items-center flex-wrap">
-                  <div class="price__regular">
-                    <span class="visually-hidden visually-hidden--inline">
-                      Regular price
-                    </span>
-                    <span class="price-item price-item--regular">
-                      <span class="money"
-                      data-product-price="${item.price}">$${item.price / 100} USD</span>
-                    </span>
-                  </div>
+								${
+									item.compare_at_price !== null && item.compare_at_price !== item.price
+										? `<div class="price__sale">
+								<span class="visually-hidden visually-hidden--inline">Sale price</span>
+								<span class="price-item price-item--sale">
+									<span class="money" data-product-price=${item.price}>$${item.price / 100} USD</span>
+								</span>
+								<span class="visually-hidden visually-hidden--inline">Regular price</span>
+									<s class="price-item price-item--regular prod__compare_price ml-2 line-through text-color-secondary flex items-center">
+										<span class="money" data-product-price=${item.compare_at_price}>$${item.compare_at_price / 100} USD</span>
+									</s>
+							</div>`
+										: `<div class="price__regular">
+								<span class="visually-hidden visually-hidden--inline">
+									Regular price
+								</span>
+								<span class="price-item price-item--regular">
+									<span class="money"
+									data-product-price="${item.price}">$${item.price / 100} USD</span>
+								</span>
+							</div>`
+								}
+
                 </div>
               </div>
             </div>
@@ -202,23 +215,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 
 		const quickview = () => {
 			const modal = document.createElement("div");
-			modal.classList.add(
-				"modal",
-				"modal__wrapper",
-				"fixed",
-				"inset-0",
-				"px-5",
-				"bg-black",
-				"flex",
-				"items-center",
-				"justify-center",
-				"transition-opacity",
-				"opacity-0",
-				"duration-200",
-				"ease-out",
-				"opacity-100",
-				"z-[99]"
-			);
+			modal.classList.add("modal", "modal__wrapper", "fixed", "inset-0", "px-5", "bg-black", "flex", "items-center", "justify-center", "transition-opacity", "opacity-0", "duration-200", "ease-out", "opacity-100", "z-[99]");
 			modal.style.setProperty("--tw-bg-opacity", "0.3");
 			modal.innerHTML = `
       <div class="modal__content bg-white relative rounded max-h-[90vh] modal__quickview" style="width:960px">
@@ -238,20 +235,20 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                         <div class="swiper-container quickview-swiper">
                           <div class="swiper-wrapper main-slider pis h-full">
                           ${item.media
-								.map(
-									(media, index) =>
-										`
+														.map(
+															(media, index) =>
+																`
                                 <div class="swiper-slide prod-media-item media-type-${media.media_type}" data-index=${index} data-media-type=${media.media_type} data-media-id=${media.id} data-aspect-ratio="1.499">
                                   ${
-										media.media_type === "image"
-											? `
+																		media.media_type === "image"
+																			? `
                                   <div class="prod-media media-image" data-media-id=${media.id} data-media-width=${media.width} data-media-height=${media.height} data-media-alt=${media.alt} data-media-src=${media.src}>
                                     <div class="prod-image" style="aspect-ratio: 1.499">
                                       <img class="img-loaded" src=${path + media.src} sizes="946px" loading="lazy" width="946" height="631" alt=${media.alt} fetchpriority="auto">
                                     </div>
                                   </div>
                                   `
-											: `
+																			: `
                                   <div class="deferred-media" style="/*padding-top: 56.25%;*/" data-media-id=${media.id} data-auto-play="true">
                                     <video playinline controls autoplay loop muted aria-label=${item.title} poster=${media.preview_image.src}>
                                       <source src=${media.sources[media.sources.findIndex((src) => src.width === 1280)].url} type="video/mp4">
@@ -259,15 +256,15 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                                     </video>
                                   </div>
                                   `
-									}
+																	}
                                 </div>
                                 `
-								)
-								.join("")}
+														)
+														.join("")}
                           </div>
                           ${
-								item.media.length > 1
-									? `<div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
+														item.media.length > 1
+															? `<div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
                             <button class="swiper-button-control swiper-button-prev btn-icon | tooltip-item tooltip-right tooltop-style-1">
                               <span class="tooltip-icon block">
                                 <svg
@@ -295,8 +292,8 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                               <span class="tooltip-content">Next</span>
                             </button>
                           </div>`
-									: ""
-							}
+															: ""
+													}
                         </div>
                       </div>
                     </div>
@@ -312,16 +309,33 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                   </h1>
                 </div>
                 <div class="price inline-flex items-center flex-wrap">
-                  <div class="price__regular">
-                    <span class="visually-hidden visually-hidden--inline">
-                      Regular price
-                    </span>
-                    <span class="price-item price-item--regular text-xl md:text-2xl">
-                      <span
-                        class="money"
-                        data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
-                    </span>
-                  </div>
+									${
+										item.variants[0].compare_at_price !== null && item.variants[0].compare_at_price !== item.variants[0].price
+											? `
+									<div class="price__sale">
+										<span class="visually-hidden visually-hidden--inline">Sale price</span>
+										<span class="price-item price-item--sale">
+											<span class="money" data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
+										</span>
+										<span class="visually-hidden visually-hidden--inline">Regular price</span>
+										<s class="price-item price-item--regular prod__compare_price ml-2 line-through text-color-secondary flex items-center">
+											<span class="money" data-product-price=${item.variants[0].compare_at_price}>$${item.variants[0].compare_at_price / 100} USD</span>
+										</s>
+									</div>
+									`
+											: `
+									<div class="price__regular">
+										<span class="visually-hidden visually-hidden--inline">
+											Regular price
+										</span>
+										<span class="price-item price-item--regular text-xl md:text-2xl">
+											<span
+												class="money"
+												data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
+										</span>
+									</div>`
+									}
+
                 </div>
                 <div class="hidden lg:block mt-[25px] mb-4 text-color-secondary">
                   <a class="block mt-2 underline text-black" href="${currentPath + item.url}">View details</a>
@@ -331,9 +345,9 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                     <div data-product-id=${item.id}>
                       <div class="variant-picker">
                         ${item.options
-							.map((option, index) =>
-								option.values[1] !== null && option.name !== "Title"
-									? `
+													.map((option, index) =>
+														option.values[1] !== null && option.name !== "Title"
+															? `
                               <div class="product-options__option product-options__option--dropdown">
                                 <div
                                   class="variant-select"
@@ -358,9 +372,9 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                                         class="select-bordered uppercase"
                                         name="options[${option.name}]">
                                         ${option.values
-											.map(
-												(value, index2) =>
-													`
+																					.map(
+																						(value, index2) =>
+																							`
                                           <option
                                             ${item.variants[0]?.options[index] === value ? "selected" : ""}
                                             value="${value.toString()}"
@@ -368,17 +382,17 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
                                             data-value="${value.toString()}"
                                             data-option-position=${option.position}>${value}</option>
                                           `
-											)
-											.join("")}
+																					)
+																					.join("")}
                                       </select>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             `
-									: ""
-							)
-							.join("")}
+															: ""
+													)
+													.join("")}
                       </div>
                     </div>
                   </div>
@@ -475,14 +489,12 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 			// Hàm kiểm tra dữ liệu sản phẩm
 			function _validateProductStructure(product) {
 				if (typeof product != "object") throw new TypeError(product + " is not an object.");
-				if (Object.keys(product).length === 0 && product.constructor === Object)
-					throw new Error(product + " is empty.");
+				if (Object.keys(product).length === 0 && product.constructor === Object) throw new Error(product + " is empty.");
 			}
 
 			// Hàm kiểm tra dữ liệu options
 			function _validateOptionsArray(options) {
-				if (Array.isArray(options) && typeof options[0] == "object")
-					throw new Error(options + "is not a valid array of options.");
+				if (Array.isArray(options) && typeof options[0] == "object") throw new Error(options + "is not a valid array of options.");
 			}
 
 			// Hàm xử lý sự kiện khi thay đổi variant
@@ -492,6 +504,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				updateButton(true, "", false);
 				if (currentVariant) {
 					updateMedia();
+					updatePrice();
 					document.querySelector(".currency-selector").dispatchEvent(new Event("change"));
 					updateButton(!currentVariant.available, "Sold Out");
 				}
@@ -513,14 +526,8 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 					var _variant;
 					optionsClone.pop();
 					variant = getVariantFromOptionArray(productData, optionsClone);
-					variant ||
-						(optionsClone.pop() &&
-							(variant = getVariantFromOptionArray(this.productData, optionsClone)));
-					options = [
-						...((_variant = variant) === null || _variant === void 0
-							? void 0
-							: _variant.options),
-					];
+					variant || (optionsClone.pop() && (variant = getVariantFromOptionArray(this.productData, optionsClone)));
+					options = [...((_variant = variant) === null || _variant === void 0 ? void 0 : _variant.options)];
 					updateSelectedOptions();
 				}
 				currentVariant = variant;
@@ -531,12 +538,8 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				const pickerFields = Array.from(document.querySelectorAll("[data-picker-field]"));
 				pickerFields.forEach((field, index) => {
 					if (field.dataset.selectedValue !== options[index]) {
-						const selectedOption = field.querySelector(
-							`input[value="${options[index]}"]`
-						);
-						selectedOption &&
-							((selectedOption.checked = !0),
-							field.dispatchEvent(new Event("change", { bubbles: !0 })));
+						const selectedOption = field.querySelector(`input[value="${options[index]}"]`);
+						selectedOption && ((selectedOption.checked = !0), field.dispatchEvent(new Event("change", { bubbles: !0 })));
 					}
 				});
 			};
@@ -548,7 +551,6 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				let modifyClass = args.length > 2 && args[2] !== 0 ? args[2] : 1;
 
 				const productForms = document.querySelectorAll(`.product-form__actions`);
-				console.log(productForms);
 
 				if (productForms) {
 					productForms.forEach((productForm) => {
@@ -564,9 +566,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 							} else {
 								addButton.removeAttribute("disabled");
 								addButton.classList.remove("disabled");
-								preorder === "true"
-									? (addButtonText.textContent = "Pre-order")
-									: (addButtonText.textContent = "Add to cart");
+								preorder === "true" ? (addButtonText.textContent = "Pre-order") : (addButtonText.textContent = "Add to cart");
 							}
 						}
 					});
@@ -583,6 +583,36 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				});
 				return result[0] || null;
 			};
+
+			// Hàm cập nhật giá tiền
+			const updatePrice = () => {
+				const currency = localStorage.getItem("currency");
+				const responseData = JSON.parse(localStorage.getItem("exchangeRate"));
+				if (currency && responseData) {
+					const priceElements = modalContent.querySelectorAll("span.money");
+					priceElements.forEach((element) => {
+						if (currentVariant.compare_at_price === null || currentVariant.compare_at_price === currentVariant.price) {
+							element.setAttribute("data-product-price", currentVariant.price);
+							const price = currentVariant.price;
+							const convertedPrice = price * responseData.conversion_rates[currency];
+							element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
+						} else {
+							if (element.parentElement.classList.contains("price-item--sale")) {
+								element.setAttribute("data-product-price", currentVariant.price);
+								const price = currentVariant.price;
+								const convertedPrice = price * responseData.conversion_rates[currency];
+								element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
+							} else {
+								element.setAttribute("data-product-price", currentVariant.compare_at_price);
+								const price = currentVariant.compare_at_price;
+								const convertedPrice = price * responseData.conversion_rates[currency];
+								element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
+							}
+						}
+					});
+				}
+			};
+
 			// Hàm cập nhật media-gallery
 			const updateMedia = () => {
 				if (!currentVariant || !currentVariant.featured_media) return;
@@ -601,19 +631,17 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 				});
 			};
 
-			document
-				.querySelectorAll(".product-options__option")
-				.forEach((variantSelect, index) => {
-					let option = productData.options[index];
+			document.querySelectorAll(".product-options__option").forEach((variantSelect, index) => {
+				let option = productData.options[index];
 
-					const updateSelectedValue = (e) => {
-						const selectedValue = e.target.value;
-						variantSelect.dataset.selectedValue = selectedValue;
-						const selectedValueElement = variantSelect.querySelector(".selected-value");
-						selectedValueElement.textContent = selectedValue;
-					};
-					variantSelect.addEventListener("change", updateSelectedValue);
-				});
+				const updateSelectedValue = (e) => {
+					const selectedValue = e.target.value;
+					variantSelect.dataset.selectedValue = selectedValue;
+					const selectedValueElement = variantSelect.querySelector(".selected-value");
+					selectedValueElement.textContent = selectedValue;
+				};
+				variantSelect.addEventListener("change", updateSelectedValue);
+			});
 
 			document.querySelector(".media-gallery").addEventListener("changeSlideTo", (e) => {
 				const index = e.detail.index;
@@ -638,12 +666,8 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 							value: option,
 						};
 					});
-				const productImg = currentVariant.featured_image
-					? currentVariant.featured_image.src
-					: item.featured_image;
-				const productAlt = currentVariant.featured_image
-					? currentVariant.featured_image.alt
-					: item.title;
+				const productImg = currentVariant.featured_image ? currentVariant.featured_image.src : item.featured_image;
+				const productAlt = currentVariant.featured_image ? currentVariant.featured_image.alt : item.title;
 				const productUrl = item.url;
 				const quantity = parseInt(quantityInput.value);
 
@@ -652,9 +676,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 					subtotal: 0,
 				};
 
-				const itemIndex = currentCart.items.findIndex(
-					(item) => item.id === productId && item.variantId === currentvariantId
-				);
+				const itemIndex = currentCart.items.findIndex((item) => item.id === productId && item.variantId === currentvariantId);
 
 				if (itemIndex === -1) {
 					currentCart.items.push({
@@ -672,16 +694,12 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 					currentCart.items[itemIndex].qty += quantity;
 				}
 
-				currentCart.subtotal = currentCart.items.reduce(
-					(acc, item) => acc + item.price * item.qty,
-					0
-				);
+				currentCart.subtotal = currentCart.items.reduce((acc, item) => acc + item.price * item.qty, 0);
 
 				localStorage.setItem("cart", JSON.stringify(currentCart));
 
 				loadCart(true);
-				if (window.innerWidth < 768)
-					document.documentElement.classList.add("prevent-scroll");
+				if (window.innerWidth < 768) document.documentElement.classList.add("prevent-scroll");
 				cartWrapper.classList.remove("hidden");
 				setTimeout(() => {
 					cartContent.classList.remove("translate-x-full");
@@ -711,12 +729,8 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 								value: option,
 							};
 						});
-					const productImg = currentVariant.featured_image
-						? currentVariant.featured_image.src
-						: item.featured_image;
-					const productAlt = currentVariant.featured_image
-						? currentVariant.featured_image.alt
-						: item.title;
+					const productImg = currentVariant.featured_image ? currentVariant.featured_image.src : item.featured_image;
+					const productAlt = currentVariant.featured_image ? currentVariant.featured_image.alt : item.title;
 					const productUrl = item.url;
 
 					var currentCart = JSON.parse(localStorage.getItem("cart")) || {
@@ -724,9 +738,7 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 						subtotal: 0,
 					};
 
-					const itemIndex = currentCart.items.findIndex(
-						(item) => item.id === productId && item.variantId === currentvariantId
-					);
+					const itemIndex = currentCart.items.findIndex((item) => item.id === productId && item.variantId === currentvariantId);
 
 					if (itemIndex === -1) {
 						currentCart.items.push({
@@ -744,16 +756,12 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 						currentCart.items[itemIndex].qty += 1;
 					}
 
-					currentCart.subtotal = currentCart.items.reduce(
-						(acc, item) => acc + item.price * item.qty,
-						0
-					);
+					currentCart.subtotal = currentCart.items.reduce((acc, item) => acc + item.price * item.qty, 0);
 
 					localStorage.setItem("cart", JSON.stringify(currentCart));
 
 					loadCart(true);
-					if (window.innerWidth < 768)
-						document.documentElement.classList.add("prevent-scroll");
+					if (window.innerWidth < 768) document.documentElement.classList.add("prevent-scroll");
 					cartWrapper.classList.remove("hidden");
 					setTimeout(() => {
 						cartContent.classList.remove("translate-x-full");
@@ -765,3 +773,27 @@ document.querySelectorAll(".tab-content[data-tab-content]").forEach((tab, index)
 		}
 	});
 });
+
+(function () {
+	document.querySelectorAll(".pcard__rating").forEach((rating) => {
+		const normalStar = '<svg class="star-icon normalStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
+		const halfStar = '<svg class="star-icon halfStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
+		const borderStar = '<svg class="star-icon borderStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
+
+		const ratingValue = rating.getAttribute("data-rating");
+		const ratingCount = rating.getAttribute("data-rating-count");
+
+		let ratingStars = "";
+		for (let i = 0; i < 5; i++) {
+			if (ratingValue - i >= 1) {
+				ratingStars += normalStar;
+			} else if (ratingValue - i >= 0.5 && ratingValue - i < 1) {
+				ratingStars += halfStar;
+			} else {
+				ratingStars += borderStar;
+			}
+		}
+		ratingStars += `<span class="rating-count ml-2">(${ratingCount})</span>`;
+		rating.innerHTML = ratingStars;
+	});
+})();

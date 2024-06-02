@@ -1,4 +1,5 @@
 import { productsData } from "./productsData.min.js";
+import { formatMoney, moneyFormats } from "./currencyConvert.js";
 
 let availability = []; // true = in stock, false = out of stock
 let priceRange = {
@@ -700,19 +701,35 @@ function renderProducts() {
 											${item.title}
 										</a>
 									</h3>
-									<div class="pcard__reviews"></div>
+									<div class="pcard__reviews">
+									${typeof item.rating === "number" ? `<div class="pcard__rating" data-rating="${item.rating}" data-rating-count="${item.ratingCount}"></div>` : ""}
+									</div>
 								</div>
 								<div class="pcard__price leading-normal">
 									<div class="price inline-flex items-center flex-wrap">
-										<div class="price__regular">
-											<span class="visually-hidden visually-hidden--inline">
-												Regular price
-											</span>
-											<span class="price-item price-item--regular">
-												<span class="money"
-												data-product-price="${item.price}">$${item.price / 100} USD</span>
-											</span>
-										</div>
+									${
+										item.compare_at_price !== null && item.compare_at_price !== item.price
+											? `<div class="price__sale">
+									<span class="visually-hidden visually-hidden--inline">Sale price</span>
+									<span class="price-item price-item--sale">
+										<span class="money" data-product-price=${item.price}>$${item.price / 100} USD</span>
+									</span>
+									<span class="visually-hidden visually-hidden--inline">Regular price</span>
+										<s class="price-item price-item--regular prod__compare_price ml-2 line-through text-color-secondary flex items-center">
+											<span class="money" data-product-price=${item.compare_at_price}>$${item.compare_at_price / 100} USD</span>
+										</s>
+								</div>`
+											: `<div class="price__regular">
+									<span class="visually-hidden visually-hidden--inline">
+										Regular price
+									</span>
+									<span class="price-item price-item--regular">
+										<span class="money"
+										data-product-price="${item.price}">$${item.price / 100} USD</span>
+									</span>
+								</div>`
+									}
+
 									</div>
 								</div>
 							</div>
@@ -844,16 +861,31 @@ function renderProducts() {
 										</h1>
 									</div>
 									<div class="price inline-flex items-center flex-wrap">
-										<div class="price__regular">
-											<span class="visually-hidden visually-hidden--inline">
-												Regular price
-											</span>
-											<span class="price-item price-item--regular text-xl md:text-2xl">
-												<span
-													class="money"
-													data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
-											</span>
-										</div>
+										${
+											item.variants[0].compare_at_price !== null && item.variants[0].compare_at_price !== item.variants[0].price
+												? `
+									<div class="price__sale">
+								<span class="visually-hidden visually-hidden--inline">Sale price</span>
+								<span class="price-item price-item--sale">
+									<span class="money" data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
+								</span>
+								<span class="visually-hidden visually-hidden--inline">Regular price</span>
+									<s class="price-item price-item--regular prod__compare_price ml-2 line-through text-color-secondary flex items-center">
+										<span class="money" data-product-price=${item.variants[0].compare_at_price}>$${item.variants[0].compare_at_price / 100} USD</span>
+									</s>
+							</div>
+									`
+												: `<div class="price__regular">
+									<span class="visually-hidden visually-hidden--inline">
+										Regular price
+									</span>
+									<span class="price-item price-item--regular text-xl md:text-2xl">
+										<span
+											class="money"
+											data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
+									</span>
+								</div>`
+										}
 									</div>
 									<div class="hidden lg:block mt-[25px] mb-4 text-color-secondary">
 										<a class="block mt-2 underline text-black" href="${path + item.url}">View details</a>
@@ -1022,6 +1054,7 @@ function renderProducts() {
 				updateButton(true, "", false);
 				if (currentVariant) {
 					updateMedia();
+					updatePrice();
 					document.querySelector(".currency-selector").dispatchEvent(new Event("change"));
 					updateButton(!currentVariant.available, "Sold Out");
 				}
@@ -1099,6 +1132,34 @@ function renderProducts() {
 					});
 				});
 				return result[0] || null;
+			};
+			// Hàm cập nhật giá tiền
+			const updatePrice = () => {
+				const currency = localStorage.getItem("currency");
+				const responseData = JSON.parse(localStorage.getItem("exchangeRate"));
+				if (currency && responseData) {
+					const priceElements = modalContent.querySelectorAll("span.money");
+					priceElements.forEach((element) => {
+						if (currentVariant.compare_at_price === null || currentVariant.compare_at_price === currentVariant.price) {
+							element.setAttribute("data-product-price", currentVariant.price);
+							const price = currentVariant.price;
+							const convertedPrice = price * responseData.conversion_rates[currency];
+							element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
+						} else {
+							if (element.parentElement.classList.contains("price-item--sale")) {
+								element.setAttribute("data-product-price", currentVariant.price);
+								const price = currentVariant.price;
+								const convertedPrice = price * responseData.conversion_rates[currency];
+								element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
+							} else {
+								element.setAttribute("data-product-price", currentVariant.compare_at_price);
+								const price = currentVariant.compare_at_price;
+								const convertedPrice = price * responseData.conversion_rates[currency];
+								element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
+							}
+						}
+					});
+				}
 			};
 			// Hàm cập nhật media-gallery
 			const updateMedia = () => {
@@ -1268,6 +1329,27 @@ function renderProducts() {
 				img.parentElement.querySelector(".img-lazyloader")?.remove();
 			});
 		});
+	});
+	document.querySelectorAll(".pcard__rating").forEach((rating) => {
+		const normalStar = '<svg class="star-icon normalStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
+		const halfStar = '<svg class="star-icon halfStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
+		const borderStar = '<svg class="star-icon borderStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
+
+		const ratingValue = rating.getAttribute("data-rating");
+		const ratingCount = rating.getAttribute("data-rating-count");
+
+		let ratingStars = "";
+		for (let i = 0; i < 5; i++) {
+			if (ratingValue - i >= 1) {
+				ratingStars += normalStar;
+			} else if (ratingValue - i >= 0.5 && ratingValue - i < 1) {
+				ratingStars += halfStar;
+			} else {
+				ratingStars += borderStar;
+			}
+		}
+		ratingStars += `<span class="rating-count ml-2">(${ratingCount})</span>`;
+		rating.innerHTML = ratingStars;
 	});
 }
 

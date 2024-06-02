@@ -727,3 +727,11 @@
 .review-helpful.voted path {
 	fill: #333;
 }
+.price__sale {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.prod__compare_price {
+	color: #666;
+}

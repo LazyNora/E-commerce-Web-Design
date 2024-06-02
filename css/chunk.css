@@ -2328,3 +2328,16 @@ html.prevent-scroll body {
 	margin-bottom: 0.75em;
 	margin-top: 0.75em;
 }
+.price__sale {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.prod__compare_price {
+	color: #666;
+}
+.pcard__rating {
+	display: flex;
+	align-items: center;
+	padding-bottom: 10px;
+}
