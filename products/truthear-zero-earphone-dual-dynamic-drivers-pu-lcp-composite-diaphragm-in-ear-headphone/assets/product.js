@@ -20,40 +20,44 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
-  rating : 4.4,
-    ratingCount : 6,
-    reviews: [
-        {   
-            user: "Taro Yamada",
-            rating: 5,
-            review: "音質は素晴らしいです。長時間使用しても疲れません。とても満足しています。",
-            timestamp: "2024-01-10T09:15:21+08:00",
-        },
-        {   
-            user: "John Smith",
-            rating: 4,
-            review: "Great sound quality, but the fit could be better. Overall, a good purchase.",
-            timestamp: "2024-02-05T14:22:21+08:00",
-        },
-        {   
-            user: "Nguyen Van A",
-            rating: 5,
-            review: "Chất lượng âm thanh tuyệt vời, rất thoải mái khi đeo lâu. Rất hài lòng với sản phẩm này.",
-            timestamp: "2023-12-20T10:45:21+08:00",
-        },
-        {   
-            user: "Olga Ivanova",
-            rating: 4,
-            review: "Звук отличный, но дизайн наушников можно улучшить для большего комфорта.",
-            timestamp: "2023-11-30T08:50:21+08:00",
-        },
-        {   
-            user: "Mai Nguyen",
-            rating: 5,
-            review: "Âm thanh rất tốt và sử dụng rất thoải mái. Đáng để mua!",
-            timestamp: "2024-01-25T11:30:21+08:00",
-        }
-    ],
+  rating: 4.4,
+  ratingCount: 6,
+  reviews: [
+    {
+      user: "Taro Yamada",
+      rating: 5,
+      review:
+        "音質は素晴らしいです。長時間使用しても疲れません。とても満足しています。",
+      timestamp: "2024-01-10T09:15:21+08:00",
+    },
+    {
+      user: "John Smith",
+      rating: 4,
+      review:
+        "Great sound quality, but the fit could be better. Overall, a good purchase.",
+      timestamp: "2024-02-05T14:22:21+08:00",
+    },
+    {
+      user: "Nguyen Van A",
+      rating: 5,
+      review:
+        "Chất lượng âm thanh tuyệt vời, rất thoải mái khi đeo lâu. Rất hài lòng với sản phẩm này.",
+      timestamp: "2023-12-20T10:45:21+08:00",
+    },
+    {
+      user: "Olga Ivanova",
+      rating: 4,
+      review:
+        "Звук отличный, но дизайн наушников можно улучшить для большего комфорта.",
+      timestamp: "2023-11-30T08:50:21+08:00",
+    },
+    {
+      user: "Mai Nguyen",
+      rating: 5,
+      review: "Âm thanh rất tốt và sử dụng rất thoải mái. Đáng để mua!",
+      timestamp: "2024-01-25T11:30:21+08:00",
+    },
+  ],
   variants: [
     {
       id: 43010057634035,

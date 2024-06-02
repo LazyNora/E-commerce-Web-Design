@@ -19,52 +19,56 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
-  "rating": 5.0,
-    "ratingCount": 7,
-    "reviews": [
-        {
-            "user": "Emily Chen",
-            "rating": 5,
-            "review": "These earphones are amazing! The sound quality is exceptional, and they are very comfortable to wear for extended periods.",
-            "timestamp": "2024-06-10T09:30:00+08:00"
-        },
-        {
-            "user": "张明",
-            "rating": 5,
-            "review": "声音非常好听，戴起来也很舒服。非常满意这个产品。",
-            "timestamp": "2024-06-09T14:00:00+08:00"
-        },
-        {
-            "user": "Lucas Wang",
-            "rating": 5,
-            "review": "These earphones exceeded my expectations! The sound quality is top-notch, and they fit perfectly in my ears.",
-            "timestamp": "2024-06-08T09:45:00+08:00"
-        },
-        {
-            "user": "Sophia Liu",
-            "rating": 5,
-            "review": "这个产品真的太棒了！音质非常好，佩戴起来也很舒适。",
-            "timestamp": "2024-06-07T15:20:00+08:00"
-        },
-        {
-            "user": "Brian Johnson",
-            "rating": 5,
-            "review": "I'm impressed with these earphones! The sound quality is superb, and they stay in place even during workouts.",
-            "timestamp": "2024-06-06T08:10:00+08:00"
-        },
-        {
-            "user": "李小明",
-            "rating": 5,
-            "review": "非常满意这个产品！音质很好，佩戴起来也很舒服。",
-            "timestamp": "2024-06-05T11:25:00+08:00"
-        },
-        {
-            "user": "Sarah Liu",
-            "rating": 5,
-            "review": "These earphones are fantastic! The sound is crystal clear, and they are lightweight and comfortable.",
-            "timestamp": "2024-06-04T13:50:00+08:00"
-        }
-    ],
+  rating: 5.0,
+  ratingCount: 7,
+  reviews: [
+    {
+      user: "Emily Chen",
+      rating: 5,
+      review:
+        "These earphones are amazing! The sound quality is exceptional, and they are very comfortable to wear for extended periods.",
+      timestamp: "2024-06-10T09:30:00+08:00",
+    },
+    {
+      user: "张明",
+      rating: 5,
+      review: "声音非常好听，戴起来也很舒服。非常满意这个产品。",
+      timestamp: "2024-06-09T14:00:00+08:00",
+    },
+    {
+      user: "Lucas Wang",
+      rating: 5,
+      review:
+        "These earphones exceeded my expectations! The sound quality is top-notch, and they fit perfectly in my ears.",
+      timestamp: "2024-06-08T09:45:00+08:00",
+    },
+    {
+      user: "Sophia Liu",
+      rating: 5,
+      review: "这个产品真的太棒了！音质非常好，佩戴起来也很舒适。",
+      timestamp: "2024-06-07T15:20:00+08:00",
+    },
+    {
+      user: "Brian Johnson",
+      rating: 5,
+      review:
+        "I'm impressed with these earphones! The sound quality is superb, and they stay in place even during workouts.",
+      timestamp: "2024-06-06T08:10:00+08:00",
+    },
+    {
+      user: "李小明",
+      rating: 5,
+      review: "非常满意这个产品！音质很好，佩戴起来也很舒服。",
+      timestamp: "2024-06-05T11:25:00+08:00",
+    },
+    {
+      user: "Sarah Liu",
+      rating: 5,
+      review:
+        "These earphones are fantastic! The sound is crystal clear, and they are lightweight and comfortable.",
+      timestamp: "2024-06-04T13:50:00+08:00",
+    },
+  ],
   variants: [
     {
       id: 43828056064243,

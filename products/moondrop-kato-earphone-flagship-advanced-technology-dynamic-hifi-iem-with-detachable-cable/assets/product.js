@@ -20,28 +20,31 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
-  "rating": 5,
-    "ratingCount": 3,
-    "reviews": [
-        {
-            "user": "Sophia Nguyen",
-            "rating": 5,
-            "review": "Tai nghe này thật tuyệt vời! Âm thanh rất sống động và chất lượng, và chúng rất thoải mái khi đeo.",
-            "timestamp": "2024-06-15T09:30:00+08:00"
-        },
-        {
-            "user": "Takahashi Satoshi",
-            "rating": 5,
-            "review": "これらのイヤホンは素晴らしいです！音質が非常に良く、快適に着用できます。",
-            "timestamp": "2024-06-14T14:00:00+08:00"
-        },
-        {
-            "user": "Emma Smith",
-            "rating": 5,
-            "review": "These earphones are fantastic! The sound quality is excellent, and they are very comfortable to wear for long periods.",
-            "timestamp": "2024-06-13T09:45:00+08:00"
-        }
-    ],
+  rating: 5,
+  ratingCount: 3,
+  reviews: [
+    {
+      user: "Sophia Nguyen",
+      rating: 5,
+      review:
+        "Tai nghe này thật tuyệt vời! Âm thanh rất sống động và chất lượng, và chúng rất thoải mái khi đeo.",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Takahashi Satoshi",
+      rating: 5,
+      review:
+        "これらのイヤホンは素晴らしいです！音質が非常に良く、快適に着用できます。",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Emma Smith",
+      rating: 5,
+      review:
+        "These earphones are fantastic! The sound quality is excellent, and they are very comfortable to wear for long periods.",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+  ],
   variants: [
     {
       id: 41120632242327,

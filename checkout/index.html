@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      const path =
+        window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
+    </script>
+    <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/tailwind.css" />
+    <link rel="stylesheet" href="../css/chunk.css" />
+    <link rel="stylesheet" href="../css/Announcement.css" />
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/Checkout.css" />
+    <link rel="stylesheet" href="../css/Cart.css" />
+    <link rel="stylesheet" href="../css/Footer.css" />
+
+    <style>
+      * {
+        margin: 0;
+        font-family: "Nunito", sans-serif;
+      }
+      *,
+      :after,
+      :before {
+        border: 0 solid #e5e7eb;
+        box-sizing: border-box;
+      }
+      body {
+        --container-width: 1620;
+        --fluid-container-width: 1620px;
+        --fluid-container-offset: 65px;
+        background-color: #ffffff;
+      }
+
+      body {
+        text-size-adjust: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        tab-size: 4;
+        /* overflow-x: hidden; */
+      }
+      div {
+        display: block;
+      }
+    </style>
+
+    <title>Checkout - AudioOasis</title>
+  </head>
+  <body>
+    <section class="section-checkout-header">
+      <header class="checkout-header container">
+        <div class="checkout-header-container">
+          <div class="checkout-header-logo">
+            <a href="../">
+              <img
+                src="../assets/logo-desktop.svg"
+                width="300"
+                alt="AudioOasis"
+              />
+            </a>
+          </div>
+          <div class="checkout-header-action">
+            <a href="../cart" class="checkout-header-action-cart">
+              <svg
+                class="w-[2.15rem] h-[2.15rem]"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2zM6.16 6h12.15l-2.76 5H8.53zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2m10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+    </section>
+    <section class="section-checkout">
+      <div class="container flex flex-wrap">
+        <div class="w-full md:w-1/2">
+          <div class="checkout-form-container grid">
+            <form action="" method="post" class="checkout-form">
+              <section class="express-checkout">
+                <h2 class="checkout-form-title">Express Checkout</h2>
+                <div class="express-checkout-container">
+                  <button
+                    type="button"
+                    class="btn express-checkout-button paypal-btn bg-[#ffc439]"
+                  >
+                    <svg
+                      class="h-6"
+                      viewBox="0 0 101 32"
+                      preserveAspectRatio="xMinYMin meet"
+                      xmlns="http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg"
+                    >
+                      <path
+                        fill="#003087"
+                        d="M 12.237 2.8 L 4.437 2.8 C 3.937 2.8 3.437 3.2 3.337 3.7 L 0.237 23.7 C 0.137 24.1 0.437 24.4 0.837 24.4 L 4.537 24.4 C 5.037 24.4 5.537 24 5.637 23.5 L 6.437 18.1 C 6.537 17.6 6.937 17.2 7.537 17.2 L 10.037 17.2 C 15.137 17.2 18.137 14.7 18.937 9.8 C 19.237 7.7 18.937 6 17.937 4.8 C 16.837 3.5 14.837 2.8 12.237 2.8 Z M 13.137 10.1 C 12.737 12.9 10.537 12.9 8.537 12.9 L 7.337 12.9 L 8.137 7.7 C 8.137 7.4 8.437 7.2 8.737 7.2 L 9.237 7.2 C 10.637 7.2 11.937 7.2 12.637 8 C 13.137 8.4 13.337 9.1 13.137 10.1 Z"
+                      ></path>
+                      <path
+                        fill="#003087"
+                        d="M 35.437 10 L 31.737 10 C 31.437 10 31.137 10.2 31.137 10.5 L 30.937 11.5 L 30.637 11.1 C 29.837 9.9 28.037 9.5 26.237 9.5 C 22.137 9.5 18.637 12.6 17.937 17 C 17.537 19.2 18.037 21.3 19.337 22.7 C 20.437 24 22.137 24.6 24.037 24.6 C 27.337 24.6 29.237 22.5 29.237 22.5 L 29.037 23.5 C 28.937 23.9 29.237 24.3 29.637 24.3 L 33.037 24.3 C 33.537 24.3 34.037 23.9 34.137 23.4 L 36.137 10.6 C 36.237 10.4 35.837 10 35.437 10 Z M 30.337 17.2 C 29.937 19.3 28.337 20.8 26.137 20.8 C 25.037 20.8 24.237 20.5 23.637 19.8 C 23.037 19.1 22.837 18.2 23.037 17.2 C 23.337 15.1 25.137 13.6 27.237 13.6 C 28.337 13.6 29.137 14 29.737 14.6 C 30.237 15.3 30.437 16.2 30.337 17.2 Z"
+                      ></path>
+                      <path
+                        fill="#003087"
+                        d="M 55.337 10 L 51.637 10 C 51.237 10 50.937 10.2 50.737 10.5 L 45.537 18.1 L 43.337 10.8 C 43.237 10.3 42.737 10 42.337 10 L 38.637 10 C 38.237 10 37.837 10.4 38.037 10.9 L 42.137 23 L 38.237 28.4 C 37.937 28.8 38.237 29.4 38.737 29.4 L 42.437 29.4 C 42.837 29.4 43.137 29.2 43.337 28.9 L 55.837 10.9 C 56.137 10.6 55.837 10 55.337 10 Z"
+                      ></path>
+                      <path
+                        fill="#009cde"
+                        d="M 67.737 2.8 L 59.937 2.8 C 59.437 2.8 58.937 3.2 58.837 3.7 L 55.737 23.6 C 55.637 24 55.937 24.3 56.337 24.3 L 60.337 24.3 C 60.737 24.3 61.037 24 61.037 23.7 L 61.937 18 C 62.037 17.5 62.437 17.1 63.037 17.1 L 65.537 17.1 C 70.637 17.1 73.637 14.6 74.437 9.7 C 74.737 7.6 74.437 5.9 73.437 4.7 C 72.237 3.5 70.337 2.8 67.737 2.8 Z M 68.637 10.1 C 68.237 12.9 66.037 12.9 64.037 12.9 L 62.837 12.9 L 63.637 7.7 C 63.637 7.4 63.937 7.2 64.237 7.2 L 64.737 7.2 C 66.137 7.2 67.437 7.2 68.137 8 C 68.637 8.4 68.737 9.1 68.637 10.1 Z"
+                      ></path>
+                      <path
+                        fill="#009cde"
+                        d="M 90.937 10 L 87.237 10 C 86.937 10 86.637 10.2 86.637 10.5 L 86.437 11.5 L 86.137 11.1 C 85.337 9.9 83.537 9.5 81.737 9.5 C 77.637 9.5 74.137 12.6 73.437 17 C 73.037 19.2 73.537 21.3 74.837 22.7 C 75.937 24 77.637 24.6 79.537 24.6 C 82.837 24.6 84.737 22.5 84.737 22.5 L 84.537 23.5 C 84.437 23.9 84.737 24.3 85.137 24.3 L 88.537 24.3 C 89.037 24.3 89.537 23.9 89.637 23.4 L 91.637 10.6 C 91.637 10.4 91.337 10 90.937 10 Z M 85.737 17.2 C 85.337 19.3 83.737 20.8 81.537 20.8 C 80.437 20.8 79.637 20.5 79.037 19.8 C 78.437 19.1 78.237 18.2 78.437 17.2 C 78.737 15.1 80.537 13.6 82.637 13.6 C 83.737 13.6 84.537 14 85.137 14.6 C 85.737 15.3 85.937 16.2 85.737 17.2 Z"
+                      ></path>
+                      <path
+                        fill="#009cde"
+                        d="M 95.337 3.3 L 92.137 23.6 C 92.037 24 92.337 24.3 92.737 24.3 L 95.937 24.3 C 96.437 24.3 96.937 23.9 97.037 23.4 L 100.237 3.5 C 100.337 3.1 100.037 2.8 99.637 2.8 L 96.037 2.8 C 95.637 2.8 95.437 3 95.337 3.3 Z"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn express-checkout-button gpay-btn bg-black"
+                  ></button>
+                  <button
+                    type="button"
+                    class="btn express-checkout-button apple-btn bg-black"
+                  >
+                    <svg
+                      class="h-6"
+                      fill="white"
+                      version="1.1"
+                      baseProfile="tiny"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 210.2"
+                      xml:space="preserve"
+                    >
+                      <path
+                        id="XMLID_34_"
+                        d="M93.6,27.1C87.6,34.2,78,39.8,68.4,39c-1.2-9.6,3.5-19.8,9-26.1c6-7.3,16.5-12.5,25-12.9
+                        C103.4,10,99.5,19.8,93.6,27.1 M102.3,40.9c-13.9-0.8-25.8,7.9-32.4,7.9c-6.7,0-16.8-7.5-27.8-7.3c-14.3,0.2-27.6,8.3-34.9,21.2
+                        c-15,25.8-3.9,64,10.6,85c7.1,10.4,15.6,21.8,26.8,21.4c10.6-0.4,14.8-6.9,27.6-6.9c12.9,0,16.6,6.9,27.8,6.7
+                        c11.6-0.2,18.9-10.4,26-20.8c8.1-11.8,11.4-23.3,11.6-23.9c-0.2-0.2-22.4-8.7-22.6-34.3c-0.2-21.4,17.5-31.6,18.3-32.2
+                        C123.3,42.9,107.7,41.3,102.3,40.9 M182.6,11.9v155.9h24.2v-53.3h33.5c30.6,0,52.1-21,52.1-51.4c0-30.4-21.1-51.2-51.3-51.2H182.6z
+                        M206.8,32.3h27.9c21,0,33,11.2,33,30.9c0,19.7-12,31-33.1,31h-27.8V32.3z M336.6,169c15.2,0,29.3-7.7,35.7-19.9h0.5v18.7h22.4V90.2
+                        c0-22.5-18-37-45.7-37c-25.7,0-44.7,14.7-45.4,34.9h21.8c1.8-9.6,10.7-15.9,22.9-15.9c14.8,0,23.1,6.9,23.1,19.6v8.6l-30.2,1.8
+                        c-28.1,1.7-43.3,13.2-43.3,33.2C298.4,155.6,314.1,169,336.6,169z M343.1,150.5c-12.9,0-21.1-6.2-21.1-15.7c0-9.8,7.9-15.5,23-16.4
+                        l26.9-1.7v8.8C371.9,140.1,359.5,150.5,343.1,150.5z M425.1,210.2c23.6,0,34.7-9,44.4-36.3L512,54.7h-24.6l-28.5,92.1h-0.5
+                        l-28.5-92.1h-25.3l41,113.5l-2.2,6.9c-3.7,11.7-9.7,16.2-20.4,16.2c-1.9,0-5.6-0.2-7.1-0.4v18.7C417.3,210,423.3,210.2,425.1,210.2z
+                        "
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="separator">
+                  <span class="separator-text">or</span>
+                </div>
+                <div class="contact-container w-full">
+                  <div class="mb-2">
+                    <h2 class="text-2xl font-semibold">Account</h2>
+                    <p
+                      class="flex flex-wrap justify-between items-baseline mb-2"
+                    >
+                      <span id="email" class="my-2">as@gmail.com</span
+                      ><a href="../logout" class="text-blue-500">Logout</a>
+                    </p>
+                    <hr />
+                    <h2 class="text-xl my-2">Ship to</h2>
+                    <div class="address-select">
+                      <div
+                        class="flex justify-start flex-col items-start p-4 bg-[#F0F5FF] border rounded border-[#1773b0]"
+                      >
+                        <p>
+                          <span id="fullName">John Doe</span>,
+                          <span>964/19 Hương lộ 2, Quận Bình Tân</span>
+                        </p>
+                        <span class="text-sm text-[#666]">Hồ Chí Minh, VN</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="w-full mt-6 mb-2">
+                    <h2 class="text-2xl font-semibold">Shipping method</h2>
+                  </div>
+                  <div class="shipping-method mb-2">
+                    <div
+                      class="flex justify-between items-center p-4 bg-[#F0F5FF] border rounded-t rounded-r border-[#1773b0] h-[57px]"
+                    >
+                      <span>International Free Shipping</span>
+                      <span>Free</span>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="w-full mt-6 mb-2">
+                    <h2 class="text-2xl font-semibold">Payment</h2>
+                    <p>All transactions are secure and encrypted.</p>
+                  </div>
+                  <div class="payment-method">
+                    <div class="credit-card bg-[#eee] border rounded">
+                      <label
+                        for="payment[card]"
+                        class="flex justify-between items-center p-4 bg-[#F0F5FF] border rounded border-[#1773b0] h-[57px]"
+                      >
+                        <div class="flex justify-center items-start">
+                          <input
+                            class="block w-6 h-6"
+                            type="radio"
+                            name="payment"
+                            id="payment[card]"
+                          />
+                          <span class="ml-2">Credit card</span>
+                        </div>
+                        <div class="flex flex-row">
+                          <img
+                            alt="VISA"
+                            src="../assets/visa.svg"
+                            role="img"
+                            width="38"
+                            height="24"
+                          />
+                          <img
+                            alt="MASTERCARD"
+                            src="../assets/mastercard.svg"
+                            role="img"
+                            width="38"
+                            height="24"
+                          />
+                          <img
+                            alt="AMEX"
+                            src="../assets/amex.svg"
+                            role="img"
+                            width="38"
+                            height="24"
+                          />
+                        </div>
+                      </label>
+                      <div class="p-8">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="card[number]"
+                          id="card[number]"
+                          placeholder="Card number"
+                        />
+                        <div class="grid grid-cols-2 gap-4">
+                          <input
+                            class="form-control"
+                            type="text"
+                            name="card[expdate]"
+                            id="card[expdate]"
+                            placeholder="Expiration date (MM / YY)"
+                          />
+                          <input
+                            class="form-control"
+                            type="text"
+                            name="card[securitycode]"
+                            id="card[securitycode]"
+                            placeholder="Security code"
+                          />
+                        </div>
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="card[name]"
+                          id="card[name]"
+                          placeholder="Name on card"
+                        />
+                      </div>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+                <script>
+                  // const user = JSON.parse(localStorage.getItem("user"));
+                  // const contactContainer = document.querySelector(".contact-container");
+                  // if (user) {
+                  // } else {
+                  // 	contactContainer.innerHTML = `
+                  // <div class="flex flex-wrap justify-between items-baseline mb-2">
+                  // 	<h2 class="text-2xl font-semibold">Contact</h2>
+                  // 	<a href="../login" class="text-blue-500">Login</a>
+                  // </div>
+                  // <div class="email-input">
+                  // 	<input type="email" name="contact-email" id="contact-email" class="form-control" placeholder="Email" />
+                  // 	<div class="flex items-center mt-2">
+                  // 		<input class="mr-2" type="checkbox" name="contact-marketing" id="contact-marketing" />
+                  // 		<label for="contact-marketing">Email me with news and offers</label>
+                  // 	</div>
+                  // </div>
+                  // <div class="w-full mt-6 mb-2">
+                  // 	<h2 class="text-2xl font-semibold">Delivery</h2>
+                  // </div>
+                  // <div class="delivery-input">
+                  // 	<select class="form-control" name="address[country]" id="AddressCountry">
+                  // 		<option value="AF">Afghanistan</option>
+                  // 		<option value="AX">Åland Islands</option>
+                  // 		<option value="AL">Albania</option>
+                  // 		<option value="DZ">Algeria</option>
+                  // 		<option value="AD">Andorra</option>
+                  // 		<option value="AO">Angola</option>
+                  // 		<option value="AI">Anguilla</option>
+                  // 		<option value="AG">Antigua &amp; Barbuda</option>
+                  // 		<option value="AR">Argentina</option>
+                  // 		<option value="AM">Armenia</option>
+                  // 		<option value="AW">Aruba</option>
+                  // 		<option value="AC">Ascension Island</option>
+                  // 		<option value="AU">Australia</option>
+                  // 		<option value="AT">Austria</option>
+                  // 		<option value="AZ">Azerbaijan</option>
+                  // 		<option value="BS">Bahamas</option>
+                  // 		<option value="BH">Bahrain</option>
+                  // 		<option value="BD">Bangladesh</option>
+                  // 		<option value="BB">Barbados</option>
+                  // 		<option value="BY">Belarus</option>
+                  // 		<option value="BE">Belgium</option>
+                  // 		<option value="BZ">Belize</option>
+                  // 		<option value="BJ">Benin</option>
+                  // 		<option value="BM">Bermuda</option>
+                  // 		<option value="BT">Bhutan</option>
+                  // 		<option value="BO">Bolivia</option>
+                  // 		<option value="BA">Bosnia &amp; Herzegovina</option>
+                  // 		<option value="BW">Botswana</option>
+                  // 		<option value="BR">Brazil</option>
+                  // 		<option value="IO">British Indian Ocean Territory</option>
+                  // 		<option value="VG">British Virgin Islands</option>
+                  // 		<option value="BN">Brunei</option>
+                  // 		<option value="BG">Bulgaria</option>
+                  // 		<option value="BF">Burkina Faso</option>
+                  // 		<option value="BI">Burundi</option>
+                  // 		<option value="KH">Cambodia</option>
+                  // 		<option value="CM">Cameroon</option>
+                  // 		<option value="CA">Canada</option>
+                  // 		<option value="CV">Cape Verde</option>
+                  // 		<option value="BQ">Caribbean Netherlands</option>
+                  // 		<option value="KY">Cayman Islands</option>
+                  // 		<option value="CF">Central African Republic</option>
+                  // 		<option value="TD">Chad</option>
+                  // 		<option value="CL">Chile</option>
+                  // 		<option value="CN">China</option>
+                  // 		<option value="CX">Christmas Island</option>
+                  // 		<option value="CC">Cocos (Keeling) Islands</option>
+                  // 		<option value="CO">Colombia</option>
+                  // 		<option value="KM">Comoros</option>
+                  // 		<option value="CG">Congo - Brazzaville</option>
+                  // 		<option value="CD">Congo - Kinshasa</option>
+                  // 		<option value="CK">Cook Islands</option>
+                  // 		<option value="CR">Costa Rica</option>
+                  // 		<option value="HR">Croatia</option>
+                  // 		<option value="CW">Curaçao</option>
+                  // 		<option value="CY">Cyprus</option>
+                  // 		<option value="CZ">Czechia</option>
+                  // 		<option value="CI">Côte d’Ivoire</option>
+                  // 		<option value="DK">Denmark</option>
+                  // 		<option value="DJ">Djibouti</option>
+                  // 		<option value="DM">Dominica</option>
+                  // 		<option value="DO">Dominican Republic</option>
+                  // 		<option value="EC">Ecuador</option>
+                  // 		<option value="EG">Egypt</option>
+                  // 		<option value="SV">El Salvador</option>
+                  // 		<option value="GQ">Equatorial Guinea</option>
+                  // 		<option value="ER">Eritrea</option>
+                  // 		<option value="EE">Estonia</option>
+                  // 		<option value="SZ">Eswatini</option>
+                  // 		<option value="ET">Ethiopia</option>
+                  // 		<option value="FK">Falkland Islands</option>
+                  // 		<option value="FO">Faroe Islands</option>
+                  // 		<option value="FJ">Fiji</option>
+                  // 		<option value="FI">Finland</option>
+                  // 		<option value="FR">France</option>
+                  // 		<option value="GF">French Guiana</option>
+                  // 		<option value="PF">French Polynesia</option>
+                  // 		<option value="TF">French Southern Territories</option>
+                  // 		<option value="GA">Gabon</option>
+                  // 		<option value="GM">Gambia</option>
+                  // 		<option value="GE">Georgia</option>
+                  // 		<option value="DE">Germany</option>
+                  // 		<option value="GH">Ghana</option>
+                  // 		<option value="GI">Gibraltar</option>
+                  // 		<option value="GR">Greece</option>
+                  // 		<option value="GL">Greenland</option>
+                  // 		<option value="GD">Grenada</option>
+                  // 		<option value="GP">Guadeloupe</option>
+                  // 		<option value="GT">Guatemala</option>
+                  // 		<option value="GG">Guernsey</option>
+                  // 		<option value="GN">Guinea</option>
+                  // 		<option value="GW">Guinea-Bissau</option>
+                  // 		<option value="GY">Guyana</option>
+                  // 		<option value="HT">Haiti</option>
+                  // 		<option value="HN">Honduras</option>
+                  // 		<option value="HK">Hong Kong SAR</option>
+                  // 		<option value="HU">Hungary</option>
+                  // 		<option value="IS">Iceland</option>
+                  // 		<option value="IN">India</option>
+                  // 		<option value="ID">Indonesia</option>
+                  // 		<option value="IQ">Iraq</option>
+                  // 		<option value="IE">Ireland</option>
+                  // 		<option value="IM">Isle of Man</option>
+                  // 		<option value="IL">Israel</option>
+                  // 		<option value="IT">Italy</option>
+                  // 		<option value="JM">Jamaica</option>
+                  // 		<option value="JP">Japan</option>
+                  // 		<option value="JE">Jersey</option>
+                  // 		<option value="JO">Jordan</option>
+                  // 		<option value="KZ">Kazakhstan</option>
+                  // 		<option value="KE">Kenya</option>
+                  // 		<option value="KI">Kiribati</option>
+                  // 		<option value="XK">Kosovo</option>
+                  // 		<option value="KW">Kuwait</option>
+                  // 		<option value="KG">Kyrgyzstan</option>
+                  // 		<option value="LA">Laos</option>
+                  // 		<option value="LV">Latvia</option>
+                  // 		<option value="LB">Lebanon</option>
+                  // 		<option value="LS">Lesotho</option>
+                  // 		<option value="LR">Liberia</option>
+                  // 		<option value="LY">Libya</option>
+                  // 		<option value="LI">Liechtenstein</option>
+                  // 		<option value="LT">Lithuania</option>
+                  // 		<option value="LU">Luxembourg</option>
+                  // 		<option value="MO">Macao SAR</option>
+                  // 		<option value="MG">Madagascar</option>
+                  // 		<option value="MW">Malawi</option>
+                  // 		<option value="MY">Malaysia</option>
+                  // 		<option value="MV">Maldives</option>
+                  // 		<option value="ML">Mali</option>
+                  // 		<option value="MT">Malta</option>
+                  // 		<option value="MQ">Martinique</option>
+                  // 		<option value="MR">Mauritania</option>
+                  // 		<option value="MU">Mauritius</option>
+                  // 		<option value="YT">Mayotte</option>
+                  // 		<option value="MX">Mexico</option>
+                  // 		<option value="MD">Moldova</option>
+                  // 		<option value="MC">Monaco</option>
+                  // 		<option value="MN">Mongolia</option>
+                  // 		<option value="ME">Montenegro</option>
+                  // 		<option value="MS">Montserrat</option>
+                  // 		<option value="MA">Morocco</option>
+                  // 		<option value="MZ">Mozambique</option>
+                  // 		<option value="MM">Myanmar (Burma)</option>
+                  // 		<option value="NA">Namibia</option>
+                  // 		<option value="NR">Nauru</option>
+                  // 		<option value="NP">Nepal</option>
+                  // 		<option value="NL">Netherlands</option>
+                  // 		<option value="NC">New Caledonia</option>
+                  // 		<option value="NZ">New Zealand</option>
+                  // 		<option value="NI">Nicaragua</option>
+                  // 		<option value="NE">Niger</option>
+                  // 		<option value="NG">Nigeria</option>
+                  // 		<option value="NU">Niue</option>
+                  // 		<option value="NF">Norfolk Island</option>
+                  // 		<option value="MK">North Macedonia</option>
+                  // 		<option value="NO">Norway</option>
+                  // 		<option value="OM">Oman</option>
+                  // 		<option value="PK">Pakistan</option>
+                  // 		<option value="PS">Palestinian Territories</option>
+                  // 		<option value="PA">Panama</option>
+                  // 		<option value="PG">Papua New Guinea</option>
+                  // 		<option value="PY">Paraguay</option>
+                  // 		<option value="PE">Peru</option>
+                  // 		<option value="PH">Philippines</option>
+                  // 		<option value="PN">Pitcairn Islands</option>
+                  // 		<option value="PL">Poland</option>
+                  // 		<option value="PT">Portugal</option>
+                  // 		<option value="QA">Qatar</option>
+                  // 		<option value="RE">Réunion</option>
+                  // 		<option value="RO">Romania</option>
+                  // 		<option value="RU">Russia</option>
+                  // 		<option value="RW">Rwanda</option>
+                  // 		<option value="WS">Samoa</option>
+                  // 		<option value="SM">San Marino</option>
+                  // 		<option value="ST">São Tomé &amp; Príncipe</option>
+                  // 		<option value="SA">Saudi Arabia</option>
+                  // 		<option value="SN">Senegal</option>
+                  // 		<option value="RS">Serbia</option>
+                  // 		<option value="SC">Seychelles</option>
+                  // 		<option value="SL">Sierra Leone</option>
+                  // 		<option value="SG">Singapore</option>
+                  // 		<option value="SX">Sint Maarten</option>
+                  // 		<option value="SK">Slovakia</option>
+                  // 		<option value="SI">Slovenia</option>
+                  // 		<option value="SB">Solomon Islands</option>
+                  // 		<option value="SO">Somalia</option>
+                  // 		<option value="ZA">South Africa</option>
+                  // 		<option value="GS">South Georgia &amp; South Sandwich Islands</option>
+                  // 		<option value="KR">South Korea</option>
+                  // 		<option value="SS">South Sudan</option>
+                  // 		<option value="ES">Spain</option>
+                  // 		<option value="LK">Sri Lanka</option>
+                  // 		<option value="BL">St. Barthélemy</option>
+                  // 		<option value="SH">St. Helena</option>
+                  // 		<option value="KN">St. Kitts &amp; Nevis</option>
+                  // 		<option value="LC">St. Lucia</option>
+                  // 		<option value="MF">St. Martin</option>
+                  // 		<option value="PM">St. Pierre &amp; Miquelon</option>
+                  // 		<option value="VC">St. Vincent &amp; Grenadines</option>
+                  // 		<option value="SD">Sudan</option>
+                  // 		<option value="SR">Suriname</option>
+                  // 		<option value="SJ">Svalbard &amp; Jan Mayen</option>
+                  // 		<option value="SE">Sweden</option>
+                  // 		<option value="CH">Switzerland</option>
+                  // 		<option value="TW">Taiwan</option>
+                  // 		<option value="TJ">Tajikistan</option>
+                  // 		<option value="TZ">Tanzania</option>
+                  // 		<option value="TH">Thailand</option>
+                  // 		<option value="TL">Timor-Leste</option>
+                  // 		<option value="TG">Togo</option>
+                  // 		<option value="TK">Tokelau</option>
+                  // 		<option value="TO">Tonga</option>
+                  // 		<option value="TT">Trinidad &amp; Tobago</option>
+                  // 		<option value="TA">Tristan da Cunha</option>
+                  // 		<option value="TN">Tunisia</option>
+                  // 		<option value="TR">Türkiye</option>
+                  // 		<option value="TM">Turkmenistan</option>
+                  // 		<option value="TC">Turks &amp; Caicos Islands</option>
+                  // 		<option value="TV">Tuvalu</option>
+                  // 		<option value="UM">U.S. Outlying Islands</option>
+                  // 		<option value="UG">Uganda</option>
+                  // 		<option value="UA">Ukraine</option>
+                  // 		<option value="AE">United Arab Emirates</option>
+                  // 		<option value="GB">United Kingdom</option>
+                  // 		<option value="US">United States</option>
+                  // 		<option value="UY">Uruguay</option>
+                  // 		<option value="UZ">Uzbekistan</option>
+                  // 		<option value="VU">Vanuatu</option>
+                  // 		<option value="VA">Vatican City</option>
+                  // 		<option value="VE">Venezuela</option>
+                  // 		<option value="VN" selected>Vietnam</option>
+                  // 		<option value="WF">Wallis &amp; Futuna</option>
+                  // 		<option value="EH">Western Sahara</option>
+                  // 		<option value="YE">Yemen</option>
+                  // 		<option value="ZM">Zambia</option>
+                  // 		<option value="ZW">Zimbabwe</option>
+                  // 	</select>
+                  // 	<div class="grid grid-cols-2 gap-4">
+                  // 		<input class="form-control" type="text" name="address[firstName]" id="address[firstName]" placeholder="First name" />
+                  // 		<input class="form-control" type="text" name="address[lastName]" id="address[lastName]" placeholder="Last name" />
+                  // 	</div>
+                  // 	<input class="form-control" type="text" name="address[address1]" id="address[address1]" placeholder="Address" />
+                  // 	<input class="form-control" type="text" name="address[address2]" id="address[address2]" placeholder="Apartment, suite, etc. (optional)" />
+                  // 	<div class="grid grid-cols-2 gap-4">
+                  // 		<input class="form-control" type="text" name="address[city]" id="address[city]" placeholder="City" />
+                  // 		<input class="form-control" type="text" name="address[postalcode]" id="address[postalcode]" placeholder="Postal code" />
+                  // 	</div>
+                  // 	<input class="form-control" type="text" name="address[phone]" id="address[phone]" placeholder="Phone" pattern="[0-9]{10,11}" />
+                  // </div>
+                  // <div class="w-full mt-6 mb-2">
+                  // 	<h2 class="text-2xl font-semibold">Shipping method</h2>
+                  // </div>
+                  // <div class="shipping-method">
+                  // 	<div class="flex justify-between items-center p-4 bg-[#F0F5FF] border rounded border-[#1773b0] h-[57px]">
+                  // 		<span>International Free Shipping</span>
+                  // 		<span>Free</span>
+                  // 	</div>
+                  // </div>
+                  //   `;
+                  // }
+                </script>
+              </section>
+            </form>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2"></div>
+      </div>
+    </section>
+  </body>
+</html>

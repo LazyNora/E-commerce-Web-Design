@@ -3,8 +3,8 @@ import { formatMoney, moneyFormats } from "./currencyConvert.js";
 
 let availability = []; // true = in stock, false = out of stock
 let priceRange = {
-	min: null,
-	max: null,
+  min: null,
+  max: null,
 }; // [min, max]
 let brand = [];
 let productType = [];
@@ -14,10 +14,10 @@ let search = "";
 
 // get {name} from "collection/{name}/ from URL, remove "index.html" from the path if exists
 const collection = window.location.pathname
-	.replace("index.html", "")
-	.split("/")
-	.filter((item) => item !== "")
-	.pop();
+  .replace("index.html", "")
+  .split("/")
+  .filter((item) => item !== "")
+  .pop();
 
 const customSelect = document.querySelector(".custom-select");
 const sortBySelect = customSelect.querySelector("select[name='sort_by']");
@@ -26,126 +26,142 @@ let products = null;
 let defaultProducts = null;
 
 function init() {
-	defaultProducts = collectionGetFunction(collection);
-	const urlParams = new URLSearchParams(window.location.search);
-	search = urlParams.get("s");
-	if (search) {
-		defaultProducts = defaultProducts.filter((product) => product.title.toLowerCase().includes(search.toLowerCase()));
-	}
-	if (collection === "search-result") {
-		if (search !== "" && search !== null) {
-			document.querySelector(".collection-header__title > span").innerHTML = `"` + search + `"`;
-		} else {
-			document.querySelector(".collection-header__title").innerHTML = "Search Result";
-		}
-	}
-	products = defaultProducts;
-	sortProducts();
-	initFilter();
-	URLParamsLoad();
+  defaultProducts = collectionGetFunction(collection);
+  const urlParams = new URLSearchParams(window.location.search);
+  search = urlParams.get("s");
+  if (search) {
+    defaultProducts = defaultProducts.filter((product) =>
+      product.title.toLowerCase().includes(search.toLowerCase()),
+    );
+  }
+  if (collection === "search-result") {
+    if (search !== "" && search !== null) {
+      document.querySelector(".collection-header__title > span").innerHTML =
+        `"` + search + `"`;
+    } else {
+      document.querySelector(".collection-header__title").innerHTML =
+        "Search Result";
+    }
+  }
+  products = defaultProducts;
+  sortProducts();
+  initFilter();
+  URLParamsLoad();
 }
 
 function sortProducts() {
-	const sortby = sortBySelect.value;
-	products.sort((a, b) => {
-		switch (sortby) {
-			case "price-ascending":
-				return a.price - b.price;
-			case "price-descending":
-				return b.price - a.price;
-			case "created-ascending":
-				return new Date(a.created_at) - new Date(b.created_at);
-			case "created-descending":
-				return new Date(b.created_at) - new Date(a.created_at);
-			case "title-ascending":
-				return a.title.localeCompare(b.title);
-			case "title-descending":
-				return b.title.localeCompare(a.title);
-			case "best-selling":
-				return a.sale_top - b.sale_top;
-			default:
-				return 0;
-		}
-	});
+  const sortby = sortBySelect.value;
+  products.sort((a, b) => {
+    switch (sortby) {
+      case "price-ascending":
+        return a.price - b.price;
+      case "price-descending":
+        return b.price - a.price;
+      case "created-ascending":
+        return new Date(a.created_at) - new Date(b.created_at);
+      case "created-descending":
+        return new Date(b.created_at) - new Date(a.created_at);
+      case "title-ascending":
+        return a.title.localeCompare(b.title);
+      case "title-descending":
+        return b.title.localeCompare(a.title);
+      case "best-selling":
+        return a.sale_top - b.sale_top;
+      default:
+        return 0;
+    }
+  });
 }
 
 function URLParamsLoad() {
-	const urlParams = new URLSearchParams(window.location.search);
-	const sortby = urlParams.get("sort_by") || "created-descending";
-	const ftpage = urlParams.get("page");
-	const ftavailability = urlParams.getAll("filter.availability");
-	const ftpriceMin = urlParams.get("filter.price.min");
-	const ftpriceMax = urlParams.get("filter.price.max");
-	const ftbrand = urlParams.getAll("filter.brand");
-	const ftproductType = urlParams.getAll("filter.productType");
+  const urlParams = new URLSearchParams(window.location.search);
+  const sortby = urlParams.get("sort_by") || "created-descending";
+  const ftpage = urlParams.get("page");
+  const ftavailability = urlParams.getAll("filter.availability");
+  const ftpriceMin = urlParams.get("filter.price.min");
+  const ftpriceMax = urlParams.get("filter.price.max");
+  const ftbrand = urlParams.getAll("filter.brand");
+  const ftproductType = urlParams.getAll("filter.productType");
 
-	sortBySelect.value = sortby;
-	availability = ftavailability;
-	priceRange.min = ftpriceMin ? parseInt(ftpriceMin) : null;
-	priceRange.max = ftpriceMax ? parseInt(ftpriceMax) : null;
-	brand = ftbrand;
-	productType = ftproductType;
-	page = ftpage ? parseInt(ftpage) : 1;
+  sortBySelect.value = sortby;
+  availability = ftavailability;
+  priceRange.min = ftpriceMin ? parseInt(ftpriceMin) : null;
+  priceRange.max = ftpriceMax ? parseInt(ftpriceMax) : null;
+  brand = ftbrand;
+  productType = ftproductType;
+  page = ftpage ? parseInt(ftpage) : 1;
 
-	const FilterForm = document.getElementById("FilterForm");
-	FilterForm.querySelectorAll(".filter-checkbox").forEach((item) => {
-		const input = item.querySelector("input");
-		const key = input.name.split(".")[1];
-		const value = input.value;
-		if (key === "availability") {
-			input.checked = availability.includes(value);
-		} else if (key === "brand") {
-			input.checked = brand.includes(value);
-		} else if (key === "productType") {
-			input.checked = productType.includes(value);
-		}
-	});
-	if (priceRange.min) {
-		FilterForm.querySelector("input[data-type='min-input']").value = priceRange.min;
-		FilterForm.querySelector("input[data-type='min-range']").value = priceRange.min;
-		FilterForm.querySelector("input[data-type='max-range']").dispatchEvent(new Event("input"));
-	}
-	if (priceRange.max) {
-		FilterForm.querySelector("input[data-type='max-input']").value = priceRange.max;
-		FilterForm.querySelector("input[data-type='max-range']").value = priceRange.max;
-		FilterForm.querySelector("input[data-type='max-range']").dispatchEvent(new Event("input"));
-	}
-	FilterForm.dispatchEvent(new Event("change"));
-	sortBySelect.dispatchEvent(new Event("change"));
+  const FilterForm = document.getElementById("FilterForm");
+  FilterForm.querySelectorAll(".filter-checkbox").forEach((item) => {
+    const input = item.querySelector("input");
+    const key = input.name.split(".")[1];
+    const value = input.value;
+    if (key === "availability") {
+      input.checked = availability.includes(value);
+    } else if (key === "brand") {
+      input.checked = brand.includes(value);
+    } else if (key === "productType") {
+      input.checked = productType.includes(value);
+    }
+  });
+  if (priceRange.min) {
+    FilterForm.querySelector("input[data-type='min-input']").value =
+      priceRange.min;
+    FilterForm.querySelector("input[data-type='min-range']").value =
+      priceRange.min;
+    FilterForm.querySelector("input[data-type='max-range']").dispatchEvent(
+      new Event("input"),
+    );
+  }
+  if (priceRange.max) {
+    FilterForm.querySelector("input[data-type='max-input']").value =
+      priceRange.max;
+    FilterForm.querySelector("input[data-type='max-range']").value =
+      priceRange.max;
+    FilterForm.querySelector("input[data-type='max-range']").dispatchEvent(
+      new Event("input"),
+    );
+  }
+  FilterForm.dispatchEvent(new Event("change"));
+  sortBySelect.dispatchEvent(new Event("change"));
 }
 
 function URLParamsUpdate() {
-	const urlParams = new URLSearchParams();
-	availability.forEach((item) => urlParams.append("filter.availability", item));
-	if (sortBySelect.value !== "created-descending") {
-		urlParams.set("sort_by", sortBySelect.value);
-	}
-	if (priceRange.min) {
-		urlParams.set("filter.price.min", priceRange.min);
-	}
-	if (priceRange.max) {
-		urlParams.set("filter.price.max", priceRange.max);
-	}
-	if (page > 1) {
-		urlParams.set("page", page);
-	}
-	if (search) {
-		urlParams.set("s", search);
-	}
-	document.title = collectionName + (page > 1 ? " - Page " + page : "");
-	brand.forEach((item) => urlParams.append("filter.brand", item));
-	productType.forEach((item) => urlParams.append("filter.productType", item));
-	window.history.pushState({}, "", `${window.location.pathname}?${urlParams.toString()}`);
+  const urlParams = new URLSearchParams();
+  availability.forEach((item) => urlParams.append("filter.availability", item));
+  if (sortBySelect.value !== "created-descending") {
+    urlParams.set("sort_by", sortBySelect.value);
+  }
+  if (priceRange.min) {
+    urlParams.set("filter.price.min", priceRange.min);
+  }
+  if (priceRange.max) {
+    urlParams.set("filter.price.max", priceRange.max);
+  }
+  if (page > 1) {
+    urlParams.set("page", page);
+  }
+  if (search) {
+    urlParams.set("s", search);
+  }
+  document.title = collectionName + (page > 1 ? " - Page " + page : "");
+  brand.forEach((item) => urlParams.append("filter.brand", item));
+  productType.forEach((item) => urlParams.append("filter.productType", item));
+  window.history.pushState(
+    {},
+    "",
+    `${window.location.pathname}?${urlParams.toString()}`,
+  );
 }
 
 function renderFilterByItems() {
-	const filterByItems = document.getElementById("filter-by-items");
-	filterByItems.innerHTML = "";
-	let count = 0;
-	availability.forEach((item) => {
-		const filterItem = document.createElement("div");
-		filterItem.classList.add("filter-item");
-		filterItem.innerHTML = `
+  const filterByItems = document.getElementById("filter-by-items");
+  filterByItems.innerHTML = "";
+  let count = 0;
+  availability.forEach((item) => {
+    const filterItem = document.createElement("div");
+    filterItem.classList.add("filter-item");
+    filterItem.innerHTML = `
 			<button class="filter-item-remove" data-type="availability" data-value="${item}">
 				<span>${item === "true" ? "In stock" : "Out of stock"}</span>
 				<svg class="ml-2 w-[10px] h-[10px]" fill="currentColor" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -153,13 +169,13 @@ function renderFilterByItems() {
 				</svg>
 			</button>
 		`;
-		filterByItems.appendChild(filterItem);
-		count++;
-	});
-	if (priceRange.min || priceRange.max) {
-		const filterItem = document.createElement("div");
-		filterItem.classList.add("filter-item");
-		filterItem.innerHTML = `
+    filterByItems.appendChild(filterItem);
+    count++;
+  });
+  if (priceRange.min || priceRange.max) {
+    const filterItem = document.createElement("div");
+    filterItem.classList.add("filter-item");
+    filterItem.innerHTML = `
 			<button class="filter-item-remove" data-type="priceRange">
 				<span><span class="money" data-product-price="${priceRange.min ? priceRange.min * 100 : 0}"></span> - <span class="money" data-product-price="${priceRange.max ? priceRange.max * 100 : 0}"></span></span>
 				<svg class="ml-2 w-[10px] h-[10px]" fill="currentColor" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -167,13 +183,13 @@ function renderFilterByItems() {
 				</svg>
 			</button>
 		`;
-		filterByItems.appendChild(filterItem);
-		count++;
-	}
-	brand.forEach((item) => {
-		const filterItem = document.createElement("div");
-		filterItem.classList.add("filter-item");
-		filterItem.innerHTML = `
+    filterByItems.appendChild(filterItem);
+    count++;
+  }
+  brand.forEach((item) => {
+    const filterItem = document.createElement("div");
+    filterItem.classList.add("filter-item");
+    filterItem.innerHTML = `
 			<button class="filter-item-remove" data-type="brand" data-value="${item}">
 				<span>${item}</span>
 				<svg class="ml-2 w-[10px] h-[10px]" fill="currentColor" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -181,13 +197,13 @@ function renderFilterByItems() {
 				</svg>
 			</button>
 		`;
-		filterByItems.appendChild(filterItem);
-		count++;
-	});
-	productType.forEach((item) => {
-		const filterItem = document.createElement("div");
-		filterItem.classList.add("filter-item");
-		filterItem.innerHTML = `
+    filterByItems.appendChild(filterItem);
+    count++;
+  });
+  productType.forEach((item) => {
+    const filterItem = document.createElement("div");
+    filterItem.classList.add("filter-item");
+    filterItem.innerHTML = `
 			<button class="filter-item-remove" data-type="productType" data-value="${item}">
 				<span>${item}</span>
 				<svg class="ml-2 w-[10px] h-[10px]" fill="currentColor" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
@@ -195,174 +211,220 @@ function renderFilterByItems() {
 				</svg>
 			</button>
 		`;
-		filterByItems.appendChild(filterItem);
-		count++;
-	});
-	if (count > 0) {
-		const clearAll = document.createElement("div");
-		clearAll.classList.add("filter-item");
-		clearAll.innerHTML = `
+    filterByItems.appendChild(filterItem);
+    count++;
+  });
+  if (count > 0) {
+    const clearAll = document.createElement("div");
+    clearAll.classList.add("filter-item");
+    clearAll.innerHTML = `
 			<button class="filter-item-remove" data-type="clearAll" style="background: transparent;">
 				<span class="text-black font-normal hover:underline">Clear all</span>
 			</button>
 		`;
-		filterByItems.appendChild(clearAll);
-	}
+    filterByItems.appendChild(clearAll);
+  }
 
-	document.querySelectorAll(".filter-item-remove").forEach((item) => {
-		item.addEventListener("click", () => {
-			const type = item.dataset.type;
-			const value = item.dataset.value;
-			if (type === "clearAll") {
-				availability = [];
-				priceRange = {
-					min: null,
-					max: null,
-				};
-				brand = [];
-				productType = [];
-				document.getElementById("FilterForm").reset();
-			} else {
-				if (type === "availability") {
-					availability = availability.filter((item) => item !== value);
-					document.querySelector(`input[name="filter.availability"][value="${value}"]`).checked = false;
-				} else if (type === "priceRange") {
-					priceRange = {
-						min: null,
-						max: null,
-					};
-				} else if (type === "brand") {
-					brand = brand.filter((item) => item !== value);
-				} else if (type === "productType") {
-					productType = productType.filter((item) => item !== value);
-				}
-			}
-			URLParamsUpdate();
-			filterProducts();
-			sortProducts();
-			updateFilter();
-			renderFilterByItems();
-			renderProducts(page);
-		});
-	});
+  document.querySelectorAll(".filter-item-remove").forEach((item) => {
+    item.addEventListener("click", () => {
+      const type = item.dataset.type;
+      const value = item.dataset.value;
+      if (type === "clearAll") {
+        availability = [];
+        priceRange = {
+          min: null,
+          max: null,
+        };
+        brand = [];
+        productType = [];
+        document.getElementById("FilterForm").reset();
+      } else {
+        if (type === "availability") {
+          availability = availability.filter((item) => item !== value);
+          document.querySelector(
+            `input[name="filter.availability"][value="${value}"]`,
+          ).checked = false;
+        } else if (type === "priceRange") {
+          priceRange = {
+            min: null,
+            max: null,
+          };
+        } else if (type === "brand") {
+          brand = brand.filter((item) => item !== value);
+        } else if (type === "productType") {
+          productType = productType.filter((item) => item !== value);
+        }
+      }
+      URLParamsUpdate();
+      filterProducts();
+      sortProducts();
+      updateFilter();
+      renderFilterByItems();
+      renderProducts(page);
+    });
+  });
 }
 
 function collectionGetFunction(collection) {
-	switch (collection) {
-		case "all":
-			return productsData;
-		case "search-result":
-			return productsData;
-		case "sales":
-			return productsData.filter((product) => product.compare_at_price);
-		case "new-arrivals":
-			return productsData.sort((a, b) => new Date(b.published_at) - new Date(a.published_at)).slice(0, 50);
-		case "best-sellers":
-			return productsData.sort((a, b) => a.sale_top - b.sale_top).slice(0, 100);
-		case "accessories":
-			return productsData.filter((product) => product.type === "Accessories" || product.type === "Audio Cables" || product.type === "Headphone Accessories" || product.type === "Headphone Cable" || product.type === "Up Frequency Box");
-		case "speaker-amplifiers":
-			return productsData.filter((product) => product.title.toLowerCase().includes("speaker amplifier"));
-		case "headphone-amplifiers":
-			return productsData.filter((product) => product.title.toLowerCase().includes("headphone amplifier"));
-		case "portable-headphone-amplifiers":
-			return productsData.filter((product) => product.title.toLowerCase().includes("headphone amplifier") && product.title.toLowerCase().includes("portable"));
-		case "desktop-headphone-amplifiers":
-			return productsData.filter((product) => product.title.toLowerCase().includes("headphone amplifier") && !product.title.toLowerCase().includes("portable"));
-		case "dac":
-			return productsData.filter((product) => product.type === "DAC / AMP");
-		case "desktop-dac":
-			return productsData.filter((product) => product.type === "DAC / AMP" && !product.title.toLowerCase().includes("portable"));
-		case "portable-dac":
-			return productsData.filter((product) => product.type === "DAC / AMP" && product.title.toLowerCase().includes("portable"));
-		case "headphones":
-			return productsData.filter((product) => product.type === "Headphones");
-		case "in-ear-headphone":
-			return productsData.filter((product) => product.title.toLowerCase().includes("in-ear headphone"));
-		case "wireless-headphones":
-			return productsData.filter((product) => product.title.toLowerCase().includes("wireless headphone"));
-		case "over-ear-headphone":
-			return productsData.filter((product) => product.title.toLowerCase().includes("over-ear", "full-size"));
-		case "combo-assembling":
-			return productsData.filter((product) => product.tags.includes("combo"));
-		case "mqa-support":
-			return productsData.filter((product) => product.tags.includes("MQA"));
-		case "sales":
-			return productsData.filter((product) => product.tags.includes("Sales"));
-		case "fx-audio":
-			return productsData.filter((product) => product.vendor === "FXAUDIO");
-		case "bravo-audio":
-			return productsData.filter((product) => product.vendor === "BRAVO");
-		default:
-			return productsData.filter((product) => product.vendor.toLowerCase() === collection.replaceAll("-", "."));
-	}
+  switch (collection) {
+    case "all":
+      return productsData;
+    case "search-result":
+      return productsData;
+    case "sales":
+      return productsData.filter((product) => product.compare_at_price);
+    case "new-arrivals":
+      return productsData
+        .sort((a, b) => new Date(b.published_at) - new Date(a.published_at))
+        .slice(0, 50);
+    case "best-sellers":
+      return productsData.sort((a, b) => a.sale_top - b.sale_top).slice(0, 100);
+    case "accessories":
+      return productsData.filter(
+        (product) =>
+          product.type === "Accessories" ||
+          product.type === "Audio Cables" ||
+          product.type === "Headphone Accessories" ||
+          product.type === "Headphone Cable" ||
+          product.type === "Up Frequency Box",
+      );
+    case "speaker-amplifiers":
+      return productsData.filter((product) =>
+        product.title.toLowerCase().includes("speaker amplifier"),
+      );
+    case "headphone-amplifiers":
+      return productsData.filter((product) =>
+        product.title.toLowerCase().includes("headphone amplifier"),
+      );
+    case "portable-headphone-amplifiers":
+      return productsData.filter(
+        (product) =>
+          product.title.toLowerCase().includes("headphone amplifier") &&
+          product.title.toLowerCase().includes("portable"),
+      );
+    case "desktop-headphone-amplifiers":
+      return productsData.filter(
+        (product) =>
+          product.title.toLowerCase().includes("headphone amplifier") &&
+          !product.title.toLowerCase().includes("portable"),
+      );
+    case "dac":
+      return productsData.filter((product) => product.type === "DAC / AMP");
+    case "desktop-dac":
+      return productsData.filter(
+        (product) =>
+          product.type === "DAC / AMP" &&
+          !product.title.toLowerCase().includes("portable"),
+      );
+    case "portable-dac":
+      return productsData.filter(
+        (product) =>
+          product.type === "DAC / AMP" &&
+          product.title.toLowerCase().includes("portable"),
+      );
+    case "headphones":
+      return productsData.filter((product) => product.type === "Headphones");
+    case "in-ear-headphone":
+      return productsData.filter((product) =>
+        product.title.toLowerCase().includes("in-ear headphone"),
+      );
+    case "wireless-headphones":
+      return productsData.filter((product) =>
+        product.title.toLowerCase().includes("wireless headphone"),
+      );
+    case "over-ear-headphone":
+      return productsData.filter((product) =>
+        product.title.toLowerCase().includes("over-ear", "full-size"),
+      );
+    case "combo-assembling":
+      return productsData.filter((product) => product.tags.includes("combo"));
+    case "mqa-support":
+      return productsData.filter((product) => product.tags.includes("MQA"));
+    case "sales":
+      return productsData.filter((product) => product.tags.includes("Sales"));
+    case "fx-audio":
+      return productsData.filter((product) => product.vendor === "FXAUDIO");
+    case "bravo-audio":
+      return productsData.filter((product) => product.vendor === "BRAVO");
+    default:
+      return productsData.filter(
+        (product) =>
+          product.vendor.toLowerCase() === collection.replaceAll("-", "."),
+      );
+  }
 }
 
 function getAvailableFilter(products = defaultProducts) {
-	let filterData = {
-		availability: products
-			.map((product) => product.available.toString())
-			.filter((value, index, self) => self.indexOf(value) === index)
-			.map((value) => {
-				return {
-					value: value,
-					count: products.filter((product) => product.available.toString() === value).length,
-				};
-			}),
-		priceRange: {
-			min: Math.min(...products.map((product) => product.price)),
-			max: Math.max(...products.map((product) => product.price)),
-		},
-		brand: products
-			.map((product) => product.vendor)
-			.filter((value, index, self) => self.indexOf(value) === index)
-			.map((value) => {
-				return {
-					value: value,
-					count: products.filter((product) => product.vendor === value).length,
-				};
-			}),
-		productType: products
-			.map((product) => product.type)
-			.filter((value, index, self) => self.indexOf(value) === index)
-			.map((value) => {
-				return {
-					value: value,
-					count: products.filter((product) => product.type === value).length,
-				};
-			}),
-	};
+  let filterData = {
+    availability: products
+      .map((product) => product.available.toString())
+      .filter((value, index, self) => self.indexOf(value) === index)
+      .map((value) => {
+        return {
+          value: value,
+          count: products.filter(
+            (product) => product.available.toString() === value,
+          ).length,
+        };
+      }),
+    priceRange: {
+      min: Math.min(...products.map((product) => product.price)),
+      max: Math.max(...products.map((product) => product.price)),
+    },
+    brand: products
+      .map((product) => product.vendor)
+      .filter((value, index, self) => self.indexOf(value) === index)
+      .map((value) => {
+        return {
+          value: value,
+          count: products.filter((product) => product.vendor === value).length,
+        };
+      }),
+    productType: products
+      .map((product) => product.type)
+      .filter((value, index, self) => self.indexOf(value) === index)
+      .map((value) => {
+        return {
+          value: value,
+          count: products.filter((product) => product.type === value).length,
+        };
+      }),
+  };
 
-	filterData.availability.sort((a, b) => (a.value === "true" ? -1 : 1));
-	filterData.brand.sort((a, b) => a.value.localeCompare(b.value));
-	filterData.productType.sort((a, b) => a.value.localeCompare(b.value));
+  filterData.availability.sort((a, b) => (a.value === "true" ? -1 : 1));
+  filterData.brand.sort((a, b) => a.value.localeCompare(b.value));
+  filterData.productType.sort((a, b) => a.value.localeCompare(b.value));
 
-	return filterData;
+  return filterData;
 }
 
 const priceGap = 300;
 
 function initFilter() {
-	const displayLabel = {
-		availability: "Availability",
-		priceRange: "Price Range",
-		brand: "Brand",
-		productType: "Product Type",
-	};
+  const displayLabel = {
+    availability: "Availability",
+    priceRange: "Price Range",
+    brand: "Brand",
+    productType: "Product Type",
+  };
 
-	let filterData = getAvailableFilter(products);
-	if (filterData.priceRange.max === -Infinity) {
-		filterData.priceRange.max = 0;
-	}
-	if (filterData.priceRange.min === Infinity) {
-		filterData.priceRange.min = 0;
-	}
+  let filterData = getAvailableFilter(products);
+  if (filterData.priceRange.max === -Infinity) {
+    filterData.priceRange.max = 0;
+  }
+  if (filterData.priceRange.min === Infinity) {
+    filterData.priceRange.min = 0;
+  }
 
-	// create filter elements
-	const filterContainer = document.querySelector(".sidebar");
-	const filterContent = document.createElement("div");
-	filterContent.classList.add("sidebar-content", "overscroll-contain", "h-full");
-	filterContent.innerHTML = `
+  // create filter elements
+  const filterContainer = document.querySelector(".sidebar");
+  const filterContent = document.createElement("div");
+  filterContent.classList.add(
+    "sidebar-content",
+    "overscroll-contain",
+    "h-full",
+  );
+  filterContent.innerHTML = `
 	<h3 class="text-3xl p-5 font-medium xl:px-0 xl:mb-8 xl:py-0">Filters</h3>
 	<div class="sidebar-close cursor-pointer absolute top-4 right-4 xl:hidden">
 		<svg class="w-[24px] h-[24px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -373,14 +435,14 @@ function initFilter() {
 		<div class="filter-wrapper opacity-100">
 			<form id="FilterForm" class="pb-4" action="" method="get">
 				${Object.keys(filterData)
-					.map((key, index) => {
-						return `
+          .map((key, index) => {
+            return `
 					<div class="accordion-item" data-index="${index}">
 						<div class="mb-1.5 accordion-button text-lg" data-state="${index < 2 ? "open" : "closed"}"><span>${displayLabel[key]}</span></div>
 						<div class="accordion-content overflow-hidden" data-state="${index < 2 ? "open" : "closed"}">
 							${
-								key === "priceRange"
-									? `
+                key === "priceRange"
+                  ? `
 									<price-range class="price-range" data-price-max="${filterData.priceRange.max / 100}" data-price-gap="${priceGap}" style="--from: 0.0%; --to: 100.0%;">
 										<div class="price__range-group">
 											<input type="range" data-type="min-range" aria-label="From" class="price__range price__range--min" min="0" max="${filterData.priceRange.max / 100}" value="0">
@@ -400,10 +462,10 @@ function initFilter() {
 											</div>
 										</div>
                 	</price-range>`
-									: `<ul role="list">
+                  : `<ul role="list">
 								${filterData[key]
-									.map((item, index2) => {
-										return `
+                  .map((item, index2) => {
+                    return `
 									<li>
 										<label for="Filter-${key}-${index2 + 1}" class="filter-checkbox">
 											<input type="checkbox" name="filter.${key}" id="Filter-${key}-${index2 + 1}" value="${item.value}">
@@ -411,248 +473,295 @@ function initFilter() {
 											<span class="ml-1 filter-products-count">(${item.count})</span>
 										</label>
 									</li>`;
-									})
-									.join("")}
+                  })
+                  .join("")}
 							</ul>`
-							}
+              }
 						</div>
 					</div>
 					`;
-					})
-					.join("")}
+          })
+          .join("")}
 			</form>
 		</div>
 	</div>
 	`;
-	filterContainer.appendChild(filterContent);
+  filterContainer.appendChild(filterContent);
 
-	const FilterForm = document.getElementById("FilterForm");
-	FilterForm.querySelectorAll(".accordion-item").forEach((item) => {
-		const button = item.querySelector(".accordion-button");
-		const content = item.querySelector(".accordion-content");
-		content.classList.add("data-[state=closed]:animate-accordion-up", "data-[state=open]:animate-accordion-down");
-		if (content.dataset.state === "closed") {
-			content.style.height = "0";
-		}
-		button.addEventListener("click", () => {
-			const state = button.dataset.state === "open" ? "closed" : "open";
-			content.style.setProperty("--accordion-content-height", `${content.scrollHeight}px`);
-			button.dataset.state = state;
-			content.dataset.state = state;
-		});
-	});
+  const FilterForm = document.getElementById("FilterForm");
+  FilterForm.querySelectorAll(".accordion-item").forEach((item) => {
+    const button = item.querySelector(".accordion-button");
+    const content = item.querySelector(".accordion-content");
+    content.classList.add(
+      "data-[state=closed]:animate-accordion-up",
+      "data-[state=open]:animate-accordion-down",
+    );
+    if (content.dataset.state === "closed") {
+      content.style.height = "0";
+    }
+    button.addEventListener("click", () => {
+      const state = button.dataset.state === "open" ? "closed" : "open";
+      content.style.setProperty(
+        "--accordion-content-height",
+        `${content.scrollHeight}px`,
+      );
+      button.dataset.state = state;
+      content.dataset.state = state;
+    });
+  });
 
-	const section = document.querySelector(".section-collection");
-	const sideBar = section.querySelector(".sidebar");
-	const sideBarContent = sideBar.querySelector(".sidebar-content");
-	const sideBarClose = sideBar.querySelector(".sidebar-close");
-	const sideBarOpen = section.querySelector(".sidebar-open");
+  const section = document.querySelector(".section-collection");
+  const sideBar = section.querySelector(".sidebar");
+  const sideBarContent = sideBar.querySelector(".sidebar-content");
+  const sideBarClose = sideBar.querySelector(".sidebar-close");
+  const sideBarOpen = section.querySelector(".sidebar-open");
 
-	function openSidebarFilter() {
-		sideBar.style.display = "block";
-		window.requestAnimationFrame(() => {
-			sideBar.style.setProperty("--tw-bg-opacity", "0.5");
-			sideBarContent.style.setProperty("--tw-translate-x", "0");
-		});
-		section.classList.add("sidebar-open");
-	}
+  function openSidebarFilter() {
+    sideBar.style.display = "block";
+    window.requestAnimationFrame(() => {
+      sideBar.style.setProperty("--tw-bg-opacity", "0.5");
+      sideBarContent.style.setProperty("--tw-translate-x", "0");
+    });
+    section.classList.add("sidebar-open");
+  }
 
-	function closeSidebarFilter() {
-		section.classList.remove("sidebar-open");
-		(window.innerWidth < 1280 || sideBar.dataset.type === "fixed") && sideBarContent.style.setProperty("--tw-translate-x", "-100%");
-		sideBar.style.removeProperty("--tw-bg-opacity");
-		setTimeout(() => sideBar.style.removeProperty("display"), 300);
-	}
+  function closeSidebarFilter() {
+    section.classList.remove("sidebar-open");
+    (window.innerWidth < 1280 || sideBar.dataset.type === "fixed") &&
+      sideBarContent.style.setProperty("--tw-translate-x", "-100%");
+    sideBar.style.removeProperty("--tw-bg-opacity");
+    setTimeout(() => sideBar.style.removeProperty("display"), 300);
+  }
 
-	sideBarOpen.addEventListener("click", openSidebarFilter);
-	sideBarClose.addEventListener("click", closeSidebarFilter);
-	sideBar.addEventListener("click", (event) => {
-		if (event.target === sideBar) {
-			closeSidebarFilter();
-		}
-	});
+  sideBarOpen.addEventListener("click", openSidebarFilter);
+  sideBarClose.addEventListener("click", closeSidebarFilter);
+  sideBar.addEventListener("click", (event) => {
+    if (event.target === sideBar) {
+      closeSidebarFilter();
+    }
+  });
 
-	FilterForm.addEventListener("change", (event) => {
-		const target = event.target;
-		const name = target.name;
-		const value = target.value;
+  FilterForm.addEventListener("change", (event) => {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
 
-		if (name === "filter.availability") {
-			availability = target.checked ? [...availability, value] : availability.filter((item) => item !== value);
-			page = 1;
-		} else if (name === "filter.price.min") {
-			priceRange.min = target.value ? parseInt(target.value) : null;
-			page = 1;
-		} else if (name === "filter.price.max") {
-			priceRange.max = target.value ? parseInt(target.value) : null;
-			page = 1;
-		} else if (name === "filter.brand") {
-			brand = target.checked ? [...brand, value] : brand.filter((item) => item !== value);
-			page = 1;
-		} else if (name === "filter.productType") {
-			productType = target.checked ? [...productType, value] : productType.filter((item) => item !== value);
-			page = 1;
-		} else if (target.classList.contains("price__range")) {
-			priceRange.min = parseInt(FilterForm.querySelector(".price__range--min").value);
-			priceRange.max = parseInt(FilterForm.querySelector(".price__range--max").value);
-			page = 1;
-		}
-		URLParamsUpdate();
-		filterProducts();
-		sortProducts();
-		updateFilter(products);
-		renderFilterByItems();
-		renderProducts(page);
-		renderPagination(page);
-		document.querySelector(".currency-selector")?.dispatchEvent(new Event("change"));
-	});
+    if (name === "filter.availability") {
+      availability = target.checked
+        ? [...availability, value]
+        : availability.filter((item) => item !== value);
+      page = 1;
+    } else if (name === "filter.price.min") {
+      priceRange.min = target.value ? parseInt(target.value) : null;
+      page = 1;
+    } else if (name === "filter.price.max") {
+      priceRange.max = target.value ? parseInt(target.value) : null;
+      page = 1;
+    } else if (name === "filter.brand") {
+      brand = target.checked
+        ? [...brand, value]
+        : brand.filter((item) => item !== value);
+      page = 1;
+    } else if (name === "filter.productType") {
+      productType = target.checked
+        ? [...productType, value]
+        : productType.filter((item) => item !== value);
+      page = 1;
+    } else if (target.classList.contains("price__range")) {
+      priceRange.min = parseInt(
+        FilterForm.querySelector(".price__range--min").value,
+      );
+      priceRange.max = parseInt(
+        FilterForm.querySelector(".price__range--max").value,
+      );
+      page = 1;
+    }
+    URLParamsUpdate();
+    filterProducts();
+    sortProducts();
+    updateFilter(products);
+    renderFilterByItems();
+    renderProducts(page);
+    renderPagination(page);
+    document
+      .querySelector(".currency-selector")
+      ?.dispatchEvent(new Event("change"));
+  });
 
-	sortBySelect.addEventListener("change", (event) => {
-		sortProducts();
-		URLParamsUpdate();
-		renderProducts(page);
-		renderPagination(page);
-	});
-	renderProducts(page);
-	renderPagination(page);
+  sortBySelect.addEventListener("change", (event) => {
+    sortProducts();
+    URLParamsUpdate();
+    renderProducts(page);
+    renderPagination(page);
+  });
+  renderProducts(page);
+  renderPagination(page);
 }
 
 function filterProducts() {
-	products = defaultProducts.filter((product) => {
-		//filter and count the number of products of each filter
-		if (availability.length && !availability.includes(product.available.toString())) {
-			return false;
-		}
-		if (priceRange.min && product.price < priceRange.min * 100) {
-			return false;
-		}
-		if (priceRange.max && product.price > priceRange.max * 100) {
-			return false;
-		}
-		if (brand.length && !brand.includes(product.vendor)) {
-			return false;
-		}
-		if (productType.length && !productType.includes(product.type)) {
-			return false;
-		}
-		return true;
-	});
+  products = defaultProducts.filter((product) => {
+    //filter and count the number of products of each filter
+    if (
+      availability.length &&
+      !availability.includes(product.available.toString())
+    ) {
+      return false;
+    }
+    if (priceRange.min && product.price < priceRange.min * 100) {
+      return false;
+    }
+    if (priceRange.max && product.price > priceRange.max * 100) {
+      return false;
+    }
+    if (brand.length && !brand.includes(product.vendor)) {
+      return false;
+    }
+    if (productType.length && !productType.includes(product.type)) {
+      return false;
+    }
+    return true;
+  });
 }
 
 function getPosibleFilter() {
-	// get filter that not in current filter, but if added to current filter there will be more products
-	// ex: if currently there are 10 products total, if we add a filter that will make the total products 5 more (15), then that filter is a posible filter
-	let posibleFilter = {};
-	let currentFilter = {
-		availability: availability,
-		priceRange: priceRange,
-		brand: brand,
-		productType: productType,
-	};
-	let allProducts = defaultProducts;
-	let allFilterData = getAvailableFilter(allProducts);
+  // get filter that not in current filter, but if added to current filter there will be more products
+  // ex: if currently there are 10 products total, if we add a filter that will make the total products 5 more (15), then that filter is a posible filter
+  let posibleFilter = {};
+  let currentFilter = {
+    availability: availability,
+    priceRange: priceRange,
+    brand: brand,
+    productType: productType,
+  };
+  let allProducts = defaultProducts;
+  let allFilterData = getAvailableFilter(allProducts);
 
-	Object.keys(allFilterData).forEach((key) => {
-		if (key === "priceRange") return;
-		let notInCurrentFilter = allFilterData[key].filter((item) => !currentFilter[key].includes(item.value));
-		notInCurrentFilter.forEach((item) => {
-			let newFilter = { ...currentFilter };
-			newFilter[key] = [...currentFilter[key], item.value];
-			let newProducts = allProducts.filter((product) => {
-				if (newFilter.availability.length && !newFilter.availability.includes(product.available.toString())) {
-					return false;
-				}
-				if (newFilter.priceRange.min && product.price < newFilter.priceRange.min * 100) {
-					return false;
-				}
-				if (newFilter.priceRange.max && product.price > newFilter.priceRange.max * 100) {
-					return false;
-				}
-				if (newFilter.brand.length && !newFilter.brand.includes(product.vendor)) {
-					return false;
-				}
-				if (newFilter.productType.length && !newFilter.productType.includes(product.type)) {
-					return false;
-				}
-				return true;
-			});
-			item.count = newProducts.length - products.length;
-			if (item.count > 0) {
-				if (!posibleFilter[key]) {
-					posibleFilter[key] = [];
-				}
-				posibleFilter[key].push(item);
-			}
-		});
-	});
+  Object.keys(allFilterData).forEach((key) => {
+    if (key === "priceRange") return;
+    let notInCurrentFilter = allFilterData[key].filter(
+      (item) => !currentFilter[key].includes(item.value),
+    );
+    notInCurrentFilter.forEach((item) => {
+      let newFilter = { ...currentFilter };
+      newFilter[key] = [...currentFilter[key], item.value];
+      let newProducts = allProducts.filter((product) => {
+        if (
+          newFilter.availability.length &&
+          !newFilter.availability.includes(product.available.toString())
+        ) {
+          return false;
+        }
+        if (
+          newFilter.priceRange.min &&
+          product.price < newFilter.priceRange.min * 100
+        ) {
+          return false;
+        }
+        if (
+          newFilter.priceRange.max &&
+          product.price > newFilter.priceRange.max * 100
+        ) {
+          return false;
+        }
+        if (
+          newFilter.brand.length &&
+          !newFilter.brand.includes(product.vendor)
+        ) {
+          return false;
+        }
+        if (
+          newFilter.productType.length &&
+          !newFilter.productType.includes(product.type)
+        ) {
+          return false;
+        }
+        return true;
+      });
+      item.count = newProducts.length - products.length;
+      if (item.count > 0) {
+        if (!posibleFilter[key]) {
+          posibleFilter[key] = [];
+        }
+        posibleFilter[key].push(item);
+      }
+    });
+  });
 
-	return posibleFilter;
+  return posibleFilter;
 }
 
 function updateFilter() {
-	let newFilterData = getAvailableFilter(products);
-	let posibleFilter = getPosibleFilter();
-	const currentFilter = {
-		availability: availability,
-		priceRange: priceRange,
-		brand: brand,
-		productType: productType,
-	};
-	// if an filter is not in newFilterData or posibleFilter, then it is disabled
-	// if an filter is in current filter but not in newFilterData, then it is enabled but with 0 count
-	// if an filter is in posibleFilter, then it is enabled with the new count
-	document.querySelectorAll(".filter-checkbox").forEach((item) => {
-		const input = item.querySelector("input");
-		const label = item.querySelector(".filter-label");
-		const count = item.querySelector(".filter-products-count");
-		const key = input.name.split(".")[1];
-		const value = input.value;
-		const filter = newFilterData[key].find((item) => item.value === value);
-		const inCurrent = currentFilter[key].includes(value);
-		const posible = posibleFilter[key] && posibleFilter[key].find((item) => item.value === value);
-		if (filter) {
-			input.disabled = false;
-			item.classList.remove("checkbox--disabled");
-			count.textContent = `(${filter.count})`;
-		} else if (inCurrent) {
-			input.disabled = false;
-			item.classList.remove("checkbox--disabled");
-			count.textContent = "(0)";
-		} else if (posible) {
-			input.disabled = false;
-			item.classList.remove("checkbox--disabled");
-			count.textContent = `(${posible.count})`;
-		} else {
-			input.disabled = true;
-			item.classList.add("checkbox--disabled");
-			count.textContent = "(0)";
-		}
-	});
+  let newFilterData = getAvailableFilter(products);
+  let posibleFilter = getPosibleFilter();
+  const currentFilter = {
+    availability: availability,
+    priceRange: priceRange,
+    brand: brand,
+    productType: productType,
+  };
+  // if an filter is not in newFilterData or posibleFilter, then it is disabled
+  // if an filter is in current filter but not in newFilterData, then it is enabled but with 0 count
+  // if an filter is in posibleFilter, then it is enabled with the new count
+  document.querySelectorAll(".filter-checkbox").forEach((item) => {
+    const input = item.querySelector("input");
+    const label = item.querySelector(".filter-label");
+    const count = item.querySelector(".filter-products-count");
+    const key = input.name.split(".")[1];
+    const value = input.value;
+    const filter = newFilterData[key].find((item) => item.value === value);
+    const inCurrent = currentFilter[key].includes(value);
+    const posible =
+      posibleFilter[key] &&
+      posibleFilter[key].find((item) => item.value === value);
+    if (filter) {
+      input.disabled = false;
+      item.classList.remove("checkbox--disabled");
+      count.textContent = `(${filter.count})`;
+    } else if (inCurrent) {
+      input.disabled = false;
+      item.classList.remove("checkbox--disabled");
+      count.textContent = "(0)";
+    } else if (posible) {
+      input.disabled = false;
+      item.classList.remove("checkbox--disabled");
+      count.textContent = `(${posible.count})`;
+    } else {
+      input.disabled = true;
+      item.classList.add("checkbox--disabled");
+      count.textContent = "(0)";
+    }
+  });
 }
 
 function renderProducts() {
-	const ProductGrid = document.getElementById("ProductGrid");
-	const oldProductListing = ProductGrid.querySelector(".product-listing");
-	if (oldProductListing) {
-		ProductGrid.removeChild(oldProductListing);
-	}
-	const start = (page - 1) * limit;
-	const end = start + limit;
-	const list = products.slice(start, end);
-	const productListing = document.createElement("div");
-	productListing.classList.add("product-listing", "relative", localStorage.getItem("gridColumnViews") ? `col-${localStorage.getItem("gridColumnViews")}` : "col-5");
-	productListing.innerHTML =
-		list.length > 0
-			? `<div class="mt-6 flex flex-wrap -mx-2 xl:-mx-3"></div>`
-			: `<div class="empty-collection py-24 flex flex-col w-full items-center"><span><svg xmlns="http://www.w3.org/2000/svg" width="66" height="62" fill="none"><path fill="#9a9a9a" d="M.99 8.21c0 6.534-.066 7.59-.495 7.59S0 18.341 0 36.821c0 20.394.033 21.054.66 22.341.363.759 1.089 1.65 1.584 2.013.858.66 1.485.66 30.36.759L62.106 62l1.287-.726c.825-.462 1.518-1.221 1.947-2.079.627-1.32.66-2.046.66-22.374 0-18.48-.066-21.021-.495-21.021s-.495-1.056-.495-7.59V.62H.99v7.59zm5.676-2.739l2.871 2.904-2.805 3.696C5.214 14.117 3.795 15.8 3.63 15.8c-.198 0-.33-2.508-.33-6.6 0-3.63.099-6.6.264-6.6.132 0 1.551 1.287 3.102 2.871zm49.665-.264L53.79 7.814V15.8H12.21V7.814L9.669 5.207 7.161 2.6h51.678l-2.508 2.607zM62.7 9.2c0 4.092-.132 6.6-.33 6.6-.165 0-1.584-1.683-3.102-3.729l-2.805-3.696 2.871-2.904c1.551-1.584 2.97-2.871 3.102-2.871.165 0 .264 2.97.264 6.6zM9.9 13.82v1.98H8.415c-.825 0-1.485-.066-1.485-.165 0-.231 2.673-3.795 2.838-3.795.066 0 .132.891.132 1.98zm47.817-.165c.726.99 1.353 1.881 1.353 1.98 0 .099-.66.165-1.485.165H56.1v-1.98c0-1.089.066-1.98.132-1.98s.726.825 1.485 1.815zm5.973 24.387v19.965l-.792.924-.792.924H3.894l-.792-.924-.792-.924V18.11h61.38v19.932z"></path><path fill="#9a9a9a" d="M17.589 22.07c-1.782 1.089-2.706 3.696-1.584 4.62.627.528 1.089.165 1.716-1.353.891-2.211 3.267-2.211 4.158 0 .627 1.518 1.089 1.881 1.716 1.353 1.155-.957.066-3.828-1.782-4.785-1.353-.66-2.937-.627-4.224.165zM43.989 22.07c-1.782 1.089-2.706 3.696-1.584 4.62.627.528 1.056.198 1.683-1.254.561-1.386.957-1.716 2.178-1.716 1.056 0 1.881.759 2.145 2.013.33 1.716 2.079 1.452 2.079-.33 0-3.003-3.828-4.983-6.501-3.333z"></path><path fill="#9a9a9a" d="M18.942 25.172c-.099.264-.132 2.838-.066 5.742l.099 5.214 1.221 2.475c2.772 5.577 8.844 8.844 14.718 7.92 4.884-.759 8.943-3.795 11.088-8.283 1.023-2.145 1.023-2.178 1.023-7.755v-5.61h-1.65l-.198 4.95c-.231 5.016-.396 6.072-1.452 8.118-2.046 3.927-6.336 6.567-10.758 6.567-3.465 0-7.788-2.178-9.636-4.851-1.98-2.871-2.31-4.191-2.508-9.669-.198-4.983-.231-5.115-.957-5.214-.429-.066-.792.099-.924.396z"></path></svg></span><p class="mt-5 text-color-subtext">Sorry, there are no products in this collection</p></div>`;
-	ProductGrid.appendChild(productListing);
+  const ProductGrid = document.getElementById("ProductGrid");
+  const oldProductListing = ProductGrid.querySelector(".product-listing");
+  if (oldProductListing) {
+    ProductGrid.removeChild(oldProductListing);
+  }
+  const start = (page - 1) * limit;
+  const end = start + limit;
+  const list = products.slice(start, end);
+  const productListing = document.createElement("div");
+  productListing.classList.add(
+    "product-listing",
+    "relative",
+    localStorage.getItem("gridColumnViews")
+      ? `col-${localStorage.getItem("gridColumnViews")}`
+      : "col-5",
+  );
+  productListing.innerHTML =
+    list.length > 0
+      ? `<div class="mt-6 flex flex-wrap -mx-2 xl:-mx-3"></div>`
+      : `<div class="empty-collection py-24 flex flex-col w-full items-center"><span><svg xmlns="http://www.w3.org/2000/svg" width="66" height="62" fill="none"><path fill="#9a9a9a" d="M.99 8.21c0 6.534-.066 7.59-.495 7.59S0 18.341 0 36.821c0 20.394.033 21.054.66 22.341.363.759 1.089 1.65 1.584 2.013.858.66 1.485.66 30.36.759L62.106 62l1.287-.726c.825-.462 1.518-1.221 1.947-2.079.627-1.32.66-2.046.66-22.374 0-18.48-.066-21.021-.495-21.021s-.495-1.056-.495-7.59V.62H.99v7.59zm5.676-2.739l2.871 2.904-2.805 3.696C5.214 14.117 3.795 15.8 3.63 15.8c-.198 0-.33-2.508-.33-6.6 0-3.63.099-6.6.264-6.6.132 0 1.551 1.287 3.102 2.871zm49.665-.264L53.79 7.814V15.8H12.21V7.814L9.669 5.207 7.161 2.6h51.678l-2.508 2.607zM62.7 9.2c0 4.092-.132 6.6-.33 6.6-.165 0-1.584-1.683-3.102-3.729l-2.805-3.696 2.871-2.904c1.551-1.584 2.97-2.871 3.102-2.871.165 0 .264 2.97.264 6.6zM9.9 13.82v1.98H8.415c-.825 0-1.485-.066-1.485-.165 0-.231 2.673-3.795 2.838-3.795.066 0 .132.891.132 1.98zm47.817-.165c.726.99 1.353 1.881 1.353 1.98 0 .099-.66.165-1.485.165H56.1v-1.98c0-1.089.066-1.98.132-1.98s.726.825 1.485 1.815zm5.973 24.387v19.965l-.792.924-.792.924H3.894l-.792-.924-.792-.924V18.11h61.38v19.932z"></path><path fill="#9a9a9a" d="M17.589 22.07c-1.782 1.089-2.706 3.696-1.584 4.62.627.528 1.089.165 1.716-1.353.891-2.211 3.267-2.211 4.158 0 .627 1.518 1.089 1.881 1.716 1.353 1.155-.957.066-3.828-1.782-4.785-1.353-.66-2.937-.627-4.224.165zM43.989 22.07c-1.782 1.089-2.706 3.696-1.584 4.62.627.528 1.056.198 1.683-1.254.561-1.386.957-1.716 2.178-1.716 1.056 0 1.881.759 2.145 2.013.33 1.716 2.079 1.452 2.079-.33 0-3.003-3.828-4.983-6.501-3.333z"></path><path fill="#9a9a9a" d="M18.942 25.172c-.099.264-.132 2.838-.066 5.742l.099 5.214 1.221 2.475c2.772 5.577 8.844 8.844 14.718 7.92 4.884-.759 8.943-3.795 11.088-8.283 1.023-2.145 1.023-2.178 1.023-7.755v-5.61h-1.65l-.198 4.95c-.231 5.016-.396 6.072-1.452 8.118-2.046 3.927-6.336 6.567-10.758 6.567-3.465 0-7.788-2.178-9.636-4.851-1.98-2.871-2.31-4.191-2.508-9.669-.198-4.983-.231-5.115-.957-5.214-.429-.066-.792.099-.924.396z"></path></svg></span><p class="mt-5 text-color-subtext">Sorry, there are no products in this collection</p></div>`;
+  ProductGrid.appendChild(productListing);
 
-	const productListingContent = document.querySelector(".product-listing>div");
-	list.forEach((item) => {
-		const media = item.media.filter((m) => m.media_type === "image");
-		const colItem = document.createElement("div");
-		colItem.classList.add("col-item", "w-6/12", "md:w-4/12", "px-2", "xl:px-3");
-		colItem.innerHTML = `
+  const productListingContent = document.querySelector(".product-listing>div");
+  list.forEach((item) => {
+    const media = item.media.filter((m) => m.media_type === "image");
+    const colItem = document.createElement("div");
+    colItem.classList.add("col-item", "w-6/12", "md:w-4/12", "px-2", "xl:px-3");
+    colItem.innerHTML = `
 					<div class="pcard cursor-pointer prod__block" data-product-handle="${item.handle}">
 						<div class="pcard__img">
 							<div class="image-box | overflow-hidden cursor-pointer relative">
@@ -673,8 +782,8 @@ function renderProducts() {
 											</div>
 										</div>
 										${
-											media.length > 1
-												? `<div class="hover-img">
+                      media.length > 1
+                        ? `<div class="hover-img">
 												<div class="p-img ib-image">
 													<img
 													src="${path + media[1].src}"
@@ -687,8 +796,8 @@ function renderProducts() {
 													/>
 												</div>
 											</div>`
-												: ""
-										}
+                        : ""
+                    }
 									</a>
 								</div>
 							</div>
@@ -710,8 +819,9 @@ function renderProducts() {
 								<div class="pcard__price leading-normal">
 									<div class="price inline-flex items-center flex-wrap">
 									${
-										item.compare_at_price !== null && item.compare_at_price !== item.price
-											? `<div class="price__sale">
+                    item.compare_at_price !== null &&
+                    item.compare_at_price !== item.price
+                      ? `<div class="price__sale">
 									<span class="visually-hidden visually-hidden--inline">Sale price</span>
 									<span class="price-item price-item--sale">
 										<span class="money" data-product-price=${item.price}>$${item.price / 100} USD</span>
@@ -721,7 +831,7 @@ function renderProducts() {
 											<span class="money" data-product-price=${item.compare_at_price}>$${item.compare_at_price / 100} USD</span>
 										</s>
 								</div>`
-											: `<div class="price__regular">
+                      : `<div class="price__regular">
 									<span class="visually-hidden visually-hidden--inline">
 										Regular price
 									</span>
@@ -730,7 +840,7 @@ function renderProducts() {
 										data-product-price="${item.price}">$${item.price / 100} USD</span>
 									</span>
 								</div>`
-									}
+                  }
 
 									</div>
 								</div>
@@ -761,16 +871,32 @@ function renderProducts() {
 						<div class="background-color-expand"></div>
 					</div>
 				`;
-		productListingContent.appendChild(colItem);
+    productListingContent.appendChild(colItem);
 
-		const quickviewBtn = colItem.querySelector(".btn-quickview");
-		const addtocartBtn = colItem.querySelector(".btn-addtocart");
+    const quickviewBtn = colItem.querySelector(".btn-quickview");
+    const addtocartBtn = colItem.querySelector(".btn-addtocart");
 
-		const quickview = () => {
-			const modal = document.createElement("div");
-			modal.classList.add("modal", "modal__wrapper", "fixed", "inset-0", "px-5", "bg-black", "flex", "items-center", "justify-center", "transition-opacity", "opacity-0", "duration-200", "ease-out", "opacity-100", "z-[99]");
-			modal.style.setProperty("--tw-bg-opacity", "0.3");
-			modal.innerHTML = `
+    const quickview = () => {
+      const modal = document.createElement("div");
+      modal.classList.add(
+        "modal",
+        "modal__wrapper",
+        "fixed",
+        "inset-0",
+        "px-5",
+        "bg-black",
+        "flex",
+        "items-center",
+        "justify-center",
+        "transition-opacity",
+        "opacity-0",
+        "duration-200",
+        "ease-out",
+        "opacity-100",
+        "z-[99]",
+      );
+      modal.style.setProperty("--tw-bg-opacity", "0.3");
+      modal.innerHTML = `
 				<div class="modal__content bg-white relative rounded max-h-[90vh] modal__quickview" style="width:960px">
 					<button class="modal__close text-black absolute p-2 bg-white hover:bg-gray-300 rounded-full z-10">
 						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -788,13 +914,13 @@ function renderProducts() {
 													<div class="swiper-container quickview-swiper">
 														<div class="swiper-wrapper main-slider pis h-full">
 														${item.media
-															.map(
-																(media, index) =>
-																	`
+                              .map(
+                                (media, index) =>
+                                  `
 																	<div class="swiper-slide prod-media-item media-type-${media.media_type}" data-index=${index} data-media-type=${media.media_type} data-media-id=${media.id} data-aspect-ratio="1.499">
 																		${
-																			media.media_type === "image"
-																				? `
+                                      media.media_type === "image"
+                                        ? `
 																		<div class="prod-media media-image" data-media-id=${media.id} data-media-width=${media.width} data-media-height=${media.height} data-media-alt=${media.alt} data-media-src=${media.src}>
 																			<div class="prod-image" style="aspect-ratio: 1.499">
 																				<img class="img-loaded" src=${path + media.src} sizes="946px" loading="lazy" width="946" height="631" alt=${media.alt} fetchpriority="auto">
@@ -802,7 +928,7 @@ function renderProducts() {
 																			</div>
 																		</div>
 																		`
-																				: `
+                                        : `
 																		<div class="deferred-media" style="/*padding-top: 56.25%;*/" data-media-id=${media.id} data-auto-play="true">
 																			<video playinline controls autoplay loop muted aria-label=${item.title} poster=${media.preview_image.src}>
 																				<source src=${media.sources[media.sources.findIndex((src) => src.width === 1280)].url} type="video/mp4">
@@ -810,15 +936,15 @@ function renderProducts() {
 																			</video>
 																		</div>
 																		`
-																		}
+                                    }
 																	</div>
-																	`
-															)
-															.join("")}
+																	`,
+                              )
+                              .join("")}
 														</div>
 														${
-															item.media.length > 1
-																? `<div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
+                              item.media.length > 1
+                                ? `<div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
 															<button class="swiper-button-control swiper-button-prev btn-icon | tooltip-item tooltip-right tooltop-style-1">
 																<span class="tooltip-icon block">
 																	<svg
@@ -846,8 +972,8 @@ function renderProducts() {
 																<span class="tooltip-content">Next</span>
 															</button>
 														</div>`
-																: ""
-														}
+                                : ""
+                            }
 													</div>
 												</div>
 											</div>
@@ -864,8 +990,10 @@ function renderProducts() {
 									</div>
 									<div class="price inline-flex items-center flex-wrap">
 										${
-											item.variants[0].compare_at_price !== null && item.variants[0].compare_at_price !== item.variants[0].price
-												? `
+                      item.variants[0].compare_at_price !== null &&
+                      item.variants[0].compare_at_price !==
+                        item.variants[0].price
+                        ? `
 									<div class="price__sale">
 								<span class="visually-hidden visually-hidden--inline">Sale price</span>
 								<span class="price-item price-item--sale text-xl md:text-2xl ">
@@ -877,7 +1005,7 @@ function renderProducts() {
 									</s>
 							</div>
 									`
-												: `<div class="price__regular">
+                        : `<div class="price__regular">
 									<span class="visually-hidden visually-hidden--inline">
 										Regular price
 									</span>
@@ -887,7 +1015,7 @@ function renderProducts() {
 											data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
 									</span>
 								</div>`
-										}
+                    }
 									</div>
 									<div class="hidden lg:block mt-[25px] mb-4 text-color-secondary">
 										<a class="block mt-2 underline text-black" href="${path + item.url}">View details</a>
@@ -897,9 +1025,10 @@ function renderProducts() {
 											<div data-product-id=${item.id}>
 												<div class="variant-picker">
 													${item.options
-														.map((option, index) =>
-															option.values[1] !== null && option.name !== "Title"
-																? `
+                            .map((option, index) =>
+                              option.values[1] !== null &&
+                              option.name !== "Title"
+                                ? `
 																<div class="product-options__option product-options__option--dropdown">
 																	<div
 																		class="variant-select"
@@ -924,27 +1053,27 @@ function renderProducts() {
 																					class="select-bordered uppercase"
 																					name="options[${option.name}]">
 																					${option.values
-																						.map(
-																							(value, index2) =>
-																								`
+                                            .map(
+                                              (value, index2) =>
+                                                `
 																						<option
 																							${item.variants[0]?.options[index] === value ? "selected" : ""}
 																							value="${value.toString()}"
 																							class="variant-picker__option product-option-item"
 																							data-value="${value.toString()}"
 																							data-option-position=${option.position}>${value}</option>
-																						`
-																						)
-																						.join("")}
+																						`,
+                                            )
+                                            .join("")}
 																				</select>
 																			</div>
 																		</div>
 																	</div>
 																</div>
 															`
-																: ""
-														)
-														.join("")}
+                                : "",
+                            )
+                            .join("")}
 												</div>
 											</div>
 										</div>
@@ -981,455 +1110,551 @@ function renderProducts() {
 					</div>
 				</div>
 				`;
-			document.documentElement.classList.add("prevent-scroll");
-			document.body.appendChild(modal);
-			document.querySelector(".currency-selector").dispatchEvent(new Event("change"));
+      document.documentElement.classList.add("prevent-scroll");
+      document.body.appendChild(modal);
+      document
+        .querySelector(".currency-selector")
+        .dispatchEvent(new Event("change"));
 
-			const close = modal.querySelector(".modal__close");
-			close.addEventListener("click", () => {
-				document.documentElement.classList.remove("prevent-scroll");
-				modal.remove();
-			});
+      const close = modal.querySelector(".modal__close");
+      close.addEventListener("click", () => {
+        document.documentElement.classList.remove("prevent-scroll");
+        modal.remove();
+      });
 
-			document.addEventListener("keydown", (event) => {
-				if (event.key === "Escape") {
-					document.documentElement.classList.remove("prevent-scroll");
-					modal.remove();
-				}
-			});
-			const swiper = new Swiper(modal.querySelector(".quickview-swiper"), {
-				loop: true,
-				navigation: {
-					nextEl: modal.querySelector(".swiper-button-next"),
-					prevEl: modal.querySelector(".swiper-button-prev"),
-				},
-			});
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.documentElement.classList.remove("prevent-scroll");
+          modal.remove();
+        }
+      });
+      const swiper = new Swiper(modal.querySelector(".quickview-swiper"), {
+        loop: true,
+        navigation: {
+          nextEl: modal.querySelector(".swiper-button-next"),
+          prevEl: modal.querySelector(".swiper-button-prev"),
+        },
+      });
 
-			const modalContent = modal.querySelector(".modal__content");
-			modal.addEventListener("click", (event) => {
-				if (!modalContent.contains(event.target)) {
-					document.documentElement.classList.remove("prevent-scroll");
-					modal.remove();
-				}
-			});
+      const modalContent = modal.querySelector(".modal__content");
+      modal.addEventListener("click", (event) => {
+        if (!modalContent.contains(event.target)) {
+          document.documentElement.classList.remove("prevent-scroll");
+          modal.remove();
+        }
+      });
 
-			const quantityInput = modal.querySelector(".quantity-input__element");
-			const quantityDecrease = modal.querySelector("[data-quantity-selector='decrease']");
-			const quantityIncrease = modal.querySelector("[data-quantity-selector='increase']");
+      const quantityInput = modal.querySelector(".quantity-input__element");
+      const quantityDecrease = modal.querySelector(
+        "[data-quantity-selector='decrease']",
+      );
+      const quantityIncrease = modal.querySelector(
+        "[data-quantity-selector='increase']",
+      );
 
-			quantityDecrease.addEventListener("click", () => {
-				if (quantityInput.value > 1) {
-					quantityInput.value = parseInt(quantityInput.value) - 1;
-				}
-			});
-			quantityIncrease.addEventListener("click", () => {
-				quantityInput.value = parseInt(quantityInput.value) + 1;
-			});
+      quantityDecrease.addEventListener("click", () => {
+        if (quantityInput.value > 1) {
+          quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+      });
+      quantityIncrease.addEventListener("click", () => {
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+      });
 
-			quantityInput.addEventListener("change", () => {
-				if (quantityInput.value < 1) {
-					quantityInput.value = 1;
-				}
-			});
+      quantityInput.addEventListener("change", () => {
+        if (quantityInput.value < 1) {
+          quantityInput.value = 1;
+        }
+      });
 
-			let currentVariant = item.variants[0];
-			var productData = item;
+      let currentVariant = item.variants[0];
+      var productData = item;
 
-			var options = [];
-			const variantPicker = modal.querySelector(".variant-picker");
+      var options = [];
+      const variantPicker = modal.querySelector(".variant-picker");
 
-			// Hàm kiểm tra dữ liệu sản phẩm
-			function _validateProductStructure(product) {
-				if (typeof product != "object") throw new TypeError(product + " is not an object.");
-				if (Object.keys(product).length === 0 && product.constructor === Object) throw new Error(product + " is empty.");
-			}
+      // Hàm kiểm tra dữ liệu sản phẩm
+      function _validateProductStructure(product) {
+        if (typeof product != "object")
+          throw new TypeError(product + " is not an object.");
+        if (Object.keys(product).length === 0 && product.constructor === Object)
+          throw new Error(product + " is empty.");
+      }
 
-			// Hàm kiểm tra dữ liệu options
-			function _validateOptionsArray(options) {
-				if (Array.isArray(options) && typeof options[0] == "object") throw new Error(options + "is not a valid array of options.");
-			}
+      // Hàm kiểm tra dữ liệu options
+      function _validateOptionsArray(options) {
+        if (Array.isArray(options) && typeof options[0] == "object")
+          throw new Error(options + "is not a valid array of options.");
+      }
 
-			// Hàm xử lý sự kiện khi thay đổi variant
-			const onVariantChange = (e) => {
-				getSelectedOptions();
-				getSelectedVariant();
-				updateButton(true, "", false);
-				if (currentVariant) {
-					updateMedia();
-					updatePrice();
-					document.querySelector(".currency-selector").dispatchEvent(new Event("change"));
-					updateButton(!currentVariant.available, "Sold Out");
-				}
-			};
-			variantPicker.addEventListener("change", onVariantChange);
-			// Hàm lấy các options đã chọn
-			const getSelectedOptions = () => {
-				const pickerFields = Array.from(document.querySelectorAll("[data-picker-field]"));
-				options = pickerFields.map((field) => {
-					return field.querySelector("select").value;
-				});
-			};
+      // Hàm xử lý sự kiện khi thay đổi variant
+      const onVariantChange = (e) => {
+        getSelectedOptions();
+        getSelectedVariant();
+        updateButton(true, "", false);
+        if (currentVariant) {
+          updateMedia();
+          updatePrice();
+          document
+            .querySelector(".currency-selector")
+            .dispatchEvent(new Event("change"));
+          updateButton(!currentVariant.available, "Sold Out");
+        }
+      };
+      variantPicker.addEventListener("change", onVariantChange);
+      // Hàm lấy các options đã chọn
+      const getSelectedOptions = () => {
+        const pickerFields = Array.from(
+          document.querySelectorAll("[data-picker-field]"),
+        );
+        options = pickerFields.map((field) => {
+          return field.querySelector("select").value;
+        });
+      };
 
-			// Hàm lấy variant đã chọn
-			const getSelectedVariant = () => {
-				let variant = getVariantFromOptionArray(productData, options);
-				let optionsClone = [...options];
-				if (!variant) {
-					var _variant;
-					optionsClone.pop();
-					variant = getVariantFromOptionArray(productData, optionsClone);
-					variant || (optionsClone.pop() && (variant = getVariantFromOptionArray(this.productData, optionsClone)));
-					options = [...((_variant = variant) === null || _variant === void 0 ? void 0 : _variant.options)];
-					updateSelectedOptions();
-				}
-				currentVariant = variant;
-			};
+      // Hàm lấy variant đã chọn
+      const getSelectedVariant = () => {
+        let variant = getVariantFromOptionArray(productData, options);
+        let optionsClone = [...options];
+        if (!variant) {
+          var _variant;
+          optionsClone.pop();
+          variant = getVariantFromOptionArray(productData, optionsClone);
+          variant ||
+            (optionsClone.pop() &&
+              (variant = getVariantFromOptionArray(
+                this.productData,
+                optionsClone,
+              )));
+          options = [
+            ...((_variant = variant) === null || _variant === void 0
+              ? void 0
+              : _variant.options),
+          ];
+          updateSelectedOptions();
+        }
+        currentVariant = variant;
+      };
 
-			// Hàm cập nhật options đã chọn
-			const updateSelectedOptions = () => {
-				const pickerFields = Array.from(document.querySelectorAll("[data-picker-field]"));
-				pickerFields.forEach((field, index) => {
-					if (field.dataset.selectedValue !== options[index]) {
-						const selectedOption = field.querySelector(`input[value="${options[index]}"]`);
-						selectedOption && ((selectedOption.checked = !0), field.dispatchEvent(new Event("change", { bubbles: !0 })));
-					}
-				});
-			};
+      // Hàm cập nhật options đã chọn
+      const updateSelectedOptions = () => {
+        const pickerFields = Array.from(
+          document.querySelectorAll("[data-picker-field]"),
+        );
+        pickerFields.forEach((field, index) => {
+          if (field.dataset.selectedValue !== options[index]) {
+            const selectedOption = field.querySelector(
+              `input[value="${options[index]}"]`,
+            );
+            selectedOption &&
+              ((selectedOption.checked = !0),
+              field.dispatchEvent(new Event("change", { bubbles: !0 })));
+          }
+        });
+      };
 
-			// Hàm cập nhật button
-			const updateButton = (...args) => {
-				let disable = args.length > 0 && args[0] !== 0 ? args[0] : 1;
-				let text = args.length > 1 ? args[1] : 0;
-				let modifyClass = args.length > 2 && args[2] !== 0 ? args[2] : 1;
+      // Hàm cập nhật button
+      const updateButton = (...args) => {
+        let disable = args.length > 0 && args[0] !== 0 ? args[0] : 1;
+        let text = args.length > 1 ? args[1] : 0;
+        let modifyClass = args.length > 2 && args[2] !== 0 ? args[2] : 1;
 
-				const productForms = document.querySelectorAll(`.product-form__actions`);
+        const productForms = document.querySelectorAll(
+          `.product-form__actions`,
+        );
 
-				if (productForms) {
-					productForms.forEach((productForm) => {
-						const addButton = productForm.querySelector('[name="add"]');
-						const addButtonText = productForm.querySelector('[name="add"] > span');
-						const preorder = productForm.dataset.preorder;
+        if (productForms) {
+          productForms.forEach((productForm) => {
+            const addButton = productForm.querySelector('[name="add"]');
+            const addButtonText = productForm.querySelector(
+              '[name="add"] > span',
+            );
+            const preorder = productForm.dataset.preorder;
 
-						if (addButton) {
-							if (disable) {
-								addButton.setAttribute("disabled", "disabled");
-								addButton.classList.add("disabled");
-								text && addButtonText && (addButtonText.textContent = text);
-							} else {
-								addButton.removeAttribute("disabled");
-								addButton.classList.remove("disabled");
-								preorder === "true" ? (addButtonText.textContent = "Pre-order") : (addButtonText.textContent = "Add to cart");
-							}
-						}
-					});
-				}
-			};
-			// Hàm lấy variant từ mảng options
-			const getVariantFromOptionArray = (product, options) => {
-				_validateProductStructure(product);
-				_validateOptionsArray(options);
-				var result = product.variants.filter((variant) => {
-					return options.every((option, index) => {
-						return variant.options[index] === option;
-					});
-				});
-				return result[0] || null;
-			};
-			// Hàm cập nhật giá tiền
-			const updatePrice = () => {
-				const currency = localStorage.getItem("currency");
-				const responseData = JSON.parse(localStorage.getItem("exchangeRate"));
-				if (currency && responseData) {
-					const priceElements = modalContent.querySelectorAll("span.money");
-					priceElements.forEach((element) => {
-						if (currentVariant.compare_at_price === null || currentVariant.compare_at_price === currentVariant.price) {
-							element.setAttribute("data-product-price", currentVariant.price);
-							const price = currentVariant.price;
-							const convertedPrice = price * responseData.conversion_rates[currency];
-							element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
-						} else {
-							if (element.parentElement.classList.contains("price-item--sale")) {
-								element.setAttribute("data-product-price", currentVariant.price);
-								const price = currentVariant.price;
-								const convertedPrice = price * responseData.conversion_rates[currency];
-								element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
-							} else {
-								element.setAttribute("data-product-price", currentVariant.compare_at_price);
-								const price = currentVariant.compare_at_price;
-								const convertedPrice = price * responseData.conversion_rates[currency];
-								element.innerHTML = formatMoney(convertedPrice, moneyFormats[currency].money_with_currency_format, currency);
-							}
-						}
-					});
-				}
-			};
-			// Hàm cập nhật media-gallery
-			const updateMedia = () => {
-				if (!currentVariant || !currentVariant.featured_media) return;
-				const slides = document.querySelectorAll(".media-gallery");
-				slides.forEach((slide) => {
-					const swiperslide = slide.querySelectorAll(".swiper-slide");
-					swiperslide.forEach((item, index) => {
-						const mediaId = item.getAttribute("data-media-id");
-						if (parseInt(mediaId) === parseInt(currentVariant.featured_media.id)) {
-							const changeSlideEvent = new CustomEvent("changeSlideTo", {
-								detail: { index: index },
-							});
-							slide.dispatchEvent(changeSlideEvent);
-						}
-					});
-				});
-			};
+            if (addButton) {
+              if (disable) {
+                addButton.setAttribute("disabled", "disabled");
+                addButton.classList.add("disabled");
+                text && addButtonText && (addButtonText.textContent = text);
+              } else {
+                addButton.removeAttribute("disabled");
+                addButton.classList.remove("disabled");
+                preorder === "true"
+                  ? (addButtonText.textContent = "Pre-order")
+                  : (addButtonText.textContent = "Add to cart");
+              }
+            }
+          });
+        }
+      };
+      // Hàm lấy variant từ mảng options
+      const getVariantFromOptionArray = (product, options) => {
+        _validateProductStructure(product);
+        _validateOptionsArray(options);
+        var result = product.variants.filter((variant) => {
+          return options.every((option, index) => {
+            return variant.options[index] === option;
+          });
+        });
+        return result[0] || null;
+      };
+      // Hàm cập nhật giá tiền
+      const updatePrice = () => {
+        const currency = localStorage.getItem("currency");
+        const responseData = JSON.parse(localStorage.getItem("exchangeRate"));
+        if (currency && responseData) {
+          const priceElements = modalContent.querySelectorAll("span.money");
+          priceElements.forEach((element) => {
+            if (
+              currentVariant.compare_at_price === null ||
+              currentVariant.compare_at_price === currentVariant.price
+            ) {
+              element.setAttribute("data-product-price", currentVariant.price);
+              const price = currentVariant.price;
+              const convertedPrice =
+                price * responseData.conversion_rates[currency];
+              element.innerHTML = formatMoney(
+                convertedPrice,
+                moneyFormats[currency].money_with_currency_format,
+                currency,
+              );
+            } else {
+              if (
+                element.parentElement.classList.contains("price-item--sale")
+              ) {
+                element.setAttribute(
+                  "data-product-price",
+                  currentVariant.price,
+                );
+                const price = currentVariant.price;
+                const convertedPrice =
+                  price * responseData.conversion_rates[currency];
+                element.innerHTML = formatMoney(
+                  convertedPrice,
+                  moneyFormats[currency].money_with_currency_format,
+                  currency,
+                );
+              } else {
+                element.setAttribute(
+                  "data-product-price",
+                  currentVariant.compare_at_price,
+                );
+                const price = currentVariant.compare_at_price;
+                const convertedPrice =
+                  price * responseData.conversion_rates[currency];
+                element.innerHTML = formatMoney(
+                  convertedPrice,
+                  moneyFormats[currency].money_with_currency_format,
+                  currency,
+                );
+              }
+            }
+          });
+        }
+      };
+      // Hàm cập nhật media-gallery
+      const updateMedia = () => {
+        if (!currentVariant || !currentVariant.featured_media) return;
+        const slides = document.querySelectorAll(".media-gallery");
+        slides.forEach((slide) => {
+          const swiperslide = slide.querySelectorAll(".swiper-slide");
+          swiperslide.forEach((item, index) => {
+            const mediaId = item.getAttribute("data-media-id");
+            if (
+              parseInt(mediaId) === parseInt(currentVariant.featured_media.id)
+            ) {
+              const changeSlideEvent = new CustomEvent("changeSlideTo", {
+                detail: { index: index },
+              });
+              slide.dispatchEvent(changeSlideEvent);
+            }
+          });
+        });
+      };
 
-			document.querySelectorAll(".product-options__option").forEach((variantSelect, index) => {
-				let option = productData.options[index];
+      document
+        .querySelectorAll(".product-options__option")
+        .forEach((variantSelect, index) => {
+          let option = productData.options[index];
 
-				const updateSelectedValue = (e) => {
-					const selectedValue = e.target.value;
-					variantSelect.dataset.selectedValue = selectedValue;
-					const selectedValueElement = variantSelect.querySelector(".selected-value");
-					selectedValueElement.textContent = selectedValue;
-				};
-				variantSelect.addEventListener("change", updateSelectedValue);
-			});
+          const updateSelectedValue = (e) => {
+            const selectedValue = e.target.value;
+            variantSelect.dataset.selectedValue = selectedValue;
+            const selectedValueElement =
+              variantSelect.querySelector(".selected-value");
+            selectedValueElement.textContent = selectedValue;
+          };
+          variantSelect.addEventListener("change", updateSelectedValue);
+        });
 
-			document.querySelector(".media-gallery").addEventListener("changeSlideTo", (e) => {
-				const index = e.detail.index;
-				if (index !== undefined && swiper) {
-					swiper.slideTo(index);
-				}
-			});
+      document
+        .querySelector(".media-gallery")
+        .addEventListener("changeSlideTo", (e) => {
+          const index = e.detail.index;
+          if (index !== undefined && swiper) {
+            swiper.slideTo(index);
+          }
+        });
 
-			updateButton(!currentVariant.available, "Sold Out", false);
+      updateButton(!currentVariant.available, "Sold Out", false);
 
-			const quickatcBtn = modal.querySelector(".btn-quickatc");
-			quickatcBtn.addEventListener("click", (e) => {
-				const productId = item.id;
-				const productTitle = item.title;
-				const currentvariantId = currentVariant.id;
-				const variantPrice = currentVariant.price;
-				const variantOptions = currentVariant.options
-					.filter((option) => option !== "Default Title")
-					.map((option, index) => {
-						return {
-							name: item.options[index].name,
-							value: option,
-						};
-					});
-				const productImg = currentVariant.featured_image ? currentVariant.featured_image.src : item.featured_image;
-				const productAlt = currentVariant.featured_image ? currentVariant.featured_image.alt : item.title;
-				const productUrl = item.url;
-				const quantity = parseInt(quantityInput.value);
+      const quickatcBtn = modal.querySelector(".btn-quickatc");
+      quickatcBtn.addEventListener("click", (e) => {
+        const productId = item.id;
+        const productTitle = item.title;
+        const currentvariantId = currentVariant.id;
+        const variantPrice = currentVariant.price;
+        const variantOptions = currentVariant.options
+          .filter((option) => option !== "Default Title")
+          .map((option, index) => {
+            return {
+              name: item.options[index].name,
+              value: option,
+            };
+          });
+        const productImg = currentVariant.featured_image
+          ? currentVariant.featured_image.src
+          : item.featured_image;
+        const productAlt = currentVariant.featured_image
+          ? currentVariant.featured_image.alt
+          : item.title;
+        const productUrl = item.url;
+        const quantity = parseInt(quantityInput.value);
 
-				var currentCart = JSON.parse(localStorage.getItem("cart")) || {
-					items: [],
-					subtotal: 0,
-				};
+        var currentCart = JSON.parse(localStorage.getItem("cart")) || {
+          items: [],
+          subtotal: 0,
+        };
 
-				const itemIndex = currentCart.items.findIndex((item) => item.id === productId && item.variantId === currentvariantId);
+        const itemIndex = currentCart.items.findIndex(
+          (item) =>
+            item.id === productId && item.variantId === currentvariantId,
+        );
 
-				if (itemIndex === -1) {
-					currentCart.items.push({
-						id: productId,
-						title: productTitle,
-						price: variantPrice,
-						img: productImg,
-						alt: productAlt,
-						url: productUrl,
-						variantId: currentvariantId,
-						options_with_values: variantOptions ? variantOptions : null,
-						qty: quantity,
-					});
-				} else {
-					currentCart.items[itemIndex].qty += quantity;
-				}
+        if (itemIndex === -1) {
+          currentCart.items.push({
+            id: productId,
+            title: productTitle,
+            price: variantPrice,
+            img: productImg,
+            alt: productAlt,
+            url: productUrl,
+            variantId: currentvariantId,
+            options_with_values: variantOptions ? variantOptions : null,
+            qty: quantity,
+          });
+        } else {
+          currentCart.items[itemIndex].qty += quantity;
+        }
 
-				currentCart.subtotal = currentCart.items.reduce((acc, item) => acc + item.price * item.qty, 0);
+        currentCart.subtotal = currentCart.items.reduce(
+          (acc, item) => acc + item.price * item.qty,
+          0,
+        );
 
-				localStorage.setItem("cart", JSON.stringify(currentCart));
+        localStorage.setItem("cart", JSON.stringify(currentCart));
 
-				loadCart(true);
-				if (window.innerWidth < 768) document.documentElement.classList.add("prevent-scroll");
-				cartWrapper.classList.remove("hidden");
-				setTimeout(() => {
-					cartContent.classList.remove("translate-x-full");
-					cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
-				}, 300);
-			});
-		};
+        loadCart(true);
+        if (window.innerWidth < 768)
+          document.documentElement.classList.add("prevent-scroll");
+        cartWrapper.classList.remove("hidden");
+        setTimeout(() => {
+          cartContent.classList.remove("translate-x-full");
+          cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
+        }, 300);
+      });
+    };
 
-		quickviewBtn.addEventListener("click", quickview);
-		if (item.variants.length > 1) {
-			addtocartBtn.addEventListener("click", (event) => {
-				quickview();
-			});
-		} else {
-			if (item.available) {
-				addtocartBtn.addEventListener("click", (e) => {
-					const productId = item.id;
-					const productTitle = item.title;
-					let currentVariant = item.variants[0];
-					const currentvariantId = currentVariant.id;
-					const variantPrice = currentVariant.price;
-					const variantOptions = currentVariant.options
-						.filter((option) => option !== "Default Title")
-						.map((option, index) => {
-							return {
-								name: item.options[index].name,
-								value: option,
-							};
-						});
-					const productImg = currentVariant.featured_image ? currentVariant.featured_image.src : item.featured_image;
-					const productAlt = currentVariant.featured_image ? currentVariant.featured_image.alt : item.title;
-					const productUrl = item.url;
+    quickviewBtn.addEventListener("click", quickview);
+    if (item.variants.length > 1) {
+      addtocartBtn.addEventListener("click", (event) => {
+        quickview();
+      });
+    } else {
+      if (item.available) {
+        addtocartBtn.addEventListener("click", (e) => {
+          const productId = item.id;
+          const productTitle = item.title;
+          let currentVariant = item.variants[0];
+          const currentvariantId = currentVariant.id;
+          const variantPrice = currentVariant.price;
+          const variantOptions = currentVariant.options
+            .filter((option) => option !== "Default Title")
+            .map((option, index) => {
+              return {
+                name: item.options[index].name,
+                value: option,
+              };
+            });
+          const productImg = currentVariant.featured_image
+            ? currentVariant.featured_image.src
+            : item.featured_image;
+          const productAlt = currentVariant.featured_image
+            ? currentVariant.featured_image.alt
+            : item.title;
+          const productUrl = item.url;
 
-					var currentCart = JSON.parse(localStorage.getItem("cart")) || {
-						items: [],
-						subtotal: 0,
-					};
+          var currentCart = JSON.parse(localStorage.getItem("cart")) || {
+            items: [],
+            subtotal: 0,
+          };
 
-					const itemIndex = currentCart.items.findIndex((item) => item.id === productId && item.variantId === currentvariantId);
+          const itemIndex = currentCart.items.findIndex(
+            (item) =>
+              item.id === productId && item.variantId === currentvariantId,
+          );
 
-					if (itemIndex === -1) {
-						currentCart.items.push({
-							id: productId,
-							title: productTitle,
-							price: variantPrice,
-							img: productImg,
-							alt: productAlt,
-							url: productUrl,
-							variantId: currentvariantId,
-							options_with_values: variantOptions ? variantOptions : null,
-							qty: 1,
-						});
-					} else {
-						currentCart.items[itemIndex].qty += 1;
-					}
+          if (itemIndex === -1) {
+            currentCart.items.push({
+              id: productId,
+              title: productTitle,
+              price: variantPrice,
+              img: productImg,
+              alt: productAlt,
+              url: productUrl,
+              variantId: currentvariantId,
+              options_with_values: variantOptions ? variantOptions : null,
+              qty: 1,
+            });
+          } else {
+            currentCart.items[itemIndex].qty += 1;
+          }
 
-					currentCart.subtotal = currentCart.items.reduce((acc, item) => acc + item.price * item.qty, 0);
+          currentCart.subtotal = currentCart.items.reduce(
+            (acc, item) => acc + item.price * item.qty,
+            0,
+          );
 
-					localStorage.setItem("cart", JSON.stringify(currentCart));
+          localStorage.setItem("cart", JSON.stringify(currentCart));
 
-					loadCart(true);
-					if (window.innerWidth < 768) document.documentElement.classList.add("prevent-scroll");
-					cartWrapper.classList.remove("hidden");
-					setTimeout(() => {
-						cartContent.classList.remove("translate-x-full");
-						cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
-					}, 300);
-				});
-			} else {
-			}
-		}
-	});
+          loadCart(true);
+          if (window.innerWidth < 768)
+            document.documentElement.classList.add("prevent-scroll");
+          cartWrapper.classList.remove("hidden");
+          setTimeout(() => {
+            cartContent.classList.remove("translate-x-full");
+            cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
+          }, 300);
+        });
+      } else {
+      }
+    }
+  });
 
-	document.querySelectorAll(".pcard").forEach((item) => {
-		const imgs = item.querySelectorAll(".image-box img");
-		imgs.forEach((img) => {
-			img.addEventListener("load", () => {
-				img.classList.add("img-loaded");
-				img.parentElement.querySelector(".img-lazyloader")?.remove();
-			});
-		});
-	});
-	document.querySelectorAll(".pcard__rating").forEach((rating) => {
-		const normalStar = '<svg class="star-icon normalStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
-		const halfStar = '<svg class="star-icon halfStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
-		const borderStar = '<svg class="star-icon borderStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
+  document.querySelectorAll(".pcard").forEach((item) => {
+    const imgs = item.querySelectorAll(".image-box img");
+    imgs.forEach((img) => {
+      img.addEventListener("load", () => {
+        img.classList.add("img-loaded");
+        img.parentElement.querySelector(".img-lazyloader")?.remove();
+      });
+    });
+  });
+  document.querySelectorAll(".pcard__rating").forEach((rating) => {
+    const normalStar =
+      '<svg class="star-icon normalStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
+    const halfStar =
+      '<svg class="star-icon halfStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
+    const borderStar =
+      '<svg class="star-icon borderStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
 
-		const ratingValue = rating.getAttribute("data-rating");
-		const ratingCount = rating.getAttribute("data-rating-count");
+    const ratingValue = rating.getAttribute("data-rating");
+    const ratingCount = rating.getAttribute("data-rating-count");
 
-		let ratingStars = "";
-		for (let i = 0; i < 5; i++) {
-			if (ratingValue - i >= 1) {
-				ratingStars += normalStar;
-			} else if (ratingValue - i >= 0.5 && ratingValue - i < 1) {
-				ratingStars += halfStar;
-			} else {
-				ratingStars += borderStar;
-			}
-		}
-		ratingStars += `<span class="rating-count ml-2">(${ratingCount})</span>`;
-		rating.innerHTML = ratingStars;
-	});
+    let ratingStars = "";
+    for (let i = 0; i < 5; i++) {
+      if (ratingValue - i >= 1) {
+        ratingStars += normalStar;
+      } else if (ratingValue - i >= 0.5 && ratingValue - i < 1) {
+        ratingStars += halfStar;
+      } else {
+        ratingStars += borderStar;
+      }
+    }
+    ratingStars += `<span class="rating-count ml-2">(${ratingCount})</span>`;
+    rating.innerHTML = ratingStars;
+  });
 }
 
 function renderPagination() {
-	const ProductGrid = document.getElementById("ProductGrid");
-	const oldPagination = ProductGrid.querySelector(".pagination-wrapper");
-	if (oldPagination) {
-		ProductGrid.removeChild(oldPagination);
-	}
-	const totalPage = Math.ceil(products.length / limit);
-	if (totalPage <= 1) return;
-	const pagination = document.createElement("div");
-	pagination.classList.add("pagination-wrapper", "text-center", "mt-10");
-	// add a deco to pagination in the middle if totalPage > 4
-	pagination.innerHTML = `
+  const ProductGrid = document.getElementById("ProductGrid");
+  const oldPagination = ProductGrid.querySelector(".pagination-wrapper");
+  if (oldPagination) {
+    ProductGrid.removeChild(oldPagination);
+  }
+  const totalPage = Math.ceil(products.length / limit);
+  if (totalPage <= 1) return;
+  const pagination = document.createElement("div");
+  pagination.classList.add("pagination-wrapper", "text-center", "mt-10");
+  // add a deco to pagination in the middle if totalPage > 4
+  pagination.innerHTML = `
 		<div class="pagination flex justify-center items-center">
 			${page > 1 ? `<span class="prev">«</span>` : ""}
 			${Array.from({ length: totalPage }, (_, i) => i + 1)
-				.map((item) => {
-					if (totalPage > 4) {
-						if (item === 1 || item === totalPage) {
-							return `
+        .map((item) => {
+          if (totalPage > 4) {
+            if (item === 1 || item === totalPage) {
+              return `
 									<span class="page ${item === page ? "current" : ""}">${item}</span>
 								`;
-						} else if (item === page || item === page - 1 || item === page + 1) {
-							return `
+            } else if (
+              item === page ||
+              item === page - 1 ||
+              item === page + 1
+            ) {
+              return `
 									<span class="page ${item === page ? "current" : ""}">${item}</span>
 								`;
-						} else if (item === page - 2 || item === page + 2) {
-							return `
+            } else if (item === page - 2 || item === page + 2) {
+              return `
 									<span class="deco">...</span>
 								`;
-						}
-					} else {
-						return `
+            }
+          } else {
+            return `
 								<span class="page ${item === page ? "current" : ""}">${item}</span>
 							`;
-					}
-				})
-				.join("")}
+          }
+        })
+        .join("")}
 			${page < totalPage ? `<span class="next">»</span>` : ""}
 		</div>
 	`;
-	ProductGrid.appendChild(pagination);
+  ProductGrid.appendChild(pagination);
 
-	const paginationContent = pagination.querySelector(".pagination");
-	paginationContent.addEventListener("click", (e) => {
-		const sectionHeader = document.querySelector(".section-collection-header");
-		if (e.target.classList.contains("page")) {
-			page = parseInt(e.target.textContent);
-			URLParamsUpdate();
-			sortProducts();
-			renderProducts();
-			renderPagination();
-			setTimeout(() => {
-				sectionHeader.scrollIntoView({ behavior: "smooth" });
-			}, 300);
-		} else if (e.target.classList.contains("prev")) {
-			page -= 1;
-			URLParamsUpdate();
-			sortProducts();
-			renderProducts();
-			renderPagination();
-			setTimeout(() => {
-				sectionHeader.scrollIntoView({ behavior: "smooth" });
-			}, 300);
-		}
-		if (e.target.classList.contains("next")) {
-			page += 1;
-			URLParamsUpdate();
-			sortProducts();
-			renderProducts();
-			renderPagination();
-			setTimeout(() => {
-				sectionHeader.scrollIntoView({ behavior: "smooth" });
-			}, 300);
-		}
-	});
+  const paginationContent = pagination.querySelector(".pagination");
+  paginationContent.addEventListener("click", (e) => {
+    const sectionHeader = document.querySelector(".section-collection-header");
+    if (e.target.classList.contains("page")) {
+      page = parseInt(e.target.textContent);
+      URLParamsUpdate();
+      sortProducts();
+      renderProducts();
+      renderPagination();
+      setTimeout(() => {
+        sectionHeader.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else if (e.target.classList.contains("prev")) {
+      page -= 1;
+      URLParamsUpdate();
+      sortProducts();
+      renderProducts();
+      renderPagination();
+      setTimeout(() => {
+        sectionHeader.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+    if (e.target.classList.contains("next")) {
+      page += 1;
+      URLParamsUpdate();
+      sortProducts();
+      renderProducts();
+      renderPagination();
+      setTimeout(() => {
+        sectionHeader.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  });
 }
 
 init();

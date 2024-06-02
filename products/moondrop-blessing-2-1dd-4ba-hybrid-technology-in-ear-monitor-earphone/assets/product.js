@@ -20,52 +20,59 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
-  "rating": 4.8,
-    "ratingCount": 7,
-    "reviews": [
-        {
-            "user": "Nguyễn Thị Hương",
-            "rating": 5,
-            "review": "Tai nghe này tuyệt vời! Chất lượng âm thanh rất tốt và rất thoải mái khi đeo.",
-            "timestamp": "2024-06-15T09:30:00+08:00"
-        },
-        {
-            "user": "Trần Văn Nam",
-            "rating": 4,
-            "review": "Âm thanh khá tốt, nhưng kích cỡ không phù hợp lắm. Tổng thể là một sản phẩm tốt.",
-            "timestamp": "2024-06-14T14:00:00+08:00"
-        },
-        {
-            "user": "Yamada Satoshi",
-            "rating": 5,
-            "review": "このイヤホンは素晴らしいです！音質が優れており、着用感も非常に快適です。",
-            "timestamp": "2024-06-13T09:45:00+08:00"
-        },
-        {
-            "user": "Nguyễn Thị Lan",
-            "rating": 5,
-            "review": "Tai nghe này quá tuyệt vời! Âm thanh rất tốt và rất thoải mái khi đeo.",
-            "timestamp": "2024-06-12T15:20:00+08:00"
-        },
-        {
-            "user": "Yamamoto Kenji",
-            "rating": 5,
-            "review": "このイヤホンは素晴らしいです！音質がとても良く、長時間着用しても快適です。",
-            "timestamp": "2024-06-11T08:10:00+08:00"
-        },
-        {
-            "user": "Trần Thị Mai",
-            "rating": 4,
-            "review": "Chất lượng âm thanh tốt, nhưng đầu tai nghe dễ tuột ra. Tổng thể, tôi hài lòng với việc mua này.",
-            "timestamp": "2024-06-10T11:25:00+08:00"
-        },
-        {
-            "user": "Yamada Ayumi",
-            "rating": 5,
-            "review": "このイヤホンはすごいです！音がクリアで細かく、長時間の聴取でも快適です。",
-            "timestamp": "2024-06-09T13:50:00+08:00"
-        }
-    ],
+  rating: 4.8,
+  ratingCount: 7,
+  reviews: [
+    {
+      user: "Nguyễn Thị Hương",
+      rating: 5,
+      review:
+        "Tai nghe này tuyệt vời! Chất lượng âm thanh rất tốt và rất thoải mái khi đeo.",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Trần Văn Nam",
+      rating: 4,
+      review:
+        "Âm thanh khá tốt, nhưng kích cỡ không phù hợp lắm. Tổng thể là một sản phẩm tốt.",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Yamada Satoshi",
+      rating: 5,
+      review:
+        "このイヤホンは素晴らしいです！音質が優れており、着用感も非常に快適です。",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "Nguyễn Thị Lan",
+      rating: 5,
+      review:
+        "Tai nghe này quá tuyệt vời! Âm thanh rất tốt và rất thoải mái khi đeo.",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+    {
+      user: "Yamamoto Kenji",
+      rating: 5,
+      review:
+        "このイヤホンは素晴らしいです！音質がとても良く、長時間着用しても快適です。",
+      timestamp: "2024-06-11T08:10:00+08:00",
+    },
+    {
+      user: "Trần Thị Mai",
+      rating: 4,
+      review:
+        "Chất lượng âm thanh tốt, nhưng đầu tai nghe dễ tuột ra. Tổng thể, tôi hài lòng với việc mua này.",
+      timestamp: "2024-06-10T11:25:00+08:00",
+    },
+    {
+      user: "Yamada Ayumi",
+      rating: 5,
+      review:
+        "このイヤホンはすごいです！音がクリアで細かく、長時間の聴取でも快適です。",
+      timestamp: "2024-06-09T13:50:00+08:00",
+    },
+  ],
   variants: [
     {
       id: 32918364323972,

@@ -1,0 +1,91 @@
+:root {
+	--color-border: #e1e1e1;
+	--color-field-background: #fff;
+}
+.checkout-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-block: 20px;
+}
+.checkout-header-container {
+	padding: 0.8rem;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.checkout-form-container {
+	width: 100%;
+}
+.express-checkout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-block: 20px;
+	border: none;
+}
+.checkout-form-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.express-checkout-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	width: 100%;
+}
+.gpay-btn {
+	background-image: url(../assets/google-pay.svg);
+	background-origin: content-box;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.apple-btn,
+.paypal-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.express-checkout-button {
+	border-radius: 5px;
+}
+.express-checkout-button:hover {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.apple-btn:hover,
+.gpay-btn:hover {
+	border: 1px solid #fff;
+}
+.separator {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin: 1rem 0;
+	width: 100%;
+}
+.separator::before,
+.separator::after {
+	content: "";
+	flex: 1;
+	border-bottom: 1px solid #dedede;
+	flex-grow: 1;
+}
+.separator::before {
+	margin-right: 0.25em;
+}
+.separator::after {
+	margin-left: 0.25em;
+}
+.separator-text {
+	padding: 0 0.5rem;
+	color: #555;
+	font-weight: 600;
+	font-size: 1rem;
+	text-transform: uppercase;
+}

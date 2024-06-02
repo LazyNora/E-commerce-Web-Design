@@ -3,43 +3,50 @@ const select = customSelect.querySelector("select[name='sort_by']");
 const options = select.querySelectorAll("option");
 const selectItems = customSelect.querySelector(".select-items");
 const selectSelected = customSelect.querySelector(".select-selected");
-const selectSelectedText = selectSelected.querySelector(".select-selected__text");
+const selectSelectedText = selectSelected.querySelector(
+  ".select-selected__text",
+);
 
-selectSelectedText.textContent = select.options[select.selectedIndex].textContent;
+selectSelectedText.textContent =
+  select.options[select.selectedIndex].textContent;
 
 options.forEach((option) => {
-	const item = document.createElement("div");
-	item.classList.add("select-item");
-	item.textContent = option.textContent;
-	item.dataset.value = option.value;
+  const item = document.createElement("div");
+  item.classList.add("select-item");
+  item.textContent = option.textContent;
+  item.dataset.value = option.value;
 
-	item.addEventListener("click", () => {
-		const sameAsSelected = selectItems.querySelector(".same-as-selected");
-		if (sameAsSelected) {
-			sameAsSelected.classList.remove("same-as-selected");
-		}
-		select.value = item.dataset.value;
-		item.classList.add("same-as-selected");
-		selectSelectedText.textContent = item.textContent;
-		selectItems.classList.add("select-hide");
-		select.dispatchEvent(new Event("change"));
-	});
+  item.addEventListener("click", () => {
+    const sameAsSelected = selectItems.querySelector(".same-as-selected");
+    if (sameAsSelected) {
+      sameAsSelected.classList.remove("same-as-selected");
+    }
+    select.value = item.dataset.value;
+    item.classList.add("same-as-selected");
+    selectSelectedText.textContent = item.textContent;
+    selectItems.classList.add("select-hide");
+    select.dispatchEvent(new Event("change"));
+  });
 
-	selectItems.appendChild(item);
+  selectItems.appendChild(item);
 });
 
 selectSelected.addEventListener("click", () => {
-	selectItems.classList.toggle("select-hide");
+  selectItems.classList.toggle("select-hide");
 });
 
 select.addEventListener("change", () => {
-	selectSelectedText.textContent = select.options[select.selectedIndex].textContent;
+  selectSelectedText.textContent =
+    select.options[select.selectedIndex].textContent;
 });
 
 document.addEventListener("click", (event) => {
-	if (!customSelect.contains(event.target) && !selectItems.contains(event.target)) {
-		selectItems.classList.add("select-hide");
-	}
+  if (
+    !customSelect.contains(event.target) &&
+    !selectItems.contains(event.target)
+  ) {
+    selectItems.classList.add("select-hide");
+  }
 });
 
 const gridColumn_view = document.querySelector(".gridColumn-view");
@@ -47,54 +54,58 @@ const gridBtns = gridColumn_view.querySelectorAll("button[data-column]");
 let gridColumnView = parseInt(localStorage.getItem("gridColumnViews"));
 
 if (!gridColumnView) {
-	const productListing = document.querySelector(".product-listing");
-	localStorage.setItem("gridColumnViews", "5");
-	gridColumnView = 5;
-	const btn = gridColumn_view.querySelector("button[data-column='5']");
-	btn.classList.add("active");
-	productListing?.classList.add("col-5");
+  const productListing = document.querySelector(".product-listing");
+  localStorage.setItem("gridColumnViews", "5");
+  gridColumnView = 5;
+  const btn = gridColumn_view.querySelector("button[data-column='5']");
+  btn.classList.add("active");
+  productListing?.classList.add("col-5");
 } else {
-	const productListing = document.querySelector(".product-listing");
-	gridColumn_view
-		.querySelector("button[data-column='" + gridColumnView + "']")
-		.classList.add("active");
-	productListing?.classList.add("col-" + gridColumnView);
+  const productListing = document.querySelector(".product-listing");
+  gridColumn_view
+    .querySelector("button[data-column='" + gridColumnView + "']")
+    .classList.add("active");
+  productListing?.classList.add("col-" + gridColumnView);
 }
 
 gridBtns.forEach((btn) => {
-	btn.addEventListener("click", () => {
-		const productListing = document.querySelector(".product-listing");
-		gridBtns.forEach((btn) => {
-			btn.classList.remove("active");
-		});
-		btn.classList.add("active");
-		productListing?.classList.remove("col-" + gridColumnView);
-		gridColumnView = parseInt(btn.dataset.column);
-		localStorage.setItem("gridColumnViews", gridColumnView);
-		productListing?.classList.add("col-" + gridColumnView);
-	});
+  btn.addEventListener("click", () => {
+    const productListing = document.querySelector(".product-listing");
+    gridBtns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    btn.classList.add("active");
+    productListing?.classList.remove("col-" + gridColumnView);
+    gridColumnView = parseInt(btn.dataset.column);
+    localStorage.setItem("gridColumnViews", gridColumnView);
+    productListing?.classList.add("col-" + gridColumnView);
+  });
 });
 
 window.addEventListener("resize", () => {
-	const productListing = document.querySelector(".product-listing");
-	if (window.innerWidth < 768 && gridColumnView > 2) {
-		productListing?.classList.remove("col-" + gridColumnView);
-		gridColumnView = 2;
-		productListing?.classList.add("col-2");
-		gridBtns.forEach((btn) => {
-			btn.classList.remove("active");
-		});
-		gridColumn_view.querySelector("button[data-column='2']").classList.add("active");
-		localStorage.setItem("gridColumnViews", "2");
-	}
-	if (window.innerWidth < 1024 && gridColumnView === 5) {
-		productListing?.classList.remove("col-" + gridColumnView);
-		gridColumnView = 4;
-		productListing?.classList.add("col-4");
-		gridBtns.forEach((btn) => {
-			btn.classList.remove("active");
-		});
-		gridColumn_view.querySelector("button[data-column='4']").classList.add("active");
-		localStorage.setItem("gridColumnViews", "4");
-	}
+  const productListing = document.querySelector(".product-listing");
+  if (window.innerWidth < 768 && gridColumnView > 2) {
+    productListing?.classList.remove("col-" + gridColumnView);
+    gridColumnView = 2;
+    productListing?.classList.add("col-2");
+    gridBtns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    gridColumn_view
+      .querySelector("button[data-column='2']")
+      .classList.add("active");
+    localStorage.setItem("gridColumnViews", "2");
+  }
+  if (window.innerWidth < 1024 && gridColumnView === 5) {
+    productListing?.classList.remove("col-" + gridColumnView);
+    gridColumnView = 4;
+    productListing?.classList.add("col-4");
+    gridBtns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    gridColumn_view
+      .querySelector("button[data-column='4']")
+      .classList.add("active");
+    localStorage.setItem("gridColumnViews", "4");
+  }
 });

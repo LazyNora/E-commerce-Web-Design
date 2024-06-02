@@ -2,9 +2,12 @@ const currentPath = path || "";
 // Lấy ra variant hiện tại
 var currentVariant = null;
 if (variantId) {
-	currentVariant = product.variants.find((variant) => parseInt(variant.id) === parseInt(variantId)) || product.variants[0];
+  currentVariant =
+    product.variants.find(
+      (variant) => parseInt(variant.id) === parseInt(variantId),
+    ) || product.variants[0];
 } else {
-	currentVariant = product.variants[0];
+  currentVariant = product.variants[0];
 }
 
 document.title = `${product.title} - Audio Oasis`;
@@ -47,21 +50,22 @@ document.querySelector(".prod__info").innerHTML = `
       </div>
     </div>
     ${
-			currentVariant.compare_at_price
-				? `<div class="main-product__block main-product__block-countdown">
+      currentVariant.compare_at_price
+        ? `<div class="main-product__block main-product__block-countdown">
     <div class="prod__sale-wraps">
       <div class="prod__sale-text">SALES</div>
       <div id="deals-countdown-wrapper" class="deals-countdown-wrapper"></div>
     </div>
   </div>`
-				: ""
-		}
+        : ""
+    }
     <div class="main-product__block main-product__block-price">
       <div class="prod__price flex">
         <div class="price inline-flex items-center flex-wrap">
         ${
-					currentVariant.compare_at_price !== null && currentVariant.compare_at_price !== currentVariant.price
-						? `
+          currentVariant.compare_at_price !== null &&
+          currentVariant.compare_at_price !== currentVariant.price
+            ? `
         <div class="price__sale">
           <span class="visually-hidden visually-hidden--inline">Sale price</span>
           <span class="price-item price-item--sale text-xl md:text-2xl">
@@ -73,7 +77,7 @@ document.querySelector(".prod__info").innerHTML = `
           </s>
         </div>
         `
-						: `
+            : `
         <div class="price__regular">
           <span class="visually-hidden visually-hidden--inline">
             Regular price
@@ -82,7 +86,7 @@ document.querySelector(".prod__info").innerHTML = `
             <span class="money" data-product-price=${currentVariant.price}>$${currentVariant.price / 100} USD</span>
           </span>
         </div>`
-				}
+        }
         </div>
       </div>
     </div>
@@ -154,26 +158,29 @@ document.querySelector(".prod__info").innerHTML = `
 const avgRate = document.querySelector("#avg-rate");
 const rating = avgRate.getAttribute("data-rating");
 const ratingCount = avgRate.getAttribute("data-rating-count");
-const normalStar = '<svg class="star-icon normalStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
-const halfStar = '<svg class="star-icon halfStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
-const borderStar = '<svg class="star-icon borderStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
+const normalStar =
+  '<svg class="star-icon normalStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>';
+const halfStar =
+  '<svg class="star-icon halfStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
+const borderStar =
+  '<svg class="star-icon borderStar w-[18px] h-[18px]" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28z"></path></svg>';
 const rateStars = document.querySelector(".rate-stars");
 // Tạo biến star để lưu trữ các icon sao
 let star = "";
 // Duyệt qua 5 lần để render ra 5 icon sao
 for (let i = 0; i < 5; i++) {
-	if (rating - i >= 1) {
-		star += normalStar;
-	} else if (rating - i >= 0.5 && rating - i < 1) {
-		star += halfStar;
-	} else {
-		star += borderStar;
-	}
+  if (rating - i >= 1) {
+    star += normalStar;
+  } else if (rating - i >= 0.5 && rating - i < 1) {
+    star += halfStar;
+  } else {
+    star += borderStar;
+  }
 }
 // Thêm số lượng reviews vào sau các icon sao
 star += `<span class="review-count">${ratingCount} Reviews</span>`;
 rateStars.innerHTML = star;
 
 document.querySelector("a[data-open-share]").addEventListener("click", () => {
-	document.querySelector(".sharing").classList.toggle("hidden");
+  document.querySelector(".sharing").classList.toggle("hidden");
 });

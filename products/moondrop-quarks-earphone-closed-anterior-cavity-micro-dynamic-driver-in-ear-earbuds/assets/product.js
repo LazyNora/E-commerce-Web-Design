@@ -20,34 +20,38 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
-  "rating": 5,
-    "ratingCount": 4,
-    "reviews": [
-        {
-            "user": "Yamamoto Takeshi",
-            "rating": 5,
-            "review": "これらのイヤホンは素晴らしいです！音質が非常に良く、長時間使用しても快適です。",
-            "timestamp": "2024-06-15T09:30:00+08:00"
-        },
-        {
-            "user": "Sakura Tanaka",
-            "rating": 5,
-            "review": "このイヤホンは最高です！音のクリアさに加えて、快適なフィット感があります。",
-            "timestamp": "2024-06-14T14:00:00+08:00"
-        },
-        {
-            "user": "Takahashi Rina",
-            "rating": 5,
-            "review": "素晴らしい製品です！音質が優れており、長時間の使用でも快適です。",
-            "timestamp": "2024-06-13T09:45:00+08:00"
-        },
-        {
-            "user": "Yamada Hiroshi",
-            "rating": 5,
-            "review": "このイヤホンは最高です！クリアなサウンドと快適な装着感があります。",
-            "timestamp": "2024-06-12T15:20:00+08:00"
-        }
-    ],
+  rating: 5,
+  ratingCount: 4,
+  reviews: [
+    {
+      user: "Yamamoto Takeshi",
+      rating: 5,
+      review:
+        "これらのイヤホンは素晴らしいです！音質が非常に良く、長時間使用しても快適です。",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Sakura Tanaka",
+      rating: 5,
+      review:
+        "このイヤホンは最高です！音のクリアさに加えて、快適なフィット感があります。",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Takahashi Rina",
+      rating: 5,
+      review:
+        "素晴らしい製品です！音質が優れており、長時間の使用でも快適です。",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "Yamada Hiroshi",
+      rating: 5,
+      review:
+        "このイヤホンは最高です！クリアなサウンドと快適な装着感があります。",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+  ],
   variants: [
     {
       id: 41210839564439,

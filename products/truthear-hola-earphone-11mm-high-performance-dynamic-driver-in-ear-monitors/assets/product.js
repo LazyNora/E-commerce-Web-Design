@@ -20,51 +20,58 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
-  "rating": 4.8,
-  "ratingCount": 7,
-  "reviews": [
-      {
-          "user": "Juan Perez",
-          "rating": 5,
-          "review": "¡Estos auriculares son increíbles! La calidad de sonido es excepcional y son muy cómodos de llevar.",
-          "timestamp": "2024-06-15T09:30:00+08:00"
-      },
-      {
-          "user": "Emily Johnson",
-          "rating": 4,
-          "review": "Good sound quality, but the fit could be slightly better. Overall, a solid product.",
-          "timestamp": "2024-06-14T14:00:00+08:00"
-      },
-      {
-          "user": "Nguyễn Thị Hương",
-          "rating": 5,
-          "review": "Tai nghe này tuyệt vời! Chất lượng âm thanh rất tốt và rất thoải mái khi đeo.",
-          "timestamp": "2024-06-13T09:45:00+08:00"
-      },
-      {
-          "user": "Satoshi Yamada",
-          "rating": 5,
-          "review": "このイヤホンは素晴らしいです！音質が優れており、着用感も非常に快適です。",
-          "timestamp": "2024-06-12T15:20:00+08:00"
-      },
-      {
-          "user": "Alice Müller",
-          "rating": 5,
-          "review": "Diese Ohrhörer sind unglaublich! Die Klangqualität ist außergewöhnlich und sie sind sehr bequem zu tragen.",
-          "timestamp": "2024-06-11T08:10:00+08:00"
-      },
-      {
-          "user": "Zhang Wei",
-          "rating": 4,
-          "review": "这个产品还不错，但是希望能更好地贴合。总的来说，是个不错的产品。",
-          "timestamp": "2024-06-10T11:25:00+08:00"
-      },
-      {
-          "user": "Ahmed Khalid",
-          "rating": 5,
-          "review": "هذه السماعات مذهلة! جودة الصوت استثنائية ومريحة للغاية للارتداء.",
-          "timestamp": "2024-06-09T13:50:00+08:00"
-      }
+  rating: 4.8,
+  ratingCount: 7,
+  reviews: [
+    {
+      user: "Juan Perez",
+      rating: 5,
+      review:
+        "¡Estos auriculares son increíbles! La calidad de sonido es excepcional y son muy cómodos de llevar.",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Emily Johnson",
+      rating: 4,
+      review:
+        "Good sound quality, but the fit could be slightly better. Overall, a solid product.",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Nguyễn Thị Hương",
+      rating: 5,
+      review:
+        "Tai nghe này tuyệt vời! Chất lượng âm thanh rất tốt và rất thoải mái khi đeo.",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "Satoshi Yamada",
+      rating: 5,
+      review:
+        "このイヤホンは素晴らしいです！音質が優れており、着用感も非常に快適です。",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+    {
+      user: "Alice Müller",
+      rating: 5,
+      review:
+        "Diese Ohrhörer sind unglaublich! Die Klangqualität ist außergewöhnlich und sie sind sehr bequem zu tragen.",
+      timestamp: "2024-06-11T08:10:00+08:00",
+    },
+    {
+      user: "Zhang Wei",
+      rating: 4,
+      review:
+        "这个产品还不错，但是希望能更好地贴合。总的来说，是个不错的产品。",
+      timestamp: "2024-06-10T11:25:00+08:00",
+    },
+    {
+      user: "Ahmed Khalid",
+      rating: 5,
+      review:
+        "هذه السماعات مذهلة! جودة الصوت استثنائية ومريحة للغاية للارتداء.",
+      timestamp: "2024-06-09T13:50:00+08:00",
+    },
   ],
   variants: [
     {

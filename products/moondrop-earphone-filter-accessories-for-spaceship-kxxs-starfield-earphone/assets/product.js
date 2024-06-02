@@ -20,44 +20,44 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
-  rating : 4.4,
-	ratingCount : 5,
-	reviews: [
-	{	
-		user: "Lara Marry",
-		rating: 5,
-		review:  "Have owned the Dusks for about a year now, and I still believe it's an all-around amazing iem that's definitely worth the price. I just wish the stick-on filters didn't come off so easily! view less",  
-		timestamp: "2023-02-11T19:19:21+08:00",
-	},
-	{	
-		user: "	Rika Furude",
-		rating: 5,
-		review:  "このセットは一日中聴いていても最高です。私のお気に入りのセットの 1 つです。 *(^O^)* ",  
-		timestamp: "2022-12-07T10:22:21+08:00",
-	},
-	{	
-		user: "Jack Parow",
-		rating: 4,
-		review:  "The product is really good, not in love with the timbre, but still overall I would recommend it to everyone.",
-    timestamp: "2023-10-07T10:22:21+08:00",
-
-	},
-	{	
-		user: "Maria Luxy",
-		rating: 4,
-		review:  "I love it so much <3 <3 <3",  
-		timestamp: "2023-12-03T11:09:21+08:00",
-	},
-	{	
-		user: "Halan Zan",
-		rating: 4,
-		review:  "Have been using these for 3 years now and they are still of incredible value. Only issue for some people may be the wider nozzle",  
-		timestamp: "2023-12-03T11:07:21+08:00",
-	},
-
-	],
-
-
+  rating: 4.4,
+  ratingCount: 5,
+  reviews: [
+    {
+      user: "Lara Marry",
+      rating: 5,
+      review:
+        "Have owned the Dusks for about a year now, and I still believe it's an all-around amazing iem that's definitely worth the price. I just wish the stick-on filters didn't come off so easily! view less",
+      timestamp: "2023-02-11T19:19:21+08:00",
+    },
+    {
+      user: "	Rika Furude",
+      rating: 5,
+      review:
+        "このセットは一日中聴いていても最高です。私のお気に入りのセットの 1 つです。 *(^O^)* ",
+      timestamp: "2022-12-07T10:22:21+08:00",
+    },
+    {
+      user: "Jack Parow",
+      rating: 4,
+      review:
+        "The product is really good, not in love with the timbre, but still overall I would recommend it to everyone.",
+      timestamp: "2023-10-07T10:22:21+08:00",
+    },
+    {
+      user: "Maria Luxy",
+      rating: 4,
+      review: "I love it so much <3 <3 <3",
+      timestamp: "2023-12-03T11:09:21+08:00",
+    },
+    {
+      user: "Halan Zan",
+      rating: 4,
+      review:
+        "Have been using these for 3 years now and they are still of incredible value. Only issue for some people may be the wider nozzle",
+      timestamp: "2023-12-03T11:07:21+08:00",
+    },
+  ],
 
   variants: [
     {

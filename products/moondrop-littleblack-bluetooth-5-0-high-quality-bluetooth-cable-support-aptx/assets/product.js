@@ -20,70 +20,80 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
-  "rating": 4,
-    "ratingCount": 10,
-    "reviews": [
-        {
-            "user": "Sophie Martin",
-            "rating": 4,
-            "review": "The sound quality is decent, but the ear tips are not very comfortable. Overall, an average product.",
-            "timestamp": "2024-06-15T09:30:00+08:00"
-        },
-        {
-            "user": "Alexandre Dupont",
-            "rating": 4,
-            "review": "Ces écouteurs sont corrects, mais la qualité du son pourrait être meilleure. Ils ne sont pas très confortables à porter pendant longtemps.",
-            "timestamp": "2024-06-14T14:00:00+08:00"
-        },
-        {
-            "user": "Nguyễn Văn Nam",
-            "rating": 4,
-            "review": "Chất lượng âm thanh tạm ổn, nhưng không thực sự thoải mái khi đeo lâu. Tổng thể, sản phẩm này chỉ được đánh giá là trung bình.",
-            "timestamp": "2024-06-13T09:45:00+08:00"
-        },
-        {
-            "user": "Yamada Takashi",
-            "rating": 4,
-            "review": "音質はまずまずですが、長時間装着するとあまり快適ではありません。総じて、平均的な製品です。",
-            "timestamp": "2024-06-12T15:20:00+08:00"
-        },
-        {
-            "user": "Lena Schmidt",
-            "rating": 4,
-            "review": "Die Klangqualität ist in Ordnung, aber die Passform ist nicht besonders bequem. Insgesamt ein durchschnittliches Produkt.",
-            "timestamp": "2024-06-11T08:10:00+08:00"
-        },
-        {
-            "user": "Trần Thị Lan",
-            "rating": 4,
-            "review": "Chất lượng âm thanh tốt, nhưng không thoải mái khi đeo lâu. Tổng thể, sản phẩm này chỉ là trung bình.",
-            "timestamp": "2024-06-10T11:25:00+08:00"
-        },
-        {
-            "user": "Ahmed Ali",
-            "rating": 4,
-            "review": "جودة الصوت مقبولة، لكن ليست مريحة جدًا لارتدائها لفترة طويلة. بشكل عام، المنتج متوسط.",
-            "timestamp": "2024-06-09T13:50:00+08:00"
-        },
-        {
-            "user": "Sophie Dupont",
-            "rating": 4,
-            "review": "Ces écouteurs sont corrects, mais ils pourraient être plus confortables à porter. La qualité sonore est moyenne.",
-            "timestamp": "2024-06-08T10:30:00+08:00"
-        },
-        {
-            "user": "Nguyễn Văn An",
-            "rating": 4,
-            "review": "Chất lượng âm thanh tốt, nhưng không thoải mái khi sử dụng trong thời gian dài. Tổng thể, sản phẩm này chỉ trung bình.",
-            "timestamp": "2024-06-07T09:15:00+08:00"
-        },
-        {
-            "user": "Yamamoto Haruto",
-            "rating": 4,
-            "review": "音質はまあまあですが、長時間装着すると少し不快です。総じて、平均的な製品です。",
-            "timestamp": "2024-06-06T14:45:00+08:00"
-        }
-    ],
+  rating: 4,
+  ratingCount: 10,
+  reviews: [
+    {
+      user: "Sophie Martin",
+      rating: 4,
+      review:
+        "The sound quality is decent, but the ear tips are not very comfortable. Overall, an average product.",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Alexandre Dupont",
+      rating: 4,
+      review:
+        "Ces écouteurs sont corrects, mais la qualité du son pourrait être meilleure. Ils ne sont pas très confortables à porter pendant longtemps.",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Nguyễn Văn Nam",
+      rating: 4,
+      review:
+        "Chất lượng âm thanh tạm ổn, nhưng không thực sự thoải mái khi đeo lâu. Tổng thể, sản phẩm này chỉ được đánh giá là trung bình.",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "Yamada Takashi",
+      rating: 4,
+      review:
+        "音質はまずまずですが、長時間装着するとあまり快適ではありません。総じて、平均的な製品です。",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+    {
+      user: "Lena Schmidt",
+      rating: 4,
+      review:
+        "Die Klangqualität ist in Ordnung, aber die Passform ist nicht besonders bequem. Insgesamt ein durchschnittliches Produkt.",
+      timestamp: "2024-06-11T08:10:00+08:00",
+    },
+    {
+      user: "Trần Thị Lan",
+      rating: 4,
+      review:
+        "Chất lượng âm thanh tốt, nhưng không thoải mái khi đeo lâu. Tổng thể, sản phẩm này chỉ là trung bình.",
+      timestamp: "2024-06-10T11:25:00+08:00",
+    },
+    {
+      user: "Ahmed Ali",
+      rating: 4,
+      review:
+        "جودة الصوت مقبولة، لكن ليست مريحة جدًا لارتدائها لفترة طويلة. بشكل عام، المنتج متوسط.",
+      timestamp: "2024-06-09T13:50:00+08:00",
+    },
+    {
+      user: "Sophie Dupont",
+      rating: 4,
+      review:
+        "Ces écouteurs sont corrects, mais ils pourraient être plus confortables à porter. La qualité sonore est moyenne.",
+      timestamp: "2024-06-08T10:30:00+08:00",
+    },
+    {
+      user: "Nguyễn Văn An",
+      rating: 4,
+      review:
+        "Chất lượng âm thanh tốt, nhưng không thoải mái khi sử dụng trong thời gian dài. Tổng thể, sản phẩm này chỉ trung bình.",
+      timestamp: "2024-06-07T09:15:00+08:00",
+    },
+    {
+      user: "Yamamoto Haruto",
+      rating: 4,
+      review:
+        "音質はまあまあですが、長時間装着すると少し不快です。総じて、平均的な製品です。",
+      timestamp: "2024-06-06T14:45:00+08:00",
+    },
+  ],
   variants: [
     {
       id: 30729196306564,
