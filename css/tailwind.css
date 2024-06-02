@@ -925,6 +925,11 @@ body {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -938,6 +943,11 @@ body {
 .my-\[100px\] {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .-ml-\[20px\] {
@@ -1092,6 +1102,30 @@ body {
   margin-top: 25px;
 }
 
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mb-\[15px\] {
+  margin-bottom: 15px;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
+}
+
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+
+.ml-\[12px\] {
+  margin-left: 12px;
+}
+
+.mt-\[-4px\] {
+  margin-top: -4px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1234,12 +1268,12 @@ body {
   height: 10px;
 }
 
-.h-\[11px\] {
-  height: 11px;
-}
-
 .h-\[12px\] {
   height: 12px;
+}
+
+.h-\[14px\] {
+  height: 14px;
 }
 
 .h-\[16px\] {
@@ -1272,10 +1306,6 @@ body {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[14px\] {
-  height: 14px;
 }
 
 .max-h-\[90vh\] {
@@ -1342,12 +1372,12 @@ body {
   width: 10px;
 }
 
-.w-\[11px\] {
-  width: 11px;
-}
-
 .w-\[12px\] {
   width: 12px;
+}
+
+.w-\[14px\] {
+  width: 14px;
 }
 
 .w-\[16px\] {
@@ -1411,10 +1441,6 @@ body {
   width: max-content;
 }
 
-.w-\[14px\] {
-  width: 14px;
-}
-
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
@@ -1430,6 +1456,10 @@ body {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-none {
+  flex: none;
 }
 
 .flex-shrink {
@@ -2050,6 +2080,10 @@ body {
 
 .justify-items-stretch {
   justify-items: stretch;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2830,6 +2864,10 @@ body {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pb-7 {
+  padding-bottom: 1.75rem;
 }
 
 .text-left {
@@ -3829,6 +3867,10 @@ body {
     width: auto;
   }
 
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4005,6 +4047,10 @@ body {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-3\/5 {
+    width: 60%;
   }
 
   .lg\:grid-cols-3 {

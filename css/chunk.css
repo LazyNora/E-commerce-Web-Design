@@ -33,39 +33,17 @@ select {
 	background-size: 10px;
 	padding-right: 25px;
 }
-input:not(
-		.quantity-input__element,
-		.form-control,
-		.cart-item__qty_input,
-		.newsletter__input-st,
-		[type="submit"]
-	),
-textarea:not(
-		.quantity-input__element,
-		.form-control,
-		.cart-item__qty_input,
-		.newsletter__input-st,
-		[type="submit"]
-	) {
+input:not(.quantity-input__element, .form-control, .cart-item__qty_input, .newsletter__input-st, [type="submit"]),
+textarea:not(.quantity-input__element, .form-control, .cart-item__qty_input, .newsletter__input-st, [type="submit"]) {
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 	border-radius: 0.25rem;
-	border: 1px solid var(--border-color-3);
+	border: 1px solid #d2d2d2;
 	line-height: 1.5rem;
 	padding: 0.5rem 0.75rem 0.5rem 1.2rem;
 }
-input:focus:not(
-		.quantity-input__element,
-		.form-control,
-		.cart-item__qty_input,
-		.newsletter__input-st
-	),
-textarea:focus:not(
-		.quantity-input__element,
-		.form-control,
-		.cart-item__qty_input,
-		.newsletter__input-st
-	) {
+input:focus:not(.quantity-input__element, .form-control, .cart-item__qty_input, .newsletter__input-st),
+textarea:focus:not(.quantity-input__element, .form-control, .cart-item__qty_input, .newsletter__input-st) {
 	--tw-border-opacity: 1;
 	border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
@@ -134,7 +112,6 @@ textarea[type="submit"]:hover {
 	letter-spacing: var(--btn-letter-spacing, 0);
 	line-height: var(--btn-line-height, "normal");
 	outline: none;
-	text-transform: var(--btn-text-transform, "");
 	transition: all 0.32s;
 }
 .btn:focus,
@@ -1954,13 +1931,7 @@ html.prevent-scroll body {
 	display: none !important;
 }
 .variant-picker__option--soldout .variant-picker__option-button:before {
-	background: linear-gradient(
-			to bottom right,
-			transparent calc(50% - 1px),
-			var(--color-border) 50%,
-			transparent calc(50% + 1px)
-		)
-		no-repeat;
+	background: linear-gradient(to bottom right, transparent calc(50% - 1px), var(--color-border) 50%, transparent calc(50% + 1px)) no-repeat;
 	content: "";
 	height: 100%;
 	left: 0;
@@ -2327,18 +2298,8 @@ html.prevent-scroll body {
 	aspect-ratio: 1;
 	border-radius: 50%;
 	background: #777;
-	-webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
-		radial-gradient(
-			farthest-side,
-			#0000 calc(100% - var(--b) - 1px),
-			#000 calc(100% - var(--b))
-		);
-	mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
-		radial-gradient(
-			farthest-side,
-			#0000 calc(100% - var(--b) - 1px),
-			#000 calc(100% - var(--b))
-		);
+	-webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg), radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+	mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg), radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
 	-webkit-mask-composite: destination-in;
 	mask-composite: intersect;
 	animation: s5 1s infinite;

@@ -49,3 +49,150 @@
 		line-height: 2.5rem;
 	}
 }
+
+.home-dev-col {
+	background-color: #fff;
+	border-radius: 15px;
+	margin-bottom: 60px;
+	padding: 40px;
+	display: flex;
+	position: relative;
+}
+.home-dev-content {
+	flex: 100%;
+	display: flex;
+}
+.home-dev-text {
+	font-weight: 400;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 24px;
+	line-height: 30px;
+}
+.home-dev-info-nora {
+	flex: 600px;
+	justify-content: flex-end;
+	align-self: center;
+	margin-left: 40px;
+	display: flex;
+}
+.home-dev-info-hanayue {
+	flex: 600px;
+	justify-content: flex-start;
+	align-self: center;
+	margin-right: 40px;
+	display: flex;
+}
+.home-dev-info-nora-img {
+	background-image: url("../assets/nora.png");
+	background-position: 50%;
+	background-size: cover;
+	width: 120px;
+	height: 120px;
+	margin-right: 20px;
+}
+.home-dev-info-hanayue-img {
+	background-image: url("../assets/hanayue.png");
+	background-position: 50%;
+	background-size: cover;
+	width: 120px;
+	height: 120px;
+	margin-left: 20px;
+}
+.home-dev-info-nora-name,
+.home-dev-info-hanayue-name {
+	align-self: center;
+	font-size: 32px;
+	line-height: 48px;
+}
+.home-dev-info-nora-title,
+.home-dev-info-hanayue-title {
+	font-size: 18px;
+	line-height: 24px;
+	color: #666;
+}
+#MainContent {
+	background: #eef7f7;
+}
+@media screen and (max-width: 991px) {
+	.home-dev-col {
+		min-height: 250px;
+		font-family: moondrop, sans-serif;
+		display: block;
+	}
+	.home-dev-text {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.home-dev-info-nora {
+		margin-left: 0;
+		position: absolute;
+		top: auto;
+		bottom: 20px;
+		left: auto;
+		right: 40px;
+	}
+	.home-dev-info-hanayue {
+		margin-left: 0;
+		position: absolute;
+		top: auto;
+		bottom: 20px;
+		left: auto;
+		left: 40px;
+	}
+	.home-dev-info-nora-img,
+	.home-dev-info-hanayue-img {
+		width: 80px;
+		height: 80px;
+	}
+	.home-dev-info-nora-name,
+	.home-dev-info-hanayue-name {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.home-dev-info-nora-title,
+	.home-dev-info-hanayue-title {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.home-dev-col {
+		min-height: 180px;
+		margin-left: -20px;
+		margin-right: -20px;
+		padding: 20px;
+	}
+	.home-dev-text {
+		font-size: 16px;
+		line-height: 28px;
+	}
+	.home-dev-info-nora {
+		right: 20px;
+	}
+	.home-dev-info-hanayue {
+		left: 20px;
+	}
+	.home-dev-info-nora-img,
+	.home-dev-info-hanayue-img {
+		width: 60px;
+		height: 60px;
+	}
+	.home-dev-info-nora-name,
+	.home-dev-info-hanayue-name {
+		font-size: 14px;
+	}
+	.home-dev-info-nora-title,
+	.home-dev-info-hanayue-title {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 479px) {
+	.home-dev-col {
+		min-height: 200px;
+	}
+	.home-dev-text {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
