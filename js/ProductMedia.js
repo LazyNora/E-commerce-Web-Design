@@ -22,13 +22,13 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
       <div class="swiper media-${gallery.getAttribute("type")}">
         <div class="swiper-wrapper">
           ${product.media
-				.map(
-					(media, index) =>
-						`
+						.map(
+							(media, index) =>
+								`
             <div class="swiper-slide prod-media-item media-type-${media.media_type}" data-index=${index} data-media-type=${media.media_type} data-media-id=${media.id} data-aspect-ratio="1.499">
               ${
-					media.media_type === "image"
-						? `
+								media.media_type === "image"
+									? `
               <div class="prod-media media-image" data-media-id=${media.id} data-media-width=${media.width} data-media-height=${media.height} data-media-alt=${media.alt} data-media-src=${media.src}>
                 <div class="prod-image" style="aspect-ratio: 1.499">
                   <img class="img-loaded" src=${path + media.src} sizes="946px" loading="lazy" width="946" height="631" alt=${media.alt} fetchpriority="auto">
@@ -47,7 +47,7 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
                 </button>
               </div>
               `
-						: `
+									: `
               <div class="deferred-media" style="/*padding-top: 56.25%;*/" data-media-id=${media.id} data-auto-play="true">
                 <video playinline controls autoplay loop muted aria-label=${product.title} poster=${media.preview_image.src}>
                   <source src=${media.sources[media.sources.findIndex((src) => src.width === 1280)].url} type="video/mp4">
@@ -55,11 +55,11 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
                 </video>
               </div>
               `
-				}
+							}
             </div>
             `
-				)
-				.join("")}
+						)
+						.join("")}
         </div>
 				${
 					product.media.length > 1
@@ -104,9 +104,9 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
       <div class="nav-swiper-container" style="opacity:1;">
         <div class="swiper-wrapper">
           ${product.media
-				.map(
-					(media, index) =>
-						`
+						.map(
+							(media, index) =>
+								`
             <div class="swiper-slide" data-index=${index}>
               <div class="prod-media media-image" data-media-id=${media.id} data-media-width=${media.width} data-media-height=${media.height} data-media-alt=${media.alt} data-media-src=${media.src}>
                 <div class="prod-image">
@@ -115,8 +115,8 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
               </div>
             </div>
             `
-				)
-				.join("")}
+						)
+						.join("")}
         </div>
       </div>
     </div>
@@ -170,9 +170,7 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 
 	var domNodes = null;
 
-	const container = document.querySelector(
-		`.media-gallery[data-screen=${gallery.getAttribute("type")}]`
-	);
+	const container = document.querySelector(`.media-gallery[data-screen=${gallery.getAttribute("type")}]`);
 	const enableVariantGroupImages = container.dataset.enableVariantGroupImages === "true";
 	const enableImageZoom = container.dataset.enableImageZoom === "true";
 	domNodes = queryDomNodes(selectors, container);
@@ -217,8 +215,7 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 			pauseAllMedia();
 			try {
 				const { slides, activeIndex } = swiper;
-				if (slides[activeIndex].querySelector(".deferred-media"))
-					slides[activeIndex].querySelector("video").play();
+				if (slides[activeIndex].querySelector(".deferred-media")) slides[activeIndex].querySelector("video").play();
 			} catch (error) {
 				console.error("Failed to execute slideChange event.", error);
 			}
@@ -234,8 +231,9 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 		medias.forEach((media, index) => {
 			if (media.dataset.mediaType === "image") {
 				const mediaData = media.querySelector(".prod-media").dataset;
+				console.log(mediaData);
 				data.push({
-					src: mediaData.mediaSrc,
+					src: path + mediaData.mediaSrc,
 					width: parseInt(mediaData.mediaWidth),
 					height: parseInt(mediaData.mediaHeight),
 					alt: mediaData.mediaAlt,
@@ -264,17 +262,13 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 
 	// Thêm filter để lấy ảnh thumbnail
 	lightbox.addFilter("thumbEl", (thumbEl, item, index) => {
-		const el = container.querySelector(
-			'[data-index="' + item.id + '"]:not(.swiper-slide-duplicate) img'
-		);
+		const el = container.querySelector('[data-index="' + item.id + '"]:not(.swiper-slide-duplicate) img');
 		return el || thumbEl;
 	});
 
 	// Thêm filter để lấy ảnh placeholder
 	lightbox.addFilter("placeholderSrc", (placeholderSrc, item) => {
-		const el = container.querySelector(
-			'[data-index="' + item.data.id + '"]:not(.swiper-slide-duplicate) img'
-		);
+		const el = container.querySelector('[data-index="' + item.data.id + '"]:not(.swiper-slide-duplicate) img');
 		return el ? el.src : placeholderSrc;
 	});
 
@@ -283,9 +277,7 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 		if (slider) {
 			pauseAllMedia();
 			const currIndex = lightbox.pswp.currIndex;
-			enableVariantGroupImages
-				? slider.slideTo(currIndex, 100, !1)
-				: slider.slideToLoop(currIndex, 100, !1);
+			enableVariantGroupImages ? slider.slideTo(currIndex, 100, !1) : slider.slideToLoop(currIndex, 100, !1);
 		}
 	});
 
