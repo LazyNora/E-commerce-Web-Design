@@ -231,7 +231,6 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
 		medias.forEach((media, index) => {
 			if (media.dataset.mediaType === "image") {
 				const mediaData = media.querySelector(".prod-media").dataset;
-				console.log(mediaData);
 				data.push({
 					src: path + mediaData.mediaSrc,
 					width: parseInt(mediaData.mediaWidth),

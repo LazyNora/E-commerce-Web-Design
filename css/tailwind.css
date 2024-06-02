@@ -1061,6 +1061,10 @@ body {
   margin-right: 1.25rem;
 }
 
+.mr-\[30px\] {
+  margin-right: 30px;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -1349,6 +1353,10 @@ body {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-6 {
@@ -2548,6 +2556,11 @@ body {
 .border-\[\#ddd\] {
   --tw-border-opacity: 1;
   border-color: rgb(221 221 221 / var(--tw-border-opacity));
+}
+
+.border-\[\#dedede\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(222 222 222 / var(--tw-border-opacity));
 }
 
 .border-\[\#e5e5e5\] {

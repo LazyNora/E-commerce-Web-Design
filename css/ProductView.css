@@ -1,3 +1,7 @@
+:root {
+	--color-border: #dedede;
+}
+
 .pswp {
 	--pswp-bg: #fff !important;
 	--pswp-icon-color: #000 !important;
@@ -797,4 +801,39 @@
 	text-align: center;
 	display: block;
 	text-transform: capitalize;
+}
+.actions-block {
+	padding-bottom: 16px;
+}
+.prod__form-buttons {
+	margin-top: 24px;
+}
+.sharing {
+	padding: 24px;
+	width: 380px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	margin-top: 10px;
+	transition: all 0.3s;
+}
+.sharing:not(.hidden) {
+	animation: down 0.5s;
+}
+@keyframes down {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.sharing label {
+	display: block;
+	margin-bottom: 14px;
+}
+.sharing .sf-sharing__socials {
+	margin-top: 20px;
 }

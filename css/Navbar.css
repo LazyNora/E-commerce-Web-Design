@@ -584,3 +584,6 @@ select {
 .currency-selector {
 	cursor: pointer;
 }
+.search-popup__input {
+	border: none !important;
+}
