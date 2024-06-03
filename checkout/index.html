@@ -551,7 +551,7 @@
 							productList.innerHTML = `
               <div class="product-list__item flex flex-row py-2">
                 <div class="product-list__item-img w-16 h-16 relative border flex justify-center items-center rounded bg-[#f5f5f5]">
-                  <img src="${checkout.img}" alt="${checkout.alt}" />
+                  <img src="${path + checkout.img}" alt="${checkout.alt}" />
                   <span class="absolute top-[-0.5rem] right-[-0.5rem] rounded-full bg-[#777] text-white text-xs w-6 h-6 flex justify-center items-center">${checkout.qty}</span>
                 </div>
                 <div class="product-list__item-content pl-4 flex-1 flex flex-col justify-center">
@@ -575,7 +575,7 @@
 										(item) => `
                   <div class="product-list__item flex flex-row py-2">
                     <div class="product-list__item-img w-16 h-16 relative border flex justify-center items-center rounded bg-[#f5f5f5]">
-                      <img src="${item.img}" alt="${item.alt}" />
+                      <img src="${path + item.img}" alt="${item.alt}" />
                       <span class="absolute top-[-0.5rem] right-[-0.5rem] rounded-full bg-[#777] text-white text-xs w-6 h-6 flex justify-center items-center">${item.qty}</span>
                     </div>
                     <div class="product-list__item-content pl-4 flex-1 flex flex-col justify-center">
