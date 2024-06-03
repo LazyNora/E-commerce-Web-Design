@@ -21,7 +21,7 @@ document.querySelector(".prod__info").innerHTML = `
       <div>
         <a
           class="text-xl uppercase"
-          href="${currentPath}/collections/${product.vendor.toLowerCase()}">
+          href="${currentPath}/collections/${product.vendor.toLowerCase().replaceAll(".","-")}">
           ${product.vendor}
         </a>
       </div>
