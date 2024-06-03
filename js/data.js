@@ -18,7 +18,7 @@ export const categories = [
     img: "/assets/l78toewiyjy5bshcdceg.jpg",
     title: "Speaker Amps",
     desc: "Discover the ultimate listening experience with Speaker Amps.",
-    link: "/collections/speaker-amplifier",
+    link: "/collections/speaker-amplifiers",
   },
 ];
 
