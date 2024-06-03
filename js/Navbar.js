@@ -198,34 +198,33 @@ navList.map((nav, index) => {
 				${nav.text}
 				${nav.submenu ? `<svg class="menu__arrow | ml-2 w-6 h-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg>` : ""}
 			</a>
-			${
-        nav.submenu
-          ? `
+			${nav.submenu
+      ? `
 			<div class="menu__submenu menu__desktop-sub-menu menu__dropdown | pointer-events-none absolute z-50 inset-x-0 bg-white w-full opacity-0 invisible min-w-max">
 				<div class="menu__inner">
 					<div class="mx-auto">
 						<div class="submenu__content | flex p-4">
 							<ul class="submenu-items | flex flex-col w-full">
 							${nav.submenu
-                .map(
-                  (subnav, index) =>
-                    `<li class="submenu-item | list-none w-full leading-9">
+        .map(
+          (subnav, index) =>
+            `<li class="submenu-item | list-none w-full leading-9">
 								<a
 									href=${currentPath + subnav.link}
 									class="submenu-link | whitespace-normal block">
 									${subnav.text}
 								</a>
 							</li>`,
-                )
-                .join("")}
+        )
+        .join("")}
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 		`
-          : ""
-      }
+      : ""
+    }
 	</li>`;
 });
 
@@ -242,8 +241,7 @@ document.querySelector(".menu-links").innerHTML = `
 				class="w-full px-4 py-3 flex items-center justify-between relative ${nav.submenu ? "pointer-events-none" : ""}">
 				<span>${nav.text}</span>
 			</a>
-			${
-        nav.submenu
+			${nav.submenu
           ? `
 				<span class="toggle-submenu-mb | flex items-center justify-center">
 					<svg
@@ -257,9 +255,8 @@ document.querySelector(".menu-links").innerHTML = `
 				</span>
 			`
           : ""
-      }
-			${
-        nav.submenu
+        }
+			${nav.submenu
           ? `
 				<div class="sub-links | absolute inset-y-0 bg-white flex-col left-full w-full flex hidden">
 					<div class="h-full overscroll-contain">
@@ -278,8 +275,8 @@ document.querySelector(".menu-links").innerHTML = `
 						</button>
 						<ul class="sub-links--2 | pb-4">
 							${nav.submenu
-                .map(
-                  (subnav, index) => `
+            .map(
+              (subnav, index) => `
 									<li
 										class="menu-link | list-none flex items-center">
 										<a
@@ -290,14 +287,14 @@ document.querySelector(".menu-links").innerHTML = `
 											</span>
 										</a>
 									</li>`,
-                )
-                .join("")}
+            )
+            .join("")}
 						</ul>
 					</div>
 				</div>
 			`
           : ""
-      }
+        }
 		</li>`,
     )
     .join("")}
@@ -307,11 +304,29 @@ document.querySelector(".menu-links").innerHTML = `
 
 const accountBlock = document.createElement("div");
 accountBlock.classList.add("account-block", "mt-16");
-accountBlock.innerHTML = `
+const user = JSON.parse(localStorage.getItem("user"));
+accountBlock.innerHTML = user ?
+  `
+  <div class="block xl:hidden mb-16 p-4">
+    <div class="font-medium text-xl mb-6">My Account</div>
+    <a href="${currentPath}/account" class="w-full py-3 mb-3 rounded-md flex items-center">
+      <div class="flex flex-grow">
+        <svg class="w-[24px] h-[24px]" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path>
+        </svg>
+        <span class="ml-2">${user.firstName}</span>
+      </div>
+    </a>
+    <button class="w-full text-center btn-logout rounded-md border border-black whitespace-nowrap">
+      <a href="${currentPath}/logout" class="block p-3">Log Out</a>
+    </button>
+  </div>
+` :
+  `
 	<div class="block xl:hidden mb-16 p-4">
 		<div class="font-medium text-xl mb-6">My Account</div>
-			<a href="${currentPath}/login" class="btn btn-primary mb-3 my-account-btn w-full signin">LOG IN</a>
-			<a href="${currentPath}/register" class="btn btn-link my-account-btn register">Register</a>
+    <a href="${currentPath}/login" class="btn btn-primary mb-3 my-account-btn w-full signin">LOG IN</a>
+    <a href="${currentPath}/register" class="btn btn-link my-account-btn register">Register</a>
 	</div>`;
 document.querySelector(".menu-content").appendChild(accountBlock);
 
@@ -326,12 +341,12 @@ document.querySelectorAll(".menu-link").forEach((item) => {
 
 document.querySelectorAll(".currency-selector").forEach(
   (selector) =>
-    (selector.innerHTML = `${Object.keys(supportCurrencies)
-      .map(
-        (currency) =>
-          `<option value=${currency}>${supportCurrencies[currency]}</option>`,
-      )
-      .join("")}`),
+  (selector.innerHTML = `${Object.keys(supportCurrencies)
+    .map(
+      (currency) =>
+        `<option value=${currency}>${supportCurrencies[currency]}</option>`,
+    )
+    .join("")}`),
 );
 
 document
@@ -664,9 +679,9 @@ const handleSearchResults = (e) => {
   searchResultsContent.innerHTML =
     filteredResults.length > 0
       ? filteredResults
-          .slice(0, 6)
-          .map((item) => {
-            return `
+        .slice(0, 6)
+        .map((item) => {
+          return `
 		<div class="searchResults__item">
 			<a href="${path + item.url}">
 				<div class="item__img">
@@ -681,8 +696,8 @@ const handleSearchResults = (e) => {
 			</a>
 		</div>
 		`;
-          })
-          .join("")
+        })
+        .join("")
       : `<p>Sorry, nothing found for <strong>${e.target.value}</strong>.</p>`;
 
   if (filteredResults.length > 0) {
@@ -744,9 +759,9 @@ const handleSearchResultsMobile = (e) => {
   searchResults.innerHTML =
     filteredResults.length > 0
       ? filteredResults
-          .slice(0, 8)
-          .map((item) => {
-            return `
+        .slice(0, 8)
+        .map((item) => {
+          return `
 		<div class="searchResults__item">
 			<a href="${path + item.url}">
 				<div class="item__img">
@@ -761,8 +776,8 @@ const handleSearchResultsMobile = (e) => {
 			</a>
 		</div>
 		`;
-          })
-          .join("")
+        })
+        .join("")
       : `<p>Sorry, nothing found for <strong>${e.target.value}</strong>.</p>`;
 
   if (filteredResults.length > 0) {
