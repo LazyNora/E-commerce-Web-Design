@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP CDSP Headphone Upgrade Cable",
   handle: "moondrop-cdsp-headphone-upgrade-cable",
   description:
-    '<div><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CDSP.jpg?v=1697010886" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/CDSP.jpg?v=1697010886"></div>',
+    '<div><img src="./desc/CDSP.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="./desc/CDSP.jpg"></div>',
   published_at: "2023-10-11T16:50:00+08:00",
   created_at: "2023-10-11T14:49:09+08:00",
   vendor: "MOONDROP",

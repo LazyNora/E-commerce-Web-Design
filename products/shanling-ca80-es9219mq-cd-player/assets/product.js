@@ -3,7 +3,7 @@ const product = {
   title: "SHANLING CA80 ES9219MQ CD Player",
   handle: "shanling-ca80-es9219mq-cd-player",
   description:
-    '<p><img alt="" src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/2_28906950-10d3-40df-95c9-056207d8fea2.png?v=1692339085"></p>',
+    '<p><img alt="" src="./desc/2_28906950-10d3-40df-95c9-056207d8fea2.png"></p>',
   published_at: "2023-08-18T10:42:10+08:00",
   created_at: "2023-08-18T10:25:41+08:00",
   vendor: "SHANLING",

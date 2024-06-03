@@ -3,7 +3,7 @@ const product = {
   title: "KINERA QOA Pink Lady 2BA+1DD In-ear Headphone",
   handle: "qoa-pink-lady-2ba-1dd-earphone",
   description:
-    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004_f5395b41-23cc-447c-84b8-165141e7f3b2.png?v=1686223719" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/004_f5395b41-23cc-447c-84b8-165141e7f3b2.png?v=1686223719">',
+    '<img src="./desc/004_f5395b41-23cc-447c-84b8-165141e7f3b2.png" alt="" data-mce-fragment="1" data-mce-src="./desc/004_f5395b41-23cc-447c-84b8-165141e7f3b2.png">',
   published_at: "2023-06-08T19:29:54+08:00",
   created_at: "2023-06-08T19:29:54+08:00",
   vendor: "KINERA",

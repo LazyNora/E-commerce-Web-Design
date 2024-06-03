@@ -4,7 +4,7 @@ const product = {
   handle:
     "softears-twilight-earphone-dynamic-driver-finely-engraved-anodized-aluminum-alloy-in-ear-headphone",
   description:
-    '<div><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20220721172202/f60fa9972b6dba3a81dd9741ccc02ac0.jpg" align="center" referrerpolicy="no-referrer"></div>\n<div><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20230330175515/6f9d421cd2b09835e224723a000c2149.jpg"></div>\n<p><br></p>',
+    '<div><img src="./desc/f60fa9972b6dba3a81dd9741ccc02ac0.jpg" align="center" referrerpolicy="no-referrer"></div>\n<div><img src="./desc/6f9d421cd2b09835e224723a000c2149.jpg"></div>\n<p><br></p>',
   published_at: "2022-07-21T17:34:10+08:00",
   created_at: "2022-07-21T17:34:10+08:00",
   vendor: "SOFTEARS",

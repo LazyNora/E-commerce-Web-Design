@@ -3,7 +3,7 @@ const product = {
   title: "TANGZU PRINCESS CHANGLE In-ear Headphone",
   handle: "tangzu-princess-changle",
   description:
-    '<p><img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-1_1__01.jpg?v=1689219404" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-1_1__01.jpg?v=1689219404"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-1_1__02.jpg?v=1689219413"></p>\n<p> </p>',
+    '<p><img src="./desc/2-1_1__01.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/2-1_1__01.jpg"></p>\n<p><img alt="" src="./desc/2-1_1__02.jpg"></p>\n<p> </p>',
   published_at: "2023-07-13T11:37:34+08:00",
   created_at: "2023-07-11T10:39:49+08:00",
   vendor: "TANGZU",

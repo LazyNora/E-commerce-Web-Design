@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP Headphone Accessories (Acrylic Stand)",
   handle: "moondrop-earphone-accessories-acrylic-stand",
   description:
-    '<strong><span style="font-size:16px;">Size: 100*150mm</span></strong><br>\n \n<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190821103045/5cd9d003cfc84a540de4e4c45fb3390f.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20190821103106/c0e44a8ce53e3ae9cc9f0e77e012c7aa.jpg"></p>\n',
+    '<strong><span style="font-size:16px;">Size: 100*150mm</span></strong><br>\n \n<p style="text-align: left;margin:0;"><img src="./desc/5cd9d003cfc84a540de4e4c45fb3390f.jpg"><img src="./desc/c0e44a8ce53e3ae9cc9f0e77e012c7aa.jpg"></p>\n',
   published_at: "2022-08-03T10:19:29+08:00",
   created_at: "2019-08-21T10:32:07+08:00",
   vendor: "MOONDROP",

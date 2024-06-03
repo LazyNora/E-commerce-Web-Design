@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP DISCDREAM Portable CD Player",
   handle: "moondrop-discdream-portable-cd-player",
   description:
-    '<div>\n<div>\n<h3>\n<strong> <span style="color: #ff2a00;">Pre-order ended and orders are accounted to factory for producing.</span></strong><br><strong><span style="color: #ff2a00;">It will be on sale again once all pre orders shipped out.</span> </strong>\n</h3>\n</div>\n</div>\n<div><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DISCDREAM.jpg?v=1695115194" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/DISCDREAM.jpg?v=1695115194"></div>',
+    '<div>\n<div>\n<h3>\n<strong> <span style="color: #ff2a00;">Pre-order ended and orders are accounted to factory for producing.</span></strong><br><strong><span style="color: #ff2a00;">It will be on sale again once all pre orders shipped out.</span> </strong>\n</h3>\n</div>\n</div>\n<div><img src="./desc/DISCDREAM.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="./desc/DISCDREAM.jpg"></div>',
   published_at: "2023-09-15T16:50:02+08:00",
   created_at: "2023-09-13T14:54:09+08:00",
   vendor: "MOONDROP",

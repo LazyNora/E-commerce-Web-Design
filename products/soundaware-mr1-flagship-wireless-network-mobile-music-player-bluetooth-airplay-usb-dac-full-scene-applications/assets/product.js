@@ -4,7 +4,7 @@ const product = {
   handle:
     "soundaware-mr1-flagship-wireless-network-mobile-music-player-bluetooth-airplay-usb-dac-full-scene-applications",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210302163243/448199fd1d61d82214eb44e8c8cb2afb.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210302163244/cb2a744366b8df27b429772e0c61dbae.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210302163244/eab01b027fba4f233261fc8de1f7cbf1.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210302163244/c46b5ad7c218ca767fd8b9b0ed09280f.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20210302163244/73b7c15ce0457965e04536838c21418d.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="./desc/448199fd1d61d82214eb44e8c8cb2afb.jpg"><img src="./desc/cb2a744366b8df27b429772e0c61dbae.jpg"><img src="./desc/eab01b027fba4f233261fc8de1f7cbf1.jpg"><img src="./desc/c46b5ad7c218ca767fd8b9b0ed09280f.jpg"><img src="./desc/73b7c15ce0457965e04536838c21418d.jpg"></p>\n',
   published_at: "2021-03-02T16:34:41+08:00",
   created_at: "2021-03-02T16:34:41+08:00",
   vendor: "SOUNDAWARE",

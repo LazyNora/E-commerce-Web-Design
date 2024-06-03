@@ -3,7 +3,7 @@ const product = {
   title: "SHANLING MG100 Dynamic Driver In-ear Headphone",
   handle: "shanling-mg100-dynamic-driver-in-ear-headphone",
   description:
-    '<img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/MG100.png?v=1698395347" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/MG100.png?v=1698395347">',
+    '<img src="./desc/MG100.png" alt="" data-mce-fragment="1" data-mce-src="./desc/MG100.png">',
   published_at: "2023-10-24T13:46:19+08:00",
   created_at: "2023-10-24T11:52:53+08:00",
   vendor: "SHANLING",

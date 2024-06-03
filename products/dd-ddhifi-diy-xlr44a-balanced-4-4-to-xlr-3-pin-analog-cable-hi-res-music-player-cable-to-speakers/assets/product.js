@@ -4,7 +4,7 @@ const product = {
   handle:
     "dd-ddhifi-diy-xlr44a-balanced-4-4-to-xlr-3-pin-analog-cable-hi-res-music-player-cable-to-speakers",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426175139/9f689a29926a485133952678b39c9974.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426175135/f995f19f560573bef52a8cf544a89006.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426175139/f242204b922b110b1254337566fe3864.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426175126/7e98415dca22db0b264668c23fc169ca.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426175139/047f7810e2fbb2f0c103bf000b32dcb8.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426175235/ce66c4715e6472e52f673a1577fc8993.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="./desc/9f689a29926a485133952678b39c9974.jpg"><img src="./desc/f995f19f560573bef52a8cf544a89006.jpg"><img src="./desc/f242204b922b110b1254337566fe3864.jpg"><img src="./desc/7e98415dca22db0b264668c23fc169ca.jpg"><img src="./desc/047f7810e2fbb2f0c103bf000b32dcb8.jpg"><img src="./desc/ce66c4715e6472e52f673a1577fc8993.jpg"></p>\n',
   published_at: "2020-04-26T17:55:56+08:00",
   created_at: "2020-04-26T17:55:56+08:00",
   vendor: "DD",

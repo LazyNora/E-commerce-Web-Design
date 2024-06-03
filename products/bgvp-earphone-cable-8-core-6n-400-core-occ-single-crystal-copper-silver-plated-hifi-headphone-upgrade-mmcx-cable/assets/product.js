@@ -4,7 +4,7 @@ const product = {
   handle:
     "bgvp-earphone-cable-8-core-6n-400-core-occ-single-crystal-copper-silver-plated-hifi-headphone-upgrade-mmcx-cable",
   description:
-    '<p><span style="font-size: 22px;"><strong>Features:</strong></span><br> <span style="font-size: 16px;">conductor: frozen single crystal copper+ silver foil wire mixed braided<br> material: single crystal copper 30 wire 0.05mm*4 + silver foil cable 0.2mm*10 mixed braided<br> wire diameter: 25awg<br> impedance: less than 0.2 ohm<br> length: 128cm<br>Package: 1x 6N mixed braided earphone cable (original packaging)</span></p>\n<p style="text-align: left; margin: 0;"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20200410165933/1c85840d75905865012693f7efd07c0f.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20200410165933/ada3a574e20a53cdd22f85ffc0d7cccf.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com/wxalbum/263033/20200410165933/d45f28d5a8ff7e42cb7a1887122576a8.jpg"></p>',
+    '<p><span style="font-size: 22px;"><strong>Features:</strong></span><br> <span style="font-size: 16px;">conductor: frozen single crystal copper+ silver foil wire mixed braided<br> material: single crystal copper 30 wire 0.05mm*4 + silver foil cable 0.2mm*10 mixed braided<br> wire diameter: 25awg<br> impedance: less than 0.2 ohm<br> length: 128cm<br>Package: 1x 6N mixed braided earphone cable (original packaging)</span></p>\n<p style="text-align: left; margin: 0;"><img src="./desc/1c85840d75905865012693f7efd07c0f.jpg"><img src="./desc/ada3a574e20a53cdd22f85ffc0d7cccf.jpg"><img src="./desc/d45f28d5a8ff7e42cb7a1887122576a8.jpg"></p>',
   published_at: "2020-04-10T17:02:23+08:00",
   created_at: "2020-04-10T17:02:23+08:00",
   vendor: "BGVP",

@@ -3,7 +3,7 @@ const product = {
   title: "MOONDROP MC1 MIC Headphone Upgrade Cable",
   handle: "moondrop-mc1-mic-headphone-upgrade-cable",
   description:
-    '<div><img src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/MC1.jpg?v=1697008722" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="https://cdn.shopifycdn.net/s/files/1/0013/3896/6076/files/MC1.jpg?v=1697008722"></div>',
+    '<div><img src="./desc/MC1.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" data-mce-fragment="1" data-mce-src="./desc/MC1.jpg"></div>',
   published_at: "2023-10-11T16:50:00+08:00",
   created_at: "2023-10-11T15:21:02+08:00",
   vendor: "MOONDROP",

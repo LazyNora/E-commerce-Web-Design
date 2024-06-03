@@ -3,7 +3,7 @@ const product = {
   title: "NFAUDIO MS42 Earphone Eartips",
   handle: "nf-audio-silicone-ear-tips-ms42-for-earphones3-pair",
   description:
-    '<img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221011170959/df44d717f6d4b7de386d080799aacecc.png"><br>\n<img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221011170913/8f0f7b40690b99148dda648961c8d714.png"><br>\n<img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221011170959/7511e79cfe9cbfde12b81fad5c3010bb.png"><img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221011170959/65db0a339211d15bb354748a31937e68.png"><img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221011170959/664a26818efb65cf0f1232ae89dfa840.png"><img referrerpolicy="no-referrer" src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20221011170959/9d25c1afa46add06ee8938e70055b9f5.png">',
+    '<img referrerpolicy="no-referrer" src="./desc/df44d717f6d4b7de386d080799aacecc.png"><br>\n<img referrerpolicy="no-referrer" src="./desc/8f0f7b40690b99148dda648961c8d714.png"><br>\n<img referrerpolicy="no-referrer" src="./desc/7511e79cfe9cbfde12b81fad5c3010bb.png"><img referrerpolicy="no-referrer" src="./desc/65db0a339211d15bb354748a31937e68.png"><img referrerpolicy="no-referrer" src="./desc/664a26818efb65cf0f1232ae89dfa840.png"><img referrerpolicy="no-referrer" src="./desc/9d25c1afa46add06ee8938e70055b9f5.png">',
   published_at: "2022-10-11T17:22:04+08:00",
   created_at: "2022-10-11T17:22:04+08:00",
   vendor: "NFAUDIO",

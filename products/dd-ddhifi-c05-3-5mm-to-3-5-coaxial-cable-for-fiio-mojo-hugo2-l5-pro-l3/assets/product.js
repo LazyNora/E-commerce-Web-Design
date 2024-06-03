@@ -4,7 +4,7 @@ const product = {
   handle:
     "dd-ddhifi-c05-3-5mm-to-3-5-coaxial-cable-for-fiio-mojo-hugo2-l5-pro-l3",
   description:
-    '<p style="text-align: left;margin:0;"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426172257/c10c31c28766206261a4d8565d450b4c.jpg"><img src="https://wxalbum-10001658.image.myqcloud.com//wxalbum/263033/20200426172304/b876a07849d296243d253d5ef5ce7d35.jpg"></p>\n',
+    '<p style="text-align: left;margin:0;"><img src="./desc/c10c31c28766206261a4d8565d450b4c.jpg"><img src="./desc/b876a07849d296243d253d5ef5ce7d35.jpg"></p>\n',
   published_at: "2022-08-03T10:18:53+08:00",
   created_at: "2020-04-26T17:24:28+08:00",
   vendor: "DD",

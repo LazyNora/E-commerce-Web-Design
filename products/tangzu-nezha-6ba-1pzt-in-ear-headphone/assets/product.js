@@ -3,7 +3,7 @@ const product = {
   title: "TANGZU NEZHA 6BA + 1EST In-ear Headphone",
   handle: "tangzu-nezha-6ba-1pzt-in-ear-headphone",
   description:
-    '<div>\n<div>\n<h2 style="text-align: center;">\n<span style="color: #ff2a00;"><strong></strong></span><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-1_0483bed3-a048-4359-9581-faecd2d0e86a.jpg?v=1701742532">\n</h2>\n</div>\n</div>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/2-2_2be54838-c9e0-422a-83c4-d074b9dacc0b.jpg?v=1701742540"></p>\n<p><img alt="" src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/10.webp?v=1701742857"></p>',
+    '<div>\n<div>\n<h2 style="text-align: center;">\n<span style="color: #ff2a00;"><strong></strong></span><img alt="" src="./desc/2-1_0483bed3-a048-4359-9581-faecd2d0e86a.jpg">\n</h2>\n</div>\n</div>\n<p><img alt="" src="./desc/2-2_2be54838-c9e0-422a-83c4-d074b9dacc0b.jpg"></p>\n<p><img alt="" src="./desc/10.webp"></p>',
   published_at: "2023-11-30T10:33:09+08:00",
   created_at: "2023-11-30T10:33:09+08:00",
   vendor: "TANGZU",

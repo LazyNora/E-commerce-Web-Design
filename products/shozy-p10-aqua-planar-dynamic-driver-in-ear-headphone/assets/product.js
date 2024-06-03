@@ -3,7 +3,7 @@ const product = {
   title: "SHOZY P10 AQUA Planar Dynamic Driver In-ear Headphone",
   handle: "shozy-p10-aqua-planar-dynamic-driver-in-ear-headphone",
   description:
-    '<img src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/P10_Blue_202312.20.jpg?v=1704767120" alt="" data-mce-fragment="1" data-mce-src="https://cdn.shopify.com/s/files/1/0013/3896/6076/files/P10_Blue_202312.20.jpg?v=1704767120">',
+    '<img src="./desc/P10_Blue_202312.20.jpg" alt="" data-mce-fragment="1" data-mce-src="./desc/P10_Blue_202312.20.jpg">',
   published_at: "2024-01-09T10:29:27+08:00",
   created_at: "2024-01-09T10:29:27+08:00",
   vendor: "SHOZY",
