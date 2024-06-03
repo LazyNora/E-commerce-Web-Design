@@ -97,9 +97,9 @@ function loadCart(addToCart = false) {
   <div class="cart__items">
     ${addToCart ? addSuccessMsg : ""}
     ${currentCart.items
-      .map(
-        (item, index) =>
-          `
+        .map(
+          (item, index) =>
+            `
         <div class="cart-item" data-index=${index} data-product-id=${item.id} data-variant-id=${item.variantId}>
           <div class="cart-item__inner flex items-start">
             <div class="cart-item__image">
@@ -109,9 +109,8 @@ function loadCart(addToCart = false) {
             </div>
             <div class="cart-item__info">
               <a href=${path + item.url + "/?variant=" + item.variantId} class="font-bold hover:underline">${item.title}</a>
-              ${
-                item.options_with_values
-                  ? `
+              ${item.options_with_values
+              ? `
               <div class="cart-item__variant mb-1">
               ${item.options_with_values
                 .map(
@@ -124,8 +123,8 @@ function loadCart(addToCart = false) {
                 )
                 .join("")}
               </div>`
-                  : ""
-              }
+              : ""
+            }
               <div class="cart-item__prices">
                 <div class="cart-item__price text-color-regular-price">
                   <span class="money" data-product-price=${item.price}>$${item.price / 100} USD</span>
@@ -143,8 +142,8 @@ function loadCart(addToCart = false) {
           </div>
         </div>
         `,
-      )
-      .join("")}
+        )
+        .join("")}
     </div>
     `
       : "<div class='cart-empty-msg'><p>Your cart is currently empty.</p></div>";
@@ -339,4 +338,106 @@ document.querySelectorAll(".btn-atc").forEach((btn) => {
       cartWrapper.style.setProperty("--tw-bg-opacity", 0.5);
     }, 300);
   });
+});
+
+document.querySelectorAll(".buy-one-click .paypal").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const productId = product.id;
+    const productTitle = product.title;
+    let currentVariant = null;
+    if (variantId) {
+      currentVariant =
+        product.variants.find(
+          (variant) => parseInt(variant.id) === parseInt(variantId),
+        ) || product.variants[0];
+    } else {
+      currentVariant = product.variants[0];
+    }
+    const currentvariantId = currentVariant.id;
+    const variantPrice = currentVariant.price;
+    const variantOptions = currentVariant.options
+      .filter((option) => option !== "Default Title")
+      .map((option, index) => {
+        return {
+          name: product.options[index].name,
+          value: option,
+        };
+      });
+    const productImg = currentVariant.featured_image
+      ? currentVariant.featured_image.src
+      : product.featured_image;
+    const productAlt = currentVariant.featured_image
+      ? currentVariant.featured_image.alt
+      : product.title;
+    const productUrl = product.url;
+
+    const checkout = {
+      id: productId,
+      title: productTitle,
+      price: variantPrice,
+      img: productImg,
+      alt: productAlt,
+      url: productUrl,
+      variantId: currentvariantId,
+      options_with_values: variantOptions ? variantOptions : null,
+      qty: 1,
+    }
+
+    localStorage.setItem("checkout", JSON.stringify(checkout));
+    window.location.href = currentPath + "/checkout/?payment=paypal";
+  });
+});
+
+document.querySelectorAll(".buy-one-click .more-options").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const productId = product.id;
+    const productTitle = product.title;
+    let currentVariant = null;
+    if (variantId) {
+      currentVariant =
+        product.variants.find(
+          (variant) => parseInt(variant.id) === parseInt(variantId),
+        ) || product.variants[0];
+    } else {
+      currentVariant = product.variants[0];
+    }
+    const currentvariantId = currentVariant.id;
+    const variantPrice = currentVariant.price;
+    const variantOptions = currentVariant.options
+      .filter((option) => option !== "Default Title")
+      .map((option, index) => {
+        return {
+          name: product.options[index].name,
+          value: option,
+        };
+      });
+    const productImg = currentVariant.featured_image
+      ? currentVariant.featured_image.src
+      : product.featured_image;
+    const productAlt = currentVariant.featured_image
+      ? currentVariant.featured_image.alt
+      : product.title;
+    const productUrl = product.url;
+
+    const checkout = {
+      id: productId,
+      title: productTitle,
+      price: variantPrice,
+      img: productImg,
+      alt: productAlt,
+      url: productUrl,
+      variantId: currentvariantId,
+      options_with_values: variantOptions ? variantOptions : null,
+      qty: 1,
+    }
+
+    localStorage.setItem("checkout", JSON.stringify(checkout));
+    window.location.href = path + "/checkout";
+  });
+});
+
+document.querySelector(".cart__checkout").addEventListener("click", () => {
+  if (localStorage.getItem("checkout"))
+    localStorage.removeItem("checkout");
+  window.location.href = path + "/checkout";
 });

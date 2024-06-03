@@ -45,9 +45,9 @@ function loadCart(addToCart = false) {
       ? `<div class="cart__items">
           ${addToCart ? addSuccessMsg : ""}
           ${currentCart.items
-            .map(
-              (item, index) =>
-                `
+        .map(
+          (item, index) =>
+            `
             <div class="cart__item cart-item flex" data-index=${index} data-product-id=${item.id} data-variant-id=${item.variantId}>
               <div class="cart__table-col cart__table-product">
                 <div class="cart__item-product">
@@ -60,22 +60,21 @@ function loadCart(addToCart = false) {
                     <div class="cart__item-product-title">
                       <a href=${path + item.url + "/?variant=" + item.variantId}>${item.title}</a>
                     </div>
-                    ${
-                      item.options_with_values
-                        ? `
+                    ${item.options_with_values
+              ? `
                       <ul class="cart__item-product-details text-color-subtext" aria-label="Product details">
                         ${item.options_with_values
-                          .map(
-                            (option) =>
-                              `
+                .map(
+                  (option) =>
+                    `
                           <li class="cart__item--variant-option text-sm"><span class="font-bold">${option.name}</span>: ${option.value}</li>
                           `,
-                          )
-                          .join("")}
+                )
+                .join("")}
                       </ul>
                       `
-                        : ""
-                    }
+              : ""
+            }
                     <button class="cart-item__remove mt-2" data-id=${item.id + ":" + item.variantId}>Remove</button>
                   </div>
                 </div>
@@ -116,8 +115,8 @@ function loadCart(addToCart = false) {
               </div>
             </div>
             `,
-            )
-            .join("")}
+        )
+        .join("")}
           </div>
           `
       : `<div class="my-20 px-4"><h3 class="text-center text-xl">Your cart is currently empty. <a href=${path + "/collections/all"} class="border-b border-gray-800">Back to shopping</a></h3></div>`;
@@ -236,3 +235,15 @@ function loadCart(addToCart = false) {
 }
 
 loadCart();
+
+document.querySelector("button[name=checkout]").addEventListener("click", () => {
+  if (localStorage.getItem("checkout"))
+    localStorage.removeItem("checkout");
+  window.location.href = path + "/checkout";
+});
+
+document.querySelector("button[name=paypal]").addEventListener("click", () => {
+  if (localStorage.getItem("checkout"))
+    localStorage.removeItem("checkout");
+  window.location.href = path + "/checkout/?payment=paypal";
+});

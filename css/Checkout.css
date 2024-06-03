@@ -89,3 +89,28 @@
 	font-size: 1rem;
 	text-transform: uppercase;
 }
+
+.payment-method label {
+	background-color: #fff;
+}
+
+.payment-method label.checked {
+	background-color: #f0f5ff;
+	border-color: #1773b0;
+}
+
+.payment-method label + .payment-method__inner {
+	/* collapse animation */
+	max-height: 0;
+	overflow: hidden;
+	padding: 0;
+	transition: max-height 0.3s ease;
+}
+
+.payment-method label.checked + .payment-method__inner {
+	max-height: 1000px;
+	padding: 2rem;
+}
+.product-list__item:not(:last-child) {
+	border-bottom: 1px solid #dedede;
+}
