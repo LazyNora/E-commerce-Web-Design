@@ -1154,6 +1154,10 @@ body {
   margin-top: 5px;
 }
 
+.ms-2 {
+  margin-inline-start: 0.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -3006,6 +3010,10 @@ body {
   padding-top: 2rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3273,6 +3281,16 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-yellow-300 {
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
 .underline {

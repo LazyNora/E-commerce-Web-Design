@@ -131,6 +131,46 @@ if (typeof product.reviews === "object" && product.reviews.length > 0) {
     });
   });
 }
+
+const addReview = document.getElementById("add-review");
+addReview.addEventListener("click", () => {
+  const reviewForm = document.querySelector(".add-review-form");
+  reviewForm.classList.toggle("review-hide");
+});
+
+const reviewStars = document.querySelectorAll(".stars-wrapper svg");
+const ratingInput = document.querySelector(".stars-wrapper .rating-input");
+reviewStars.forEach((star) => {
+  star.addEventListener("click", () => {
+    const rating = star.getAttribute("data-star");
+    document.getElementById("rating").value = rating;
+    reviewStars.forEach((star) => {
+      star.classList.remove("text-yellow-300");
+      star.classList.add("text-gray-300");
+    });
+    for (let i = 0; i < rating; i++) {
+      reviewStars[i].classList.remove("text-gray-300");
+      reviewStars[i].classList.add("text-yellow-300");
+    }
+    ratingInput.textContent = rating;
+    ratingInput.dataset.rating = rating;
+  });
+
+  star.addEventListener("mouseover", () => {
+    const rating = star.getAttribute("data-star");
+    reviewStars.forEach((star) => {
+      star.classList.remove("text-yellow-300");
+      star.classList.add("text-gray-300");
+    });
+    for (let i = 0; i < rating; i++) {
+      reviewStars[i].classList.remove("text-gray-300");
+      reviewStars[i].classList.add("text-yellow-300");
+    }
+    ratingInput.textContent = rating;
+    ratingInput.dataset.rating = rating;
+  });
+});
+
 function saleCountDown() {
   const parent = document.getElementById("deals-countdown-wrapper");
   const title = document.createElement("span");

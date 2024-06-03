@@ -56,7 +56,8 @@
 	text-transform: uppercase;
 }
 
-.btn#add-review {
+.btn#add-review,
+.btn#sumbit-review {
 	padding: 10px 20px;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -68,13 +69,26 @@
 	position: relative;
 }
 
-.btn#add-review:hover {
+.btn#add-review:hover,
+.btn#sumbit-review:hover {
 	background-color: #333;
 	color: #fff;
 }
 
-.btn#add-review:active {
+.btn#add-review:active,
+.btn#sumbit-review:active {
 	top: 1px;
+}
+
+.add-review-form {
+	max-height: 1000px;
+}
+
+.add-review-form.review-hide {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0;
+	transition: max-height 0.3s ease;
 }
 
 .tabs-adds-blocks {
