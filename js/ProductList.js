@@ -75,7 +75,7 @@ function sortProducts() {
 
 function URLParamsLoad() {
   const urlParams = new URLSearchParams(window.location.search);
-  const sortby = urlParams.get("sort_by") || "created-descending";
+  const sortby = urlParams.get("sort_by") || collection === "best-sellers" ? "best-selling" : "created-descending";
   const ftpage = urlParams.get("page");
   const ftavailability = urlParams.getAll("filter.availability");
   const ftpriceMin = urlParams.get("filter.price.min");
@@ -435,14 +435,13 @@ function initFilter() {
 		<div class="filter-wrapper opacity-100">
 			<form id="FilterForm" class="pb-4" action="" method="get">
 				${Object.keys(filterData)
-          .map((key, index) => {
-            return `
+      .map((key, index) => {
+        return `
 					<div class="accordion-item" data-index="${index}">
 						<div class="mb-1.5 accordion-button text-lg" data-state="${index < 2 ? "open" : "closed"}"><span>${displayLabel[key]}</span></div>
 						<div class="accordion-content overflow-hidden" data-state="${index < 2 ? "open" : "closed"}">
-							${
-                key === "priceRange"
-                  ? `
+							${key === "priceRange"
+            ? `
 									<price-range class="price-range" data-price-max="${filterData.priceRange.max / 100}" data-price-gap="${priceGap}" style="--from: 0.0%; --to: 100.0%;">
 										<div class="price__range-group">
 											<input type="range" data-type="min-range" aria-label="From" class="price__range price__range--min" min="0" max="${filterData.priceRange.max / 100}" value="0">
@@ -462,10 +461,10 @@ function initFilter() {
 											</div>
 										</div>
                 	</price-range>`
-                  : `<ul role="list">
+            : `<ul role="list">
 								${filterData[key]
-                  .map((item, index2) => {
-                    return `
+              .map((item, index2) => {
+                return `
 									<li>
 										<label for="Filter-${key}-${index2 + 1}" class="filter-checkbox">
 											<input type="checkbox" name="filter.${key}" id="Filter-${key}-${index2 + 1}" value="${item.value}">
@@ -473,15 +472,15 @@ function initFilter() {
 											<span class="ml-1 filter-products-count">(${item.count})</span>
 										</label>
 									</li>`;
-                  })
-                  .join("")}
+              })
+              .join("")}
 							</ul>`
-              }
+          }
 						</div>
 					</div>
 					`;
-          })
-          .join("")}
+      })
+      .join("")}
 			</form>
 		</div>
 	</div>
@@ -781,9 +780,8 @@ function renderProducts() {
 												<div class="img-lazyloader"></div>
 											</div>
 										</div>
-										${
-                      media.length > 1
-                        ? `<div class="hover-img">
+										${media.length > 1
+        ? `<div class="hover-img">
 												<div class="p-img ib-image">
 													<img
 													src="${path + media[1].src}"
@@ -796,8 +794,8 @@ function renderProducts() {
 													/>
 												</div>
 											</div>`
-                        : ""
-                    }
+        : ""
+      }
 									</a>
 								</div>
 							</div>
@@ -818,10 +816,9 @@ function renderProducts() {
 								</div>
 								<div class="pcard__price leading-normal">
 									<div class="price inline-flex items-center flex-wrap">
-									${
-                    item.compare_at_price !== null &&
-                    item.compare_at_price !== item.price
-                      ? `<div class="price__sale">
+									${item.compare_at_price !== null &&
+        item.compare_at_price !== item.price
+        ? `<div class="price__sale">
 									<span class="visually-hidden visually-hidden--inline">Sale price</span>
 									<span class="price-item price-item--sale">
 										<span class="money" data-product-price=${item.price}>$${item.price / 100} USD</span>
@@ -831,7 +828,7 @@ function renderProducts() {
 											<span class="money" data-product-price=${item.compare_at_price}>$${item.compare_at_price / 100} USD</span>
 										</s>
 								</div>`
-                      : `<div class="price__regular">
+        : `<div class="price__regular">
 									<span class="visually-hidden visually-hidden--inline">
 										Regular price
 									</span>
@@ -840,7 +837,7 @@ function renderProducts() {
 										data-product-price="${item.price}">$${item.price / 100} USD</span>
 									</span>
 								</div>`
-                  }
+      }
 
 									</div>
 								</div>
@@ -914,13 +911,12 @@ function renderProducts() {
 													<div class="swiper-container quickview-swiper">
 														<div class="swiper-wrapper main-slider pis h-full">
 														${item.media
-                              .map(
-                                (media, index) =>
-                                  `
+          .map(
+            (media, index) =>
+              `
 																	<div class="swiper-slide prod-media-item media-type-${media.media_type}" data-index=${index} data-media-type=${media.media_type} data-media-id=${media.id} data-aspect-ratio="1.499">
-																		${
-                                      media.media_type === "image"
-                                        ? `
+																		${media.media_type === "image"
+                ? `
 																		<div class="prod-media media-image" data-media-id=${media.id} data-media-width=${media.width} data-media-height=${media.height} data-media-alt=${media.alt} data-media-src=${media.src}>
 																			<div class="prod-image" style="aspect-ratio: 1.499">
 																				<img class="img-loaded" src=${path + media.src} sizes="946px" loading="lazy" width="946" height="631" alt=${media.alt} fetchpriority="auto">
@@ -928,7 +924,7 @@ function renderProducts() {
 																			</div>
 																		</div>
 																		`
-                                        : `
+                : `
 																		<div class="deferred-media" style="/*padding-top: 56.25%;*/" data-media-id=${media.id} data-auto-play="true">
 																			<video playinline controls autoplay loop muted aria-label=${item.title} poster=${media.preview_image.src}>
 																				<source src=${media.sources[media.sources.findIndex((src) => src.width === 1280)].url} type="video/mp4">
@@ -936,15 +932,14 @@ function renderProducts() {
 																			</video>
 																		</div>
 																		`
-                                    }
+              }
 																	</div>
 																	`,
-                              )
-                              .join("")}
+          )
+          .join("")}
 														</div>
-														${
-                              item.media.length > 1
-                                ? `<div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
+														${item.media.length > 1
+          ? `<div class="absolute z-10 pointer-events-none inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4">
 															<button class="swiper-button-control swiper-button-prev btn-icon | tooltip-item tooltip-right tooltop-style-1">
 																<span class="tooltip-icon block">
 																	<svg
@@ -972,8 +967,8 @@ function renderProducts() {
 																<span class="tooltip-content">Next</span>
 															</button>
 														</div>`
-                                : ""
-                            }
+          : ""
+        }
 													</div>
 												</div>
 											</div>
@@ -989,11 +984,10 @@ function renderProducts() {
 										</h1>
 									</div>
 									<div class="price inline-flex items-center flex-wrap">
-										${
-                      item.variants[0].compare_at_price !== null &&
-                      item.variants[0].compare_at_price !==
-                        item.variants[0].price
-                        ? `
+										${item.variants[0].compare_at_price !== null &&
+          item.variants[0].compare_at_price !==
+          item.variants[0].price
+          ? `
 									<div class="price__sale">
 								<span class="visually-hidden visually-hidden--inline">Sale price</span>
 								<span class="price-item price-item--sale text-xl md:text-2xl ">
@@ -1005,7 +999,7 @@ function renderProducts() {
 									</s>
 							</div>
 									`
-                        : `<div class="price__regular">
+          : `<div class="price__regular">
 									<span class="visually-hidden visually-hidden--inline">
 										Regular price
 									</span>
@@ -1015,7 +1009,7 @@ function renderProducts() {
 											data-product-price=${item.variants[0].price}>$${item.variants[0].price / 100} USD</span>
 									</span>
 								</div>`
-                    }
+        }
 									</div>
 									<div class="hidden lg:block mt-[25px] mb-4 text-color-secondary">
 										<a class="block mt-2 underline text-black" href="${path + item.url}">View details</a>
@@ -1025,10 +1019,10 @@ function renderProducts() {
 											<div data-product-id=${item.id}>
 												<div class="variant-picker">
 													${item.options
-                            .map((option, index) =>
-                              option.values[1] !== null &&
-                              option.name !== "Title"
-                                ? `
+          .map((option, index) =>
+            option.values[1] !== null &&
+              option.name !== "Title"
+              ? `
 																<div class="product-options__option product-options__option--dropdown">
 																	<div
 																		class="variant-select"
@@ -1053,9 +1047,9 @@ function renderProducts() {
 																					class="select-bordered uppercase"
 																					name="options[${option.name}]">
 																					${option.values
-                                            .map(
-                                              (value, index2) =>
-                                                `
+                .map(
+                  (value, index2) =>
+                    `
 																						<option
 																							${item.variants[0]?.options[index] === value ? "selected" : ""}
 																							value="${value.toString()}"
@@ -1063,17 +1057,17 @@ function renderProducts() {
 																							data-value="${value.toString()}"
 																							data-option-position=${option.position}>${value}</option>
 																						`,
-                                            )
-                                            .join("")}
+                )
+                .join("")}
 																				</select>
 																			</div>
 																		</div>
 																	</div>
 																</div>
 															`
-                                : "",
-                            )
-                            .join("")}
+              : "",
+          )
+          .join("")}
 												</div>
 											</div>
 										</div>
@@ -1248,7 +1242,7 @@ function renderProducts() {
             );
             selectedOption &&
               ((selectedOption.checked = !0),
-              field.dispatchEvent(new Event("change", { bubbles: !0 })));
+                field.dispatchEvent(new Event("change", { bubbles: !0 })));
           }
         });
       };
@@ -1591,32 +1585,32 @@ function renderPagination() {
 		<div class="pagination flex justify-center items-center">
 			${page > 1 ? `<span class="prev">«</span>` : ""}
 			${Array.from({ length: totalPage }, (_, i) => i + 1)
-        .map((item) => {
-          if (totalPage > 4) {
-            if (item === 1 || item === totalPage) {
-              return `
+      .map((item) => {
+        if (totalPage > 4) {
+          if (item === 1 || item === totalPage) {
+            return `
 									<span class="page ${item === page ? "current" : ""}">${item}</span>
 								`;
-            } else if (
-              item === page ||
-              item === page - 1 ||
-              item === page + 1
-            ) {
-              return `
+          } else if (
+            item === page ||
+            item === page - 1 ||
+            item === page + 1
+          ) {
+            return `
 									<span class="page ${item === page ? "current" : ""}">${item}</span>
 								`;
-            } else if (item === page - 2 || item === page + 2) {
-              return `
+          } else if (item === page - 2 || item === page + 2) {
+            return `
 									<span class="deco">...</span>
 								`;
-            }
-          } else {
-            return `
+          }
+        } else {
+          return `
 								<span class="page ${item === page ? "current" : ""}">${item}</span>
 							`;
-          }
-        })
-        .join("")}
+        }
+      })
+      .join("")}
 			${page < totalPage ? `<span class="next">»</span>` : ""}
 		</div>
 	`;
