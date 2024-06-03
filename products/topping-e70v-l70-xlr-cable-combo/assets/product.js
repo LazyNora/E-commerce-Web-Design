@@ -20,7 +20,6 @@ const product = {
   compare_at_price_varies: false,
   rating: 3.8,
   ratingCount: 24,
-  product: "Cable Combo",
   reviews: [
     {
       user: "Sophia Miller",
