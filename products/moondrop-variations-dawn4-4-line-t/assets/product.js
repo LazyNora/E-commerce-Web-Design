@@ -18,6 +18,54 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating: 3.6,
+  ratingCount: 10,
+  product: "Cable Combo",
+  reviews: [
+    {
+      user: "Sophia Miller",
+      rating: 4,
+      review:
+        "The Cable Combo is good overall, but the cables could be longer for more flexibility 😕",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Yamada Hiroshi",
+      rating: 3,
+      review:
+        "このケーブルコンボは普通です。性能は悪くありませんが、コードが少し短すぎます (¬_¬)",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Emma Smith",
+      rating: 4,
+      review:
+        "The Cable Combo works well, but I wish the cables were longer. Overall, it's a good product 😊",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "David Johnson",
+      rating: 4,
+      review:
+        "The Cable Combo is decent. It does the job, but longer cables would be a nice addition 👍",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+    {
+      user: "Maria Garcia",
+      rating: 3,
+      review:
+        "El Cable Combo es bueno, pero los cables podrían ser un poco más largos para mayor comodidad 😐",
+      timestamp: "2024-06-11T08:10:00+08:00",
+    },
+    {
+      user: "Lucas Müller",
+      rating: 4,
+      review:
+        "Das Cable Combo ist solide. Es macht seinen Job, aber längere Kabel wären wünschenswert 😐",
+      timestamp: "2024-06-10T11:25:00+08:00",
+    },
+  ],
+
   variants: [
     {
       id: 43800955715827,

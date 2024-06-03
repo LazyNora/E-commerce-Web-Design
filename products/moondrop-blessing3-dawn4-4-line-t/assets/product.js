@@ -17,6 +17,54 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating: 3.5,
+  ratingCount: 6,
+  product: "Cable Combo",
+  reviews: [
+    {
+      user: "Sophia Miller",
+      rating: 4,
+      review:
+        "The Cable Combo is fantastic and works perfectly, but the price is quite high at $1998 😐",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Yamada Hiroshi",
+      rating: 2,
+      review:
+        "このケーブルコンボは高すぎます。品質はそこそこですが、$1998の価値はありません (＞_＜)",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Emma Smith",
+      rating: 4,
+      review:
+        "I'm quite satisfied with the Cable Combo. It's durable and works as expected, but $1998 is a lot of money 😕",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "David Johnson",
+      rating: 2,
+      review:
+        "The Cable Combo is not great. It stopped working after a week and it's way too expensive at $1998 😞",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+    {
+      user: "Maria Garcia",
+      rating: 5,
+      review:
+        "¡El Cable Combo es increíble! Muy buena calidad y funciona perfectamente, pero el precio de $1998 es muy alto 😊",
+      timestamp: "2024-06-11T08:10:00+08:00",
+    },
+    {
+      user: "Lucas Müller",
+      rating: 4,
+      review:
+        "Das Cable Combo ist sehr gut. Die Qualität ist ausgezeichnet und es funktioniert einwandfrei, aber $1998 ist zu teuer 😃",
+      timestamp: "2024-06-10T11:25:00+08:00",
+    },
+  ],
+
   variants: [
     {
       id: 43800957092083,

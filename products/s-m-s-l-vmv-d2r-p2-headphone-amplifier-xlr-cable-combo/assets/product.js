@@ -17,6 +17,52 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating: 2.4,
+  ratingCount: 6,
+  reviews: [
+    {
+      user: "Sophia Miller",
+      rating: 2,
+      review:
+        "The sound quality is poor, I'm quite disappointed with these earphones 😔",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Yamada Hiroshi",
+      rating: 3,
+      review:
+        "このイヤホンはまあまあです。サウンドはクリアですが、装着感がいまいちです (¬_¬)",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Emma Smith",
+      rating: 2,
+      review:
+        "These earphones are below average. The sound quality is not what I expected 😕",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "David Johnson",
+      rating: 2,
+      review:
+        "The sound quality of these earphones is disappointing. Wouldn't recommend. 😞",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+    {
+      user: "Maria Garcia",
+      rating: 3,
+      review:
+        "Estos auriculares son aceptables, pero el sonido no es tan bueno como esperaba 😐",
+      timestamp: "2024-06-11T08:10:00+08:00",
+    },
+    {
+      user: "Lucas Müller",
+      rating: 2,
+      review:
+        "Diese Ohrhörer sind enttäuschend. Die Klangqualität lässt zu wünschen übrig 😕",
+      timestamp: "2024-06-10T11:25:00+08:00",
+    },
+  ],
   variants: [
     {
       id: 43889492852979,

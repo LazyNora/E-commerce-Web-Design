@@ -18,6 +18,52 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating: 4.2,
+  ratingCount: 7,
+  product: "Cable Combo",
+  reviews: [
+    {
+      user: "Sophia Miller",
+      rating: 4,
+      review: "The Cable Combo is great! It's sturdy and performs well 😊",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Yamada Hiroshi",
+      rating: 4,
+      review: "このケーブルコンボはいいです。頑丈で使いやすい (^_^)",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Emma Smith",
+      rating: 3,
+      review:
+        "The Cable Combo is decent, but I expected better sound quality for the price 😐",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "David Johnson",
+      rating: 5,
+      review:
+        "I love the Cable Combo! It's perfect for my needs and the sound quality is amazing 😍",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+    {
+      user: "Maria Garcia",
+      rating: 4,
+      review:
+        "El Cable Combo es bueno. La calidad del sonido es aceptable y la construcción es sólida 😊",
+      timestamp: "2024-06-11T08:10:00+08:00",
+    },
+    {
+      user: "Lucas Müller",
+      rating: 5,
+      review:
+        "Das Cable Combo ist großartig. Sehr robust und gute Klangqualität 😃",
+      timestamp: "2024-06-10T11:25:00+08:00",
+    },
+  ],
+
   variants: [
     {
       id: 43465904259315,

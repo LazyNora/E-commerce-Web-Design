@@ -18,6 +18,52 @@ const product = {
   compare_at_price_min: 0,
   compare_at_price_max: 0,
   compare_at_price_varies: false,
+  rating: 4.8,
+  ratingCount: 13,
+  reviews: [
+    {
+      user: "Sophia Miller",
+      rating: 5,
+      review:
+        "The Headphone Amplifier is absolutely fantastic! The sound quality is crystal clear, and the build quality is excellent. It really brings out the best in my headphones. I highly recommend it! 😊",
+      timestamp: "2024-06-15T09:30:00+08:00",
+    },
+    {
+      user: "Yamada Hiroshi",
+      rating: 5,
+      review:
+        "このヘッドフォンアンプは素晴らしいです。音質が非常にクリアで、どの音域もはっきりと聞こえます。作りもしっかりしていて、長時間使用しても疲れません (^_^)",
+      timestamp: "2024-06-14T14:00:00+08:00",
+    },
+    {
+      user: "Emma Smith",
+      rating: 4,
+      review:
+        "I'm very satisfied with the Headphone Amplifier. It's durable and enhances the sound quality of my headphones significantly. The only minor issue is that it's a bit bulky, but that's a small price to pay for such amazing sound quality 😃",
+      timestamp: "2024-06-13T09:45:00+08:00",
+    },
+    {
+      user: "David Johnson",
+      rating: 5,
+      review:
+        "The Headphone Amplifier is excellent. It exceeded my expectations in every way! The amplification is powerful without distorting the sound, and it has a robust build. Perfect for audiophiles! 😍",
+      timestamp: "2024-06-12T15:20:00+08:00",
+    },
+    {
+      user: "Maria Garcia",
+      rating: 5,
+      review:
+        "¡El amplificador de auriculares es increíble! La calidad del sonido es excelente y la construcción es muy sólida. He notado una gran diferencia en la calidad del audio desde que lo uso. Muy recomendado 😊",
+      timestamp: "2024-06-11T08:10:00+08:00",
+    },
+    {
+      user: "Lucas Müller",
+      rating: 5,
+      review:
+        "Der Kopfhörerverstärker ist hervorragend. Die Klangqualität ist ausgezeichnet und er verstärkt den Sound ohne Verzerrung. Die Verarbeitung ist erstklassig und er ist sehr benutzerfreundlich 😃",
+      timestamp: "2024-06-10T11:25:00+08:00",
+    },
+  ],
   variants: [
     {
       id: 43817096904947,
