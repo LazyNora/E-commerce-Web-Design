@@ -60,6 +60,10 @@ const collections = [
     image: "./assets/logo-COWON.svg",
   },
   {
+    title: "COLORFLY",
+    url: "./colorfly",
+  },
+  {
     title: "DARKVOICE",
     url: "./darkvoice",
   },
