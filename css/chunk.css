@@ -2352,5 +2352,5 @@ html.prevent-scroll body {
 	display: none;
 }
 .aha-customer-chat-btn-2 {
-	z-index: 50;
+	z-index: 50 !important;
 }
