@@ -2358,3 +2358,8 @@ html.prevent-scroll body {
 .aha-customer-chat-popup {
 	max-height: 0;
 }
+@media (max-width: 768px) {
+	.aha-customer-chat-plugin-mobile {
+		display: none;
+	}
+}
