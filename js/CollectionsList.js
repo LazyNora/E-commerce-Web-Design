@@ -272,6 +272,10 @@ const collections = [
     url: "./tanchjim",
   },
   {
+    title: "TANGZU",
+    url: "./tangzu",
+  },
+  {
     title: "TENHZ",
     url: "./tenhz",
   },

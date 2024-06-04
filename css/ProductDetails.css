@@ -82,13 +82,13 @@
 
 .add-review-form {
 	max-height: 1000px;
+	transition: max-height 0.3s ease;
 }
 
 .add-review-form.review-hide {
 	max-height: 0;
 	overflow: hidden;
 	padding: 0;
-	transition: max-height 0.3s ease;
 }
 
 .tabs-adds-blocks {

@@ -2348,3 +2348,6 @@ html.prevent-scroll body {
 .pcard .price__sale {
 	display: block;
 }
+.aha-customer-chat-popup-footer-powered-by {
+	display: none;
+}
