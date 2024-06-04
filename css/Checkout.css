@@ -99,6 +99,10 @@
 	border-color: #1773b0;
 }
 
+.payment-method label:not(.checked) + .payment-method__inner {
+	border: none !important;
+}
+
 .payment-method label + .payment-method__inner {
 	/* collapse animation */
 	max-height: 0;

@@ -2351,3 +2351,6 @@ html.prevent-scroll body {
 .aha-customer-chat-popup-footer-powered-by {
 	display: none;
 }
+.aha-customer-chat-btn-2 {
+	z-index: 50;
+}

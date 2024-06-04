@@ -254,32 +254,41 @@
 						});
 					</script>
 					<script>
-						const users = [
-							{
-								firstName: "John",
-								lastName: "Doe",
-								email: "john@gmail.com",
-								password: "Abc1234",
-							},
-							{
+						const registered = JSON.parse(localStorage.getItem("registered")) || { users: [] };
+						if (registered.users.length === 0) {
+							registered.users.push({
 								firstName: "Tấn",
 								lastName: "Cao Hoàng",
 								email: "hanayue963@gmail.com",
-								password: "Pas123",
-							},
-						];
+								password: "Admin123",
+								addresses: [
+									{
+										country: "VN",
+										city: "Hồ Chí Minh",
+										company: null,
+										firstName: "Tấn",
+										lastName: "Cao Hoàng",
+										phone: "0123456789",
+										postalCode: "700000",
+										address1: "123 Đường 123",
+										address2: null,
+									},
+								],
+							});
+							localStorage.setItem("registered", JSON.stringify(registered));
+						}
 						const form = document.querySelector(".customer__form");
 						const email = form.querySelector("#email");
 						const password = form.querySelector("#password");
 
 						form.addEventListener("submit", function (e) {
 							e.preventDefault();
-							const user = users.find((user) => user.email === email.value && user.password === password.value);
-							if (user) {
+							const user = registered.users.find((user) => user.email === email.value);
+							if (user && user.password === password.value) {
 								localStorage.setItem("user", JSON.stringify(user));
 								window.location.href = "../";
 							} else {
-								form.querySelector(".error-msg").textContent = "Email or password is incorrect";
+								form.querySelector(".error-msg").textContent = "Invalid email or password";
 							}
 						});
 

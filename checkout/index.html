@@ -6,6 +6,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
 		<script>
 			const path = window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
+			if (JSON.parse(localStorage.getItem("cart")).items.length === 0) window.location.href = `${path}/cart`;
 		</script>
 		<link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="../css/tailwind.css" />
@@ -113,8 +114,8 @@
 									<h2 class="text-2xl font-semibold">Payment</h2>
 									<p>All transactions are secure and encrypted.</p>
 								</div>
-								<div class="payment-method rounded w-full">
-									<div class="credit-card bg-[#eee] border rounded">
+								<div class="payment-method rounded w-full border">
+									<div class="credit-card bg-[#eee] rounded">
 										<label for="payment[card]" class="flex justify-between items-center p-4 border rounded-t h-[57px]">
 											<div class="flex justify-center items-start">
 												<input class="block w-6 h-6" type="radio" name="payment" id="payment[card]" />
@@ -168,9 +169,9 @@
 											</div>
 										</label>
 									</div>
-									<div>
-										<button type="submit" class="h-14 w-full relative bg-black text-white font-semibold rounded mt-4 uppercase active:top-1" onclick="return false;">Complete order</button>
-									</div>
+								</div>
+								<div class="w-full">
+									<button type="submit" class="h-14 w-full relative bg-black text-white font-semibold rounded mt-4 uppercase active:top-1" onclick="return false;">Complete order</button>
 								</div>
 								<script>
 									const user = JSON.parse(localStorage.getItem("user"));

@@ -237,7 +237,16 @@
 							<div class="input-box | relative">
 								<input id="password" name="customer[password]" autocomplete="new-password" class="password form-control" type="password" placeholder="Your Password" />
 								<span class="error-msg"></span>
-								<button class="icon-button show-pass" tabindex="0" type="button" aria-label=" Show Password">
+								<button class="icon-button show-pass" tabindex="0" type="button" aria-label="Show Password">
+									<svg class="icon-button__icon w-6 h-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+										<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path>
+									</svg>
+								</button>
+							</div>
+							<div class="input-box | relative">
+								<input id="comfirmpassword" name="customer[comfirmpassword]" autocomplete="off" class="password form-control" type="password" placeholder="Comfirm Password" />
+								<span class="error-msg"></span>
+								<button class="icon-button show-pass" tabindex="0" type="button" aria-label="Show Password">
 									<svg class="icon-button__icon w-6 h-6" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
 										<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path>
 									</svg>
@@ -257,16 +266,18 @@
 					</div>
 					<a class="login-btn | btn-link mt-10 font-bold" href="../login">Login</a>
 					<script>
-						const showPassBtn = document.querySelector(".show-pass");
-						const passwordInput = document.querySelector(".password");
-						showPassBtn.addEventListener("click", function () {
-							if (passwordInput.type === "password") {
-								passwordInput.type = "text";
-								showPassBtn.querySelector("svg").innerHTML = `<path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7M2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2m4.31-.78 3.15 3.15.02-.16c0-1.66-1.34-3-3-3z"></path>`;
-							} else {
-								passwordInput.type = "password";
-								showPassBtn.querySelector("svg").innerHTML = `<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path>`;
-							}
+						const showPassBtns = document.querySelectorAll(".show-pass");
+						const passwordInputs = document.querySelectorAll(".password");
+						showPassBtns.forEach((btn, index) => {
+							btn.addEventListener("click", function () {
+								if (passwordInputs[index].type === "password") {
+									passwordInputs[index].type = "text";
+									btn.querySelector("svg").innerHTML = `<path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7M2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2m4.31-.78 3.15 3.15.02-.16c0-1.66-1.34-3-3-3z"></path>`;
+								} else {
+									passwordInputs[index].type = "password";
+									btn.querySelector("svg").innerHTML = `<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path>`;
+								}
+							});
 						});
 					</script>
 					<script>
@@ -281,8 +292,12 @@
 								lastName,
 								email,
 								password,
+								addresses: [],
 							};
 
+							const registered = JSON.parse(localStorage.getItem("registered")) || { users: [] };
+							registered.users.push(data);
+							localStorage.setItem("registered", JSON.stringify(registered));
 							localStorage.setItem("user", JSON.stringify(data));
 							window.location.href = "../account";
 						}
@@ -291,6 +306,7 @@
 						const lastName = document.getElementById("last-name");
 						const email = document.getElementById("email");
 						const password = document.getElementById("password");
+						const comfirmpassword = document.getElementById("comfirmpassword");
 						const form = document.getElementById("customer_register");
 
 						const matchEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // Email validation
@@ -332,18 +348,39 @@
 							}
 						});
 
+						comfirmpassword.addEventListener("input", function () {
+							if (comfirmpassword.value === "") {
+								comfirmpassword.nextElementSibling.textContent = "Comfirm Password is required";
+							} else if (comfirmpassword.value !== password.value) {
+								comfirmpassword.nextElementSibling.textContent = "Password does not match";
+							} else {
+								comfirmpassword.nextElementSibling.textContent = "";
+							}
+						});
+
 						form.addEventListener("submit", function (e) {
 							e.preventDefault();
 							validateForm();
 						});
 						function validateForm() {
-							if (firstName.value === "" || lastName.value === "" || email.value === "" || password.value === "" || !matchEmail.test(email.value) || !matchPassword.test(password.value)) {
+							if (firstName.value === "" || lastName.value === "" || email.value === "" || password.value === "" || !matchEmail.test(email.value) || !matchPassword.test(password.value) || comfirmpassword.value === "" || comfirmpassword.value !== password.value) {
 								firstName.nextElementSibling.textContent = firstName.value === "" ? "First Name is required" : "";
 								lastName.nextElementSibling.textContent = lastName.value === "" ? "Last Name is required" : "";
 								email.nextElementSibling.textContent = email.value === "" ? "Email is required" : !matchEmail.test(email.value) ? "Email is invalid" : "";
 								password.nextElementSibling.textContent = password.value === "" ? "Password is required" : !matchPassword.test(password.value) ? "Password must be at least 6 characters, at least one uppercase letter, one lowercase letter and one number" : "";
+								comfirmpassword.nextElementSibling.textContent = comfirmpassword.value === "" ? "Comfirm Password is required" : comfirmpassword.value !== password.value ? "Password does not match" : "";
 							} else {
-								saveData();
+								const registered = JSON.parse(localStorage.getItem("registered")) || { users: [] };
+								if (registered.users.length > 0) {
+									const user = registered.users.find((item) => item.email === email.value);
+									if (user) {
+										email.nextElementSibling.textContent = "Email already exists";
+									} else {
+										saveData();
+									}
+								} else {
+									saveData();
+								}
 							}
 						}
 					</script>
