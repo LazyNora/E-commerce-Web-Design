@@ -387,10 +387,7 @@ let responseData = null;
 const getExchangeRate = async () => {
   // Kiểm tra xem đã lưu exchange rate trong localStorage chưa
   const sessionExchangeRate = JSON.parse(localStorage.getItem("exchangeRate"));
-  if (
-    sessionExchangeRate &&
-    sessionExchangeRate.time_next_update_unix > Date.now() / 1000
-  ) {
+  if (sessionExchangeRate) {
     // Nếu đã lưu thì lấy ra và set vào state
     responseData = sessionExchangeRate;
   } else {
@@ -406,7 +403,6 @@ const getExchangeRate = async () => {
     // }
 
     // Nếu fetch thất bại thì set mặc định là giá trị dưới đây
-    if (!sessionExchangeRate)
       responseData = {
         result: "success",
         documentation: "https://www.exchangerate-api.com/docs",
