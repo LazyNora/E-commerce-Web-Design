@@ -39,7 +39,7 @@ const product = {
       user: "Emma Smith",
       rating: 4,
       review:
-        "I'm quite satisfied with the Cable Combo. It's durable and works as expected 😃",
+        "I'm quite satisfied with the Cable Combo. It's durable and works as expected Hahaha😃",
       timestamp: "2024-06-13T09:45:00+08:00",
     },
     {
