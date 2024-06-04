@@ -2355,3 +2355,6 @@ html.prevent-scroll body {
 .aha-customer-chat-popup {
 	z-index: 50 !important;
 }
+.aha-customer-chat-popup {
+	max-height: 0;
+}
