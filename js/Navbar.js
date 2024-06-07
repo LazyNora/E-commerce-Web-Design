@@ -855,3 +855,23 @@ document
       window.location.href = `${currentPath}/login`;
     }
   });
+
+function waitForElement(selector) {
+  return new Promise(resolve => {
+    if(document.querySelector(selector))
+      return resolve(document.querySelector(selector));
+
+    const observer = new MutationObserver(mutation => {
+      if(document.querySelector(selector)){
+        observer.disconnect();
+        resolve(document.querySelector(selector));
+      }
+    });
+
+    observer.observe(document.body,{childList: true, subtree: true});
+  })
+}
+
+waitForElement(".aha-customer-chat-popup-footer-open-chat").then(chatButton => {
+  chatButton.innerHTML = "Get started";
+});

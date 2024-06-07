@@ -2357,9 +2357,20 @@ html.prevent-scroll body {
 }
 .aha-customer-chat-popup {
 	max-height: 0;
+	bottom: 130px;
+}
+.aha-customer-chat-btn-2 {
+	bottom: 60pt;
 }
 @media (max-width: 768px) {
-	.aha-customer-chat-plugin-mobile {
+	.aha-customer-chat-plugin-mobile,
+	.aha-customer-chat-btn-2,
+	.aha-customer-chat-popup {
 		display: none;
 	}
+}
+
+.notification.warning {
+	color: #ff706b;
+	background-color: #ffefef;
 }

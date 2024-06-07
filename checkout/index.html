@@ -184,13 +184,25 @@
 										<hr />
 										<h2 class="text-xl my-2">Ship to</h2>
 										<div class="address-select">
-											<div class="flex justify-start flex-col items-start p-4 bg-[#F0F5FF] border rounded border-[#1773b0]">
-												<p>
-													<span id="fullName">${user.firstName + " " + user.lastName}</span>,
-													<span>964/19 Hương lộ 2, Quận Bình Tân</span>
-												</p>
-												<span class="text-sm text-[#666]">Hồ Chí Minh, VN</span>
-											</div>
+											${
+												user.addresses.length > 0
+													? user.addresses
+															.map((address, index) => {
+																return `
+													<label for="${"address" + index}" class="flex flex-row items-center ship-select">
+														<input class="ship-input w-4 h-4" type="radio" name="address" id="${"address" + index}" ${address.isDefault ? "checked" : ""}/>
+														<div class="flex justify-start flex-col items-start p-4">
+															<p>${address.firstName + " " + address.lastName}, ${address.address1}${address.address2 !== "" ? ", " + address.address2 : ""}</p>
+															<span class="text-sm text-[#666]">${address.city + " " + address.country}</span>
+														</div>
+													</label>
+												`;
+															})
+															.join("")
+													: `
+												<p class="text-[#666]">No address found</p>
+												`
+											}
 										</div>
 									</div>
 									<hr />

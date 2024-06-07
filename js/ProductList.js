@@ -238,6 +238,7 @@ function renderFilterByItems() {
         brand = [];
         productType = [];
         document.getElementById("FilterForm").reset();
+        document.querySelector("input[data-type='max-range']").dispatchEvent(new Event("input"));
       } else {
         if (type === "availability") {
           availability = availability.filter((item) => item !== value);
@@ -249,10 +250,21 @@ function renderFilterByItems() {
             min: null,
             max: null,
           };
+          document.querySelector("input[data-type='min-input']").value = "";
+          document.querySelector("input[data-type='max-input']").value = "";
+          document.querySelector("input[data-type='min-range']").value = 0;
+          document.querySelector("input[data-type='max-range']").value = parseInt(document.querySelector("input[data-type='max-range").getAttribute("max"));
+          document.querySelector("input[data-type='max-range']").dispatchEvent(new Event("input"));
         } else if (type === "brand") {
           brand = brand.filter((item) => item !== value);
+          document.querySelector(
+            `input[name="filter.brand"][value="${value}"]`,
+          ).checked = false;
         } else if (type === "productType") {
           productType = productType.filter((item) => item !== value);
+          document.querySelector(
+            `input[name="filter.productType"][value="${value}"]`,
+          ).checked = false;
         }
       }
       URLParamsUpdate();
@@ -261,6 +273,7 @@ function renderFilterByItems() {
       updateFilter();
       renderFilterByItems();
       renderProducts(page);
+      renderPagination(page);
     });
   });
 }
