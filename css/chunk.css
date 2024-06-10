@@ -2366,7 +2366,7 @@ html.prevent-scroll body {
 	.aha-customer-chat-plugin-mobile,
 	.aha-customer-chat-btn-2,
 	.aha-customer-chat-popup {
-		display: none;
+		display: none !important;
 	}
 }
 

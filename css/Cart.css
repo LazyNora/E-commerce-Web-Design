@@ -171,6 +171,10 @@ html.prevent-scroll body {
 	font-weight: 700;
 }
 
+.cart__item-product-title a {
+	word-break: break-word;
+}
+
 .cart__wrapper.cart .cart__summary.relative {
 	margin: 0 -3rem;
 	padding: 3rem 3rem 0;

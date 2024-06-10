@@ -633,10 +633,13 @@
 
 						applyDiscountButton.addEventListener("click", () => {
 							const discountCode = discountInput.value;
+							if (discountCode === "") {
+								return;
+							}
 							const discount = discounts.find((d) => d.code.toLowerCase() === discountCode.toLowerCase());
 							if (discount) {
 								const subtotal = parseInt(subtotalPrice.dataset.price);
-								const total = subtotal - discount.discount * 100;
+								const total = Math.max(subtotal - discount.discount * 100, 0);
 								totalPrice.textContent = `$${total / 100}`;
 								orderDiscount.innerHTML = `
                 <p>Order discount</p>
