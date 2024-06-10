@@ -6,7 +6,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
 		<script>
 			const path = window.location.pathname.split("/")[1] === "TKW" ? "/TKW" : "";
-			if (JSON.parse(localStorage.getItem("cart")).items.length === 0) window.location.href = `${path}/cart`;
+			if (JSON.parse(localStorage.getItem("cart")).items.length === 0 && !localStorage.getItem("checkout")) window.location.href = `${path}/cart`;
 		</script>
 		<link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="../css/tailwind.css" />
