@@ -564,6 +564,7 @@
 
 .prod__sticky-atc select.product-variant-option-dropdown {
 	height: 46px;
+	width: 50%;
 }
 
 .prod__sticky-atc .btn.add-to-cart {

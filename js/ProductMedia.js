@@ -50,7 +50,7 @@ document.querySelectorAll(".media-gallery").forEach((gallery) => {
                   : `
               <div class="deferred-media" style="/*padding-top: 56.25%;*/" data-media-id=${media.id} data-auto-play="true">
                 <video playinline controls autoplay loop muted aria-label=${product.title} poster=${media.preview_image.src}>
-                  <source src=${media.sources[media.sources.findIndex((src) => src.width === 1280)].url} type="video/mp4">
+                  <source src=${media.sources[0].url} type="video/mp4">
                   <img src=${media.preview_image.src}>
                 </video>
               </div>

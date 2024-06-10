@@ -103,7 +103,7 @@ const product = {
           height: 720,
           mime_type: "video/mp4",
           url: "./desc/4433b42a12ab4e1d943348fdff149ba9.HD-720p-3.0Mbps.mp4",
-          width: 1028,
+          width: 1280,
         },
       ],
     },
