@@ -274,6 +274,7 @@ function renderFilterByItems() {
       renderFilterByItems();
       renderProducts(page);
       renderPagination(page);
+      document.querySelector(".currency-selector")?.dispatchEvent(new Event("change"));
     });
   });
 }
@@ -605,6 +606,9 @@ function initFilter() {
     URLParamsUpdate();
     renderProducts(page);
     renderPagination(page);
+    document
+      .querySelector(".currency-selector")
+      ?.dispatchEvent(new Event("change"));
   });
   renderProducts(page);
   renderPagination(page);
