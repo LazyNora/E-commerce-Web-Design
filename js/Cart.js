@@ -109,7 +109,7 @@ function loadCart(addToCart = false) {
               <div class="cart__table-col cart__table-subtotal text-right hidden md:block">
                 <div>
                   <span class="font-bold cart-item__original_line_price">
-                    <span class="money" data-product-price=${item.price}>$${item.price / 100} USD</span>
+                    <span class="money" data-product-price=${item.price * item.qty}>$${(item.price*item.qty) / 100} USD</span>
                   </span>
                 </div>
               </div>
