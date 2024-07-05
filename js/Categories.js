@@ -19,7 +19,7 @@ document.querySelector(".categories-wrapper .ib-grid").innerHTML = categories
               <img
                 src=${currentPath + item.img}
                 sizes="460px"
-                alt=${item.desc}
+                alt="${item.desc}"
                 loading="lazy"
                 class="w-full img-loaded"
                 width="460"
