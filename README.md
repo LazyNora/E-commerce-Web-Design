@@ -29,4 +29,4 @@ A simple e-commerce website "Audio Oasis" for selling audio products. The websit
 
 ## Live Demo
 
-[Audio Oasis](https://lazynora.github.io/TKW/)
+[Audio Oasis](https://lazynora.github.io/E-commerce-Web-Design/)
